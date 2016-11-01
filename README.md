@@ -11,7 +11,7 @@ gulp watch
 
 ## Running + Testing
 
-1. go to [chrome://extensions](chrome://extensions)
+1. go to [chrome://extensions](chrome://extensions/)
 2. click on `load unpackaged extension`
 3. find build folder that's generated from `gulp watch` and select that
 
