@@ -1,0 +1,4502 @@
+[
+    {
+        "english": "Mr.",
+        "number": "101",
+        "portuguese": "senhor"
+    },
+    {
+        "english": "also",
+        "number": "102",
+        "portuguese": "tamb\u00c3\u00a9m"
+    },
+    {
+        "english": "what",
+        "number": "103",
+        "portuguese": "qu\u00c3\u00aa"
+    },
+    {
+        "english": "you",
+        "number": "104",
+        "portuguese": "voc\u00c3\u00aas"
+    },
+    {
+        "english": "something",
+        "number": "105",
+        "portuguese": "algo"
+    },
+    {
+        "english": "of",
+        "number": "106",
+        "portuguese": "dos"
+    },
+    {
+        "english": "thank you",
+        "number": "107",
+        "portuguese": "obrigado"
+    },
+    {
+        "english": "as",
+        "number": "108",
+        "portuguese": "t\u00c3\u00a3o"
+    },
+    {
+        "english": "that",
+        "number": "109",
+        "portuguese": "esse"
+    },
+    {
+        "english": "day",
+        "number": "110",
+        "portuguese": "dia"
+    },
+    {
+        "english": "go",
+        "number": "111",
+        "portuguese": "ir"
+    },
+    {
+        "english": "that",
+        "number": "112",
+        "portuguese": "essa"
+    },
+    {
+        "english": "god",
+        "number": "113",
+        "portuguese": "deus"
+    },
+    {
+        "english": "this",
+        "number": "114",
+        "portuguese": "este"
+    },
+    {
+        "english": "you",
+        "number": "115",
+        "portuguese": "lhe"
+    },
+    {
+        "english": "face",
+        "number": "116",
+        "portuguese": "cara"
+    },
+    {
+        "english": "better",
+        "number": "117",
+        "portuguese": "melhor"
+    },
+    {
+        "english": "oh",
+        "number": "118",
+        "portuguese": "oh"
+    },
+    {
+        "english": "yet",
+        "number": "119",
+        "portuguese": "ainda"
+    },
+    {
+        "english": "have",
+        "number": "120",
+        "portuguese": "temos"
+    },
+    {
+        "english": "Mr.",
+        "number": "121",
+        "portuguese": "sr"
+    },
+    {
+        "english": "father",
+        "number": "122",
+        "portuguese": "pai"
+    },
+    {
+        "english": "always",
+        "number": "123",
+        "portuguese": "sempre"
+    },
+    {
+        "english": "without",
+        "number": "124",
+        "portuguese": "sem"
+    },
+    {
+        "english": "life",
+        "number": "125",
+        "portuguese": "vida"
+    },
+    {
+        "english": "time",
+        "number": "126",
+        "portuguese": "vez"
+    },
+    {
+        "english": "we",
+        "number": "127",
+        "portuguese": "estamos"
+    },
+    {
+        "english": "man",
+        "number": "128",
+        "portuguese": "homem"
+    },
+    {
+        "english": "perhaps",
+        "number": "129",
+        "portuguese": "talvez"
+    },
+    {
+        "english": "their",
+        "number": "130",
+        "portuguese": "seus"
+    },
+    {
+        "english": "years",
+        "number": "131",
+        "portuguese": "anos"
+    },
+    {
+        "english": "mother",
+        "number": "132",
+        "portuguese": "m\u00c3\u00a3e"
+    },
+    {
+        "english": "someone",
+        "number": "133",
+        "portuguese": "algu\u00c3\u00a9m"
+    },
+    {
+        "english": "after",
+        "number": "134",
+        "portuguese": "depois"
+    },
+    {
+        "english": "truth",
+        "number": "135",
+        "portuguese": "verdade"
+    },
+    {
+        "english": "clear",
+        "number": "136",
+        "portuguese": "claro"
+    },
+    {
+        "english": "good",
+        "number": "137",
+        "portuguese": "boa"
+    },
+    {
+        "english": "nor",
+        "number": "138",
+        "portuguese": "nem"
+    },
+    {
+        "english": "little",
+        "number": "139",
+        "portuguese": "pouco"
+    },
+    {
+        "english": "there",
+        "number": "140",
+        "portuguese": "a\u00c3\u00ad"
+    },
+    {
+        "english": "stay",
+        "number": "141",
+        "portuguese": "ficar"
+    },
+    {
+        "english": "stuff",
+        "number": "142",
+        "portuguese": "coisas"
+    },
+    {
+        "english": "had",
+        "number": "143",
+        "portuguese": "tinha"
+    },
+    {
+        "english": "two",
+        "number": "144",
+        "portuguese": "dois"
+    },
+    {
+        "english": "talk",
+        "number": "145",
+        "portuguese": "falar"
+    },
+    {
+        "english": "should",
+        "number": "146",
+        "portuguese": "deve"
+    },
+    {
+        "english": "makes",
+        "number": "147",
+        "portuguese": "faz"
+    },
+    {
+        "english": "by the",
+        "number": "148",
+        "portuguese": "pelo"
+    },
+    {
+        "english": "before",
+        "number": "149",
+        "portuguese": "antes"
+    },
+    {
+        "english": "it seems",
+        "number": "150",
+        "portuguese": "parece"
+    },
+    {
+        "english": "his",
+        "number": "151",
+        "portuguese": "dele"
+    },
+    {
+        "english": "every",
+        "number": "152",
+        "portuguese": "todo"
+    },
+    {
+        "english": "out",
+        "number": "153",
+        "portuguese": "fora"
+    },
+    {
+        "english": "people",
+        "number": "154",
+        "portuguese": "pessoas"
+    },
+    {
+        "english": "hey",
+        "number": "155",
+        "portuguese": "ei"
+    },
+    {
+        "english": "place",
+        "number": "156",
+        "portuguese": "lugar"
+    },
+    {
+        "english": "only",
+        "number": "157",
+        "portuguese": "apenas"
+    },
+    {
+        "english": "making",
+        "number": "158",
+        "portuguese": "fazendo"
+    },
+    {
+        "english": "it",
+        "number": "159",
+        "portuguese": "la"
+    },
+    {
+        "english": "nobody",
+        "number": "160",
+        "portuguese": "ningu\u00c3\u00a9m"
+    },
+    {
+        "english": "money",
+        "number": "161",
+        "portuguese": "dinheiro"
+    },
+    {
+        "english": "of",
+        "number": "162",
+        "portuguese": "das"
+    },
+    {
+        "english": "think",
+        "number": "163",
+        "portuguese": "acha"
+    },
+    {
+        "english": "accurate",
+        "number": "164",
+        "portuguese": "preciso"
+    },
+    {
+        "english": "go",
+        "number": "165",
+        "portuguese": "v\u00c3\u00a1"
+    },
+    {
+        "english": "which",
+        "number": "166",
+        "portuguese": "qual"
+    },
+    {
+        "english": "me",
+        "number": "167",
+        "portuguese": "comigo"
+    },
+    {
+        "english": "some",
+        "number": "168",
+        "portuguese": "alguma"
+    },
+    {
+        "english": "be",
+        "number": "169",
+        "portuguese": "estar"
+    },
+    {
+        "english": "world",
+        "number": "170",
+        "portuguese": "mundo"
+    },
+    {
+        "english": "great",
+        "number": "171",
+        "portuguese": "grande"
+    },
+    {
+        "english": "work",
+        "number": "172",
+        "portuguese": "trabalho"
+    },
+    {
+        "english": "today",
+        "number": "173",
+        "portuguese": "hoje"
+    },
+    {
+        "english": "give",
+        "number": "174",
+        "portuguese": "dar"
+    },
+    {
+        "english": "its",
+        "number": "175",
+        "portuguese": "suas"
+    },
+    {
+        "english": "addition",
+        "number": "176",
+        "portuguese": "disso"
+    },
+    {
+        "english": "made",
+        "number": "177",
+        "portuguese": "fez"
+    },
+    {
+        "english": "is",
+        "number": "178",
+        "portuguese": "seja"
+    },
+    {
+        "english": "name",
+        "number": "179",
+        "portuguese": "nome"
+    },
+    {
+        "english": "new",
+        "number": "180",
+        "portuguese": "novo"
+    },
+    {
+        "english": "will",
+        "number": "181",
+        "portuguese": "ser\u00c3\u00a1"
+    },
+    {
+        "english": "son",
+        "number": "182",
+        "portuguese": "filho"
+    },
+    {
+        "english": "any",
+        "number": "183",
+        "portuguese": "qualquer"
+    },
+    {
+        "english": "other",
+        "number": "184",
+        "portuguese": "outro"
+    },
+    {
+        "english": "as",
+        "number": "185",
+        "portuguese": "quanto"
+    },
+    {
+        "english": "by",
+        "number": "186",
+        "portuguese": "pela"
+    },
+    {
+        "english": "know",
+        "number": "187",
+        "portuguese": "saber"
+    },
+    {
+        "english": "vain",
+        "number": "188",
+        "portuguese": "v\u00c3\u00a3o"
+    },
+    {
+        "english": "wanted",
+        "number": "189",
+        "portuguese": "queria"
+    },
+    {
+        "english": "okay",
+        "number": "190",
+        "portuguese": "ok"
+    },
+    {
+        "english": "hello",
+        "number": "191",
+        "portuguese": "ol\u00c3\u00a1"
+    },
+    {
+        "english": "can",
+        "number": "192",
+        "portuguese": "podemos"
+    },
+    {
+        "english": "my",
+        "number": "193",
+        "portuguese": "meus"
+    },
+    {
+        "english": "our",
+        "number": "194",
+        "portuguese": "nossa"
+    },
+    {
+        "english": "need",
+        "number": "195",
+        "portuguese": "precisa"
+    },
+    {
+        "english": "other",
+        "number": "196",
+        "portuguese": "outra"
+    },
+    {
+        "english": "could",
+        "number": "197",
+        "portuguese": "poderia"
+    },
+    {
+        "english": "come on",
+        "number": "198",
+        "portuguese": "venha"
+    },
+    {
+        "english": "woman",
+        "number": "199",
+        "portuguese": "mulher"
+    },
+    {
+        "english": "our",
+        "number": "200",
+        "portuguese": "nosso"
+    },
+    {
+        "english": "feel",
+        "number": "201",
+        "portuguese": "sinto"
+    },
+    {
+        "english": "sorry",
+        "number": "202",
+        "portuguese": "desculpe"
+    },
+    {
+        "english": "shit",
+        "number": "203",
+        "portuguese": "merda"
+    },
+    {
+        "english": "whole",
+        "number": "204",
+        "portuguese": "toda"
+    },
+    {
+        "english": "time",
+        "number": "205",
+        "portuguese": "hora"
+    },
+    {
+        "english": "hence",
+        "number": "206",
+        "portuguese": "daqui"
+    },
+    {
+        "english": "Say",
+        "number": "207",
+        "portuguese": "diga"
+    },
+    {
+        "english": "leave",
+        "number": "208",
+        "portuguese": "sair"
+    },
+    {
+        "english": "friend",
+        "number": "209",
+        "portuguese": "amigo"
+    },
+    {
+        "english": "look",
+        "number": "210",
+        "portuguese": "olhe"
+    },
+    {
+        "english": "love",
+        "number": "211",
+        "portuguese": "amor"
+    },
+    {
+        "english": "problem",
+        "number": "212",
+        "portuguese": "problema"
+    },
+    {
+        "english": "wait",
+        "number": "213",
+        "portuguese": "espere"
+    },
+    {
+        "english": "three",
+        "number": "214",
+        "portuguese": "tr\u00c3\u00aas"
+    },
+    {
+        "english": "some",
+        "number": "215",
+        "portuguese": "algum"
+    },
+    {
+        "english": "ah",
+        "number": "216",
+        "portuguese": "ah"
+    },
+    {
+        "english": "return",
+        "number": "217",
+        "portuguese": "volta"
+    },
+    {
+        "english": "car",
+        "number": "218",
+        "portuguese": "carro"
+    },
+    {
+        "english": "says",
+        "number": "219",
+        "portuguese": "diz"
+    },
+    {
+        "english": "happened",
+        "number": "220",
+        "portuguese": "aconteceu"
+    },
+    {
+        "english": "certainty",
+        "number": "221",
+        "portuguese": "certeza"
+    },
+    {
+        "english": "comes",
+        "number": "222",
+        "portuguese": "vem"
+    },
+    {
+        "english": "her",
+        "number": "223",
+        "portuguese": "dela"
+    },
+    {
+        "english": "less",
+        "number": "224",
+        "portuguese": "menos"
+    },
+    {
+        "english": "between",
+        "number": "225",
+        "portuguese": "entre"
+    },
+    {
+        "english": "although",
+        "number": "226",
+        "portuguese": "embora"
+    },
+    {
+        "english": "times",
+        "number": "227",
+        "portuguese": "vezes"
+    },
+    {
+        "english": "hi",
+        "number": "228",
+        "portuguese": "oi"
+    },
+    {
+        "english": "really",
+        "number": "229",
+        "portuguese": "realmente"
+    },
+    {
+        "english": "knew",
+        "number": "230",
+        "portuguese": "sabia"
+    },
+    {
+        "english": "first",
+        "number": "231",
+        "portuguese": "primeiro"
+    },
+    {
+        "english": "to",
+        "number": "232",
+        "portuguese": "\u00c3\u00a0s"
+    },
+    {
+        "english": "type",
+        "number": "233",
+        "portuguese": "tipo"
+    },
+    {
+        "english": "vi",
+        "number": "234",
+        "portuguese": "vi"
+    },
+    {
+        "english": "do",
+        "number": "235",
+        "portuguese": "fa\u00c3\u00a7a"
+    },
+    {
+        "english": "talking",
+        "number": "236",
+        "portuguese": "falando"
+    },
+    {
+        "english": "return",
+        "number": "237",
+        "portuguese": "voltar"
+    },
+    {
+        "english": "has",
+        "number": "238",
+        "portuguese": "tenha"
+    },
+    {
+        "english": "all",
+        "number": "239",
+        "portuguese": "todas"
+    },
+    {
+        "english": "dear",
+        "number": "240",
+        "portuguese": "querida"
+    },
+    {
+        "english": "afternoon",
+        "number": "241",
+        "portuguese": "tarde"
+    },
+    {
+        "english": "men",
+        "number": "242",
+        "portuguese": "homens"
+    },
+    {
+        "english": "that",
+        "number": "243",
+        "portuguese": "aquele"
+    },
+    {
+        "english": "ago",
+        "number": "244",
+        "portuguese": "atr\u00c3\u00a1s"
+    },
+    {
+        "english": "saw",
+        "number": "245",
+        "portuguese": "viu"
+    },
+    {
+        "english": "part",
+        "number": "246",
+        "portuguese": "parte"
+    },
+    {
+        "english": "Thank you",
+        "number": "247",
+        "portuguese": "obrigada"
+    },
+    {
+        "english": "days",
+        "number": "248",
+        "portuguese": "dias"
+    },
+    {
+        "english": "people",
+        "number": "249",
+        "portuguese": "gente"
+    },
+    {
+        "english": "looks",
+        "number": "250",
+        "portuguese": "olha"
+    },
+    {
+        "english": "would",
+        "number": "251",
+        "portuguese": "seria"
+    },
+    {
+        "english": "stay",
+        "number": "252",
+        "portuguese": "fique"
+    },
+    {
+        "english": "within",
+        "number": "253",
+        "portuguese": "dentro"
+    },
+    {
+        "english": "tomorrow",
+        "number": "254",
+        "portuguese": "amanh\u00c3\u00a3"
+    },
+    {
+        "english": "two",
+        "number": "255",
+        "portuguese": "duas"
+    },
+    {
+        "english": "front",
+        "number": "256",
+        "portuguese": "frente"
+    },
+    {
+        "english": "soon",
+        "number": "257",
+        "portuguese": "logo"
+    },
+    {
+        "english": "Stop",
+        "number": "258",
+        "portuguese": "pare"
+    },
+    {
+        "english": "taste",
+        "number": "259",
+        "portuguese": "gosto"
+    },
+    {
+        "english": "them",
+        "number": "260",
+        "portuguese": "los"
+    },
+    {
+        "english": "at the",
+        "number": "261",
+        "portuguese": "nas"
+    },
+    {
+        "english": "no",
+        "number": "262",
+        "portuguese": "nenhum"
+    },
+    {
+        "english": "head",
+        "number": "263",
+        "portuguese": "cabe\u00c3\u00a7a"
+    },
+    {
+        "english": "should",
+        "number": "264",
+        "portuguese": "deveria"
+    },
+    {
+        "english": "city",
+        "number": "265",
+        "portuguese": "cidade"
+    },
+    {
+        "english": "thought",
+        "number": "266",
+        "portuguese": "pensei"
+    },
+    {
+        "english": "happy",
+        "number": "267",
+        "portuguese": "feliz"
+    },
+    {
+        "english": "leave",
+        "number": "268",
+        "portuguese": "deixar"
+    },
+    {
+        "english": "optimum",
+        "number": "269",
+        "portuguese": "\u00c3\u00b3timo"
+    },
+    {
+        "english": "side",
+        "number": "270",
+        "portuguese": "lado"
+    },
+    {
+        "english": "evil",
+        "number": "271",
+        "portuguese": "mal"
+    },
+    {
+        "english": "serious",
+        "number": "272",
+        "portuguese": "s\u00c3\u00a9rio"
+    },
+    {
+        "english": "can",
+        "number": "273",
+        "portuguese": "podem"
+    },
+    {
+        "english": "fear",
+        "number": "274",
+        "portuguese": "medo"
+    },
+    {
+        "english": "I was",
+        "number": "275",
+        "portuguese": "fui"
+    },
+    {
+        "english": "moment",
+        "number": "276",
+        "portuguese": "momento"
+    },
+    {
+        "english": "would",
+        "number": "277",
+        "portuguese": "gostaria"
+    },
+    {
+        "english": "going",
+        "number": "278",
+        "portuguese": "indo"
+    },
+    {
+        "english": "have",
+        "number": "279",
+        "portuguese": "t\u00c3\u00aam"
+    },
+    {
+        "english": "are",
+        "number": "280",
+        "portuguese": "somos"
+    },
+    {
+        "english": "there",
+        "number": "281",
+        "portuguese": "ali"
+    },
+    {
+        "english": "some",
+        "number": "282",
+        "portuguese": "alguns"
+    },
+    {
+        "english": "gives",
+        "number": "283",
+        "portuguese": "d\u00c3\u00a1"
+    },
+    {
+        "english": "let",
+        "number": "284",
+        "portuguese": "deixe"
+    },
+    {
+        "english": "family",
+        "number": "285",
+        "portuguese": "fam\u00c3\u00adlia"
+    },
+    {
+        "english": "fast",
+        "number": "286",
+        "portuguese": "r\u00c3\u00a1pido"
+    },
+    {
+        "english": "help",
+        "number": "287",
+        "portuguese": "ajudar"
+    },
+    {
+        "english": "Friends",
+        "number": "288",
+        "portuguese": "amigos"
+    },
+    {
+        "english": "both",
+        "number": "289",
+        "portuguese": "tanto"
+    },
+    {
+        "english": "each",
+        "number": "290",
+        "portuguese": "cada"
+    },
+    {
+        "english": "were",
+        "number": "291",
+        "portuguese": "fosse"
+    },
+    {
+        "english": "girl",
+        "number": "292",
+        "portuguese": "garota"
+    },
+    {
+        "english": "other",
+        "number": "293",
+        "portuguese": "outros"
+    },
+    {
+        "english": "a",
+        "number": "294",
+        "portuguese": "num"
+    },
+    {
+        "english": "were",
+        "number": "295",
+        "portuguese": "foram"
+    },
+    {
+        "english": "I",
+        "number": "296",
+        "portuguese": "fiz"
+    },
+    {
+        "english": "brother",
+        "number": "297",
+        "portuguese": "irm\u00c3\u00a3o"
+    },
+    {
+        "english": "daddy",
+        "number": "298",
+        "portuguese": "papai"
+    },
+    {
+        "english": "from",
+        "number": "299",
+        "portuguese": "desde"
+    },
+    {
+        "english": "my",
+        "number": "300",
+        "portuguese": "minhas"
+    },
+    {
+        "english": "kill",
+        "number": "301",
+        "portuguese": "matar"
+    },
+    {
+        "english": "catch",
+        "number": "302",
+        "portuguese": "pegar"
+    },
+    {
+        "english": "to",
+        "number": "303",
+        "portuguese": "aos"
+    },
+    {
+        "english": "top",
+        "number": "304",
+        "portuguese": "cima"
+    },
+    {
+        "english": "hours",
+        "number": "305",
+        "portuguese": "horas"
+    },
+    {
+        "english": "care",
+        "number": "306",
+        "portuguese": "cuidado"
+    },
+    {
+        "english": "their",
+        "number": "307",
+        "portuguese": "deles"
+    },
+    {
+        "english": "enter",
+        "number": "308",
+        "portuguese": "entrar"
+    },
+    {
+        "english": "is",
+        "number": "309",
+        "portuguese": "fica"
+    },
+    {
+        "english": "master",
+        "number": "310",
+        "portuguese": "amo"
+    },
+    {
+        "english": "Give",
+        "number": "311",
+        "portuguese": "d\u00c3\u00aa"
+    },
+    {
+        "english": "almost",
+        "number": "312",
+        "portuguese": "quase"
+    },
+    {
+        "english": "door",
+        "number": "313",
+        "portuguese": "porta"
+    },
+    {
+        "english": "while",
+        "number": "314",
+        "portuguese": "enquanto"
+    },
+    {
+        "english": "history",
+        "number": "315",
+        "portuguese": "hist\u00c3\u00b3ria"
+    },
+    {
+        "english": "new",
+        "number": "316",
+        "portuguese": "nova"
+    },
+    {
+        "english": "see",
+        "number": "317",
+        "portuguese": "vejo"
+    },
+    {
+        "english": "luck",
+        "number": "318",
+        "portuguese": "sorte"
+    },
+    {
+        "english": "idea",
+        "number": "319",
+        "portuguese": "id\u00c3\u00a9ia"
+    },
+    {
+        "english": "matter",
+        "number": "320",
+        "portuguese": "importa"
+    },
+    {
+        "english": "want",
+        "number": "321",
+        "portuguese": "quiser"
+    },
+    {
+        "english": "dead",
+        "number": "322",
+        "portuguese": "morto"
+    },
+    {
+        "english": "morning",
+        "number": "323",
+        "portuguese": "manh\u00c3\u00a3"
+    },
+    {
+        "english": "water",
+        "number": "324",
+        "portuguese": "\u00c3\u00a1gua"
+    },
+    {
+        "english": "first",
+        "number": "325",
+        "portuguese": "primeira"
+    },
+    {
+        "english": "too",
+        "number": "326",
+        "portuguese": "demais"
+    },
+    {
+        "english": "room",
+        "number": "327",
+        "portuguese": "quarto"
+    },
+    {
+        "english": "case",
+        "number": "328",
+        "portuguese": "caso"
+    },
+    {
+        "english": "mom",
+        "number": "329",
+        "portuguese": "mam\u00c3\u00a3e"
+    },
+    {
+        "english": "look",
+        "number": "330",
+        "portuguese": "veja"
+    },
+    {
+        "english": "hope",
+        "number": "331",
+        "portuguese": "espero"
+    },
+    {
+        "english": "like",
+        "number": "332",
+        "portuguese": "gosta"
+    },
+    {
+        "english": "against",
+        "number": "333",
+        "portuguese": "contra"
+    },
+    {
+        "english": "police",
+        "number": "334",
+        "portuguese": "pol\u00c3\u00adcia"
+    },
+    {
+        "english": "path",
+        "number": "335",
+        "portuguese": "caminho"
+    },
+    {
+        "english": "person",
+        "number": "336",
+        "portuguese": "pessoa"
+    },
+    {
+        "english": "close",
+        "number": "337",
+        "portuguese": "perto"
+    },
+    {
+        "english": "form",
+        "number": "338",
+        "portuguese": "forma"
+    },
+    {
+        "english": "that",
+        "number": "339",
+        "portuguese": "aquela"
+    },
+    {
+        "english": "eyes",
+        "number": "340",
+        "portuguese": "olhos"
+    },
+    {
+        "english": "find",
+        "number": "341",
+        "portuguese": "encontrar"
+    },
+    {
+        "english": "children",
+        "number": "342",
+        "portuguese": "crian\u00c3\u00a7as"
+    },
+    {
+        "english": "some",
+        "number": "343",
+        "portuguese": "algumas"
+    },
+    {
+        "english": "year",
+        "number": "344",
+        "portuguese": "ano"
+    },
+    {
+        "english": "die",
+        "number": "345",
+        "portuguese": "morrer"
+    },
+    {
+        "english": "middle",
+        "number": "346",
+        "portuguese": "meio"
+    },
+    {
+        "english": "death",
+        "number": "347",
+        "portuguese": "morte"
+    },
+    {
+        "english": "reason",
+        "number": "348",
+        "portuguese": "raz\u00c3\u00a3o"
+    },
+    {
+        "english": "war",
+        "number": "349",
+        "portuguese": "guerra"
+    },
+    {
+        "english": "week",
+        "number": "350",
+        "portuguese": "semana"
+    },
+    {
+        "english": "waiting",
+        "number": "351",
+        "portuguese": "espera"
+    },
+    {
+        "english": "lady",
+        "number": "352",
+        "portuguese": "senhora"
+    },
+    {
+        "english": "way",
+        "number": "353",
+        "portuguese": "jeito"
+    },
+    {
+        "english": "think",
+        "number": "354",
+        "portuguese": "pensar"
+    },
+    {
+        "english": "those",
+        "number": "355",
+        "portuguese": "esses"
+    },
+    {
+        "english": "those",
+        "number": "356",
+        "portuguese": "essas"
+    },
+    {
+        "english": "wrong",
+        "number": "357",
+        "portuguese": "errado"
+    },
+    {
+        "english": "legal",
+        "number": "358",
+        "portuguese": "legal"
+    },
+    {
+        "english": "they",
+        "number": "359",
+        "portuguese": "elas"
+    },
+    {
+        "english": "arrive",
+        "number": "360",
+        "portuguese": "chegar"
+    },
+    {
+        "english": "minutes",
+        "number": "361",
+        "portuguese": "minutos"
+    },
+    {
+        "english": "Mrs.",
+        "number": "362",
+        "portuguese": "sra"
+    },
+    {
+        "english": "ready",
+        "number": "363",
+        "portuguese": "pronto"
+    },
+    {
+        "english": "need",
+        "number": "364",
+        "portuguese": "precisamos"
+    },
+    {
+        "english": "some",
+        "number": "365",
+        "portuguese": "uns"
+    },
+    {
+        "english": "saying",
+        "number": "366",
+        "portuguese": "dizendo"
+    },
+    {
+        "english": "a",
+        "number": "367",
+        "portuguese": "numa"
+    },
+    {
+        "english": "boy",
+        "number": "368",
+        "portuguese": "garoto"
+    },
+    {
+        "english": "I",
+        "number": "369",
+        "portuguese": "tive"
+    },
+    {
+        "english": "take",
+        "number": "370",
+        "portuguese": "levar"
+    },
+    {
+        "english": "done",
+        "number": "371",
+        "portuguese": "feito"
+    },
+    {
+        "english": "gave",
+        "number": "372",
+        "portuguese": "deu"
+    },
+    {
+        "english": "drug",
+        "number": "373",
+        "portuguese": "droga"
+    },
+    {
+        "english": "hands",
+        "number": "374",
+        "portuguese": "m\u00c3\u00a3os"
+    },
+    {
+        "english": "is",
+        "number": "375",
+        "portuguese": "for"
+    },
+    {
+        "english": "help",
+        "number": "376",
+        "portuguese": "ajuda"
+    },
+    {
+        "english": "I",
+        "number": "377",
+        "portuguese": "devo"
+    },
+    {
+        "english": "believe",
+        "number": "378",
+        "portuguese": "acredito"
+    },
+    {
+        "english": "account",
+        "number": "379",
+        "portuguese": "conta"
+    },
+    {
+        "english": "idiot",
+        "number": "380",
+        "portuguese": "idiota"
+    },
+    {
+        "english": "land",
+        "number": "381",
+        "portuguese": "terra"
+    },
+    {
+        "english": "together",
+        "number": "382",
+        "portuguese": "juntos"
+    },
+    {
+        "english": "ok",
+        "number": "383",
+        "portuguese": "t\u00c3\u00a1"
+    },
+    {
+        "english": "come",
+        "number": "384",
+        "portuguese": "vir"
+    },
+    {
+        "english": "had",
+        "number": "385",
+        "portuguese": "havia"
+    },
+    {
+        "english": "should",
+        "number": "386",
+        "portuguese": "devia"
+    },
+    {
+        "english": "been",
+        "number": "387",
+        "portuguese": "sido"
+    },
+    {
+        "english": "would",
+        "number": "388",
+        "portuguese": "ia"
+    },
+    {
+        "english": "came",
+        "number": "389",
+        "portuguese": "veio"
+    },
+    {
+        "english": "our",
+        "number": "390",
+        "portuguese": "nossos"
+    },
+    {
+        "english": "old",
+        "number": "391",
+        "portuguese": "velho"
+    },
+    {
+        "english": "wife",
+        "number": "392",
+        "portuguese": "esposa"
+    },
+    {
+        "english": "trying",
+        "number": "393",
+        "portuguese": "tentando"
+    },
+    {
+        "english": "it",
+        "number": "394",
+        "portuguese": "nisso"
+    },
+    {
+        "english": "daughter",
+        "number": "395",
+        "portuguese": "filha"
+    },
+    {
+        "english": "hand",
+        "number": "396",
+        "portuguese": "m\u00c3\u00a3o"
+    },
+    {
+        "english": "heart",
+        "number": "397",
+        "portuguese": "cora\u00c3\u00a7\u00c3\u00a3o"
+    },
+    {
+        "english": "can",
+        "number": "398",
+        "portuguese": "consigo"
+    },
+    {
+        "english": "had",
+        "number": "399",
+        "portuguese": "teve"
+    },
+    {
+        "english": "could",
+        "number": "400",
+        "portuguese": "podia"
+    },
+    {
+        "english": "same",
+        "number": "401",
+        "portuguese": "mesma"
+    },
+    {
+        "english": "pass",
+        "number": "402",
+        "portuguese": "passar"
+    },
+    {
+        "english": "chief",
+        "number": "403",
+        "portuguese": "chefe"
+    },
+    {
+        "english": "end",
+        "number": "404",
+        "portuguese": "fim"
+    },
+    {
+        "english": "such",
+        "number": "405",
+        "portuguese": "tal"
+    },
+    {
+        "english": "listen",
+        "number": "406",
+        "portuguese": "ouvir"
+    },
+    {
+        "english": "important",
+        "number": "407",
+        "portuguese": "importante"
+    },
+    {
+        "english": "Welcome",
+        "number": "408",
+        "portuguese": "vindo"
+    },
+    {
+        "english": "staff",
+        "number": "409",
+        "portuguese": "pessoal"
+    },
+    {
+        "english": "speech",
+        "number": "410",
+        "portuguese": "fala"
+    },
+    {
+        "english": "school",
+        "number": "411",
+        "portuguese": "escola"
+    },
+    {
+        "english": "mouth",
+        "number": "412",
+        "portuguese": "boca"
+    },
+    {
+        "english": "no",
+        "number": "413",
+        "portuguese": "nenhuma"
+    },
+    {
+        "english": "just",
+        "number": "414",
+        "portuguese": "acabou"
+    },
+    {
+        "english": "want",
+        "number": "415",
+        "portuguese": "querem"
+    },
+    {
+        "english": "see",
+        "number": "416",
+        "portuguese": "v\u00c3\u00aa"
+    },
+    {
+        "english": "game",
+        "number": "417",
+        "portuguese": "jogo"
+    },
+    {
+        "english": "difficult",
+        "number": "418",
+        "portuguese": "dif\u00c3\u00adcil"
+    },
+    {
+        "english": "would",
+        "number": "419",
+        "portuguese": "teria"
+    },
+    {
+        "english": "understand",
+        "number": "420",
+        "portuguese": "entendo"
+    },
+    {
+        "english": "problems",
+        "number": "421",
+        "portuguese": "problemas"
+    },
+    {
+        "english": "cue",
+        "number": "422",
+        "portuguese": "deixa"
+    },
+    {
+        "english": "dear",
+        "number": "423",
+        "portuguese": "querido"
+    },
+    {
+        "english": "weapon",
+        "number": "424",
+        "portuguese": "arma"
+    },
+    {
+        "english": "far",
+        "number": "425",
+        "portuguese": "longe"
+    },
+    {
+        "english": "five",
+        "number": "426",
+        "portuguese": "cinco"
+    },
+    {
+        "english": "because",
+        "number": "427",
+        "portuguese": "pois"
+    },
+    {
+        "english": "know",
+        "number": "428",
+        "portuguese": "conhece"
+    },
+    {
+        "english": "women",
+        "number": "429",
+        "portuguese": "mulheres"
+    },
+    {
+        "english": "eat",
+        "number": "430",
+        "portuguese": "comer"
+    },
+    {
+        "english": "skirt",
+        "number": "431",
+        "portuguese": "saia"
+    },
+    {
+        "english": "happening",
+        "number": "432",
+        "portuguese": "acontecendo"
+    },
+    {
+        "english": "count",
+        "number": "433",
+        "portuguese": "contar"
+    },
+    {
+        "english": "worry",
+        "number": "434",
+        "portuguese": "preocupe"
+    },
+    {
+        "english": "power",
+        "number": "435",
+        "portuguese": "poder"
+    },
+    {
+        "english": "last",
+        "number": "436",
+        "portuguese": "\u00c3\u00baltima"
+    },
+    {
+        "english": "husband",
+        "number": "437",
+        "portuguese": "marido"
+    },
+    {
+        "english": "captain",
+        "number": "438",
+        "portuguese": "capit\u00c3\u00a3o"
+    },
+    {
+        "english": "means",
+        "number": "439",
+        "portuguese": "significa"
+    },
+    {
+        "english": "was",
+        "number": "440",
+        "portuguese": "ficou"
+    },
+    {
+        "english": "here",
+        "number": "441",
+        "portuguese": "c\u00c3\u00a1"
+    },
+    {
+        "english": "stop",
+        "number": "442",
+        "portuguese": "parar"
+    },
+    {
+        "english": "more",
+        "number": "443",
+        "portuguese": "maior"
+    },
+    {
+        "english": "sleep",
+        "number": "444",
+        "portuguese": "dormir"
+    },
+    {
+        "english": "pleasure",
+        "number": "445",
+        "portuguese": "prazer"
+    },
+    {
+        "english": "try",
+        "number": "446",
+        "portuguese": "tentar"
+    },
+    {
+        "english": "I",
+        "number": "447",
+        "portuguese": "fa\u00c3\u00a7o"
+    },
+    {
+        "english": "body",
+        "number": "448",
+        "portuguese": "corpo"
+    },
+    {
+        "english": "goodbye",
+        "number": "449",
+        "portuguese": "adeus"
+    },
+    {
+        "english": "thinking",
+        "number": "450",
+        "portuguese": "pensando"
+    },
+    {
+        "english": "say",
+        "number": "451",
+        "portuguese": "digo"
+    },
+    {
+        "english": "in this",
+        "number": "452",
+        "portuguese": "neste"
+    },
+    {
+        "english": "many",
+        "number": "453",
+        "portuguese": "muitos"
+    },
+    {
+        "english": "license",
+        "number": "454",
+        "portuguese": "licen\u00c3\u00a7a"
+    },
+    {
+        "english": "dr",
+        "number": "455",
+        "portuguese": "dr"
+    },
+    {
+        "english": "Cum",
+        "number": "456",
+        "portuguese": "porra"
+    },
+    {
+        "english": "start",
+        "number": "457",
+        "portuguese": "come\u00c3\u00a7ar"
+    },
+    {
+        "english": "four",
+        "number": "458",
+        "portuguese": "quatro"
+    },
+    {
+        "english": "yesterday",
+        "number": "459",
+        "portuguese": "ontem"
+    },
+    {
+        "english": "waiting",
+        "number": "460",
+        "portuguese": "esperando"
+    },
+    {
+        "english": "during",
+        "number": "461",
+        "portuguese": "durante"
+    },
+    {
+        "english": "wait",
+        "number": "462",
+        "portuguese": "esperar"
+    },
+    {
+        "english": "work",
+        "number": "463",
+        "portuguese": "trabalhar"
+    },
+    {
+        "english": "found",
+        "number": "464",
+        "portuguese": "achei"
+    },
+    {
+        "english": "number",
+        "number": "465",
+        "portuguese": "n\u00c3\u00bamero"
+    },
+    {
+        "english": "had",
+        "number": "466",
+        "portuguese": "tivesse"
+    },
+    {
+        "english": "this",
+        "number": "467",
+        "portuguese": "desta"
+    },
+    {
+        "english": "cause",
+        "number": "468",
+        "portuguese": "causa"
+    },
+    {
+        "english": "only",
+        "number": "469",
+        "portuguese": "\u00c3\u00banica"
+    },
+    {
+        "english": "take",
+        "number": "470",
+        "portuguese": "tomar"
+    },
+    {
+        "english": "way",
+        "number": "471",
+        "portuguese": "maneira"
+    },
+    {
+        "english": "many",
+        "number": "472",
+        "portuguese": "muitas"
+    },
+    {
+        "english": "exactly",
+        "number": "473",
+        "portuguese": "exatamente"
+    },
+    {
+        "english": "calm",
+        "number": "474",
+        "portuguese": "calma"
+    },
+    {
+        "english": "think",
+        "number": "475",
+        "portuguese": "pensa"
+    },
+    {
+        "english": "second",
+        "number": "476",
+        "portuguese": "segundo"
+    },
+    {
+        "english": "thou",
+        "number": "477",
+        "portuguese": "tu"
+    },
+    {
+        "english": "blood",
+        "number": "478",
+        "portuguese": "sangue"
+    },
+    {
+        "english": "heard",
+        "number": "479",
+        "portuguese": "ouvi"
+    },
+    {
+        "english": "sister",
+        "number": "480",
+        "portuguese": "irm\u00c3\u00a3"
+    },
+    {
+        "english": "much",
+        "number": "481",
+        "portuguese": "muita"
+    },
+    {
+        "english": "arrives",
+        "number": "482",
+        "portuguese": "chega"
+    },
+    {
+        "english": "know",
+        "number": "483",
+        "portuguese": "conhe\u00c3\u00a7o"
+    },
+    {
+        "english": "died",
+        "number": "484",
+        "portuguese": "morreu"
+    },
+    {
+        "english": "children",
+        "number": "485",
+        "portuguese": "filhos"
+    },
+    {
+        "english": "live",
+        "number": "486",
+        "portuguese": "viver"
+    },
+    {
+        "english": "quite",
+        "number": "487",
+        "portuguese": "bastante"
+    },
+    {
+        "english": "were",
+        "number": "488",
+        "portuguese": "eram"
+    },
+    {
+        "english": "months",
+        "number": "489",
+        "portuguese": "meses"
+    },
+    {
+        "english": "coffee",
+        "number": "490",
+        "portuguese": "caf\u00c3\u00a9"
+    },
+    {
+        "english": "peace",
+        "number": "491",
+        "portuguese": "paz"
+    },
+    {
+        "english": "crazy",
+        "number": "492",
+        "portuguese": "louco"
+    },
+    {
+        "english": "that",
+        "number": "493",
+        "portuguese": "aquilo"
+    },
+    {
+        "english": "easy",
+        "number": "494",
+        "portuguese": "f\u00c3\u00a1cil"
+    },
+    {
+        "english": "again",
+        "number": "495",
+        "portuguese": "novamente"
+    },
+    {
+        "english": "being",
+        "number": "496",
+        "portuguese": "sendo"
+    },
+    {
+        "english": "strange",
+        "number": "497",
+        "portuguese": "estranho"
+    },
+    {
+        "english": "thousand",
+        "number": "498",
+        "portuguese": "mil"
+    },
+    {
+        "english": "take",
+        "number": "499",
+        "portuguese": "pegue"
+    },
+    {
+        "english": "s",
+        "number": "500",
+        "portuguese": "s"
+    },
+    {
+        "english": "party",
+        "number": "501",
+        "portuguese": "festa"
+    },
+    {
+        "english": "phone",
+        "number": "502",
+        "portuguese": "telefone"
+    },
+    {
+        "english": "these",
+        "number": "503",
+        "portuguese": "estes"
+    },
+    {
+        "english": "bed",
+        "number": "504",
+        "portuguese": "cama"
+    },
+    {
+        "english": "remove",
+        "number": "505",
+        "portuguese": "tirar"
+    },
+    {
+        "english": "young",
+        "number": "506",
+        "portuguese": "jovem"
+    },
+    {
+        "english": "use",
+        "number": "507",
+        "portuguese": "usar"
+    },
+    {
+        "english": "will",
+        "number": "508",
+        "portuguese": "ter\u00c3\u00a1"
+    },
+    {
+        "english": "music",
+        "number": "509",
+        "portuguese": "m\u00c3\u00basica"
+    },
+    {
+        "english": "beyond",
+        "number": "510",
+        "portuguese": "al\u00c3\u00a9m"
+    },
+    {
+        "english": "hooker",
+        "number": "511",
+        "portuguese": "puta"
+    },
+    {
+        "english": "there",
+        "number": "512",
+        "portuguese": "houve"
+    },
+    {
+        "english": "listen",
+        "number": "513",
+        "portuguese": "ou\u00c3\u00a7a"
+    },
+    {
+        "english": "arrived",
+        "number": "514",
+        "portuguese": "chegou"
+    },
+    {
+        "english": "movie",
+        "number": "515",
+        "portuguese": "filme"
+    },
+    {
+        "english": "get",
+        "number": "516",
+        "portuguese": "conseguir"
+    },
+    {
+        "english": "small",
+        "number": "517",
+        "portuguese": "pequeno"
+    },
+    {
+        "english": "alone",
+        "number": "518",
+        "portuguese": "sozinho"
+    },
+    {
+        "english": "know",
+        "number": "519",
+        "portuguese": "sabem"
+    },
+    {
+        "english": "child",
+        "number": "520",
+        "portuguese": "crian\u00c3\u00a7a"
+    },
+    {
+        "english": "parents",
+        "number": "521",
+        "portuguese": "pais"
+    },
+    {
+        "english": "enough",
+        "number": "522",
+        "portuguese": "suficiente"
+    },
+    {
+        "english": "hell",
+        "number": "523",
+        "portuguese": "diabos"
+    },
+    {
+        "english": "question",
+        "number": "524",
+        "portuguese": "pergunta"
+    },
+    {
+        "english": "can",
+        "number": "525",
+        "portuguese": "consegue"
+    },
+    {
+        "english": "minute",
+        "number": "526",
+        "portuguese": "minuto"
+    },
+    {
+        "english": "thy",
+        "number": "527",
+        "portuguese": "teu"
+    },
+    {
+        "english": "can",
+        "number": "528",
+        "portuguese": "possa"
+    },
+    {
+        "english": "remember",
+        "number": "529",
+        "portuguese": "lembra"
+    },
+    {
+        "english": "of this",
+        "number": "530",
+        "portuguese": "desse"
+    },
+    {
+        "english": "will",
+        "number": "531",
+        "portuguese": "ir\u00c3\u00a1"
+    },
+    {
+        "english": "hello",
+        "number": "532",
+        "portuguese": "al\u00c3\u00b4"
+    },
+    {
+        "english": "were",
+        "number": "533",
+        "portuguese": "estavam"
+    },
+    {
+        "english": "strong",
+        "number": "534",
+        "portuguese": "forte"
+    },
+    {
+        "english": "left",
+        "number": "535",
+        "portuguese": "deixou"
+    },
+    {
+        "english": "fire",
+        "number": "536",
+        "portuguese": "fogo"
+    },
+    {
+        "english": "country",
+        "number": "537",
+        "portuguese": "pa\u00c3\u00ads"
+    },
+    {
+        "english": "live",
+        "number": "538",
+        "portuguese": "vivo"
+    },
+    {
+        "english": "say",
+        "number": "539",
+        "portuguese": "dizem"
+    },
+    {
+        "english": "john",
+        "number": "540",
+        "portuguese": "john"
+    },
+    {
+        "english": "pay",
+        "number": "541",
+        "portuguese": "pagar"
+    },
+    {
+        "english": "where",
+        "number": "542",
+        "portuguese": "aonde"
+    },
+    {
+        "english": "dinner",
+        "number": "543",
+        "portuguese": "jantar"
+    },
+    {
+        "english": "killed",
+        "number": "544",
+        "portuguese": "matou"
+    },
+    {
+        "english": "this",
+        "number": "545",
+        "portuguese": "dessa"
+    },
+    {
+        "english": "wanted",
+        "number": "546",
+        "portuguese": "quis"
+    },
+    {
+        "english": "is",
+        "number": "547",
+        "portuguese": "esteja"
+    },
+    {
+        "english": "back",
+        "number": "548",
+        "portuguese": "tr\u00c3\u00a1s"
+    },
+    {
+        "english": "our",
+        "number": "549",
+        "portuguese": "nossas"
+    },
+    {
+        "english": "food",
+        "number": "550",
+        "portuguese": "comida"
+    },
+    {
+        "english": "possible",
+        "number": "551",
+        "portuguese": "poss\u00c3\u00advel"
+    },
+    {
+        "english": "happen",
+        "number": "552",
+        "portuguese": "acontecer"
+    },
+    {
+        "english": "talk",
+        "number": "553",
+        "portuguese": "fale"
+    },
+    {
+        "english": "right",
+        "number": "554",
+        "portuguese": "direito"
+    },
+    {
+        "english": "back",
+        "number": "555",
+        "portuguese": "volte"
+    },
+    {
+        "english": "chance",
+        "number": "556",
+        "portuguese": "chance"
+    },
+    {
+        "english": "boys",
+        "number": "557",
+        "portuguese": "rapazes"
+    },
+    {
+        "english": "word",
+        "number": "558",
+        "portuguese": "palavra"
+    },
+    {
+        "english": "seeing",
+        "number": "559",
+        "portuguese": "vendo"
+    },
+    {
+        "english": "we",
+        "number": "560",
+        "portuguese": "devemos"
+    },
+    {
+        "english": "low",
+        "number": "561",
+        "portuguese": "baixo"
+    },
+    {
+        "english": "other",
+        "number": "562",
+        "portuguese": "outras"
+    },
+    {
+        "english": "these",
+        "number": "563",
+        "portuguese": "estas"
+    },
+    {
+        "english": "penalty",
+        "number": "564",
+        "portuguese": "pena"
+    },
+    {
+        "english": "lack",
+        "number": "565",
+        "portuguese": "falta"
+    },
+    {
+        "english": "guilt",
+        "number": "566",
+        "portuguese": "culpa"
+    },
+    {
+        "english": "them",
+        "number": "567",
+        "portuguese": "lhes"
+    },
+    {
+        "english": "listen",
+        "number": "568",
+        "portuguese": "escute"
+    },
+    {
+        "english": "dollars",
+        "number": "569",
+        "portuguese": "d\u00c3\u00b3lares"
+    },
+    {
+        "english": "feel",
+        "number": "570",
+        "portuguese": "sentir"
+    },
+    {
+        "english": "heard",
+        "number": "571",
+        "portuguese": "ouviu"
+    },
+    {
+        "english": "light",
+        "number": "572",
+        "portuguese": "luz"
+    },
+    {
+        "english": "understands",
+        "number": "573",
+        "portuguese": "entende"
+    },
+    {
+        "english": "six",
+        "number": "574",
+        "portuguese": "seis"
+    },
+    {
+        "english": "your",
+        "number": "575",
+        "portuguese": "tua"
+    },
+    {
+        "english": "there",
+        "number": "576",
+        "portuguese": "existe"
+    },
+    {
+        "english": "jack",
+        "number": "577",
+        "portuguese": "jack"
+    },
+    {
+        "english": "king",
+        "number": "578",
+        "portuguese": "rei"
+    },
+    {
+        "english": "attention",
+        "number": "579",
+        "portuguese": "aten\u00c3\u00a7\u00c3\u00a3o"
+    },
+    {
+        "english": "believe",
+        "number": "580",
+        "portuguese": "acreditar"
+    },
+    {
+        "english": "different",
+        "number": "581",
+        "portuguese": "diferente"
+    },
+    {
+        "english": "boy",
+        "number": "582",
+        "portuguese": "rapaz"
+    },
+    {
+        "english": "Miss",
+        "number": "583",
+        "portuguese": "srta"
+    },
+    {
+        "english": "lose",
+        "number": "584",
+        "portuguese": "perder"
+    },
+    {
+        "english": "feel",
+        "number": "585",
+        "portuguese": "sente"
+    },
+    {
+        "english": "book",
+        "number": "586",
+        "portuguese": "livro"
+    },
+    {
+        "english": "bye",
+        "number": "587",
+        "portuguese": "tchau"
+    },
+    {
+        "english": "single",
+        "number": "588",
+        "portuguese": "\u00c3\u00banico"
+    },
+    {
+        "english": "some",
+        "number": "589",
+        "portuguese": "umas"
+    },
+    {
+        "english": "agreement",
+        "number": "590",
+        "portuguese": "acordo"
+    },
+    {
+        "english": "force",
+        "number": "591",
+        "portuguese": "for\u00c3\u00a7a"
+    },
+    {
+        "english": "brought",
+        "number": "592",
+        "portuguese": "trouxe"
+    },
+    {
+        "english": "this",
+        "number": "593",
+        "portuguese": "deste"
+    },
+    {
+        "english": "Jesus",
+        "number": "594",
+        "portuguese": "jesus"
+    },
+    {
+        "english": "do",
+        "number": "595",
+        "portuguese": "fazem"
+    },
+    {
+        "english": "point",
+        "number": "596",
+        "portuguese": "ponto"
+    },
+    {
+        "english": "look",
+        "number": "597",
+        "portuguese": "olhar"
+    },
+    {
+        "english": "ouch",
+        "number": "598",
+        "portuguese": "ai"
+    },
+    {
+        "english": "know",
+        "number": "599",
+        "portuguese": "sabemos"
+    },
+    {
+        "english": "baby",
+        "number": "600",
+        "portuguese": "beb\u00c3\u00aa"
+    },
+    {
+        "english": "beautiful",
+        "number": "601",
+        "portuguese": "linda"
+    },
+    {
+        "english": "final",
+        "number": "602",
+        "portuguese": "final"
+    },
+    {
+        "english": "probably",
+        "number": "603",
+        "portuguese": "provavelmente"
+    },
+    {
+        "english": "in that",
+        "number": "604",
+        "portuguese": "nessa"
+    },
+    {
+        "english": "guys",
+        "number": "605",
+        "portuguese": "caras"
+    },
+    {
+        "english": "in this",
+        "number": "606",
+        "portuguese": "nesta"
+    },
+    {
+        "english": "marriage",
+        "number": "607",
+        "portuguese": "casamento"
+    },
+    {
+        "english": "looking",
+        "number": "608",
+        "portuguese": "procurando"
+    },
+    {
+        "english": "play",
+        "number": "609",
+        "portuguese": "jogar"
+    },
+    {
+        "english": "excuse",
+        "number": "610",
+        "portuguese": "desculpa"
+    },
+    {
+        "english": "doctor",
+        "number": "611",
+        "portuguese": "doutor"
+    },
+    {
+        "english": "beautiful",
+        "number": "612",
+        "portuguese": "bonito"
+    },
+    {
+        "english": "ask",
+        "number": "613",
+        "portuguese": "pedir"
+    },
+    {
+        "english": "change",
+        "number": "614",
+        "portuguese": "mudar"
+    },
+    {
+        "english": "state",
+        "number": "615",
+        "portuguese": "estado"
+    },
+    {
+        "english": "president",
+        "number": "616",
+        "portuguese": "presidente"
+    },
+    {
+        "english": "happens",
+        "number": "617",
+        "portuguese": "acontece"
+    },
+    {
+        "english": "past",
+        "number": "618",
+        "portuguese": "passado"
+    },
+    {
+        "english": "in that",
+        "number": "619",
+        "portuguese": "nesse"
+    },
+    {
+        "english": "managed",
+        "number": "620",
+        "portuguese": "conseguiu"
+    },
+    {
+        "english": "it",
+        "number": "621",
+        "portuguese": "nele"
+    },
+    {
+        "english": "street",
+        "number": "622",
+        "portuguese": "rua"
+    },
+    {
+        "english": "spoke",
+        "number": "623",
+        "portuguese": "falou"
+    },
+    {
+        "english": "next",
+        "number": "624",
+        "portuguese": "pr\u00c3\u00b3xima"
+    },
+    {
+        "english": "out",
+        "number": "625",
+        "portuguese": "sai"
+    },
+    {
+        "english": "right",
+        "number": "626",
+        "portuguese": "certa"
+    },
+    {
+        "english": "doctor",
+        "number": "627",
+        "portuguese": "m\u00c3\u00a9dico"
+    },
+    {
+        "english": "weapons",
+        "number": "628",
+        "portuguese": "armas"
+    },
+    {
+        "english": "show",
+        "number": "629",
+        "portuguese": "mostrar"
+    },
+    {
+        "english": "vim",
+        "number": "630",
+        "portuguese": "vim"
+    },
+    {
+        "english": "mode",
+        "number": "631",
+        "portuguese": "modo"
+    },
+    {
+        "english": "been",
+        "number": "632",
+        "portuguese": "esteve"
+    },
+    {
+        "english": "room",
+        "number": "633",
+        "portuguese": "sala"
+    },
+    {
+        "english": "continue",
+        "number": "634",
+        "portuguese": "continuar"
+    },
+    {
+        "english": "should",
+        "number": "635",
+        "portuguese": "devem"
+    },
+    {
+        "english": "would",
+        "number": "636",
+        "portuguese": "faria"
+    },
+    {
+        "english": "small",
+        "number": "637",
+        "portuguese": "pequena"
+    },
+    {
+        "english": "security",
+        "number": "638",
+        "portuguese": "seguran\u00c3\u00a7a"
+    },
+    {
+        "english": "re",
+        "number": "639",
+        "portuguese": "est\u00c3\u00a1s"
+    },
+    {
+        "english": "call",
+        "number": "640",
+        "portuguese": "chamar"
+    },
+    {
+        "english": "bad",
+        "number": "641",
+        "portuguese": "ruim"
+    },
+    {
+        "english": "end",
+        "number": "642",
+        "portuguese": "acabar"
+    },
+    {
+        "english": "rest",
+        "number": "643",
+        "portuguese": "resto"
+    },
+    {
+        "english": "worse",
+        "number": "644",
+        "portuguese": "pior"
+    },
+    {
+        "english": "business",
+        "number": "645",
+        "portuguese": "neg\u00c3\u00b3cio"
+    },
+    {
+        "english": "those",
+        "number": "646",
+        "portuguese": "aqueles"
+    },
+    {
+        "english": "girls",
+        "number": "647",
+        "portuguese": "garotas"
+    },
+    {
+        "english": "foot",
+        "number": "648",
+        "portuguese": "p\u00c3\u00a9"
+    },
+    {
+        "english": "beautiful",
+        "number": "649",
+        "portuguese": "bonita"
+    },
+    {
+        "english": "remember",
+        "number": "650",
+        "portuguese": "lembro"
+    },
+    {
+        "english": "walks",
+        "number": "651",
+        "portuguese": "anda"
+    },
+    {
+        "english": "high",
+        "number": "652",
+        "portuguese": "alto"
+    },
+    {
+        "english": "are",
+        "number": "653",
+        "portuguese": "estiver"
+    },
+    {
+        "english": "buy",
+        "number": "654",
+        "portuguese": "comprar"
+    },
+    {
+        "english": "weeks",
+        "number": "655",
+        "portuguese": "semanas"
+    },
+    {
+        "english": "flame",
+        "number": "656",
+        "portuguese": "chama"
+    },
+    {
+        "english": "forget",
+        "number": "657",
+        "portuguese": "esque\u00c3\u00a7a"
+    },
+    {
+        "english": "special",
+        "number": "658",
+        "portuguese": "especial"
+    },
+    {
+        "english": "beneath",
+        "number": "659",
+        "portuguese": "sob"
+    },
+    {
+        "english": "passes",
+        "number": "660",
+        "portuguese": "passa"
+    },
+    {
+        "english": "am",
+        "number": "661",
+        "portuguese": "fico"
+    },
+    {
+        "english": "si",
+        "number": "662",
+        "portuguese": "si"
+    },
+    {
+        "english": "close",
+        "number": "663",
+        "portuguese": "pr\u00c3\u00b3ximo"
+    },
+    {
+        "english": "girl",
+        "number": "664",
+        "portuguese": "menina"
+    },
+    {
+        "english": "playing",
+        "number": "665",
+        "portuguese": "brincando"
+    },
+    {
+        "english": "would",
+        "number": "666",
+        "portuguese": "iria"
+    },
+    {
+        "english": "by",
+        "number": "667",
+        "portuguese": "pelos"
+    },
+    {
+        "english": "early",
+        "number": "668",
+        "portuguese": "cedo"
+    },
+    {
+        "english": "ten",
+        "number": "669",
+        "portuguese": "dez"
+    },
+    {
+        "english": "marry",
+        "number": "670",
+        "portuguese": "casar"
+    },
+    {
+        "english": "find",
+        "number": "671",
+        "portuguese": "achar"
+    },
+    {
+        "english": "uncle",
+        "number": "672",
+        "portuguese": "tio"
+    },
+    {
+        "english": "plan",
+        "number": "673",
+        "portuguese": "plano"
+    },
+    {
+        "english": "talk",
+        "number": "674",
+        "portuguese": "conversar"
+    },
+    {
+        "english": "nurse",
+        "number": "675",
+        "portuguese": "ama"
+    },
+    {
+        "english": "the",
+        "number": "676",
+        "portuguese": "the"
+    },
+    {
+        "english": "started",
+        "number": "677",
+        "portuguese": "come\u00c3\u00a7ou"
+    },
+    {
+        "english": "want",
+        "number": "678",
+        "portuguese": "queremos"
+    },
+    {
+        "english": "respect",
+        "number": "679",
+        "portuguese": "respeito"
+    },
+    {
+        "english": "last",
+        "number": "680",
+        "portuguese": "\u00c3\u00baltimo"
+    },
+    {
+        "english": "link",
+        "number": "681",
+        "portuguese": "ligar"
+    },
+    {
+        "english": "ask",
+        "number": "682",
+        "portuguese": "perguntar"
+    },
+    {
+        "english": "hospital",
+        "number": "683",
+        "portuguese": "hospital"
+    },
+    {
+        "english": "want",
+        "number": "684",
+        "portuguese": "querer"
+    },
+    {
+        "english": "take",
+        "number": "685",
+        "portuguese": "tome"
+    },
+    {
+        "english": "sun",
+        "number": "686",
+        "portuguese": "sol"
+    },
+    {
+        "english": "light",
+        "number": "687",
+        "portuguese": "leve"
+    },
+    {
+        "english": "free",
+        "number": "688",
+        "portuguese": "livre"
+    },
+    {
+        "english": "own",
+        "number": "689",
+        "portuguese": "pr\u00c3\u00b3prio"
+    },
+    {
+        "english": "floor",
+        "number": "690",
+        "portuguese": "andar"
+    },
+    {
+        "english": "words",
+        "number": "691",
+        "portuguese": "palavras"
+    },
+    {
+        "english": "will",
+        "number": "692",
+        "portuguese": "estar\u00c3\u00a1"
+    },
+    {
+        "english": "thence",
+        "number": "693",
+        "portuguese": "da\u00c3\u00ad"
+    },
+    {
+        "english": "I think",
+        "number": "694",
+        "portuguese": "penso"
+    },
+    {
+        "english": "large",
+        "number": "695",
+        "portuguese": "grandes"
+    },
+    {
+        "english": "air",
+        "number": "696",
+        "portuguese": "ar"
+    },
+    {
+        "english": "win",
+        "number": "697",
+        "portuguese": "ganhar"
+    },
+    {
+        "english": "leave",
+        "number": "698",
+        "portuguese": "partir"
+    },
+    {
+        "english": "million",
+        "number": "699",
+        "portuguese": "milh\u00c3\u00b5es"
+    },
+    {
+        "english": "boy",
+        "number": "700",
+        "portuguese": "menino"
+    },
+    {
+        "english": "viewed",
+        "number": "701",
+        "portuguese": "visto"
+    },
+    {
+        "english": "understood",
+        "number": "702",
+        "portuguese": "entendeu"
+    },
+    {
+        "english": "believes",
+        "number": "703",
+        "portuguese": "acredita"
+    },
+    {
+        "english": "funny",
+        "number": "704",
+        "portuguese": "engra\u00c3\u00a7ado"
+    },
+    {
+        "english": "out",
+        "number": "705",
+        "portuguese": "saiu"
+    },
+    {
+        "english": "beautiful",
+        "number": "706",
+        "portuguese": "lindo"
+    },
+    {
+        "english": "you",
+        "number": "707",
+        "portuguese": "voce"
+    },
+    {
+        "english": "you",
+        "number": "708",
+        "portuguese": "senhores"
+    },
+    {
+        "english": "think",
+        "number": "709",
+        "portuguese": "pense"
+    },
+    {
+        "english": "put",
+        "number": "710",
+        "portuguese": "colocar"
+    },
+    {
+        "english": "teacher",
+        "number": "711",
+        "portuguese": "professor"
+    },
+    {
+        "english": "present",
+        "number": "712",
+        "portuguese": "presente"
+    },
+    {
+        "english": "real",
+        "number": "713",
+        "portuguese": "real"
+    },
+    {
+        "english": "control",
+        "number": "714",
+        "portuguese": "controle"
+    },
+    {
+        "english": "trip",
+        "number": "715",
+        "portuguese": "viagem"
+    },
+    {
+        "english": "insurance",
+        "number": "716",
+        "portuguese": "seguro"
+    },
+    {
+        "english": "quickly",
+        "number": "717",
+        "portuguese": "depressa"
+    },
+    {
+        "english": "I was",
+        "number": "718",
+        "portuguese": "fiquei"
+    },
+    {
+        "english": "natal",
+        "number": "719",
+        "portuguese": "natal"
+    },
+    {
+        "english": "hair",
+        "number": "720",
+        "portuguese": "cabelo"
+    },
+    {
+        "english": "fact",
+        "number": "721",
+        "portuguese": "fato"
+    },
+    {
+        "english": "dead",
+        "number": "722",
+        "portuguese": "mortos"
+    },
+    {
+        "english": "sick",
+        "number": "723",
+        "portuguese": "doente"
+    },
+    {
+        "english": "prison",
+        "number": "724",
+        "portuguese": "pris\u00c3\u00a3o"
+    },
+    {
+        "english": "will",
+        "number": "725",
+        "portuguese": "vontade"
+    },
+    {
+        "english": "lament",
+        "number": "726",
+        "portuguese": "lamento"
+    },
+    {
+        "english": "order",
+        "number": "727",
+        "portuguese": "ordem"
+    },
+    {
+        "english": "perfect",
+        "number": "728",
+        "portuguese": "perfeito"
+    },
+    {
+        "english": "passed",
+        "number": "729",
+        "portuguese": "passou"
+    },
+    {
+        "english": "alone",
+        "number": "730",
+        "portuguese": "sozinha"
+    },
+    {
+        "english": "maintain",
+        "number": "731",
+        "portuguese": "manter"
+    },
+    {
+        "english": "general",
+        "number": "732",
+        "portuguese": "general"
+    },
+    {
+        "english": "pro",
+        "number": "733",
+        "portuguese": "pro"
+    },
+    {
+        "english": "were",
+        "number": "734",
+        "portuguese": "est\u00c3\u00a1vamos"
+    },
+    {
+        "english": "hot",
+        "number": "735",
+        "portuguese": "quente"
+    },
+    {
+        "english": "caught",
+        "number": "736",
+        "portuguese": "pegou"
+    },
+    {
+        "english": "hell",
+        "number": "737",
+        "portuguese": "inferno"
+    },
+    {
+        "english": "said",
+        "number": "738",
+        "portuguese": "falei"
+    },
+    {
+        "english": "with us",
+        "number": "739",
+        "portuguese": "conosco"
+    },
+    {
+        "english": "mind",
+        "number": "740",
+        "portuguese": "mente"
+    },
+    {
+        "english": "office",
+        "number": "741",
+        "portuguese": "escrit\u00c3\u00b3rio"
+    },
+    {
+        "english": "line",
+        "number": "742",
+        "portuguese": "linha"
+    },
+    {
+        "english": "sense",
+        "number": "743",
+        "portuguese": "sentido"
+    },
+    {
+        "english": "looking",
+        "number": "744",
+        "portuguese": "olhando"
+    },
+    {
+        "english": "them",
+        "number": "745",
+        "portuguese": "las"
+    },
+    {
+        "english": "I was",
+        "number": "746",
+        "portuguese": "estive"
+    },
+    {
+        "english": "specify",
+        "number": "747",
+        "portuguese": "precisar"
+    },
+    {
+        "english": "own",
+        "number": "748",
+        "portuguese": "pr\u00c3\u00b3pria"
+    },
+    {
+        "english": "army",
+        "number": "749",
+        "portuguese": "ex\u00c3\u00a9rcito"
+    },
+    {
+        "english": "understand",
+        "number": "750",
+        "portuguese": "entender"
+    },
+    {
+        "english": "finally",
+        "number": "751",
+        "portuguese": "finalmente"
+    },
+    {
+        "english": "simple",
+        "number": "752",
+        "portuguese": "simples"
+    },
+    {
+        "english": "people",
+        "number": "753",
+        "portuguese": "povo"
+    },
+    {
+        "english": "after",
+        "number": "754",
+        "portuguese": "ap\u00c3\u00b3s"
+    },
+    {
+        "english": "i",
+        "number": "755",
+        "portuguese": "i"
+    },
+    {
+        "english": "open",
+        "number": "756",
+        "portuguese": "abra"
+    },
+    {
+        "english": "were",
+        "number": "757",
+        "portuguese": "estivesse"
+    },
+    {
+        "english": "field",
+        "number": "758",
+        "portuguese": "campo"
+    },
+    {
+        "english": "incredible",
+        "number": "759",
+        "portuguese": "incr\u00c3\u00advel"
+    },
+    {
+        "english": "age",
+        "number": "760",
+        "portuguese": "idade"
+    },
+    {
+        "english": "table",
+        "number": "761",
+        "portuguese": "mesa"
+    },
+    {
+        "english": "team",
+        "number": "762",
+        "portuguese": "equipe"
+    },
+    {
+        "english": "meeting",
+        "number": "763",
+        "portuguese": "encontro"
+    },
+    {
+        "english": "hotel",
+        "number": "764",
+        "portuguese": "hotel"
+    },
+    {
+        "english": "take",
+        "number": "765",
+        "portuguese": "tire"
+    },
+    {
+        "english": "hunger",
+        "number": "766",
+        "portuguese": "fome"
+    },
+    {
+        "english": "why",
+        "number": "767",
+        "portuguese": "porqu\u00c3\u00aa"
+    },
+    {
+        "english": "try",
+        "number": "768",
+        "portuguese": "tente"
+    },
+    {
+        "english": "frank",
+        "number": "769",
+        "portuguese": "frank"
+    },
+    {
+        "english": "pain",
+        "number": "770",
+        "portuguese": "dor"
+    },
+    {
+        "english": "fucking",
+        "number": "771",
+        "portuguese": "maldito"
+    },
+    {
+        "english": "sky",
+        "number": "772",
+        "portuguese": "c\u00c3\u00a9u"
+    },
+    {
+        "english": "group",
+        "number": "773",
+        "portuguese": "grupo"
+    },
+    {
+        "english": "letter",
+        "number": "774",
+        "portuguese": "carta"
+    },
+    {
+        "english": "ground",
+        "number": "775",
+        "portuguese": "ch\u00c3\u00a3o"
+    },
+    {
+        "english": "care",
+        "number": "776",
+        "portuguese": "cuidar"
+    },
+    {
+        "english": "know",
+        "number": "777",
+        "portuguese": "conhecer"
+    },
+    {
+        "english": "drink",
+        "number": "778",
+        "portuguese": "beber"
+    },
+    {
+        "english": "future",
+        "number": "779",
+        "portuguese": "futuro"
+    },
+    {
+        "english": "good",
+        "number": "780",
+        "portuguese": "boas"
+    },
+    {
+        "english": "sex",
+        "number": "781",
+        "portuguese": "sexo"
+    },
+    {
+        "english": "will",
+        "number": "782",
+        "portuguese": "irei"
+    },
+    {
+        "english": "discover",
+        "number": "783",
+        "portuguese": "descobrir"
+    },
+    {
+        "english": "situation",
+        "number": "784",
+        "portuguese": "situa\u00c3\u00a7\u00c3\u00a3o"
+    },
+    {
+        "english": "joe",
+        "number": "785",
+        "portuguese": "joe"
+    },
+    {
+        "english": "tone",
+        "number": "786",
+        "portuguese": "tom"
+    },
+    {
+        "english": "sam",
+        "number": "787",
+        "portuguese": "sam"
+    },
+    {
+        "english": "continues",
+        "number": "788",
+        "portuguese": "continue"
+    },
+    {
+        "english": "lost",
+        "number": "789",
+        "portuguese": "perdeu"
+    },
+    {
+        "english": "will",
+        "number": "790",
+        "portuguese": "farei"
+    },
+    {
+        "english": "from this",
+        "number": "791",
+        "portuguese": "disto"
+    },
+    {
+        "english": "cold",
+        "number": "792",
+        "portuguese": "frio"
+    },
+    {
+        "english": "dream",
+        "number": "793",
+        "portuguese": "sonho"
+    },
+    {
+        "english": "signal",
+        "number": "794",
+        "portuguese": "sinal"
+    },
+    {
+        "english": "girlfriend",
+        "number": "795",
+        "portuguese": "amiga"
+    },
+    {
+        "english": "continues",
+        "number": "796",
+        "portuguese": "continua"
+    },
+    {
+        "english": "valley",
+        "number": "797",
+        "portuguese": "vale"
+    },
+    {
+        "english": "david",
+        "number": "798",
+        "portuguese": "david"
+    },
+    {
+        "english": "countenance",
+        "number": "799",
+        "portuguese": "rosto"
+    },
+    {
+        "english": "with you",
+        "number": "800",
+        "portuguese": "contigo"
+    },
+    {
+        "english": "working",
+        "number": "801",
+        "portuguese": "trabalhando"
+    },
+    {
+        "english": "plane",
+        "number": "802",
+        "portuguese": "avi\u00c3\u00a3o"
+    },
+    {
+        "english": "returned",
+        "number": "803",
+        "portuguese": "voltou"
+    },
+    {
+        "english": "law",
+        "number": "804",
+        "portuguese": "lei"
+    },
+    {
+        "english": "boat",
+        "number": "805",
+        "portuguese": "barco"
+    },
+    {
+        "english": "priest",
+        "number": "806",
+        "portuguese": "padre"
+    },
+    {
+        "english": "employment",
+        "number": "807",
+        "portuguese": "emprego"
+    },
+    {
+        "english": "bad",
+        "number": "808",
+        "portuguese": "mau"
+    },
+    {
+        "english": "seek",
+        "number": "809",
+        "portuguese": "buscar"
+    },
+    {
+        "english": "george",
+        "number": "810",
+        "portuguese": "george"
+    },
+    {
+        "english": "made",
+        "number": "811",
+        "portuguese": "fizeram"
+    },
+    {
+        "english": "lieutenant",
+        "number": "812",
+        "portuguese": "tenente"
+    },
+    {
+        "english": "I believe",
+        "number": "813",
+        "portuguese": "creio"
+    },
+    {
+        "english": "said",
+        "number": "814",
+        "portuguese": "disseram"
+    },
+    {
+        "english": "only",
+        "number": "815",
+        "portuguese": "somente"
+    },
+    {
+        "english": "eye",
+        "number": "816",
+        "portuguese": "olho"
+    },
+    {
+        "english": "am",
+        "number": "817",
+        "portuguese": "estarei"
+    },
+    {
+        "english": "simply",
+        "number": "818",
+        "portuguese": "simplesmente"
+    },
+    {
+        "english": "called",
+        "number": "819",
+        "portuguese": "chamado"
+    },
+    {
+        "english": "old woman",
+        "number": "820",
+        "portuguese": "velha"
+    },
+    {
+        "english": "how many",
+        "number": "821",
+        "portuguese": "quantos"
+    },
+    {
+        "english": "bring",
+        "number": "822",
+        "portuguese": "trazer"
+    },
+    {
+        "english": "hate",
+        "number": "823",
+        "portuguese": "odeio"
+    },
+    {
+        "english": "best",
+        "number": "824",
+        "portuguese": "melhores"
+    },
+    {
+        "english": "Ms.",
+        "number": "825",
+        "portuguese": "senhorita"
+    },
+    {
+        "english": "voice",
+        "number": "826",
+        "portuguese": "voz"
+    },
+    {
+        "english": "clothing",
+        "number": "827",
+        "portuguese": "roupa"
+    },
+    {
+        "english": "question",
+        "number": "828",
+        "portuguese": "quest\u00c3\u00a3o"
+    },
+    {
+        "english": "charlie",
+        "number": "829",
+        "portuguese": "charlie"
+    },
+    {
+        "english": "will",
+        "number": "830",
+        "portuguese": "ficar\u00c3\u00a1"
+    },
+    {
+        "english": "service",
+        "number": "831",
+        "portuguese": "servi\u00c3\u00a7o"
+    },
+    {
+        "english": "poor",
+        "number": "832",
+        "portuguese": "pobre"
+    },
+    {
+        "english": "company",
+        "number": "833",
+        "portuguese": "companhia"
+    },
+    {
+        "english": "got it",
+        "number": "834",
+        "portuguese": "consegui"
+    },
+    {
+        "english": "colonel",
+        "number": "835",
+        "portuguese": "coronel"
+    },
+    {
+        "english": "by",
+        "number": "836",
+        "portuguese": "pelas"
+    },
+    {
+        "english": "found",
+        "number": "837",
+        "portuguese": "encontrei"
+    },
+    {
+        "english": "uh",
+        "number": "838",
+        "portuguese": "uh"
+    },
+    {
+        "english": "left",
+        "number": "839",
+        "portuguese": "esquerda"
+    },
+    {
+        "english": "you",
+        "number": "840",
+        "portuguese": "ti"
+    },
+    {
+        "english": "sound",
+        "number": "841",
+        "portuguese": "tocar"
+    },
+    {
+        "english": "hey",
+        "number": "842",
+        "portuguese": "hey"
+    },
+    {
+        "english": "horse",
+        "number": "843",
+        "portuguese": "cavalo"
+    },
+    {
+        "english": "learned",
+        "number": "844",
+        "portuguese": "soube"
+    },
+    {
+        "english": "system",
+        "number": "845",
+        "portuguese": "sistema"
+    },
+    {
+        "english": "month",
+        "number": "846",
+        "portuguese": "m\u00c3\u00aas"
+    },
+    {
+        "english": "would",
+        "number": "847",
+        "portuguese": "estaria"
+    },
+    {
+        "english": "/ /",
+        "number": "848",
+        "portuguese": "//"
+    },
+    {
+        "english": "arrested",
+        "number": "849",
+        "portuguese": "preso"
+    },
+    {
+        "english": "government",
+        "number": "850",
+        "portuguese": "governo"
+    },
+    {
+        "english": "right",
+        "number": "851",
+        "portuguese": "direita"
+    },
+    {
+        "english": "choice",
+        "number": "852",
+        "portuguese": "escolha"
+    },
+    {
+        "english": "michael",
+        "number": "853",
+        "portuguese": "michael"
+    },
+    {
+        "english": "asked",
+        "number": "854",
+        "portuguese": "pediu"
+    },
+    {
+        "english": "bank",
+        "number": "855",
+        "portuguese": "banco"
+    },
+    {
+        "english": "have",
+        "number": "856",
+        "portuguese": "tiver"
+    },
+    {
+        "english": "have",
+        "number": "857",
+        "portuguese": "tens"
+    },
+    {
+        "english": "seven",
+        "number": "858",
+        "portuguese": "sete"
+    },
+    {
+        "english": "gold",
+        "number": "859",
+        "portuguese": "ouro"
+    },
+    {
+        "english": "train",
+        "number": "860",
+        "portuguese": "trem"
+    },
+    {
+        "english": "master",
+        "number": "861",
+        "portuguese": "mestre"
+    },
+    {
+        "english": "read",
+        "number": "862",
+        "portuguese": "ler"
+    },
+    {
+        "english": "completely",
+        "number": "863",
+        "portuguese": "completamente"
+    },
+    {
+        "english": "open",
+        "number": "864",
+        "portuguese": "abrir"
+    },
+    {
+        "english": "fight",
+        "number": "865",
+        "portuguese": "lutar"
+    },
+    {
+        "english": "accident",
+        "number": "866",
+        "portuguese": "acidente"
+    },
+    {
+        "english": "road",
+        "number": "867",
+        "portuguese": "estrada"
+    },
+    {
+        "english": "normal",
+        "number": "868",
+        "portuguese": "normal"
+    },
+    {
+        "english": "soul",
+        "number": "869",
+        "portuguese": "alma"
+    },
+    {
+        "english": "reply",
+        "number": "870",
+        "portuguese": "resposta"
+    },
+    {
+        "english": "caught",
+        "number": "871",
+        "portuguese": "peguei"
+    },
+    {
+        "english": "TV",
+        "number": "872",
+        "portuguese": "tv"
+    },
+    {
+        "english": "subject",
+        "number": "873",
+        "portuguese": "assunto"
+    },
+    {
+        "english": "certainly",
+        "number": "874",
+        "portuguese": "certamente"
+    },
+    {
+        "english": "will",
+        "number": "875",
+        "portuguese": "far\u00c3\u00a1"
+    },
+    {
+        "english": "birthday",
+        "number": "876",
+        "portuguese": "anivers\u00c3\u00a1rio"
+    },
+    {
+        "english": "sergeant",
+        "number": "877",
+        "portuguese": "sargento"
+    },
+    {
+        "english": "leads",
+        "number": "878",
+        "portuguese": "leva"
+    },
+    {
+        "english": "photo",
+        "number": "879",
+        "portuguese": "foto"
+    },
+    {
+        "english": "background",
+        "number": "880",
+        "portuguese": "fundo"
+    },
+    {
+        "english": "huh",
+        "number": "881",
+        "portuguese": "hein"
+    },
+    {
+        "english": "attack",
+        "number": "882",
+        "portuguese": "ataque"
+    },
+    {
+        "english": "cop",
+        "number": "883",
+        "portuguese": "policial"
+    },
+    {
+        "english": "help",
+        "number": "884",
+        "portuguese": "ajude"
+    },
+    {
+        "english": "good",
+        "number": "885",
+        "portuguese": "bons"
+    },
+    {
+        "english": "could",
+        "number": "886",
+        "portuguese": "pudesse"
+    },
+    {
+        "english": "interest",
+        "number": "887",
+        "portuguese": "juro"
+    },
+    {
+        "english": "affairs",
+        "number": "888",
+        "portuguese": "neg\u00c3\u00b3cios"
+    },
+    {
+        "english": "be",
+        "number": "889",
+        "portuguese": "haver"
+    },
+    {
+        "english": "river",
+        "number": "890",
+        "portuguese": "rio"
+    },
+    {
+        "english": "wonderful",
+        "number": "891",
+        "portuguese": "maravilhoso"
+    },
+    {
+        "english": "surprise",
+        "number": "892",
+        "portuguese": "surpresa"
+    },
+    {
+        "english": "view",
+        "number": "893",
+        "portuguese": "vista"
+    },
+    {
+        "english": "dead",
+        "number": "894",
+        "portuguese": "morta"
+    },
+    {
+        "english": "write",
+        "number": "895",
+        "portuguese": "escrever"
+    },
+    {
+        "english": "finish",
+        "number": "896",
+        "portuguese": "terminar"
+    },
+    {
+        "english": "questions",
+        "number": "897",
+        "portuguese": "perguntas"
+    },
+    {
+        "english": "half",
+        "number": "898",
+        "portuguese": "metade"
+    },
+    {
+        "english": "killer",
+        "number": "899",
+        "portuguese": "assassino"
+    },
+    {
+        "english": "works",
+        "number": "900",
+        "portuguese": "trabalha"
+    },
+    {
+        "english": "listening",
+        "number": "901",
+        "portuguese": "ouvindo"
+    },
+    {
+        "english": "News",
+        "number": "902",
+        "portuguese": "not\u00c3\u00adcias"
+    },
+    {
+        "english": "led",
+        "number": "903",
+        "portuguese": "levou"
+    },
+    {
+        "english": "fall",
+        "number": "904",
+        "portuguese": "cair"
+    },
+    {
+        "english": "local",
+        "number": "905",
+        "portuguese": "local"
+    },
+    {
+        "english": "feet",
+        "number": "906",
+        "portuguese": "p\u00c3\u00a9s"
+    },
+    {
+        "english": "idea",
+        "number": "907",
+        "portuguese": "ideia"
+    },
+    {
+        "english": "hard",
+        "number": "908",
+        "portuguese": "duro"
+    },
+    {
+        "english": "dog",
+        "number": "909",
+        "portuguese": "cachorro"
+    },
+    {
+        "english": "through",
+        "number": "910",
+        "portuguese": "atrav\u00c3\u00a9s"
+    },
+    {
+        "english": "love",
+        "number": "911",
+        "portuguese": "adoro"
+    },
+    {
+        "english": "getting",
+        "number": "912",
+        "portuguese": "ficando"
+    },
+    {
+        "english": "were",
+        "number": "913",
+        "portuguese": "fomos"
+    },
+    {
+        "english": "immediately",
+        "number": "914",
+        "portuguese": "imediatamente"
+    },
+    {
+        "english": "save",
+        "number": "915",
+        "portuguese": "salvar"
+    },
+    {
+        "english": "beautiful",
+        "number": "916",
+        "portuguese": "bela"
+    },
+    {
+        "english": "viva",
+        "number": "917",
+        "portuguese": "viva"
+    },
+    {
+        "english": "agent",
+        "number": "918",
+        "portuguese": "agente"
+    },
+    {
+        "english": "thanks",
+        "number": "919",
+        "portuguese": "gra\u00c3\u00a7as"
+    },
+    {
+        "english": "shop",
+        "number": "920",
+        "portuguese": "loja"
+    },
+    {
+        "english": "fully",
+        "number": "921",
+        "portuguese": "totalmente"
+    },
+    {
+        "english": "box",
+        "number": "922",
+        "portuguese": "caixa"
+    },
+    {
+        "english": "paper",
+        "number": "923",
+        "portuguese": "papel"
+    },
+    {
+        "english": "explain",
+        "number": "924",
+        "portuguese": "explicar"
+    },
+    {
+        "english": "fight",
+        "number": "925",
+        "portuguese": "luta"
+    },
+    {
+        "english": "got it",
+        "number": "926",
+        "portuguese": "entendi"
+    },
+    {
+        "english": "need",
+        "number": "927",
+        "portuguese": "precisam"
+    },
+    {
+        "english": "look",
+        "number": "928",
+        "portuguese": "olhada"
+    },
+    {
+        "english": "ball",
+        "number": "929",
+        "portuguese": "bola"
+    },
+    {
+        "english": "terrible",
+        "number": "930",
+        "portuguese": "terr\u00c3\u00advel"
+    },
+    {
+        "english": "second",
+        "number": "931",
+        "portuguese": "segunda"
+    },
+    {
+        "english": "search",
+        "number": "932",
+        "portuguese": "procurar"
+    },
+    {
+        "english": "lost",
+        "number": "933",
+        "portuguese": "perdi"
+    },
+    {
+        "english": "follow",
+        "number": "934",
+        "portuguese": "seguir"
+    },
+    {
+        "english": "show",
+        "number": "935",
+        "portuguese": "show"
+    },
+    {
+        "english": "TRUE",
+        "number": "936",
+        "portuguese": "verdadeiro"
+    },
+    {
+        "english": "sad",
+        "number": "937",
+        "portuguese": "triste"
+    },
+    {
+        "english": "full",
+        "number": "938",
+        "portuguese": "cheio"
+    },
+    {
+        "english": "gave",
+        "number": "939",
+        "portuguese": "dei"
+    },
+    {
+        "english": "impossible",
+        "number": "940",
+        "portuguese": "imposs\u00c3\u00advel"
+    },
+    {
+        "english": "told",
+        "number": "941",
+        "portuguese": "contou"
+    },
+    {
+        "english": "piece",
+        "number": "942",
+        "portuguese": "pe\u00c3\u00a7a"
+    },
+    {
+        "english": "found",
+        "number": "943",
+        "portuguese": "encontrou"
+    },
+    {
+        "english": "call",
+        "number": "944",
+        "portuguese": "chame"
+    },
+    {
+        "english": "key",
+        "number": "945",
+        "portuguese": "chave"
+    },
+    {
+        "english": "enough",
+        "number": "946",
+        "portuguese": "basta"
+    },
+    {
+        "english": "come",
+        "number": "947",
+        "portuguese": "venham"
+    },
+    {
+        "english": "fair",
+        "number": "948",
+        "portuguese": "feira"
+    },
+    {
+        "english": "lawyer",
+        "number": "949",
+        "portuguese": "advogado"
+    },
+    {
+        "english": "bathroom",
+        "number": "950",
+        "portuguese": "banheiro"
+    },
+    {
+        "english": "horrible",
+        "number": "951",
+        "portuguese": "horr\u00c3\u00advel"
+    },
+    {
+        "english": "seemed",
+        "number": "952",
+        "portuguese": "parecia"
+    },
+    {
+        "english": "we",
+        "number": "953",
+        "portuguese": "teremos"
+    },
+    {
+        "english": "garment",
+        "number": "954",
+        "portuguese": "roupas"
+    },
+    {
+        "english": "meat",
+        "number": "955",
+        "portuguese": "carne"
+    },
+    {
+        "english": "message",
+        "number": "956",
+        "portuguese": "mensagem"
+    },
+    {
+        "english": "church",
+        "number": "957",
+        "portuguese": "igreja"
+    },
+    {
+        "english": "guard",
+        "number": "958",
+        "portuguese": "guarda"
+    },
+    {
+        "english": "back",
+        "number": "959",
+        "portuguese": "costas"
+    },
+    {
+        "english": "white",
+        "number": "960",
+        "portuguese": "branco"
+    },
+    {
+        "english": "instructions",
+        "number": "961",
+        "portuguese": "ordens"
+    },
+    {
+        "english": "south",
+        "number": "962",
+        "portuguese": "sul"
+    },
+    {
+        "english": "dance",
+        "number": "963",
+        "portuguese": "dan\u00c3\u00a7ar"
+    },
+    {
+        "english": "drink",
+        "number": "964",
+        "portuguese": "bebida"
+    },
+    {
+        "english": "would",
+        "number": "965",
+        "portuguese": "diria"
+    },
+    {
+        "english": "remember",
+        "number": "966",
+        "portuguese": "lembrar"
+    },
+    {
+        "english": "just",
+        "number": "967",
+        "portuguese": "acabei"
+    },
+    {
+        "english": "promise",
+        "number": "968",
+        "portuguese": "prometo"
+    },
+    {
+        "english": "interesting",
+        "number": "969",
+        "portuguese": "interessante"
+    },
+    {
+        "english": "bet",
+        "number": "970",
+        "portuguese": "aposto"
+    },
+    {
+        "english": "phallus",
+        "number": "971",
+        "portuguese": "falo"
+    },
+    {
+        "english": "mount",
+        "number": "972",
+        "portuguese": "monte"
+    },
+    {
+        "english": "official",
+        "number": "973",
+        "portuguese": "oficial"
+    },
+    {
+        "english": "are",
+        "number": "974",
+        "portuguese": "\u00c3\u00a9s"
+    },
+    {
+        "english": "north",
+        "number": "975",
+        "portuguese": "norte"
+    },
+    {
+        "english": "will",
+        "number": "976",
+        "portuguese": "ser\u00c3\u00a3o"
+    },
+    {
+        "english": "congratulations",
+        "number": "977",
+        "portuguese": "parab\u00c3\u00a9ns"
+    },
+    {
+        "english": "m",
+        "number": "978",
+        "portuguese": "m"
+    },
+    {
+        "english": "had",
+        "number": "979",
+        "portuguese": "tinham"
+    },
+    {
+        "english": "conversation",
+        "number": "980",
+        "portuguese": "conversa"
+    },
+    {
+        "english": "photos",
+        "number": "981",
+        "portuguese": "fotos"
+    },
+    {
+        "english": "ihe",
+        "number": "982",
+        "portuguese": "ihe"
+    },
+    {
+        "english": "error",
+        "number": "983",
+        "portuguese": "erro"
+    },
+    {
+        "english": "space",
+        "number": "984",
+        "portuguese": "espa\u00c3\u00a7o"
+    },
+    {
+        "english": "mike",
+        "number": "985",
+        "portuguese": "mike"
+    },
+    {
+        "english": "under",
+        "number": "986",
+        "portuguese": "embaixo"
+    },
+    {
+        "english": "mission",
+        "number": "987",
+        "portuguese": "miss\u00c3\u00a3o"
+    },
+    {
+        "english": "did",
+        "number": "988",
+        "portuguese": "fizemos"
+    },
+    {
+        "english": "relief",
+        "number": "989",
+        "portuguese": "socorro"
+    },
+    {
+        "english": "back",
+        "number": "990",
+        "portuguese": "volto"
+    },
+    {
+        "english": "health",
+        "number": "991",
+        "portuguese": "sa\u00c3\u00bade"
+    },
+    {
+        "english": "found",
+        "number": "992",
+        "portuguese": "achou"
+    },
+    {
+        "english": "apartment",
+        "number": "993",
+        "portuguese": "apartamento"
+    },
+    {
+        "english": "call",
+        "number": "994",
+        "portuguese": "ligue"
+    },
+    {
+        "english": "paul",
+        "number": "995",
+        "portuguese": "paul"
+    },
+    {
+        "english": "that",
+        "number": "996",
+        "portuguese": "naquela"
+    },
+    {
+        "english": "boys",
+        "number": "997",
+        "portuguese": "garotos"
+    },
+    {
+        "english": "touch",
+        "number": "998",
+        "portuguese": "toque"
+    },
+    {
+        "english": "together",
+        "number": "999",
+        "portuguese": "junto"
+    },
+    {
+        "english": "never",
+        "number": "1000",
+        "portuguese": "jamais"
+    }
+]

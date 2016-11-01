@@ -3,8 +3,144 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <style>
+      body{
+          background: #D46A6A;
+          font-family: 'Josefin Sans', sans-serif;
+          color: #ffcccc;
+      }
+
+      .logo{
+          background:url("Logo.png");
+          background-position: left;
+          background-repeat: no-repeat;
+          background-size: 15%;
+          height: 50px;
+          margin-left: 10px;
+          margin-top: 15px;
+      }
+
+      span{
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 0px;
+          margin-left: 10px;
+          color:#ffcccc;
+          font-size: 16px;
+
+          text-align: center;
+      }
+
+      select{
+          -webkit-appearance: none;
+          width: 82px;
+          height: 25px;
+          border-radius:50px;
+          text-align: center;
+          background: #D46A6A;
+          border: solid 2px #FCA5a5;
+          border-radius: 30px;
+          color: #FFCCCC;
+          font-size: 12px;
+          text-align-last:center;
+
+      }
+
+
+      input[type=range] {
+        -webkit-appearance: none;
+        margin: 20px 0;
+        width: 200px;
+        background: #D46A6A;
+        padding-bottom: 3.5px;
+      }
+      input[type=range]:focus {
+        outline: none;
+      }
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FFCCCC;
+        border-radius: 0px;
+        border: 1px solid #FCA5A5;
+      }
+      input[type=range]::-webkit-slider-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 2px solid #FCA5A5;
+        height: 14px;
+        width: 28px;
+        border-radius: 50px;
+        background: #D46A6A;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -7px;
+      }
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #FFCCCC;
+      }
+      input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 0px 0px 0px #000000;
+        background: #FFCCCC;
+        border-radius: 0px;
+        border: 1px solid #FCA5A5;
+      }
+      input[type=range]::-moz-range-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 2px solid #FCA5A5;
+        height: 14px;
+        width: 28px;
+        border-radius: 50px;
+        background: #D46A6A;
+        cursor: pointer;
+      }
+      input[type=range]::-ms-track {
+        width: 100%;
+        height: 1px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+      }
+      input[type=range]::-ms-fill-lower {
+        background: #FFCCCC;
+        border: 1px solid #FCA5A5;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px #000000;
+      }
+      input[type=range]::-ms-fill-upper {
+        background: #FFCCCC;
+        border: 1px solid #FCA5A5;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px #000000;
+      }
+      input[type=range]::-ms-thumb {
+        box-shadow: 0px 0px 0px #000000;
+        border: 2px solid #FCA5A5;
+        height: 14px;
+        width: 28px;
+        border-radius: 50px;
+        background: #D46A6A;
+        cursor: pointer;
+      }
+      input[type=range]:focus::-ms-fill-lower {
+        background: #FFCCCC;
+      }
+      input[type=range]:focus::-ms-fill-upper {
+        background: #FFCCCC;
+      }
+
+    </style>
     <title>Selective Translation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="popupstyle.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body>
 
