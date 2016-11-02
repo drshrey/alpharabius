@@ -28,11 +28,7 @@ module.exports = {
           presets: ['es2015', 'react']
         }
       },
-      {
-        test: /\.(jpg|png)$/,
-        loader: 'file?name=[path][name].[hash].[ext]',
-        include: path.join(__dirname, 'src')
-      }
+      { test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/, loader: "file" },
     ]
   }
 };

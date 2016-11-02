@@ -5,7 +5,7 @@ import {Store} from 'react-chrome-redux';
 
 import App from './components/app/App';
 
-const proxyStore = new Store({portName: 'selectivetrans'});
+const proxyStore = new Store({portName: 'alpharabius'});
 
 const anchor = document.createElement('div');
 anchor.id = 'rcr-anchor';

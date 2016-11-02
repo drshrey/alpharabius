@@ -3,10 +3,8 @@ import {connect} from 'react-redux';
 import findAndReplaceDOMText from 'findandreplacedomtext';
 import porteng from '../../../../../data/portuguese.json';
 import frencheng from '../../../../../data/french.json';
+var Mark = require('mark.js');
 
-var currentLang = "";
-var icount = 0;
-var xcount = 0;
 let originalDoc = "";
 let od0 = "";
 let originalEl = {};
@@ -14,7 +12,7 @@ let originalEl = {};
 const mapStateToProps = (state) => {
   return {
     language: state.language,
-    immersion: state.immersion
+    immersion: state.immersion,
   };
 };
 
@@ -42,18 +40,20 @@ function getElements(){
   return elements;
 }
 
-function changeLang(lang){
+function changeLang(lang, immersion){
   let elements = getElements();
   let langDict = null;
   let langKey = null;
   let engTrue = false;
   // Select language
+  console.log(lang);
   switch (lang){
     case "Portuguese":
       langDict = porteng;
       langKey = "portuguese";
       break;
     case "French":
+      console.log(frencheng);
       langDict = frencheng;
       langKey = "french";
       break;
@@ -63,26 +63,41 @@ function changeLang(lang){
       break;
   }
   if(elements && (langDict && langKey) || (engTrue)){
-    // for(var i =0; i < elements;i ++){
-    //   originalEl[i] = elements
-    // }
-    elements[0].innerHTML = od0;
-    elements[1].innerHTML = originalDoc;
+    for(var i =0; i < elements.length;i ++){
+      elements[i].innerHTML = originalEl[i];
+    }
     if(engTrue){
       return;
     }
-    for(var i = 0; i < elements.length; i++){
-      for(var j = 0; j < immersion *  200; j++){
-        let eng = new RegExp("\\b" + langDict[j]["english"] + "\\b");
-        let newWord = langDict[j][langKey];
-        findAndReplaceDOMText(elements[i], {
-          find: eng,
-          replace: newWord
-        });
-        icount += 1;
+    // get immersion * 200 random words
+    let randWords = [];
+    let visited = {};
+    for(var i = 0;i < (immersion * 0.01) * langDict.length; i++){
+      let randIndex = Math.floor(Math.random() * (immersion * 0.1) * langDict.length);
+      let randWord = langDict[randIndex];
+      if(!visited[randWord["english"]]){
+        visited[randWord["english"]] = randWord[langKey];
+        randWords.push(randWord);
       }
     }
-    currentLang = lang;
+
+    // modify stylesheets
+    let ss = document.styleSheets
+    for(var i = 0; i < ss.length; i++){
+      ss[i].insertRule("acronym { background-color: yellow;}", 0);
+    }
+
+    for(var i = 0; i < elements.length; i++){
+      for(var j = 0; j < randWords.length; j++){
+        let eng = new RegExp("\\b" + randWords[j]["english"] + "\\b");
+        let newWord = randWords[j][langKey];
+        findAndReplaceDOMText(elements[i], {
+          find: eng,
+          replace: newWord,
+          wrap: 'acronym'
+        });
+      }
+    }
   }
 }
 
@@ -90,32 +105,35 @@ function changeLang(lang){
 class App extends Component {
   constructor(props) {
     super(props);
-    // this.changeLang = this.changeLang.bind(this);
-    this.state = {
-      'parsable': 'not parsable'
-    }
   }
   componentDidMount() {
     let el = getElements();
     for(var i = 0; i < el.length; i++){
       originalEl[i] = el[i].innerHTML;
     }
-    od0 = el[0].innerHTML;
-    originalDoc = el[1].innerHTML;
+    console.log(originalEl);
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
-        changeLang(request.message);
+        console.log(request);
+        if(request.language && request.immersion){
+          changeLang(request.language, request.immersion);
+        }
       }
     );
-    currentLang = this.props.language;
-    changeLang(this.props.language);
-    this.setState({'parsable': "parsed"});
+    chrome.runtime.onMessage.addListener(
+      function(request, sender, sendResponse) {
+        console.log(request);
+        if(request.power){
+          switchPower(request.power);
+        }
+      }
+    );
+    changeLang("French", 5);
   }
 
   render() {
     return (
       <div>
-        <h1 style={{ textAlign: 'center'}}>Page {this.state.parsable} from English to {this.props.language} </h1>
       </div>
     );
   }

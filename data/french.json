@@ -61,7 +61,7 @@
     },
     {
         "english": "at",
-        "french": "\u00cc\u00ca",
+        "french": "IE",
         "number": "13"
     },
     {
@@ -96,7 +96,7 @@
     },
     {
         "english": "it",
-        "french": "\u00cc\u00a4a",
+        "french": "Ia",
         "number": "20"
     },
     {
@@ -246,7 +246,7 @@
     },
     {
         "english": "be",
-        "french": "\u00cc\u00bbtre",
+        "french": "Itre",
         "number": "50"
     },
     {
@@ -266,7 +266,7 @@
     },
     {
         "english": "was",
-        "french": "\u00cc\u00a9tait",
+        "french": "Itait",
         "number": "54"
     },
     {
@@ -306,7 +306,7 @@
     },
     {
         "english": "the",
-        "french": "l\u00cc\u00ca",
+        "french": "lIE",
         "number": "62"
     },
     {
@@ -326,7 +326,7 @@
     },
     {
         "english": "or",
-        "french": "o\u00cc_",
+        "french": "oI_",
         "number": "66"
     },
     {
@@ -411,12 +411,12 @@
     },
     {
         "english": "very",
-        "french": "tr\u00cc\u00acs",
+        "french": "trIs",
         "number": "83"
     },
     {
         "english": "even",
-        "french": "m\u00cc\u00bbme",
+        "french": "mIme",
         "number": "84"
     },
     {
@@ -481,12 +481,12 @@
     },
     {
         "english": "summer",
-        "french": "\u00cc\u00a9t\u00cc\u00a9",
+        "french": "ItI",
         "number": "97"
     },
     {
         "english": "are",
-        "french": "\u00cc\u00bbtes",
+        "french": "Ites",
         "number": "98"
     },
     {
@@ -636,7 +636,7 @@
     },
     {
         "english": "Father",
-        "french": "p\u00cc\u00acre",
+        "french": "pIre",
         "number": "128"
     },
     {
@@ -651,7 +651,7 @@
     },
     {
         "english": "sure",
-        "french": "s\u00cc\u00c8r",
+        "french": "sIEr",
         "number": "131"
     },
     {
@@ -671,7 +671,7 @@
     },
     {
         "english": "was",
-        "french": "\u00cc\u00a9tais",
+        "french": "Itais",
         "number": "135"
     },
     {
@@ -736,7 +736,7 @@
     },
     {
         "english": "after",
-        "french": "apr\u00cc\u00acs",
+        "french": "aprIs",
         "number": "148"
     },
     {
@@ -806,7 +806,7 @@
     },
     {
         "english": "here",
-        "french": "voil\u00cc\u00ca",
+        "french": "voilIE",
         "number": "162"
     },
     {
@@ -821,7 +821,7 @@
     },
     {
         "english": "mother",
-        "french": "m\u00cc\u00acre",
+        "french": "mIre",
         "number": "165"
     },
     {
@@ -846,7 +846,7 @@
     },
     {
         "english": "already",
-        "french": "d\u00cc\u00a9j\u00cc\u00ca",
+        "french": "dIjIE",
         "number": "170"
     },
     {
@@ -971,7 +971,7 @@
     },
     {
         "english": "sorry",
-        "french": "d\u00cc\u00a9sol\u00cc\u00a9",
+        "french": "dIsolI",
         "number": "195"
     },
     {
@@ -1021,7 +1021,7 @@
     },
     {
         "english": "past",
-        "french": "pass\u00cc\u00a9",
+        "french": "passI",
         "number": "205"
     },
     {
@@ -1036,7 +1036,7 @@
     },
     {
         "english": "please",
-        "french": "pla\u00cc\u00a8t",
+        "french": "plaI t",
         "number": "208"
     },
     {
@@ -1076,7 +1076,7 @@
     },
     {
         "english": "Hey",
-        "french": "h\u00cc\u00a9",
+        "french": "hI",
         "number": "216"
     },
     {
@@ -1096,7 +1096,7 @@
     },
     {
         "english": "head",
-        "french": "t\u00cc\u00bbte",
+        "french": "tIte",
         "number": "220"
     },
     {
@@ -1111,7 +1111,7 @@
     },
     {
         "english": "stopped",
-        "french": "arr\u00cc\u00bbte",
+        "french": "arrIte",
         "number": "223"
     },
     {
@@ -1216,7 +1216,7 @@
     },
     {
         "english": "of",
-        "french": "d\u00cc\u00c8",
+        "french": "dIE",
         "number": "244"
     },
     {
@@ -1296,7 +1296,7 @@
     },
     {
         "english": "problem",
-        "french": "probl\u00cc\u00acme",
+        "french": "problIme",
         "number": "260"
     },
     {
@@ -1366,7 +1366,7 @@
     },
     {
         "english": "idea",
-        "french": "id\u00cc\u00a9e",
+        "french": "idIe",
         "number": "274"
     },
     {
@@ -1406,7 +1406,7 @@
     },
     {
         "english": "find",
-        "french": "trouv\u00cc\u00a9",
+        "french": "trouvI",
         "number": "282"
     },
     {
@@ -1506,7 +1506,7 @@
     },
     {
         "english": "brother",
-        "french": "fr\u00cc\u00acre",
+        "french": "frIre",
         "number": "302"
     },
     {
@@ -1621,7 +1621,7 @@
     },
     {
         "english": "kill",
-        "french": "tu\u00cc\u00a9",
+        "french": "tuI",
         "number": "325"
     },
     {
@@ -1706,7 +1706,7 @@
     },
     {
         "english": "come",
-        "french": "arriv\u00cc\u00a9",
+        "french": "arrivI",
         "number": "342"
     },
     {
@@ -1721,7 +1721,7 @@
     },
     {
         "english": "were",
-        "french": "\u00cc\u00a9taient",
+        "french": "Itaient",
         "number": "345"
     },
     {
@@ -1771,7 +1771,7 @@
     },
     {
         "english": "sweetheart",
-        "french": "ch\u00cc\u00a9rie",
+        "french": "chIrie",
         "number": "355"
     },
     {
@@ -1811,7 +1811,7 @@
     },
     {
         "english": "side",
-        "french": "c\u00cc\u00abt\u00cc\u00a9",
+        "french": "cItI",
         "number": "363"
     },
     {
@@ -1896,17 +1896,17 @@
     },
     {
         "english": "spoken",
-        "french": "parl\u00cc\u00a9",
+        "french": "parlI",
         "number": "380"
     },
     {
         "english": "given",
-        "french": "donn\u00cc\u00a9",
+        "french": "donnI",
         "number": "381"
     },
     {
         "english": "first",
-        "french": "premi\u00cc\u00acre",
+        "french": "premiIre",
         "number": "382"
     },
     {
@@ -1916,7 +1916,7 @@
     },
     {
         "english": "latest",
-        "french": "derni\u00cc\u00acre",
+        "french": "derniIre",
         "number": "384"
     },
     {
@@ -1946,7 +1946,7 @@
     },
     {
         "english": "way",
-        "french": "fa\u00cc\u00a4on",
+        "french": "faIon",
         "number": "390"
     },
     {
@@ -1981,7 +1981,7 @@
     },
     {
         "english": "listening",
-        "french": "\u00cc\u00a9coute",
+        "french": "Icoute",
         "number": "397"
     },
     {
@@ -2026,7 +2026,7 @@
     },
     {
         "english": "ready",
-        "french": "pr\u00cc\u00bbt",
+        "french": "prIt",
         "number": "406"
     },
     {
@@ -2036,7 +2036,7 @@
     },
     {
         "english": "hope",
-        "french": "esp\u00cc\u00acre",
+        "french": "espIre",
         "number": "408"
     },
     {
@@ -2081,17 +2081,17 @@
     },
     {
         "english": "boy",
-        "french": "gar\u00cc\u00a4on",
+        "french": "garIon",
         "number": "417"
     },
     {
         "english": "near",
-        "french": "pr\u00cc\u00acs",
+        "french": "prIs",
         "number": "418"
     },
     {
         "english": "sorry",
-        "french": "d\u00cc\u00a9sol\u00cc\u00a9e",
+        "french": "dIsolIe",
         "number": "419"
     },
     {
@@ -2126,7 +2126,7 @@
     },
     {
         "english": "request",
-        "french": "demand\u00cc\u00a9",
+        "french": "demandI",
         "number": "426"
     },
     {
@@ -2136,7 +2136,7 @@
     },
     {
         "english": "baby",
-        "french": "b\u00cc\u00a9b\u00cc\u00a9",
+        "french": "bIbI",
         "number": "428"
     },
     {
@@ -2146,7 +2146,7 @@
     },
     {
         "english": "school",
-        "french": "\u00cc\u00a9cole",
+        "french": "Icole",
         "number": "430"
     },
     {
@@ -2161,7 +2161,7 @@
     },
     {
         "english": "years",
-        "french": "ann\u00cc\u00a9es",
+        "french": "annIes",
         "number": "433"
     },
     {
@@ -2206,7 +2206,7 @@
     },
     {
         "english": "rather",
-        "french": "plut\u00cc\u00abt",
+        "french": "plutIt",
         "number": "442"
     },
     {
@@ -2221,7 +2221,7 @@
     },
     {
         "english": "truth",
-        "french": "v\u00cc\u00a9rit\u00cc\u00a9",
+        "french": "vIritI",
         "number": "445"
     },
     {
@@ -2241,7 +2241,7 @@
     },
     {
         "english": "Stop",
-        "french": "arr\u00cc\u00bbter",
+        "french": "arrIter",
         "number": "449"
     },
     {
@@ -2251,7 +2251,7 @@
     },
     {
         "english": "soon",
-        "french": "bient\u00cc\u00abt",
+        "french": "bientIt",
         "number": "451"
     },
     {
@@ -2296,7 +2296,7 @@
     },
     {
         "english": "behind",
-        "french": "derri\u00cc\u00acre",
+        "french": "derriIre",
         "number": "460"
     },
     {
@@ -2321,7 +2321,7 @@
     },
     {
         "english": "number",
-        "french": "num\u00cc\u00a9ro",
+        "french": "numIro",
         "number": "465"
     },
     {
@@ -2331,7 +2331,7 @@
     },
     {
         "english": "day",
-        "french": "journ\u00cc\u00a9e",
+        "french": "journIe",
         "number": "467"
     },
     {
@@ -2546,7 +2546,7 @@
     },
     {
         "english": "stop",
-        "french": "arr\u00cc\u00bbtez",
+        "french": "arrItez",
         "number": "510"
     },
     {
@@ -2611,7 +2611,7 @@
     },
     {
         "english": "phone",
-        "french": "t\u00cc\u00a9l\u00cc\u00a9phone",
+        "french": "tIlIphone",
         "number": "523"
     },
     {
@@ -2631,7 +2631,7 @@
     },
     {
         "english": "funny",
-        "french": "dr\u00cc\u00able",
+        "french": "drIle",
         "number": "527"
     },
     {
@@ -2656,7 +2656,7 @@
     },
     {
         "english": "at",
-        "french": "\u00cc\u00c1",
+        "french": "IA",
         "number": "532"
     },
     {
@@ -2666,7 +2666,7 @@
     },
     {
         "english": "thought",
-        "french": "pens\u00cc\u00a9",
+        "french": "pensI",
         "number": "534"
     },
     {
@@ -2706,7 +2706,7 @@
     },
     {
         "english": "master",
-        "french": "ma\u00cc\u00a8tre",
+        "french": "maI tre",
         "number": "542"
     },
     {
@@ -2716,7 +2716,7 @@
     },
     {
         "english": "called",
-        "french": "appel\u00cc\u00a9",
+        "french": "appelI",
         "number": "544"
     },
     {
@@ -2726,7 +2726,7 @@
     },
     {
         "english": "general",
-        "french": "g\u00cc\u00a9n\u00cc\u00a9ral",
+        "french": "gInIral",
         "number": "546"
     },
     {
@@ -2756,7 +2756,7 @@
     },
     {
         "english": "forget it",
-        "french": "oubli\u00cc\u00a9",
+        "french": "oubliI",
         "number": "552"
     },
     {
@@ -2771,17 +2771,17 @@
     },
     {
         "english": "Party",
-        "french": "f\u00cc\u00bbte",
+        "french": "fIte",
         "number": "555"
     },
     {
         "english": "coffee",
-        "french": "caf\u00cc\u00a9",
+        "french": "cafI",
         "number": "556"
     },
     {
         "english": "Darling",
-        "french": "ch\u00cc\u00a9ri",
+        "french": "chIri",
         "number": "557"
     },
     {
@@ -2841,7 +2841,7 @@
     },
     {
         "english": "President",
-        "french": "pr\u00cc\u00a9sident",
+        "french": "prIsident",
         "number": "569"
     },
     {
@@ -2871,12 +2871,12 @@
     },
     {
         "english": "written",
-        "french": "\u00cc\u00a9crit",
+        "french": "Icrit",
         "number": "575"
     },
     {
         "english": "team",
-        "french": "\u00cc\u00a9quipe",
+        "french": "Iquipe",
         "number": "576"
     },
     {
@@ -2916,7 +2916,7 @@
     },
     {
         "english": "heart",
-        "french": "c\u0081\u00d2ur",
+        "french": "cOur",
         "number": "584"
     },
     {
@@ -2951,12 +2951,12 @@
     },
     {
         "english": "year",
-        "french": "ann\u00cc\u00a9e",
+        "french": "annIe",
         "number": "591"
     },
     {
         "english": "state",
-        "french": "\u00cc\u00a9tat",
+        "french": "Itat",
         "number": "592"
     },
     {
@@ -2981,7 +2981,7 @@
     },
     {
         "english": "leash",
-        "french": "laiss\u00cc\u00a9",
+        "french": "laissI",
         "number": "597"
     },
     {
@@ -2991,7 +2991,7 @@
     },
     {
         "english": "from",
-        "french": "d\u00cc\u00acs",
+        "french": "dIs",
         "number": "599"
     },
     {
@@ -3021,7 +3021,7 @@
     },
     {
         "english": "awesome",
-        "french": "g\u00cc\u00a9nial",
+        "french": "gInial",
         "number": "605"
     },
     {
@@ -3031,12 +3031,12 @@
     },
     {
         "english": "security",
-        "french": "s\u00cc\u00a9curit\u00cc\u00a9",
+        "french": "sIcuritI",
         "number": "607"
     },
     {
         "english": "early",
-        "french": "t\u00cc\u00abt",
+        "french": "tIt",
         "number": "608"
     },
     {
@@ -3046,12 +3046,12 @@
     },
     {
         "english": "dream",
-        "french": "r\u00cc\u00bbve",
+        "french": "rIve",
         "number": "610"
     },
     {
         "english": "army",
-        "french": "arm\u00cc\u00a9e",
+        "french": "armIe",
         "number": "611"
     },
     {
@@ -3196,12 +3196,12 @@
     },
     {
         "english": "surely",
-        "french": "s\u00cc\u00c8rement",
+        "french": "sIErement",
         "number": "640"
     },
     {
         "english": "were",
-        "french": "\u00cc\u00a9tiez",
+        "french": "Itiez",
         "number": "641"
     },
     {
@@ -3226,7 +3226,7 @@
     },
     {
         "english": "tried",
-        "french": "essay\u00cc\u00a9",
+        "french": "essayI",
         "number": "646"
     },
     {
@@ -3236,12 +3236,12 @@
     },
     {
         "english": "having dinner",
-        "french": "d\u00cc\u00a8ner",
+        "french": "dI ner",
         "number": "648"
     },
     {
         "english": "age",
-        "french": "\u00cc\u00a2ge",
+        "french": "Ige",
         "number": "649"
     },
     {
@@ -3251,7 +3251,7 @@
     },
     {
         "english": "exchange",
-        "french": "chang\u00cc\u00a9",
+        "french": "changI",
         "number": "651"
     },
     {
@@ -3271,7 +3271,7 @@
     },
     {
         "english": "worry",
-        "french": "inqui\u00cc\u00acte",
+        "french": "inquiIte",
         "number": "655"
     },
     {
@@ -3281,7 +3281,7 @@
     },
     {
         "english": "go",
-        "french": "all\u00cc\u00a9",
+        "french": "allI",
         "number": "657"
     },
     {
@@ -3291,7 +3291,7 @@
     },
     {
         "english": "serious",
-        "french": "s\u00cc\u00a9rieux",
+        "french": "sIrieux",
         "number": "659"
     },
     {
@@ -3351,7 +3351,7 @@
     },
     {
         "english": "market",
-        "french": "march\u00cc\u00a9",
+        "french": "marchI",
         "number": "671"
     },
     {
@@ -3481,7 +3481,7 @@
     },
     {
         "english": "species",
-        "french": "esp\u00cc\u00acce",
+        "french": "espIce",
         "number": "697"
     },
     {
@@ -3496,7 +3496,7 @@
     },
     {
         "english": "beginning",
-        "french": "d\u00cc\u00a9but",
+        "french": "dIbut",
         "number": "700"
     },
     {
@@ -3511,7 +3511,7 @@
     },
     {
         "english": "hospital",
-        "french": "h\u00cc\u00abpital",
+        "french": "hIpital",
         "number": "703"
     },
     {
@@ -3521,12 +3521,12 @@
     },
     {
         "english": "grace",
-        "french": "gr\u00cc\u00a2ce",
+        "french": "grIce",
         "number": "705"
     },
     {
         "english": "problems",
-        "french": "probl\u00cc\u00acmes",
+        "french": "problImes",
         "number": "706"
     },
     {
@@ -3546,12 +3546,12 @@
     },
     {
         "english": "safe",
-        "french": "s\u00cc\u00c8re",
+        "french": "sIEre",
         "number": "710"
     },
     {
         "english": "received",
-        "french": "re\u00cc\u00a4u",
+        "french": "reIu",
         "number": "711"
     },
     {
@@ -3686,7 +3686,7 @@
     },
     {
         "english": "begin",
-        "french": "commenc\u00cc\u00a9",
+        "french": "commencI",
         "number": "738"
     },
     {
@@ -3701,7 +3701,7 @@
     },
     {
         "english": "piece",
-        "french": "pi\u00cc\u00acce",
+        "french": "piIce",
         "number": "741"
     },
     {
@@ -3731,7 +3731,7 @@
     },
     {
         "english": "scene",
-        "french": "sc\u00cc\u00acne",
+        "french": "scIne",
         "number": "747"
     },
     {
@@ -3756,7 +3756,7 @@
     },
     {
         "english": "Hello",
-        "french": "all\u00cc\u00ab",
+        "french": "allI",
         "number": "752"
     },
     {
@@ -3771,12 +3771,12 @@
     },
     {
         "english": "hotel",
-        "french": "h\u00cc\u00abtel",
+        "french": "hItel",
         "number": "755"
     },
     {
         "english": "evening",
-        "french": "soir\u00cc\u00a9e",
+        "french": "soirIe",
         "number": "756"
     },
     {
@@ -3901,7 +3901,7 @@
     },
     {
         "english": "light",
-        "french": "lumi\u00cc\u00acre",
+        "french": "lumiIre",
         "number": "781"
     },
     {
@@ -3921,7 +3921,7 @@
     },
     {
         "english": "Christmas",
-        "french": "no\u00cc\u00c7l",
+        "french": "noICl",
         "number": "785"
     },
     {
@@ -3931,12 +3931,12 @@
     },
     {
         "english": "inside",
-        "french": "int\u00cc\u00a9rieur",
+        "french": "intIrieur",
         "number": "787"
     },
     {
         "english": "listen",
-        "french": "\u00cc\u00a9coutez",
+        "french": "Icoutez",
         "number": "788"
     },
     {
@@ -3946,7 +3946,7 @@
     },
     {
         "english": "won",
-        "french": "gagn\u00cc\u00a9",
+        "french": "gagnI",
         "number": "790"
     },
     {
@@ -3976,7 +3976,7 @@
     },
     {
         "english": "present",
-        "french": "pr\u00cc\u00a9sent",
+        "french": "prIsent",
         "number": "796"
     },
     {
@@ -3986,7 +3986,7 @@
     },
     {
         "english": "knows",
-        "french": "conna\u00cc\u00a8t",
+        "french": "connaI t",
         "number": "798"
     },
     {
@@ -4041,7 +4041,7 @@
     },
     {
         "english": "soul",
-        "french": "\u00cc\u00a2me",
+        "french": "Ime",
         "number": "809"
     },
     {
@@ -4061,7 +4061,7 @@
     },
     {
         "english": "successful",
-        "french": "r\u00cc\u00a9ussi",
+        "french": "rIussi",
         "number": "813"
     },
     {
@@ -4101,7 +4101,7 @@
     },
     {
         "english": "sister",
-        "french": "s\u0081\u00d2ur",
+        "french": "sOur",
         "number": "821"
     },
     {
@@ -4176,12 +4176,12 @@
     },
     {
         "english": "completed",
-        "french": "termin\u00cc\u00a9",
+        "french": "terminI",
         "number": "836"
     },
     {
         "english": "completely",
-        "french": "compl\u00cc\u00actement",
+        "french": "complItement",
         "number": "837"
     },
     {
@@ -4231,7 +4231,7 @@
     },
     {
         "english": "loans",
-        "french": "pr\u00cc\u00bbts",
+        "french": "prIts",
         "number": "847"
     },
     {
@@ -4246,12 +4246,12 @@
     },
     {
         "english": "lunch",
-        "french": "d\u00cc\u00a9jeuner",
+        "french": "dIjeuner",
         "number": "850"
     },
     {
         "english": "sent",
-        "french": "envoy\u00cc\u00a9",
+        "french": "envoyI",
         "number": "851"
     },
     {
@@ -4286,7 +4286,7 @@
     },
     {
         "english": "hated",
-        "french": "d\u00cc\u00a9teste",
+        "french": "dIteste",
         "number": "858"
     },
     {
@@ -4296,7 +4296,7 @@
     },
     {
         "english": "at",
-        "french": "\u00cc\u00a2",
+        "french": "I",
         "number": "860"
     },
     {
@@ -4311,7 +4311,7 @@
     },
     {
         "english": "decided",
-        "french": "d\u00cc\u00a9cid\u00cc\u00a9",
+        "french": "dIcidI",
         "number": "863"
     },
     {
@@ -4326,7 +4326,7 @@
     },
     {
         "english": "doctor",
-        "french": "m\u00cc\u00a9decin",
+        "french": "mIdecin",
         "number": "866"
     },
     {
@@ -4376,7 +4376,7 @@
     },
     {
         "english": "know",
-        "french": "conna\u00cc\u00a8tre",
+        "french": "connaI tre",
         "number": "876"
     },
     {
@@ -4446,12 +4446,12 @@
     },
     {
         "english": "half",
-        "french": "moiti\u00cc\u00a9",
+        "french": "moitiI",
         "number": "890"
     },
     {
         "english": "love",
-        "french": "aim\u00cc\u00a9",
+        "french": "aimI",
         "number": "891"
     },
     {
@@ -4481,7 +4481,7 @@
     },
     {
         "english": "TV",
-        "french": "t\u00cc\u00a9l\u00cc\u00a9",
+        "french": "tIlI",
         "number": "897"
     },
     {
@@ -4511,7 +4511,7 @@
     },
     {
         "english": "arrival",
-        "french": "arriv\u00cc\u00a9e",
+        "french": "arrivIe",
         "number": "903"
     },
     {
@@ -4606,12 +4606,12 @@
     },
     {
         "english": "control",
-        "french": "contr\u00cc\u00able",
+        "french": "contrIle",
         "number": "922"
     },
     {
         "english": "ready",
-        "french": "pr\u00cc\u00bbte",
+        "french": "prIte",
         "number": "923"
     },
     {
@@ -4621,7 +4621,7 @@
     },
     {
         "english": "meet",
-        "french": "rencontr\u00cc\u00a9",
+        "french": "rencontrI",
         "number": "925"
     },
     {
@@ -4641,7 +4641,7 @@
     },
     {
         "english": "to write",
-        "french": "\u00cc\u00a9crire",
+        "french": "Icrire",
         "number": "929"
     },
     {
@@ -4691,7 +4691,7 @@
     },
     {
         "english": "back",
-        "french": "arri\u00cc\u00acre",
+        "french": "arriIre",
         "number": "939"
     },
     {
@@ -4701,7 +4701,7 @@
     },
     {
         "english": "America",
-        "french": "am\u00cc\u00a9rique",
+        "french": "amIrique",
         "number": "941"
     },
     {
@@ -4731,7 +4731,7 @@
     },
     {
         "english": "stopped",
-        "french": "arr\u00cc\u00bbt\u00cc\u00a9",
+        "french": "arrItI",
         "number": "947"
     },
     {
@@ -4751,7 +4751,7 @@
     },
     {
         "english": "reply",
-        "french": "r\u00cc\u00a9ponse",
+        "french": "rIponse",
         "number": "951"
     },
     {
@@ -4856,7 +4856,7 @@
     },
     {
         "english": "strange",
-        "french": "\u00cc\u00a9trange",
+        "french": "Itrange",
         "number": "972"
     },
     {
@@ -4901,7 +4901,7 @@
     },
     {
         "english": "play",
-        "french": "jou\u00cc\u00a9",
+        "french": "jouI",
         "number": "981"
     },
     {
@@ -4951,7 +4951,7 @@
     },
     {
         "english": "stolen",
-        "french": "vol\u00cc\u00a9",
+        "french": "volI",
         "number": "991"
     },
     {
@@ -5001,7 +5001,7 @@
     },
     {
         "english": "box",
-        "french": "bo\u00cc\u00a8te",
+        "french": "boI te",
         "number": "1001"
     },
     {
@@ -5021,22 +5021,22 @@
     },
     {
         "english": "listen",
-        "french": "\u00cc\u00a9couter",
+        "french": "Icouter",
         "number": "1005"
     },
     {
         "english": "present",
-        "french": "pr\u00cc\u00a9sente",
+        "french": "prIsente",
         "number": "1006"
     },
     {
         "english": "system",
-        "french": "syst\u00cc\u00acme",
+        "french": "systIme",
         "number": "1007"
     },
     {
         "english": "time",
-        "french": "\u00cc\u00a9poque",
+        "french": "Ipoque",
         "number": "1008"
     },
     {
@@ -5051,7 +5051,7 @@
     },
     {
         "english": "stupid",
-        "french": "b\u00cc\u00bbte",
+        "french": "bIte",
         "number": "1011"
     },
     {
@@ -5076,7 +5076,7 @@
     },
     {
         "english": "health",
-        "french": "sant\u00cc\u00a9",
+        "french": "santI",
         "number": "1016"
     },
     {
@@ -5196,7 +5196,7 @@
     },
     {
         "english": "hero",
-        "french": "h\u00cc\u00a9ros",
+        "french": "hIros",
         "number": "1040"
     },
     {
@@ -5211,7 +5211,7 @@
     },
     {
         "english": "key",
-        "french": "cl\u00cc\u00a9",
+        "french": "clI",
         "number": "1043"
     },
     {
@@ -5236,7 +5236,7 @@
     },
     {
         "english": "freedom",
-        "french": "libert\u00cc\u00a9",
+        "french": "libertI",
         "number": "1048"
     },
     {
@@ -5286,7 +5286,7 @@
     },
     {
         "english": "seems",
-        "french": "para\u00cc\u00a8t",
+        "french": "paraI t",
         "number": "1058"
     },
     {
@@ -5311,7 +5311,7 @@
     },
     {
         "english": "tea",
-        "french": "th\u00cc\u00a9",
+        "french": "thI",
         "number": "1063"
     },
     {
@@ -5321,7 +5321,7 @@
     },
     {
         "english": "paid",
-        "french": "pay\u00cc\u00a9",
+        "french": "payI",
         "number": "1065"
     },
     {
@@ -5346,7 +5346,7 @@
     },
     {
         "english": "prefer",
-        "french": "pr\u00cc\u00a9f\u00cc\u00acre",
+        "french": "prIfIre",
         "number": "1070"
     },
     {
@@ -5361,17 +5361,17 @@
     },
     {
         "english": "drawn",
-        "french": "tir\u00cc\u00a9",
+        "french": "tirI",
         "number": "1073"
     },
     {
         "english": "protect",
-        "french": "prot\u00cc\u00a9ger",
+        "french": "protIger",
         "number": "1074"
     },
     {
         "english": "dreams",
-        "french": "r\u00cc\u00bbves",
+        "french": "rIves",
         "number": "1075"
     },
     {
@@ -5381,7 +5381,7 @@
     },
     {
         "english": "pity",
-        "french": "piti\u00cc\u00a9",
+        "french": "pitiI",
         "number": "1077"
     },
     {
@@ -5391,7 +5391,7 @@
     },
     {
         "english": "same",
-        "french": "m\u00cc\u00bbmes",
+        "french": "mImes",
         "number": "1079"
     },
     {
@@ -5426,7 +5426,7 @@
     },
     {
         "english": "boys",
-        "french": "gar\u00cc\u00a4ons",
+        "french": "garIons",
         "number": "1086"
     },
     {
@@ -5481,7 +5481,7 @@
     },
     {
         "english": "beer",
-        "french": "bi\u00cc\u00acre",
+        "french": "biIre",
         "number": "1097"
     },
     {
@@ -5511,7 +5511,7 @@
     },
     {
         "english": "different",
-        "french": "diff\u00cc\u00a9rent",
+        "french": "diffIrent",
         "number": "1103"
     },
     {
@@ -5536,7 +5536,7 @@
     },
     {
         "english": "clothing",
-        "french": "v\u00cc\u00bbtements",
+        "french": "vItements",
         "number": "1108"
     },
     {
@@ -5556,12 +5556,12 @@
     },
     {
         "english": "society",
-        "french": "soci\u00cc\u00a9t\u00cc\u00a9",
+        "french": "sociItI",
         "number": "1112"
     },
     {
         "english": "Dear",
-        "french": "ch\u00cc\u00acre",
+        "french": "chIre",
         "number": "1113"
     },
     {
@@ -5586,7 +5586,7 @@
     },
     {
         "english": "bought",
-        "french": "achet\u00cc\u00a9",
+        "french": "achetI",
         "number": "1118"
     },
     {
@@ -5621,7 +5621,7 @@
     },
     {
         "english": "departure",
-        "french": "d\u00cc\u00a9part",
+        "french": "dIpart",
         "number": "1125"
     },
     {
@@ -5681,17 +5681,17 @@
     },
     {
         "english": "interest",
-        "french": "int\u00cc\u00a9r\u00cc\u00bbt",
+        "french": "intIrIt",
         "number": "1137"
     },
     {
         "english": "interested",
-        "french": "int\u00cc\u00a9resse",
+        "french": "intIresse",
         "number": "1138"
     },
     {
         "english": "role",
-        "french": "r\u00cc\u00able",
+        "french": "rIle",
         "number": "1139"
     },
     {
@@ -5701,7 +5701,7 @@
     },
     {
         "english": "Congratulations",
-        "french": "f\u00cc\u00a9licitations",
+        "french": "fIlicitations",
         "number": "1141"
     },
     {
@@ -5731,7 +5731,7 @@
     },
     {
         "english": "injured",
-        "french": "bless\u00cc\u00a9",
+        "french": "blessI",
         "number": "1147"
     },
     {
@@ -5781,7 +5781,7 @@
     },
     {
         "english": "quits",
-        "french": "quitt\u00cc\u00a9",
+        "french": "quittI",
         "number": "1157"
     },
     {
@@ -5806,7 +5806,7 @@
     },
     {
         "english": "church",
-        "french": "\u00cc\u00a9glise",
+        "french": "Iglise",
         "number": "1162"
     },
     {
@@ -5816,12 +5816,12 @@
     },
     {
         "english": "beauty",
-        "french": "beaut\u00cc\u00a9",
+        "french": "beautI",
         "number": "1164"
     },
     {
         "english": "loose",
-        "french": "l\u00cc\u00a2che",
+        "french": "lIche",
         "number": "1165"
     },
     {
@@ -5846,7 +5846,7 @@
     },
     {
         "english": "anger",
-        "french": "col\u00cc\u00acre",
+        "french": "colIre",
         "number": "1170"
     },
     {
@@ -5876,7 +5876,7 @@
     },
     {
         "english": "Entrance",
-        "french": "entr\u00cc\u00a9e",
+        "french": "entrIe",
         "number": "1176"
     },
     {
@@ -5891,7 +5891,7 @@
     },
     {
         "english": "American",
-        "french": "am\u00cc\u00a9ricain",
+        "french": "amIricain",
         "number": "1179"
     },
     {
@@ -5916,7 +5916,7 @@
     },
     {
         "english": "experience",
-        "french": "exp\u00cc\u00a9rience",
+        "french": "expIrience",
         "number": "1184"
     },
     {
@@ -5931,7 +5931,7 @@
     },
     {
         "english": "window",
-        "french": "fen\u00cc\u00bbtre",
+        "french": "fenItre",
         "number": "1187"
     },
     {
@@ -5966,7 +5966,7 @@
     },
     {
         "english": "falls",
-        "french": "tomb\u00cc\u00a9",
+        "french": "tombI",
         "number": "1194"
     },
     {
@@ -5991,12 +5991,12 @@
     },
     {
         "english": "eye",
-        "french": "\u0081\u00d2il",
+        "french": "Oil",
         "number": "1199"
     },
     {
         "english": "present",
-        "french": "pr\u00cc\u00a9senter",
+        "french": "prIsenter",
         "number": "1200"
     },
     {
@@ -6006,7 +6006,7 @@
     },
     {
         "english": "brothers",
-        "french": "fr\u00cc\u00acres",
+        "french": "frIres",
         "number": "1202"
     },
     {
@@ -6036,12 +6036,12 @@
     },
     {
         "english": "marry",
-        "french": "\u00cc\u00a9pouser",
+        "french": "Ipouser",
         "number": "1208"
     },
     {
         "english": "interesting",
-        "french": "int\u00cc\u00a9ressant",
+        "french": "intIressant",
         "number": "1209"
     },
     {
@@ -6101,7 +6101,7 @@
     },
     {
         "english": "cinema",
-        "french": "cin\u00cc\u00a9ma",
+        "french": "cinIma",
         "number": "1221"
     },
     {
@@ -6111,7 +6111,7 @@
     },
     {
         "english": "decision",
-        "french": "d\u00cc\u00a9cision",
+        "french": "dIcision",
         "number": "1223"
     },
     {
@@ -6156,7 +6156,7 @@
     },
     {
         "english": "second",
-        "french": "deuxi\u00cc\u00acme",
+        "french": "deuxiIme",
         "number": "1232"
     },
     {
@@ -6181,7 +6181,7 @@
     },
     {
         "english": "saved",
-        "french": "sauv\u00cc\u00a9",
+        "french": "sauvI",
         "number": "1237"
     },
     {
@@ -6191,17 +6191,17 @@
     },
     {
         "english": "i\u00cc\u00ca",
-        "french": "i\u00cc\u00ca",
+        "french": "iIE",
         "number": "1239"
     },
     {
         "english": "reply",
-        "french": "r\u00cc\u00a9pondre",
+        "french": "rIpondre",
         "number": "1240"
     },
     {
         "english": "way",
-        "french": "mani\u00cc\u00acre",
+        "french": "maniIre",
         "number": "1241"
     },
     {
@@ -6221,7 +6221,7 @@
     },
     {
         "english": "defense",
-        "french": "d\u00cc\u00a9fense",
+        "french": "dIfense",
         "number": "1245"
     },
     {
@@ -6231,7 +6231,7 @@
     },
     {
         "english": "Jesus",
-        "french": "j\u00cc\u00a9sus",
+        "french": "jIsus",
         "number": "1247"
     },
     {
@@ -6241,7 +6241,7 @@
     },
     {
         "english": "driveway",
-        "french": "all\u00cc\u00a9e",
+        "french": "allIe",
         "number": "1249"
     },
     {
@@ -6286,12 +6286,12 @@
     },
     {
         "english": "at once",
-        "french": "imm\u00cc\u00a9diatement",
+        "french": "immIdiatement",
         "number": "1258"
     },
     {
         "english": "married",
-        "french": "mari\u00cc\u00a9",
+        "french": "mariI",
         "number": "1259"
     },
     {
@@ -6316,7 +6316,7 @@
     },
     {
         "english": "wife",
-        "french": "\u00cc\u00a9pouse",
+        "french": "Ipouse",
         "number": "1264"
     },
     {
@@ -6336,7 +6336,7 @@
     },
     {
         "english": "born",
-        "french": "n\u00cc\u00a9",
+        "french": "nI",
         "number": "1268"
     },
     {
@@ -6351,7 +6351,7 @@
     },
     {
         "english": "French",
-        "french": "fran\u00cc\u00a4ais",
+        "french": "franIais",
         "number": "1271"
     },
     {
@@ -6366,7 +6366,7 @@
     },
     {
         "english": "majesty",
-        "french": "majest\u00cc\u00a9",
+        "french": "majestI",
         "number": "1274"
     },
     {
@@ -6406,7 +6406,7 @@
     },
     {
         "english": "ideas",
-        "french": "id\u00cc\u00a9es",
+        "french": "idIes",
         "number": "1282"
     },
     {
@@ -6436,7 +6436,7 @@
     },
     {
         "english": "releases",
-        "french": "d\u00cc\u00a9gage",
+        "french": "dIgage",
         "number": "1288"
     },
     {
@@ -6451,7 +6451,7 @@
     },
     {
         "english": "were",
-        "french": "\u00cc\u00a9tions",
+        "french": "Itions",
         "number": "1291"
     },
     {
@@ -6466,7 +6466,7 @@
     },
     {
         "english": "planned",
-        "french": "pr\u00cc\u00a9vu",
+        "french": "prIvu",
         "number": "1294"
     },
     {
@@ -6481,7 +6481,7 @@
     },
     {
         "english": "touch",
-        "french": "touch\u00cc\u00a9",
+        "french": "touchI",
         "number": "1297"
     },
     {
@@ -6511,7 +6511,7 @@
     },
     {
         "english": "disturbs",
-        "french": "d\u00cc\u00a9range",
+        "french": "dIrange",
         "number": "1303"
     },
     {
@@ -6536,12 +6536,12 @@
     },
     {
         "english": "reality",
-        "french": "r\u00cc\u00a9alit\u00cc\u00a9",
+        "french": "rIalitI",
         "number": "1308"
     },
     {
         "english": "investigation",
-        "french": "enqu\u00cc\u00bbte",
+        "french": "enquIte",
         "number": "1309"
     },
     {
@@ -6571,7 +6571,7 @@
     },
     {
         "english": "occupied",
-        "french": "occup\u00cc\u00a9",
+        "french": "occupI",
         "number": "1315"
     },
     {
@@ -6621,7 +6621,7 @@
     },
     {
         "english": "to avoid",
-        "french": "\u00cc\u00a9viter",
+        "french": "Iviter",
         "number": "1325"
     },
     {
@@ -6646,17 +6646,17 @@
     },
     {
         "english": "prevent",
-        "french": "emp\u00cc\u00bbcher",
+        "french": "empIcher",
         "number": "1330"
     },
     {
         "english": "married",
-        "french": "mari\u00cc\u00a9e",
+        "french": "mariIe",
         "number": "1331"
     },
     {
         "english": "eat",
-        "french": "mang\u00cc\u00a9",
+        "french": "mangI",
         "number": "1332"
     },
     {
@@ -6696,7 +6696,7 @@
     },
     {
         "english": "rules",
-        "french": "r\u00cc\u00acgles",
+        "french": "rIgles",
         "number": "1340"
     },
     {
@@ -6721,12 +6721,12 @@
     },
     {
         "english": "US",
-        "french": "am\u00cc\u00a9ricains",
+        "french": "amIricains",
         "number": "1345"
     },
     {
         "english": "imbecile",
-        "french": "imb\u00cc\u00a9cile",
+        "french": "imbIcile",
         "number": "1346"
     },
     {
@@ -6761,7 +6761,7 @@
     },
     {
         "english": "Motherfucker",
-        "french": "enfoir\u00cc\u00a9",
+        "french": "enfoirI",
         "number": "1353"
     },
     {
@@ -6791,7 +6791,7 @@
     },
     {
         "english": "nice to meet you",
-        "french": "enchant\u00cc\u00a9",
+        "french": "enchantI",
         "number": "1359"
     },
     {
@@ -6841,7 +6841,7 @@
     },
     {
         "english": "lived",
-        "french": "v\u00cc\u00a9cu",
+        "french": "vIcu",
         "number": "1369"
     },
     {
@@ -6911,7 +6911,7 @@
     },
     {
         "english": "sheriff",
-        "french": "sh\u00cc\u00a9rif",
+        "french": "shIrif",
         "number": "1383"
     },
     {
@@ -6926,12 +6926,12 @@
     },
     {
         "english": "takes",
-        "french": "emm\u00cc\u00acne",
+        "french": "emmIne",
         "number": "1386"
     },
     {
         "english": "meeting",
-        "french": "r\u00cc\u00a9union",
+        "french": "rIunion",
         "number": "1387"
     },
     {
@@ -6941,7 +6941,7 @@
     },
     {
         "english": "island",
-        "french": "\u00cc\u00a8le",
+        "french": "I le",
         "number": "1389"
     },
     {
@@ -6961,17 +6961,17 @@
     },
     {
         "english": "surgery",
-        "french": "op\u00cc\u00a9ration",
+        "french": "opIration",
         "number": "1393"
     },
     {
         "english": "special",
-        "french": "sp\u00cc\u00a9cial",
+        "french": "spIcial",
         "number": "1394"
     },
     {
         "english": "planet",
-        "french": "plan\u00cc\u00acte",
+        "french": "planIte",
         "number": "1395"
     },
     {
@@ -7011,7 +7011,7 @@
     },
     {
         "english": "discovered",
-        "french": "d\u00cc\u00a9couvert",
+        "french": "dIcouvert",
         "number": "1403"
     },
     {
@@ -7046,7 +7046,7 @@
     },
     {
         "english": "sacred",
-        "french": "sacr\u00cc\u00a9",
+        "french": "sacrI",
         "number": "1410"
     },
     {
@@ -7066,7 +7066,7 @@
     },
     {
         "english": "necessary",
-        "french": "n\u00cc\u00a9cessaire",
+        "french": "nIcessaire",
         "number": "1414"
     },
     {
@@ -7076,7 +7076,7 @@
     },
     {
         "english": "destroy",
-        "french": "d\u00cc\u00a9truire",
+        "french": "dItruire",
         "number": "1416"
     },
     {
@@ -7096,7 +7096,7 @@
     },
     {
         "english": "memory",
-        "french": "m\u00cc\u00a9moire",
+        "french": "mImoire",
         "number": "1420"
     },
     {
@@ -7151,7 +7151,7 @@
     },
     {
         "english": "witness",
-        "french": "t\u00cc\u00a9moin",
+        "french": "tImoin",
         "number": "1431"
     },
     {
@@ -7201,7 +7201,7 @@
     },
     {
         "english": "brought",
-        "french": "apport\u00cc\u00a9",
+        "french": "apportI",
         "number": "1441"
     },
     {
@@ -7216,7 +7216,7 @@
     },
     {
         "english": "trial",
-        "french": "proc\u00cc\u00acs",
+        "french": "procIs",
         "number": "1444"
     },
     {
@@ -7256,7 +7256,7 @@
     },
     {
         "english": "taste",
-        "french": "go\u00cc\u00c8t",
+        "french": "goIEt",
         "number": "1452"
     },
     {
@@ -7276,7 +7276,7 @@
     },
     {
         "english": "difference",
-        "french": "diff\u00cc\u00a9rence",
+        "french": "diffIrence",
         "number": "1456"
     },
     {
@@ -7296,7 +7296,7 @@
     },
     {
         "english": "reflect",
-        "french": "r\u00cc\u00a9fl\u00cc\u00a9chir",
+        "french": "rIflIchir",
         "number": "1460"
     },
     {
@@ -7316,7 +7316,7 @@
     },
     {
         "english": "university",
-        "french": "universit\u00cc\u00a9",
+        "french": "universitI",
         "number": "1464"
     },
     {
@@ -7326,7 +7326,7 @@
     },
     {
         "english": "meters",
-        "french": "m\u00cc\u00actres",
+        "french": "mItres",
         "number": "1466"
     },
     {
@@ -7366,7 +7366,7 @@
     },
     {
         "english": "work",
-        "french": "travaill\u00cc\u00a9",
+        "french": "travaillI",
         "number": "1474"
     },
     {
@@ -7376,7 +7376,7 @@
     },
     {
         "english": "found",
-        "french": "retrouv\u00cc\u00a9",
+        "french": "retrouvI",
         "number": "1476"
     },
     {
@@ -7401,7 +7401,7 @@
     },
     {
         "english": "deserved",
-        "french": "m\u00cc\u00a9rite",
+        "french": "mIrite",
         "number": "1481"
     },
     {
@@ -7441,7 +7441,7 @@
     },
     {
         "english": "camera",
-        "french": "cam\u00cc\u00a9ra",
+        "french": "camIra",
         "number": "1489"
     },
     {
@@ -7456,7 +7456,7 @@
     },
     {
         "english": "rooms",
-        "french": "pi\u00cc\u00acces",
+        "french": "piIces",
         "number": "1492"
     },
     {
@@ -7466,7 +7466,7 @@
     },
     {
         "english": "treasure",
-        "french": "tr\u00cc\u00a9sor",
+        "french": "trIsor",
         "number": "1494"
     },
     {
@@ -7476,7 +7476,7 @@
     },
     {
         "english": "energy",
-        "french": "\u00cc\u00a9nergie",
+        "french": "Inergie",
         "number": "1496"
     },
     {
@@ -7486,12 +7486,12 @@
     },
     {
         "english": "huge",
-        "french": "\u00cc\u00a9norme",
+        "french": "Inorme",
         "number": "1498"
     },
     {
         "english": "returns",
-        "french": "rentr\u00cc\u00a9",
+        "french": "rentrI",
         "number": "1499"
     },
     {
@@ -7506,7 +7506,7 @@
     },
     {
         "english": "to prepare",
-        "french": "pr\u00cc\u00a9parer",
+        "french": "prIparer",
         "number": "1502"
     },
     {
@@ -7531,7 +7531,7 @@
     },
     {
         "english": "guest",
-        "french": "invit\u00cc\u00a9",
+        "french": "invitI",
         "number": "1507"
     },
     {
@@ -7541,7 +7541,7 @@
     },
     {
         "english": "supposed",
-        "french": "cens\u00cc\u00a9",
+        "french": "censI",
         "number": "1509"
     },
     {
@@ -7596,7 +7596,7 @@
     },
     {
         "english": "stop",
-        "french": "arr\u00cc\u00bbt",
+        "french": "arrIt",
         "number": "1520"
     },
     {
@@ -7621,7 +7621,7 @@
     },
     {
         "english": "high school",
-        "french": "lyc\u00cc\u00a9e",
+        "french": "lycIe",
         "number": "1525"
     },
     {
@@ -7651,7 +7651,7 @@
     },
     {
         "english": "broken",
-        "french": "cass\u00cc\u00a9",
+        "french": "cassI",
         "number": "1531"
     },
     {
@@ -7661,7 +7661,7 @@
     },
     {
         "english": "check",
-        "french": "v\u00cc\u00a9rifier",
+        "french": "vIrifier",
         "number": "1533"
     },
     {
@@ -7686,7 +7686,7 @@
     },
     {
         "english": "answer",
-        "french": "r\u00cc\u00a9ponds",
+        "french": "rIponds",
         "number": "1538"
     },
     {
@@ -7706,12 +7706,12 @@
     },
     {
         "english": "third",
-        "french": "troisi\u00cc\u00acme",
+        "french": "troisiIme",
         "number": "1542"
     },
     {
         "english": "depends",
-        "french": "d\u00cc\u00a9pend",
+        "french": "dIpend",
         "number": "1543"
     },
     {
@@ -7726,7 +7726,7 @@
     },
     {
         "english": "honest",
-        "french": "honn\u00cc\u00bbte",
+        "french": "honnIte",
         "number": "1546"
     },
     {
@@ -7751,7 +7751,7 @@
     },
     {
         "english": "adjust",
-        "french": "r\u00cc\u00a9gler",
+        "french": "rIgler",
         "number": "1551"
     },
     {
@@ -7791,7 +7791,7 @@
     },
     {
         "english": "presence",
-        "french": "pr\u00cc\u00a9sence",
+        "french": "prIsence",
         "number": "1559"
     },
     {
@@ -7806,7 +7806,7 @@
     },
     {
         "english": "bring",
-        "french": "am\u00cc\u00acne",
+        "french": "amIne",
         "number": "1562"
     },
     {
@@ -7816,7 +7816,7 @@
     },
     {
         "english": "very",
-        "french": "tr\u00cc\u00a9s",
+        "french": "trIs",
         "number": "1564"
     },
     {
@@ -7831,7 +7831,7 @@
     },
     {
         "english": "Keywords",
-        "french": "cl\u00cc\u00a9s",
+        "french": "clIs",
         "number": "1567"
     },
     {
@@ -7846,7 +7846,7 @@
     },
     {
         "english": "recover",
-        "french": "r\u00cc\u00a9cup\u00cc\u00a9rer",
+        "french": "rIcupIrer",
         "number": "1570"
     },
     {
@@ -7911,7 +7911,7 @@
     },
     {
         "english": "lack",
-        "french": "manqu\u00cc\u00a9",
+        "french": "manquI",
         "number": "1583"
     },
     {
@@ -7946,7 +7946,7 @@
     },
     {
         "english": "floor",
-        "french": "\u00cc\u00a9tage",
+        "french": "Itage",
         "number": "1590"
     },
     {
@@ -7966,7 +7966,7 @@
     },
     {
         "english": "despite",
-        "french": "malgr\u00cc\u00a9",
+        "french": "malgrI",
         "number": "1594"
     },
     {
@@ -7976,7 +7976,7 @@
     },
     {
         "english": "bad",
-        "french": "m\u00cc\u00a9chant",
+        "french": "mIchant",
         "number": "1596"
     },
     {
@@ -8006,7 +8006,7 @@
     },
     {
         "english": "hit",
-        "french": "frapp\u00cc\u00a9",
+        "french": "frappI",
         "number": "1602"
     },
     {
@@ -8046,7 +8046,7 @@
     },
     {
         "english": "watched",
-        "french": "regard\u00cc\u00a9",
+        "french": "regardI",
         "number": "1610"
     },
     {
@@ -8061,7 +8061,7 @@
     },
     {
         "english": "job",
-        "french": "m\u00cc\u00a9tier",
+        "french": "mItier",
         "number": "1613"
     },
     {
@@ -8076,7 +8076,7 @@
     },
     {
         "english": "very",
-        "french": "tr\u00cc\u00bbs",
+        "french": "trIs",
         "number": "1616"
     },
     {
@@ -8091,12 +8091,12 @@
     },
     {
         "english": "success",
-        "french": "succ\u00cc\u00acs",
+        "french": "succIs",
         "number": "1619"
     },
     {
         "english": "being",
-        "french": "\u00cc\u00a9tant",
+        "french": "Itant",
         "number": "1620"
     },
     {
@@ -8116,7 +8116,7 @@
     },
     {
         "english": "theater",
-        "french": "th\u00cc\u00a9\u00cc\u00a2tre",
+        "french": "thIItre",
         "number": "1624"
     },
     {
@@ -8156,7 +8156,7 @@
     },
     {
         "english": "Note",
-        "french": "remarqu\u00cc\u00a9",
+        "french": "remarquI",
         "number": "1632"
     },
     {
@@ -8166,7 +8166,7 @@
     },
     {
         "english": "foreign",
-        "french": "\u00cc\u00a9tranger",
+        "french": "Itranger",
         "number": "1634"
     },
     {
@@ -8176,7 +8176,7 @@
     },
     {
         "english": "closed",
-        "french": "ferm\u00cc\u00a9",
+        "french": "fermI",
         "number": "1636"
     },
     {
@@ -8216,7 +8216,7 @@
     },
     {
         "english": "say again",
-        "french": "r\u00cc\u00a9p\u00cc\u00acte",
+        "french": "rIpIte",
         "number": "1644"
     },
     {
@@ -8241,7 +8241,7 @@
     },
     {
         "english": "your",
-        "french": "v\u00cc\u00abtre",
+        "french": "vItre",
         "number": "1649"
     },
     {
@@ -8256,7 +8256,7 @@
     },
     {
         "english": "or",
-        "french": "o\u00cc\u00c8",
+        "french": "oIE",
         "number": "1652"
     },
     {
@@ -8286,17 +8286,17 @@
     },
     {
         "english": "career",
-        "french": "carri\u00cc\u00acre",
+        "french": "carriIre",
         "number": "1658"
     },
     {
         "english": "removes",
-        "french": "enl\u00cc\u00acve",
+        "french": "enlIve",
         "number": "1659"
     },
     {
         "english": "tired",
-        "french": "fatigu\u00cc\u00a9",
+        "french": "fatiguI",
         "number": "1660"
     },
     {
@@ -8311,12 +8311,12 @@
     },
     {
         "english": "missed",
-        "french": "rat\u00cc\u00a9",
+        "french": "ratI",
         "number": "1663"
     },
     {
         "english": "rule",
-        "french": "r\u00cc\u00acgle",
+        "french": "rIgle",
         "number": "1664"
     },
     {
@@ -8346,7 +8346,7 @@
     },
     {
         "english": "river",
-        "french": "rivi\u00cc\u00acre",
+        "french": "riviIre",
         "number": "1670"
     },
     {
@@ -8366,7 +8366,7 @@
     },
     {
         "english": "forced",
-        "french": "oblig\u00cc\u00a9",
+        "french": "obligI",
         "number": "1674"
     },
     {
@@ -8411,7 +8411,7 @@
     },
     {
         "english": "escape",
-        "french": "\u00cc\u00a9chapper",
+        "french": "Ichapper",
         "number": "1683"
     },
     {
@@ -8431,7 +8431,7 @@
     },
     {
         "english": "dumbass",
-        "french": "cr\u00cc\u00a9tin",
+        "french": "crItin",
         "number": "1687"
     },
     {
@@ -8441,7 +8441,7 @@
     },
     {
         "english": "video",
-        "french": "vid\u00cc\u00a9o",
+        "french": "vidIo",
         "number": "1689"
     },
     {
@@ -8496,7 +8496,7 @@
     },
     {
         "english": "will",
-        "french": "volont\u00cc\u00a9",
+        "french": "volontI",
         "number": "1700"
     },
     {
@@ -8571,12 +8571,12 @@
     },
     {
         "english": "decide",
-        "french": "d\u00cc\u00a9cider",
+        "french": "dIcider",
         "number": "1715"
     },
     {
         "english": "worry",
-        "french": "inqui\u00cc\u00a9tez",
+        "french": "inquiItez",
         "number": "1716"
     },
     {
@@ -8666,7 +8666,7 @@
     },
     {
         "english": "Cake",
-        "french": "g\u00cc\u00a2teau",
+        "french": "gIteau",
         "number": "1734"
     },
     {
@@ -8741,7 +8741,7 @@
     },
     {
         "english": "seriously",
-        "french": "s\u00cc\u00a9rieusement",
+        "french": "sIrieusement",
         "number": "1749"
     },
     {
@@ -8771,7 +8771,7 @@
     },
     {
         "english": "rest",
-        "french": "rest\u00cc\u00a9",
+        "french": "restI",
         "number": "1755"
     },
     {
@@ -8786,7 +8786,7 @@
     },
     {
         "english": "genius",
-        "french": "g\u00cc\u00a9nie",
+        "french": "gInie",
         "number": "1758"
     },
     {
@@ -8811,12 +8811,12 @@
     },
     {
         "english": "answered",
-        "french": "r\u00cc\u00a9pondu",
+        "french": "rIpondu",
         "number": "1763"
     },
     {
         "english": "bring",
-        "french": "amen\u00cc\u00a9",
+        "french": "amenI",
         "number": "1764"
     },
     {
@@ -8871,7 +8871,7 @@
     },
     {
         "english": "prepare",
-        "french": "pr\u00cc\u00a9pare",
+        "french": "prIpare",
         "number": "1775"
     },
     {
@@ -8896,12 +8896,12 @@
     },
     {
         "english": "destroy",
-        "french": "d\u00cc\u00a9truit",
+        "french": "dItruit",
         "number": "1780"
     },
     {
         "english": "popular",
-        "french": "c\u00cc\u00a9l\u00cc\u00acbre",
+        "french": "cIlIbre",
         "number": "1781"
     },
     {
@@ -8921,17 +8921,17 @@
     },
     {
         "english": "prevent",
-        "french": "pr\u00cc\u00a9venir",
+        "french": "prIvenir",
         "number": "1785"
     },
     {
         "english": "brings back",
-        "french": "ram\u00cc\u00acne",
+        "french": "ramIne",
         "number": "1786"
     },
     {
         "english": "arrived",
-        "french": "arriv\u00cc\u00a9s",
+        "french": "arrivIs",
         "number": "1787"
     },
     {
@@ -8956,7 +8956,7 @@
     },
     {
         "english": "stars",
-        "french": "\u00cc\u00a9toiles",
+        "french": "Itoiles",
         "number": "1792"
     },
     {
@@ -9011,7 +9011,7 @@
     },
     {
         "english": "layer",
-        "french": "couch\u00cc\u00a9",
+        "french": "couchI",
         "number": "1803"
     },
     {
@@ -9031,7 +9031,7 @@
     },
     {
         "english": "pleasant",
-        "french": "agr\u00cc\u00a9able",
+        "french": "agrIable",
         "number": "1807"
     },
     {
@@ -9041,12 +9041,12 @@
     },
     {
         "english": "prefer",
-        "french": "pr\u00cc\u00a9f\u00cc\u00a9r\u00cc\u00a9",
+        "french": "prIfIrI",
         "number": "1809"
     },
     {
         "english": "castle",
-        "french": "ch\u00cc\u00a2teau",
+        "french": "chIteau",
         "number": "1810"
     },
     {
@@ -9061,7 +9061,7 @@
     },
     {
         "english": "discover",
-        "french": "d\u00cc\u00a9couvrir",
+        "french": "dIcouvrir",
         "number": "1813"
     },
     {
@@ -9076,7 +9076,7 @@
     },
     {
         "english": "zero",
-        "french": "z\u00cc\u00a9ro",
+        "french": "zIro",
         "number": "1816"
     },
     {
@@ -9086,7 +9086,7 @@
     },
     {
         "english": "sides",
-        "french": "c\u00cc\u00abt\u00cc\u00a9s",
+        "french": "cItIs",
         "number": "1818"
     },
     {
@@ -9116,7 +9116,7 @@
     },
     {
         "english": "survey",
-        "french": "l\u00cc\u00acve",
+        "french": "lIve",
         "number": "1824"
     },
     {
@@ -9166,7 +9166,7 @@
     },
     {
         "english": "details",
-        "french": "d\u00cc\u00a9tails",
+        "french": "dItails",
         "number": "1834"
     },
     {
@@ -9176,7 +9176,7 @@
     },
     {
         "english": "past",
-        "french": "pass\u00cc\u00a9e",
+        "french": "passIe",
         "number": "1836"
     },
     {
@@ -9196,7 +9196,7 @@
     },
     {
         "english": "private",
-        "french": "priv\u00cc\u00a9",
+        "french": "privI",
         "number": "1840"
     },
     {
@@ -9206,7 +9206,7 @@
     },
     {
         "english": "killed",
-        "french": "tu\u00cc\u00a9e",
+        "french": "tuIe",
         "number": "1842"
     },
     {
@@ -9226,7 +9226,7 @@
     },
     {
         "english": "airport",
-        "french": "a\u00cc\u00a9roport",
+        "french": "aIroport",
         "number": "1846"
     },
     {
@@ -9236,7 +9236,7 @@
     },
     {
         "english": "cocksucker",
-        "french": "encul\u00cc\u00a9",
+        "french": "enculI",
         "number": "1848"
     },
     {
@@ -9301,7 +9301,7 @@
     },
     {
         "english": "defend",
-        "french": "d\u00cc\u00a9fendre",
+        "french": "dIfendre",
         "number": "1861"
     },
     {
@@ -9311,12 +9311,12 @@
     },
     {
         "english": "R",
-        "french": "\u0081\u00a5",
+        "french": "",
         "number": "1863"
     },
     {
         "english": "forest",
-        "french": "for\u00cc\u00bbt",
+        "french": "forIt",
         "number": "1864"
     },
     {
@@ -9346,7 +9346,7 @@
     },
     {
         "english": "henceforth",
-        "french": "d\u00cc\u00a9sormais",
+        "french": "dIsormais",
         "number": "1870"
     },
     {
@@ -9356,12 +9356,12 @@
     },
     {
         "english": "latest",
-        "french": "derni\u00cc\u00acres",
+        "french": "derniIres",
         "number": "1872"
     },
     {
         "english": "fall",
-        "french": "tomb\u00cc\u00a9e",
+        "french": "tombIe",
         "number": "1873"
     },
     {
@@ -9371,12 +9371,12 @@
     },
     {
         "english": "outside",
-        "french": "ext\u00cc\u00a9rieur",
+        "french": "extIrieur",
         "number": "1875"
     },
     {
         "english": "desert",
-        "french": "d\u00cc\u00a9sert",
+        "french": "dIsert",
         "number": "1876"
     },
     {
@@ -9391,7 +9391,7 @@
     },
     {
         "english": "chopped off",
-        "french": "coup\u00cc\u00a9",
+        "french": "coupI",
         "number": "1879"
     },
     {
@@ -9401,7 +9401,7 @@
     },
     {
         "english": "help",
-        "french": "aid\u00cc\u00a9",
+        "french": "aidI",
         "number": "1881"
     },
     {
@@ -9446,12 +9446,12 @@
     },
     {
         "english": "guests",
-        "french": "invit\u00cc\u00a9s",
+        "french": "invitIs",
         "number": "1890"
     },
     {
         "english": "series",
-        "french": "s\u00cc\u00a9rie",
+        "french": "sIrie",
         "number": "1891"
     },
     {
@@ -9476,7 +9476,7 @@
     },
     {
         "english": "married",
-        "french": "mari\u00cc\u00a9s",
+        "french": "mariIs",
         "number": "1896"
     },
     {
@@ -9496,7 +9496,7 @@
     },
     {
         "english": "accepted",
-        "french": "accept\u00cc\u00a9",
+        "french": "acceptI",
         "number": "1900"
     },
     {
@@ -9596,7 +9596,7 @@
     },
     {
         "english": "also",
-        "french": "\u00cc\u00a9galement",
+        "french": "Igalement",
         "number": "1920"
     },
     {
@@ -9641,7 +9641,7 @@
     },
     {
         "english": "enter",
-        "french": "entr\u00cc\u00a9",
+        "french": "entrI",
         "number": "1929"
     },
     {
@@ -9656,7 +9656,7 @@
     },
     {
         "english": "to repair",
-        "french": "r\u00cc\u00a9parer",
+        "french": "rIparer",
         "number": "1932"
     },
     {
@@ -9666,7 +9666,7 @@
     },
     {
         "english": "hidden",
-        "french": "cach\u00cc\u00a9",
+        "french": "cachI",
         "number": "1934"
     },
     {
@@ -9696,7 +9696,7 @@
     },
     {
         "english": "found",
-        "french": "trouv\u00cc\u00a9e",
+        "french": "trouvIe",
         "number": "1940"
     },
     {
@@ -9711,7 +9711,7 @@
     },
     {
         "english": "sword",
-        "french": "\u00cc\u00a9p\u00cc\u00a9e",
+        "french": "IpIe",
         "number": "1943"
     },
     {
@@ -9756,7 +9756,7 @@
     },
     {
         "english": "appreciate",
-        "french": "appr\u00cc\u00a9cie",
+        "french": "apprIcie",
         "number": "1952"
     },
     {
@@ -9776,7 +9776,7 @@
     },
     {
         "english": "create",
-        "french": "cr\u00cc\u00a9er",
+        "french": "crIer",
         "number": "1956"
     },
     {
@@ -9786,7 +9786,7 @@
     },
     {
         "english": "thrown",
-        "french": "jet\u00cc\u00a9",
+        "french": "jetI",
         "number": "1958"
     },
     {
@@ -9806,12 +9806,12 @@
     },
     {
         "english": "wake",
-        "french": "r\u00cc\u00a9veiller",
+        "french": "rIveiller",
         "number": "1962"
     },
     {
         "english": "lesson",
-        "french": "le\u00cc\u00a4on",
+        "french": "leIon",
         "number": "1963"
     },
     {
@@ -9831,7 +9831,7 @@
     },
     {
         "english": "ghost",
-        "french": "fant\u00cc\u00abme",
+        "french": "fantIme",
         "number": "1967"
     },
     {
@@ -9881,7 +9881,7 @@
     },
     {
         "english": "in use",
-        "french": "utilis\u00cc\u00a9",
+        "french": "utilisI",
         "number": "1977"
     },
     {
@@ -9911,7 +9911,7 @@
     },
     {
         "english": "cost",
-        "french": "co\u00cc\u00c8te",
+        "french": "coIEte",
         "number": "1983"
     },
     {
@@ -9926,7 +9926,7 @@
     },
     {
         "english": "American",
-        "french": "am\u00cc\u00a9ricaine",
+        "french": "amIricaine",
         "number": "1986"
     },
     {
@@ -9956,7 +9956,7 @@
     },
     {
         "english": "exchange",
-        "french": "\u00cc\u00a9change",
+        "french": "Ichange",
         "number": "1992"
     },
     {
@@ -9971,7 +9971,7 @@
     },
     {
         "english": "get rid of",
-        "french": "d\u00cc\u00a9barrasser",
+        "french": "dIbarrasser",
         "number": "1995"
     },
     {

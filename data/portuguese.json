@@ -7,17 +7,17 @@
     {
         "english": "also",
         "number": "102",
-        "portuguese": "tamb\u00c3\u00a9m"
+        "portuguese": "tambAm"
     },
     {
         "english": "what",
         "number": "103",
-        "portuguese": "qu\u00c3\u00aa"
+        "portuguese": "quAa"
     },
     {
         "english": "you",
         "number": "104",
-        "portuguese": "voc\u00c3\u00aas"
+        "portuguese": "vocAas"
     },
     {
         "english": "something",
@@ -37,7 +37,7 @@
     {
         "english": "as",
         "number": "108",
-        "portuguese": "t\u00c3\u00a3o"
+        "portuguese": "tAo"
     },
     {
         "english": "that",
@@ -157,12 +157,12 @@
     {
         "english": "mother",
         "number": "132",
-        "portuguese": "m\u00c3\u00a3e"
+        "portuguese": "mAe"
     },
     {
         "english": "someone",
         "number": "133",
-        "portuguese": "algu\u00c3\u00a9m"
+        "portuguese": "alguAm"
     },
     {
         "english": "after",
@@ -197,7 +197,7 @@
     {
         "english": "there",
         "number": "140",
-        "portuguese": "a\u00c3\u00ad"
+        "portuguese": "há"
     },
     {
         "english": "stay",
@@ -297,7 +297,7 @@
     {
         "english": "nobody",
         "number": "160",
-        "portuguese": "ningu\u00c3\u00a9m"
+        "portuguese": "ninguAm"
     },
     {
         "english": "money",
@@ -322,7 +322,7 @@
     {
         "english": "go",
         "number": "165",
-        "portuguese": "v\u00c3\u00a1"
+        "portuguese": "vA"
     },
     {
         "english": "which",
@@ -402,7 +402,7 @@
     {
         "english": "will",
         "number": "181",
-        "portuguese": "ser\u00c3\u00a1"
+        "portuguese": "serA"
     },
     {
         "english": "son",
@@ -437,7 +437,7 @@
     {
         "english": "vain",
         "number": "188",
-        "portuguese": "v\u00c3\u00a3o"
+        "portuguese": "vAo"
     },
     {
         "english": "wanted",
@@ -452,7 +452,7 @@
     {
         "english": "hello",
         "number": "191",
-        "portuguese": "ol\u00c3\u00a1"
+        "portuguese": "olA"
     },
     {
         "english": "can",
@@ -567,7 +567,7 @@
     {
         "english": "three",
         "number": "214",
-        "portuguese": "tr\u00c3\u00aas"
+        "portuguese": "trAas"
     },
     {
         "english": "some",
@@ -657,7 +657,7 @@
     {
         "english": "to",
         "number": "232",
-        "portuguese": "\u00c3\u00a0s"
+        "portuguese": "A s"
     },
     {
         "english": "type",
@@ -672,7 +672,7 @@
     {
         "english": "do",
         "number": "235",
-        "portuguese": "fa\u00c3\u00a7a"
+        "portuguese": "faAa"
     },
     {
         "english": "talking",
@@ -717,7 +717,7 @@
     {
         "english": "ago",
         "number": "244",
-        "portuguese": "atr\u00c3\u00a1s"
+        "portuguese": "atrAs"
     },
     {
         "english": "saw",
@@ -767,7 +767,7 @@
     {
         "english": "tomorrow",
         "number": "254",
-        "portuguese": "amanh\u00c3\u00a3"
+        "portuguese": "amanhA"
     },
     {
         "english": "two",
@@ -812,7 +812,7 @@
     {
         "english": "head",
         "number": "263",
-        "portuguese": "cabe\u00c3\u00a7a"
+        "portuguese": "cabeAa"
     },
     {
         "english": "should",
@@ -842,7 +842,7 @@
     {
         "english": "optimum",
         "number": "269",
-        "portuguese": "\u00c3\u00b3timo"
+        "portuguese": "A3timo"
     },
     {
         "english": "side",
@@ -857,7 +857,7 @@
     {
         "english": "serious",
         "number": "272",
-        "portuguese": "s\u00c3\u00a9rio"
+        "portuguese": "sArio"
     },
     {
         "english": "can",
@@ -892,7 +892,7 @@
     {
         "english": "have",
         "number": "279",
-        "portuguese": "t\u00c3\u00aam"
+        "portuguese": "tAam"
     },
     {
         "english": "are",
@@ -912,7 +912,7 @@
     {
         "english": "gives",
         "number": "283",
-        "portuguese": "d\u00c3\u00a1"
+        "portuguese": "dA"
     },
     {
         "english": "let",
@@ -922,12 +922,12 @@
     {
         "english": "family",
         "number": "285",
-        "portuguese": "fam\u00c3\u00adlia"
+        "portuguese": "famAlia"
     },
     {
         "english": "fast",
         "number": "286",
-        "portuguese": "r\u00c3\u00a1pido"
+        "portuguese": "rApido"
     },
     {
         "english": "help",
@@ -982,7 +982,7 @@
     {
         "english": "brother",
         "number": "297",
-        "portuguese": "irm\u00c3\u00a3o"
+        "portuguese": "irmAo"
     },
     {
         "english": "daddy",
@@ -1052,7 +1052,7 @@
     {
         "english": "Give",
         "number": "311",
-        "portuguese": "d\u00c3\u00aa"
+        "portuguese": "dAa"
     },
     {
         "english": "almost",
@@ -1072,7 +1072,7 @@
     {
         "english": "history",
         "number": "315",
-        "portuguese": "hist\u00c3\u00b3ria"
+        "portuguese": "histA3ria"
     },
     {
         "english": "new",
@@ -1092,7 +1092,7 @@
     {
         "english": "idea",
         "number": "319",
-        "portuguese": "id\u00c3\u00a9ia"
+        "portuguese": "idAia"
     },
     {
         "english": "matter",
@@ -1112,12 +1112,12 @@
     {
         "english": "morning",
         "number": "323",
-        "portuguese": "manh\u00c3\u00a3"
+        "portuguese": "manhA"
     },
     {
         "english": "water",
         "number": "324",
-        "portuguese": "\u00c3\u00a1gua"
+        "portuguese": "Agua"
     },
     {
         "english": "first",
@@ -1142,7 +1142,7 @@
     {
         "english": "mom",
         "number": "329",
-        "portuguese": "mam\u00c3\u00a3e"
+        "portuguese": "mamAe"
     },
     {
         "english": "look",
@@ -1167,7 +1167,7 @@
     {
         "english": "police",
         "number": "334",
-        "portuguese": "pol\u00c3\u00adcia"
+        "portuguese": "polAcia"
     },
     {
         "english": "path",
@@ -1207,7 +1207,7 @@
     {
         "english": "children",
         "number": "342",
-        "portuguese": "crian\u00c3\u00a7as"
+        "portuguese": "crianAas"
     },
     {
         "english": "some",
@@ -1237,7 +1237,7 @@
     {
         "english": "reason",
         "number": "348",
-        "portuguese": "raz\u00c3\u00a3o"
+        "portuguese": "razAo"
     },
     {
         "english": "war",
@@ -1367,7 +1367,7 @@
     {
         "english": "hands",
         "number": "374",
-        "portuguese": "m\u00c3\u00a3os"
+        "portuguese": "mAos"
     },
     {
         "english": "is",
@@ -1412,7 +1412,7 @@
     {
         "english": "ok",
         "number": "383",
-        "portuguese": "t\u00c3\u00a1"
+        "portuguese": "tA"
     },
     {
         "english": "come",
@@ -1477,12 +1477,12 @@
     {
         "english": "hand",
         "number": "396",
-        "portuguese": "m\u00c3\u00a3o"
+        "portuguese": "mAo"
     },
     {
         "english": "heart",
         "number": "397",
-        "portuguese": "cora\u00c3\u00a7\u00c3\u00a3o"
+        "portuguese": "coraAAo"
     },
     {
         "english": "can",
@@ -1577,7 +1577,7 @@
     {
         "english": "see",
         "number": "416",
-        "portuguese": "v\u00c3\u00aa"
+        "portuguese": "vAa"
     },
     {
         "english": "game",
@@ -1587,7 +1587,7 @@
     {
         "english": "difficult",
         "number": "418",
-        "portuguese": "dif\u00c3\u00adcil"
+        "portuguese": "difAcil"
     },
     {
         "english": "would",
@@ -1677,7 +1677,7 @@
     {
         "english": "last",
         "number": "436",
-        "portuguese": "\u00c3\u00baltima"
+        "portuguese": "Aoltima"
     },
     {
         "english": "husband",
@@ -1687,7 +1687,7 @@
     {
         "english": "captain",
         "number": "438",
-        "portuguese": "capit\u00c3\u00a3o"
+        "portuguese": "capitAo"
     },
     {
         "english": "means",
@@ -1702,7 +1702,7 @@
     {
         "english": "here",
         "number": "441",
-        "portuguese": "c\u00c3\u00a1"
+        "portuguese": "cA"
     },
     {
         "english": "stop",
@@ -1732,7 +1732,7 @@
     {
         "english": "I",
         "number": "447",
-        "portuguese": "fa\u00c3\u00a7o"
+        "portuguese": "faAo"
     },
     {
         "english": "body",
@@ -1767,7 +1767,7 @@
     {
         "english": "license",
         "number": "454",
-        "portuguese": "licen\u00c3\u00a7a"
+        "portuguese": "licenAa"
     },
     {
         "english": "dr",
@@ -1782,7 +1782,7 @@
     {
         "english": "start",
         "number": "457",
-        "portuguese": "come\u00c3\u00a7ar"
+        "portuguese": "comeAar"
     },
     {
         "english": "four",
@@ -1822,7 +1822,7 @@
     {
         "english": "number",
         "number": "465",
-        "portuguese": "n\u00c3\u00bamero"
+        "portuguese": "nAomero"
     },
     {
         "english": "had",
@@ -1842,7 +1842,7 @@
     {
         "english": "only",
         "number": "469",
-        "portuguese": "\u00c3\u00banica"
+        "portuguese": "Aonica"
     },
     {
         "english": "take",
@@ -1897,7 +1897,7 @@
     {
         "english": "sister",
         "number": "480",
-        "portuguese": "irm\u00c3\u00a3"
+        "portuguese": "irmA"
     },
     {
         "english": "much",
@@ -1912,7 +1912,7 @@
     {
         "english": "know",
         "number": "483",
-        "portuguese": "conhe\u00c3\u00a7o"
+        "portuguese": "conheAo"
     },
     {
         "english": "died",
@@ -1947,7 +1947,7 @@
     {
         "english": "coffee",
         "number": "490",
-        "portuguese": "caf\u00c3\u00a9"
+        "portuguese": "cafA"
     },
     {
         "english": "peace",
@@ -1967,7 +1967,7 @@
     {
         "english": "easy",
         "number": "494",
-        "portuguese": "f\u00c3\u00a1cil"
+        "portuguese": "fAcil"
     },
     {
         "english": "again",
@@ -2037,17 +2037,17 @@
     {
         "english": "will",
         "number": "508",
-        "portuguese": "ter\u00c3\u00a1"
+        "portuguese": "terA"
     },
     {
         "english": "music",
         "number": "509",
-        "portuguese": "m\u00c3\u00basica"
+        "portuguese": "mAosica"
     },
     {
         "english": "beyond",
         "number": "510",
-        "portuguese": "al\u00c3\u00a9m"
+        "portuguese": "alAm"
     },
     {
         "english": "hooker",
@@ -2062,7 +2062,7 @@
     {
         "english": "listen",
         "number": "513",
-        "portuguese": "ou\u00c3\u00a7a"
+        "portuguese": "ouAa"
     },
     {
         "english": "arrived",
@@ -2097,7 +2097,7 @@
     {
         "english": "child",
         "number": "520",
-        "portuguese": "crian\u00c3\u00a7a"
+        "portuguese": "crianAa"
     },
     {
         "english": "parents",
@@ -2152,12 +2152,12 @@
     {
         "english": "will",
         "number": "531",
-        "portuguese": "ir\u00c3\u00a1"
+        "portuguese": "irA"
     },
     {
         "english": "hello",
         "number": "532",
-        "portuguese": "al\u00c3\u00b4"
+        "portuguese": "alA "
     },
     {
         "english": "were",
@@ -2182,7 +2182,7 @@
     {
         "english": "country",
         "number": "537",
-        "portuguese": "pa\u00c3\u00ads"
+        "portuguese": "paAs"
     },
     {
         "english": "live",
@@ -2237,7 +2237,7 @@
     {
         "english": "back",
         "number": "548",
-        "portuguese": "tr\u00c3\u00a1s"
+        "portuguese": "trAs"
     },
     {
         "english": "our",
@@ -2252,7 +2252,7 @@
     {
         "english": "possible",
         "number": "551",
-        "portuguese": "poss\u00c3\u00advel"
+        "portuguese": "possAvel"
     },
     {
         "english": "happen",
@@ -2342,7 +2342,7 @@
     {
         "english": "dollars",
         "number": "569",
-        "portuguese": "d\u00c3\u00b3lares"
+        "portuguese": "dA3lares"
     },
     {
         "english": "feel",
@@ -2392,7 +2392,7 @@
     {
         "english": "attention",
         "number": "579",
-        "portuguese": "aten\u00c3\u00a7\u00c3\u00a3o"
+        "portuguese": "atenAAo"
     },
     {
         "english": "believe",
@@ -2437,7 +2437,7 @@
     {
         "english": "single",
         "number": "588",
-        "portuguese": "\u00c3\u00banico"
+        "portuguese": "Aonico"
     },
     {
         "english": "some",
@@ -2452,7 +2452,7 @@
     {
         "english": "force",
         "number": "591",
-        "portuguese": "for\u00c3\u00a7a"
+        "portuguese": "forAa"
     },
     {
         "english": "brought",
@@ -2497,7 +2497,7 @@
     {
         "english": "baby",
         "number": "600",
-        "portuguese": "beb\u00c3\u00aa"
+        "portuguese": "bebAa"
     },
     {
         "english": "beautiful",
@@ -2617,7 +2617,7 @@
     {
         "english": "next",
         "number": "624",
-        "portuguese": "pr\u00c3\u00b3xima"
+        "portuguese": "prA3xima"
     },
     {
         "english": "out",
@@ -2632,7 +2632,7 @@
     {
         "english": "doctor",
         "number": "627",
-        "portuguese": "m\u00c3\u00a9dico"
+        "portuguese": "mAdico"
     },
     {
         "english": "weapons",
@@ -2687,12 +2687,12 @@
     {
         "english": "security",
         "number": "638",
-        "portuguese": "seguran\u00c3\u00a7a"
+        "portuguese": "seguranAa"
     },
     {
         "english": "re",
         "number": "639",
-        "portuguese": "est\u00c3\u00a1s"
+        "portuguese": "estAs"
     },
     {
         "english": "call",
@@ -2722,7 +2722,7 @@
     {
         "english": "business",
         "number": "645",
-        "portuguese": "neg\u00c3\u00b3cio"
+        "portuguese": "negA3cio"
     },
     {
         "english": "those",
@@ -2737,7 +2737,7 @@
     {
         "english": "foot",
         "number": "648",
-        "portuguese": "p\u00c3\u00a9"
+        "portuguese": "pA"
     },
     {
         "english": "beautiful",
@@ -2782,7 +2782,7 @@
     {
         "english": "forget",
         "number": "657",
-        "portuguese": "esque\u00c3\u00a7a"
+        "portuguese": "esqueAa"
     },
     {
         "english": "special",
@@ -2812,7 +2812,7 @@
     {
         "english": "close",
         "number": "663",
-        "portuguese": "pr\u00c3\u00b3ximo"
+        "portuguese": "prA3ximo"
     },
     {
         "english": "girl",
@@ -2882,7 +2882,7 @@
     {
         "english": "started",
         "number": "677",
-        "portuguese": "come\u00c3\u00a7ou"
+        "portuguese": "comeAou"
     },
     {
         "english": "want",
@@ -2897,7 +2897,7 @@
     {
         "english": "last",
         "number": "680",
-        "portuguese": "\u00c3\u00baltimo"
+        "portuguese": "Aoltimo"
     },
     {
         "english": "link",
@@ -2942,7 +2942,7 @@
     {
         "english": "own",
         "number": "689",
-        "portuguese": "pr\u00c3\u00b3prio"
+        "portuguese": "prA3prio"
     },
     {
         "english": "floor",
@@ -2957,12 +2957,12 @@
     {
         "english": "will",
         "number": "692",
-        "portuguese": "estar\u00c3\u00a1"
+        "portuguese": "estarA"
     },
     {
         "english": "thence",
         "number": "693",
-        "portuguese": "da\u00c3\u00ad"
+        "portuguese": "daA"
     },
     {
         "english": "I think",
@@ -2992,7 +2992,7 @@
     {
         "english": "million",
         "number": "699",
-        "portuguese": "milh\u00c3\u00b5es"
+        "portuguese": "milhAes"
     },
     {
         "english": "boy",
@@ -3017,7 +3017,7 @@
     {
         "english": "funny",
         "number": "704",
-        "portuguese": "engra\u00c3\u00a7ado"
+        "portuguese": "engraAado"
     },
     {
         "english": "out",
@@ -3117,7 +3117,7 @@
     {
         "english": "prison",
         "number": "724",
-        "portuguese": "pris\u00c3\u00a3o"
+        "portuguese": "prisAo"
     },
     {
         "english": "will",
@@ -3167,7 +3167,7 @@
     {
         "english": "were",
         "number": "734",
-        "portuguese": "est\u00c3\u00a1vamos"
+        "portuguese": "estAvamos"
     },
     {
         "english": "hot",
@@ -3202,7 +3202,7 @@
     {
         "english": "office",
         "number": "741",
-        "portuguese": "escrit\u00c3\u00b3rio"
+        "portuguese": "escritA3rio"
     },
     {
         "english": "line",
@@ -3237,12 +3237,12 @@
     {
         "english": "own",
         "number": "748",
-        "portuguese": "pr\u00c3\u00b3pria"
+        "portuguese": "prA3pria"
     },
     {
         "english": "army",
         "number": "749",
-        "portuguese": "ex\u00c3\u00a9rcito"
+        "portuguese": "exArcito"
     },
     {
         "english": "understand",
@@ -3267,7 +3267,7 @@
     {
         "english": "after",
         "number": "754",
-        "portuguese": "ap\u00c3\u00b3s"
+        "portuguese": "apA3s"
     },
     {
         "english": "i",
@@ -3292,7 +3292,7 @@
     {
         "english": "incredible",
         "number": "759",
-        "portuguese": "incr\u00c3\u00advel"
+        "portuguese": "incrAvel"
     },
     {
         "english": "age",
@@ -3332,7 +3332,7 @@
     {
         "english": "why",
         "number": "767",
-        "portuguese": "porqu\u00c3\u00aa"
+        "portuguese": "porquAa"
     },
     {
         "english": "try",
@@ -3357,7 +3357,7 @@
     {
         "english": "sky",
         "number": "772",
-        "portuguese": "c\u00c3\u00a9u"
+        "portuguese": "cAu"
     },
     {
         "english": "group",
@@ -3372,7 +3372,7 @@
     {
         "english": "ground",
         "number": "775",
-        "portuguese": "ch\u00c3\u00a3o"
+        "portuguese": "chAo"
     },
     {
         "english": "care",
@@ -3417,7 +3417,7 @@
     {
         "english": "situation",
         "number": "784",
-        "portuguese": "situa\u00c3\u00a7\u00c3\u00a3o"
+        "portuguese": "situaAAo"
     },
     {
         "english": "joe",
@@ -3507,7 +3507,7 @@
     {
         "english": "plane",
         "number": "802",
-        "portuguese": "avi\u00c3\u00a3o"
+        "portuguese": "aviAo"
     },
     {
         "english": "returned",
@@ -3637,7 +3637,7 @@
     {
         "english": "question",
         "number": "828",
-        "portuguese": "quest\u00c3\u00a3o"
+        "portuguese": "questAo"
     },
     {
         "english": "charlie",
@@ -3647,12 +3647,12 @@
     {
         "english": "will",
         "number": "830",
-        "portuguese": "ficar\u00c3\u00a1"
+        "portuguese": "ficarA"
     },
     {
         "english": "service",
         "number": "831",
-        "portuguese": "servi\u00c3\u00a7o"
+        "portuguese": "serviAo"
     },
     {
         "english": "poor",
@@ -3727,7 +3727,7 @@
     {
         "english": "month",
         "number": "846",
-        "portuguese": "m\u00c3\u00aas"
+        "portuguese": "mAas"
     },
     {
         "english": "would",
@@ -3872,12 +3872,12 @@
     {
         "english": "will",
         "number": "875",
-        "portuguese": "far\u00c3\u00a1"
+        "portuguese": "farA"
     },
     {
         "english": "birthday",
         "number": "876",
-        "portuguese": "anivers\u00c3\u00a1rio"
+        "portuguese": "aniversArio"
     },
     {
         "english": "sergeant",
@@ -3937,7 +3937,7 @@
     {
         "english": "affairs",
         "number": "888",
-        "portuguese": "neg\u00c3\u00b3cios"
+        "portuguese": "negA3cios"
     },
     {
         "english": "be",
@@ -4007,7 +4007,7 @@
     {
         "english": "News",
         "number": "902",
-        "portuguese": "not\u00c3\u00adcias"
+        "portuguese": "notAcias"
     },
     {
         "english": "led",
@@ -4027,7 +4027,7 @@
     {
         "english": "feet",
         "number": "906",
-        "portuguese": "p\u00c3\u00a9s"
+        "portuguese": "pAs"
     },
     {
         "english": "idea",
@@ -4047,7 +4047,7 @@
     {
         "english": "through",
         "number": "910",
-        "portuguese": "atrav\u00c3\u00a9s"
+        "portuguese": "atravAs"
     },
     {
         "english": "love",
@@ -4092,7 +4092,7 @@
     {
         "english": "thanks",
         "number": "919",
-        "portuguese": "gra\u00c3\u00a7as"
+        "portuguese": "graAas"
     },
     {
         "english": "shop",
@@ -4147,7 +4147,7 @@
     {
         "english": "terrible",
         "number": "930",
-        "portuguese": "terr\u00c3\u00advel"
+        "portuguese": "terrAvel"
     },
     {
         "english": "second",
@@ -4197,7 +4197,7 @@
     {
         "english": "impossible",
         "number": "940",
-        "portuguese": "imposs\u00c3\u00advel"
+        "portuguese": "impossAvel"
     },
     {
         "english": "told",
@@ -4207,7 +4207,7 @@
     {
         "english": "piece",
         "number": "942",
-        "portuguese": "pe\u00c3\u00a7a"
+        "portuguese": "peAa"
     },
     {
         "english": "found",
@@ -4252,7 +4252,7 @@
     {
         "english": "horrible",
         "number": "951",
-        "portuguese": "horr\u00c3\u00advel"
+        "portuguese": "horrAvel"
     },
     {
         "english": "seemed",
@@ -4312,7 +4312,7 @@
     {
         "english": "dance",
         "number": "963",
-        "portuguese": "dan\u00c3\u00a7ar"
+        "portuguese": "danAar"
     },
     {
         "english": "drink",
@@ -4367,7 +4367,7 @@
     {
         "english": "are",
         "number": "974",
-        "portuguese": "\u00c3\u00a9s"
+        "portuguese": "As"
     },
     {
         "english": "north",
@@ -4377,12 +4377,12 @@
     {
         "english": "will",
         "number": "976",
-        "portuguese": "ser\u00c3\u00a3o"
+        "portuguese": "serAo"
     },
     {
         "english": "congratulations",
         "number": "977",
-        "portuguese": "parab\u00c3\u00a9ns"
+        "portuguese": "parabAns"
     },
     {
         "english": "m",
@@ -4417,7 +4417,7 @@
     {
         "english": "space",
         "number": "984",
-        "portuguese": "espa\u00c3\u00a7o"
+        "portuguese": "espaAo"
     },
     {
         "english": "mike",
@@ -4432,7 +4432,7 @@
     {
         "english": "mission",
         "number": "987",
-        "portuguese": "miss\u00c3\u00a3o"
+        "portuguese": "missAo"
     },
     {
         "english": "did",
@@ -4452,7 +4452,7 @@
     {
         "english": "health",
         "number": "991",
-        "portuguese": "sa\u00c3\u00bade"
+        "portuguese": "saAode"
     },
     {
         "english": "found",
