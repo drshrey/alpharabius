@@ -233,8 +233,6 @@ class App extends Component {
           chrome.storage.local.set({"immersion": request.immersion}, function(){});
           chrome.storage.sync.set({"immersion": request.immersion}, function(){});
 
-          console.log("POWERRRR");
-          console.log(request.power);
           chrome.storage.local.set({"power": request.power}, function(){});
           chrome.storage.sync.set({"power": request.power}, function(){});
 
@@ -254,44 +252,28 @@ class App extends Component {
     // check if lang, immersion, power already set
     if(! set){
       chrome.storage.local.get(["language", "power", "immersion"], function(items){
-        console.log("local");
-        console.log(items)
         startupLang = items["language"];
         startupPower = items["power"];
         startupImmersion = items["immersion"];
-        console.log("FOUNDNNDNDNDND");
-        console.log(startupLang);
-        console.log(startupImmersion);
-        console.log(startupPower);
-        set = true;
-        switchPower(startupLang, startupImmersion, startupPower);
-      })
-      if(! set){
-        chrome.storage.sync.get(["language", "power", "immersion"], function(items){
-          console.log("sync");
-          console.log(items);
-          startupLang = items["language"];
-          startupPower = items["power"];
-          startupImmersion = items["immersion"];
-          console.log("FOUNDNNDNDNDND SYNC");
-          console.log(startupLang);
-          console.log(startupImmersion);
-          console.log(startupPower);
+        if(startupLang && startupPower && startupImmersion){
           set = true;
-          switchPower(startupLang, startupImmersion, startupPower);
-        });
-        if(! set){
-          chrome.storage.local.set({"language": "French"}, function(){});
-          chrome.storage.sync.set({"language": "French"}, function(){});
-
-          chrome.storage.local.set({"immersion": 3}, function(){});
-          chrome.storage.sync.set({"immersion": 3}, function(){});
-
-          chrome.storage.local.set({"power": true}, function(){});
-          chrome.storage.sync.set({"power": true}, function(){});
-          // switchPower("French", 3, true);
         }
-      }
+        if(! set){
+          chrome.storage.sync.get(["language", "power", "immersion"], function(items){
+            startupLang = items["language"];
+            startupPower = items["power"];
+            startupImmersion = items["immersion"];
+
+            if(startupLang && startupPower && startupImmersion){
+              switchPower(startupLang, startupImmersion, startupPower);
+            } else {
+              switchPower("English", -1, false);
+            }
+          });
+        } else {
+            switchPower(startupLang, startupImmersion, startupPower);
+        }
+      })
     }
   }
 
