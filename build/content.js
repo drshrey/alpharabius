@@ -69,7 +69,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var proxyStore = new _reactChromeRedux.Store({ portName: 'selectivetrans' });
+	var proxyStore = new _reactChromeRedux.Store({ portName: 'alpharabius' });
 
 	var anchor = document.createElement('div');
 	anchor.id = 'rcr-anchor';
@@ -23119,56 +23119,144 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var currentLang = "";
-	var icount = 0;
-	var xcount = 0;
-	var originalDoc = "";
-	var od0 = "";
+	var Mark = __webpack_require__(237);
+
 	var originalEl = {};
+	var SITES = {
+	  AEON: 'https://aeon.co/',
+	  NYTIMES: 'http://www.nytimes.com/',
+	  WIRED: 'https://www.wired.com/',
+	  WSJ: 'http://www.wsj.com/',
+	  QZ: 'http://qz.com/'
+	};
 
 	var mapStateToProps = function mapStateToProps(state) {
 	  return {
 	    language: state.language,
-	    immersion: state.immersion
+	    immersion: state.immersion,
+	    power: state.power
 	  };
 	};
+
+	function handleAeon(uri) {
+	  if (uri.startsWith(SITES.AEON + 'essays/') || uri.startsWith(SITES.AEON + 'videos/')) {
+	    return document.getElementsByClassName('article__body__content');
+	  }
+	  if (uri.startsWith(SITES.AEON + 'ideas/')) {
+	    return document.getElementsByClassName('has-dropcap');
+	  }
+	  return null;
+	}
+
+	function handleNYT(uri) {
+	  // Homepage
+	  if (uri == SITES.NYTIMES) {
+	    return document.getElementsByTagName('article');
+	  }
+	  if (uri.startsWith(SITES.NYTIMES + "section")) {
+	    return document.getElementsByTagName('article');
+	  }
+	  if (uri.startsWith(SITES.NYTIMES + "interactive")) {
+	    return document.getElementsByClassName('g-body');
+	  }
+	  return document.getElementsByClassName('story-body-text story-content');
+	}
+
+	function handleWired(uri) {
+	  console.log('WIRED');
+	  // Main Page
+	  if (uri == SITES.WIRED) {
+	    return document.getElementsByTagName('section');
+	  }
+	  if (uri.startsWith(SITES.WIRED)) {
+	    // let elements = [].slice.call(document.getElementsByClassName('post wide pad-b-50 post-2112715 type-post status-publish format-standard has-post-thumbnail hentry category-business category-magazine tag-magazine-24-11 tag-personal-frontiers promo_status-promo post-layout-fullbleed-gallery-post'));
+	    // let moreEl = [].slice.call(document.getElementsByClassName('content link-underline relative body-copy'));
+	    return document.getElementsByTagName('article');
+	    // elements.push(moreEl);
+	    // elements.push(articleEl);
+	    // return elements;
+	  }
+	  if (uri.startsWith(SITES.WIRED + "category/")) {
+	    return document.getElementsById('grid');
+	  }
+	  return null;
+	}
+
+	function handleWsj(uri) {
+	  if (uri == SITES.WSJ) {
+	    return document.getElementsByClassName('cb-col');
+	  }
+	  if (uri.startsWith(SITES.WSJ + "articles/")) {
+	    var _elements = [].slice.call(document.getElementsByClassName('article-wrap'));
+	    console.log(_elements);
+	    var moreEl = [].slice.call(document.getElementsByClassName('wsj-article-headline'));
+	    _elements.push(moreEl);
+	    return _elements;
+	  }
+	  // TODO News section
+	  return elements;
+	  return null;
+	}
+
+	function handleQz(uri) {
+	  console.log("HELLOOO");
+	  if (uri == SITES.QZ) {
+	    return document.getElementsByTagName('article');
+	  }
+	  return document.getElementsByTagName('article');
+	}
 
 	function getElements() {
 	  var elements = null;
 	  var baseUri = document.baseURI;
+
 	  // Aeon
-	  if (baseUri.startsWith('https://aeon.co/essays/')) {
+	  if (baseUri.startsWith(SITES.AEON)) {
 	    console.log("AEON");
-	    elements = document.getElementsByClassName('article__body__content');
+	    return handleAeon(baseUri);
 	  }
+
 	  // NYT Mobile
-	  if (baseUri.startsWith('http://www.mobile.nytimes.com/')) {
-	    elements = document.getElementsByClassName('p-block');
-	  }
-	  // NYT
-	  if (baseUri.startsWith('http://www.nytimes.com/')) {
+	  if (baseUri.startsWith(SITES.NYTIMES)) {
 	    console.log("NYTIMES");
-	    elements = document.getElementsByClassName('story-body-text story-content');
+	    return handleNYT(baseUri);
 	  }
-	  // BuzzFeed
-	  if (baseUri.startsWith('https://www.buzzfeed.com/')) {
-	    elements = document.getElementsByTagName('p');
+
+	  // WIRED
+	  if (baseUri.startsWith(SITES.WIRED)) {
+	    console.log("WIRED");
+	    return handleWired(baseUri);
+	  }
+
+	  // WSJ
+	  if (baseUri.startsWith(SITES.WSJ)) {
+	    console.log("WSJ");
+	    return handleWsj(baseUri);
+	  }
+
+	  // QZ
+	  if (baseUri.startsWith(SITES.QZ)) {
+	    console.log("QZ");
+	    return handleQz(baseUri);
 	  }
 	  return elements;
 	}
 
-	function changeLang(lang) {
+	function changeLang(lang, immersion) {
 	  var elements = getElements();
 	  var langDict = null;
 	  var langKey = null;
 	  var engTrue = false;
 	  // Select language
+	  console.log(lang);
+	  console.log(elements);
 	  switch (lang) {
 	    case "Portuguese":
 	      langDict = _portuguese2.default;
 	      langKey = "portuguese";
 	      break;
 	    case "French":
+	      console.log(_french2.default);
 	      langDict = _french2.default;
 	      langKey = "french";
 	      break;
@@ -23178,26 +23266,57 @@
 	      break;
 	  }
 	  if (elements && langDict && langKey || engTrue) {
-	    // for(var i =0; i < elements;i ++){
-	    //   originalEl[i] = elements
-	    // }
-	    elements[0].innerHTML = od0;
-	    elements[1].innerHTML = originalDoc;
+	    for (var i = 0; i < elements.length; i++) {
+	      elements[i].innerHTML = originalEl[i];
+	    }
 	    if (engTrue) {
 	      return;
 	    }
-	    for (var i = 0; i < elements.length; i++) {
-	      for (var j = 0; j < immersion * 200; j++) {
-	        var eng = new RegExp("\\b" + langDict[j]["english"] + "\\b");
-	        var newWord = langDict[j][langKey];
-	        (0, _findandreplacedomtext2.default)(elements[i], {
-	          find: eng,
-	          replace: newWord
-	        });
-	        icount += 1;
+	    // get immersion * 200 random words
+	    var randWords = [];
+	    var visited = {};
+	    for (var i = 0; i < immersion * 0.01 * langDict.length; i++) {
+	      var randIndex = Math.floor(Math.random() * (immersion * 0.1) * langDict.length);
+	      var randWord = langDict[randIndex];
+	      if (!visited[randWord["english"]]) {
+	        visited[randWord["english"]] = randWord[langKey];
+	        randWords.push(randWord);
 	      }
 	    }
-	    currentLang = lang;
+
+	    // modify stylesheets
+	    var ss = document.styleSheets;
+	    for (var i = 0; i < ss.length; i++) {
+	      ss[i].insertRule("acronym { background-color: yellow;}", 0);
+	    }
+
+	    for (var i = 0; i < elements.length; i++) {
+	      for (var j = 0; j < randWords.length; j++) {
+	        var eng = new RegExp("\\b" + randWords[j]["english"] + "\\b");
+	        var newWord = randWords[j][langKey];
+	        var new_row = document.createElement('acronym');
+	        new_row.innerText = newWord;
+	        new_row.title = eng;
+	        (0, _findandreplacedomtext2.default)(elements[i], {
+	          find: eng,
+	          replace: newWord,
+	          wrap: 'acronym'
+	        });
+	      }
+	    }
+	  }
+	}
+
+	function switchPower(language, immersion, power) {
+	  console.log("HELLLOOOOO");
+	  console.log(power);
+	  console.log(language);
+	  console.log(immersion);
+	  if (power == false) {
+	    changeLang("English", -1);
+	  }
+	  if (power == true) {
+	    changeLang(language, immersion);
 	  }
 	}
 
@@ -23207,47 +23326,33 @@
 	  function App(props) {
 	    _classCallCheck(this, App);
 
-	    // this.changeLang = this.changeLang.bind(this);
-	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-	    _this.state = {
-	      'parsable': 'not parsable'
-	    };
-	    return _this;
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	  }
 
 	  _createClass(App, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
+	      this.setState({ language: "French", immersion: 5 });
 	      var el = getElements();
 	      for (var i = 0; i < el.length; i++) {
 	        originalEl[i] = el[i].innerHTML;
 	      }
-	      od0 = el[0].innerHTML;
-	      originalDoc = el[1].innerHTML;
 	      chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-	        changeLang(request.message);
+	        if (request.language && request.immersion) {
+	          changeLang(request.language, request.immersion);
+	        }
 	      });
-	      currentLang = this.props.language;
-	      changeLang(this.props.language);
-	      this.setState({ 'parsable': "parsed" });
+	      chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+	        if (request.power != null && request.language && request.immersion) {
+	          switchPower(request.language, request.immersion, request.power);
+	        }
+	      });
+	      changeLang("French", 5);
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h1',
-	          { style: { textAlign: 'center' } },
-	          'Page ',
-	          this.state.parsable,
-	          ' from English to ',
-	          this.props.language,
-	          ' '
-	        )
-	      );
+	      return _react2.default.createElement('div', null);
 	    }
 	  }]);
 
@@ -23335,7 +23440,7 @@
 						m.index += m[0].indexOf(cg);
 						m[0] = cg;
 					}
-			 
+
 					m.endIndex = m.index + m[0].length;
 					m.startIndex = m.index;
 					m.index = mi;
@@ -23352,9 +23457,9 @@
 			return true;
 		}
 
-		/** 
+		/**
 		 * findAndReplaceDOMText
-		 * 
+		 *
 		 * Locates matches and replaces with replacementNode
 		 *
 		 * @param {Node} node Element or Text node to search within
@@ -23503,7 +23608,7 @@
 				if (!match[0]) {
 					throw new Error('findAndReplaceDOMText cannot handle zero-length matches');
 				}
-		 
+
 				match.endIndex = characterOffset + match.index + match[0].length;
 				match.startIndex = characterOffset + match.index;
 				match.index = matchIndex;
@@ -23571,10 +23676,10 @@
 					return txt;
 
 				}
-				
+
 			},
 
-			/** 
+			/**
 			 * Steps through the target node, looking for matches, and
 			 * calling replaceFn when a match is found.
 			 */
@@ -23646,7 +23751,7 @@
 						curNode = this.replaceMatch(match, startPortion, innerPortions, endPortion);
 
 						// processMatches has to return the node that replaced the endNode
-						// and then we step back so we can continue from the end of the 
+						// and then we step back so we can continue from the end of the
 						// match:
 
 						atIndex -= (endPortion.node.data.length - endPortion.endIndexInNode);
@@ -23906,17 +24011,17 @@
 		{
 			"english": "also",
 			"number": "102",
-			"portuguese": "tambÃ©m"
+			"portuguese": "tambAm"
 		},
 		{
 			"english": "what",
 			"number": "103",
-			"portuguese": "quÃª"
+			"portuguese": "quAa"
 		},
 		{
 			"english": "you",
 			"number": "104",
-			"portuguese": "vocÃªs"
+			"portuguese": "vocAas"
 		},
 		{
 			"english": "something",
@@ -23936,7 +24041,7 @@
 		{
 			"english": "as",
 			"number": "108",
-			"portuguese": "tÃ£o"
+			"portuguese": "tAo"
 		},
 		{
 			"english": "that",
@@ -24056,12 +24161,12 @@
 		{
 			"english": "mother",
 			"number": "132",
-			"portuguese": "mÃ£e"
+			"portuguese": "mAe"
 		},
 		{
 			"english": "someone",
 			"number": "133",
-			"portuguese": "alguÃ©m"
+			"portuguese": "alguAm"
 		},
 		{
 			"english": "after",
@@ -24096,7 +24201,7 @@
 		{
 			"english": "there",
 			"number": "140",
-			"portuguese": "aÃ­"
+			"portuguese": "há"
 		},
 		{
 			"english": "stay",
@@ -24196,7 +24301,7 @@
 		{
 			"english": "nobody",
 			"number": "160",
-			"portuguese": "ninguÃ©m"
+			"portuguese": "ninguAm"
 		},
 		{
 			"english": "money",
@@ -24221,7 +24326,7 @@
 		{
 			"english": "go",
 			"number": "165",
-			"portuguese": "vÃ¡"
+			"portuguese": "vA"
 		},
 		{
 			"english": "which",
@@ -24301,7 +24406,7 @@
 		{
 			"english": "will",
 			"number": "181",
-			"portuguese": "serÃ¡"
+			"portuguese": "serA"
 		},
 		{
 			"english": "son",
@@ -24336,7 +24441,7 @@
 		{
 			"english": "vain",
 			"number": "188",
-			"portuguese": "vÃ£o"
+			"portuguese": "vAo"
 		},
 		{
 			"english": "wanted",
@@ -24351,7 +24456,7 @@
 		{
 			"english": "hello",
 			"number": "191",
-			"portuguese": "olÃ¡"
+			"portuguese": "olA"
 		},
 		{
 			"english": "can",
@@ -24466,7 +24571,7 @@
 		{
 			"english": "three",
 			"number": "214",
-			"portuguese": "trÃªs"
+			"portuguese": "trAas"
 		},
 		{
 			"english": "some",
@@ -24556,7 +24661,7 @@
 		{
 			"english": "to",
 			"number": "232",
-			"portuguese": "Ã s"
+			"portuguese": "A s"
 		},
 		{
 			"english": "type",
@@ -24571,7 +24676,7 @@
 		{
 			"english": "do",
 			"number": "235",
-			"portuguese": "faÃ§a"
+			"portuguese": "faAa"
 		},
 		{
 			"english": "talking",
@@ -24616,7 +24721,7 @@
 		{
 			"english": "ago",
 			"number": "244",
-			"portuguese": "atrÃ¡s"
+			"portuguese": "atrAs"
 		},
 		{
 			"english": "saw",
@@ -24666,7 +24771,7 @@
 		{
 			"english": "tomorrow",
 			"number": "254",
-			"portuguese": "amanhÃ£"
+			"portuguese": "amanhA"
 		},
 		{
 			"english": "two",
@@ -24711,7 +24816,7 @@
 		{
 			"english": "head",
 			"number": "263",
-			"portuguese": "cabeÃ§a"
+			"portuguese": "cabeAa"
 		},
 		{
 			"english": "should",
@@ -24741,7 +24846,7 @@
 		{
 			"english": "optimum",
 			"number": "269",
-			"portuguese": "Ã³timo"
+			"portuguese": "A3timo"
 		},
 		{
 			"english": "side",
@@ -24756,7 +24861,7 @@
 		{
 			"english": "serious",
 			"number": "272",
-			"portuguese": "sÃ©rio"
+			"portuguese": "sArio"
 		},
 		{
 			"english": "can",
@@ -24791,7 +24896,7 @@
 		{
 			"english": "have",
 			"number": "279",
-			"portuguese": "tÃªm"
+			"portuguese": "tAam"
 		},
 		{
 			"english": "are",
@@ -24811,7 +24916,7 @@
 		{
 			"english": "gives",
 			"number": "283",
-			"portuguese": "dÃ¡"
+			"portuguese": "dA"
 		},
 		{
 			"english": "let",
@@ -24821,12 +24926,12 @@
 		{
 			"english": "family",
 			"number": "285",
-			"portuguese": "famÃ­lia"
+			"portuguese": "famAlia"
 		},
 		{
 			"english": "fast",
 			"number": "286",
-			"portuguese": "rÃ¡pido"
+			"portuguese": "rApido"
 		},
 		{
 			"english": "help",
@@ -24881,7 +24986,7 @@
 		{
 			"english": "brother",
 			"number": "297",
-			"portuguese": "irmÃ£o"
+			"portuguese": "irmAo"
 		},
 		{
 			"english": "daddy",
@@ -24951,7 +25056,7 @@
 		{
 			"english": "Give",
 			"number": "311",
-			"portuguese": "dÃª"
+			"portuguese": "dAa"
 		},
 		{
 			"english": "almost",
@@ -24971,7 +25076,7 @@
 		{
 			"english": "history",
 			"number": "315",
-			"portuguese": "histÃ³ria"
+			"portuguese": "histA3ria"
 		},
 		{
 			"english": "new",
@@ -24991,7 +25096,7 @@
 		{
 			"english": "idea",
 			"number": "319",
-			"portuguese": "idÃ©ia"
+			"portuguese": "idAia"
 		},
 		{
 			"english": "matter",
@@ -25011,12 +25116,12 @@
 		{
 			"english": "morning",
 			"number": "323",
-			"portuguese": "manhÃ£"
+			"portuguese": "manhA"
 		},
 		{
 			"english": "water",
 			"number": "324",
-			"portuguese": "Ã¡gua"
+			"portuguese": "Agua"
 		},
 		{
 			"english": "first",
@@ -25041,7 +25146,7 @@
 		{
 			"english": "mom",
 			"number": "329",
-			"portuguese": "mamÃ£e"
+			"portuguese": "mamAe"
 		},
 		{
 			"english": "look",
@@ -25066,7 +25171,7 @@
 		{
 			"english": "police",
 			"number": "334",
-			"portuguese": "polÃ­cia"
+			"portuguese": "polAcia"
 		},
 		{
 			"english": "path",
@@ -25106,7 +25211,7 @@
 		{
 			"english": "children",
 			"number": "342",
-			"portuguese": "crianÃ§as"
+			"portuguese": "crianAas"
 		},
 		{
 			"english": "some",
@@ -25136,7 +25241,7 @@
 		{
 			"english": "reason",
 			"number": "348",
-			"portuguese": "razÃ£o"
+			"portuguese": "razAo"
 		},
 		{
 			"english": "war",
@@ -25266,7 +25371,7 @@
 		{
 			"english": "hands",
 			"number": "374",
-			"portuguese": "mÃ£os"
+			"portuguese": "mAos"
 		},
 		{
 			"english": "is",
@@ -25311,7 +25416,7 @@
 		{
 			"english": "ok",
 			"number": "383",
-			"portuguese": "tÃ¡"
+			"portuguese": "tA"
 		},
 		{
 			"english": "come",
@@ -25376,12 +25481,12 @@
 		{
 			"english": "hand",
 			"number": "396",
-			"portuguese": "mÃ£o"
+			"portuguese": "mAo"
 		},
 		{
 			"english": "heart",
 			"number": "397",
-			"portuguese": "coraÃ§Ã£o"
+			"portuguese": "coraAAo"
 		},
 		{
 			"english": "can",
@@ -25476,7 +25581,7 @@
 		{
 			"english": "see",
 			"number": "416",
-			"portuguese": "vÃª"
+			"portuguese": "vAa"
 		},
 		{
 			"english": "game",
@@ -25486,7 +25591,7 @@
 		{
 			"english": "difficult",
 			"number": "418",
-			"portuguese": "difÃ­cil"
+			"portuguese": "difAcil"
 		},
 		{
 			"english": "would",
@@ -25576,7 +25681,7 @@
 		{
 			"english": "last",
 			"number": "436",
-			"portuguese": "Ãºltima"
+			"portuguese": "Aoltima"
 		},
 		{
 			"english": "husband",
@@ -25586,7 +25691,7 @@
 		{
 			"english": "captain",
 			"number": "438",
-			"portuguese": "capitÃ£o"
+			"portuguese": "capitAo"
 		},
 		{
 			"english": "means",
@@ -25601,7 +25706,7 @@
 		{
 			"english": "here",
 			"number": "441",
-			"portuguese": "cÃ¡"
+			"portuguese": "cA"
 		},
 		{
 			"english": "stop",
@@ -25631,7 +25736,7 @@
 		{
 			"english": "I",
 			"number": "447",
-			"portuguese": "faÃ§o"
+			"portuguese": "faAo"
 		},
 		{
 			"english": "body",
@@ -25666,7 +25771,7 @@
 		{
 			"english": "license",
 			"number": "454",
-			"portuguese": "licenÃ§a"
+			"portuguese": "licenAa"
 		},
 		{
 			"english": "dr",
@@ -25681,7 +25786,7 @@
 		{
 			"english": "start",
 			"number": "457",
-			"portuguese": "comeÃ§ar"
+			"portuguese": "comeAar"
 		},
 		{
 			"english": "four",
@@ -25721,7 +25826,7 @@
 		{
 			"english": "number",
 			"number": "465",
-			"portuguese": "nÃºmero"
+			"portuguese": "nAomero"
 		},
 		{
 			"english": "had",
@@ -25741,7 +25846,7 @@
 		{
 			"english": "only",
 			"number": "469",
-			"portuguese": "Ãºnica"
+			"portuguese": "Aonica"
 		},
 		{
 			"english": "take",
@@ -25796,7 +25901,7 @@
 		{
 			"english": "sister",
 			"number": "480",
-			"portuguese": "irmÃ£"
+			"portuguese": "irmA"
 		},
 		{
 			"english": "much",
@@ -25811,7 +25916,7 @@
 		{
 			"english": "know",
 			"number": "483",
-			"portuguese": "conheÃ§o"
+			"portuguese": "conheAo"
 		},
 		{
 			"english": "died",
@@ -25846,7 +25951,7 @@
 		{
 			"english": "coffee",
 			"number": "490",
-			"portuguese": "cafÃ©"
+			"portuguese": "cafA"
 		},
 		{
 			"english": "peace",
@@ -25866,7 +25971,7 @@
 		{
 			"english": "easy",
 			"number": "494",
-			"portuguese": "fÃ¡cil"
+			"portuguese": "fAcil"
 		},
 		{
 			"english": "again",
@@ -25936,17 +26041,17 @@
 		{
 			"english": "will",
 			"number": "508",
-			"portuguese": "terÃ¡"
+			"portuguese": "terA"
 		},
 		{
 			"english": "music",
 			"number": "509",
-			"portuguese": "mÃºsica"
+			"portuguese": "mAosica"
 		},
 		{
 			"english": "beyond",
 			"number": "510",
-			"portuguese": "alÃ©m"
+			"portuguese": "alAm"
 		},
 		{
 			"english": "hooker",
@@ -25961,7 +26066,7 @@
 		{
 			"english": "listen",
 			"number": "513",
-			"portuguese": "ouÃ§a"
+			"portuguese": "ouAa"
 		},
 		{
 			"english": "arrived",
@@ -25996,7 +26101,7 @@
 		{
 			"english": "child",
 			"number": "520",
-			"portuguese": "crianÃ§a"
+			"portuguese": "crianAa"
 		},
 		{
 			"english": "parents",
@@ -26051,12 +26156,12 @@
 		{
 			"english": "will",
 			"number": "531",
-			"portuguese": "irÃ¡"
+			"portuguese": "irA"
 		},
 		{
 			"english": "hello",
 			"number": "532",
-			"portuguese": "alÃ´"
+			"portuguese": "alA "
 		},
 		{
 			"english": "were",
@@ -26081,7 +26186,7 @@
 		{
 			"english": "country",
 			"number": "537",
-			"portuguese": "paÃ­s"
+			"portuguese": "paAs"
 		},
 		{
 			"english": "live",
@@ -26136,7 +26241,7 @@
 		{
 			"english": "back",
 			"number": "548",
-			"portuguese": "trÃ¡s"
+			"portuguese": "trAs"
 		},
 		{
 			"english": "our",
@@ -26151,7 +26256,7 @@
 		{
 			"english": "possible",
 			"number": "551",
-			"portuguese": "possÃ­vel"
+			"portuguese": "possAvel"
 		},
 		{
 			"english": "happen",
@@ -26241,7 +26346,7 @@
 		{
 			"english": "dollars",
 			"number": "569",
-			"portuguese": "dÃ³lares"
+			"portuguese": "dA3lares"
 		},
 		{
 			"english": "feel",
@@ -26291,7 +26396,7 @@
 		{
 			"english": "attention",
 			"number": "579",
-			"portuguese": "atenÃ§Ã£o"
+			"portuguese": "atenAAo"
 		},
 		{
 			"english": "believe",
@@ -26336,7 +26441,7 @@
 		{
 			"english": "single",
 			"number": "588",
-			"portuguese": "Ãºnico"
+			"portuguese": "Aonico"
 		},
 		{
 			"english": "some",
@@ -26351,7 +26456,7 @@
 		{
 			"english": "force",
 			"number": "591",
-			"portuguese": "forÃ§a"
+			"portuguese": "forAa"
 		},
 		{
 			"english": "brought",
@@ -26396,7 +26501,7 @@
 		{
 			"english": "baby",
 			"number": "600",
-			"portuguese": "bebÃª"
+			"portuguese": "bebAa"
 		},
 		{
 			"english": "beautiful",
@@ -26516,7 +26621,7 @@
 		{
 			"english": "next",
 			"number": "624",
-			"portuguese": "prÃ³xima"
+			"portuguese": "prA3xima"
 		},
 		{
 			"english": "out",
@@ -26531,7 +26636,7 @@
 		{
 			"english": "doctor",
 			"number": "627",
-			"portuguese": "mÃ©dico"
+			"portuguese": "mAdico"
 		},
 		{
 			"english": "weapons",
@@ -26586,12 +26691,12 @@
 		{
 			"english": "security",
 			"number": "638",
-			"portuguese": "seguranÃ§a"
+			"portuguese": "seguranAa"
 		},
 		{
 			"english": "re",
 			"number": "639",
-			"portuguese": "estÃ¡s"
+			"portuguese": "estAs"
 		},
 		{
 			"english": "call",
@@ -26621,7 +26726,7 @@
 		{
 			"english": "business",
 			"number": "645",
-			"portuguese": "negÃ³cio"
+			"portuguese": "negA3cio"
 		},
 		{
 			"english": "those",
@@ -26636,7 +26741,7 @@
 		{
 			"english": "foot",
 			"number": "648",
-			"portuguese": "pÃ©"
+			"portuguese": "pA"
 		},
 		{
 			"english": "beautiful",
@@ -26681,7 +26786,7 @@
 		{
 			"english": "forget",
 			"number": "657",
-			"portuguese": "esqueÃ§a"
+			"portuguese": "esqueAa"
 		},
 		{
 			"english": "special",
@@ -26711,7 +26816,7 @@
 		{
 			"english": "close",
 			"number": "663",
-			"portuguese": "prÃ³ximo"
+			"portuguese": "prA3ximo"
 		},
 		{
 			"english": "girl",
@@ -26781,7 +26886,7 @@
 		{
 			"english": "started",
 			"number": "677",
-			"portuguese": "comeÃ§ou"
+			"portuguese": "comeAou"
 		},
 		{
 			"english": "want",
@@ -26796,7 +26901,7 @@
 		{
 			"english": "last",
 			"number": "680",
-			"portuguese": "Ãºltimo"
+			"portuguese": "Aoltimo"
 		},
 		{
 			"english": "link",
@@ -26841,7 +26946,7 @@
 		{
 			"english": "own",
 			"number": "689",
-			"portuguese": "prÃ³prio"
+			"portuguese": "prA3prio"
 		},
 		{
 			"english": "floor",
@@ -26856,12 +26961,12 @@
 		{
 			"english": "will",
 			"number": "692",
-			"portuguese": "estarÃ¡"
+			"portuguese": "estarA"
 		},
 		{
 			"english": "thence",
 			"number": "693",
-			"portuguese": "daÃ­"
+			"portuguese": "daA"
 		},
 		{
 			"english": "I think",
@@ -26891,7 +26996,7 @@
 		{
 			"english": "million",
 			"number": "699",
-			"portuguese": "milhÃµes"
+			"portuguese": "milhAes"
 		},
 		{
 			"english": "boy",
@@ -26916,7 +27021,7 @@
 		{
 			"english": "funny",
 			"number": "704",
-			"portuguese": "engraÃ§ado"
+			"portuguese": "engraAado"
 		},
 		{
 			"english": "out",
@@ -27016,7 +27121,7 @@
 		{
 			"english": "prison",
 			"number": "724",
-			"portuguese": "prisÃ£o"
+			"portuguese": "prisAo"
 		},
 		{
 			"english": "will",
@@ -27066,7 +27171,7 @@
 		{
 			"english": "were",
 			"number": "734",
-			"portuguese": "estÃ¡vamos"
+			"portuguese": "estAvamos"
 		},
 		{
 			"english": "hot",
@@ -27101,7 +27206,7 @@
 		{
 			"english": "office",
 			"number": "741",
-			"portuguese": "escritÃ³rio"
+			"portuguese": "escritA3rio"
 		},
 		{
 			"english": "line",
@@ -27136,12 +27241,12 @@
 		{
 			"english": "own",
 			"number": "748",
-			"portuguese": "prÃ³pria"
+			"portuguese": "prA3pria"
 		},
 		{
 			"english": "army",
 			"number": "749",
-			"portuguese": "exÃ©rcito"
+			"portuguese": "exArcito"
 		},
 		{
 			"english": "understand",
@@ -27166,7 +27271,7 @@
 		{
 			"english": "after",
 			"number": "754",
-			"portuguese": "apÃ³s"
+			"portuguese": "apA3s"
 		},
 		{
 			"english": "i",
@@ -27191,7 +27296,7 @@
 		{
 			"english": "incredible",
 			"number": "759",
-			"portuguese": "incrÃ­vel"
+			"portuguese": "incrAvel"
 		},
 		{
 			"english": "age",
@@ -27231,7 +27336,7 @@
 		{
 			"english": "why",
 			"number": "767",
-			"portuguese": "porquÃª"
+			"portuguese": "porquAa"
 		},
 		{
 			"english": "try",
@@ -27256,7 +27361,7 @@
 		{
 			"english": "sky",
 			"number": "772",
-			"portuguese": "cÃ©u"
+			"portuguese": "cAu"
 		},
 		{
 			"english": "group",
@@ -27271,7 +27376,7 @@
 		{
 			"english": "ground",
 			"number": "775",
-			"portuguese": "chÃ£o"
+			"portuguese": "chAo"
 		},
 		{
 			"english": "care",
@@ -27316,7 +27421,7 @@
 		{
 			"english": "situation",
 			"number": "784",
-			"portuguese": "situaÃ§Ã£o"
+			"portuguese": "situaAAo"
 		},
 		{
 			"english": "joe",
@@ -27406,7 +27511,7 @@
 		{
 			"english": "plane",
 			"number": "802",
-			"portuguese": "aviÃ£o"
+			"portuguese": "aviAo"
 		},
 		{
 			"english": "returned",
@@ -27536,7 +27641,7 @@
 		{
 			"english": "question",
 			"number": "828",
-			"portuguese": "questÃ£o"
+			"portuguese": "questAo"
 		},
 		{
 			"english": "charlie",
@@ -27546,12 +27651,12 @@
 		{
 			"english": "will",
 			"number": "830",
-			"portuguese": "ficarÃ¡"
+			"portuguese": "ficarA"
 		},
 		{
 			"english": "service",
 			"number": "831",
-			"portuguese": "serviÃ§o"
+			"portuguese": "serviAo"
 		},
 		{
 			"english": "poor",
@@ -27626,7 +27731,7 @@
 		{
 			"english": "month",
 			"number": "846",
-			"portuguese": "mÃªs"
+			"portuguese": "mAas"
 		},
 		{
 			"english": "would",
@@ -27771,12 +27876,12 @@
 		{
 			"english": "will",
 			"number": "875",
-			"portuguese": "farÃ¡"
+			"portuguese": "farA"
 		},
 		{
 			"english": "birthday",
 			"number": "876",
-			"portuguese": "aniversÃ¡rio"
+			"portuguese": "aniversArio"
 		},
 		{
 			"english": "sergeant",
@@ -27836,7 +27941,7 @@
 		{
 			"english": "affairs",
 			"number": "888",
-			"portuguese": "negÃ³cios"
+			"portuguese": "negA3cios"
 		},
 		{
 			"english": "be",
@@ -27906,7 +28011,7 @@
 		{
 			"english": "News",
 			"number": "902",
-			"portuguese": "notÃ­cias"
+			"portuguese": "notAcias"
 		},
 		{
 			"english": "led",
@@ -27926,7 +28031,7 @@
 		{
 			"english": "feet",
 			"number": "906",
-			"portuguese": "pÃ©s"
+			"portuguese": "pAs"
 		},
 		{
 			"english": "idea",
@@ -27946,7 +28051,7 @@
 		{
 			"english": "through",
 			"number": "910",
-			"portuguese": "atravÃ©s"
+			"portuguese": "atravAs"
 		},
 		{
 			"english": "love",
@@ -27991,7 +28096,7 @@
 		{
 			"english": "thanks",
 			"number": "919",
-			"portuguese": "graÃ§as"
+			"portuguese": "graAas"
 		},
 		{
 			"english": "shop",
@@ -28046,7 +28151,7 @@
 		{
 			"english": "terrible",
 			"number": "930",
-			"portuguese": "terrÃ­vel"
+			"portuguese": "terrAvel"
 		},
 		{
 			"english": "second",
@@ -28096,7 +28201,7 @@
 		{
 			"english": "impossible",
 			"number": "940",
-			"portuguese": "impossÃ­vel"
+			"portuguese": "impossAvel"
 		},
 		{
 			"english": "told",
@@ -28106,7 +28211,7 @@
 		{
 			"english": "piece",
 			"number": "942",
-			"portuguese": "peÃ§a"
+			"portuguese": "peAa"
 		},
 		{
 			"english": "found",
@@ -28151,7 +28256,7 @@
 		{
 			"english": "horrible",
 			"number": "951",
-			"portuguese": "horrÃ­vel"
+			"portuguese": "horrAvel"
 		},
 		{
 			"english": "seemed",
@@ -28211,7 +28316,7 @@
 		{
 			"english": "dance",
 			"number": "963",
-			"portuguese": "danÃ§ar"
+			"portuguese": "danAar"
 		},
 		{
 			"english": "drink",
@@ -28266,7 +28371,7 @@
 		{
 			"english": "are",
 			"number": "974",
-			"portuguese": "Ã©s"
+			"portuguese": "As"
 		},
 		{
 			"english": "north",
@@ -28276,12 +28381,12 @@
 		{
 			"english": "will",
 			"number": "976",
-			"portuguese": "serÃ£o"
+			"portuguese": "serAo"
 		},
 		{
 			"english": "congratulations",
 			"number": "977",
-			"portuguese": "parabÃ©ns"
+			"portuguese": "parabAns"
 		},
 		{
 			"english": "m",
@@ -28316,7 +28421,7 @@
 		{
 			"english": "space",
 			"number": "984",
-			"portuguese": "espaÃ§o"
+			"portuguese": "espaAo"
 		},
 		{
 			"english": "mike",
@@ -28331,7 +28436,7 @@
 		{
 			"english": "mission",
 			"number": "987",
-			"portuguese": "missÃ£o"
+			"portuguese": "missAo"
 		},
 		{
 			"english": "did",
@@ -28351,7 +28456,7 @@
 		{
 			"english": "health",
 			"number": "991",
-			"portuguese": "saÃºde"
+			"portuguese": "saAode"
 		},
 		{
 			"english": "found",
@@ -28467,7 +28572,7 @@
 		},
 		{
 			"english": "at",
-			"french": "ÌÊ",
+			"french": "IE",
 			"number": "13"
 		},
 		{
@@ -28502,7 +28607,7 @@
 		},
 		{
 			"english": "it",
-			"french": "Ì¤a",
+			"french": "Ia",
 			"number": "20"
 		},
 		{
@@ -28652,7 +28757,7 @@
 		},
 		{
 			"english": "be",
-			"french": "Ì»tre",
+			"french": "Itre",
 			"number": "50"
 		},
 		{
@@ -28672,7 +28777,7 @@
 		},
 		{
 			"english": "was",
-			"french": "Ì©tait",
+			"french": "Itait",
 			"number": "54"
 		},
 		{
@@ -28712,7 +28817,7 @@
 		},
 		{
 			"english": "the",
-			"french": "lÌÊ",
+			"french": "lIE",
 			"number": "62"
 		},
 		{
@@ -28732,7 +28837,7 @@
 		},
 		{
 			"english": "or",
-			"french": "oÌ_",
+			"french": "oI_",
 			"number": "66"
 		},
 		{
@@ -28817,12 +28922,12 @@
 		},
 		{
 			"english": "very",
-			"french": "trÌ¬s",
+			"french": "trIs",
 			"number": "83"
 		},
 		{
 			"english": "even",
-			"french": "mÌ»me",
+			"french": "mIme",
 			"number": "84"
 		},
 		{
@@ -28887,12 +28992,12 @@
 		},
 		{
 			"english": "summer",
-			"french": "Ì©tÌ©",
+			"french": "ItI",
 			"number": "97"
 		},
 		{
 			"english": "are",
-			"french": "Ì»tes",
+			"french": "Ites",
 			"number": "98"
 		},
 		{
@@ -29042,7 +29147,7 @@
 		},
 		{
 			"english": "Father",
-			"french": "pÌ¬re",
+			"french": "pIre",
 			"number": "128"
 		},
 		{
@@ -29057,7 +29162,7 @@
 		},
 		{
 			"english": "sure",
-			"french": "sÌÈr",
+			"french": "sIEr",
 			"number": "131"
 		},
 		{
@@ -29077,7 +29182,7 @@
 		},
 		{
 			"english": "was",
-			"french": "Ì©tais",
+			"french": "Itais",
 			"number": "135"
 		},
 		{
@@ -29142,7 +29247,7 @@
 		},
 		{
 			"english": "after",
-			"french": "aprÌ¬s",
+			"french": "aprIs",
 			"number": "148"
 		},
 		{
@@ -29212,7 +29317,7 @@
 		},
 		{
 			"english": "here",
-			"french": "voilÌÊ",
+			"french": "voilIE",
 			"number": "162"
 		},
 		{
@@ -29227,7 +29332,7 @@
 		},
 		{
 			"english": "mother",
-			"french": "mÌ¬re",
+			"french": "mIre",
 			"number": "165"
 		},
 		{
@@ -29252,7 +29357,7 @@
 		},
 		{
 			"english": "already",
-			"french": "dÌ©jÌÊ",
+			"french": "dIjIE",
 			"number": "170"
 		},
 		{
@@ -29377,7 +29482,7 @@
 		},
 		{
 			"english": "sorry",
-			"french": "dÌ©solÌ©",
+			"french": "dIsolI",
 			"number": "195"
 		},
 		{
@@ -29427,7 +29532,7 @@
 		},
 		{
 			"english": "past",
-			"french": "passÌ©",
+			"french": "passI",
 			"number": "205"
 		},
 		{
@@ -29442,7 +29547,7 @@
 		},
 		{
 			"english": "please",
-			"french": "plaÌ¨t",
+			"french": "plaI t",
 			"number": "208"
 		},
 		{
@@ -29482,7 +29587,7 @@
 		},
 		{
 			"english": "Hey",
-			"french": "hÌ©",
+			"french": "hI",
 			"number": "216"
 		},
 		{
@@ -29502,7 +29607,7 @@
 		},
 		{
 			"english": "head",
-			"french": "tÌ»te",
+			"french": "tIte",
 			"number": "220"
 		},
 		{
@@ -29517,7 +29622,7 @@
 		},
 		{
 			"english": "stopped",
-			"french": "arrÌ»te",
+			"french": "arrIte",
 			"number": "223"
 		},
 		{
@@ -29622,7 +29727,7 @@
 		},
 		{
 			"english": "of",
-			"french": "dÌÈ",
+			"french": "dIE",
 			"number": "244"
 		},
 		{
@@ -29702,7 +29807,7 @@
 		},
 		{
 			"english": "problem",
-			"french": "problÌ¬me",
+			"french": "problIme",
 			"number": "260"
 		},
 		{
@@ -29772,7 +29877,7 @@
 		},
 		{
 			"english": "idea",
-			"french": "idÌ©e",
+			"french": "idIe",
 			"number": "274"
 		},
 		{
@@ -29812,7 +29917,7 @@
 		},
 		{
 			"english": "find",
-			"french": "trouvÌ©",
+			"french": "trouvI",
 			"number": "282"
 		},
 		{
@@ -29912,7 +30017,7 @@
 		},
 		{
 			"english": "brother",
-			"french": "frÌ¬re",
+			"french": "frIre",
 			"number": "302"
 		},
 		{
@@ -30027,7 +30132,7 @@
 		},
 		{
 			"english": "kill",
-			"french": "tuÌ©",
+			"french": "tuI",
 			"number": "325"
 		},
 		{
@@ -30112,7 +30217,7 @@
 		},
 		{
 			"english": "come",
-			"french": "arrivÌ©",
+			"french": "arrivI",
 			"number": "342"
 		},
 		{
@@ -30127,7 +30232,7 @@
 		},
 		{
 			"english": "were",
-			"french": "Ì©taient",
+			"french": "Itaient",
 			"number": "345"
 		},
 		{
@@ -30177,7 +30282,7 @@
 		},
 		{
 			"english": "sweetheart",
-			"french": "chÌ©rie",
+			"french": "chIrie",
 			"number": "355"
 		},
 		{
@@ -30217,7 +30322,7 @@
 		},
 		{
 			"english": "side",
-			"french": "cÌ«tÌ©",
+			"french": "cItI",
 			"number": "363"
 		},
 		{
@@ -30302,17 +30407,17 @@
 		},
 		{
 			"english": "spoken",
-			"french": "parlÌ©",
+			"french": "parlI",
 			"number": "380"
 		},
 		{
 			"english": "given",
-			"french": "donnÌ©",
+			"french": "donnI",
 			"number": "381"
 		},
 		{
 			"english": "first",
-			"french": "premiÌ¬re",
+			"french": "premiIre",
 			"number": "382"
 		},
 		{
@@ -30322,7 +30427,7 @@
 		},
 		{
 			"english": "latest",
-			"french": "derniÌ¬re",
+			"french": "derniIre",
 			"number": "384"
 		},
 		{
@@ -30352,7 +30457,7 @@
 		},
 		{
 			"english": "way",
-			"french": "faÌ¤on",
+			"french": "faIon",
 			"number": "390"
 		},
 		{
@@ -30387,7 +30492,7 @@
 		},
 		{
 			"english": "listening",
-			"french": "Ì©coute",
+			"french": "Icoute",
 			"number": "397"
 		},
 		{
@@ -30432,7 +30537,7 @@
 		},
 		{
 			"english": "ready",
-			"french": "prÌ»t",
+			"french": "prIt",
 			"number": "406"
 		},
 		{
@@ -30442,7 +30547,7 @@
 		},
 		{
 			"english": "hope",
-			"french": "espÌ¬re",
+			"french": "espIre",
 			"number": "408"
 		},
 		{
@@ -30487,17 +30592,17 @@
 		},
 		{
 			"english": "boy",
-			"french": "garÌ¤on",
+			"french": "garIon",
 			"number": "417"
 		},
 		{
 			"english": "near",
-			"french": "prÌ¬s",
+			"french": "prIs",
 			"number": "418"
 		},
 		{
 			"english": "sorry",
-			"french": "dÌ©solÌ©e",
+			"french": "dIsolIe",
 			"number": "419"
 		},
 		{
@@ -30532,7 +30637,7 @@
 		},
 		{
 			"english": "request",
-			"french": "demandÌ©",
+			"french": "demandI",
 			"number": "426"
 		},
 		{
@@ -30542,7 +30647,7 @@
 		},
 		{
 			"english": "baby",
-			"french": "bÌ©bÌ©",
+			"french": "bIbI",
 			"number": "428"
 		},
 		{
@@ -30552,7 +30657,7 @@
 		},
 		{
 			"english": "school",
-			"french": "Ì©cole",
+			"french": "Icole",
 			"number": "430"
 		},
 		{
@@ -30567,7 +30672,7 @@
 		},
 		{
 			"english": "years",
-			"french": "annÌ©es",
+			"french": "annIes",
 			"number": "433"
 		},
 		{
@@ -30612,7 +30717,7 @@
 		},
 		{
 			"english": "rather",
-			"french": "plutÌ«t",
+			"french": "plutIt",
 			"number": "442"
 		},
 		{
@@ -30627,7 +30732,7 @@
 		},
 		{
 			"english": "truth",
-			"french": "vÌ©ritÌ©",
+			"french": "vIritI",
 			"number": "445"
 		},
 		{
@@ -30647,7 +30752,7 @@
 		},
 		{
 			"english": "Stop",
-			"french": "arrÌ»ter",
+			"french": "arrIter",
 			"number": "449"
 		},
 		{
@@ -30657,7 +30762,7 @@
 		},
 		{
 			"english": "soon",
-			"french": "bientÌ«t",
+			"french": "bientIt",
 			"number": "451"
 		},
 		{
@@ -30702,7 +30807,7 @@
 		},
 		{
 			"english": "behind",
-			"french": "derriÌ¬re",
+			"french": "derriIre",
 			"number": "460"
 		},
 		{
@@ -30727,7 +30832,7 @@
 		},
 		{
 			"english": "number",
-			"french": "numÌ©ro",
+			"french": "numIro",
 			"number": "465"
 		},
 		{
@@ -30737,7 +30842,7 @@
 		},
 		{
 			"english": "day",
-			"french": "journÌ©e",
+			"french": "journIe",
 			"number": "467"
 		},
 		{
@@ -30952,7 +31057,7 @@
 		},
 		{
 			"english": "stop",
-			"french": "arrÌ»tez",
+			"french": "arrItez",
 			"number": "510"
 		},
 		{
@@ -31017,7 +31122,7 @@
 		},
 		{
 			"english": "phone",
-			"french": "tÌ©lÌ©phone",
+			"french": "tIlIphone",
 			"number": "523"
 		},
 		{
@@ -31037,7 +31142,7 @@
 		},
 		{
 			"english": "funny",
-			"french": "drÌ«le",
+			"french": "drIle",
 			"number": "527"
 		},
 		{
@@ -31062,7 +31167,7 @@
 		},
 		{
 			"english": "at",
-			"french": "ÌÁ",
+			"french": "IA",
 			"number": "532"
 		},
 		{
@@ -31072,7 +31177,7 @@
 		},
 		{
 			"english": "thought",
-			"french": "pensÌ©",
+			"french": "pensI",
 			"number": "534"
 		},
 		{
@@ -31112,7 +31217,7 @@
 		},
 		{
 			"english": "master",
-			"french": "maÌ¨tre",
+			"french": "maI tre",
 			"number": "542"
 		},
 		{
@@ -31122,7 +31227,7 @@
 		},
 		{
 			"english": "called",
-			"french": "appelÌ©",
+			"french": "appelI",
 			"number": "544"
 		},
 		{
@@ -31132,7 +31237,7 @@
 		},
 		{
 			"english": "general",
-			"french": "gÌ©nÌ©ral",
+			"french": "gInIral",
 			"number": "546"
 		},
 		{
@@ -31162,7 +31267,7 @@
 		},
 		{
 			"english": "forget it",
-			"french": "oubliÌ©",
+			"french": "oubliI",
 			"number": "552"
 		},
 		{
@@ -31177,17 +31282,17 @@
 		},
 		{
 			"english": "Party",
-			"french": "fÌ»te",
+			"french": "fIte",
 			"number": "555"
 		},
 		{
 			"english": "coffee",
-			"french": "cafÌ©",
+			"french": "cafI",
 			"number": "556"
 		},
 		{
 			"english": "Darling",
-			"french": "chÌ©ri",
+			"french": "chIri",
 			"number": "557"
 		},
 		{
@@ -31247,7 +31352,7 @@
 		},
 		{
 			"english": "President",
-			"french": "prÌ©sident",
+			"french": "prIsident",
 			"number": "569"
 		},
 		{
@@ -31277,12 +31382,12 @@
 		},
 		{
 			"english": "written",
-			"french": "Ì©crit",
+			"french": "Icrit",
 			"number": "575"
 		},
 		{
 			"english": "team",
-			"french": "Ì©quipe",
+			"french": "Iquipe",
 			"number": "576"
 		},
 		{
@@ -31322,7 +31427,7 @@
 		},
 		{
 			"english": "heart",
-			"french": "cÒur",
+			"french": "cOur",
 			"number": "584"
 		},
 		{
@@ -31357,12 +31462,12 @@
 		},
 		{
 			"english": "year",
-			"french": "annÌ©e",
+			"french": "annIe",
 			"number": "591"
 		},
 		{
 			"english": "state",
-			"french": "Ì©tat",
+			"french": "Itat",
 			"number": "592"
 		},
 		{
@@ -31387,7 +31492,7 @@
 		},
 		{
 			"english": "leash",
-			"french": "laissÌ©",
+			"french": "laissI",
 			"number": "597"
 		},
 		{
@@ -31397,7 +31502,7 @@
 		},
 		{
 			"english": "from",
-			"french": "dÌ¬s",
+			"french": "dIs",
 			"number": "599"
 		},
 		{
@@ -31427,7 +31532,7 @@
 		},
 		{
 			"english": "awesome",
-			"french": "gÌ©nial",
+			"french": "gInial",
 			"number": "605"
 		},
 		{
@@ -31437,12 +31542,12 @@
 		},
 		{
 			"english": "security",
-			"french": "sÌ©curitÌ©",
+			"french": "sIcuritI",
 			"number": "607"
 		},
 		{
 			"english": "early",
-			"french": "tÌ«t",
+			"french": "tIt",
 			"number": "608"
 		},
 		{
@@ -31452,12 +31557,12 @@
 		},
 		{
 			"english": "dream",
-			"french": "rÌ»ve",
+			"french": "rIve",
 			"number": "610"
 		},
 		{
 			"english": "army",
-			"french": "armÌ©e",
+			"french": "armIe",
 			"number": "611"
 		},
 		{
@@ -31602,12 +31707,12 @@
 		},
 		{
 			"english": "surely",
-			"french": "sÌÈrement",
+			"french": "sIErement",
 			"number": "640"
 		},
 		{
 			"english": "were",
-			"french": "Ì©tiez",
+			"french": "Itiez",
 			"number": "641"
 		},
 		{
@@ -31632,7 +31737,7 @@
 		},
 		{
 			"english": "tried",
-			"french": "essayÌ©",
+			"french": "essayI",
 			"number": "646"
 		},
 		{
@@ -31642,12 +31747,12 @@
 		},
 		{
 			"english": "having dinner",
-			"french": "dÌ¨ner",
+			"french": "dI ner",
 			"number": "648"
 		},
 		{
 			"english": "age",
-			"french": "Ì¢ge",
+			"french": "Ige",
 			"number": "649"
 		},
 		{
@@ -31657,7 +31762,7 @@
 		},
 		{
 			"english": "exchange",
-			"french": "changÌ©",
+			"french": "changI",
 			"number": "651"
 		},
 		{
@@ -31677,7 +31782,7 @@
 		},
 		{
 			"english": "worry",
-			"french": "inquiÌ¬te",
+			"french": "inquiIte",
 			"number": "655"
 		},
 		{
@@ -31687,7 +31792,7 @@
 		},
 		{
 			"english": "go",
-			"french": "allÌ©",
+			"french": "allI",
 			"number": "657"
 		},
 		{
@@ -31697,7 +31802,7 @@
 		},
 		{
 			"english": "serious",
-			"french": "sÌ©rieux",
+			"french": "sIrieux",
 			"number": "659"
 		},
 		{
@@ -31757,7 +31862,7 @@
 		},
 		{
 			"english": "market",
-			"french": "marchÌ©",
+			"french": "marchI",
 			"number": "671"
 		},
 		{
@@ -31887,7 +31992,7 @@
 		},
 		{
 			"english": "species",
-			"french": "espÌ¬ce",
+			"french": "espIce",
 			"number": "697"
 		},
 		{
@@ -31902,7 +32007,7 @@
 		},
 		{
 			"english": "beginning",
-			"french": "dÌ©but",
+			"french": "dIbut",
 			"number": "700"
 		},
 		{
@@ -31917,7 +32022,7 @@
 		},
 		{
 			"english": "hospital",
-			"french": "hÌ«pital",
+			"french": "hIpital",
 			"number": "703"
 		},
 		{
@@ -31927,12 +32032,12 @@
 		},
 		{
 			"english": "grace",
-			"french": "grÌ¢ce",
+			"french": "grIce",
 			"number": "705"
 		},
 		{
 			"english": "problems",
-			"french": "problÌ¬mes",
+			"french": "problImes",
 			"number": "706"
 		},
 		{
@@ -31952,12 +32057,12 @@
 		},
 		{
 			"english": "safe",
-			"french": "sÌÈre",
+			"french": "sIEre",
 			"number": "710"
 		},
 		{
 			"english": "received",
-			"french": "reÌ¤u",
+			"french": "reIu",
 			"number": "711"
 		},
 		{
@@ -32092,7 +32197,7 @@
 		},
 		{
 			"english": "begin",
-			"french": "commencÌ©",
+			"french": "commencI",
 			"number": "738"
 		},
 		{
@@ -32107,7 +32212,7 @@
 		},
 		{
 			"english": "piece",
-			"french": "piÌ¬ce",
+			"french": "piIce",
 			"number": "741"
 		},
 		{
@@ -32137,7 +32242,7 @@
 		},
 		{
 			"english": "scene",
-			"french": "scÌ¬ne",
+			"french": "scIne",
 			"number": "747"
 		},
 		{
@@ -32162,7 +32267,7 @@
 		},
 		{
 			"english": "Hello",
-			"french": "allÌ«",
+			"french": "allI",
 			"number": "752"
 		},
 		{
@@ -32177,12 +32282,12 @@
 		},
 		{
 			"english": "hotel",
-			"french": "hÌ«tel",
+			"french": "hItel",
 			"number": "755"
 		},
 		{
 			"english": "evening",
-			"french": "soirÌ©e",
+			"french": "soirIe",
 			"number": "756"
 		},
 		{
@@ -32307,7 +32412,7 @@
 		},
 		{
 			"english": "light",
-			"french": "lumiÌ¬re",
+			"french": "lumiIre",
 			"number": "781"
 		},
 		{
@@ -32327,7 +32432,7 @@
 		},
 		{
 			"english": "Christmas",
-			"french": "noÌÇl",
+			"french": "noICl",
 			"number": "785"
 		},
 		{
@@ -32337,12 +32442,12 @@
 		},
 		{
 			"english": "inside",
-			"french": "intÌ©rieur",
+			"french": "intIrieur",
 			"number": "787"
 		},
 		{
 			"english": "listen",
-			"french": "Ì©coutez",
+			"french": "Icoutez",
 			"number": "788"
 		},
 		{
@@ -32352,7 +32457,7 @@
 		},
 		{
 			"english": "won",
-			"french": "gagnÌ©",
+			"french": "gagnI",
 			"number": "790"
 		},
 		{
@@ -32382,7 +32487,7 @@
 		},
 		{
 			"english": "present",
-			"french": "prÌ©sent",
+			"french": "prIsent",
 			"number": "796"
 		},
 		{
@@ -32392,7 +32497,7 @@
 		},
 		{
 			"english": "knows",
-			"french": "connaÌ¨t",
+			"french": "connaI t",
 			"number": "798"
 		},
 		{
@@ -32447,7 +32552,7 @@
 		},
 		{
 			"english": "soul",
-			"french": "Ì¢me",
+			"french": "Ime",
 			"number": "809"
 		},
 		{
@@ -32467,7 +32572,7 @@
 		},
 		{
 			"english": "successful",
-			"french": "rÌ©ussi",
+			"french": "rIussi",
 			"number": "813"
 		},
 		{
@@ -32507,7 +32612,7 @@
 		},
 		{
 			"english": "sister",
-			"french": "sÒur",
+			"french": "sOur",
 			"number": "821"
 		},
 		{
@@ -32582,12 +32687,12 @@
 		},
 		{
 			"english": "completed",
-			"french": "terminÌ©",
+			"french": "terminI",
 			"number": "836"
 		},
 		{
 			"english": "completely",
-			"french": "complÌ¬tement",
+			"french": "complItement",
 			"number": "837"
 		},
 		{
@@ -32637,7 +32742,7 @@
 		},
 		{
 			"english": "loans",
-			"french": "prÌ»ts",
+			"french": "prIts",
 			"number": "847"
 		},
 		{
@@ -32652,12 +32757,12 @@
 		},
 		{
 			"english": "lunch",
-			"french": "dÌ©jeuner",
+			"french": "dIjeuner",
 			"number": "850"
 		},
 		{
 			"english": "sent",
-			"french": "envoyÌ©",
+			"french": "envoyI",
 			"number": "851"
 		},
 		{
@@ -32692,7 +32797,7 @@
 		},
 		{
 			"english": "hated",
-			"french": "dÌ©teste",
+			"french": "dIteste",
 			"number": "858"
 		},
 		{
@@ -32702,7 +32807,7 @@
 		},
 		{
 			"english": "at",
-			"french": "Ì¢",
+			"french": "I",
 			"number": "860"
 		},
 		{
@@ -32717,7 +32822,7 @@
 		},
 		{
 			"english": "decided",
-			"french": "dÌ©cidÌ©",
+			"french": "dIcidI",
 			"number": "863"
 		},
 		{
@@ -32732,7 +32837,7 @@
 		},
 		{
 			"english": "doctor",
-			"french": "mÌ©decin",
+			"french": "mIdecin",
 			"number": "866"
 		},
 		{
@@ -32782,7 +32887,7 @@
 		},
 		{
 			"english": "know",
-			"french": "connaÌ¨tre",
+			"french": "connaI tre",
 			"number": "876"
 		},
 		{
@@ -32852,12 +32957,12 @@
 		},
 		{
 			"english": "half",
-			"french": "moitiÌ©",
+			"french": "moitiI",
 			"number": "890"
 		},
 		{
 			"english": "love",
-			"french": "aimÌ©",
+			"french": "aimI",
 			"number": "891"
 		},
 		{
@@ -32887,7 +32992,7 @@
 		},
 		{
 			"english": "TV",
-			"french": "tÌ©lÌ©",
+			"french": "tIlI",
 			"number": "897"
 		},
 		{
@@ -32917,7 +33022,7 @@
 		},
 		{
 			"english": "arrival",
-			"french": "arrivÌ©e",
+			"french": "arrivIe",
 			"number": "903"
 		},
 		{
@@ -33012,12 +33117,12 @@
 		},
 		{
 			"english": "control",
-			"french": "contrÌ«le",
+			"french": "contrIle",
 			"number": "922"
 		},
 		{
 			"english": "ready",
-			"french": "prÌ»te",
+			"french": "prIte",
 			"number": "923"
 		},
 		{
@@ -33027,7 +33132,7 @@
 		},
 		{
 			"english": "meet",
-			"french": "rencontrÌ©",
+			"french": "rencontrI",
 			"number": "925"
 		},
 		{
@@ -33047,7 +33152,7 @@
 		},
 		{
 			"english": "to write",
-			"french": "Ì©crire",
+			"french": "Icrire",
 			"number": "929"
 		},
 		{
@@ -33097,7 +33202,7 @@
 		},
 		{
 			"english": "back",
-			"french": "arriÌ¬re",
+			"french": "arriIre",
 			"number": "939"
 		},
 		{
@@ -33107,7 +33212,7 @@
 		},
 		{
 			"english": "America",
-			"french": "amÌ©rique",
+			"french": "amIrique",
 			"number": "941"
 		},
 		{
@@ -33137,7 +33242,7 @@
 		},
 		{
 			"english": "stopped",
-			"french": "arrÌ»tÌ©",
+			"french": "arrItI",
 			"number": "947"
 		},
 		{
@@ -33157,7 +33262,7 @@
 		},
 		{
 			"english": "reply",
-			"french": "rÌ©ponse",
+			"french": "rIponse",
 			"number": "951"
 		},
 		{
@@ -33262,7 +33367,7 @@
 		},
 		{
 			"english": "strange",
-			"french": "Ì©trange",
+			"french": "Itrange",
 			"number": "972"
 		},
 		{
@@ -33307,7 +33412,7 @@
 		},
 		{
 			"english": "play",
-			"french": "jouÌ©",
+			"french": "jouI",
 			"number": "981"
 		},
 		{
@@ -33357,7 +33462,7 @@
 		},
 		{
 			"english": "stolen",
-			"french": "volÌ©",
+			"french": "volI",
 			"number": "991"
 		},
 		{
@@ -33407,7 +33512,7 @@
 		},
 		{
 			"english": "box",
-			"french": "boÌ¨te",
+			"french": "boI te",
 			"number": "1001"
 		},
 		{
@@ -33427,22 +33532,22 @@
 		},
 		{
 			"english": "listen",
-			"french": "Ì©couter",
+			"french": "Icouter",
 			"number": "1005"
 		},
 		{
 			"english": "present",
-			"french": "prÌ©sente",
+			"french": "prIsente",
 			"number": "1006"
 		},
 		{
 			"english": "system",
-			"french": "systÌ¬me",
+			"french": "systIme",
 			"number": "1007"
 		},
 		{
 			"english": "time",
-			"french": "Ì©poque",
+			"french": "Ipoque",
 			"number": "1008"
 		},
 		{
@@ -33457,7 +33562,7 @@
 		},
 		{
 			"english": "stupid",
-			"french": "bÌ»te",
+			"french": "bIte",
 			"number": "1011"
 		},
 		{
@@ -33482,7 +33587,7 @@
 		},
 		{
 			"english": "health",
-			"french": "santÌ©",
+			"french": "santI",
 			"number": "1016"
 		},
 		{
@@ -33602,7 +33707,7 @@
 		},
 		{
 			"english": "hero",
-			"french": "hÌ©ros",
+			"french": "hIros",
 			"number": "1040"
 		},
 		{
@@ -33617,7 +33722,7 @@
 		},
 		{
 			"english": "key",
-			"french": "clÌ©",
+			"french": "clI",
 			"number": "1043"
 		},
 		{
@@ -33642,7 +33747,7 @@
 		},
 		{
 			"english": "freedom",
-			"french": "libertÌ©",
+			"french": "libertI",
 			"number": "1048"
 		},
 		{
@@ -33692,7 +33797,7 @@
 		},
 		{
 			"english": "seems",
-			"french": "paraÌ¨t",
+			"french": "paraI t",
 			"number": "1058"
 		},
 		{
@@ -33717,7 +33822,7 @@
 		},
 		{
 			"english": "tea",
-			"french": "thÌ©",
+			"french": "thI",
 			"number": "1063"
 		},
 		{
@@ -33727,7 +33832,7 @@
 		},
 		{
 			"english": "paid",
-			"french": "payÌ©",
+			"french": "payI",
 			"number": "1065"
 		},
 		{
@@ -33752,7 +33857,7 @@
 		},
 		{
 			"english": "prefer",
-			"french": "prÌ©fÌ¬re",
+			"french": "prIfIre",
 			"number": "1070"
 		},
 		{
@@ -33767,17 +33872,17 @@
 		},
 		{
 			"english": "drawn",
-			"french": "tirÌ©",
+			"french": "tirI",
 			"number": "1073"
 		},
 		{
 			"english": "protect",
-			"french": "protÌ©ger",
+			"french": "protIger",
 			"number": "1074"
 		},
 		{
 			"english": "dreams",
-			"french": "rÌ»ves",
+			"french": "rIves",
 			"number": "1075"
 		},
 		{
@@ -33787,7 +33892,7 @@
 		},
 		{
 			"english": "pity",
-			"french": "pitiÌ©",
+			"french": "pitiI",
 			"number": "1077"
 		},
 		{
@@ -33797,7 +33902,7 @@
 		},
 		{
 			"english": "same",
-			"french": "mÌ»mes",
+			"french": "mImes",
 			"number": "1079"
 		},
 		{
@@ -33832,7 +33937,7 @@
 		},
 		{
 			"english": "boys",
-			"french": "garÌ¤ons",
+			"french": "garIons",
 			"number": "1086"
 		},
 		{
@@ -33887,7 +33992,7 @@
 		},
 		{
 			"english": "beer",
-			"french": "biÌ¬re",
+			"french": "biIre",
 			"number": "1097"
 		},
 		{
@@ -33917,7 +34022,7 @@
 		},
 		{
 			"english": "different",
-			"french": "diffÌ©rent",
+			"french": "diffIrent",
 			"number": "1103"
 		},
 		{
@@ -33942,7 +34047,7 @@
 		},
 		{
 			"english": "clothing",
-			"french": "vÌ»tements",
+			"french": "vItements",
 			"number": "1108"
 		},
 		{
@@ -33962,12 +34067,12 @@
 		},
 		{
 			"english": "society",
-			"french": "sociÌ©tÌ©",
+			"french": "sociItI",
 			"number": "1112"
 		},
 		{
 			"english": "Dear",
-			"french": "chÌ¬re",
+			"french": "chIre",
 			"number": "1113"
 		},
 		{
@@ -33992,7 +34097,7 @@
 		},
 		{
 			"english": "bought",
-			"french": "achetÌ©",
+			"french": "achetI",
 			"number": "1118"
 		},
 		{
@@ -34027,7 +34132,7 @@
 		},
 		{
 			"english": "departure",
-			"french": "dÌ©part",
+			"french": "dIpart",
 			"number": "1125"
 		},
 		{
@@ -34087,17 +34192,17 @@
 		},
 		{
 			"english": "interest",
-			"french": "intÌ©rÌ»t",
+			"french": "intIrIt",
 			"number": "1137"
 		},
 		{
 			"english": "interested",
-			"french": "intÌ©resse",
+			"french": "intIresse",
 			"number": "1138"
 		},
 		{
 			"english": "role",
-			"french": "rÌ«le",
+			"french": "rIle",
 			"number": "1139"
 		},
 		{
@@ -34107,7 +34212,7 @@
 		},
 		{
 			"english": "Congratulations",
-			"french": "fÌ©licitations",
+			"french": "fIlicitations",
 			"number": "1141"
 		},
 		{
@@ -34137,7 +34242,7 @@
 		},
 		{
 			"english": "injured",
-			"french": "blessÌ©",
+			"french": "blessI",
 			"number": "1147"
 		},
 		{
@@ -34187,7 +34292,7 @@
 		},
 		{
 			"english": "quits",
-			"french": "quittÌ©",
+			"french": "quittI",
 			"number": "1157"
 		},
 		{
@@ -34212,7 +34317,7 @@
 		},
 		{
 			"english": "church",
-			"french": "Ì©glise",
+			"french": "Iglise",
 			"number": "1162"
 		},
 		{
@@ -34222,12 +34327,12 @@
 		},
 		{
 			"english": "beauty",
-			"french": "beautÌ©",
+			"french": "beautI",
 			"number": "1164"
 		},
 		{
 			"english": "loose",
-			"french": "lÌ¢che",
+			"french": "lIche",
 			"number": "1165"
 		},
 		{
@@ -34252,7 +34357,7 @@
 		},
 		{
 			"english": "anger",
-			"french": "colÌ¬re",
+			"french": "colIre",
 			"number": "1170"
 		},
 		{
@@ -34282,7 +34387,7 @@
 		},
 		{
 			"english": "Entrance",
-			"french": "entrÌ©e",
+			"french": "entrIe",
 			"number": "1176"
 		},
 		{
@@ -34297,7 +34402,7 @@
 		},
 		{
 			"english": "American",
-			"french": "amÌ©ricain",
+			"french": "amIricain",
 			"number": "1179"
 		},
 		{
@@ -34322,7 +34427,7 @@
 		},
 		{
 			"english": "experience",
-			"french": "expÌ©rience",
+			"french": "expIrience",
 			"number": "1184"
 		},
 		{
@@ -34337,7 +34442,7 @@
 		},
 		{
 			"english": "window",
-			"french": "fenÌ»tre",
+			"french": "fenItre",
 			"number": "1187"
 		},
 		{
@@ -34372,7 +34477,7 @@
 		},
 		{
 			"english": "falls",
-			"french": "tombÌ©",
+			"french": "tombI",
 			"number": "1194"
 		},
 		{
@@ -34397,12 +34502,12 @@
 		},
 		{
 			"english": "eye",
-			"french": "Òil",
+			"french": "Oil",
 			"number": "1199"
 		},
 		{
 			"english": "present",
-			"french": "prÌ©senter",
+			"french": "prIsenter",
 			"number": "1200"
 		},
 		{
@@ -34412,7 +34517,7 @@
 		},
 		{
 			"english": "brothers",
-			"french": "frÌ¬res",
+			"french": "frIres",
 			"number": "1202"
 		},
 		{
@@ -34442,12 +34547,12 @@
 		},
 		{
 			"english": "marry",
-			"french": "Ì©pouser",
+			"french": "Ipouser",
 			"number": "1208"
 		},
 		{
 			"english": "interesting",
-			"french": "intÌ©ressant",
+			"french": "intIressant",
 			"number": "1209"
 		},
 		{
@@ -34507,7 +34612,7 @@
 		},
 		{
 			"english": "cinema",
-			"french": "cinÌ©ma",
+			"french": "cinIma",
 			"number": "1221"
 		},
 		{
@@ -34517,7 +34622,7 @@
 		},
 		{
 			"english": "decision",
-			"french": "dÌ©cision",
+			"french": "dIcision",
 			"number": "1223"
 		},
 		{
@@ -34562,7 +34667,7 @@
 		},
 		{
 			"english": "second",
-			"french": "deuxiÌ¬me",
+			"french": "deuxiIme",
 			"number": "1232"
 		},
 		{
@@ -34587,7 +34692,7 @@
 		},
 		{
 			"english": "saved",
-			"french": "sauvÌ©",
+			"french": "sauvI",
 			"number": "1237"
 		},
 		{
@@ -34597,17 +34702,17 @@
 		},
 		{
 			"english": "iÌÊ",
-			"french": "iÌÊ",
+			"french": "iIE",
 			"number": "1239"
 		},
 		{
 			"english": "reply",
-			"french": "rÌ©pondre",
+			"french": "rIpondre",
 			"number": "1240"
 		},
 		{
 			"english": "way",
-			"french": "maniÌ¬re",
+			"french": "maniIre",
 			"number": "1241"
 		},
 		{
@@ -34627,7 +34732,7 @@
 		},
 		{
 			"english": "defense",
-			"french": "dÌ©fense",
+			"french": "dIfense",
 			"number": "1245"
 		},
 		{
@@ -34637,7 +34742,7 @@
 		},
 		{
 			"english": "Jesus",
-			"french": "jÌ©sus",
+			"french": "jIsus",
 			"number": "1247"
 		},
 		{
@@ -34647,7 +34752,7 @@
 		},
 		{
 			"english": "driveway",
-			"french": "allÌ©e",
+			"french": "allIe",
 			"number": "1249"
 		},
 		{
@@ -34692,12 +34797,12 @@
 		},
 		{
 			"english": "at once",
-			"french": "immÌ©diatement",
+			"french": "immIdiatement",
 			"number": "1258"
 		},
 		{
 			"english": "married",
-			"french": "mariÌ©",
+			"french": "mariI",
 			"number": "1259"
 		},
 		{
@@ -34722,7 +34827,7 @@
 		},
 		{
 			"english": "wife",
-			"french": "Ì©pouse",
+			"french": "Ipouse",
 			"number": "1264"
 		},
 		{
@@ -34742,7 +34847,7 @@
 		},
 		{
 			"english": "born",
-			"french": "nÌ©",
+			"french": "nI",
 			"number": "1268"
 		},
 		{
@@ -34757,7 +34862,7 @@
 		},
 		{
 			"english": "French",
-			"french": "franÌ¤ais",
+			"french": "franIais",
 			"number": "1271"
 		},
 		{
@@ -34772,7 +34877,7 @@
 		},
 		{
 			"english": "majesty",
-			"french": "majestÌ©",
+			"french": "majestI",
 			"number": "1274"
 		},
 		{
@@ -34812,7 +34917,7 @@
 		},
 		{
 			"english": "ideas",
-			"french": "idÌ©es",
+			"french": "idIes",
 			"number": "1282"
 		},
 		{
@@ -34842,7 +34947,7 @@
 		},
 		{
 			"english": "releases",
-			"french": "dÌ©gage",
+			"french": "dIgage",
 			"number": "1288"
 		},
 		{
@@ -34857,7 +34962,7 @@
 		},
 		{
 			"english": "were",
-			"french": "Ì©tions",
+			"french": "Itions",
 			"number": "1291"
 		},
 		{
@@ -34872,7 +34977,7 @@
 		},
 		{
 			"english": "planned",
-			"french": "prÌ©vu",
+			"french": "prIvu",
 			"number": "1294"
 		},
 		{
@@ -34887,7 +34992,7 @@
 		},
 		{
 			"english": "touch",
-			"french": "touchÌ©",
+			"french": "touchI",
 			"number": "1297"
 		},
 		{
@@ -34917,7 +35022,7 @@
 		},
 		{
 			"english": "disturbs",
-			"french": "dÌ©range",
+			"french": "dIrange",
 			"number": "1303"
 		},
 		{
@@ -34942,12 +35047,12 @@
 		},
 		{
 			"english": "reality",
-			"french": "rÌ©alitÌ©",
+			"french": "rIalitI",
 			"number": "1308"
 		},
 		{
 			"english": "investigation",
-			"french": "enquÌ»te",
+			"french": "enquIte",
 			"number": "1309"
 		},
 		{
@@ -34977,7 +35082,7 @@
 		},
 		{
 			"english": "occupied",
-			"french": "occupÌ©",
+			"french": "occupI",
 			"number": "1315"
 		},
 		{
@@ -35027,7 +35132,7 @@
 		},
 		{
 			"english": "to avoid",
-			"french": "Ì©viter",
+			"french": "Iviter",
 			"number": "1325"
 		},
 		{
@@ -35052,17 +35157,17 @@
 		},
 		{
 			"english": "prevent",
-			"french": "empÌ»cher",
+			"french": "empIcher",
 			"number": "1330"
 		},
 		{
 			"english": "married",
-			"french": "mariÌ©e",
+			"french": "mariIe",
 			"number": "1331"
 		},
 		{
 			"english": "eat",
-			"french": "mangÌ©",
+			"french": "mangI",
 			"number": "1332"
 		},
 		{
@@ -35102,7 +35207,7 @@
 		},
 		{
 			"english": "rules",
-			"french": "rÌ¬gles",
+			"french": "rIgles",
 			"number": "1340"
 		},
 		{
@@ -35127,12 +35232,12 @@
 		},
 		{
 			"english": "US",
-			"french": "amÌ©ricains",
+			"french": "amIricains",
 			"number": "1345"
 		},
 		{
 			"english": "imbecile",
-			"french": "imbÌ©cile",
+			"french": "imbIcile",
 			"number": "1346"
 		},
 		{
@@ -35167,7 +35272,7 @@
 		},
 		{
 			"english": "Motherfucker",
-			"french": "enfoirÌ©",
+			"french": "enfoirI",
 			"number": "1353"
 		},
 		{
@@ -35197,7 +35302,7 @@
 		},
 		{
 			"english": "nice to meet you",
-			"french": "enchantÌ©",
+			"french": "enchantI",
 			"number": "1359"
 		},
 		{
@@ -35247,7 +35352,7 @@
 		},
 		{
 			"english": "lived",
-			"french": "vÌ©cu",
+			"french": "vIcu",
 			"number": "1369"
 		},
 		{
@@ -35317,7 +35422,7 @@
 		},
 		{
 			"english": "sheriff",
-			"french": "shÌ©rif",
+			"french": "shIrif",
 			"number": "1383"
 		},
 		{
@@ -35332,12 +35437,12 @@
 		},
 		{
 			"english": "takes",
-			"french": "emmÌ¬ne",
+			"french": "emmIne",
 			"number": "1386"
 		},
 		{
 			"english": "meeting",
-			"french": "rÌ©union",
+			"french": "rIunion",
 			"number": "1387"
 		},
 		{
@@ -35347,7 +35452,7 @@
 		},
 		{
 			"english": "island",
-			"french": "Ì¨le",
+			"french": "I le",
 			"number": "1389"
 		},
 		{
@@ -35367,17 +35472,17 @@
 		},
 		{
 			"english": "surgery",
-			"french": "opÌ©ration",
+			"french": "opIration",
 			"number": "1393"
 		},
 		{
 			"english": "special",
-			"french": "spÌ©cial",
+			"french": "spIcial",
 			"number": "1394"
 		},
 		{
 			"english": "planet",
-			"french": "planÌ¬te",
+			"french": "planIte",
 			"number": "1395"
 		},
 		{
@@ -35417,7 +35522,7 @@
 		},
 		{
 			"english": "discovered",
-			"french": "dÌ©couvert",
+			"french": "dIcouvert",
 			"number": "1403"
 		},
 		{
@@ -35452,7 +35557,7 @@
 		},
 		{
 			"english": "sacred",
-			"french": "sacrÌ©",
+			"french": "sacrI",
 			"number": "1410"
 		},
 		{
@@ -35472,7 +35577,7 @@
 		},
 		{
 			"english": "necessary",
-			"french": "nÌ©cessaire",
+			"french": "nIcessaire",
 			"number": "1414"
 		},
 		{
@@ -35482,7 +35587,7 @@
 		},
 		{
 			"english": "destroy",
-			"french": "dÌ©truire",
+			"french": "dItruire",
 			"number": "1416"
 		},
 		{
@@ -35502,7 +35607,7 @@
 		},
 		{
 			"english": "memory",
-			"french": "mÌ©moire",
+			"french": "mImoire",
 			"number": "1420"
 		},
 		{
@@ -35557,7 +35662,7 @@
 		},
 		{
 			"english": "witness",
-			"french": "tÌ©moin",
+			"french": "tImoin",
 			"number": "1431"
 		},
 		{
@@ -35607,7 +35712,7 @@
 		},
 		{
 			"english": "brought",
-			"french": "apportÌ©",
+			"french": "apportI",
 			"number": "1441"
 		},
 		{
@@ -35622,7 +35727,7 @@
 		},
 		{
 			"english": "trial",
-			"french": "procÌ¬s",
+			"french": "procIs",
 			"number": "1444"
 		},
 		{
@@ -35662,7 +35767,7 @@
 		},
 		{
 			"english": "taste",
-			"french": "goÌÈt",
+			"french": "goIEt",
 			"number": "1452"
 		},
 		{
@@ -35682,7 +35787,7 @@
 		},
 		{
 			"english": "difference",
-			"french": "diffÌ©rence",
+			"french": "diffIrence",
 			"number": "1456"
 		},
 		{
@@ -35702,7 +35807,7 @@
 		},
 		{
 			"english": "reflect",
-			"french": "rÌ©flÌ©chir",
+			"french": "rIflIchir",
 			"number": "1460"
 		},
 		{
@@ -35722,7 +35827,7 @@
 		},
 		{
 			"english": "university",
-			"french": "universitÌ©",
+			"french": "universitI",
 			"number": "1464"
 		},
 		{
@@ -35732,7 +35837,7 @@
 		},
 		{
 			"english": "meters",
-			"french": "mÌ¬tres",
+			"french": "mItres",
 			"number": "1466"
 		},
 		{
@@ -35772,7 +35877,7 @@
 		},
 		{
 			"english": "work",
-			"french": "travaillÌ©",
+			"french": "travaillI",
 			"number": "1474"
 		},
 		{
@@ -35782,7 +35887,7 @@
 		},
 		{
 			"english": "found",
-			"french": "retrouvÌ©",
+			"french": "retrouvI",
 			"number": "1476"
 		},
 		{
@@ -35807,7 +35912,7 @@
 		},
 		{
 			"english": "deserved",
-			"french": "mÌ©rite",
+			"french": "mIrite",
 			"number": "1481"
 		},
 		{
@@ -35847,7 +35952,7 @@
 		},
 		{
 			"english": "camera",
-			"french": "camÌ©ra",
+			"french": "camIra",
 			"number": "1489"
 		},
 		{
@@ -35862,7 +35967,7 @@
 		},
 		{
 			"english": "rooms",
-			"french": "piÌ¬ces",
+			"french": "piIces",
 			"number": "1492"
 		},
 		{
@@ -35872,7 +35977,7 @@
 		},
 		{
 			"english": "treasure",
-			"french": "trÌ©sor",
+			"french": "trIsor",
 			"number": "1494"
 		},
 		{
@@ -35882,7 +35987,7 @@
 		},
 		{
 			"english": "energy",
-			"french": "Ì©nergie",
+			"french": "Inergie",
 			"number": "1496"
 		},
 		{
@@ -35892,12 +35997,12 @@
 		},
 		{
 			"english": "huge",
-			"french": "Ì©norme",
+			"french": "Inorme",
 			"number": "1498"
 		},
 		{
 			"english": "returns",
-			"french": "rentrÌ©",
+			"french": "rentrI",
 			"number": "1499"
 		},
 		{
@@ -35912,7 +36017,7 @@
 		},
 		{
 			"english": "to prepare",
-			"french": "prÌ©parer",
+			"french": "prIparer",
 			"number": "1502"
 		},
 		{
@@ -35937,7 +36042,7 @@
 		},
 		{
 			"english": "guest",
-			"french": "invitÌ©",
+			"french": "invitI",
 			"number": "1507"
 		},
 		{
@@ -35947,7 +36052,7 @@
 		},
 		{
 			"english": "supposed",
-			"french": "censÌ©",
+			"french": "censI",
 			"number": "1509"
 		},
 		{
@@ -36002,7 +36107,7 @@
 		},
 		{
 			"english": "stop",
-			"french": "arrÌ»t",
+			"french": "arrIt",
 			"number": "1520"
 		},
 		{
@@ -36027,7 +36132,7 @@
 		},
 		{
 			"english": "high school",
-			"french": "lycÌ©e",
+			"french": "lycIe",
 			"number": "1525"
 		},
 		{
@@ -36057,7 +36162,7 @@
 		},
 		{
 			"english": "broken",
-			"french": "cassÌ©",
+			"french": "cassI",
 			"number": "1531"
 		},
 		{
@@ -36067,7 +36172,7 @@
 		},
 		{
 			"english": "check",
-			"french": "vÌ©rifier",
+			"french": "vIrifier",
 			"number": "1533"
 		},
 		{
@@ -36092,7 +36197,7 @@
 		},
 		{
 			"english": "answer",
-			"french": "rÌ©ponds",
+			"french": "rIponds",
 			"number": "1538"
 		},
 		{
@@ -36112,12 +36217,12 @@
 		},
 		{
 			"english": "third",
-			"french": "troisiÌ¬me",
+			"french": "troisiIme",
 			"number": "1542"
 		},
 		{
 			"english": "depends",
-			"french": "dÌ©pend",
+			"french": "dIpend",
 			"number": "1543"
 		},
 		{
@@ -36132,7 +36237,7 @@
 		},
 		{
 			"english": "honest",
-			"french": "honnÌ»te",
+			"french": "honnIte",
 			"number": "1546"
 		},
 		{
@@ -36157,7 +36262,7 @@
 		},
 		{
 			"english": "adjust",
-			"french": "rÌ©gler",
+			"french": "rIgler",
 			"number": "1551"
 		},
 		{
@@ -36197,7 +36302,7 @@
 		},
 		{
 			"english": "presence",
-			"french": "prÌ©sence",
+			"french": "prIsence",
 			"number": "1559"
 		},
 		{
@@ -36212,7 +36317,7 @@
 		},
 		{
 			"english": "bring",
-			"french": "amÌ¬ne",
+			"french": "amIne",
 			"number": "1562"
 		},
 		{
@@ -36222,7 +36327,7 @@
 		},
 		{
 			"english": "very",
-			"french": "trÌ©s",
+			"french": "trIs",
 			"number": "1564"
 		},
 		{
@@ -36237,7 +36342,7 @@
 		},
 		{
 			"english": "Keywords",
-			"french": "clÌ©s",
+			"french": "clIs",
 			"number": "1567"
 		},
 		{
@@ -36252,7 +36357,7 @@
 		},
 		{
 			"english": "recover",
-			"french": "rÌ©cupÌ©rer",
+			"french": "rIcupIrer",
 			"number": "1570"
 		},
 		{
@@ -36317,7 +36422,7 @@
 		},
 		{
 			"english": "lack",
-			"french": "manquÌ©",
+			"french": "manquI",
 			"number": "1583"
 		},
 		{
@@ -36352,7 +36457,7 @@
 		},
 		{
 			"english": "floor",
-			"french": "Ì©tage",
+			"french": "Itage",
 			"number": "1590"
 		},
 		{
@@ -36372,7 +36477,7 @@
 		},
 		{
 			"english": "despite",
-			"french": "malgrÌ©",
+			"french": "malgrI",
 			"number": "1594"
 		},
 		{
@@ -36382,7 +36487,7 @@
 		},
 		{
 			"english": "bad",
-			"french": "mÌ©chant",
+			"french": "mIchant",
 			"number": "1596"
 		},
 		{
@@ -36412,7 +36517,7 @@
 		},
 		{
 			"english": "hit",
-			"french": "frappÌ©",
+			"french": "frappI",
 			"number": "1602"
 		},
 		{
@@ -36452,7 +36557,7 @@
 		},
 		{
 			"english": "watched",
-			"french": "regardÌ©",
+			"french": "regardI",
 			"number": "1610"
 		},
 		{
@@ -36467,7 +36572,7 @@
 		},
 		{
 			"english": "job",
-			"french": "mÌ©tier",
+			"french": "mItier",
 			"number": "1613"
 		},
 		{
@@ -36482,7 +36587,7 @@
 		},
 		{
 			"english": "very",
-			"french": "trÌ»s",
+			"french": "trIs",
 			"number": "1616"
 		},
 		{
@@ -36497,12 +36602,12 @@
 		},
 		{
 			"english": "success",
-			"french": "succÌ¬s",
+			"french": "succIs",
 			"number": "1619"
 		},
 		{
 			"english": "being",
-			"french": "Ì©tant",
+			"french": "Itant",
 			"number": "1620"
 		},
 		{
@@ -36522,7 +36627,7 @@
 		},
 		{
 			"english": "theater",
-			"french": "thÌ©Ì¢tre",
+			"french": "thIItre",
 			"number": "1624"
 		},
 		{
@@ -36562,7 +36667,7 @@
 		},
 		{
 			"english": "Note",
-			"french": "remarquÌ©",
+			"french": "remarquI",
 			"number": "1632"
 		},
 		{
@@ -36572,7 +36677,7 @@
 		},
 		{
 			"english": "foreign",
-			"french": "Ì©tranger",
+			"french": "Itranger",
 			"number": "1634"
 		},
 		{
@@ -36582,7 +36687,7 @@
 		},
 		{
 			"english": "closed",
-			"french": "fermÌ©",
+			"french": "fermI",
 			"number": "1636"
 		},
 		{
@@ -36622,7 +36727,7 @@
 		},
 		{
 			"english": "say again",
-			"french": "rÌ©pÌ¬te",
+			"french": "rIpIte",
 			"number": "1644"
 		},
 		{
@@ -36647,7 +36752,7 @@
 		},
 		{
 			"english": "your",
-			"french": "vÌ«tre",
+			"french": "vItre",
 			"number": "1649"
 		},
 		{
@@ -36662,7 +36767,7 @@
 		},
 		{
 			"english": "or",
-			"french": "oÌÈ",
+			"french": "oIE",
 			"number": "1652"
 		},
 		{
@@ -36692,17 +36797,17 @@
 		},
 		{
 			"english": "career",
-			"french": "carriÌ¬re",
+			"french": "carriIre",
 			"number": "1658"
 		},
 		{
 			"english": "removes",
-			"french": "enlÌ¬ve",
+			"french": "enlIve",
 			"number": "1659"
 		},
 		{
 			"english": "tired",
-			"french": "fatiguÌ©",
+			"french": "fatiguI",
 			"number": "1660"
 		},
 		{
@@ -36717,12 +36822,12 @@
 		},
 		{
 			"english": "missed",
-			"french": "ratÌ©",
+			"french": "ratI",
 			"number": "1663"
 		},
 		{
 			"english": "rule",
-			"french": "rÌ¬gle",
+			"french": "rIgle",
 			"number": "1664"
 		},
 		{
@@ -36752,7 +36857,7 @@
 		},
 		{
 			"english": "river",
-			"french": "riviÌ¬re",
+			"french": "riviIre",
 			"number": "1670"
 		},
 		{
@@ -36772,7 +36877,7 @@
 		},
 		{
 			"english": "forced",
-			"french": "obligÌ©",
+			"french": "obligI",
 			"number": "1674"
 		},
 		{
@@ -36817,7 +36922,7 @@
 		},
 		{
 			"english": "escape",
-			"french": "Ì©chapper",
+			"french": "Ichapper",
 			"number": "1683"
 		},
 		{
@@ -36837,7 +36942,7 @@
 		},
 		{
 			"english": "dumbass",
-			"french": "crÌ©tin",
+			"french": "crItin",
 			"number": "1687"
 		},
 		{
@@ -36847,7 +36952,7 @@
 		},
 		{
 			"english": "video",
-			"french": "vidÌ©o",
+			"french": "vidIo",
 			"number": "1689"
 		},
 		{
@@ -36902,7 +37007,7 @@
 		},
 		{
 			"english": "will",
-			"french": "volontÌ©",
+			"french": "volontI",
 			"number": "1700"
 		},
 		{
@@ -36977,12 +37082,12 @@
 		},
 		{
 			"english": "decide",
-			"french": "dÌ©cider",
+			"french": "dIcider",
 			"number": "1715"
 		},
 		{
 			"english": "worry",
-			"french": "inquiÌ©tez",
+			"french": "inquiItez",
 			"number": "1716"
 		},
 		{
@@ -37072,7 +37177,7 @@
 		},
 		{
 			"english": "Cake",
-			"french": "gÌ¢teau",
+			"french": "gIteau",
 			"number": "1734"
 		},
 		{
@@ -37147,7 +37252,7 @@
 		},
 		{
 			"english": "seriously",
-			"french": "sÌ©rieusement",
+			"french": "sIrieusement",
 			"number": "1749"
 		},
 		{
@@ -37177,7 +37282,7 @@
 		},
 		{
 			"english": "rest",
-			"french": "restÌ©",
+			"french": "restI",
 			"number": "1755"
 		},
 		{
@@ -37192,7 +37297,7 @@
 		},
 		{
 			"english": "genius",
-			"french": "gÌ©nie",
+			"french": "gInie",
 			"number": "1758"
 		},
 		{
@@ -37217,12 +37322,12 @@
 		},
 		{
 			"english": "answered",
-			"french": "rÌ©pondu",
+			"french": "rIpondu",
 			"number": "1763"
 		},
 		{
 			"english": "bring",
-			"french": "amenÌ©",
+			"french": "amenI",
 			"number": "1764"
 		},
 		{
@@ -37277,7 +37382,7 @@
 		},
 		{
 			"english": "prepare",
-			"french": "prÌ©pare",
+			"french": "prIpare",
 			"number": "1775"
 		},
 		{
@@ -37302,12 +37407,12 @@
 		},
 		{
 			"english": "destroy",
-			"french": "dÌ©truit",
+			"french": "dItruit",
 			"number": "1780"
 		},
 		{
 			"english": "popular",
-			"french": "cÌ©lÌ¬bre",
+			"french": "cIlIbre",
 			"number": "1781"
 		},
 		{
@@ -37327,17 +37432,17 @@
 		},
 		{
 			"english": "prevent",
-			"french": "prÌ©venir",
+			"french": "prIvenir",
 			"number": "1785"
 		},
 		{
 			"english": "brings back",
-			"french": "ramÌ¬ne",
+			"french": "ramIne",
 			"number": "1786"
 		},
 		{
 			"english": "arrived",
-			"french": "arrivÌ©s",
+			"french": "arrivIs",
 			"number": "1787"
 		},
 		{
@@ -37362,7 +37467,7 @@
 		},
 		{
 			"english": "stars",
-			"french": "Ì©toiles",
+			"french": "Itoiles",
 			"number": "1792"
 		},
 		{
@@ -37417,7 +37522,7 @@
 		},
 		{
 			"english": "layer",
-			"french": "couchÌ©",
+			"french": "couchI",
 			"number": "1803"
 		},
 		{
@@ -37437,7 +37542,7 @@
 		},
 		{
 			"english": "pleasant",
-			"french": "agrÌ©able",
+			"french": "agrIable",
 			"number": "1807"
 		},
 		{
@@ -37447,12 +37552,12 @@
 		},
 		{
 			"english": "prefer",
-			"french": "prÌ©fÌ©rÌ©",
+			"french": "prIfIrI",
 			"number": "1809"
 		},
 		{
 			"english": "castle",
-			"french": "chÌ¢teau",
+			"french": "chIteau",
 			"number": "1810"
 		},
 		{
@@ -37467,7 +37572,7 @@
 		},
 		{
 			"english": "discover",
-			"french": "dÌ©couvrir",
+			"french": "dIcouvrir",
 			"number": "1813"
 		},
 		{
@@ -37482,7 +37587,7 @@
 		},
 		{
 			"english": "zero",
-			"french": "zÌ©ro",
+			"french": "zIro",
 			"number": "1816"
 		},
 		{
@@ -37492,7 +37597,7 @@
 		},
 		{
 			"english": "sides",
-			"french": "cÌ«tÌ©s",
+			"french": "cItIs",
 			"number": "1818"
 		},
 		{
@@ -37522,7 +37627,7 @@
 		},
 		{
 			"english": "survey",
-			"french": "lÌ¬ve",
+			"french": "lIve",
 			"number": "1824"
 		},
 		{
@@ -37572,7 +37677,7 @@
 		},
 		{
 			"english": "details",
-			"french": "dÌ©tails",
+			"french": "dItails",
 			"number": "1834"
 		},
 		{
@@ -37582,7 +37687,7 @@
 		},
 		{
 			"english": "past",
-			"french": "passÌ©e",
+			"french": "passIe",
 			"number": "1836"
 		},
 		{
@@ -37602,7 +37707,7 @@
 		},
 		{
 			"english": "private",
-			"french": "privÌ©",
+			"french": "privI",
 			"number": "1840"
 		},
 		{
@@ -37612,7 +37717,7 @@
 		},
 		{
 			"english": "killed",
-			"french": "tuÌ©e",
+			"french": "tuIe",
 			"number": "1842"
 		},
 		{
@@ -37632,7 +37737,7 @@
 		},
 		{
 			"english": "airport",
-			"french": "aÌ©roport",
+			"french": "aIroport",
 			"number": "1846"
 		},
 		{
@@ -37642,7 +37747,7 @@
 		},
 		{
 			"english": "cocksucker",
-			"french": "enculÌ©",
+			"french": "enculI",
 			"number": "1848"
 		},
 		{
@@ -37707,7 +37812,7 @@
 		},
 		{
 			"english": "defend",
-			"french": "dÌ©fendre",
+			"french": "dIfendre",
 			"number": "1861"
 		},
 		{
@@ -37717,12 +37822,12 @@
 		},
 		{
 			"english": "R",
-			"french": "¥",
+			"french": "",
 			"number": "1863"
 		},
 		{
 			"english": "forest",
-			"french": "forÌ»t",
+			"french": "forIt",
 			"number": "1864"
 		},
 		{
@@ -37752,7 +37857,7 @@
 		},
 		{
 			"english": "henceforth",
-			"french": "dÌ©sormais",
+			"french": "dIsormais",
 			"number": "1870"
 		},
 		{
@@ -37762,12 +37867,12 @@
 		},
 		{
 			"english": "latest",
-			"french": "derniÌ¬res",
+			"french": "derniIres",
 			"number": "1872"
 		},
 		{
 			"english": "fall",
-			"french": "tombÌ©e",
+			"french": "tombIe",
 			"number": "1873"
 		},
 		{
@@ -37777,12 +37882,12 @@
 		},
 		{
 			"english": "outside",
-			"french": "extÌ©rieur",
+			"french": "extIrieur",
 			"number": "1875"
 		},
 		{
 			"english": "desert",
-			"french": "dÌ©sert",
+			"french": "dIsert",
 			"number": "1876"
 		},
 		{
@@ -37797,7 +37902,7 @@
 		},
 		{
 			"english": "chopped off",
-			"french": "coupÌ©",
+			"french": "coupI",
 			"number": "1879"
 		},
 		{
@@ -37807,7 +37912,7 @@
 		},
 		{
 			"english": "help",
-			"french": "aidÌ©",
+			"french": "aidI",
 			"number": "1881"
 		},
 		{
@@ -37852,12 +37957,12 @@
 		},
 		{
 			"english": "guests",
-			"french": "invitÌ©s",
+			"french": "invitIs",
 			"number": "1890"
 		},
 		{
 			"english": "series",
-			"french": "sÌ©rie",
+			"french": "sIrie",
 			"number": "1891"
 		},
 		{
@@ -37882,7 +37987,7 @@
 		},
 		{
 			"english": "married",
-			"french": "mariÌ©s",
+			"french": "mariIs",
 			"number": "1896"
 		},
 		{
@@ -37902,7 +38007,7 @@
 		},
 		{
 			"english": "accepted",
-			"french": "acceptÌ©",
+			"french": "acceptI",
 			"number": "1900"
 		},
 		{
@@ -38002,7 +38107,7 @@
 		},
 		{
 			"english": "also",
-			"french": "Ì©galement",
+			"french": "Igalement",
 			"number": "1920"
 		},
 		{
@@ -38047,7 +38152,7 @@
 		},
 		{
 			"english": "enter",
-			"french": "entrÌ©",
+			"french": "entrI",
 			"number": "1929"
 		},
 		{
@@ -38062,7 +38167,7 @@
 		},
 		{
 			"english": "to repair",
-			"french": "rÌ©parer",
+			"french": "rIparer",
 			"number": "1932"
 		},
 		{
@@ -38072,7 +38177,7 @@
 		},
 		{
 			"english": "hidden",
-			"french": "cachÌ©",
+			"french": "cachI",
 			"number": "1934"
 		},
 		{
@@ -38102,7 +38207,7 @@
 		},
 		{
 			"english": "found",
-			"french": "trouvÌ©e",
+			"french": "trouvIe",
 			"number": "1940"
 		},
 		{
@@ -38117,7 +38222,7 @@
 		},
 		{
 			"english": "sword",
-			"french": "Ì©pÌ©e",
+			"french": "IpIe",
 			"number": "1943"
 		},
 		{
@@ -38162,7 +38267,7 @@
 		},
 		{
 			"english": "appreciate",
-			"french": "apprÌ©cie",
+			"french": "apprIcie",
 			"number": "1952"
 		},
 		{
@@ -38182,7 +38287,7 @@
 		},
 		{
 			"english": "create",
-			"french": "crÌ©er",
+			"french": "crIer",
 			"number": "1956"
 		},
 		{
@@ -38192,7 +38297,7 @@
 		},
 		{
 			"english": "thrown",
-			"french": "jetÌ©",
+			"french": "jetI",
 			"number": "1958"
 		},
 		{
@@ -38212,12 +38317,12 @@
 		},
 		{
 			"english": "wake",
-			"french": "rÌ©veiller",
+			"french": "rIveiller",
 			"number": "1962"
 		},
 		{
 			"english": "lesson",
-			"french": "leÌ¤on",
+			"french": "leIon",
 			"number": "1963"
 		},
 		{
@@ -38237,7 +38342,7 @@
 		},
 		{
 			"english": "ghost",
-			"french": "fantÌ«me",
+			"french": "fantIme",
 			"number": "1967"
 		},
 		{
@@ -38287,7 +38392,7 @@
 		},
 		{
 			"english": "in use",
-			"french": "utilisÌ©",
+			"french": "utilisI",
 			"number": "1977"
 		},
 		{
@@ -38317,7 +38422,7 @@
 		},
 		{
 			"english": "cost",
-			"french": "coÌÈte",
+			"french": "coIEte",
 			"number": "1983"
 		},
 		{
@@ -38332,7 +38437,7 @@
 		},
 		{
 			"english": "American",
-			"french": "amÌ©ricaine",
+			"french": "amIricaine",
 			"number": "1986"
 		},
 		{
@@ -38362,7 +38467,7 @@
 		},
 		{
 			"english": "exchange",
-			"french": "Ì©change",
+			"french": "Ichange",
 			"number": "1992"
 		},
 		{
@@ -38377,7 +38482,7 @@
 		},
 		{
 			"english": "get rid of",
-			"french": "dÌ©barrasser",
+			"french": "dIbarrasser",
 			"number": "1995"
 		},
 		{
@@ -38406,6 +38511,830 @@
 			"number": "2000"
 		}
 	];
+
+/***/ },
+/* 237 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!***************************************************
+	 * mark.js v8.4.0
+	 * https://github.com/julmot/mark.js
+	 * Copyright (c) 2014–2016, Julian Motz
+	 * Released under the MIT license https://git.io/vwTVl
+	 *****************************************************/
+
+	"use strict";
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	(function (factory, window, document) {
+	    if (true) {
+	        !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+	            return factory(window, document);
+	        }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	    } else if ((typeof module === "undefined" ? "undefined" : _typeof(module)) === "object" && module.exports) {
+	        module.exports = factory(window, document);
+	    } else {
+	        factory(window, document);
+	    }
+	})(function (window, document) {
+	    var Mark = function () {
+	        function Mark(ctx) {
+	            _classCallCheck(this, Mark);
+
+	            this.ctx = ctx;
+	        }
+
+	        _createClass(Mark, [{
+	            key: "log",
+	            value: function log(msg) {
+	                var level = arguments.length <= 1 || arguments[1] === undefined ? "debug" : arguments[1];
+
+	                var log = this.opt.log;
+	                if (!this.opt.debug) {
+	                    return;
+	                }
+	                if ((typeof log === "undefined" ? "undefined" : _typeof(log)) === "object" && typeof log[level] === "function") {
+	                    log[level]("mark.js: " + msg);
+	                }
+	            }
+	        }, {
+	            key: "escapeStr",
+	            value: function escapeStr(str) {
+	                return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+	            }
+	        }, {
+	            key: "createRegExp",
+	            value: function createRegExp(str) {
+	                str = this.escapeStr(str);
+	                if (Object.keys(this.opt.synonyms).length) {
+	                    str = this.createSynonymsRegExp(str);
+	                }
+	                if (this.opt.ignoreJoiners) {
+	                    str = this.setupIgnoreJoinersRegExp(str);
+	                }
+	                if (this.opt.diacritics) {
+	                    str = this.createDiacriticsRegExp(str);
+	                }
+	                str = this.createMergedBlanksRegExp(str);
+	                if (this.opt.ignoreJoiners) {
+	                    str = this.createIgnoreJoinersRegExp(str);
+	                }
+	                str = this.createAccuracyRegExp(str);
+	                return str;
+	            }
+	        }, {
+	            key: "createSynonymsRegExp",
+	            value: function createSynonymsRegExp(str) {
+	                var syn = this.opt.synonyms,
+	                    sens = this.opt.caseSensitive ? "" : "i";
+	                for (var index in syn) {
+	                    if (syn.hasOwnProperty(index)) {
+	                        var value = syn[index],
+	                            k1 = this.escapeStr(index),
+	                            k2 = this.escapeStr(value);
+	                        str = str.replace(new RegExp("(" + k1 + "|" + k2 + ")", "gm" + sens), "(" + k1 + "|" + k2 + ")");
+	                    }
+	                }
+	                return str;
+	            }
+	        }, {
+	            key: "setupIgnoreJoinersRegExp",
+	            value: function setupIgnoreJoinersRegExp(str) {
+	                return str.replace(/[^(|)]/g, function (val, indx, original) {
+	                    var nextChar = original.charAt(indx + 1);
+	                    if (/[(|)]/.test(nextChar) || nextChar === "") {
+	                        return val;
+	                    } else {
+	                        return val + "\u0000";
+	                    }
+	                });
+	            }
+	        }, {
+	            key: "createIgnoreJoinersRegExp",
+	            value: function createIgnoreJoinersRegExp(str) {
+	                return str.split("\u0000").join("[\\u00ad|\\u200b|\\u200c|\\u200d]?");
+	            }
+	        }, {
+	            key: "createDiacriticsRegExp",
+	            value: function createDiacriticsRegExp(str) {
+	                var sens = this.opt.caseSensitive ? "" : "i",
+	                    dct = this.opt.caseSensitive ? ["aàáâãäåāąă", "AÀÁÂÃÄÅĀĄĂ", "cçćč", "CÇĆČ", "dđď", "DĐĎ", "eèéêëěēę", "EÈÉÊËĚĒĘ", "iìíîïī", "IÌÍÎÏĪ", "lł", "LŁ", "nñňń", "NÑŇŃ", "oòóôõöøō", "OÒÓÔÕÖØŌ", "rř", "RŘ", "sšśș", "SŠŚȘ", "tťț", "TŤȚ", "uùúûüůū", "UÙÚÛÜŮŪ", "yÿý", "YŸÝ", "zžżź", "ZŽŻŹ"] : ["aÀÁÂÃÄÅàáâãäåĀāąĄăĂ", "cÇçćĆčČ", "dđĐďĎ", "eÈÉÊËèéêëěĚĒēęĘ", "iÌÍÎÏìíîïĪī", "lłŁ", "nÑñňŇńŃ", "oÒÓÔÕÖØòóôõöøŌō", "rřŘ", "sŠšśŚșȘ", "tťŤțȚ", "uÙÚÛÜùúûüůŮŪū", "yŸÿýÝ", "zŽžżŻźŹ"];
+	                var handled = [];
+	                str.split("").forEach(function (ch) {
+	                    dct.every(function (dct) {
+	                        if (dct.indexOf(ch) !== -1) {
+	                            if (handled.indexOf(dct) > -1) {
+	                                return false;
+	                            }
+
+	                            str = str.replace(new RegExp("[" + dct + "]", "gm" + sens), "[" + dct + "]");
+	                            handled.push(dct);
+	                        }
+	                        return true;
+	                    });
+	                });
+	                return str;
+	            }
+	        }, {
+	            key: "createMergedBlanksRegExp",
+	            value: function createMergedBlanksRegExp(str) {
+	                return str.replace(/[\s]+/gmi, "[\\s]*");
+	            }
+	        }, {
+	            key: "createAccuracyRegExp",
+	            value: function createAccuracyRegExp(str) {
+	                var _this = this;
+
+	                var acc = this.opt.accuracy,
+	                    val = typeof acc === "string" ? acc : acc.value,
+	                    ls = typeof acc === "string" ? [] : acc.limiters,
+	                    lsJoin = "";
+	                ls.forEach(function (limiter) {
+	                    lsJoin += "|" + _this.escapeStr(limiter);
+	                });
+	                switch (val) {
+	                    case "partially":
+	                    default:
+	                        return "()(" + str + ")";
+	                    case "complementary":
+	                        return "()([^\\s" + lsJoin + "]*" + str + "[^\\s" + lsJoin + "]*)";
+	                    case "exactly":
+	                        return "(^|\\s" + lsJoin + ")(" + str + ")(?=$|\\s" + lsJoin + ")";
+	                }
+	            }
+	        }, {
+	            key: "getSeparatedKeywords",
+	            value: function getSeparatedKeywords(sv) {
+	                var _this2 = this;
+
+	                var stack = [];
+	                sv.forEach(function (kw) {
+	                    if (!_this2.opt.separateWordSearch) {
+	                        if (kw.trim() && stack.indexOf(kw) === -1) {
+	                            stack.push(kw);
+	                        }
+	                    } else {
+	                        kw.split(" ").forEach(function (kwSplitted) {
+	                            if (kwSplitted.trim() && stack.indexOf(kwSplitted) === -1) {
+	                                stack.push(kwSplitted);
+	                            }
+	                        });
+	                    }
+	                });
+	                return {
+	                    "keywords": stack.sort(function (a, b) {
+	                        return b.length - a.length;
+	                    }),
+	                    "length": stack.length
+	                };
+	            }
+	        }, {
+	            key: "getTextNodes",
+	            value: function getTextNodes(cb) {
+	                var _this3 = this;
+
+	                var val = "",
+	                    nodes = [];
+	                this.iterator.forEachNode(NodeFilter.SHOW_TEXT, function (node) {
+	                    nodes.push({
+	                        start: val.length,
+	                        end: (val += node.textContent).length,
+	                        node: node
+	                    });
+	                }, function (node) {
+	                    if (_this3.matchesExclude(node.parentNode, true)) {
+	                        return NodeFilter.FILTER_REJECT;
+	                    } else {
+	                        return NodeFilter.FILTER_ACCEPT;
+	                    }
+	                }, function () {
+	                    cb({
+	                        value: val,
+	                        nodes: nodes
+	                    });
+	                });
+	            }
+	        }, {
+	            key: "matchesExclude",
+	            value: function matchesExclude(el, exclM) {
+	                var excl = this.opt.exclude.concat(["script", "style", "title", "head", "html"]);
+	                if (exclM) {
+	                    excl = excl.concat(["*[data-markjs='true']"]);
+	                }
+	                return DOMIterator.matches(el, excl);
+	            }
+	        }, {
+	            key: "wrapRangeInTextNode",
+	            value: function wrapRangeInTextNode(node, start, end) {
+	                var hEl = !this.opt.element ? "mark" : this.opt.element,
+	                    startNode = node.splitText(start),
+	                    ret = startNode.splitText(end - start);
+	                var repl = document.createElement(hEl);
+	                repl.setAttribute("data-markjs", "true");
+	                if (this.opt.className) {
+	                    repl.setAttribute("class", this.opt.className);
+	                }
+	                repl.textContent = startNode.textContent;
+	                startNode.parentNode.replaceChild(repl, startNode);
+	                return ret;
+	            }
+	        }, {
+	            key: "wrapRangeInMappedTextNode",
+	            value: function wrapRangeInMappedTextNode(dict, start, end, filterCb, eachCb) {
+	                var _this4 = this;
+
+	                dict.nodes.every(function (n, i) {
+	                    var sibl = dict.nodes[i + 1];
+	                    if (typeof sibl === "undefined" || sibl.start > start) {
+	                        var _ret = function () {
+	                            var s = start - n.start,
+	                                e = (end > n.end ? n.end : end) - n.start;
+	                            if (filterCb(n.node)) {
+	                                n.node = _this4.wrapRangeInTextNode(n.node, s, e);
+
+	                                var startStr = dict.value.substr(0, n.start),
+	                                    endStr = dict.value.substr(e + n.start);
+	                                dict.value = startStr + endStr;
+	                                dict.nodes.forEach(function (k, j) {
+	                                    if (j >= i) {
+	                                        if (dict.nodes[j].start > 0 && j !== i) {
+	                                            dict.nodes[j].start -= e;
+	                                        }
+	                                        dict.nodes[j].end -= e;
+	                                    }
+	                                });
+	                                end -= e;
+	                                eachCb(n.node.previousSibling, n.start);
+	                                if (end > n.end) {
+	                                    start = n.end;
+	                                } else {
+	                                    return {
+	                                        v: false
+	                                    };
+	                                }
+	                            }
+	                        }();
+
+	                        if ((typeof _ret === "undefined" ? "undefined" : _typeof(_ret)) === "object") return _ret.v;
+	                    }
+	                    return true;
+	                });
+	            }
+	        }, {
+	            key: "wrapMatches",
+	            value: function wrapMatches(regex, ignoreGroups, filterCb, eachCb, endCb) {
+	                var _this5 = this;
+
+	                var matchIdx = ignoreGroups === 0 ? 0 : ignoreGroups + 1;
+	                this.getTextNodes(function (dict) {
+	                    dict.nodes.forEach(function (node) {
+	                        node = node.node;
+	                        var match = void 0;
+	                        while ((match = regex.exec(node.textContent)) !== null && match[matchIdx] !== "") {
+	                            if (!filterCb(match[matchIdx], node)) {
+	                                continue;
+	                            }
+	                            var pos = match.index;
+	                            if (matchIdx !== 0) {
+	                                for (var i = 1; i < matchIdx; i++) {
+	                                    pos += match[i].length;
+	                                }
+	                            }
+	                            node = _this5.wrapRangeInTextNode(node, pos, pos + match[matchIdx].length);
+	                            eachCb(node.previousSibling);
+
+	                            regex.lastIndex = 0;
+	                        }
+	                    });
+	                    endCb();
+	                });
+	            }
+	        }, {
+	            key: "wrapMatchesAcrossElements",
+	            value: function wrapMatchesAcrossElements(regex, ignoreGroups, filterCb, eachCb, endCb) {
+	                var _this6 = this;
+
+	                var matchIdx = ignoreGroups === 0 ? 0 : ignoreGroups + 1;
+	                this.getTextNodes(function (dict) {
+	                    var match = void 0;
+	                    while ((match = regex.exec(dict.value)) !== null && match[matchIdx] !== "") {
+	                        var start = match.index;
+	                        if (matchIdx !== 0) {
+	                            for (var i = 1; i < matchIdx; i++) {
+	                                start += match[i].length;
+	                            }
+	                        }
+	                        var end = start + match[matchIdx].length;
+
+	                        _this6.wrapRangeInMappedTextNode(dict, start, end, function (node) {
+	                            return filterCb(match[matchIdx], node);
+	                        }, function (node, lastIndex) {
+	                            regex.lastIndex = lastIndex;
+	                            eachCb(node);
+	                        });
+	                    }
+	                    endCb();
+	                });
+	            }
+	        }, {
+	            key: "unwrapMatches",
+	            value: function unwrapMatches(node) {
+	                var parent = node.parentNode;
+	                var docFrag = document.createDocumentFragment();
+	                while (node.firstChild) {
+	                    docFrag.appendChild(node.removeChild(node.firstChild));
+	                }
+	                parent.replaceChild(docFrag, node);
+	                parent.normalize();
+	            }
+	        }, {
+	            key: "markRegExp",
+	            value: function markRegExp(regexp, opt) {
+	                var _this7 = this;
+
+	                this.opt = opt;
+	                this.log("Searching with expression \"" + regexp + "\"");
+	                var totalMatches = 0,
+	                    fn = "wrapMatches";
+	                var eachCb = function eachCb(element) {
+	                    totalMatches++;
+	                    _this7.opt.each(element);
+	                };
+	                if (this.opt.acrossElements) {
+	                    fn = "wrapMatchesAcrossElements";
+	                }
+	                this[fn](regexp, this.opt.ignoreGroups, function (match, node) {
+	                    return _this7.opt.filter(node, match, totalMatches);
+	                }, eachCb, function () {
+	                    if (totalMatches === 0) {
+	                        _this7.opt.noMatch(regexp);
+	                    }
+	                    _this7.opt.done(totalMatches);
+	                });
+	            }
+	        }, {
+	            key: "mark",
+	            value: function mark(sv, opt) {
+	                var _this8 = this;
+
+	                this.opt = opt;
+	                var totalMatches = 0,
+	                    fn = "wrapMatches";
+
+	                var _getSeparatedKeywords = this.getSeparatedKeywords(typeof sv === "string" ? [sv] : sv);
+
+	                var kwArr = _getSeparatedKeywords.keywords;
+	                var kwArrLen = _getSeparatedKeywords.length;
+	                var sens = this.opt.caseSensitive ? "" : "i";
+	                var handler = function handler(kw) {
+	                    var regex = new RegExp(_this8.createRegExp(kw), "gm" + sens),
+	                        matches = 0;
+	                    _this8.log("Searching with expression \"" + regex + "\"");
+	                    _this8[fn](regex, 1, function (term, node) {
+	                        return _this8.opt.filter(node, kw, totalMatches, matches);
+	                    }, function (element) {
+	                        matches++;
+	                        totalMatches++;
+	                        _this8.opt.each(element);
+	                    }, function () {
+	                        if (matches === 0) {
+	                            _this8.opt.noMatch(kw);
+	                        }
+	                        if (kwArr[kwArrLen - 1] === kw) {
+	                            _this8.opt.done(totalMatches);
+	                        } else {
+	                            handler(kwArr[kwArr.indexOf(kw) + 1]);
+	                        }
+	                    });
+	                };
+	                if (this.opt.acrossElements) {
+	                    fn = "wrapMatchesAcrossElements";
+	                }
+	                if (kwArrLen === 0) {
+	                    this.opt.done(totalMatches);
+	                } else {
+	                    handler(kwArr[0]);
+	                }
+	            }
+	        }, {
+	            key: "unmark",
+	            value: function unmark(opt) {
+	                var _this9 = this;
+
+	                this.opt = opt;
+	                var sel = this.opt.element ? this.opt.element : "*";
+	                sel += "[data-markjs]";
+	                if (this.opt.className) {
+	                    sel += "." + this.opt.className;
+	                }
+	                this.log("Removal selector \"" + sel + "\"");
+	                this.iterator.forEachNode(NodeFilter.SHOW_ELEMENT, function (node) {
+	                    _this9.unwrapMatches(node);
+	                }, function (node) {
+	                    var matchesSel = DOMIterator.matches(node, sel),
+	                        matchesExclude = _this9.matchesExclude(node, false);
+	                    if (!matchesSel || matchesExclude) {
+	                        return NodeFilter.FILTER_REJECT;
+	                    } else {
+	                        return NodeFilter.FILTER_ACCEPT;
+	                    }
+	                }, this.opt.done);
+	            }
+	        }, {
+	            key: "opt",
+	            set: function set(val) {
+	                this._opt = _extends({}, {
+	                    "element": "",
+	                    "className": "",
+	                    "exclude": [],
+	                    "iframes": false,
+	                    "separateWordSearch": true,
+	                    "diacritics": true,
+	                    "synonyms": {},
+	                    "accuracy": "partially",
+	                    "acrossElements": false,
+	                    "caseSensitive": false,
+	                    "ignoreJoiners": false,
+	                    "ignoreGroups": 0,
+	                    "each": function each() {},
+	                    "noMatch": function noMatch() {},
+	                    "filter": function filter() {
+	                        return true;
+	                    },
+	                    "done": function done() {},
+	                    "debug": false,
+	                    "log": window.console
+	                }, val);
+	            },
+	            get: function get() {
+	                return this._opt;
+	            }
+	        }, {
+	            key: "iterator",
+	            get: function get() {
+	                if (!this._iterator) {
+	                    this._iterator = new DOMIterator(this.ctx, this.opt.iframes, this.opt.exclude);
+	                }
+	                return this._iterator;
+	            }
+	        }]);
+
+	        return Mark;
+	    }();
+
+	    var DOMIterator = function () {
+	        function DOMIterator(ctx) {
+	            var iframes = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+	            var exclude = arguments.length <= 2 || arguments[2] === undefined ? [] : arguments[2];
+
+	            _classCallCheck(this, DOMIterator);
+
+	            this.ctx = ctx;
+
+	            this.iframes = iframes;
+
+	            this.exclude = exclude;
+	        }
+
+	        _createClass(DOMIterator, [{
+	            key: "getContexts",
+	            value: function getContexts() {
+	                var ctx = void 0,
+	                    filteredCtx = [];
+	                if (typeof this.ctx === "undefined" || !this.ctx) {
+	                    ctx = [];
+	                } else if (NodeList.prototype.isPrototypeOf(this.ctx)) {
+	                    ctx = Array.prototype.slice.call(this.ctx);
+	                } else if (Array.isArray(this.ctx)) {
+	                    ctx = this.ctx;
+	                } else {
+	                    ctx = [this.ctx];
+	                }
+
+	                ctx.forEach(function (ctx) {
+	                    var isDescendant = filteredCtx.filter(function (contexts) {
+	                        return contexts.contains(ctx);
+	                    }).length > 0;
+	                    if (filteredCtx.indexOf(ctx) === -1 && !isDescendant) {
+	                        filteredCtx.push(ctx);
+	                    }
+	                });
+	                return filteredCtx;
+	            }
+	        }, {
+	            key: "getIframeContents",
+	            value: function getIframeContents(ifr, successFn) {
+	                var errorFn = arguments.length <= 2 || arguments[2] === undefined ? function () {} : arguments[2];
+
+	                var doc = void 0;
+	                try {
+	                    var ifrWin = ifr.contentWindow;
+	                    doc = ifrWin.document;
+	                    if (!ifrWin || !doc) {
+	                        throw new Error("iframe inaccessible");
+	                    }
+	                } catch (e) {
+	                    errorFn();
+	                }
+	                if (doc) {
+	                    successFn(doc);
+	                }
+	            }
+	        }, {
+	            key: "onIframeReady",
+	            value: function onIframeReady(ifr, successFn, errorFn) {
+	                var _this10 = this;
+
+	                try {
+	                    (function () {
+	                        var ifrWin = ifr.contentWindow,
+	                            bl = "about:blank",
+	                            compl = "complete",
+	                            isBlank = function isBlank() {
+	                            var src = ifr.getAttribute("src").trim(),
+	                                href = ifrWin.location.href;
+	                            return href === bl && src !== bl && src;
+	                        },
+	                            observeOnload = function observeOnload() {
+	                            var listener = function listener() {
+	                                try {
+	                                    if (!isBlank()) {
+	                                        ifr.removeEventListener("load", listener);
+	                                        _this10.getIframeContents(ifr, successFn, errorFn);
+	                                    }
+	                                } catch (e) {
+	                                    errorFn();
+	                                }
+	                            };
+	                            ifr.addEventListener("load", listener);
+	                        };
+	                        if (ifrWin.document.readyState === compl) {
+	                            if (isBlank()) {
+	                                observeOnload();
+	                            } else {
+	                                _this10.getIframeContents(ifr, successFn, errorFn);
+	                            }
+	                        } else {
+	                            observeOnload();
+	                        }
+	                    })();
+	                } catch (e) {
+	                    errorFn();
+	                }
+	            }
+	        }, {
+	            key: "waitForIframes",
+	            value: function waitForIframes(ctx, done) {
+	                var _this11 = this;
+
+	                var eachCalled = 0;
+	                this.forEachIframe(ctx, function () {
+	                    return true;
+	                }, function (ifr) {
+	                    eachCalled++;
+	                    _this11.waitForIframes(ifr.querySelector("html"), function () {
+	                        if (! --eachCalled) {
+	                            done();
+	                        }
+	                    });
+	                }, function (handled) {
+	                    if (!handled) {
+	                        done();
+	                    }
+	                });
+	            }
+	        }, {
+	            key: "forEachIframe",
+	            value: function forEachIframe(ctx, filter, each) {
+	                var _this12 = this;
+
+	                var end = arguments.length <= 3 || arguments[3] === undefined ? function () {} : arguments[3];
+
+	                var ifr = ctx.querySelectorAll("iframe"),
+	                    open = ifr.length,
+	                    handled = 0;
+	                ifr = Array.prototype.slice.call(ifr);
+	                var checkEnd = function checkEnd() {
+	                    if (--open <= 0) {
+	                        end(handled);
+	                    }
+	                };
+	                if (!open) {
+	                    checkEnd();
+	                }
+	                ifr.forEach(function (ifr) {
+	                    if (DOMIterator.matches(ifr, _this12.exclude)) {
+	                        checkEnd();
+	                    } else {
+	                        _this12.onIframeReady(ifr, function (con) {
+	                            if (filter(ifr)) {
+	                                handled++;
+	                                each(con);
+	                            }
+	                            checkEnd();
+	                        }, checkEnd);
+	                    }
+	                });
+	            }
+	        }, {
+	            key: "createIterator",
+	            value: function createIterator(ctx, whatToShow, filter) {
+	                return document.createNodeIterator(ctx, whatToShow, filter, false);
+	            }
+	        }, {
+	            key: "createInstanceOnIframe",
+	            value: function createInstanceOnIframe(contents) {
+	                return new DOMIterator(contents.querySelector("html"), this.iframes);
+	            }
+	        }, {
+	            key: "compareNodeIframe",
+	            value: function compareNodeIframe(node, prevNode, ifr) {
+	                var compCurr = node.compareDocumentPosition(ifr),
+	                    prev = Node.DOCUMENT_POSITION_PRECEDING;
+	                if (compCurr & prev) {
+	                    if (prevNode !== null) {
+	                        var compPrev = prevNode.compareDocumentPosition(ifr),
+	                            after = Node.DOCUMENT_POSITION_FOLLOWING;
+	                        if (compPrev & after) {
+	                            return true;
+	                        }
+	                    } else {
+	                        return true;
+	                    }
+	                }
+	                return false;
+	            }
+	        }, {
+	            key: "getIteratorNode",
+	            value: function getIteratorNode(itr) {
+	                var prevNode = itr.previousNode();
+	                var node = void 0;
+	                if (prevNode === null) {
+	                    node = itr.nextNode();
+	                } else {
+	                    node = itr.nextNode() && itr.nextNode();
+	                }
+	                return {
+	                    prevNode: prevNode,
+	                    node: node
+	                };
+	            }
+	        }, {
+	            key: "checkIframeFilter",
+	            value: function checkIframeFilter(node, prevNode, currIfr, ifr) {
+	                var key = false,
+	                    handled = false;
+	                ifr.forEach(function (ifrDict, i) {
+	                    if (ifrDict.val === currIfr) {
+	                        key = i;
+	                        handled = ifrDict.handled;
+	                    }
+	                });
+	                if (this.compareNodeIframe(node, prevNode, currIfr)) {
+	                    if (key === false && !handled) {
+	                        ifr.push({
+	                            val: currIfr,
+	                            handled: true
+	                        });
+	                    } else if (key !== false && !handled) {
+	                        ifr[key].handled = true;
+	                    }
+	                    return true;
+	                }
+	                if (key === false) {
+	                    ifr.push({
+	                        val: currIfr,
+	                        handled: false
+	                    });
+	                }
+	                return false;
+	            }
+	        }, {
+	            key: "handleOpenIframes",
+	            value: function handleOpenIframes(ifr, whatToShow, eCb, fCb) {
+	                var _this13 = this;
+
+	                ifr.forEach(function (ifrDict) {
+	                    if (!ifrDict.handled) {
+	                        _this13.getIframeContents(ifrDict.val, function (con) {
+	                            _this13.createInstanceOnIframe(con).forEachNode(whatToShow, eCb, fCb);
+	                        });
+	                    }
+	                });
+	            }
+	        }, {
+	            key: "iterateThroughNodes",
+	            value: function iterateThroughNodes(whatToShow, ctx, eachCb, filterCb, doneCb) {
+	                var _this14 = this;
+
+	                var itr = this.createIterator(ctx, whatToShow, filterCb);
+	                var ifr = [],
+	                    node = void 0,
+	                    prevNode = void 0,
+	                    retrieveNodes = function retrieveNodes() {
+	                    var _getIteratorNode = _this14.getIteratorNode(itr);
+
+	                    prevNode = _getIteratorNode.prevNode;
+	                    node = _getIteratorNode.node;
+
+	                    return node;
+	                };
+	                while (retrieveNodes()) {
+	                    if (this.iframes) {
+	                        this.forEachIframe(ctx, function (currIfr) {
+	                            return _this14.checkIframeFilter(node, prevNode, currIfr, ifr);
+	                        }, function (con) {
+	                            _this14.createInstanceOnIframe(con).forEachNode(whatToShow, eachCb, filterCb);
+	                        });
+	                    }
+	                    eachCb(node);
+	                }
+	                if (this.iframes) {
+	                    this.handleOpenIframes(ifr, whatToShow, eachCb, filterCb);
+	                }
+	                doneCb();
+	            }
+	        }, {
+	            key: "forEachNode",
+	            value: function forEachNode(whatToShow, each, filter) {
+	                var _this15 = this;
+
+	                var done = arguments.length <= 3 || arguments[3] === undefined ? function () {} : arguments[3];
+
+	                var contexts = this.getContexts();
+	                var open = contexts.length;
+	                if (!open) {
+	                    done();
+	                }
+	                contexts.forEach(function (ctx) {
+	                    var ready = function ready() {
+	                        _this15.iterateThroughNodes(whatToShow, ctx, each, filter, function () {
+	                            if (--open <= 0) {
+	                                done();
+	                            }
+	                        });
+	                    };
+
+	                    if (_this15.iframes) {
+	                        _this15.waitForIframes(ctx, ready);
+	                    } else {
+	                        ready();
+	                    }
+	                });
+	            }
+	        }], [{
+	            key: "matches",
+	            value: function matches(element, selector) {
+	                var selectors = typeof selector === "string" ? [selector] : selector,
+	                    fn = element.matches || element.matchesSelector || element.msMatchesSelector || element.mozMatchesSelector || element.oMatchesSelector || element.webkitMatchesSelector;
+	                if (fn) {
+	                    var match = false;
+	                    selectors.every(function (sel) {
+	                        if (fn.call(element, sel)) {
+	                            match = true;
+	                            return false;
+	                        }
+	                        return true;
+	                    });
+	                    return match;
+	                } else {
+	                    return false;
+	                }
+	            }
+	        }]);
+
+	        return DOMIterator;
+	    }();
+
+	    window.Mark = function (ctx) {
+	        var _this16 = this;
+
+	        var instance = new Mark(ctx);
+	        this.mark = function (sv, opt) {
+	            instance.mark(sv, opt);
+	            return _this16;
+	        };
+	        this.markRegExp = function (sv, opt) {
+	            instance.markRegExp(sv, opt);
+	            return _this16;
+	        };
+	        this.unmark = function (opt) {
+	            instance.unmark(opt);
+	            return _this16;
+	        };
+	        return this;
+	    };
+
+	    return window.Mark;
+	}, window, document);
+
 
 /***/ }
 /******/ ]);

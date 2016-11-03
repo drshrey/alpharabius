@@ -16,9 +16,9 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.handlePowerChange = this.handlePowerChange.bind(this);
     this.handleButtonChange = this.handleButtonChange.bind(this);
     this.handleSliderChange = this.handleSliderChange.bind(this);
+    this.handlePowerChange = this.handlePowerChange.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       language: this.props.language,
@@ -28,20 +28,6 @@ class App extends Component {
   }
 
   componentDidMount(){
-    console.log(this.props);
-  }
-
-  handlePowerChange(event){
-    console.log("IN POWER");
-    console.log(event.target.checked);
-    this.props.dispatch({
-      type: 'TOGGLE_POWER',
-      power: event.target.checked
-    });
-    this.setState({ power: event.target.checked });
-    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
-      chrome.tabs.sendMessage(tabs[0].id, {"power": event.target.checked});
-    });
   }
 
   handleButtonChange(){
@@ -64,6 +50,20 @@ class App extends Component {
     });
   }
 
+  handlePowerChange(e){
+    var power = !this.props.power;
+    var language = this.props.language;
+    var immersion = this.props.immersion;
+    this.props.dispatch({
+      type: 'TOGGLE_POWER',
+      power: !this.props.power
+    });
+    this.setState({ power: this.props.power });
+    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
+      chrome.tabs.sendMessage(tabs[0].id, {"language": language, "immersion": immersion, "power": power});
+    });
+  }
+
   handleSliderChange(e){
     this.props.dispatch({
       type: 'SET_IMMERSION',
@@ -82,9 +82,16 @@ class App extends Component {
       <div>
         <img height="70%" width="70%" src={logo}></img>
         <span>
-          <button onClick={this.handleButtonChange}> translate </button>
+          <button
+            onClick={this.handleButtonChange}
+            > translate
+          </button>
           <label style={{ position:"absolute", right:"20px", top:"15px" }} className="switch">
-            <input id="test1" defaultChecked={this.state.checked} onChange={this.handlePowerChange} type="checkbox" />
+            <input
+              checked={this.props.power}
+              onChange={this.handlePowerChange}
+              type="checkbox"
+              />
             <div className="slider round"></div>
           </label>
         </span>
@@ -93,6 +100,7 @@ class App extends Component {
         { this.props.language } <br/><br/>
         <span>immersion</span>:
         { this.props.immersion }
+        { this.props.power }
         <div className="immersion">
             <input id="test" value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
         </div>

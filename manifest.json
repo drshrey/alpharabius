@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "alpharabius",
   "description": "Translate webpages with select words for an immersive language experience",
-  "version": "0.0.0.1",
+  "version": "0.1",
   "background": {
     "scripts": [
       "event.js"
