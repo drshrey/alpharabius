@@ -58,7 +58,7 @@ class App extends Component {
       type: 'TOGGLE_POWER',
       power: !this.props.power
     });
-    this.setState({ power: this.props.power });
+    this.setState({ power: !this.props.power });
     chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
       chrome.tabs.sendMessage(tabs[0].id, {"language": language, "immersion": immersion, "power": power});
     });
@@ -84,6 +84,7 @@ class App extends Component {
         <span>
           <button
             onClick={this.handleButtonChange}
+            disabled={! this.props.power}
             > translate
           </button>
           <label style={{ position:"absolute", right:"20px", top:"15px" }} className="switch">
@@ -100,9 +101,8 @@ class App extends Component {
         { this.props.language } <br/><br/>
         <span>immersion</span>:
         { this.props.immersion }
-        { this.props.power }
         <div className="immersion">
-            <input id="test" value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
+            <input id="test" disabled={! this.props.power} value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
         </div>
         <div className="language">
             <span>language</span>
@@ -116,7 +116,7 @@ class App extends Component {
             <span>to</span>
 
             <span className="language-input">
-                    <select value={this.props.language} onChange={this.handleChange} className="language-input-out">
+                    <select disabled={! this.props.power} value={this.props.language} onChange={this.handleChange} className="language-input-out">
                             <option value="French">french</option>
                             <option value="Spanish">spanish</option>
                             <option value="German">german</option>

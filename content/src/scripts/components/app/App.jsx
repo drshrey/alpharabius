@@ -11,7 +11,8 @@ const SITES = {
   NYTIMES: 'http://www.nytimes.com/',
   WIRED: 'https://www.wired.com/',
   WSJ: 'http://www.wsj.com/',
-  QZ: 'http://qz.com/'
+  QZ: 'http://qz.com/',
+  MEDIUM: 'https://medium.com/'
 }
 
 const mapStateToProps = (state) => {
@@ -53,12 +54,7 @@ function handleWired(uri){
     return document.getElementsByTagName('section');
   }
   if(uri.startsWith(SITES.WIRED)){
-    // let elements = [].slice.call(document.getElementsByClassName('post wide pad-b-50 post-2112715 type-post status-publish format-standard has-post-thumbnail hentry category-business category-magazine tag-magazine-24-11 tag-personal-frontiers promo_status-promo post-layout-fullbleed-gallery-post'));
-    // let moreEl = [].slice.call(document.getElementsByClassName('content link-underline relative body-copy'));
     return document.getElementsByTagName('article');
-    // elements.push(moreEl);
-    // elements.push(articleEl);
-    // return elements;
   }
   if(uri.startsWith(SITES.WIRED + "category/")){
     return document.getElementsById('grid');
@@ -83,7 +79,6 @@ function handleWsj(uri){
 }
 
 function handleQz(uri){
-  console.log("HELLOOO");
   if(uri == SITES.QZ){
     return document.getElementsByTagName('article');
   }
@@ -93,6 +88,11 @@ function handleQz(uri){
 function getElements(){
   let elements = null;
   let baseUri = document.baseURI;
+
+  // DONT use
+  if(baseUri.startsWith(SITES.MEDIUM)){
+    return null;
+  }
 
   // Aeon
   if(baseUri.startsWith(SITES.AEON)){
@@ -123,6 +123,8 @@ function getElements(){
     console.log("QZ");
     return handleQz(baseUri);
   }
+  // WORST CASE PLEASE GOD WORK
+  elements = document.getElementsByTagName('article');
   return elements;
 }
 
@@ -132,15 +134,12 @@ function changeLang(lang, immersion){
   let langKey = null;
   let engTrue = false;
   // Select language
-  console.log(lang);
-  console.log(elements);
   switch (lang){
     case "Portuguese":
       langDict = porteng;
       langKey = "portuguese";
       break;
     case "French":
-      console.log(frencheng);
       langDict = frencheng;
       langKey = "french";
       break;
@@ -179,12 +178,11 @@ function changeLang(lang, immersion){
         let eng = new RegExp("\\b" + randWords[j]["english"] + "\\b");
         let newWord = randWords[j][langKey];
         var new_row = document.createElement('acronym');
-        new_row.innerText = newWord;
-        new_row.title = eng;
+        new_row.title = randWords[j]["english"];
         findAndReplaceDOMText(elements[i], {
           find: eng,
           replace: newWord,
-          wrap: 'acronym'
+          wrap: new_row
         });
       }
     }
@@ -192,10 +190,6 @@ function changeLang(lang, immersion){
 }
 
 function switchPower(language, immersion, power){
-  console.log("HELLLOOOOO");
-  console.log(power);
-  console.log(language);
-  console.log(immersion);
   if(power == false){
     changeLang("English", -1);
   }
@@ -210,7 +204,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.setState({ language: "French", immersion: 5})
+    if(this.props.power == false){
+      return;
+    }
     let el = getElements();
     for(var i = 0; i < el.length; i++){
       originalEl[i] = el[i].innerHTML;
@@ -218,6 +214,12 @@ class App extends Component {
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
         if(request.language && request.immersion){
+          chrome.storage.local.set({"language": request.language}, function(){});
+          chrome.storage.sync.set({"language": request.language}, function(){});
+
+          chrome.storage.local.set({"language": request.language}, function(){});
+          chrome.storage.sync.set({"language": request.language}, function(){});
+
           changeLang(request.language, request.immersion);
         }
       }
@@ -225,11 +227,72 @@ class App extends Component {
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
         if((request.power != null) && request.language && request.immersion){
+          chrome.storage.local.set({"language": request.language}, function(){});
+          chrome.storage.sync.set({"language": request.language}, function(){});
+
+          chrome.storage.local.set({"immersion": request.immersion}, function(){});
+          chrome.storage.sync.set({"immersion": request.immersion}, function(){});
+
+          console.log("POWERRRR");
+          console.log(request.power);
+          chrome.storage.local.set({"power": request.power}, function(){});
+          chrome.storage.sync.set({"power": request.power}, function(){});
+
           switchPower(request.language, request.immersion, request.power);
         }
       }
     );
-    changeLang("French", 5);
+    let startupLang = this.props.language;
+    let startupPower = this.props.power;
+    let startupImmersion = this.props.immersion;
+    let set = false;
+    if(startupLang && startupPower && startupImmersion){
+      set = true;
+      switchPower(startupLang, startupPower, startupImmersion);
+    }
+
+    // check if lang, immersion, power already set
+    if(! set){
+      chrome.storage.local.get(["language", "power", "immersion"], function(items){
+        console.log("local");
+        console.log(items)
+        startupLang = items["language"];
+        startupPower = items["power"];
+        startupImmersion = items["immersion"];
+        console.log("FOUNDNNDNDNDND");
+        console.log(startupLang);
+        console.log(startupImmersion);
+        console.log(startupPower);
+        set = true;
+        switchPower(startupLang, startupImmersion, startupPower);
+      })
+      if(! set){
+        chrome.storage.sync.get(["language", "power", "immersion"], function(items){
+          console.log("sync");
+          console.log(items);
+          startupLang = items["language"];
+          startupPower = items["power"];
+          startupImmersion = items["immersion"];
+          console.log("FOUNDNNDNDNDND SYNC");
+          console.log(startupLang);
+          console.log(startupImmersion);
+          console.log(startupPower);
+          set = true;
+          switchPower(startupLang, startupImmersion, startupPower);
+        });
+        if(! set){
+          chrome.storage.local.set({"language": "French"}, function(){});
+          chrome.storage.sync.set({"language": "French"}, function(){});
+
+          chrome.storage.local.set({"immersion": 3}, function(){});
+          chrome.storage.sync.set({"immersion": 3}, function(){});
+
+          chrome.storage.local.set({"power": true}, function(){});
+          chrome.storage.sync.set({"power": true}, function(){});
+          // switchPower("French", 3, true);
+        }
+      }
+    }
   }
 
   render() {

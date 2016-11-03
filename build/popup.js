@@ -19865,7 +19865,7 @@
 	        type: 'TOGGLE_POWER',
 	        power: !this.props.power
 	      });
-	      this.setState({ power: this.props.power });
+	      this.setState({ power: !this.props.power });
 	      chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
 	        chrome.tabs.sendMessage(tabs[0].id, { "language": language, "immersion": immersion, "power": power });
 	      });
@@ -19897,7 +19897,8 @@
 	          _react2.default.createElement(
 	            'button',
 	            {
-	              onClick: this.handleButtonChange
+	              onClick: this.handleButtonChange,
+	              disabled: !this.props.power
 	            },
 	            ' translate'
 	          ),
@@ -19925,11 +19926,10 @@
 	        ),
 	        ':',
 	        this.props.immersion,
-	        this.props.power,
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'immersion' },
-	          _react2.default.createElement('input', { id: 'test', value: this.props.immersion, onChange: this.handleSliderChange, min: '1', max: '10', type: 'range' })
+	          _react2.default.createElement('input', { id: 'test', disabled: !this.props.power, value: this.props.immersion, onChange: this.handleSliderChange, min: '1', max: '10', type: 'range' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -19962,7 +19962,7 @@
 	            { className: 'language-input' },
 	            _react2.default.createElement(
 	              'select',
-	              { value: this.props.language, onChange: this.handleChange, className: 'language-input-out' },
+	              { disabled: !this.props.power, value: this.props.language, onChange: this.handleChange, className: 'language-input-out' },
 	              _react2.default.createElement(
 	                'option',
 	                { value: 'French' },
