@@ -1,0 +1,10017 @@
+[
+    {
+      "Rank": "1",
+      "spanish": "de",
+      "english": "of",
+      "Notes": "1) This list was created using public/free subtitles, particularly from opensubtitles.org."
+    },
+    {
+      "Rank": "2",
+      "spanish": "que",
+      "english": "what",
+      "Notes": "The order is based on the number of occurences of each word in the subtitles."
+    },
+    {
+      "Rank": "3",
+      "spanish": "no",
+      "english": "no"
+    },
+    {
+      "Rank": "4",
+      "spanish": "a",
+      "english": "to",
+      "Notes": "2) The english translation is by Google and can be un-reliable for some words."
+    },
+    {
+      "Rank": "5",
+      "spanish": "la",
+      "english": "the"
+    },
+    {
+      "Rank": "6",
+      "spanish": "el",
+      "english": "he",
+      "Notes": "3) You can change the translation from english to another language."
+    },
+    {
+      "Rank": "7",
+      "spanish": "y",
+      "english": "Y",
+      "Notes": "To do this you will first need to make a copy of this spreadsheet.  (File > Make a copy...)"
+    },
+    {
+      "Rank": "8",
+      "spanish": "es",
+      "english": "is",
+      "Notes": "Then replace the \"en\" in the function in the cells in Column C with your desired language code."
+    },
+    {
+      "Rank": "9",
+      "spanish": "en",
+      "english": "in",
+      "Notes": "e.g. Replace \"en\" with \"sv\" for Swedish."
+    },
+    {
+      "Rank": "10",
+      "spanish": "lo",
+      "english": "it",
+      "Notes": "List of supported languages:"
+    },
+    {
+      "Rank": "11",
+      "spanish": "un",
+      "english": "a",
+      "Notes": "https://cloud.google.com/translate/v2/using_rest?hl=en#language-params"
+    },
+    {
+      "Rank": "12",
+      "spanish": "por",
+      "english": "by"
+    },
+    {
+      "Rank": "13",
+      "spanish": "qué",
+      "english": "what",
+      "Notes": "4) The original source of this list can be found here:"
+    },
+    {
+      "Rank": "14",
+      "spanish": "me",
+      "english": "me",
+      "Notes": "https://invokeit.wordpress.com/frequency-word-lists/"
+    },
+    {
+      "Rank": "15",
+      "spanish": "una",
+      "english": "a"
+    },
+    {
+      "Rank": "16",
+      "spanish": "te",
+      "english": "you",
+      "Notes": "5) It is licensed under the following Creative Commons license:"
+    },
+    {
+      "Rank": "17",
+      "spanish": "se",
+      "english": "HE",
+      "Notes": "http://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "Rank": "18",
+      "spanish": "los",
+      "english": "the"
+    },
+    {
+      "Rank": "19",
+      "spanish": "con",
+      "english": "with",
+      "Notes": "6) More Most Common word lists (other languages) can be found here:"
+    },
+    {
+      "Rank": "20",
+      "spanish": "para",
+      "english": "for",
+      "Notes": "http://www.101languages.net/common-words/"
+    },
+    {
+      "Rank": "21",
+      "spanish": "mi",
+      "english": "my"
+    },
+    {
+      "Rank": "22",
+      "spanish": "está",
+      "english": "this"
+    },
+    {
+      "Rank": "23",
+      "spanish": "si",
+      "english": "yes"
+    },
+    {
+      "Rank": "24",
+      "spanish": "sí",
+      "english": "yes"
+    },
+    {
+      "Rank": "25",
+      "spanish": "pero",
+      "english": "but"
+    },
+    {
+      "Rank": "26",
+      "spanish": "las",
+      "english": "the"
+    },
+    {
+      "Rank": "27",
+      "spanish": "bien",
+      "english": "all right"
+    },
+    {
+      "Rank": "28",
+      "spanish": "yo",
+      "english": "I"
+    },
+    {
+      "Rank": "29",
+      "spanish": "su",
+      "english": "his"
+    },
+    {
+      "Rank": "30",
+      "spanish": "eso",
+      "english": "that"
+    },
+    {
+      "Rank": "31",
+      "spanish": "aquí",
+      "english": "here"
+    },
+    {
+      "Rank": "32",
+      "spanish": "del",
+      "english": "of the"
+    },
+    {
+      "Rank": "33",
+      "spanish": "al",
+      "english": "to the"
+    },
+    {
+      "Rank": "34",
+      "spanish": "como",
+      "english": "as"
+    },
+    {
+      "Rank": "35",
+      "spanish": "le",
+      "english": "you"
+    },
+    {
+      "Rank": "36",
+      "spanish": "tu",
+      "english": "you"
+    },
+    {
+      "Rank": "37",
+      "spanish": "más",
+      "english": "plus"
+    },
+    {
+      "Rank": "38",
+      "spanish": "todo",
+      "english": "all"
+    },
+    {
+      "Rank": "39",
+      "spanish": "ya",
+      "english": "already"
+    },
+    {
+      "Rank": "40",
+      "spanish": "muy",
+      "english": "very"
+    },
+    {
+      "Rank": "41",
+      "spanish": "esto",
+      "english": "this"
+    },
+    {
+      "Rank": "42",
+      "spanish": "vamos",
+      "english": "come on"
+    },
+    {
+      "Rank": "43",
+      "spanish": "ha",
+      "english": "he has"
+    },
+    {
+      "Rank": "44",
+      "spanish": "ahora",
+      "english": "now"
+    },
+    {
+      "Rank": "45",
+      "spanish": "esta",
+      "english": "this"
+    },
+    {
+      "Rank": "46",
+      "spanish": "hay",
+      "english": "there"
+    },
+    {
+      "Rank": "47",
+      "spanish": "estoy",
+      "english": "I am"
+    },
+    {
+      "Rank": "48",
+      "spanish": "algo",
+      "english": "something"
+    },
+    {
+      "Rank": "49",
+      "spanish": "tú",
+      "english": "you"
+    },
+    {
+      "Rank": "50",
+      "spanish": "tengo",
+      "english": "I have"
+    },
+    {
+      "Rank": "51",
+      "spanish": "así",
+      "english": "A) Yes"
+    },
+    {
+      "Rank": "52",
+      "spanish": "nada",
+      "english": "nothing"
+    },
+    {
+      "Rank": "53",
+      "spanish": "nos",
+      "english": "us"
+    },
+    {
+      "Rank": "54",
+      "spanish": "cuando",
+      "english": "when"
+    },
+    {
+      "Rank": "55",
+      "spanish": "cómo",
+      "english": "how"
+    },
+    {
+      "Rank": "56",
+      "spanish": "él",
+      "english": "he"
+    },
+    {
+      "Rank": "57",
+      "spanish": "sé",
+      "english": "HE"
+    },
+    {
+      "Rank": "58",
+      "spanish": "estás",
+      "english": "these"
+    },
+    {
+      "Rank": "59",
+      "spanish": "sólo",
+      "english": "alone"
+    },
+    {
+      "Rank": "60",
+      "spanish": "o",
+      "english": "or"
+    },
+    {
+      "Rank": "61",
+      "spanish": "quiero",
+      "english": "I want"
+    },
+    {
+      "Rank": "62",
+      "spanish": "este",
+      "english": "East"
+    },
+    {
+      "Rank": "63",
+      "spanish": "tiene",
+      "english": "has"
+    },
+    {
+      "Rank": "64",
+      "spanish": "gracias",
+      "english": "Thank you"
+    },
+    {
+      "Rank": "65",
+      "spanish": "he",
+      "english": "I have"
+    },
+    {
+      "Rank": "66",
+      "spanish": "puedo",
+      "english": "may l"
+    },
+    {
+      "Rank": "67",
+      "spanish": "bueno",
+      "english": "good"
+    },
+    {
+      "Rank": "68",
+      "spanish": "soy",
+      "english": "I am"
+    },
+    {
+      "Rank": "69",
+      "spanish": "era",
+      "english": "was"
+    },
+    {
+      "Rank": "70",
+      "spanish": "ser",
+      "english": "be"
+    },
+    {
+      "Rank": "71",
+      "spanish": "vez",
+      "english": "time"
+    },
+    {
+      "Rank": "72",
+      "spanish": "hacer",
+      "english": "do"
+    },
+    {
+      "Rank": "73",
+      "spanish": "todos",
+      "english": "everybody"
+    },
+    {
+      "Rank": "74",
+      "spanish": "ella",
+      "english": "she"
+    },
+    {
+      "Rank": "75",
+      "spanish": "son",
+      "english": "They are"
+    },
+    {
+      "Rank": "76",
+      "spanish": "fue",
+      "english": "it was"
+    },
+    {
+      "Rank": "77",
+      "spanish": "eres",
+      "english": "you are"
+    },
+    {
+      "Rank": "78",
+      "spanish": "usted",
+      "english": "you"
+    },
+    {
+      "Rank": "79",
+      "spanish": "tienes",
+      "english": "do you have"
+    },
+    {
+      "Rank": "80",
+      "spanish": "puede",
+      "english": "can"
+    },
+    {
+      "Rank": "81",
+      "spanish": "señor",
+      "english": "Mr"
+    },
+    {
+      "Rank": "82",
+      "spanish": "ese",
+      "english": "that"
+    },
+    {
+      "Rank": "83",
+      "spanish": "voy",
+      "english": "I go"
+    },
+    {
+      "Rank": "84",
+      "spanish": "quién",
+      "english": "who"
+    },
+    {
+      "Rank": "85",
+      "spanish": "casa",
+      "english": "home"
+    },
+    {
+      "Rank": "86",
+      "spanish": "creo",
+      "english": "I believe"
+    },
+    {
+      "Rank": "87",
+      "spanish": "porque",
+      "english": "why"
+    },
+    {
+      "Rank": "88",
+      "spanish": "tan",
+      "english": "so"
+    },
+    {
+      "Rank": "89",
+      "spanish": "favor",
+      "english": "favor"
+    },
+    {
+      "Rank": "90",
+      "spanish": "hola",
+      "english": "Hello"
+    },
+    {
+      "Rank": "91",
+      "spanish": "dónde",
+      "english": "where"
+    },
+    {
+      "Rank": "92",
+      "spanish": "nunca",
+      "english": "never"
+    },
+    {
+      "Rank": "93",
+      "spanish": "sus",
+      "english": "their"
+    },
+    {
+      "Rank": "94",
+      "spanish": "sabes",
+      "english": "you know"
+    },
+    {
+      "Rank": "95",
+      "spanish": "dos",
+      "english": "two"
+    },
+    {
+      "Rank": "96",
+      "spanish": "verdad",
+      "english": "true"
+    },
+    {
+      "Rank": "97",
+      "spanish": "quieres",
+      "english": "you want"
+    },
+    {
+      "Rank": "98",
+      "spanish": "mucho",
+      "english": "a lot"
+    },
+    {
+      "Rank": "99",
+      "spanish": "entonces",
+      "english": "so"
+    },
+    {
+      "Rank": "100",
+      "spanish": "estaba",
+      "english": "I was"
+    },
+    {
+      "Rank": "101",
+      "spanish": "tiempo",
+      "english": "weather"
+    },
+    {
+      "Rank": "102",
+      "spanish": "mí",
+      "english": "my"
+    },
+    {
+      "Rank": "103",
+      "spanish": "esa",
+      "english": "that"
+    },
+    {
+      "Rank": "104",
+      "spanish": "mejor",
+      "english": "best"
+    },
+    {
+      "Rank": "105",
+      "spanish": "hombre",
+      "english": "man"
+    },
+    {
+      "Rank": "106",
+      "spanish": "hace",
+      "english": "does"
+    },
+    {
+      "Rank": "107",
+      "spanish": "va",
+      "english": "goes"
+    },
+    {
+      "Rank": "108",
+      "spanish": "dios",
+      "english": "God"
+    },
+    {
+      "Rank": "109",
+      "spanish": "también",
+      "english": "as well"
+    },
+    {
+      "Rank": "110",
+      "spanish": "has",
+      "english": "you"
+    },
+    {
+      "Rank": "111",
+      "spanish": "vida",
+      "english": "lifetime"
+    },
+    {
+      "Rank": "112",
+      "spanish": "sin",
+      "english": "without"
+    },
+    {
+      "Rank": "113",
+      "spanish": "están",
+      "english": "is it so"
+    },
+    {
+      "Rank": "114",
+      "spanish": "ver",
+      "english": "see"
+    },
+    {
+      "Rank": "115",
+      "spanish": "sr",
+      "english": "Mr"
+    },
+    {
+      "Rank": "116",
+      "spanish": "siempre",
+      "english": "always"
+    },
+    {
+      "Rank": "117",
+      "spanish": "oh",
+      "english": "oh"
+    },
+    {
+      "Rank": "118",
+      "spanish": "hasta",
+      "english": "until"
+    },
+    {
+      "Rank": "119",
+      "spanish": "ti",
+      "english": "you"
+    },
+    {
+      "Rank": "120",
+      "spanish": "ahí",
+      "english": "there"
+    },
+    {
+      "Rank": "121",
+      "spanish": "siento",
+      "english": "I feel"
+    },
+    {
+      "Rank": "122",
+      "spanish": "puedes",
+      "english": "can"
+    },
+    {
+      "Rank": "123",
+      "spanish": "decir",
+      "english": "say"
+    },
+    {
+      "Rank": "124",
+      "spanish": "ni",
+      "english": "neither"
+    },
+    {
+      "Rank": "125",
+      "spanish": "sobre",
+      "english": "on"
+    },
+    {
+      "Rank": "126",
+      "spanish": "años",
+      "english": "years"
+    },
+    {
+      "Rank": "127",
+      "spanish": "tenemos",
+      "english": "we have"
+    },
+    {
+      "Rank": "128",
+      "spanish": "uno",
+      "english": "one"
+    },
+    {
+      "Rank": "129",
+      "spanish": "día",
+      "english": "day"
+    },
+    {
+      "Rank": "130",
+      "spanish": "noche",
+      "english": "night"
+    },
+    {
+      "Rank": "131",
+      "spanish": "cosas",
+      "english": "things"
+    },
+    {
+      "Rank": "132",
+      "spanish": "alguien",
+      "english": "someone"
+    },
+    {
+      "Rank": "133",
+      "spanish": "antes",
+      "english": "before"
+    },
+    {
+      "Rank": "134",
+      "spanish": "mis",
+      "english": "my"
+    },
+    {
+      "Rank": "135",
+      "spanish": "ir",
+      "english": "go"
+    },
+    {
+      "Rank": "136",
+      "spanish": "poco",
+      "english": "little bit"
+    },
+    {
+      "Rank": "137",
+      "spanish": "otra",
+      "english": "other"
+    },
+    {
+      "Rank": "138",
+      "spanish": "quiere",
+      "english": "wants"
+    },
+    {
+      "Rank": "139",
+      "spanish": "solo",
+      "english": "alone"
+    },
+    {
+      "Rank": "140",
+      "spanish": "nadie",
+      "english": "no one"
+    },
+    {
+      "Rank": "141",
+      "spanish": "nosotros",
+      "english": "US"
+    },
+    {
+      "Rank": "142",
+      "spanish": "padre",
+      "english": "father"
+    },
+    {
+      "Rank": "143",
+      "spanish": "gente",
+      "english": "people"
+    },
+    {
+      "Rank": "144",
+      "spanish": "parece",
+      "english": "looks like"
+    },
+    {
+      "Rank": "145",
+      "spanish": "dinero",
+      "english": "money"
+    },
+    {
+      "Rank": "146",
+      "spanish": "estar",
+      "english": "to be"
+    },
+    {
+      "Rank": "147",
+      "spanish": "hecho",
+      "english": "fact"
+    },
+    {
+      "Rank": "148",
+      "spanish": "les",
+      "english": "them"
+    },
+    {
+      "Rank": "149",
+      "spanish": "mismo",
+      "english": "same"
+    },
+    {
+      "Rank": "150",
+      "spanish": "sea",
+      "english": "be"
+    },
+    {
+      "Rank": "151",
+      "spanish": "estamos",
+      "english": "we're"
+    },
+    {
+      "Rank": "152",
+      "spanish": "mira",
+      "english": "look"
+    },
+    {
+      "Rank": "153",
+      "spanish": "pasa",
+      "english": "pass"
+    },
+    {
+      "Rank": "154",
+      "spanish": "trabajo",
+      "english": "work"
+    },
+    {
+      "Rank": "155",
+      "spanish": "dijo",
+      "english": "He said"
+    },
+    {
+      "Rank": "156",
+      "spanish": "ellos",
+      "english": "they"
+    },
+    {
+      "Rank": "157",
+      "spanish": "vas",
+      "english": "you go"
+    },
+    {
+      "Rank": "158",
+      "spanish": "claro",
+      "english": "Clear"
+    },
+    {
+      "Rank": "159",
+      "spanish": "mañana",
+      "english": "morning"
+    },
+    {
+      "Rank": "160",
+      "spanish": "han",
+      "english": "they have"
+    },
+    {
+      "Rank": "161",
+      "spanish": "otro",
+      "english": "other"
+    },
+    {
+      "Rank": "162",
+      "spanish": "después",
+      "english": "after"
+    },
+    {
+      "Rank": "163",
+      "spanish": "desde",
+      "english": "since"
+    },
+    {
+      "Rank": "164",
+      "spanish": "mundo",
+      "english": "world"
+    },
+    {
+      "Rank": "165",
+      "spanish": "hablar",
+      "english": "talk"
+    },
+    {
+      "Rank": "166",
+      "spanish": "tal",
+      "english": "such"
+    },
+    {
+      "Rank": "167",
+      "spanish": "había",
+      "english": "there was"
+    },
+    {
+      "Rank": "168",
+      "spanish": "sabe",
+      "english": "knows"
+    },
+    {
+      "Rank": "169",
+      "spanish": "acuerdo",
+      "english": "agreement"
+    },
+    {
+      "Rank": "170",
+      "spanish": "momento",
+      "english": "moment"
+    },
+    {
+      "Rank": "171",
+      "spanish": "donde",
+      "english": "where"
+    },
+    {
+      "Rank": "172",
+      "spanish": "fuera",
+      "english": "outside"
+    },
+    {
+      "Rank": "173",
+      "spanish": "hijo",
+      "english": "son"
+    },
+    {
+      "Rank": "174",
+      "spanish": "podría",
+      "english": "might"
+    },
+    {
+      "Rank": "175",
+      "spanish": "seguro",
+      "english": "insurance"
+    },
+    {
+      "Rank": "176",
+      "spanish": "mujer",
+      "english": "woman"
+    },
+    {
+      "Rank": "177",
+      "spanish": "amigo",
+      "english": "friend"
+    },
+    {
+      "Rank": "178",
+      "spanish": "días",
+      "english": "days"
+    },
+    {
+      "Rank": "179",
+      "spanish": "madre",
+      "english": "mother"
+    },
+    {
+      "Rank": "180",
+      "spanish": "allí",
+      "english": "there"
+    },
+    {
+      "Rank": "181",
+      "spanish": "cosa",
+      "english": "thing"
+    },
+    {
+      "Rank": "182",
+      "spanish": "tus",
+      "english": "your"
+    },
+    {
+      "Rank": "183",
+      "spanish": "lugar",
+      "english": "place"
+    },
+    {
+      "Rank": "184",
+      "spanish": "dice",
+      "english": "He says"
+    },
+    {
+      "Rank": "185",
+      "spanish": "gusta",
+      "english": "like"
+    },
+    {
+      "Rank": "186",
+      "spanish": "será",
+      "english": "be"
+    },
+    {
+      "Rank": "187",
+      "spanish": "gran",
+      "english": "great"
+    },
+    {
+      "Rank": "188",
+      "spanish": "mierda",
+      "english": "shit"
+    },
+    {
+      "Rank": "189",
+      "spanish": "tenía",
+      "english": "had"
+    },
+    {
+      "Rank": "190",
+      "spanish": "mamá",
+      "english": "mom"
+    },
+    {
+      "Rank": "191",
+      "spanish": "papá",
+      "english": "dad"
+    },
+    {
+      "Rank": "192",
+      "spanish": "espera",
+      "english": "wait"
+    },
+    {
+      "Rank": "193",
+      "spanish": "hoy",
+      "english": "today"
+    },
+    {
+      "Rank": "194",
+      "spanish": "tener",
+      "english": "to have"
+    },
+    {
+      "Rank": "195",
+      "spanish": "ven",
+      "english": "come"
+    },
+    {
+      "Rank": "196",
+      "spanish": "buena",
+      "english": "good"
+    },
+    {
+      "Rank": "197",
+      "spanish": "estado",
+      "english": "state"
+    },
+    {
+      "Rank": "198",
+      "spanish": "nuevo",
+      "english": "new"
+    },
+    {
+      "Rank": "199",
+      "spanish": "luego",
+      "english": "then"
+    },
+    {
+      "Rank": "200",
+      "spanish": "podemos",
+      "english": "we can"
+    },
+    {
+      "Rank": "201",
+      "spanish": "tres",
+      "english": "three"
+    },
+    {
+      "Rank": "202",
+      "spanish": "dije",
+      "english": "said"
+    },
+    {
+      "Rank": "203",
+      "spanish": "nuestro",
+      "english": "our"
+    },
+    {
+      "Rank": "204",
+      "spanish": "sido",
+      "english": "been"
+    },
+    {
+      "Rank": "205",
+      "spanish": "menos",
+      "english": "less"
+    },
+    {
+      "Rank": "206",
+      "spanish": "debe",
+      "english": "should"
+    },
+    {
+      "Rank": "207",
+      "spanish": "tipo",
+      "english": "kind"
+    },
+    {
+      "Rank": "208",
+      "spanish": "buen",
+      "english": "good"
+    },
+    {
+      "Rank": "209",
+      "spanish": "conmigo",
+      "english": "with me"
+    },
+    {
+      "Rank": "210",
+      "spanish": "mal",
+      "english": "evil"
+    },
+    {
+      "Rank": "211",
+      "spanish": "todas",
+      "english": "all"
+    },
+    {
+      "Rank": "212",
+      "spanish": "nombre",
+      "english": "first name"
+    },
+    {
+      "Rank": "213",
+      "spanish": "haciendo",
+      "english": "doing"
+    },
+    {
+      "Rank": "214",
+      "spanish": "crees",
+      "english": "you think"
+    },
+    {
+      "Rank": "215",
+      "spanish": "toda",
+      "english": "all"
+    },
+    {
+      "Rank": "216",
+      "spanish": "amor",
+      "english": "love"
+    },
+    {
+      "Rank": "217",
+      "spanish": "mío",
+      "english": "my own"
+    },
+    {
+      "Rank": "218",
+      "spanish": "visto",
+      "english": "viewed"
+    },
+    {
+      "Rank": "219",
+      "spanish": "estas",
+      "english": "these"
+    },
+    {
+      "Rank": "220",
+      "spanish": "quería",
+      "english": "wanted to"
+    },
+    {
+      "Rank": "221",
+      "spanish": "eh",
+      "english": "Hey"
+    },
+    {
+      "Rank": "222",
+      "spanish": "tarde",
+      "english": "late"
+    },
+    {
+      "Rank": "223",
+      "spanish": "importa",
+      "english": "matter"
+    },
+    {
+      "Rank": "224",
+      "spanish": "parte",
+      "english": "part"
+    },
+    {
+      "Rank": "225",
+      "spanish": "aún",
+      "english": "yet"
+    },
+    {
+      "Rank": "226",
+      "spanish": "nuestra",
+      "english": "our"
+    },
+    {
+      "Rank": "227",
+      "spanish": "tienen",
+      "english": "they have"
+    },
+    {
+      "Rank": "228",
+      "spanish": "tanto",
+      "english": "so much"
+    },
+    {
+      "Rank": "229",
+      "spanish": "cada",
+      "english": "each"
+    },
+    {
+      "Rank": "230",
+      "spanish": "hora",
+      "english": "hour"
+    },
+    {
+      "Rank": "231",
+      "spanish": "veces",
+      "english": "times"
+    },
+    {
+      "Rank": "232",
+      "spanish": "necesito",
+      "english": "I need"
+    },
+    {
+      "Rank": "233",
+      "spanish": "contigo",
+      "english": "with you"
+    },
+    {
+      "Rank": "234",
+      "spanish": "ve",
+      "english": "go"
+    },
+    {
+      "Rank": "235",
+      "spanish": "haber",
+      "english": "to have"
+    },
+    {
+      "Rank": "236",
+      "spanish": "buenas",
+      "english": "good"
+    },
+    {
+      "Rank": "237",
+      "spanish": "dicho",
+      "english": "saying"
+    },
+    {
+      "Rank": "238",
+      "spanish": "quien",
+      "english": "who"
+    },
+    {
+      "Rank": "239",
+      "spanish": "hacerlo",
+      "english": "do it"
+    },
+    {
+      "Rank": "240",
+      "spanish": "demasiado",
+      "english": "too"
+    },
+    {
+      "Rank": "241",
+      "spanish": "oye",
+      "english": "hears"
+    },
+    {
+      "Rank": "242",
+      "spanish": "ah",
+      "english": "ah"
+    },
+    {
+      "Rank": "243",
+      "spanish": "haces",
+      "english": "you do"
+    },
+    {
+      "Rank": "244",
+      "spanish": "hombres",
+      "english": "mens"
+    },
+    {
+      "Rank": "245",
+      "spanish": "saber",
+      "english": "to know"
+    },
+    {
+      "Rank": "246",
+      "spanish": "entre",
+      "english": "between"
+    },
+    {
+      "Rank": "247",
+      "spanish": "adiós",
+      "english": "bye"
+    },
+    {
+      "Rank": "248",
+      "spanish": "problema",
+      "english": "problem"
+    },
+    {
+      "Rank": "249",
+      "spanish": "unos",
+      "english": "some"
+    },
+    {
+      "Rank": "250",
+      "spanish": "vaya",
+      "english": "go"
+    },
+    {
+      "Rank": "251",
+      "spanish": "hemos",
+      "english": "we have"
+    },
+    {
+      "Rank": "252",
+      "spanish": "cierto",
+      "english": "true"
+    },
+    {
+      "Rank": "253",
+      "spanish": "debo",
+      "english": "I must"
+    },
+    {
+      "Rank": "254",
+      "spanish": "razón",
+      "english": "reason"
+    },
+    {
+      "Rank": "255",
+      "spanish": "alguna",
+      "english": "any"
+    },
+    {
+      "Rank": "256",
+      "spanish": "esos",
+      "english": "those"
+    },
+    {
+      "Rank": "257",
+      "spanish": "pues",
+      "english": "well"
+    },
+    {
+      "Rank": "258",
+      "spanish": "veo",
+      "english": "I see"
+    },
+    {
+      "Rank": "259",
+      "spanish": "idea",
+      "english": "idea"
+    },
+    {
+      "Rank": "260",
+      "spanish": "chica",
+      "english": "girl"
+    },
+    {
+      "Rank": "261",
+      "spanish": "realmente",
+      "english": "Really"
+    },
+    {
+      "Rank": "262",
+      "spanish": "policía",
+      "english": "police"
+    },
+    {
+      "Rank": "263",
+      "spanish": "hizo",
+      "english": "did"
+    },
+    {
+      "Rank": "264",
+      "spanish": "estos",
+      "english": "these"
+    },
+    {
+      "Rank": "265",
+      "spanish": "amigos",
+      "english": "friends"
+    },
+    {
+      "Rank": "266",
+      "spanish": "ustedes",
+      "english": "you"
+    },
+    {
+      "Rank": "267",
+      "spanish": "quizá",
+      "english": "maybe"
+    },
+    {
+      "Rank": "268",
+      "spanish": "serio",
+      "english": "serious"
+    },
+    {
+      "Rank": "269",
+      "spanish": "cabeza",
+      "english": "head"
+    },
+    {
+      "Rank": "270",
+      "spanish": "hermano",
+      "english": "brother"
+    },
+    {
+      "Rank": "271",
+      "spanish": "digo",
+      "english": "I say"
+    },
+    {
+      "Rank": "272",
+      "spanish": "van",
+      "english": "go"
+    },
+    {
+      "Rank": "273",
+      "spanish": "pasado",
+      "english": "past"
+    },
+    {
+      "Rank": "274",
+      "spanish": "salir",
+      "english": "get out"
+    },
+    {
+      "Rank": "275",
+      "spanish": "cuenta",
+      "english": "account"
+    },
+    {
+      "Rank": "276",
+      "spanish": "familia",
+      "english": "family"
+    },
+    {
+      "Rank": "277",
+      "spanish": "cariño",
+      "english": "sweetie"
+    },
+    {
+      "Rank": "278",
+      "spanish": "vale",
+      "english": "okay"
+    },
+    {
+      "Rank": "279",
+      "spanish": "algún",
+      "english": "some"
+    },
+    {
+      "Rank": "280",
+      "spanish": "muchas",
+      "english": "many"
+    },
+    {
+      "Rank": "281",
+      "spanish": "señora",
+      "english": "Mrs"
+    },
+    {
+      "Rank": "282",
+      "spanish": "somos",
+      "english": "we are"
+    },
+    {
+      "Rank": "283",
+      "spanish": "pueden",
+      "english": "may"
+    },
+    {
+      "Rank": "284",
+      "spanish": "noches",
+      "english": "nights"
+    },
+    {
+      "Rank": "285",
+      "spanish": "muerto",
+      "english": "dead"
+    },
+    {
+      "Rank": "286",
+      "spanish": "ud",
+      "english": "You"
+    },
+    {
+      "Rank": "287",
+      "spanish": "todavía",
+      "english": "still"
+    },
+    {
+      "Rank": "288",
+      "spanish": "rápido",
+      "english": "Quick"
+    },
+    {
+      "Rank": "289",
+      "spanish": "viejo",
+      "english": "old"
+    },
+    {
+      "Rank": "290",
+      "spanish": "lado",
+      "english": "side"
+    },
+    {
+      "Rank": "291",
+      "spanish": "debería",
+      "english": "should"
+    },
+    {
+      "Rank": "292",
+      "spanish": "ves",
+      "english": "you see"
+    },
+    {
+      "Rank": "293",
+      "spanish": "sabía",
+      "english": "I knew"
+    },
+    {
+      "Rank": "294",
+      "spanish": "suerte",
+      "english": "luck"
+    },
+    {
+      "Rank": "295",
+      "spanish": "cuidado",
+      "english": "watch out"
+    },
+    {
+      "Rank": "296",
+      "spanish": "buenos",
+      "english": "good ones"
+    },
+    {
+      "Rank": "297",
+      "spanish": "sería",
+      "english": "would"
+    },
+    {
+      "Rank": "298",
+      "spanish": "da",
+      "english": "gives"
+    },
+    {
+      "Rank": "299",
+      "spanish": "mientras",
+      "english": "While"
+    },
+    {
+      "Rank": "300",
+      "spanish": "miedo",
+      "english": "fear"
+    },
+    {
+      "Rank": "301",
+      "spanish": "primera",
+      "english": "first"
+    },
+    {
+      "Rank": "302",
+      "spanish": "contra",
+      "english": "Against"
+    },
+    {
+      "Rank": "303",
+      "spanish": "puerta",
+      "english": "door"
+    },
+    {
+      "Rank": "304",
+      "spanish": "pronto",
+      "english": "soon"
+    },
+    {
+      "Rank": "305",
+      "spanish": "e",
+      "english": "and"
+    },
+    {
+      "Rank": "306",
+      "spanish": "casi",
+      "english": "almost"
+    },
+    {
+      "Rank": "307",
+      "spanish": "nueva",
+      "english": "new"
+    },
+    {
+      "Rank": "308",
+      "spanish": "espero",
+      "english": "I hope"
+    },
+    {
+      "Rank": "309",
+      "spanish": "cualquier",
+      "english": "any"
+    },
+    {
+      "Rank": "310",
+      "spanish": "esas",
+      "english": "those"
+    },
+    {
+      "Rank": "311",
+      "spanish": "agua",
+      "english": "Water"
+    },
+    {
+      "Rank": "312",
+      "spanish": "os",
+      "english": "you"
+    },
+    {
+      "Rank": "313",
+      "spanish": "chico",
+      "english": "boy"
+    },
+    {
+      "Rank": "314",
+      "spanish": "cuánto",
+      "english": "how much"
+    },
+    {
+      "Rank": "315",
+      "spanish": "niños",
+      "english": "children"
+    },
+    {
+      "Rank": "316",
+      "spanish": "venga",
+      "english": "come on"
+    },
+    {
+      "Rank": "317",
+      "spanish": "camino",
+      "english": "path"
+    },
+    {
+      "Rank": "318",
+      "spanish": "primero",
+      "english": "First"
+    },
+    {
+      "Rank": "319",
+      "spanish": "hacia",
+      "english": "toward"
+    },
+    {
+      "Rank": "320",
+      "spanish": "pensé",
+      "english": "I thought"
+    },
+    {
+      "Rank": "321",
+      "spanish": "dentro",
+      "english": "inside"
+    },
+    {
+      "Rank": "322",
+      "spanish": "pasó",
+      "english": "He passed"
+    },
+    {
+      "Rank": "323",
+      "spanish": "debes",
+      "english": "you must"
+    },
+    {
+      "Rank": "324",
+      "spanish": "ciudad",
+      "english": "city"
+    },
+    {
+      "Rank": "325",
+      "spanish": "historia",
+      "english": "history"
+    },
+    {
+      "Rank": "326",
+      "spanish": "año",
+      "english": "year"
+    },
+    {
+      "Rank": "327",
+      "spanish": "viene",
+      "english": "comes"
+    },
+    {
+      "Rank": "328",
+      "spanish": "deja",
+      "english": "leaves"
+    },
+    {
+      "Rank": "329",
+      "spanish": "durante",
+      "english": "during"
+    },
+    {
+      "Rank": "330",
+      "spanish": "forma",
+      "english": "shape"
+    },
+    {
+      "Rank": "331",
+      "spanish": "volver",
+      "english": "return"
+    },
+    {
+      "Rank": "332",
+      "spanish": "feliz",
+      "english": "happy"
+    },
+    {
+      "Rank": "333",
+      "spanish": "ojos",
+      "english": "eyes"
+    },
+    {
+      "Rank": "334",
+      "spanish": "guerra",
+      "english": "war"
+    },
+    {
+      "Rank": "335",
+      "spanish": "caso",
+      "english": "case"
+    },
+    {
+      "Rank": "336",
+      "spanish": "chicos",
+      "english": "Boys"
+    },
+    {
+      "Rank": "337",
+      "spanish": "esposa",
+      "english": "wife"
+    },
+    {
+      "Rank": "338",
+      "spanish": "adelante",
+      "english": "ahead"
+    },
+    {
+      "Rank": "339",
+      "spanish": "cuál",
+      "english": "which"
+    },
+    {
+      "Rank": "340",
+      "spanish": "mano",
+      "english": "hand"
+    },
+    {
+      "Rank": "341",
+      "spanish": "hice",
+      "english": "I did"
+    },
+    {
+      "Rank": "342",
+      "spanish": "vi",
+      "english": "saw"
+    },
+    {
+      "Rank": "343",
+      "spanish": "gustaría",
+      "english": "would like"
+    },
+    {
+      "Rank": "344",
+      "spanish": "muerte",
+      "english": "death"
+    },
+    {
+      "Rank": "345",
+      "spanish": "allá",
+      "english": "there"
+    },
+    {
+      "Rank": "346",
+      "spanish": "mas",
+      "english": "more"
+    },
+    {
+      "Rank": "347",
+      "spanish": "loco",
+      "english": "crazy"
+    },
+    {
+      "Rank": "348",
+      "spanish": "supuesto",
+      "english": "supposed"
+    },
+    {
+      "Rank": "349",
+      "spanish": "toma",
+      "english": "taking"
+    },
+    {
+      "Rank": "350",
+      "spanish": "minutos",
+      "english": "minutes"
+    },
+    {
+      "Rank": "351",
+      "spanish": "haré",
+      "english": "I will do"
+    },
+    {
+      "Rank": "352",
+      "spanish": "entiendo",
+      "english": "I get it"
+    },
+    {
+      "Rank": "353",
+      "spanish": "pasar",
+      "english": "happen"
+    },
+    {
+      "Rank": "354",
+      "spanish": "iba",
+      "english": "I was going"
+    },
+    {
+      "Rank": "355",
+      "spanish": "corazón",
+      "english": "heart"
+    },
+    {
+      "Rank": "356",
+      "spanish": "semana",
+      "english": "week"
+    },
+    {
+      "Rank": "357",
+      "spanish": "jefe",
+      "english": "boss"
+    },
+    {
+      "Rank": "358",
+      "spanish": "venir",
+      "english": "come"
+    },
+    {
+      "Rank": "359",
+      "spanish": "manos",
+      "english": "hands"
+    },
+    {
+      "Rank": "360",
+      "spanish": "ayuda",
+      "english": "help"
+    },
+    {
+      "Rank": "361",
+      "spanish": "problemas",
+      "english": "problems"
+    },
+    {
+      "Rank": "362",
+      "spanish": "juntos",
+      "english": "together"
+    },
+    {
+      "Rank": "363",
+      "spanish": "supongo",
+      "english": "I suppose"
+    },
+    {
+      "Rank": "364",
+      "spanish": "déjame",
+      "english": "let me"
+    },
+    {
+      "Rank": "365",
+      "spanish": "importante",
+      "english": "important"
+    },
+    {
+      "Rank": "366",
+      "spanish": "vete",
+      "english": "go away"
+    },
+    {
+      "Rank": "367",
+      "spanish": "niño",
+      "english": "boy"
+    },
+    {
+      "Rank": "368",
+      "spanish": "arriba",
+      "english": "above"
+    },
+    {
+      "Rank": "369",
+      "spanish": "hija",
+      "english": "daughter"
+    },
+    {
+      "Rank": "370",
+      "spanish": "otros",
+      "english": "others"
+    },
+    {
+      "Rank": "371",
+      "spanish": "sra",
+      "english": "Mrs"
+    },
+    {
+      "Rank": "372",
+      "spanish": "personas",
+      "english": "people"
+    },
+    {
+      "Rank": "373",
+      "spanish": "tierra",
+      "english": "Earth"
+    },
+    {
+      "Rank": "374",
+      "spanish": "manera",
+      "english": "way"
+    },
+    {
+      "Rank": "375",
+      "spanish": "hablando",
+      "english": "speaking"
+    },
+    {
+      "Rank": "376",
+      "spanish": "fin",
+      "english": "end"
+    },
+    {
+      "Rank": "377",
+      "spanish": "mujeres",
+      "english": "women"
+    },
+    {
+      "Rank": "378",
+      "spanish": "cara",
+      "english": "expensive"
+    },
+    {
+      "Rank": "379",
+      "spanish": "grande",
+      "english": "big"
+    },
+    {
+      "Rank": "380",
+      "spanish": "ningún",
+      "english": "any"
+    },
+    {
+      "Rank": "381",
+      "spanish": "nuestros",
+      "english": "our"
+    },
+    {
+      "Rank": "382",
+      "spanish": "cinco",
+      "english": "five"
+    },
+    {
+      "Rank": "383",
+      "spanish": "llama",
+      "english": "call"
+    },
+    {
+      "Rank": "384",
+      "spanish": "hey",
+      "english": "hey"
+    },
+    {
+      "Rank": "385",
+      "spanish": "habla",
+      "english": "speaks"
+    },
+    {
+      "Rank": "386",
+      "spanish": "bajo",
+      "english": "low"
+    },
+    {
+      "Rank": "387",
+      "spanish": "dices",
+      "english": "you say"
+    },
+    {
+      "Rank": "388",
+      "spanish": "poder",
+      "english": "power"
+    },
+    {
+      "Rank": "389",
+      "spanish": "cuándo",
+      "english": "when"
+    },
+    {
+      "Rank": "390",
+      "spanish": "quizás",
+      "english": "maybe"
+    },
+    {
+      "Rank": "391",
+      "spanish": "escucha",
+      "english": "listen out"
+    },
+    {
+      "Rank": "392",
+      "spanish": "persona",
+      "english": "person"
+    },
+    {
+      "Rank": "393",
+      "spanish": "horas",
+      "english": "hours"
+    },
+    {
+      "Rank": "394",
+      "spanish": "tío",
+      "english": "uncle"
+    },
+    {
+      "Rank": "395",
+      "spanish": "aunque",
+      "english": "although"
+    },
+    {
+      "Rank": "396",
+      "spanish": "io",
+      "english": "io"
+    },
+    {
+      "Rank": "397",
+      "spanish": "único",
+      "english": "only"
+    },
+    {
+      "Rank": "398",
+      "spanish": "dijiste",
+      "english": "said"
+    },
+    {
+      "Rank": "399",
+      "spanish": "siquiera",
+      "english": "at least"
+    },
+    {
+      "Rank": "400",
+      "spanish": "quieren",
+      "english": "they want"
+    },
+    {
+      "Rank": "401",
+      "spanish": "ninguna",
+      "english": "any"
+    },
+    {
+      "Rank": "402",
+      "spanish": "cerca",
+      "english": "close"
+    },
+    {
+      "Rank": "403",
+      "spanish": "pequeño",
+      "english": "little"
+    },
+    {
+      "Rank": "404",
+      "spanish": "debemos",
+      "english": "we must"
+    },
+    {
+      "Rank": "405",
+      "spanish": "cree",
+      "english": "cree"
+    },
+    {
+      "Rank": "406",
+      "spanish": "dame",
+      "english": "give to me"
+    },
+    {
+      "Rank": "407",
+      "spanish": "sigue",
+      "english": "follow"
+    },
+    {
+      "Rank": "408",
+      "spanish": "auto",
+      "english": "car"
+    },
+    {
+      "Rank": "409",
+      "spanish": "cuatro",
+      "english": "four"
+    },
+    {
+      "Rank": "410",
+      "spanish": "dejar",
+      "english": "leave"
+    },
+    {
+      "Rank": "411",
+      "spanish": "muchos",
+      "english": "Many"
+    },
+    {
+      "Rank": "412",
+      "spanish": "igual",
+      "english": "same"
+    },
+    {
+      "Rank": "413",
+      "spanish": "hago",
+      "english": "I make"
+    },
+    {
+      "Rank": "414",
+      "spanish": "listo",
+      "english": "ready"
+    },
+    {
+      "Rank": "415",
+      "spanish": "significa",
+      "english": "it means"
+    },
+    {
+      "Rank": "416",
+      "spanish": "capitán",
+      "english": "captain"
+    },
+    {
+      "Rank": "417",
+      "spanish": "clase",
+      "english": "class"
+    },
+    {
+      "Rank": "418",
+      "spanish": "llegar",
+      "english": "arrive"
+    },
+    {
+      "Rank": "419",
+      "spanish": "doctor",
+      "english": "doctor"
+    },
+    {
+      "Rank": "420",
+      "spanish": "suficiente",
+      "english": "enough"
+    },
+    {
+      "Rank": "421",
+      "spanish": "tomar",
+      "english": "drink"
+    },
+    {
+      "Rank": "422",
+      "spanish": "vivir",
+      "english": "live"
+    },
+    {
+      "Rank": "423",
+      "spanish": "joven",
+      "english": "young"
+    },
+    {
+      "Rank": "424",
+      "spanish": "trabajar",
+      "english": "to work"
+    },
+    {
+      "Rank": "425",
+      "spanish": "haya",
+      "english": "beech"
+    },
+    {
+      "Rank": "426",
+      "spanish": "abajo",
+      "english": "down"
+    },
+    {
+      "Rank": "427",
+      "spanish": "hubiera",
+      "english": "had"
+    },
+    {
+      "Rank": "428",
+      "spanish": "primer",
+      "english": "first"
+    },
+    {
+      "Rank": "429",
+      "spanish": "genial",
+      "english": "great"
+    },
+    {
+      "Rank": "430",
+      "spanish": "justo",
+      "english": "fair"
+    },
+    {
+      "Rank": "431",
+      "spanish": "pensar",
+      "english": "think"
+    },
+    {
+      "Rank": "432",
+      "spanish": "misma",
+      "english": "same"
+    },
+    {
+      "Rank": "433",
+      "spanish": "puta",
+      "english": "bitch"
+    },
+    {
+      "Rank": "434",
+      "spanish": "comer",
+      "english": "eat"
+    },
+    {
+      "Rank": "435",
+      "spanish": "necesita",
+      "english": "needs to"
+    },
+    {
+      "Rank": "436",
+      "spanish": "conozco",
+      "english": "I know"
+    },
+    {
+      "Rank": "437",
+      "spanish": "fui",
+      "english": "I was"
+    },
+    {
+      "Rank": "438",
+      "spanish": "algunos",
+      "english": "Some"
+    },
+    {
+      "Rank": "439",
+      "spanish": "entrar",
+      "english": "get in"
+    },
+    {
+      "Rank": "440",
+      "spanish": "fuerte",
+      "english": "strong"
+    },
+    {
+      "Rank": "441",
+      "spanish": "número",
+      "english": "number"
+    },
+    {
+      "Rank": "442",
+      "spanish": "srta",
+      "english": "Ms"
+    },
+    {
+      "Rank": "443",
+      "spanish": "morir",
+      "english": "die"
+    },
+    {
+      "Rank": "444",
+      "spanish": "basta",
+      "english": "Enough"
+    },
+    {
+      "Rank": "445",
+      "spanish": "dar",
+      "english": "give"
+    },
+    {
+      "Rank": "446",
+      "spanish": "bastante",
+      "english": "quite"
+    },
+    {
+      "Rank": "447",
+      "spanish": "amo",
+      "english": "love"
+    },
+    {
+      "Rank": "448",
+      "spanish": "atrás",
+      "english": "behind"
+    },
+    {
+      "Rank": "449",
+      "spanish": "dicen",
+      "english": "they say"
+    },
+    {
+      "Rank": "450",
+      "spanish": "difícil",
+      "english": "difficult"
+    },
+    {
+      "Rank": "451",
+      "spanish": "éste",
+      "english": "East"
+    },
+    {
+      "Rank": "452",
+      "spanish": "pueda",
+      "english": "can"
+    },
+    {
+      "Rank": "453",
+      "spanish": "punto",
+      "english": "point"
+    },
+    {
+      "Rank": "454",
+      "spanish": "vino",
+      "english": "came"
+    },
+    {
+      "Rank": "455",
+      "spanish": "hermana",
+      "english": "sister"
+    },
+    {
+      "Rank": "456",
+      "spanish": "hijos",
+      "english": "children"
+    },
+    {
+      "Rank": "457",
+      "spanish": "unas",
+      "english": "nail"
+    },
+    {
+      "Rank": "458",
+      "spanish": "final",
+      "english": "final"
+    },
+    {
+      "Rank": "459",
+      "spanish": "escuela",
+      "english": "school"
+    },
+    {
+      "Rank": "460",
+      "spanish": "podía",
+      "english": "could"
+    },
+    {
+      "Rank": "461",
+      "spanish": "pueblo",
+      "english": "town"
+    },
+    {
+      "Rank": "462",
+      "spanish": "haga",
+      "english": "make"
+    },
+    {
+      "Rank": "463",
+      "spanish": "sangre",
+      "english": "blood"
+    },
+    {
+      "Rank": "464",
+      "spanish": "meses",
+      "english": "months"
+    },
+    {
+      "Rank": "465",
+      "spanish": "coche",
+      "english": "car"
+    },
+    {
+      "Rank": "466",
+      "spanish": "juego",
+      "english": "game"
+    },
+    {
+      "Rank": "467",
+      "spanish": "encontrar",
+      "english": "find"
+    },
+    {
+      "Rank": "468",
+      "spanish": "realidad",
+      "english": "reality"
+    },
+    {
+      "Rank": "469",
+      "spanish": "cuerpo",
+      "english": "body"
+    },
+    {
+      "Rank": "470",
+      "spanish": "mayor",
+      "english": "higher"
+    },
+    {
+      "Rank": "471",
+      "spanish": "última",
+      "english": "last"
+    },
+    {
+      "Rank": "472",
+      "spanish": "eran",
+      "english": "they were"
+    },
+    {
+      "Rank": "473",
+      "spanish": "queda",
+      "english": "remains"
+    },
+    {
+      "Rank": "474",
+      "spanish": "ok",
+      "english": "okay"
+    },
+    {
+      "Rank": "475",
+      "spanish": "paz",
+      "english": "peace"
+    },
+    {
+      "Rank": "476",
+      "spanish": "dime",
+      "english": "tell me"
+    },
+    {
+      "Rank": "477",
+      "spanish": "vuelta",
+      "english": "return"
+    },
+    {
+      "Rank": "478",
+      "spanish": "hiciste",
+      "english": "did"
+    },
+    {
+      "Rank": "479",
+      "spanish": "tenido",
+      "english": "had"
+    },
+    {
+      "Rank": "480",
+      "spanish": "sola",
+      "english": "alone"
+    },
+    {
+      "Rank": "481",
+      "spanish": "hacen",
+      "english": "make"
+    },
+    {
+      "Rank": "482",
+      "spanish": "ido",
+      "english": "gone"
+    },
+    {
+      "Rank": "483",
+      "spanish": "querida",
+      "english": "Dear"
+    },
+    {
+      "Rank": "484",
+      "spanish": "iré",
+      "english": "I will go"
+    },
+    {
+      "Rank": "485",
+      "spanish": "culpa",
+      "english": "guilt"
+    },
+    {
+      "Rank": "486",
+      "spanish": "malo",
+      "english": "bad"
+    },
+    {
+      "Rank": "487",
+      "spanish": "chicas",
+      "english": "girls"
+    },
+    {
+      "Rank": "488",
+      "spanish": "comida",
+      "english": "food"
+    },
+    {
+      "Rank": "489",
+      "spanish": "dólares",
+      "english": "Dollars"
+    },
+    {
+      "Rank": "490",
+      "spanish": "dr",
+      "english": "dr"
+    },
+    {
+      "Rank": "491",
+      "spanish": "saben",
+      "english": "they know"
+    },
+    {
+      "Rank": "492",
+      "spanish": "fácil",
+      "english": "easy"
+    },
+    {
+      "Rank": "493",
+      "spanish": "alto",
+      "english": "high"
+    },
+    {
+      "Rank": "494",
+      "spanish": "posible",
+      "english": "possible"
+    },
+    {
+      "Rank": "495",
+      "spanish": "maldito",
+      "english": "damned"
+    },
+    {
+      "Rank": "496",
+      "spanish": "dormir",
+      "english": "sleep"
+    },
+    {
+      "Rank": "497",
+      "spanish": "deberías",
+      "english": "you should"
+    },
+    {
+      "Rank": "498",
+      "spanish": "maldita",
+      "english": "damn"
+    },
+    {
+      "Rank": "499",
+      "spanish": "pregunta",
+      "english": "Question"
+    },
+    {
+      "Rank": "500",
+      "spanish": "incluso",
+      "english": "even"
+    },
+    {
+      "Rank": "501",
+      "spanish": "fiesta",
+      "english": "party"
+    },
+    {
+      "Rank": "502",
+      "spanish": "tampoco",
+      "english": "neither"
+    },
+    {
+      "Rank": "503",
+      "spanish": "cama",
+      "english": "bed"
+    },
+    {
+      "Rank": "504",
+      "spanish": "lejos",
+      "english": "far"
+    },
+    {
+      "Rank": "505",
+      "spanish": "medio",
+      "english": "medium"
+    },
+    {
+      "Rank": "506",
+      "spanish": "preocupes",
+      "english": "worry"
+    },
+    {
+      "Rank": "507",
+      "spanish": "ay",
+      "english": "Oh"
+    },
+    {
+      "Rank": "508",
+      "spanish": "teléfono",
+      "english": "phone"
+    },
+    {
+      "Rank": "509",
+      "spanish": "diga",
+      "english": "tell"
+    },
+    {
+      "Rank": "510",
+      "spanish": "ei",
+      "english": "ei"
+    },
+    {
+      "Rank": "511",
+      "spanish": "trata",
+      "english": "about"
+    },
+    {
+      "Rank": "512",
+      "spanish": "equipo",
+      "english": "equipment"
+    },
+    {
+      "Rank": "513",
+      "spanish": "palabra",
+      "english": "word"
+    },
+    {
+      "Rank": "514",
+      "spanish": "cuanto",
+      "english": "how much"
+    },
+    {
+      "Rank": "515",
+      "spanish": "idiota",
+      "english": "moron"
+    },
+    {
+      "Rank": "516",
+      "spanish": "esté",
+      "english": "East"
+    },
+    {
+      "Rank": "517",
+      "spanish": "luz",
+      "english": "light"
+    },
+    {
+      "Rank": "518",
+      "spanish": "tuve",
+      "english": "I had"
+    },
+    {
+      "Rank": "519",
+      "spanish": "país",
+      "english": "country"
+    },
+    {
+      "Rank": "520",
+      "spanish": "segundo",
+      "english": "second"
+    },
+    {
+      "Rank": "521",
+      "spanish": "querido",
+      "english": "Dear"
+    },
+    {
+      "Rank": "522",
+      "spanish": "diablos",
+      "english": "Devils"
+    },
+    {
+      "Rank": "523",
+      "spanish": "hagas",
+      "english": "you do"
+    },
+    {
+      "Rank": "524",
+      "spanish": "señorita",
+      "english": "miss"
+    },
+    {
+      "Rank": "525",
+      "spanish": "oportunidad",
+      "english": "opportunity"
+    },
+    {
+      "Rank": "526",
+      "spanish": "matar",
+      "english": "to kill"
+    },
+    {
+      "Rank": "527",
+      "spanish": "algunas",
+      "english": "some"
+    },
+    {
+      "Rank": "528",
+      "spanish": "esperando",
+      "english": "waiting"
+    },
+    {
+      "Rank": "529",
+      "spanish": "necesitamos",
+      "english": "we need"
+    },
+    {
+      "Rank": "530",
+      "spanish": "adónde",
+      "english": "where"
+    },
+    {
+      "Rank": "531",
+      "spanish": "verte",
+      "english": "to see you"
+    },
+    {
+      "Rank": "532",
+      "spanish": "estará",
+      "english": "will be"
+    },
+    {
+      "Rank": "533",
+      "spanish": "venido",
+      "english": "I come"
+    },
+    {
+      "Rank": "534",
+      "spanish": "estabas",
+      "english": "you were"
+    },
+    {
+      "Rank": "535",
+      "spanish": "fueron",
+      "english": "were"
+    },
+    {
+      "Rank": "536",
+      "spanish": "seis",
+      "english": "six"
+    },
+    {
+      "Rank": "537",
+      "spanish": "tenga",
+      "english": "have"
+    },
+    {
+      "Rank": "538",
+      "spanish": "cuarto",
+      "english": "fourth"
+    },
+    {
+      "Rank": "539",
+      "spanish": "cielo",
+      "english": "heaven"
+    },
+    {
+      "Rank": "540",
+      "spanish": "vivo",
+      "english": "alive"
+    },
+    {
+      "Rank": "541",
+      "spanish": "recuerdo",
+      "english": "memory"
+    },
+    {
+      "Rank": "542",
+      "spanish": "perdón",
+      "english": "sorry"
+    },
+    {
+      "Rank": "543",
+      "spanish": "falta",
+      "english": "lack"
+    },
+    {
+      "Rank": "544",
+      "spanish": "pequeña",
+      "english": "little"
+    },
+    {
+      "Rank": "545",
+      "spanish": "oído",
+      "english": "ear"
+    },
+    {
+      "Rank": "546",
+      "spanish": "creer",
+      "english": "believe"
+    },
+    {
+      "Rank": "547",
+      "spanish": "john",
+      "english": "john"
+    },
+    {
+      "Rank": "548",
+      "spanish": "pienso",
+      "english": "I think"
+    },
+    {
+      "Rank": "549",
+      "spanish": "ésta",
+      "english": "this"
+    },
+    {
+      "Rank": "550",
+      "spanish": "esperar",
+      "english": "wait"
+    },
+    {
+      "Rank": "551",
+      "spanish": "necesitas",
+      "english": "you need"
+    },
+    {
+      "Rank": "552",
+      "spanish": "aqui",
+      "english": "here"
+    },
+    {
+      "Rank": "553",
+      "spanish": "película",
+      "english": "movie"
+    },
+    {
+      "Rank": "554",
+      "spanish": "además",
+      "english": "Besides"
+    },
+    {
+      "Rank": "555",
+      "spanish": "marido",
+      "english": "husband"
+    },
+    {
+      "Rank": "556",
+      "spanish": "perro",
+      "english": "dog"
+    },
+    {
+      "Rank": "557",
+      "spanish": "general",
+      "english": "general"
+    },
+    {
+      "Rank": "558",
+      "spanish": "calle",
+      "english": "Street"
+    },
+    {
+      "Rank": "559",
+      "spanish": "exactamente",
+      "english": "exactly"
+    },
+    {
+      "Rank": "560",
+      "spanish": "rey",
+      "english": "king"
+    },
+    {
+      "Rank": "561",
+      "spanish": "padres",
+      "english": "parents"
+    },
+    {
+      "Rank": "562",
+      "spanish": "lista",
+      "english": "list"
+    },
+    {
+      "Rank": "563",
+      "spanish": "habrá",
+      "english": "there will be"
+    },
+    {
+      "Rank": "564",
+      "spanish": "habitación",
+      "english": "room"
+    },
+    {
+      "Rank": "565",
+      "spanish": "carajo",
+      "english": "fuck"
+    },
+    {
+      "Rank": "566",
+      "spanish": "pensando",
+      "english": "thinking"
+    },
+    {
+      "Rank": "567",
+      "spanish": "par",
+      "english": "pair"
+    },
+    {
+      "Rank": "568",
+      "spanish": "fuego",
+      "english": "fire"
+    },
+    {
+      "Rank": "569",
+      "spanish": "niña",
+      "english": "girl"
+    },
+    {
+      "Rank": "570",
+      "spanish": "seguir",
+      "english": "follow"
+    },
+    {
+      "Rank": "571",
+      "spanish": "música",
+      "english": "music"
+    },
+    {
+      "Rank": "572",
+      "spanish": "di",
+      "english": "gave"
+    },
+    {
+      "Rank": "573",
+      "spanish": "habría",
+      "english": "there would be"
+    },
+    {
+      "Rank": "574",
+      "spanish": "mucha",
+      "english": "a lot"
+    },
+    {
+      "Rank": "575",
+      "spanish": "paso",
+      "english": "He passed"
+    },
+    {
+      "Rank": "576",
+      "spanish": "sentido",
+      "english": "sense"
+    },
+    {
+      "Rank": "577",
+      "spanish": "diré",
+      "english": "I will say"
+    },
+    {
+      "Rank": "578",
+      "spanish": "podrías",
+      "english": "could you"
+    },
+    {
+      "Rank": "579",
+      "spanish": "afuera",
+      "english": "outside"
+    },
+    {
+      "Rank": "580",
+      "spanish": "digas",
+      "english": "you say"
+    },
+    {
+      "Rank": "581",
+      "spanish": "ia",
+      "english": "ia"
+    },
+    {
+      "Rank": "582",
+      "spanish": "mía",
+      "english": "mine"
+    },
+    {
+      "Rank": "583",
+      "spanish": "murió",
+      "english": "died"
+    },
+    {
+      "Rank": "584",
+      "spanish": "dio",
+      "english": "it gave"
+    },
+    {
+      "Rank": "585",
+      "spanish": "café",
+      "english": "coffee"
+    },
+    {
+      "Rank": "586",
+      "spanish": "entiendes",
+      "english": "You understand"
+    },
+    {
+      "Rank": "587",
+      "spanish": "nuestras",
+      "english": "our"
+    },
+    {
+      "Rank": "588",
+      "spanish": "piensa",
+      "english": "think"
+    },
+    {
+      "Rank": "589",
+      "spanish": "ello",
+      "english": "it"
+    },
+    {
+      "Rank": "590",
+      "spanish": "lleva",
+      "english": "carries"
+    },
+    {
+      "Rank": "591",
+      "spanish": "estuvo",
+      "english": "he was"
+    },
+    {
+      "Rank": "592",
+      "spanish": "último",
+      "english": "latest"
+    },
+    {
+      "Rank": "593",
+      "spanish": "diciendo",
+      "english": "saying"
+    },
+    {
+      "Rank": "594",
+      "spanish": "grandes",
+      "english": "big"
+    },
+    {
+      "Rank": "595",
+      "spanish": "sitio",
+      "english": "site"
+    },
+    {
+      "Rank": "596",
+      "spanish": "libro",
+      "english": "book"
+    },
+    {
+      "Rank": "597",
+      "spanish": "buscando",
+      "english": "searching"
+    },
+    {
+      "Rank": "598",
+      "spanish": "bebé",
+      "english": "baby"
+    },
+    {
+      "Rank": "599",
+      "spanish": "cállate",
+      "english": "shut up"
+    },
+    {
+      "Rank": "600",
+      "spanish": "vuelve",
+      "english": "returns"
+    },
+    {
+      "Rank": "601",
+      "spanish": "jamás",
+      "english": "never"
+    },
+    {
+      "Rank": "602",
+      "spanish": "minuto",
+      "english": "minute"
+    },
+    {
+      "Rank": "603",
+      "spanish": "arma",
+      "english": "weapon"
+    },
+    {
+      "Rank": "604",
+      "spanish": "viaje",
+      "english": "travel"
+    },
+    {
+      "Rank": "605",
+      "spanish": "única",
+      "english": "only"
+    },
+    {
+      "Rank": "606",
+      "spanish": "muchachos",
+      "english": "boys"
+    },
+    {
+      "Rank": "607",
+      "spanish": "perdido",
+      "english": "lost"
+    },
+    {
+      "Rank": "608",
+      "spanish": "jugar",
+      "english": "to play"
+    },
+    {
+      "Rank": "609",
+      "spanish": "diez",
+      "english": "ten"
+    },
+    {
+      "Rank": "610",
+      "spanish": "vemos",
+      "english": "we see"
+    },
+    {
+      "Rank": "611",
+      "spanish": "dado",
+      "english": "dice"
+    },
+    {
+      "Rank": "612",
+      "spanish": "sabemos",
+      "english": "we know"
+    },
+    {
+      "Rank": "613",
+      "spanish": "mil",
+      "english": "one thousand"
+    },
+    {
+      "Rank": "614",
+      "spanish": "demás",
+      "english": "the rest"
+    },
+    {
+      "Rank": "615",
+      "spanish": "gusto",
+      "english": "taste"
+    },
+    {
+      "Rank": "616",
+      "spanish": "peor",
+      "english": "worst"
+    },
+    {
+      "Rank": "617",
+      "spanish": "irme",
+      "english": "leave"
+    },
+    {
+      "Rank": "618",
+      "spanish": "jack",
+      "english": "Jack"
+    },
+    {
+      "Rank": "619",
+      "spanish": "estaban",
+      "english": "They were"
+    },
+    {
+      "Rank": "620",
+      "spanish": "orden",
+      "english": "order"
+    },
+    {
+      "Rank": "621",
+      "spanish": "pasando",
+      "english": "happening"
+    },
+    {
+      "Rank": "622",
+      "spanish": "cambio",
+      "english": "change"
+    },
+    {
+      "Rank": "623",
+      "spanish": "extraño",
+      "english": "strange"
+    },
+    {
+      "Rank": "624",
+      "spanish": "pobre",
+      "english": "poor"
+    },
+    {
+      "Rank": "625",
+      "spanish": "ropa",
+      "english": "clothes"
+    },
+    {
+      "Rank": "626",
+      "spanish": "queremos",
+      "english": "we want"
+    },
+    {
+      "Rank": "627",
+      "spanish": "oficina",
+      "english": "office"
+    },
+    {
+      "Rank": "628",
+      "spanish": "sino",
+      "english": "if not"
+    },
+    {
+      "Rank": "629",
+      "spanish": "modo",
+      "english": "mode"
+    },
+    {
+      "Rank": "630",
+      "spanish": "ocurre",
+      "english": "occurs"
+    },
+    {
+      "Rank": "631",
+      "spanish": "muchacho",
+      "english": "boy"
+    },
+    {
+      "Rank": "632",
+      "spanish": "otras",
+      "english": "other"
+    },
+    {
+      "Rank": "633",
+      "spanish": "hará",
+      "english": "will"
+    },
+    {
+      "Rank": "634",
+      "spanish": "libre",
+      "english": "free"
+    },
+    {
+      "Rank": "635",
+      "spanish": "conoces",
+      "english": "you know"
+    },
+    {
+      "Rank": "636",
+      "spanish": "piensas",
+      "english": "you think"
+    },
+    {
+      "Rank": "637",
+      "spanish": "presidente",
+      "english": "President"
+    },
+    {
+      "Rank": "638",
+      "spanish": "especial",
+      "english": "special"
+    },
+    {
+      "Rank": "639",
+      "spanish": "anoche",
+      "english": "last night"
+    },
+    {
+      "Rank": "640",
+      "spanish": "millones",
+      "english": "millions"
+    },
+    {
+      "Rank": "641",
+      "spanish": "acerca",
+      "english": "about"
+    },
+    {
+      "Rank": "642",
+      "spanish": "derecho",
+      "english": "law"
+    },
+    {
+      "Rank": "643",
+      "spanish": "negro",
+      "english": "black"
+    },
+    {
+      "Rank": "644",
+      "spanish": "acá",
+      "english": "here"
+    },
+    {
+      "Rank": "645",
+      "spanish": "caballeros",
+      "english": "gentlemen"
+    },
+    {
+      "Rank": "646",
+      "spanish": "semanas",
+      "english": "weeks"
+    },
+    {
+      "Rank": "647",
+      "spanish": "palabras",
+      "english": "words"
+    },
+    {
+      "Rank": "648",
+      "spanish": "buscar",
+      "english": "search"
+    },
+    {
+      "Rank": "649",
+      "spanish": "segura",
+      "english": "safe"
+    },
+    {
+      "Rank": "650",
+      "spanish": "correcto",
+      "english": "Right"
+    },
+    {
+      "Rank": "651",
+      "spanish": "frente",
+      "english": "front"
+    },
+    {
+      "Rank": "652",
+      "spanish": "hacemos",
+      "english": "we make"
+    },
+    {
+      "Rank": "653",
+      "spanish": "seas",
+      "english": "you are"
+    },
+    {
+      "Rank": "654",
+      "spanish": "detrás",
+      "english": "behind"
+    },
+    {
+      "Rank": "655",
+      "spanish": "puesto",
+      "english": "post"
+    },
+    {
+      "Rank": "656",
+      "spanish": "asunto",
+      "english": "affair"
+    },
+    {
+      "Rank": "657",
+      "spanish": "duro",
+      "english": "hard"
+    },
+    {
+      "Rank": "658",
+      "spanish": "sucede",
+      "english": "happens"
+    },
+    {
+      "Rank": "659",
+      "spanish": "llamar",
+      "english": "to call"
+    },
+    {
+      "Rank": "660",
+      "spanish": "disculpe",
+      "english": "sorry"
+    },
+    {
+      "Rank": "661",
+      "spanish": "boca",
+      "english": "mouth"
+    },
+    {
+      "Rank": "662",
+      "spanish": "atención",
+      "english": "Attention"
+    },
+    {
+      "Rank": "663",
+      "spanish": "mire",
+      "english": "Look"
+    },
+    {
+      "Rank": "664",
+      "spanish": "armas",
+      "english": "weapons"
+    },
+    {
+      "Rank": "665",
+      "spanish": "encima",
+      "english": "above"
+    },
+    {
+      "Rank": "666",
+      "spanish": "demonios",
+      "english": "got damn"
+    },
+    {
+      "Rank": "667",
+      "spanish": "mala",
+      "english": "bad"
+    },
+    {
+      "Rank": "668",
+      "spanish": "llevar",
+      "english": "carry"
+    },
+    {
+      "Rank": "669",
+      "spanish": "cual",
+      "english": "which"
+    },
+    {
+      "Rank": "670",
+      "spanish": "odio",
+      "english": "hate"
+    },
+    {
+      "Rank": "671",
+      "spanish": "hospital",
+      "english": "hospital"
+    },
+    {
+      "Rank": "672",
+      "spanish": "deben",
+      "english": "should"
+    },
+    {
+      "Rank": "673",
+      "spanish": "sueño",
+      "english": "dream"
+    },
+    {
+      "Rank": "674",
+      "spanish": "quieras",
+      "english": "you want"
+    },
+    {
+      "Rank": "675",
+      "spanish": "resto",
+      "english": "rest"
+    },
+    {
+      "Rank": "676",
+      "spanish": "llamo",
+      "english": "I call"
+    },
+    {
+      "Rank": "677",
+      "spanish": "perder",
+      "english": "to lose"
+    },
+    {
+      "Rank": "678",
+      "spanish": "llamado",
+      "english": "called"
+    },
+    {
+      "Rank": "679",
+      "spanish": "perfecto",
+      "english": "perfect"
+    },
+    {
+      "Rank": "680",
+      "spanish": "estaré",
+      "english": "I will be"
+    },
+    {
+      "Rank": "681",
+      "spanish": "tranquilo",
+      "english": "calm"
+    },
+    {
+      "Rank": "682",
+      "spanish": "york",
+      "english": "york"
+    },
+    {
+      "Rank": "683",
+      "spanish": "seguridad",
+      "english": "security"
+    },
+    {
+      "Rank": "684",
+      "spanish": "ayudar",
+      "english": "help"
+    },
+    {
+      "Rank": "685",
+      "spanish": "tuvo",
+      "english": "He had"
+    },
+    {
+      "Rank": "686",
+      "spanish": "largo",
+      "english": "long"
+    },
+    {
+      "Rank": "687",
+      "spanish": "pena",
+      "english": "pain"
+    },
+    {
+      "Rank": "688",
+      "spanish": "probablemente",
+      "english": "probably"
+    },
+    {
+      "Rank": "689",
+      "spanish": "ayer",
+      "english": "Yesterday"
+    },
+    {
+      "Rank": "690",
+      "spanish": "dile",
+      "english": "tell him"
+    },
+    {
+      "Rank": "691",
+      "spanish": "prueba",
+      "english": "proof"
+    },
+    {
+      "Rank": "692",
+      "spanish": "siendo",
+      "english": "being"
+    },
+    {
+      "Rank": "693",
+      "spanish": "bonito",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "694",
+      "spanish": "recuerdas",
+      "english": "remember"
+    },
+    {
+      "Rank": "695",
+      "spanish": "haz",
+      "english": "make"
+    },
+    {
+      "Rank": "696",
+      "spanish": "real",
+      "english": "real"
+    },
+    {
+      "Rank": "697",
+      "spanish": "veras",
+      "english": "you will see"
+    },
+    {
+      "Rank": "698",
+      "spanish": "increíble",
+      "english": "amazing"
+    },
+    {
+      "Rank": "699",
+      "spanish": "quisiera",
+      "english": "I would like"
+    },
+    {
+      "Rank": "700",
+      "spanish": "tonto",
+      "english": "fool"
+    },
+    {
+      "Rank": "701",
+      "spanish": "simplemente",
+      "english": "simply"
+    },
+    {
+      "Rank": "702",
+      "spanish": "vámonos",
+      "english": "let's move on"
+    },
+    {
+      "Rank": "703",
+      "spanish": "haría",
+      "english": "would do"
+    },
+    {
+      "Rank": "704",
+      "spanish": "preguntas",
+      "english": "questions"
+    },
+    {
+      "Rank": "705",
+      "spanish": "aire",
+      "english": "air"
+    },
+    {
+      "Rank": "706",
+      "spanish": "conoce",
+      "english": "known"
+    },
+    {
+      "Rank": "707",
+      "spanish": "fuerza",
+      "english": "force"
+    },
+    {
+      "Rank": "708",
+      "spanish": "carta",
+      "english": "letter"
+    },
+    {
+      "Rank": "709",
+      "spanish": "trato",
+      "english": "treatment"
+    },
+    {
+      "Rank": "710",
+      "spanish": "plan",
+      "english": "plan"
+    },
+    {
+      "Rank": "711",
+      "spanish": "ése",
+      "english": "that"
+    },
+    {
+      "Rank": "712",
+      "spanish": "verlo",
+      "english": "see him"
+    },
+    {
+      "Rank": "713",
+      "spanish": "hambre",
+      "english": "hungry"
+    },
+    {
+      "Rank": "714",
+      "spanish": "vuelto",
+      "english": "turned"
+    },
+    {
+      "Rank": "715",
+      "spanish": "empezar",
+      "english": "start"
+    },
+    {
+      "Rank": "716",
+      "spanish": "campo",
+      "english": "countryside"
+    },
+    {
+      "Rank": "717",
+      "spanish": "acaba",
+      "english": "just"
+    },
+    {
+      "Rank": "718",
+      "spanish": "hablas",
+      "english": "speak"
+    },
+    {
+      "Rank": "719",
+      "spanish": "vive",
+      "english": "lives"
+    },
+    {
+      "Rank": "720",
+      "spanish": "barco",
+      "english": "ship"
+    },
+    {
+      "Rank": "721",
+      "spanish": "hotel",
+      "english": "hotel"
+    },
+    {
+      "Rank": "722",
+      "spanish": "poner",
+      "english": "place"
+    },
+    {
+      "Rank": "723",
+      "spanish": "grupo",
+      "english": "group"
+    },
+    {
+      "Rank": "724",
+      "spanish": "creí",
+      "english": "I thought"
+    },
+    {
+      "Rank": "725",
+      "spanish": "sol",
+      "english": "Sun"
+    },
+    {
+      "Rank": "726",
+      "spanish": "tuyo",
+      "english": "of yours"
+    },
+    {
+      "Rank": "727",
+      "spanish": "pase",
+      "english": "pass"
+    },
+    {
+      "Rank": "728",
+      "spanish": "joe",
+      "english": "joe"
+    },
+    {
+      "Rank": "729",
+      "spanish": "voz",
+      "english": "voice"
+    },
+    {
+      "Rank": "730",
+      "spanish": "baño",
+      "english": "bath"
+    },
+    {
+      "Rank": "731",
+      "spanish": "usar",
+      "english": "use"
+    },
+    {
+      "Rank": "732",
+      "spanish": "conseguir",
+      "english": "get"
+    },
+    {
+      "Rank": "733",
+      "spanish": "placer",
+      "english": "pleasure"
+    },
+    {
+      "Rank": "734",
+      "spanish": "llegado",
+      "english": "arrived"
+    },
+    {
+      "Rank": "735",
+      "spanish": "decirte",
+      "english": "tell you"
+    },
+    {
+      "Rank": "736",
+      "spanish": "profesor",
+      "english": "Teacher"
+    },
+    {
+      "Rank": "737",
+      "spanish": "noticias",
+      "english": "news"
+    },
+    {
+      "Rank": "738",
+      "spanish": "lamento",
+      "english": "lament"
+    },
+    {
+      "Rank": "739",
+      "spanish": "decirle",
+      "english": "tell"
+    },
+    {
+      "Rank": "740",
+      "spanish": "blanco",
+      "english": "White"
+    },
+    {
+      "Rank": "741",
+      "spanish": "quédate",
+      "english": "stay"
+    },
+    {
+      "Rank": "742",
+      "spanish": "estuve",
+      "english": "I was"
+    },
+    {
+      "Rank": "743",
+      "spanish": "pie",
+      "english": "foot"
+    },
+    {
+      "Rank": "744",
+      "spanish": "anda",
+      "english": "anda"
+    },
+    {
+      "Rank": "745",
+      "spanish": "espere",
+      "english": "I waited"
+    },
+    {
+      "Rank": "746",
+      "spanish": "edad",
+      "english": "age"
+    },
+    {
+      "Rank": "747",
+      "spanish": "secreto",
+      "english": "secret"
+    },
+    {
+      "Rank": "748",
+      "spanish": "podríamos",
+      "english": "we could"
+    },
+    {
+      "Rank": "749",
+      "spanish": "compañía",
+      "english": "company"
+    },
+    {
+      "Rank": "750",
+      "spanish": "tren",
+      "english": "train"
+    },
+    {
+      "Rank": "751",
+      "spanish": "recuerda",
+      "english": "remember"
+    },
+    {
+      "Rank": "752",
+      "spanish": "tras",
+      "english": "after"
+    },
+    {
+      "Rank": "753",
+      "spanish": "siéntate",
+      "english": "Sit down"
+    },
+    {
+      "Rank": "754",
+      "spanish": "prisa",
+      "english": "hurry"
+    },
+    {
+      "Rank": "755",
+      "spanish": "vista",
+      "english": "view"
+    },
+    {
+      "Rank": "756",
+      "spanish": "hermosa",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "757",
+      "spanish": "negocio",
+      "english": "deal"
+    },
+    {
+      "Rank": "758",
+      "spanish": "deberíamos",
+      "english": "we should"
+    },
+    {
+      "Rank": "759",
+      "spanish": "gustan",
+      "english": "like"
+    },
+    {
+      "Rank": "760",
+      "spanish": "pagar",
+      "english": "pay"
+    },
+    {
+      "Rank": "761",
+      "spanish": "george",
+      "english": "george"
+    },
+    {
+      "Rank": "762",
+      "spanish": "futuro",
+      "english": "future"
+    },
+    {
+      "Rank": "763",
+      "spanish": "silencio",
+      "english": "silence"
+    },
+    {
+      "Rank": "764",
+      "spanish": "siente",
+      "english": "feels"
+    },
+    {
+      "Rank": "765",
+      "spanish": "médico",
+      "english": "doctor"
+    },
+    {
+      "Rank": "766",
+      "spanish": "maestro",
+      "english": "teacher"
+    },
+    {
+      "Rank": "767",
+      "spanish": "quiera",
+      "english": "want"
+    },
+    {
+      "Rank": "768",
+      "spanish": "llegó",
+      "english": "I arrive"
+    },
+    {
+      "Rank": "769",
+      "spanish": "loca",
+      "english": "crazy"
+    },
+    {
+      "Rank": "770",
+      "spanish": "cambiar",
+      "english": "change"
+    },
+    {
+      "Rank": "771",
+      "spanish": "frank",
+      "english": "frank"
+    },
+    {
+      "Rank": "772",
+      "spanish": "sal",
+      "english": "Salt"
+    },
+    {
+      "Rank": "773",
+      "spanish": "control",
+      "english": "control"
+    },
+    {
+      "Rank": "774",
+      "spanish": "raro",
+      "english": "rare"
+    },
+    {
+      "Rank": "775",
+      "spanish": "viste",
+      "english": "Dresses"
+    },
+    {
+      "Rank": "776",
+      "spanish": "novia",
+      "english": "girlfriend"
+    },
+    {
+      "Rank": "777",
+      "spanish": "diferente",
+      "english": "different"
+    },
+    {
+      "Rank": "778",
+      "spanish": "imposible",
+      "english": "impossible"
+    },
+    {
+      "Rank": "779",
+      "spanish": "i",
+      "english": "i"
+    },
+    {
+      "Rank": "780",
+      "spanish": "amiga",
+      "english": "friend"
+    },
+    {
+      "Rank": "781",
+      "spanish": "enseguida",
+      "english": "right away"
+    },
+    {
+      "Rank": "782",
+      "spanish": "llamada",
+      "english": "call"
+    },
+    {
+      "Rank": "783",
+      "spanish": "dan",
+      "english": "give"
+    },
+    {
+      "Rank": "784",
+      "spanish": "dejó",
+      "english": "left"
+    },
+    {
+      "Rank": "785",
+      "spanish": "mes",
+      "english": "month"
+    },
+    {
+      "Rank": "786",
+      "spanish": "llevo",
+      "english": "I wear"
+    },
+    {
+      "Rank": "787",
+      "spanish": "avión",
+      "english": "airplane"
+    },
+    {
+      "Rank": "788",
+      "spanish": "pelo",
+      "english": "hair"
+    },
+    {
+      "Rank": "789",
+      "spanish": "the",
+      "english": "the"
+    },
+    {
+      "Rank": "790",
+      "spanish": "error",
+      "english": "error"
+    },
+    {
+      "Rank": "791",
+      "spanish": "haremos",
+      "english": "will"
+    },
+    {
+      "Rank": "792",
+      "spanish": "tendrá",
+      "english": "will have"
+    },
+    {
+      "Rank": "793",
+      "spanish": "propia",
+      "english": "own"
+    },
+    {
+      "Rank": "794",
+      "spanish": "siguiente",
+      "english": "following"
+    },
+    {
+      "Rank": "795",
+      "spanish": "ganar",
+      "english": "win"
+    },
+    {
+      "Rank": "796",
+      "spanish": "ley",
+      "english": "law"
+    },
+    {
+      "Rank": "797",
+      "spanish": "dolor",
+      "english": "pain"
+    },
+    {
+      "Rank": "798",
+      "spanish": "oro",
+      "english": "gold"
+    },
+    {
+      "Rank": "799",
+      "spanish": "ten",
+      "english": "ten"
+    },
+    {
+      "Rank": "800",
+      "spanish": "acabó",
+      "english": "finished"
+    },
+    {
+      "Rank": "801",
+      "spanish": "maldición",
+      "english": "curse"
+    },
+    {
+      "Rank": "802",
+      "spanish": "oficial",
+      "english": "official"
+    },
+    {
+      "Rank": "803",
+      "spanish": "situación",
+      "english": "situation"
+    },
+    {
+      "Rank": "804",
+      "spanish": "daño",
+      "english": "hurt"
+    },
+    {
+      "Rank": "805",
+      "spanish": "sientes",
+      "english": "you feel"
+    },
+    {
+      "Rank": "806",
+      "spanish": "entendido",
+      "english": "it is understood"
+    },
+    {
+      "Rank": "807",
+      "spanish": "deseo",
+      "english": "wish"
+    },
+    {
+      "Rank": "808",
+      "spanish": "mente",
+      "english": "mind"
+    },
+    {
+      "Rank": "809",
+      "spanish": "ejército",
+      "english": "army"
+    },
+    {
+      "Rank": "810",
+      "spanish": "comprar",
+      "english": "to buy"
+    },
+    {
+      "Rank": "811",
+      "spanish": "muertos",
+      "english": "dead"
+    },
+    {
+      "Rank": "812",
+      "spanish": "pensaba",
+      "english": "thought"
+    },
+    {
+      "Rank": "813",
+      "spanish": "darle",
+      "english": "give him"
+    },
+    {
+      "Rank": "814",
+      "spanish": "estúpido",
+      "english": "stupid"
+    },
+    {
+      "Rank": "815",
+      "spanish": "decía",
+      "english": "He said"
+    },
+    {
+      "Rank": "816",
+      "spanish": "acabo",
+      "english": "finished"
+    },
+    {
+      "Rank": "817",
+      "spanish": "david",
+      "english": "David"
+    },
+    {
+      "Rank": "818",
+      "spanish": "suena",
+      "english": "it sounds"
+    },
+    {
+      "Rank": "819",
+      "spanish": "mitad",
+      "english": "half"
+    },
+    {
+      "Rank": "820",
+      "spanish": "caballo",
+      "english": "horse"
+    },
+    {
+      "Rank": "821",
+      "spanish": "asesino",
+      "english": "killer"
+    },
+    {
+      "Rank": "822",
+      "spanish": "vio",
+      "english": "he saw"
+    },
+    {
+      "Rank": "823",
+      "spanish": "permiso",
+      "english": "permission"
+    },
+    {
+      "Rank": "824",
+      "spanish": "ellas",
+      "english": "they"
+    },
+    {
+      "Rank": "825",
+      "spanish": "trabajando",
+      "english": "working"
+    },
+    {
+      "Rank": "826",
+      "spanish": "maravilloso",
+      "english": "wonderful"
+    },
+    {
+      "Rank": "827",
+      "spanish": "mesa",
+      "english": "table"
+    },
+    {
+      "Rank": "828",
+      "spanish": "divertido",
+      "english": "funny"
+    },
+    {
+      "Rank": "829",
+      "spanish": "mejores",
+      "english": "top"
+    },
+    {
+      "Rank": "830",
+      "spanish": "próxima",
+      "english": "next"
+    },
+    {
+      "Rank": "831",
+      "spanish": "entra",
+      "english": "enters"
+    },
+    {
+      "Rank": "832",
+      "spanish": "tom",
+      "english": "tom"
+    },
+    {
+      "Rank": "833",
+      "spanish": "mar",
+      "english": "sea"
+    },
+    {
+      "Rank": "834",
+      "spanish": "siete",
+      "english": "seven"
+    },
+    {
+      "Rank": "835",
+      "spanish": "hacía",
+      "english": "toward"
+    },
+    {
+      "Rank": "836",
+      "spanish": "sexo",
+      "english": "sex"
+    },
+    {
+      "Rank": "837",
+      "spanish": "encanta",
+      "english": "love"
+    },
+    {
+      "Rank": "838",
+      "spanish": "amable",
+      "english": "friendly"
+    },
+    {
+      "Rank": "839",
+      "spanish": "mensaje",
+      "english": "message"
+    },
+    {
+      "Rank": "840",
+      "spanish": "información",
+      "english": "information"
+    },
+    {
+      "Rank": "841",
+      "spanish": "traje",
+      "english": "suit"
+    },
+    {
+      "Rank": "842",
+      "spanish": "alma",
+      "english": "soul"
+    },
+    {
+      "Rank": "843",
+      "spanish": "encontrado",
+      "english": "found"
+    },
+    {
+      "Rank": "844",
+      "spanish": "coronel",
+      "english": "colonel"
+    },
+    {
+      "Rank": "845",
+      "spanish": "dale",
+      "english": "Go ahead"
+    },
+    {
+      "Rank": "846",
+      "spanish": "san",
+      "english": "saint"
+    },
+    {
+      "Rank": "847",
+      "spanish": "cena",
+      "english": "Dinner"
+    },
+    {
+      "Rank": "848",
+      "spanish": "encontré",
+      "english": "I found"
+    },
+    {
+      "Rank": "849",
+      "spanish": "charlie",
+      "english": "charlie"
+    },
+    {
+      "Rank": "850",
+      "spanish": "tendrás",
+      "english": "will you have"
+    },
+    {
+      "Rank": "851",
+      "spanish": "eras",
+      "english": "ages"
+    },
+    {
+      "Rank": "852",
+      "spanish": "propio",
+      "english": "own"
+    },
+    {
+      "Rank": "853",
+      "spanish": "culo",
+      "english": "ass"
+    },
+    {
+      "Rank": "854",
+      "spanish": "asi",
+      "english": "A) Yes"
+    },
+    {
+      "Rank": "855",
+      "spanish": "adentro",
+      "english": "in"
+    },
+    {
+      "Rank": "856",
+      "spanish": "canción",
+      "english": "song"
+    },
+    {
+      "Rank": "857",
+      "spanish": "gobierno",
+      "english": "government"
+    },
+    {
+      "Rank": "858",
+      "spanish": "sam",
+      "english": "sam"
+    },
+    {
+      "Rank": "859",
+      "spanish": "temo",
+      "english": "I fear"
+    },
+    {
+      "Rank": "860",
+      "spanish": "abre",
+      "english": "opens"
+    },
+    {
+      "Rank": "861",
+      "spanish": "dijeron",
+      "english": "they said"
+    },
+    {
+      "Rank": "862",
+      "spanish": "fuiste",
+      "english": "you were"
+    },
+    {
+      "Rank": "863",
+      "spanish": "media",
+      "english": "half"
+    },
+    {
+      "Rank": "864",
+      "spanish": "das",
+      "english": "you give"
+    },
+    {
+      "Rank": "865",
+      "spanish": "estábamos",
+      "english": "we were"
+    },
+    {
+      "Rank": "866",
+      "spanish": "estaría",
+      "english": "It would"
+    },
+    {
+      "Rank": "867",
+      "spanish": "daré",
+      "english": "I'll give"
+    },
+    {
+      "Rank": "868",
+      "spanish": "vosotros",
+      "english": "you"
+    },
+    {
+      "Rank": "869",
+      "spanish": "frío",
+      "english": "cold"
+    },
+    {
+      "Rank": "870",
+      "spanish": "foto",
+      "english": "Photo"
+    },
+    {
+      "Rank": "871",
+      "spanish": "accidente",
+      "english": "accident"
+    },
+    {
+      "Rank": "872",
+      "spanish": "derecha",
+      "english": "right"
+    },
+    {
+      "Rank": "873",
+      "spanish": "funciona",
+      "english": "it works"
+    },
+    {
+      "Rank": "874",
+      "spanish": "vayas",
+      "english": "go"
+    },
+    {
+      "Rank": "875",
+      "spanish": "centro",
+      "english": "center"
+    },
+    {
+      "Rank": "876",
+      "spanish": "necesario",
+      "english": "necessary"
+    },
+    {
+      "Rank": "877",
+      "spanish": "miren",
+      "english": "look"
+    },
+    {
+      "Rank": "878",
+      "spanish": "bonita",
+      "english": "pretty"
+    },
+    {
+      "Rank": "879",
+      "spanish": "ante",
+      "english": "before"
+    },
+    {
+      "Rank": "880",
+      "spanish": "terrible",
+      "english": "terrible"
+    },
+    {
+      "Rank": "881",
+      "spanish": "pude",
+      "english": "I could"
+    },
+    {
+      "Rank": "882",
+      "spanish": "teniente",
+      "english": "lieutenant"
+    },
+    {
+      "Rank": "883",
+      "spanish": "luna",
+      "english": "Moon"
+    },
+    {
+      "Rank": "884",
+      "spanish": "izquierda",
+      "english": "left"
+    },
+    {
+      "Rank": "885",
+      "spanish": "uds",
+      "english": "You"
+    },
+    {
+      "Rank": "886",
+      "spanish": "doy",
+      "english": "I give"
+    },
+    {
+      "Rank": "887",
+      "spanish": "servicio",
+      "english": "service"
+    },
+    {
+      "Rank": "888",
+      "spanish": "llamas",
+      "english": "flames"
+    },
+    {
+      "Rank": "889",
+      "spanish": "normal",
+      "english": "normal"
+    },
+    {
+      "Rank": "890",
+      "spanish": "junto",
+      "english": "together"
+    },
+    {
+      "Rank": "891",
+      "spanish": "tienda",
+      "english": "store"
+    },
+    {
+      "Rank": "892",
+      "spanish": "navidad",
+      "english": "Christmas"
+    },
+    {
+      "Rank": "893",
+      "spanish": "dirección",
+      "english": "address"
+    },
+    {
+      "Rank": "894",
+      "spanish": "abuela",
+      "english": "grandmother"
+    },
+    {
+      "Rank": "895",
+      "spanish": "alrededor",
+      "english": "around"
+    },
+    {
+      "Rank": "896",
+      "spanish": "vine",
+      "english": "came"
+    },
+    {
+      "Rank": "897",
+      "spanish": "tendré",
+      "english": "I will have"
+    },
+    {
+      "Rank": "898",
+      "spanish": "libertad",
+      "english": "freedom"
+    },
+    {
+      "Rank": "899",
+      "spanish": "sale",
+      "english": "comes out"
+    },
+    {
+      "Rank": "900",
+      "spanish": "línea",
+      "english": "line"
+    },
+    {
+      "Rank": "901",
+      "spanish": "abogado",
+      "english": "attorney"
+    },
+    {
+      "Rank": "902",
+      "spanish": "pies",
+      "english": "feet"
+    },
+    {
+      "Rank": "903",
+      "spanish": "honor",
+      "english": "honor"
+    },
+    {
+      "Rank": "904",
+      "spanish": "tratando",
+      "english": "trying"
+    },
+    {
+      "Rank": "905",
+      "spanish": "regresar",
+      "english": "to return"
+    },
+    {
+      "Rank": "906",
+      "spanish": "hablo",
+      "english": "I speak"
+    },
+    {
+      "Rank": "907",
+      "spanish": "vieja",
+      "english": "old woman"
+    },
+    {
+      "Rank": "908",
+      "spanish": "papel",
+      "english": "paper"
+    },
+    {
+      "Rank": "909",
+      "spanish": "terminado",
+      "english": "finished"
+    },
+    {
+      "Rank": "910",
+      "spanish": "dejado",
+      "english": "left"
+    },
+    {
+      "Rank": "911",
+      "spanish": "juro",
+      "english": "I swear"
+    },
+    {
+      "Rank": "912",
+      "spanish": "hermoso",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "913",
+      "spanish": "dulce",
+      "english": "candy"
+    },
+    {
+      "Rank": "914",
+      "spanish": "sentir",
+      "english": "feel"
+    },
+    {
+      "Rank": "915",
+      "spanish": "principio",
+      "english": "beginning"
+    },
+    {
+      "Rank": "916",
+      "spanish": "interesante",
+      "english": "interesting"
+    },
+    {
+      "Rank": "917",
+      "spanish": "caja",
+      "english": "box"
+    },
+    {
+      "Rank": "918",
+      "spanish": "cualquiera",
+      "english": "anyone"
+    },
+    {
+      "Rank": "919",
+      "spanish": "ocho",
+      "english": "eight"
+    },
+    {
+      "Rank": "920",
+      "spanish": "horrible",
+      "english": "horrible"
+    },
+    {
+      "Rank": "921",
+      "spanish": "respuesta",
+      "english": "answer"
+    },
+    {
+      "Rank": "922",
+      "spanish": "perra",
+      "english": "female dog"
+    },
+    {
+      "Rank": "923",
+      "spanish": "gracioso",
+      "english": "funny"
+    },
+    {
+      "Rank": "924",
+      "spanish": "s",
+      "english": "s"
+    },
+    {
+      "Rank": "925",
+      "spanish": "trae",
+      "english": "brings"
+    },
+    {
+      "Rank": "926",
+      "spanish": "personal",
+      "english": "personal"
+    },
+    {
+      "Rank": "927",
+      "spanish": "mató",
+      "english": "he killed"
+    },
+    {
+      "Rank": "928",
+      "spanish": "completamente",
+      "english": "completely"
+    },
+    {
+      "Rank": "929",
+      "spanish": "paul",
+      "english": "paul"
+    },
+    {
+      "Rank": "930",
+      "spanish": "vienen",
+      "english": "they come"
+    },
+    {
+      "Rank": "931",
+      "spanish": "sean",
+      "english": "are"
+    },
+    {
+      "Rank": "932",
+      "spanish": "llega",
+      "english": "arrives"
+    },
+    {
+      "Rank": "933",
+      "spanish": "abuelo",
+      "english": "grandfather"
+    },
+    {
+      "Rank": "934",
+      "spanish": "tengas",
+      "english": "you have"
+    },
+    {
+      "Rank": "935",
+      "spanish": "linda",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "936",
+      "spanish": "tendremos",
+      "english": "we will have"
+    },
+    {
+      "Rank": "937",
+      "spanish": "michael",
+      "english": "Michael"
+    },
+    {
+      "Rank": "938",
+      "spanish": "partes",
+      "english": "parts"
+    },
+    {
+      "Rank": "939",
+      "spanish": "cárcel",
+      "english": "jail"
+    },
+    {
+      "Rank": "940",
+      "spanish": "hubo",
+      "english": "there was"
+    },
+    {
+      "Rank": "941",
+      "spanish": "sistema",
+      "english": "system"
+    },
+    {
+      "Rank": "942",
+      "spanish": "lindo",
+      "english": "cute"
+    },
+    {
+      "Rank": "943",
+      "spanish": "director",
+      "english": "director"
+    },
+    {
+      "Rank": "944",
+      "spanish": "hazlo",
+      "english": "do it"
+    },
+    {
+      "Rank": "945",
+      "spanish": "hicieron",
+      "english": "they did"
+    },
+    {
+      "Rank": "946",
+      "spanish": "tía",
+      "english": "aunt"
+    },
+    {
+      "Rank": "947",
+      "spanish": "busca",
+      "english": "search"
+    },
+    {
+      "Rank": "948",
+      "spanish": "don",
+      "english": "gift"
+    },
+    {
+      "Rank": "949",
+      "spanish": "baja",
+      "english": "low"
+    },
+    {
+      "Rank": "950",
+      "spanish": "pudo",
+      "english": "could"
+    },
+    {
+      "Rank": "951",
+      "spanish": "salud",
+      "english": "Health"
+    },
+    {
+      "Rank": "952",
+      "spanish": "listos",
+      "english": "ready"
+    },
+    {
+      "Rank": "953",
+      "spanish": "cita",
+      "english": "appointment"
+    },
+    {
+      "Rank": "954",
+      "spanish": "tenías",
+      "english": "you had"
+    },
+    {
+      "Rank": "955",
+      "spanish": "negocios",
+      "english": "business"
+    },
+    {
+      "Rank": "956",
+      "spanish": "tipos",
+      "english": "types"
+    },
+    {
+      "Rank": "957",
+      "spanish": "cámara",
+      "english": "camera"
+    },
+    {
+      "Rank": "958",
+      "spanish": "agente",
+      "english": "agent"
+    },
+    {
+      "Rank": "959",
+      "spanish": "verás",
+      "english": "you will see"
+    },
+    {
+      "Rank": "960",
+      "spanish": "infierno",
+      "english": "hell"
+    },
+    {
+      "Rank": "961",
+      "spanish": "regalo",
+      "english": "present"
+    },
+    {
+      "Rank": "962",
+      "spanish": "río",
+      "english": "River"
+    },
+    {
+      "Rank": "963",
+      "spanish": "través",
+      "english": "through"
+    },
+    {
+      "Rank": "964",
+      "spanish": "carne",
+      "english": "meat"
+    },
+    {
+      "Rank": "965",
+      "spanish": "totalmente",
+      "english": "totally"
+    },
+    {
+      "Rank": "966",
+      "spanish": "decirme",
+      "english": "tell me"
+    },
+    {
+      "Rank": "967",
+      "spanish": "piso",
+      "english": "floor"
+    },
+    {
+      "Rank": "968",
+      "spanish": "esposo",
+      "english": "husband"
+    },
+    {
+      "Rank": "969",
+      "spanish": "oír",
+      "english": "hear"
+    },
+    {
+      "Rank": "970",
+      "spanish": "harry",
+      "english": "harry"
+    },
+    {
+      "Rank": "971",
+      "spanish": "sargento",
+      "english": "sergeant"
+    },
+    {
+      "Rank": "972",
+      "spanish": "deje",
+      "english": "leave"
+    },
+    {
+      "Rank": "973",
+      "spanish": "tuya",
+      "english": "yours"
+    },
+    {
+      "Rank": "974",
+      "spanish": "ambos",
+      "english": "both of them"
+    },
+    {
+      "Rank": "975",
+      "spanish": "beber",
+      "english": "to drink"
+    },
+    {
+      "Rank": "976",
+      "spanish": "calma",
+      "english": "calm"
+    },
+    {
+      "Rank": "977",
+      "spanish": "vestido",
+      "english": "dress"
+    },
+    {
+      "Rank": "978",
+      "spanish": "salvo",
+      "english": "except"
+    },
+    {
+      "Rank": "979",
+      "spanish": "ésa",
+      "english": "that"
+    },
+    {
+      "Rank": "980",
+      "spanish": "verdadero",
+      "english": "true"
+    },
+    {
+      "Rank": "981",
+      "spanish": "basura",
+      "english": "trash"
+    },
+    {
+      "Rank": "982",
+      "spanish": "suelo",
+      "english": "floor"
+    },
+    {
+      "Rank": "983",
+      "spanish": "carrera",
+      "english": "career"
+    },
+    {
+      "Rank": "984",
+      "spanish": "cumpleaños",
+      "english": "birthday"
+    },
+    {
+      "Rank": "985",
+      "spanish": "rato",
+      "english": "little while"
+    },
+    {
+      "Rank": "986",
+      "spanish": "iremos",
+      "english": "we'll go"
+    },
+    {
+      "Rank": "987",
+      "spanish": "universidad",
+      "english": "college"
+    },
+    {
+      "Rank": "988",
+      "spanish": "bailar",
+      "english": "dance"
+    },
+    {
+      "Rank": "989",
+      "spanish": "triste",
+      "english": "sad"
+    },
+    {
+      "Rank": "990",
+      "spanish": "iglesia",
+      "english": "church"
+    },
+    {
+      "Rank": "991",
+      "spanish": "m",
+      "english": "m"
+    },
+    {
+      "Rank": "992",
+      "spanish": "delante",
+      "english": "in front"
+    },
+    {
+      "Rank": "993",
+      "spanish": "nena",
+      "english": "baby"
+    },
+    {
+      "Rank": "994",
+      "spanish": "banco",
+      "english": "Bank"
+    },
+    {
+      "Rank": "995",
+      "spanish": "cuántos",
+      "english": "how many"
+    },
+    {
+      "Rank": "996",
+      "spanish": "encuentra",
+      "english": "find"
+    },
+    {
+      "Rank": "997",
+      "spanish": "supone",
+      "english": "means"
+    },
+    {
+      "Rank": "998",
+      "spanish": "existe",
+      "english": "exists"
+    },
+    {
+      "Rank": "999",
+      "spanish": "programa",
+      "english": "program"
+    },
+    {
+      "Rank": "1000",
+      "spanish": "alegro",
+      "english": "glad"
+    },
+    {
+      "Rank": "1001",
+      "spanish": "santo",
+      "english": "holy"
+    },
+    {
+      "Rank": "1002",
+      "spanish": "porqué",
+      "english": "why"
+    },
+    {
+      "Rank": "1003",
+      "spanish": "novio",
+      "english": "boyfriend"
+    },
+    {
+      "Rank": "1004",
+      "spanish": "broma",
+      "english": "joke"
+    },
+    {
+      "Rank": "1005",
+      "spanish": "diría",
+      "english": "would say"
+    },
+    {
+      "Rank": "1006",
+      "spanish": "salió",
+      "english": "he left"
+    },
+    {
+      "Rank": "1007",
+      "spanish": "jesús",
+      "english": "Jesus"
+    },
+    {
+      "Rank": "1008",
+      "spanish": "prometo",
+      "english": "I promise"
+    },
+    {
+      "Rank": "1009",
+      "spanish": "partido",
+      "english": "match"
+    },
+    {
+      "Rank": "1010",
+      "spanish": "pregunto",
+      "english": "I ask"
+    },
+    {
+      "Rank": "1011",
+      "spanish": "radio",
+      "english": "radio"
+    },
+    {
+      "Rank": "1012",
+      "spanish": "vuelva",
+      "english": "return"
+    },
+    {
+      "Rank": "1013",
+      "spanish": "cenar",
+      "english": "dine"
+    },
+    {
+      "Rank": "1014",
+      "spanish": "ocurrió",
+      "english": "occurred"
+    },
+    {
+      "Rank": "1015",
+      "spanish": "creía",
+      "english": "thought"
+    },
+    {
+      "Rank": "1016",
+      "spanish": "corre",
+      "english": "run"
+    },
+    {
+      "Rank": "1017",
+      "spanish": "disculpa",
+      "english": "Sorry"
+    },
+    {
+      "Rank": "1018",
+      "spanish": "vienes",
+      "english": "Viennese"
+    },
+    {
+      "Rank": "1019",
+      "spanish": "cerveza",
+      "english": "beer"
+    },
+    {
+      "Rank": "1020",
+      "spanish": "muerta",
+      "english": "dead"
+    },
+    {
+      "Rank": "1021",
+      "spanish": "pensado",
+      "english": "thought-out"
+    },
+    {
+      "Rank": "1022",
+      "spanish": "destino",
+      "english": "destination"
+    },
+    {
+      "Rank": "1023",
+      "spanish": "bob",
+      "english": "bob"
+    },
+    {
+      "Rank": "1024",
+      "spanish": "matrimonio",
+      "english": "marriage"
+    },
+    {
+      "Rank": "1025",
+      "spanish": "fotos",
+      "english": "Photos"
+    },
+    {
+      "Rank": "1026",
+      "spanish": "diablo",
+      "english": "Devil"
+    },
+    {
+      "Rank": "1027",
+      "spanish": "volveré",
+      "english": "I will be back"
+    },
+    {
+      "Rank": "1028",
+      "spanish": "saberlo",
+      "english": "I know"
+    },
+    {
+      "Rank": "1029",
+      "spanish": "cielos",
+      "english": "Heavens"
+    },
+    {
+      "Rank": "1030",
+      "spanish": "norte",
+      "english": "north"
+    },
+    {
+      "Rank": "1031",
+      "spanish": "sala",
+      "english": "living room"
+    },
+    {
+      "Rank": "1032",
+      "spanish": "órdenes",
+      "english": "orders"
+    },
+    {
+      "Rank": "1033",
+      "spanish": "según",
+      "english": "according"
+    },
+    {
+      "Rank": "1034",
+      "spanish": "harás",
+      "english": "you will do"
+    },
+    {
+      "Rank": "1035",
+      "spanish": "ataque",
+      "english": "attack"
+    },
+    {
+      "Rank": "1036",
+      "spanish": "parís",
+      "english": "Paris"
+    },
+    {
+      "Rank": "1037",
+      "spanish": "ejemplo",
+      "english": "example"
+    },
+    {
+      "Rank": "1038",
+      "spanish": "sorpresa",
+      "english": "surprise"
+    },
+    {
+      "Rank": "1039",
+      "spanish": "té",
+      "english": "tea"
+    },
+    {
+      "Rank": "1040",
+      "spanish": "pudiera",
+      "english": "could"
+    },
+    {
+      "Rank": "1041",
+      "spanish": "baile",
+      "english": "dance"
+    },
+    {
+      "Rank": "1042",
+      "spanish": "club",
+      "english": "club"
+    },
+    {
+      "Rank": "1043",
+      "spanish": "temprano",
+      "english": "early"
+    },
+    {
+      "Rank": "1044",
+      "spanish": "público",
+      "english": "public"
+    },
+    {
+      "Rank": "1045",
+      "spanish": "tí",
+      "english": "you"
+    },
+    {
+      "Rank": "1046",
+      "spanish": "oí",
+      "english": "I heard"
+    },
+    {
+      "Rank": "1047",
+      "spanish": "mirando",
+      "english": "looking"
+    },
+    {
+      "Rank": "1048",
+      "spanish": "ventana",
+      "english": "window"
+    },
+    {
+      "Rank": "1049",
+      "spanish": "conocido",
+      "english": "known"
+    },
+    {
+      "Rank": "1050",
+      "spanish": "duda",
+      "english": "doubt"
+    },
+    {
+      "Rank": "1051",
+      "spanish": "boda",
+      "english": "wedding"
+    },
+    {
+      "Rank": "1052",
+      "spanish": "peligro",
+      "english": "danger"
+    },
+    {
+      "Rank": "1053",
+      "spanish": "trabaja",
+      "english": "works"
+    },
+    {
+      "Rank": "1054",
+      "spanish": "quise",
+      "english": "I wanted"
+    },
+    {
+      "Rank": "1055",
+      "spanish": "querías",
+      "english": "you wanted"
+    },
+    {
+      "Rank": "1056",
+      "spanish": "caliente",
+      "english": "hot"
+    },
+    {
+      "Rank": "1057",
+      "spanish": "escribir",
+      "english": "to write"
+    },
+    {
+      "Rank": "1058",
+      "spanish": "reina",
+      "english": "Queen"
+    },
+    {
+      "Rank": "1059",
+      "spanish": "esperaba",
+      "english": "I expected"
+    },
+    {
+      "Rank": "1060",
+      "spanish": "embargo",
+      "english": "embargo"
+    },
+    {
+      "Rank": "1061",
+      "spanish": "sur",
+      "english": "south"
+    },
+    {
+      "Rank": "1062",
+      "spanish": "enfermo",
+      "english": "sick"
+    },
+    {
+      "Rank": "1063",
+      "spanish": "excelente",
+      "english": "Excellent"
+    },
+    {
+      "Rank": "1064",
+      "spanish": "pone",
+      "english": "places"
+    },
+    {
+      "Rank": "1065",
+      "spanish": "estés",
+      "english": "you're"
+    },
+    {
+      "Rank": "1066",
+      "spanish": "escena",
+      "english": "scene"
+    },
+    {
+      "Rank": "1067",
+      "spanish": "encuentro",
+      "english": "meeting"
+    },
+    {
+      "Rank": "1068",
+      "spanish": "asesinato",
+      "english": "murder"
+    },
+    {
+      "Rank": "1069",
+      "spanish": "mike",
+      "english": "mike"
+    },
+    {
+      "Rank": "1070",
+      "spanish": "obra",
+      "english": "work"
+    },
+    {
+      "Rank": "1071",
+      "spanish": "n",
+      "english": "n"
+    },
+    {
+      "Rank": "1072",
+      "spanish": "veré",
+      "english": "I will see"
+    },
+    {
+      "Rank": "1073",
+      "spanish": "llamó",
+      "english": "I call"
+    },
+    {
+      "Rank": "1074",
+      "spanish": "aquel",
+      "english": "that"
+    },
+    {
+      "Rank": "1075",
+      "spanish": "terminar",
+      "english": "end up"
+    },
+    {
+      "Rank": "1076",
+      "spanish": "ganas",
+      "english": "want"
+    },
+    {
+      "Rank": "1077",
+      "spanish": "conocer",
+      "english": "know"
+    },
+    {
+      "Rank": "1078",
+      "spanish": "pruebas",
+      "english": "tests"
+    },
+    {
+      "Rank": "1079",
+      "spanish": "señores",
+      "english": "Sirs"
+    },
+    {
+      "Rank": "1080",
+      "spanish": "vos",
+      "english": "you"
+    },
+    {
+      "Rank": "1081",
+      "spanish": "escúchame",
+      "english": "listen to me"
+    },
+    {
+      "Rank": "1082",
+      "spanish": "veamos",
+      "english": "let's see"
+    },
+    {
+      "Rank": "1083",
+      "spanish": "creen",
+      "english": "believe"
+    },
+    {
+      "Rank": "1084",
+      "spanish": "aun",
+      "english": "yet"
+    },
+    {
+      "Rank": "1085",
+      "spanish": "ninguno",
+      "english": "any"
+    },
+    {
+      "Rank": "1086",
+      "spanish": "parecía",
+      "english": "looked like"
+    },
+    {
+      "Rank": "1087",
+      "spanish": "mary",
+      "english": "mary"
+    },
+    {
+      "Rank": "1088",
+      "spanish": "viva",
+      "english": "live"
+    },
+    {
+      "Rank": "1089",
+      "spanish": "apenas",
+      "english": "barely"
+    },
+    {
+      "Rank": "1090",
+      "spanish": "segunda",
+      "english": "second"
+    },
+    {
+      "Rank": "1091",
+      "spanish": "bill",
+      "english": "bill"
+    },
+    {
+      "Rank": "1092",
+      "spanish": "llave",
+      "english": "key"
+    },
+    {
+      "Rank": "1093",
+      "spanish": "regreso",
+      "english": "he came back"
+    },
+    {
+      "Rank": "1094",
+      "spanish": "trasero",
+      "english": "rear"
+    },
+    {
+      "Rank": "1095",
+      "spanish": "ojalá",
+      "english": "hopefully"
+    },
+    {
+      "Rank": "1096",
+      "spanish": "veremos",
+      "english": "we will see"
+    },
+    {
+      "Rank": "1097",
+      "spanish": "simple",
+      "english": "simple"
+    },
+    {
+      "Rank": "1098",
+      "spanish": "seré",
+      "english": "I will be"
+    },
+    {
+      "Rank": "1099",
+      "spanish": "éi",
+      "english": "ei"
+    },
+    {
+      "Rank": "1100",
+      "spanish": "irse",
+      "english": "leave"
+    },
+    {
+      "Rank": "1101",
+      "spanish": "cartas",
+      "english": "letters"
+    },
+    {
+      "Rank": "1102",
+      "spanish": "l",
+      "english": "l"
+    },
+    {
+      "Rank": "1103",
+      "spanish": "libros",
+      "english": "books"
+    },
+    {
+      "Rank": "1104",
+      "spanish": "apuesto",
+      "english": "dapper"
+    },
+    {
+      "Rank": "1105",
+      "spanish": "leer",
+      "english": "read"
+    },
+    {
+      "Rank": "1106",
+      "spanish": "imbécil",
+      "english": "moron"
+    },
+    {
+      "Rank": "1107",
+      "spanish": "opinión",
+      "english": "opinion"
+    },
+    {
+      "Rank": "1108",
+      "spanish": "joder",
+      "english": "fuck"
+    },
+    {
+      "Rank": "1109",
+      "spanish": "cambiado",
+      "english": "changed"
+    },
+    {
+      "Rank": "1110",
+      "spanish": "sucedió",
+      "english": "it happened"
+    },
+    {
+      "Rank": "1111",
+      "spanish": "señal",
+      "english": "signal"
+    },
+    {
+      "Rank": "1112",
+      "spanish": "habían",
+      "english": "they had"
+    },
+    {
+      "Rank": "1113",
+      "spanish": "agradable",
+      "english": "nice"
+    },
+    {
+      "Rank": "1114",
+      "spanish": "cocina",
+      "english": "kitchen"
+    },
+    {
+      "Rank": "1115",
+      "spanish": "relación",
+      "english": "relationship"
+    },
+    {
+      "Rank": "1116",
+      "spanish": "sueños",
+      "english": "dreams"
+    },
+    {
+      "Rank": "1117",
+      "spanish": "segundos",
+      "english": "seconds"
+    },
+    {
+      "Rank": "1118",
+      "spanish": "corte",
+      "english": "cut"
+    },
+    {
+      "Rank": "1119",
+      "spanish": "escuchar",
+      "english": "listen"
+    },
+    {
+      "Rank": "1120",
+      "spanish": "cerebro",
+      "english": "brain"
+    },
+    {
+      "Rank": "1121",
+      "spanish": "locura",
+      "english": "madness"
+    },
+    {
+      "Rank": "1122",
+      "spanish": "peligroso",
+      "english": "dangerous"
+    },
+    {
+      "Rank": "1123",
+      "spanish": "hermanos",
+      "english": "brothers"
+    },
+    {
+      "Rank": "1124",
+      "spanish": "entender",
+      "english": "understand"
+    },
+    {
+      "Rank": "1125",
+      "spanish": "cine",
+      "english": "cinema"
+    },
+    {
+      "Rank": "1126",
+      "spanish": "dejes",
+      "english": "let"
+    },
+    {
+      "Rank": "1127",
+      "spanish": "reunión",
+      "english": "meeting"
+    },
+    {
+      "Rank": "1128",
+      "spanish": "tendría",
+      "english": "would have"
+    },
+    {
+      "Rank": "1129",
+      "spanish": "verla",
+      "english": "see"
+    },
+    {
+      "Rank": "1130",
+      "spanish": "duele",
+      "english": "it hurt"
+    },
+    {
+      "Rank": "1131",
+      "spanish": "hicimos",
+      "english": "we did"
+    },
+    {
+      "Rank": "1132",
+      "spanish": "londres",
+      "english": "London"
+    },
+    {
+      "Rank": "1133",
+      "spanish": "tocar",
+      "english": "touch"
+    },
+    {
+      "Rank": "1134",
+      "spanish": "mirar",
+      "english": "look"
+    },
+    {
+      "Rank": "1135",
+      "spanish": "verme",
+      "english": "see me"
+    },
+    {
+      "Rank": "1136",
+      "spanish": "ben",
+      "english": "ben"
+    },
+    {
+      "Rank": "1137",
+      "spanish": "suyo",
+      "english": "yours"
+    },
+    {
+      "Rank": "1138",
+      "spanish": "causa",
+      "english": "cause"
+    },
+    {
+      "Rank": "1139",
+      "spanish": "pelea",
+      "english": "Fight"
+    },
+    {
+      "Rank": "1140",
+      "spanish": "prisión",
+      "english": "prison"
+    },
+    {
+      "Rank": "1141",
+      "spanish": "jim",
+      "english": "jim"
+    },
+    {
+      "Rank": "1142",
+      "spanish": "mayoría",
+      "english": "most"
+    },
+    {
+      "Rank": "1143",
+      "spanish": "fondo",
+      "english": "background"
+    },
+    {
+      "Rank": "1144",
+      "spanish": "acaso",
+      "english": "perhaps"
+    },
+    {
+      "Rank": "1145",
+      "spanish": "vuelvo",
+      "english": "I come back"
+    },
+    {
+      "Rank": "1146",
+      "spanish": "serán",
+      "english": "will be"
+    },
+    {
+      "Rank": "1147",
+      "spanish": "montón",
+      "english": "heap"
+    },
+    {
+      "Rank": "1148",
+      "spanish": "toca",
+      "english": "touches"
+    },
+    {
+      "Rank": "1149",
+      "spanish": "comandante",
+      "english": "commander"
+    },
+    {
+      "Rank": "1150",
+      "spanish": "tome",
+      "english": "take"
+    },
+    {
+      "Rank": "1151",
+      "spanish": "éxito",
+      "english": "success"
+    },
+    {
+      "Rank": "1152",
+      "spanish": "misión",
+      "english": "mission"
+    },
+    {
+      "Rank": "1153",
+      "spanish": "vidas",
+      "english": "lives"
+    },
+    {
+      "Rank": "1154",
+      "spanish": "decisión",
+      "english": "decision"
+    },
+    {
+      "Rank": "1155",
+      "spanish": "hogar",
+      "english": "home"
+    },
+    {
+      "Rank": "1156",
+      "spanish": "rico",
+      "english": "rich"
+    },
+    {
+      "Rank": "1157",
+      "spanish": "trago",
+      "english": "drink"
+    },
+    {
+      "Rank": "1158",
+      "spanish": "capaz",
+      "english": "able"
+    },
+    {
+      "Rank": "1159",
+      "spanish": "cargo",
+      "english": "position"
+    },
+    {
+      "Rank": "1160",
+      "spanish": "unidos",
+      "english": "United"
+    },
+    {
+      "Rank": "1161",
+      "spanish": "lleno",
+      "english": "full"
+    },
+    {
+      "Rank": "1162",
+      "spanish": "bar",
+      "english": "Pub"
+    },
+    {
+      "Rank": "1163",
+      "spanish": "estrella",
+      "english": "star"
+    },
+    {
+      "Rank": "1164",
+      "spanish": "posición",
+      "english": "position"
+    },
+    {
+      "Rank": "1165",
+      "spanish": "estación",
+      "english": "station"
+    },
+    {
+      "Rank": "1166",
+      "spanish": "interesa",
+      "english": "interested"
+    },
+    {
+      "Rank": "1167",
+      "spanish": "uh",
+      "english": "uh"
+    },
+    {
+      "Rank": "1168",
+      "spanish": "edificio",
+      "english": "building"
+    },
+    {
+      "Rank": "1169",
+      "spanish": "vayan",
+      "english": "go"
+    },
+    {
+      "Rank": "1170",
+      "spanish": "consejo",
+      "english": "advice"
+    },
+    {
+      "Rank": "1171",
+      "spanish": "pistola",
+      "english": "gun"
+    },
+    {
+      "Rank": "1172",
+      "spanish": "humano",
+      "english": "human"
+    },
+    {
+      "Rank": "1173",
+      "spanish": "irnos",
+      "english": "leave"
+    },
+    {
+      "Rank": "1174",
+      "spanish": "fantástico",
+      "english": "fantastic"
+    },
+    {
+      "Rank": "1175",
+      "spanish": "ojo",
+      "english": "eye"
+    },
+    {
+      "Rank": "1176",
+      "spanish": "jóvenes",
+      "english": "young boys"
+    },
+    {
+      "Rank": "1177",
+      "spanish": "zapatos",
+      "english": "shoes"
+    },
+    {
+      "Rank": "1178",
+      "spanish": "majestad",
+      "english": "majesty"
+    },
+    {
+      "Rank": "1179",
+      "spanish": "lee",
+      "english": "read"
+    },
+    {
+      "Rank": "1180",
+      "spanish": "flores",
+      "english": "flowers"
+    },
+    {
+      "Rank": "1181",
+      "spanish": "ocupado",
+      "english": "occupied"
+    },
+    {
+      "Rank": "1182",
+      "spanish": "bienvenido",
+      "english": "your welcome"
+    },
+    {
+      "Rank": "1183",
+      "spanish": "zona",
+      "english": "zone"
+    },
+    {
+      "Rank": "1184",
+      "spanish": "contacto",
+      "english": "Contact"
+    },
+    {
+      "Rank": "1185",
+      "spanish": "henry",
+      "english": "Henry"
+    },
+    {
+      "Rank": "1186",
+      "spanish": "sacar",
+      "english": "take"
+    },
+    {
+      "Rank": "1187",
+      "spanish": "podrían",
+      "english": "could"
+    },
+    {
+      "Rank": "1188",
+      "spanish": "jimmy",
+      "english": "jimmy"
+    },
+    {
+      "Rank": "1189",
+      "spanish": "tema",
+      "english": "theme"
+    },
+    {
+      "Rank": "1190",
+      "spanish": "matado",
+      "english": "killed"
+    },
+    {
+      "Rank": "1191",
+      "spanish": "soldado",
+      "english": "soldier"
+    },
+    {
+      "Rank": "1192",
+      "spanish": "sabías",
+      "english": "you know"
+    },
+    {
+      "Rank": "1193",
+      "spanish": "johnny",
+      "english": "johnny"
+    },
+    {
+      "Rank": "1194",
+      "spanish": "pido",
+      "english": "I ask"
+    },
+    {
+      "Rank": "1195",
+      "spanish": "cierra",
+      "english": "closes"
+    },
+    {
+      "Rank": "1196",
+      "spanish": "peter",
+      "english": "peter"
+    },
+    {
+      "Rank": "1197",
+      "spanish": "intento",
+      "english": "tried"
+    },
+    {
+      "Rank": "1198",
+      "spanish": "irá",
+      "english": "go to"
+    },
+    {
+      "Rank": "1199",
+      "spanish": "calor",
+      "english": "hot"
+    },
+    {
+      "Rank": "1200",
+      "spanish": "finalmente",
+      "english": "Finally"
+    },
+    {
+      "Rank": "1201",
+      "spanish": "equivocado",
+      "english": "wrong"
+    },
+    {
+      "Rank": "1202",
+      "spanish": "animales",
+      "english": "animals"
+    },
+    {
+      "Rank": "1203",
+      "spanish": "departamento",
+      "english": "Department"
+    },
+    {
+      "Rank": "1204",
+      "spanish": "enemigo",
+      "english": "enemy"
+    },
+    {
+      "Rank": "1205",
+      "spanish": "caballero",
+      "english": "gentleman"
+    },
+    {
+      "Rank": "1206",
+      "spanish": "color",
+      "english": "color"
+    },
+    {
+      "Rank": "1207",
+      "spanish": "necesitan",
+      "english": "they need"
+    },
+    {
+      "Rank": "1208",
+      "spanish": "empieza",
+      "english": "starts"
+    },
+    {
+      "Rank": "1209",
+      "spanish": "soldados",
+      "english": "soldiers"
+    },
+    {
+      "Rank": "1210",
+      "spanish": "vea",
+      "english": "see"
+    },
+    {
+      "Rank": "1211",
+      "spanish": "entiende",
+      "english": "understands"
+    },
+    {
+      "Rank": "1212",
+      "spanish": "valor",
+      "english": "value"
+    },
+    {
+      "Rank": "1213",
+      "spanish": "azul",
+      "english": "blue"
+    },
+    {
+      "Rank": "1214",
+      "spanish": "miles",
+      "english": "Thousands"
+    },
+    {
+      "Rank": "1215",
+      "spanish": "espacio",
+      "english": "space"
+    },
+    {
+      "Rank": "1216",
+      "spanish": "estarás",
+      "english": "you will be"
+    },
+    {
+      "Rank": "1217",
+      "spanish": "mantener",
+      "english": "keep"
+    },
+    {
+      "Rank": "1218",
+      "spanish": "aprender",
+      "english": "to learn"
+    },
+    {
+      "Rank": "1219",
+      "spanish": "inteligente",
+      "english": "intelligent"
+    },
+    {
+      "Rank": "1220",
+      "spanish": "serás",
+      "english": "you will"
+    },
+    {
+      "Rank": "1221",
+      "spanish": "arte",
+      "english": "art"
+    },
+    {
+      "Rank": "1222",
+      "spanish": "respeto",
+      "english": "respect"
+    },
+    {
+      "Rank": "1223",
+      "spanish": "pedir",
+      "english": "ask"
+    },
+    {
+      "Rank": "1224",
+      "spanish": "puso",
+      "english": "put"
+    },
+    {
+      "Rank": "1225",
+      "spanish": "llaman",
+      "english": "call"
+    },
+    {
+      "Rank": "1226",
+      "spanish": "oiga",
+      "english": "Listen"
+    },
+    {
+      "Rank": "1227",
+      "spanish": "juez",
+      "english": "judge"
+    },
+    {
+      "Rank": "1228",
+      "spanish": "inglés",
+      "english": "english"
+    },
+    {
+      "Rank": "1229",
+      "spanish": "precio",
+      "english": "price"
+    },
+    {
+      "Rank": "1230",
+      "spanish": "rojo",
+      "english": "Red"
+    },
+    {
+      "Rank": "1231",
+      "spanish": "formas",
+      "english": "shapes"
+    },
+    {
+      "Rank": "1232",
+      "spanish": "hagan",
+      "english": "make"
+    },
+    {
+      "Rank": "1233",
+      "spanish": "verano",
+      "english": "summer"
+    },
+    {
+      "Rank": "1234",
+      "spanish": "podido",
+      "english": "I have"
+    },
+    {
+      "Rank": "1235",
+      "spanish": "piernas",
+      "english": "legs"
+    },
+    {
+      "Rank": "1236",
+      "spanish": "isla",
+      "english": "island"
+    },
+    {
+      "Rank": "1237",
+      "spanish": "darme",
+      "english": "give me"
+    },
+    {
+      "Rank": "1238",
+      "spanish": "damas",
+      "english": "ladies"
+    },
+    {
+      "Rank": "1239",
+      "spanish": "guardia",
+      "english": "guard"
+    },
+    {
+      "Rank": "1240",
+      "spanish": "espalda",
+      "english": "back"
+    },
+    {
+      "Rank": "1241",
+      "spanish": "c",
+      "english": "c"
+    },
+    {
+      "Rank": "1242",
+      "spanish": "vengan",
+      "english": "come"
+    },
+    {
+      "Rank": "1243",
+      "spanish": "parar",
+      "english": "stop"
+    },
+    {
+      "Rank": "1244",
+      "spanish": "llevas",
+      "english": "take"
+    },
+    {
+      "Rank": "1245",
+      "spanish": "banda",
+      "english": "band"
+    },
+    {
+      "Rank": "1246",
+      "spanish": "quedarme",
+      "english": "stay"
+    },
+    {
+      "Rank": "1247",
+      "spanish": "habéis",
+      "english": "you have"
+    },
+    {
+      "Rank": "1248",
+      "spanish": "marcha",
+      "english": "March"
+    },
+    {
+      "Rank": "1249",
+      "spanish": "luces",
+      "english": "lights"
+    },
+    {
+      "Rank": "1250",
+      "spanish": "estuviera",
+      "english": "he was"
+    },
+    {
+      "Rank": "1251",
+      "spanish": "crimen",
+      "english": "crime"
+    },
+    {
+      "Rank": "1252",
+      "spanish": "dejo",
+      "english": "left"
+    },
+    {
+      "Rank": "1253",
+      "spanish": "ayudarte",
+      "english": "help you"
+    },
+    {
+      "Rank": "1254",
+      "spanish": "esperen",
+      "english": "expect"
+    },
+    {
+      "Rank": "1255",
+      "spanish": "teníamos",
+      "english": "we had"
+    },
+    {
+      "Rank": "1256",
+      "spanish": "diferencia",
+      "english": "difference"
+    },
+    {
+      "Rank": "1257",
+      "spanish": "llamaré",
+      "english": "I'll call"
+    },
+    {
+      "Rank": "1258",
+      "spanish": "ama",
+      "english": "Loves"
+    },
+    {
+      "Rank": "1259",
+      "spanish": "conocí",
+      "english": "I met"
+    },
+    {
+      "Rank": "1260",
+      "spanish": "tiempos",
+      "english": "time"
+    },
+    {
+      "Rank": "1261",
+      "spanish": "déjalo",
+      "english": "leave it alone"
+    },
+    {
+      "Rank": "1262",
+      "spanish": "debajo",
+      "english": "below"
+    },
+    {
+      "Rank": "1263",
+      "spanish": "compañero",
+      "english": "companion"
+    },
+    {
+      "Rank": "1264",
+      "spanish": "dejé",
+      "english": "leave"
+    },
+    {
+      "Rank": "1265",
+      "spanish": "come",
+      "english": "eat"
+    },
+    {
+      "Rank": "1266",
+      "spanish": "déjeme",
+      "english": "let me"
+    },
+    {
+      "Rank": "1267",
+      "spanish": "molesta",
+      "english": "upset"
+    },
+    {
+      "Rank": "1268",
+      "spanish": "contar",
+      "english": "tell"
+    },
+    {
+      "Rank": "1269",
+      "spanish": "dejaré",
+      "english": "I'll leave"
+    },
+    {
+      "Rank": "1270",
+      "spanish": "hablamos",
+      "english": "We speak"
+    },
+    {
+      "Rank": "1271",
+      "spanish": "cansado",
+      "english": "tired"
+    },
+    {
+      "Rank": "1272",
+      "spanish": "ganado",
+      "english": "won"
+    },
+    {
+      "Rank": "1273",
+      "spanish": "pareces",
+      "english": "you seem"
+    },
+    {
+      "Rank": "1274",
+      "spanish": "juicio",
+      "english": "judgment"
+    },
+    {
+      "Rank": "1275",
+      "spanish": "hablado",
+      "english": "spoken"
+    },
+    {
+      "Rank": "1276",
+      "spanish": "estilo",
+      "english": "style"
+    },
+    {
+      "Rank": "1277",
+      "spanish": "ayúdame",
+      "english": "Help me"
+    },
+    {
+      "Rank": "1278",
+      "spanish": "sepa",
+      "english": "know"
+    },
+    {
+      "Rank": "1279",
+      "spanish": "viendo",
+      "english": "seeing"
+    },
+    {
+      "Rank": "1280",
+      "spanish": "salida",
+      "english": "departure"
+    },
+    {
+      "Rank": "1281",
+      "spanish": "alegra",
+      "english": "happy"
+    },
+    {
+      "Rank": "1282",
+      "spanish": "despierta",
+      "english": "awake"
+    },
+    {
+      "Rank": "1283",
+      "spanish": "estupendo",
+      "english": "great"
+    },
+    {
+      "Rank": "1284",
+      "spanish": "darte",
+      "english": "to give you"
+    },
+    {
+      "Rank": "1285",
+      "spanish": "estados",
+      "english": "state"
+    },
+    {
+      "Rank": "1286",
+      "spanish": "quedan",
+      "english": "are"
+    },
+    {
+      "Rank": "1287",
+      "spanish": "próximo",
+      "english": "next"
+    },
+    {
+      "Rank": "1288",
+      "spanish": "nota",
+      "english": "note"
+    },
+    {
+      "Rank": "1289",
+      "spanish": "llevó",
+      "english": "I wear"
+    },
+    {
+      "Rank": "1290",
+      "spanish": "puedas",
+      "english": "you can"
+    },
+    {
+      "Rank": "1291",
+      "spanish": "podrá",
+      "english": "you can"
+    },
+    {
+      "Rank": "1292",
+      "spanish": "james",
+      "english": "James"
+    },
+    {
+      "Rank": "1293",
+      "spanish": "nave",
+      "english": "ship"
+    },
+    {
+      "Rank": "1294",
+      "spanish": "base",
+      "english": "base"
+    },
+    {
+      "Rank": "1295",
+      "spanish": "tenían",
+      "english": "They had"
+    },
+    {
+      "Rank": "1296",
+      "spanish": "sube",
+      "english": "goes up"
+    },
+    {
+      "Rank": "1297",
+      "spanish": "vuelo",
+      "english": "flight"
+    },
+    {
+      "Rank": "1298",
+      "spanish": "excepto",
+      "english": "except"
+    },
+    {
+      "Rank": "1299",
+      "spanish": "golpe",
+      "english": "knock"
+    },
+    {
+      "Rank": "1300",
+      "spanish": "d",
+      "english": "d"
+    },
+    {
+      "Rank": "1301",
+      "spanish": "viento",
+      "english": "wind"
+    },
+    {
+      "Rank": "1302",
+      "spanish": "estaremos",
+      "english": "we will be"
+    },
+    {
+      "Rank": "1303",
+      "spanish": "acción",
+      "english": "action"
+    },
+    {
+      "Rank": "1304",
+      "spanish": "tonterías",
+      "english": "silly stuff"
+    },
+    {
+      "Rank": "1305",
+      "spanish": "respecto",
+      "english": "respect"
+    },
+    {
+      "Rank": "1306",
+      "spanish": "desea",
+      "english": "you want"
+    },
+    {
+      "Rank": "1307",
+      "spanish": "sigues",
+      "english": "are you still"
+    },
+    {
+      "Rank": "1308",
+      "spanish": "debía",
+      "english": "should"
+    },
+    {
+      "Rank": "1309",
+      "spanish": "vendrá",
+      "english": "will come"
+    },
+    {
+      "Rank": "1310",
+      "spanish": "encontramos",
+      "english": "we find"
+    },
+    {
+      "Rank": "1311",
+      "spanish": "beso",
+      "english": "kiss"
+    },
+    {
+      "Rank": "1312",
+      "spanish": "cuestión",
+      "english": "question"
+    },
+    {
+      "Rank": "1313",
+      "spanish": "volvió",
+      "english": "went back"
+    },
+    {
+      "Rank": "1314",
+      "spanish": "reglas",
+      "english": "rules"
+    },
+    {
+      "Rank": "1315",
+      "spanish": "ruido",
+      "english": "noise"
+    },
+    {
+      "Rank": "1316",
+      "spanish": "acabado",
+      "english": "finish"
+    },
+    {
+      "Rank": "1317",
+      "spanish": "salga",
+      "english": "out"
+    },
+    {
+      "Rank": "1318",
+      "spanish": "olvidado",
+      "english": "forgotten"
+    },
+    {
+      "Rank": "1319",
+      "spanish": "mentira",
+      "english": "lie"
+    },
+    {
+      "Rank": "1320",
+      "spanish": "brazo",
+      "english": "arm"
+    },
+    {
+      "Rank": "1321",
+      "spanish": "empezó",
+      "english": "it started"
+    },
+    {
+      "Rank": "1322",
+      "spanish": "cálmate",
+      "english": "take it easy"
+    },
+    {
+      "Rank": "1323",
+      "spanish": "caballos",
+      "english": "horses"
+    },
+    {
+      "Rank": "1324",
+      "spanish": "experiencia",
+      "english": "experience"
+    },
+    {
+      "Rank": "1325",
+      "spanish": "tranquila",
+      "english": "quiet"
+    },
+    {
+      "Rank": "1326",
+      "spanish": "quedar",
+      "english": "stay"
+    },
+    {
+      "Rank": "1327",
+      "spanish": "esperanza",
+      "english": "hope"
+    },
+    {
+      "Rank": "1328",
+      "spanish": "irte",
+      "english": "leave"
+    },
+    {
+      "Rank": "1329",
+      "spanish": "vd",
+      "english": "you"
+    },
+    {
+      "Rank": "1330",
+      "spanish": "perros",
+      "english": "dogs"
+    },
+    {
+      "Rank": "1331",
+      "spanish": "casado",
+      "english": "married"
+    },
+    {
+      "Rank": "1332",
+      "spanish": "llegue",
+      "english": "I arrived"
+    },
+    {
+      "Rank": "1333",
+      "spanish": "drogas",
+      "english": "drugs"
+    },
+    {
+      "Rank": "1334",
+      "spanish": "pidió",
+      "english": "he asked"
+    },
+    {
+      "Rank": "1335",
+      "spanish": "espíritu",
+      "english": "spirit"
+    },
+    {
+      "Rank": "1336",
+      "spanish": "vacaciones",
+      "english": "holidays"
+    },
+    {
+      "Rank": "1337",
+      "spanish": "copa",
+      "english": "Cup"
+    },
+    {
+      "Rank": "1338",
+      "spanish": "investigación",
+      "english": "investigation"
+    },
+    {
+      "Rank": "1339",
+      "spanish": "prefiero",
+      "english": "I prefer"
+    },
+    {
+      "Rank": "1340",
+      "spanish": "solía",
+      "english": "used to"
+    },
+    {
+      "Rank": "1341",
+      "spanish": "llevaré",
+      "english": "I'll take"
+    },
+    {
+      "Rank": "1342",
+      "spanish": "menudo",
+      "english": "often"
+    },
+    {
+      "Rank": "1343",
+      "spanish": "partir",
+      "english": "from"
+    },
+    {
+      "Rank": "1344",
+      "spanish": "visita",
+      "english": "visit"
+    },
+    {
+      "Rank": "1345",
+      "spanish": "alta",
+      "english": "high"
+    },
+    {
+      "Rank": "1346",
+      "spanish": "abrir",
+      "english": "to open"
+    },
+    {
+      "Rank": "1347",
+      "spanish": "tony",
+      "english": "tony"
+    },
+    {
+      "Rank": "1348",
+      "spanish": "nueve",
+      "english": "nine"
+    },
+    {
+      "Rank": "1349",
+      "spanish": "bomba",
+      "english": "bomb"
+    },
+    {
+      "Rank": "1350",
+      "spanish": "energía",
+      "english": "Energy"
+    },
+    {
+      "Rank": "1351",
+      "spanish": "bolsa",
+      "english": "bag"
+    },
+    {
+      "Rank": "1352",
+      "spanish": "hacerte",
+      "english": "make"
+    },
+    {
+      "Rank": "1353",
+      "spanish": "santa",
+      "english": "St."
+    },
+    {
+      "Rank": "1354",
+      "spanish": "pan",
+      "english": "bread"
+    },
+    {
+      "Rank": "1355",
+      "spanish": "piel",
+      "english": "skin"
+    },
+    {
+      "Rank": "1356",
+      "spanish": "usa",
+      "english": "uses"
+    },
+    {
+      "Rank": "1357",
+      "spanish": "metros",
+      "english": "meters"
+    },
+    {
+      "Rank": "1358",
+      "spanish": "perdona",
+      "english": "forgives"
+    },
+    {
+      "Rank": "1359",
+      "spanish": "escrito",
+      "english": "written"
+    },
+    {
+      "Rank": "1360",
+      "spanish": "exacto",
+      "english": "exact"
+    },
+    {
+      "Rank": "1361",
+      "spanish": "jugando",
+      "english": "Playing"
+    },
+    {
+      "Rank": "1362",
+      "spanish": "cuello",
+      "english": "neck"
+    },
+    {
+      "Rank": "1363",
+      "spanish": "larga",
+      "english": "long"
+    },
+    {
+      "Rank": "1364",
+      "spanish": "escapar",
+      "english": "escape"
+    },
+    {
+      "Rank": "1365",
+      "spanish": "salvar",
+      "english": "save"
+    },
+    {
+      "Rank": "1366",
+      "spanish": "escuche",
+      "english": "I heard"
+    },
+    {
+      "Rank": "1367",
+      "spanish": "perdone",
+      "english": "forgive"
+    },
+    {
+      "Rank": "1368",
+      "spanish": "sirve",
+      "english": "it serves"
+    },
+    {
+      "Rank": "1369",
+      "spanish": "preocupe",
+      "english": "worry"
+    },
+    {
+      "Rank": "1370",
+      "spanish": "especie",
+      "english": "species"
+    },
+    {
+      "Rank": "1371",
+      "spanish": "aquella",
+      "english": "that"
+    },
+    {
+      "Rank": "1372",
+      "spanish": "verá",
+      "english": "you will see"
+    },
+    {
+      "Rank": "1373",
+      "spanish": "brazos",
+      "english": "arms"
+    },
+    {
+      "Rank": "1374",
+      "spanish": "llena",
+      "english": "full"
+    },
+    {
+      "Rank": "1375",
+      "spanish": "subir",
+      "english": "go up"
+    },
+    {
+      "Rank": "1376",
+      "spanish": "blanca",
+      "english": "white"
+    },
+    {
+      "Rank": "1377",
+      "spanish": "fe",
+      "english": "faith"
+    },
+    {
+      "Rank": "1378",
+      "spanish": "steve",
+      "english": "steve"
+    },
+    {
+      "Rank": "1379",
+      "spanish": "modos",
+      "english": "modes"
+    },
+    {
+      "Rank": "1380",
+      "spanish": "traído",
+      "english": "brought"
+    },
+    {
+      "Rank": "1381",
+      "spanish": "películas",
+      "english": "films"
+    },
+    {
+      "Rank": "1382",
+      "spanish": "dama",
+      "english": "Lady"
+    },
+    {
+      "Rank": "1383",
+      "spanish": "suya",
+      "english": "his"
+    },
+    {
+      "Rank": "1384",
+      "spanish": "decirlo",
+      "english": "say"
+    },
+    {
+      "Rank": "1385",
+      "spanish": "doble",
+      "english": "double"
+    },
+    {
+      "Rank": "1386",
+      "spanish": "inmediatamente",
+      "english": "immediately"
+    },
+    {
+      "Rank": "1387",
+      "spanish": "culpable",
+      "english": "guilty"
+    },
+    {
+      "Rank": "1388",
+      "spanish": "preocupa",
+      "english": "worries"
+    },
+    {
+      "Rank": "1389",
+      "spanish": "tardes",
+      "english": "afternoon"
+    },
+    {
+      "Rank": "1390",
+      "spanish": "vengo",
+      "english": "I come"
+    },
+    {
+      "Rank": "1391",
+      "spanish": "bosque",
+      "english": "forest"
+    },
+    {
+      "Rank": "1392",
+      "spanish": "perdí",
+      "english": "I missed"
+    },
+    {
+      "Rank": "1393",
+      "spanish": "max",
+      "english": "max"
+    },
+    {
+      "Rank": "1394",
+      "spanish": "volverá",
+      "english": "will return"
+    },
+    {
+      "Rank": "1395",
+      "spanish": "taxi",
+      "english": "cab"
+    },
+    {
+      "Rank": "1396",
+      "spanish": "volar",
+      "english": "fly"
+    },
+    {
+      "Rank": "1397",
+      "spanish": "debido",
+      "english": "due"
+    },
+    {
+      "Rank": "1398",
+      "spanish": "repente",
+      "english": "suddenly"
+    },
+    {
+      "Rank": "1399",
+      "spanish": "bromeando",
+      "english": "joking"
+    },
+    {
+      "Rank": "1400",
+      "spanish": "ios",
+      "english": "ios"
+    },
+    {
+      "Rank": "1401",
+      "spanish": "viejos",
+      "english": "old"
+    },
+    {
+      "Rank": "1402",
+      "spanish": "planeta",
+      "english": "planet"
+    },
+    {
+      "Rank": "1403",
+      "spanish": "leche",
+      "english": "milk"
+    },
+    {
+      "Rank": "1404",
+      "spanish": "nick",
+      "english": "nick"
+    },
+    {
+      "Rank": "1405",
+      "spanish": "tanta",
+      "english": "so much"
+    },
+    {
+      "Rank": "1406",
+      "spanish": "tuviera",
+      "english": "had"
+    },
+    {
+      "Rank": "1407",
+      "spanish": "encantado",
+      "english": "charmed"
+    },
+    {
+      "Rank": "1408",
+      "spanish": "cabrón",
+      "english": "dumbass"
+    },
+    {
+      "Rank": "1409",
+      "spanish": "correr",
+      "english": "run"
+    },
+    {
+      "Rank": "1410",
+      "spanish": "depende",
+      "english": "It depends"
+    },
+    {
+      "Rank": "1411",
+      "spanish": "eddie",
+      "english": "eddie"
+    },
+    {
+      "Rank": "1412",
+      "spanish": "común",
+      "english": "common"
+    },
+    {
+      "Rank": "1413",
+      "spanish": "informe",
+      "english": "report"
+    },
+    {
+      "Rank": "1414",
+      "spanish": "billy",
+      "english": "billy"
+    },
+    {
+      "Rank": "1415",
+      "spanish": "solamente",
+      "english": "only"
+    },
+    {
+      "Rank": "1416",
+      "spanish": "máquina",
+      "english": "machine"
+    },
+    {
+      "Rank": "1417",
+      "spanish": "muere",
+      "english": "go dead"
+    },
+    {
+      "Rank": "1418",
+      "spanish": "principal",
+      "english": "principal"
+    },
+    {
+      "Rank": "1419",
+      "spanish": "ridículo",
+      "english": "ridiculous"
+    },
+    {
+      "Rank": "1420",
+      "spanish": "entrada",
+      "english": "entry"
+    },
+    {
+      "Rank": "1421",
+      "spanish": "encontró",
+      "english": "he found"
+    },
+    {
+      "Rank": "1422",
+      "spanish": "podamos",
+      "english": "we can"
+    },
+    {
+      "Rank": "1423",
+      "spanish": "acabar",
+      "english": "finish"
+    },
+    {
+      "Rank": "1424",
+      "spanish": "américa",
+      "english": "America"
+    },
+    {
+      "Rank": "1425",
+      "spanish": "regresa",
+      "english": "came back"
+    },
+    {
+      "Rank": "1426",
+      "spanish": "probar",
+      "english": "try"
+    },
+    {
+      "Rank": "1427",
+      "spanish": "príncipe",
+      "english": "the prince"
+    },
+    {
+      "Rank": "1428",
+      "spanish": "mr",
+      "english": "mr"
+    },
+    {
+      "Rank": "1429",
+      "spanish": "preparado",
+      "english": "prepared"
+    },
+    {
+      "Rank": "1430",
+      "spanish": "pedido",
+      "english": "order"
+    },
+    {
+      "Rank": "1431",
+      "spanish": "propósito",
+      "english": "purpose"
+    },
+    {
+      "Rank": "1432",
+      "spanish": "dieron",
+      "english": "they gave"
+    },
+    {
+      "Rank": "1433",
+      "spanish": "salido",
+      "english": "stepped out"
+    },
+    {
+      "Rank": "1434",
+      "spanish": "cliente",
+      "english": "client"
+    },
+    {
+      "Rank": "1435",
+      "spanish": "árbol",
+      "english": "tree"
+    },
+    {
+      "Rank": "1436",
+      "spanish": "absoluto",
+      "english": "absolute"
+    },
+    {
+      "Rank": "1437",
+      "spanish": "dejas",
+      "english": "you let"
+    },
+    {
+      "Rank": "1438",
+      "spanish": "quiénes",
+      "english": "Who"
+    },
+    {
+      "Rank": "1439",
+      "spanish": "habías",
+      "english": "you had"
+    },
+    {
+      "Rank": "1440",
+      "spanish": "b",
+      "english": "b"
+    },
+    {
+      "Rank": "1441",
+      "spanish": "parecen",
+      "english": "they look like"
+    },
+    {
+      "Rank": "1442",
+      "spanish": "belleza",
+      "english": "beauty"
+    },
+    {
+      "Rank": "1443",
+      "spanish": "llame",
+      "english": "I called"
+    },
+    {
+      "Rank": "1444",
+      "spanish": "intenta",
+      "english": "try"
+    },
+    {
+      "Rank": "1445",
+      "spanish": "humanos",
+      "english": "humans"
+    },
+    {
+      "Rank": "1446",
+      "spanish": "you",
+      "english": "you"
+    },
+    {
+      "Rank": "1447",
+      "spanish": "tratar",
+      "english": "try"
+    },
+    {
+      "Rank": "1448",
+      "spanish": "vuestra",
+      "english": "your"
+    },
+    {
+      "Rank": "1449",
+      "spanish": "hayas",
+      "english": "you have"
+    },
+    {
+      "Rank": "1450",
+      "spanish": "princesa",
+      "english": "Princess"
+    },
+    {
+      "Rank": "1451",
+      "spanish": "sigo",
+      "english": "I follow"
+    },
+    {
+      "Rank": "1452",
+      "spanish": "quedarse",
+      "english": "stay"
+    },
+    {
+      "Rank": "1453",
+      "spanish": "oeste",
+      "english": "West"
+    },
+    {
+      "Rank": "1454",
+      "spanish": "traer",
+      "english": "bring"
+    },
+    {
+      "Rank": "1455",
+      "spanish": "olvídalo",
+      "english": "forget this"
+    },
+    {
+      "Rank": "1456",
+      "spanish": "francia",
+      "english": "France"
+    },
+    {
+      "Rank": "1457",
+      "spanish": "tuvimos",
+      "english": "we had"
+    },
+    {
+      "Rank": "1458",
+      "spanish": "ayudarme",
+      "english": "help me"
+    },
+    {
+      "Rank": "1459",
+      "spanish": "deprisa",
+      "english": "quickly"
+    },
+    {
+      "Rank": "1460",
+      "spanish": "llaves",
+      "english": "keys"
+    },
+    {
+      "Rank": "1461",
+      "spanish": "tiro",
+      "english": "threw"
+    },
+    {
+      "Rank": "1462",
+      "spanish": "cerdo",
+      "english": "pork"
+    },
+    {
+      "Rank": "1463",
+      "spanish": "gato",
+      "english": "cat"
+    },
+    {
+      "Rank": "1464",
+      "spanish": "inglaterra",
+      "english": "England"
+    },
+    {
+      "Rank": "1465",
+      "spanish": "vistazo",
+      "english": "glance"
+    },
+    {
+      "Rank": "1466",
+      "spanish": "cuántas",
+      "english": "how many"
+    },
+    {
+      "Rank": "1467",
+      "spanish": "defensa",
+      "english": "defending"
+    },
+    {
+      "Rank": "1468",
+      "spanish": "nuevos",
+      "english": "new"
+    },
+    {
+      "Rank": "1469",
+      "spanish": "últimos",
+      "english": "latest"
+    },
+    {
+      "Rank": "1470",
+      "spanish": "reloj",
+      "english": "clock"
+    },
+    {
+      "Rank": "1471",
+      "spanish": "fuimos",
+      "english": "we went"
+    },
+    {
+      "Rank": "1472",
+      "spanish": "batalla",
+      "english": "battle"
+    },
+    {
+      "Rank": "1473",
+      "spanish": "hable",
+      "english": "I talked"
+    },
+    {
+      "Rank": "1474",
+      "spanish": "caminar",
+      "english": "walk"
+    },
+    {
+      "Rank": "1475",
+      "spanish": "hacerle",
+      "english": "give"
+    },
+    {
+      "Rank": "1476",
+      "spanish": "vayamos",
+      "english": "we go"
+    },
+    {
+      "Rank": "1477",
+      "spanish": "interior",
+      "english": "inside"
+    },
+    {
+      "Rank": "1478",
+      "spanish": "bella",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "1479",
+      "spanish": "felices",
+      "english": "happy"
+    },
+    {
+      "Rank": "1480",
+      "spanish": "intentando",
+      "english": "trying"
+    },
+    {
+      "Rank": "1481",
+      "spanish": "apartamento",
+      "english": "apartment"
+    },
+    {
+      "Rank": "1482",
+      "spanish": "teatro",
+      "english": "theater"
+    },
+    {
+      "Rank": "1483",
+      "spanish": "hacerme",
+      "english": "me"
+    },
+    {
+      "Rank": "1484",
+      "spanish": "papi",
+      "english": "Daddy"
+    },
+    {
+      "Rank": "1485",
+      "spanish": "ee",
+      "english": "ee"
+    },
+    {
+      "Rank": "1486",
+      "spanish": "asuntos",
+      "english": "issues"
+    },
+    {
+      "Rank": "1487",
+      "spanish": "confiar",
+      "english": "trust"
+    },
+    {
+      "Rank": "1488",
+      "spanish": "hielo",
+      "english": "ice"
+    },
+    {
+      "Rank": "1489",
+      "spanish": "detective",
+      "english": "detective"
+    },
+    {
+      "Rank": "1490",
+      "spanish": "deberían",
+      "english": "should"
+    },
+    {
+      "Rank": "1491",
+      "spanish": "cantar",
+      "english": "to sing"
+    },
+    {
+      "Rank": "1492",
+      "spanish": "bajar",
+      "english": "get low"
+    },
+    {
+      "Rank": "1493",
+      "spanish": "vuestro",
+      "english": "your"
+    },
+    {
+      "Rank": "1494",
+      "spanish": "pelear",
+      "english": "fight"
+    },
+    {
+      "Rank": "1495",
+      "spanish": "locos",
+      "english": "crazy"
+    },
+    {
+      "Rank": "1496",
+      "spanish": "paga",
+      "english": "pay"
+    },
+    {
+      "Rank": "1497",
+      "spanish": "oyes",
+      "english": "you hear"
+    },
+    {
+      "Rank": "1498",
+      "spanish": "completo",
+      "english": "full"
+    },
+    {
+      "Rank": "1499",
+      "spanish": "lucha",
+      "english": "fight"
+    },
+    {
+      "Rank": "1500",
+      "spanish": "fuerzas",
+      "english": "forces"
+    },
+    {
+      "Rank": "1501",
+      "spanish": "ideas",
+      "english": "Ideas"
+    },
+    {
+      "Rank": "1502",
+      "spanish": "borracho",
+      "english": "drunk"
+    },
+    {
+      "Rank": "1503",
+      "spanish": "héroe",
+      "english": "hero"
+    },
+    {
+      "Rank": "1504",
+      "spanish": "camión",
+      "english": "truck"
+    },
+    {
+      "Rank": "1505",
+      "spanish": "cabo",
+      "english": "cape"
+    },
+    {
+      "Rank": "1506",
+      "spanish": "dientes",
+      "english": "teeth"
+    },
+    {
+      "Rank": "1507",
+      "spanish": "verde",
+      "english": "green"
+    },
+    {
+      "Rank": "1508",
+      "spanish": "despacio",
+      "english": "slowly"
+    },
+    {
+      "Rank": "1509",
+      "spanish": "decidido",
+      "english": "decided"
+    },
+    {
+      "Rank": "1510",
+      "spanish": "sociedad",
+      "english": "society"
+    },
+    {
+      "Rank": "1511",
+      "spanish": "pareja",
+      "english": "couple"
+    },
+    {
+      "Rank": "1512",
+      "spanish": "dígame",
+      "english": "tell me"
+    },
+    {
+      "Rank": "1513",
+      "spanish": "estuviste",
+      "english": "you were"
+    },
+    {
+      "Rank": "1514",
+      "spanish": "nariz",
+      "english": "nose"
+    },
+    {
+      "Rank": "1515",
+      "spanish": "vergüenza",
+      "english": "shame"
+    },
+    {
+      "Rank": "1516",
+      "spanish": "caer",
+      "english": "fall"
+    },
+    {
+      "Rank": "1517",
+      "spanish": "j",
+      "english": "j"
+    },
+    {
+      "Rank": "1518",
+      "spanish": "herido",
+      "english": "injured"
+    },
+    {
+      "Rank": "1519",
+      "spanish": "uu",
+      "english": "uu"
+    },
+    {
+      "Rank": "1520",
+      "spanish": "cuentas",
+      "english": "accounts"
+    },
+    {
+      "Rank": "1521",
+      "spanish": "pista",
+      "english": "track"
+    },
+    {
+      "Rank": "1522",
+      "spanish": "siéntese",
+      "english": "sit"
+    },
+    {
+      "Rank": "1523",
+      "spanish": "bebe",
+      "english": "baby"
+    },
+    {
+      "Rank": "1524",
+      "spanish": "sonido",
+      "english": "sound"
+    },
+    {
+      "Rank": "1525",
+      "spanish": "estrellas",
+      "english": "stars"
+    },
+    {
+      "Rank": "1526",
+      "spanish": "sombrero",
+      "english": "hat"
+    },
+    {
+      "Rank": "1527",
+      "spanish": "cayó",
+      "english": "it fell"
+    },
+    {
+      "Rank": "1528",
+      "spanish": "evitar",
+      "english": "avoid"
+    },
+    {
+      "Rank": "1529",
+      "spanish": "pasará",
+      "english": "it will happen"
+    },
+    {
+      "Rank": "1530",
+      "spanish": "maría",
+      "english": "Maria"
+    },
+    {
+      "Rank": "1531",
+      "spanish": "memoria",
+      "english": "memory"
+    },
+    {
+      "Rank": "1532",
+      "spanish": "solos",
+      "english": "alone"
+    },
+    {
+      "Rank": "1533",
+      "spanish": "llorar",
+      "english": "cry"
+    },
+    {
+      "Rank": "1534",
+      "spanish": "nervioso",
+      "english": "nervous"
+    },
+    {
+      "Rank": "1535",
+      "spanish": "lástima",
+      "english": "pity"
+    },
+    {
+      "Rank": "1536",
+      "spanish": "haberlo",
+      "english": "I have"
+    },
+    {
+      "Rank": "1537",
+      "spanish": "época",
+      "english": "time"
+    },
+    {
+      "Rank": "1538",
+      "spanish": "naturaleza",
+      "english": "nature"
+    },
+    {
+      "Rank": "1539",
+      "spanish": "vender",
+      "english": "sell"
+    },
+    {
+      "Rank": "1540",
+      "spanish": "política",
+      "english": "politics"
+    },
+    {
+      "Rank": "1541",
+      "spanish": "levántate",
+      "english": "Get up"
+    },
+    {
+      "Rank": "1542",
+      "spanish": "estudio",
+      "english": "study"
+    },
+    {
+      "Rank": "1543",
+      "spanish": "brillante",
+      "english": "sparkly"
+    },
+    {
+      "Rank": "1544",
+      "spanish": "nivel",
+      "english": "level"
+    },
+    {
+      "Rank": "1545",
+      "spanish": "diferentes",
+      "english": "different"
+    },
+    {
+      "Rank": "1546",
+      "spanish": "dando",
+      "english": "giving"
+    },
+    {
+      "Rank": "1547",
+      "spanish": "hubiese",
+      "english": "I had"
+    },
+    {
+      "Rank": "1548",
+      "spanish": "permite",
+      "english": "It allows"
+    },
+    {
+      "Rank": "1549",
+      "spanish": "justicia",
+      "english": "Justice"
+    },
+    {
+      "Rank": "1550",
+      "spanish": "planes",
+      "english": "plans"
+    },
+    {
+      "Rank": "1551",
+      "spanish": "gay",
+      "english": "gay"
+    },
+    {
+      "Rank": "1552",
+      "spanish": "mírame",
+      "english": "Look at me"
+    },
+    {
+      "Rank": "1553",
+      "spanish": "llegamos",
+      "english": "we arrived"
+    },
+    {
+      "Rank": "1554",
+      "spanish": "roma",
+      "english": "Rome"
+    },
+    {
+      "Rank": "1555",
+      "spanish": "seguramente",
+      "english": "surely"
+    },
+    {
+      "Rank": "1556",
+      "spanish": "papa",
+      "english": "dad"
+    },
+    {
+      "Rank": "1557",
+      "spanish": "parecer",
+      "english": "look"
+    },
+    {
+      "Rank": "1558",
+      "spanish": "t",
+      "english": "t"
+    },
+    {
+      "Rank": "1559",
+      "spanish": "terminó",
+      "english": "finished"
+    },
+    {
+      "Rank": "1560",
+      "spanish": "pierna",
+      "english": "leg"
+    },
+    {
+      "Rank": "1561",
+      "spanish": "quienes",
+      "english": "Who"
+    },
+    {
+      "Rank": "1562",
+      "spanish": "ray",
+      "english": "ray"
+    },
+    {
+      "Rank": "1563",
+      "spanish": "millón",
+      "english": "million"
+    },
+    {
+      "Rank": "1564",
+      "spanish": "enorme",
+      "english": "huge"
+    },
+    {
+      "Rank": "1565",
+      "spanish": "charles",
+      "english": "charles"
+    },
+    {
+      "Rank": "1566",
+      "spanish": "inocente",
+      "english": "innocent"
+    },
+    {
+      "Rank": "1567",
+      "spanish": "mismos",
+      "english": "same"
+    },
+    {
+      "Rank": "1568",
+      "spanish": "pantalones",
+      "english": "pants"
+    },
+    {
+      "Rank": "1569",
+      "spanish": "ministro",
+      "english": "Minister"
+    },
+    {
+      "Rank": "1570",
+      "spanish": "bienvenida",
+      "english": "welcome"
+    },
+    {
+      "Rank": "1571",
+      "spanish": "u",
+      "english": "or"
+    },
+    {
+      "Rank": "1572",
+      "spanish": "refiero",
+      "english": "I mean"
+    },
+    {
+      "Rank": "1573",
+      "spanish": "nombres",
+      "english": "Name (s"
+    },
+    {
+      "Rank": "1574",
+      "spanish": "mando",
+      "english": "I send"
+    },
+    {
+      "Rank": "1575",
+      "spanish": "ponte",
+      "english": "ponte"
+    },
+    {
+      "Rank": "1576",
+      "spanish": "preciosa",
+      "english": "precious"
+    },
+    {
+      "Rank": "1577",
+      "spanish": "alex",
+      "english": "alex"
+    },
+    {
+      "Rank": "1578",
+      "spanish": "quedó",
+      "english": "remained"
+    },
+    {
+      "Rank": "1579",
+      "spanish": "podrás",
+      "english": "you can"
+    },
+    {
+      "Rank": "1580",
+      "spanish": "pesar",
+      "english": "to weigh"
+    },
+    {
+      "Rank": "1581",
+      "spanish": "animal",
+      "english": "animal"
+    },
+    {
+      "Rank": "1582",
+      "spanish": "enferma",
+      "english": "sick"
+    },
+    {
+      "Rank": "1583",
+      "spanish": "extraña",
+      "english": "strange"
+    },
+    {
+      "Rank": "1584",
+      "spanish": "enamorado",
+      "english": "in love"
+    },
+    {
+      "Rank": "1585",
+      "spanish": "tv",
+      "english": "TV"
+    },
+    {
+      "Rank": "1586",
+      "spanish": "autobús",
+      "english": "bus"
+    },
+    {
+      "Rank": "1587",
+      "spanish": "recordar",
+      "english": "remember"
+    },
+    {
+      "Rank": "1588",
+      "spanish": "estáis",
+      "english": "you are"
+    },
+    {
+      "Rank": "1589",
+      "spanish": "pequeños",
+      "english": "little ones"
+    },
+    {
+      "Rank": "1590",
+      "spanish": "luchar",
+      "english": "to struggle"
+    },
+    {
+      "Rank": "1591",
+      "spanish": "date",
+      "english": "date"
+    },
+    {
+      "Rank": "1592",
+      "spanish": "contrario",
+      "english": "contrary"
+    },
+    {
+      "Rank": "1593",
+      "spanish": "tomado",
+      "english": "taken"
+    },
+    {
+      "Rank": "1594",
+      "spanish": "sois",
+      "english": "you are"
+    },
+    {
+      "Rank": "1595",
+      "spanish": "movimiento",
+      "english": "movement"
+    },
+    {
+      "Rank": "1596",
+      "spanish": "estan",
+      "english": "is it so"
+    },
+    {
+      "Rank": "1597",
+      "spanish": "sentado",
+      "english": "seated"
+    },
+    {
+      "Rank": "1598",
+      "spanish": "gana",
+      "english": "desire"
+    },
+    {
+      "Rank": "1599",
+      "spanish": "robert",
+      "english": "robert"
+    },
+    {
+      "Rank": "1600",
+      "spanish": "estén",
+      "english": "are"
+    },
+    {
+      "Rank": "1601",
+      "spanish": "motivo",
+      "english": "reason"
+    },
+    {
+      "Rank": "1602",
+      "spanish": "absolutamente",
+      "english": "absolutely"
+    },
+    {
+      "Rank": "1603",
+      "spanish": "dé",
+      "english": "from"
+    },
+    {
+      "Rank": "1604",
+      "spanish": "puente",
+      "english": "bridge"
+    },
+    {
+      "Rank": "1605",
+      "spanish": "comprendo",
+      "english": "I understand"
+    },
+    {
+      "Rank": "1606",
+      "spanish": "huevos",
+      "english": "eggs"
+    },
+    {
+      "Rank": "1607",
+      "spanish": "tomó",
+      "english": "I take"
+    },
+    {
+      "Rank": "1608",
+      "spanish": "cuento",
+      "english": "story"
+    },
+    {
+      "Rank": "1609",
+      "spanish": "botella",
+      "english": "bottle"
+    },
+    {
+      "Rank": "1610",
+      "spanish": "cuesta",
+      "english": "cost"
+    },
+    {
+      "Rank": "1611",
+      "spanish": "detente",
+      "english": "stop"
+    },
+    {
+      "Rank": "1612",
+      "spanish": "corriendo",
+      "english": "running"
+    },
+    {
+      "Rank": "1613",
+      "spanish": "confianza",
+      "english": "confidence"
+    },
+    {
+      "Rank": "1614",
+      "spanish": "felicidad",
+      "english": "happiness"
+    },
+    {
+      "Rank": "1615",
+      "spanish": "espada",
+      "english": "sword"
+    },
+    {
+      "Rank": "1616",
+      "spanish": "silla",
+      "english": "chair"
+    },
+    {
+      "Rank": "1617",
+      "spanish": "bobby",
+      "english": "bobby"
+    },
+    {
+      "Rank": "1618",
+      "spanish": "noticia",
+      "english": "News"
+    },
+    {
+      "Rank": "1619",
+      "spanish": "casas",
+      "english": "houses"
+    },
+    {
+      "Rank": "1620",
+      "spanish": "televisión",
+      "english": "TV"
+    },
+    {
+      "Rank": "1621",
+      "spanish": "acuerdas",
+      "english": "remember"
+    },
+    {
+      "Rank": "1622",
+      "spanish": "necesitaba",
+      "english": "needed"
+    },
+    {
+      "Rank": "1623",
+      "spanish": "pared",
+      "english": "Wall"
+    },
+    {
+      "Rank": "1624",
+      "spanish": "aquellos",
+      "english": "those"
+    },
+    {
+      "Rank": "1625",
+      "spanish": "prensa",
+      "english": "press"
+    },
+    {
+      "Rank": "1626",
+      "spanish": "trampa",
+      "english": "trap"
+    },
+    {
+      "Rank": "1627",
+      "spanish": "presente",
+      "english": "I presented"
+    },
+    {
+      "Rank": "1628",
+      "spanish": "estarán",
+      "english": "will be"
+    },
+    {
+      "Rank": "1629",
+      "spanish": "jardín",
+      "english": "garden"
+    },
+    {
+      "Rank": "1630",
+      "spanish": "cabello",
+      "english": "hair"
+    },
+    {
+      "Rank": "1631",
+      "spanish": "espectáculo",
+      "english": "show"
+    },
+    {
+      "Rank": "1632",
+      "spanish": "podré",
+      "english": "I will be able"
+    },
+    {
+      "Rank": "1633",
+      "spanish": "grave",
+      "english": "serious"
+    },
+    {
+      "Rank": "1634",
+      "spanish": "bastardo",
+      "english": "bastard"
+    },
+    {
+      "Rank": "1635",
+      "spanish": "dará",
+      "english": "give to"
+    },
+    {
+      "Rank": "1636",
+      "spanish": "siga",
+      "english": "follow"
+    },
+    {
+      "Rank": "1637",
+      "spanish": "periódico",
+      "english": "Newspaper"
+    },
+    {
+      "Rank": "1638",
+      "spanish": "coño",
+      "english": "cone"
+    },
+    {
+      "Rank": "1639",
+      "spanish": "danny",
+      "english": "danny"
+    },
+    {
+      "Rank": "1640",
+      "spanish": "negros",
+      "english": "black"
+    },
+    {
+      "Rank": "1641",
+      "spanish": "alguno",
+      "english": "any"
+    },
+    {
+      "Rank": "1642",
+      "spanish": "anillo",
+      "english": "ring"
+    },
+    {
+      "Rank": "1643",
+      "spanish": "monstruo",
+      "english": "monster"
+    },
+    {
+      "Rank": "1644",
+      "spanish": "total",
+      "english": "total"
+    },
+    {
+      "Rank": "1645",
+      "spanish": "ai",
+      "english": "ai"
+    },
+    {
+      "Rank": "1646",
+      "spanish": "tommy",
+      "english": "tommy"
+    },
+    {
+      "Rank": "1647",
+      "spanish": "piedra",
+      "english": "stone"
+    },
+    {
+      "Rank": "1648",
+      "spanish": "contento",
+      "english": "happy"
+    },
+    {
+      "Rank": "1649",
+      "spanish": "quedarte",
+      "english": "stay"
+    },
+    {
+      "Rank": "1650",
+      "spanish": "tengan",
+      "english": "have"
+    },
+    {
+      "Rank": "1651",
+      "spanish": "oigan",
+      "english": "hear"
+    },
+    {
+      "Rank": "1652",
+      "spanish": "sentí",
+      "english": "I felt"
+    },
+    {
+      "Rank": "1653",
+      "spanish": "debí",
+      "english": "I should"
+    },
+    {
+      "Rank": "1654",
+      "spanish": "ahi",
+      "english": "there"
+    },
+    {
+      "Rank": "1655",
+      "spanish": "policías",
+      "english": "police"
+    },
+    {
+      "Rank": "1656",
+      "spanish": "lugares",
+      "english": "places"
+    },
+    {
+      "Rank": "1657",
+      "spanish": "contrato",
+      "english": "contract"
+    },
+    {
+      "Rank": "1658",
+      "spanish": "playa",
+      "english": "Beach"
+    },
+    {
+      "Rank": "1659",
+      "spanish": "costa",
+      "english": "coast"
+    },
+    {
+      "Rank": "1660",
+      "spanish": "puertas",
+      "english": "doors"
+    },
+    {
+      "Rank": "1661",
+      "spanish": "asiento",
+      "english": "seat"
+    },
+    {
+      "Rank": "1662",
+      "spanish": "tarjeta",
+      "english": "card"
+    },
+    {
+      "Rank": "1663",
+      "spanish": "restaurante",
+      "english": "restaurant"
+    },
+    {
+      "Rank": "1664",
+      "spanish": "quede",
+      "english": "stay"
+    },
+    {
+      "Rank": "1665",
+      "spanish": "paseo",
+      "english": "walk"
+    },
+    {
+      "Rank": "1666",
+      "spanish": "hechos",
+      "english": "acts"
+    },
+    {
+      "Rank": "1667",
+      "spanish": "hagamos",
+      "english": "let's do"
+    },
+    {
+      "Rank": "1668",
+      "spanish": "maravillosa",
+      "english": "wonderful"
+    },
+    {
+      "Rank": "1669",
+      "spanish": "pon",
+      "english": "put"
+    },
+    {
+      "Rank": "1670",
+      "spanish": "inspector",
+      "english": "inspector"
+    },
+    {
+      "Rank": "1671",
+      "spanish": "domingo",
+      "english": "Sunday"
+    },
+    {
+      "Rank": "1672",
+      "spanish": "especialmente",
+      "english": "especially"
+    },
+    {
+      "Rank": "1673",
+      "spanish": "velocidad",
+      "english": "speed"
+    },
+    {
+      "Rank": "1674",
+      "spanish": "negra",
+      "english": "black"
+    },
+    {
+      "Rank": "1675",
+      "spanish": "richard",
+      "english": "richard"
+    },
+    {
+      "Rank": "1676",
+      "spanish": "intentar",
+      "english": "try"
+    },
+    {
+      "Rank": "1677",
+      "spanish": "proyecto",
+      "english": "draft"
+    },
+    {
+      "Rank": "1678",
+      "spanish": "clientes",
+      "english": "customers"
+    },
+    {
+      "Rank": "1679",
+      "spanish": "victoria",
+      "english": "victory"
+    },
+    {
+      "Rank": "1680",
+      "spanish": "encantaría",
+      "english": "love"
+    },
+    {
+      "Rank": "1681",
+      "spanish": "operación",
+      "english": "operation"
+    },
+    {
+      "Rank": "1682",
+      "spanish": "perdió",
+      "english": "lost"
+    },
+    {
+      "Rank": "1683",
+      "spanish": "tonta",
+      "english": "dumb"
+    },
+    {
+      "Rank": "1684",
+      "spanish": "imagen",
+      "english": "image"
+    },
+    {
+      "Rank": "1685",
+      "spanish": "show",
+      "english": "Show"
+    },
+    {
+      "Rank": "1686",
+      "spanish": "lleve",
+      "english": "I carried"
+    },
+    {
+      "Rank": "1687",
+      "spanish": "amas",
+      "english": "love"
+    },
+    {
+      "Rank": "1688",
+      "spanish": "responsable",
+      "english": "responsable"
+    },
+    {
+      "Rank": "1689",
+      "spanish": "gustaba",
+      "english": "He liked"
+    },
+    {
+      "Rank": "1690",
+      "spanish": "aspecto",
+      "english": "appearance"
+    },
+    {
+      "Rank": "1691",
+      "spanish": "tantos",
+      "english": "many"
+    },
+    {
+      "Rank": "1692",
+      "spanish": "sentimientos",
+      "english": "feelings"
+    },
+    {
+      "Rank": "1693",
+      "spanish": "creerlo",
+      "english": "I believe it"
+    },
+    {
+      "Rank": "1694",
+      "spanish": "objetivo",
+      "english": "objective"
+    },
+    {
+      "Rank": "1695",
+      "spanish": "sarah",
+      "english": "sarah"
+    },
+    {
+      "Rank": "1696",
+      "spanish": "llevan",
+      "english": "lead"
+    },
+    {
+      "Rank": "1697",
+      "spanish": "malas",
+      "english": "bad"
+    },
+    {
+      "Rank": "1698",
+      "spanish": "red",
+      "english": "network"
+    },
+    {
+      "Rank": "1699",
+      "spanish": "dejen",
+      "english": "leave"
+    },
+    {
+      "Rank": "1700",
+      "spanish": "nuevas",
+      "english": "news"
+    },
+    {
+      "Rank": "1701",
+      "spanish": "muchacha",
+      "english": "girl"
+    },
+    {
+      "Rank": "1702",
+      "spanish": "dormido",
+      "english": "asleep"
+    },
+    {
+      "Rank": "1703",
+      "spanish": "and",
+      "english": "and"
+    },
+    {
+      "Rank": "1704",
+      "spanish": "historias",
+      "english": "stories"
+    },
+    {
+      "Rank": "1705",
+      "spanish": "arreglar",
+      "english": "fix"
+    },
+    {
+      "Rank": "1706",
+      "spanish": "turno",
+      "english": "turn"
+    },
+    {
+      "Rank": "1707",
+      "spanish": "yendo",
+      "english": "going"
+    },
+    {
+      "Rank": "1708",
+      "spanish": "tuviste",
+      "english": "You saw"
+    },
+    {
+      "Rank": "1709",
+      "spanish": "ponga",
+      "english": "put"
+    },
+    {
+      "Rank": "1710",
+      "spanish": "olvides",
+      "english": "forget"
+    },
+    {
+      "Rank": "1711",
+      "spanish": "escuché",
+      "english": "I heard"
+    },
+    {
+      "Rank": "1712",
+      "spanish": "pasada",
+      "english": "pass"
+    },
+    {
+      "Rank": "1713",
+      "spanish": "mata",
+      "english": "Bush"
+    },
+    {
+      "Rank": "1714",
+      "spanish": "tantas",
+      "english": "many"
+    },
+    {
+      "Rank": "1715",
+      "spanish": "montaña",
+      "english": "Montana"
+    },
+    {
+      "Rank": "1716",
+      "spanish": "gracia",
+      "english": "Grace"
+    },
+    {
+      "Rank": "1717",
+      "spanish": "enfermedad",
+      "english": "disease"
+    },
+    {
+      "Rank": "1718",
+      "spanish": "dedos",
+      "english": "fingers"
+    },
+    {
+      "Rank": "1719",
+      "spanish": "guapa",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "1720",
+      "spanish": "querer",
+      "english": "to want"
+    },
+    {
+      "Rank": "1721",
+      "spanish": "p",
+      "english": "p"
+    },
+    {
+      "Rank": "1722",
+      "spanish": "ocurrido",
+      "english": "happened"
+    },
+    {
+      "Rank": "1723",
+      "spanish": "pocos",
+      "english": "few"
+    },
+    {
+      "Rank": "1724",
+      "spanish": "deber",
+      "english": "duty"
+    },
+    {
+      "Rank": "1725",
+      "spanish": "refieres",
+      "english": "you mean"
+    },
+    {
+      "Rank": "1726",
+      "spanish": "viernes",
+      "english": "Friday"
+    },
+    {
+      "Rank": "1727",
+      "spanish": "preocupado",
+      "english": "worried"
+    },
+    {
+      "Rank": "1728",
+      "spanish": "clases",
+      "english": "lessons"
+    },
+    {
+      "Rank": "1729",
+      "spanish": "rayos",
+      "english": "Ray"
+    },
+    {
+      "Rank": "1730",
+      "spanish": "inútil",
+      "english": "Useless"
+    },
+    {
+      "Rank": "1731",
+      "spanish": "washington",
+      "english": "Washington"
+    },
+    {
+      "Rank": "1732",
+      "spanish": "abierto",
+      "english": "open"
+    },
+    {
+      "Rank": "1733",
+      "spanish": "haberte",
+      "english": "sorry"
+    },
+    {
+      "Rank": "1734",
+      "spanish": "oscuridad",
+      "english": "darkness"
+    },
+    {
+      "Rank": "1735",
+      "spanish": "verdadera",
+      "english": "real"
+    },
+    {
+      "Rank": "1736",
+      "spanish": "americano",
+      "english": "American"
+    },
+    {
+      "Rank": "1737",
+      "spanish": "trajo",
+      "english": "He brought"
+    },
+    {
+      "Rank": "1738",
+      "spanish": "gustó",
+      "english": "taste"
+    },
+    {
+      "Rank": "1739",
+      "spanish": "primo",
+      "english": "cousin"
+    },
+    {
+      "Rank": "1740",
+      "spanish": "nacional",
+      "english": "national"
+    },
+    {
+      "Rank": "1741",
+      "spanish": "supe",
+      "english": "I knew"
+    },
+    {
+      "Rank": "1742",
+      "spanish": "colegio",
+      "english": "school"
+    },
+    {
+      "Rank": "1743",
+      "spanish": "malditos",
+      "english": "accursed"
+    },
+    {
+      "Rank": "1744",
+      "spanish": "cuchillo",
+      "english": "knife"
+    },
+    {
+      "Rank": "1745",
+      "spanish": "ibas",
+      "english": "you were"
+    },
+    {
+      "Rank": "1746",
+      "spanish": "llegué",
+      "english": "I arrived"
+    },
+    {
+      "Rank": "1747",
+      "spanish": "sir",
+      "english": "sir"
+    },
+    {
+      "Rank": "1748",
+      "spanish": "diario",
+      "english": "daily"
+    },
+    {
+      "Rank": "1749",
+      "spanish": "francés",
+      "english": "French"
+    },
+    {
+      "Rank": "1750",
+      "spanish": "quedo",
+      "english": "I remain"
+    },
+    {
+      "Rank": "1751",
+      "spanish": "podremos",
+      "english": "we can"
+    },
+    {
+      "Rank": "1752",
+      "spanish": "orgulloso",
+      "english": "proud"
+    },
+    {
+      "Rank": "1753",
+      "spanish": "ladrón",
+      "english": "thief"
+    },
+    {
+      "Rank": "1754",
+      "spanish": "martin",
+      "english": "Martin"
+    },
+    {
+      "Rank": "1755",
+      "spanish": "preguntar",
+      "english": "ask"
+    },
+    {
+      "Rank": "1756",
+      "spanish": "pedí",
+      "english": "I asked"
+    },
+    {
+      "Rank": "1757",
+      "spanish": "central",
+      "english": "central"
+    },
+    {
+      "Rank": "1758",
+      "spanish": "voluntad",
+      "english": "Will"
+    },
+    {
+      "Rank": "1759",
+      "spanish": "harán",
+      "english": "they will"
+    },
+    {
+      "Rank": "1760",
+      "spanish": "jake",
+      "english": "jake"
+    },
+    {
+      "Rank": "1761",
+      "spanish": "www",
+      "english": "www"
+    },
+    {
+      "Rank": "1762",
+      "spanish": "militar",
+      "english": "military"
+    },
+    {
+      "Rank": "1763",
+      "spanish": "agradezco",
+      "english": "I appreciate"
+    },
+    {
+      "Rank": "1764",
+      "spanish": "llevaba",
+      "english": "He is wearing"
+    },
+    {
+      "Rank": "1765",
+      "spanish": "mami",
+      "english": "Mommy"
+    },
+    {
+      "Rank": "1766",
+      "spanish": "lluvia",
+      "english": "rain"
+    },
+    {
+      "Rank": "1767",
+      "spanish": "éramos",
+      "english": "we were"
+    },
+    {
+      "Rank": "1768",
+      "spanish": "natural",
+      "english": "natural"
+    },
+    {
+      "Rank": "1769",
+      "spanish": "calles",
+      "english": "streets"
+    },
+    {
+      "Rank": "1770",
+      "spanish": "cien",
+      "english": "hundred"
+    },
+    {
+      "Rank": "1771",
+      "spanish": "lengua",
+      "english": "language"
+    },
+    {
+      "Rank": "1772",
+      "spanish": "china",
+      "english": "China"
+    },
+    {
+      "Rank": "1773",
+      "spanish": "testigo",
+      "english": "witness"
+    },
+    {
+      "Rank": "1774",
+      "spanish": "ayude",
+      "english": "help"
+    },
+    {
+      "Rank": "1775",
+      "spanish": "quiso",
+      "english": "he wanted"
+    },
+    {
+      "Rank": "1776",
+      "spanish": "cansada",
+      "english": "tired"
+    },
+    {
+      "Rank": "1777",
+      "spanish": "puse",
+      "english": "I put"
+    },
+    {
+      "Rank": "1778",
+      "spanish": "irás",
+      "english": "you will go"
+    },
+    {
+      "Rank": "1779",
+      "spanish": "alemanes",
+      "english": "German"
+    },
+    {
+      "Rank": "1780",
+      "spanish": "pago",
+      "english": "payment"
+    },
+    {
+      "Rank": "1781",
+      "spanish": "mirada",
+      "english": "look"
+    },
+    {
+      "Rank": "1782",
+      "spanish": "momentos",
+      "english": "moments"
+    },
+    {
+      "Rank": "1783",
+      "spanish": "quieto",
+      "english": "still"
+    },
+    {
+      "Rank": "1784",
+      "spanish": "sentía",
+      "english": "he felt"
+    },
+    {
+      "Rank": "1785",
+      "spanish": "escuchen",
+      "english": "listen"
+    },
+    {
+      "Rank": "1786",
+      "spanish": "descansar",
+      "english": "rest"
+    },
+    {
+      "Rank": "1787",
+      "spanish": "mercado",
+      "english": "market"
+    },
+    {
+      "Rank": "1788",
+      "spanish": "dura",
+      "english": "hard"
+    },
+    {
+      "Rank": "1789",
+      "spanish": "humana",
+      "english": "human"
+    },
+    {
+      "Rank": "1790",
+      "spanish": "estúpida",
+      "english": "stupid"
+    },
+    {
+      "Rank": "1791",
+      "spanish": "humor",
+      "english": "humor"
+    },
+    {
+      "Rank": "1792",
+      "spanish": "bienvenidos",
+      "english": "Welcome"
+    },
+    {
+      "Rank": "1793",
+      "spanish": "conocía",
+      "english": "he knew"
+    },
+    {
+      "Rank": "1794",
+      "spanish": "jane",
+      "english": "jane"
+    },
+    {
+      "Rank": "1795",
+      "spanish": "entero",
+      "english": "whole"
+    },
+    {
+      "Rank": "1796",
+      "spanish": "roja",
+      "english": "red"
+    },
+    {
+      "Rank": "1797",
+      "spanish": "larry",
+      "english": "larry"
+    },
+    {
+      "Rank": "1798",
+      "spanish": "llamaba",
+      "english": "He called"
+    },
+    {
+      "Rank": "1799",
+      "spanish": "tomas",
+      "english": "shots"
+    },
+    {
+      "Rank": "1800",
+      "spanish": "dueño",
+      "english": "owner"
+    },
+    {
+      "Rank": "1801",
+      "spanish": "echar",
+      "english": "throw"
+    },
+    {
+      "Rank": "1802",
+      "spanish": "emergencia",
+      "english": "emergency"
+    },
+    {
+      "Rank": "1803",
+      "spanish": "roto",
+      "english": "broken"
+    },
+    {
+      "Rank": "1804",
+      "spanish": "actuar",
+      "english": "Act"
+    },
+    {
+      "Rank": "1805",
+      "spanish": "mark",
+      "english": "mark"
+    },
+    {
+      "Rank": "1806",
+      "spanish": "inmediato",
+      "english": "righ now"
+    },
+    {
+      "Rank": "1807",
+      "spanish": "puntos",
+      "english": "points"
+    },
+    {
+      "Rank": "1808",
+      "spanish": "paciente",
+      "english": "patient"
+    },
+    {
+      "Rank": "1809",
+      "spanish": "olvidé",
+      "english": "forgot"
+    },
+    {
+      "Rank": "1810",
+      "spanish": "hables",
+      "english": "you speak"
+    },
+    {
+      "Rank": "1811",
+      "spanish": "varios",
+      "english": "various"
+    },
+    {
+      "Rank": "1812",
+      "spanish": "polvo",
+      "english": "dust"
+    },
+    {
+      "Rank": "1813",
+      "spanish": "ángeles",
+      "english": "angels"
+    },
+    {
+      "Rank": "1814",
+      "spanish": "coger",
+      "english": "take"
+    },
+    {
+      "Rank": "1815",
+      "spanish": "distancia",
+      "english": "distance"
+    },
+    {
+      "Rank": "1816",
+      "spanish": "bravo",
+      "english": "Bravo"
+    },
+    {
+      "Rank": "1817",
+      "spanish": "europa",
+      "english": "Europe"
+    },
+    {
+      "Rank": "1818",
+      "spanish": "mataron",
+      "english": "they killed"
+    },
+    {
+      "Rank": "1819",
+      "spanish": "tomando",
+      "english": "taking"
+    },
+    {
+      "Rank": "1820",
+      "spanish": "verle",
+      "english": "see"
+    },
+    {
+      "Rank": "1821",
+      "spanish": "señoría",
+      "english": "lordship"
+    },
+    {
+      "Rank": "1822",
+      "spanish": "casarse",
+      "english": "get marry"
+    },
+    {
+      "Rank": "1823",
+      "spanish": "toque",
+      "english": "I touched"
+    },
+    {
+      "Rank": "1824",
+      "spanish": "toques",
+      "english": "touches"
+    },
+    {
+      "Rank": "1825",
+      "spanish": "ángel",
+      "english": "Angel"
+    },
+    {
+      "Rank": "1826",
+      "spanish": "amante",
+      "english": "lover"
+    },
+    {
+      "Rank": "1827",
+      "spanish": "habló",
+      "english": "I speak"
+    },
+    {
+      "Rank": "1828",
+      "spanish": "saca",
+      "english": "pulls out"
+    },
+    {
+      "Rank": "1829",
+      "spanish": "digamos",
+      "english": "let say"
+    },
+    {
+      "Rank": "1830",
+      "spanish": "perfecta",
+      "english": "perfect"
+    },
+    {
+      "Rank": "1831",
+      "spanish": "rosa",
+      "english": "pink"
+    },
+    {
+      "Rank": "1832",
+      "spanish": "llámame",
+      "english": "Giving me a call"
+    },
+    {
+      "Rank": "1833",
+      "spanish": "nosotras",
+      "english": "we"
+    },
+    {
+      "Rank": "1834",
+      "spanish": "peso",
+      "english": "weight"
+    },
+    {
+      "Rank": "1835",
+      "spanish": "carga",
+      "english": "load"
+    },
+    {
+      "Rank": "1836",
+      "spanish": "acto",
+      "english": "act"
+    },
+    {
+      "Rank": "1837",
+      "spanish": "robar",
+      "english": "Steal"
+    },
+    {
+      "Rank": "1838",
+      "spanish": "dejaste",
+      "english": "you left"
+    },
+    {
+      "Rank": "1839",
+      "spanish": "desastre",
+      "english": "disaster"
+    },
+    {
+      "Rank": "1840",
+      "spanish": "bote",
+      "english": "boat"
+    },
+    {
+      "Rank": "1841",
+      "spanish": "huele",
+      "english": "smells"
+    },
+    {
+      "Rank": "1842",
+      "spanish": "embarazada",
+      "english": "pregnant"
+    },
+    {
+      "Rank": "1843",
+      "spanish": "muestra",
+      "english": "sample"
+    },
+    {
+      "Rank": "1844",
+      "spanish": "gordo",
+      "english": "Fat"
+    },
+    {
+      "Rank": "1845",
+      "spanish": "puto",
+      "english": "fucking"
+    },
+    {
+      "Rank": "1846",
+      "spanish": "sheriff",
+      "english": "sheriff"
+    },
+    {
+      "Rank": "1847",
+      "spanish": "viviendo",
+      "english": "living"
+    },
+    {
+      "Rank": "1848",
+      "spanish": "anna",
+      "english": "anna"
+    },
+    {
+      "Rank": "1849",
+      "spanish": "cerrar",
+      "english": "close"
+    },
+    {
+      "Rank": "1850",
+      "spanish": "papeles",
+      "english": "papers"
+    },
+    {
+      "Rank": "1851",
+      "spanish": "valiente",
+      "english": "brave"
+    },
+    {
+      "Rank": "1852",
+      "spanish": "gloria",
+      "english": "glory"
+    },
+    {
+      "Rank": "1853",
+      "spanish": "aceptar",
+      "english": "to accept"
+    },
+    {
+      "Rank": "1854",
+      "spanish": "perdóname",
+      "english": "forgive me"
+    },
+    {
+      "Rank": "1855",
+      "spanish": "perfectamente",
+      "english": "perfectly"
+    },
+    {
+      "Rank": "1856",
+      "spanish": "oscuro",
+      "english": "Dark"
+    },
+    {
+      "Rank": "1857",
+      "spanish": "cuidar",
+      "english": "look after"
+    },
+    {
+      "Rank": "1858",
+      "spanish": "dedo",
+      "english": "finger"
+    },
+    {
+      "Rank": "1859",
+      "spanish": "ruego",
+      "english": "I beg"
+    },
+    {
+      "Rank": "1860",
+      "spanish": "pareció",
+      "english": "it seemed"
+    },
+    {
+      "Rank": "1861",
+      "spanish": "tumba",
+      "english": "tomb"
+    },
+    {
+      "Rank": "1862",
+      "spanish": "coge",
+      "english": "gets"
+    },
+    {
+      "Rank": "1863",
+      "spanish": "resulta",
+      "english": "result"
+    },
+    {
+      "Rank": "1864",
+      "spanish": "dejarlo",
+      "english": "leave"
+    },
+    {
+      "Rank": "1865",
+      "spanish": "comenzar",
+      "english": "begin"
+    },
+    {
+      "Rank": "1866",
+      "spanish": "área",
+      "english": "area"
+    },
+    {
+      "Rank": "1867",
+      "spanish": "metido",
+      "english": "I got"
+    },
+    {
+      "Rank": "1868",
+      "spanish": "limpio",
+      "english": "cleansed"
+    },
+    {
+      "Rank": "1869",
+      "spanish": "descanso",
+      "english": "break"
+    },
+    {
+      "Rank": "1870",
+      "spanish": "lados",
+      "english": "sides"
+    },
+    {
+      "Rank": "1871",
+      "spanish": "posibilidad",
+      "english": "possibility"
+    },
+    {
+      "Rank": "1872",
+      "spanish": "jerry",
+      "english": "jerry"
+    },
+    {
+      "Rank": "1873",
+      "spanish": "guapo",
+      "english": "Handsome"
+    },
+    {
+      "Rank": "1874",
+      "spanish": "uso",
+      "english": "use"
+    },
+    {
+      "Rank": "1875",
+      "spanish": "talento",
+      "english": "talent"
+    },
+    {
+      "Rank": "1876",
+      "spanish": "matarme",
+      "english": "kill me"
+    },
+    {
+      "Rank": "1877",
+      "spanish": "continuar",
+      "english": "continue"
+    },
+    {
+      "Rank": "1878",
+      "spanish": "código",
+      "english": "code"
+    },
+    {
+      "Rank": "1879",
+      "spanish": "comenzó",
+      "english": "started"
+    },
+    {
+      "Rank": "1880",
+      "spanish": "duerme",
+      "english": "sleeps"
+    },
+    {
+      "Rank": "1881",
+      "spanish": "r",
+      "english": "r"
+    },
+    {
+      "Rank": "1882",
+      "spanish": "definitivamente",
+      "english": "definitely"
+    },
+    {
+      "Rank": "1883",
+      "spanish": "dave",
+      "english": "dave"
+    },
+    {
+      "Rank": "1884",
+      "spanish": "directo",
+      "english": "direct"
+    },
+    {
+      "Rank": "1885",
+      "spanish": "vuelvas",
+      "english": "you return"
+    },
+    {
+      "Rank": "1886",
+      "spanish": "dia",
+      "english": "day"
+    },
+    {
+      "Rank": "1887",
+      "spanish": "demonio",
+      "english": "demon"
+    },
+    {
+      "Rank": "1888",
+      "spanish": "parque",
+      "english": "Park"
+    },
+    {
+      "Rank": "1889",
+      "spanish": "cambia",
+      "english": "change"
+    },
+    {
+      "Rank": "1890",
+      "spanish": "olvidar",
+      "english": "to forget"
+    },
+    {
+      "Rank": "1891",
+      "spanish": "cinta",
+      "english": "tape"
+    },
+    {
+      "Rank": "1892",
+      "spanish": "famoso",
+      "english": "famous"
+    },
+    {
+      "Rank": "1893",
+      "spanish": "mataré",
+      "english": "I will kill"
+    },
+    {
+      "Rank": "1894",
+      "spanish": "siguen",
+      "english": "follow"
+    },
+    {
+      "Rank": "1895",
+      "spanish": "saliendo",
+      "english": "coming out"
+    },
+    {
+      "Rank": "1896",
+      "spanish": "muevas",
+      "english": "you move"
+    },
+    {
+      "Rank": "1897",
+      "spanish": "señoras",
+      "english": "ladies"
+    },
+    {
+      "Rank": "1898",
+      "spanish": "disparar",
+      "english": "shoot"
+    },
+    {
+      "Rank": "1899",
+      "spanish": "to",
+      "english": "to"
+    },
+    {
+      "Rank": "1900",
+      "spanish": "chris",
+      "english": "chris"
+    },
+    {
+      "Rank": "1901",
+      "spanish": "sóio",
+      "english": "onIy"
+    },
+    {
+      "Rank": "1902",
+      "spanish": "ja",
+      "english": "ja"
+    },
+    {
+      "Rank": "1903",
+      "spanish": "pide",
+      "english": "asks"
+    },
+    {
+      "Rank": "1904",
+      "spanish": "debió",
+      "english": "He had to"
+    },
+    {
+      "Rank": "1905",
+      "spanish": "empresa",
+      "english": "business"
+    },
+    {
+      "Rank": "1906",
+      "spanish": "precioso",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "1907",
+      "spanish": "termina",
+      "english": "ends"
+    },
+    {
+      "Rank": "1908",
+      "spanish": "intención",
+      "english": "intention"
+    },
+    {
+      "Rank": "1909",
+      "spanish": "tambien",
+      "english": "also"
+    },
+    {
+      "Rank": "1910",
+      "spanish": "recibir",
+      "english": "to receive"
+    },
+    {
+      "Rank": "1911",
+      "spanish": "hubieras",
+      "english": "you had"
+    },
+    {
+      "Rank": "1912",
+      "spanish": "abrigo",
+      "english": "coat"
+    },
+    {
+      "Rank": "1913",
+      "spanish": "encuentras",
+      "english": "you find"
+    },
+    {
+      "Rank": "1914",
+      "spanish": "diste",
+      "english": "you gave"
+    },
+    {
+      "Rank": "1915",
+      "spanish": "tendrán",
+      "english": "will"
+    },
+    {
+      "Rank": "1916",
+      "spanish": "cerrado",
+      "english": "closed"
+    },
+    {
+      "Rank": "1917",
+      "spanish": "conocerte",
+      "english": "meet"
+    },
+    {
+      "Rank": "1918",
+      "spanish": "hablé",
+      "english": "I talked"
+    },
+    {
+      "Rank": "1919",
+      "spanish": "menor",
+      "english": "less"
+    },
+    {
+      "Rank": "1920",
+      "spanish": "querría",
+      "english": "I would want"
+    },
+    {
+      "Rank": "1921",
+      "spanish": "imagino",
+      "english": "I imagine"
+    },
+    {
+      "Rank": "1922",
+      "spanish": "genio",
+      "english": "genius"
+    },
+    {
+      "Rank": "1923",
+      "spanish": "profesional",
+      "english": "professional"
+    },
+    {
+      "Rank": "1924",
+      "spanish": "oigo",
+      "english": "I hear"
+    },
+    {
+      "Rank": "1925",
+      "spanish": "pongo",
+      "english": "I put"
+    },
+    {
+      "Rank": "1926",
+      "spanish": "niñas",
+      "english": "girls"
+    },
+    {
+      "Rank": "1927",
+      "spanish": "muévete",
+      "english": "move on"
+    },
+    {
+      "Rank": "1928",
+      "spanish": "opción",
+      "english": "option"
+    },
+    {
+      "Rank": "1929",
+      "spanish": "tribunal",
+      "english": "court"
+    },
+    {
+      "Rank": "1930",
+      "spanish": "tenéis",
+      "english": "you have"
+    },
+    {
+      "Rank": "1931",
+      "spanish": "lago",
+      "english": "lake"
+    },
+    {
+      "Rank": "1932",
+      "spanish": "unidad",
+      "english": "unity"
+    },
+    {
+      "Rank": "1933",
+      "spanish": "abierta",
+      "english": "open"
+    },
+    {
+      "Rank": "1934",
+      "spanish": "efecto",
+      "english": "effect"
+    },
+    {
+      "Rank": "1935",
+      "spanish": "presión",
+      "english": "Pressure"
+    },
+    {
+      "Rank": "1936",
+      "spanish": "varias",
+      "english": "several"
+    },
+    {
+      "Rank": "1937",
+      "spanish": "robo",
+      "english": "Stole"
+    },
+    {
+      "Rank": "1938",
+      "spanish": "saldrá",
+      "english": "will"
+    },
+    {
+      "Rank": "1939",
+      "spanish": "veía",
+      "english": "saw"
+    },
+    {
+      "Rank": "1940",
+      "spanish": "quedado",
+      "english": "left"
+    },
+    {
+      "Rank": "1941",
+      "spanish": "alcalde",
+      "english": "mayor"
+    },
+    {
+      "Rank": "1942",
+      "spanish": "empleo",
+      "english": "job"
+    },
+    {
+      "Rank": "1943",
+      "spanish": "pollo",
+      "english": "chicken"
+    },
+    {
+      "Rank": "1944",
+      "spanish": "whisky",
+      "english": "whiskey"
+    },
+    {
+      "Rank": "1945",
+      "spanish": "california",
+      "english": "California"
+    },
+    {
+      "Rank": "1946",
+      "spanish": "carretera",
+      "english": "highway"
+    },
+    {
+      "Rank": "1947",
+      "spanish": "sábado",
+      "english": "Saturday"
+    },
+    {
+      "Rank": "1948",
+      "spanish": "aeropuerto",
+      "english": "airport"
+    },
+    {
+      "Rank": "1949",
+      "spanish": "jodido",
+      "english": "fucking"
+    },
+    {
+      "Rank": "1950",
+      "spanish": "pobres",
+      "english": "poor"
+    },
+    {
+      "Rank": "1951",
+      "spanish": "medicina",
+      "english": "medicine"
+    },
+    {
+      "Rank": "1952",
+      "spanish": "llevará",
+      "english": "carry"
+    },
+    {
+      "Rank": "1953",
+      "spanish": "gratis",
+      "english": "free"
+    },
+    {
+      "Rank": "1954",
+      "spanish": "cae",
+      "english": "falls off"
+    },
+    {
+      "Rank": "1955",
+      "spanish": "fortuna",
+      "english": "fortune"
+    },
+    {
+      "Rank": "1956",
+      "spanish": "castillo",
+      "english": "castle"
+    },
+    {
+      "Rank": "1957",
+      "spanish": "nieve",
+      "english": "snow"
+    },
+    {
+      "Rank": "1958",
+      "spanish": "busco",
+      "english": "I search"
+    },
+    {
+      "Rank": "1959",
+      "spanish": "riesgo",
+      "english": "risk"
+    },
+    {
+      "Rank": "1960",
+      "spanish": "alemán",
+      "english": "German"
+    },
+    {
+      "Rank": "1961",
+      "spanish": "sucio",
+      "english": "dirty"
+    },
+    {
+      "Rank": "1962",
+      "spanish": "idiotas",
+      "english": "idiots"
+    },
+    {
+      "Rank": "1963",
+      "spanish": "walter",
+      "english": "walter"
+    },
+    {
+      "Rank": "1964",
+      "spanish": "conversación",
+      "english": "conversation"
+    },
+    {
+      "Rank": "1965",
+      "spanish": "fuese",
+      "english": "it was"
+    },
+    {
+      "Rank": "1966",
+      "spanish": "comienzo",
+      "english": "Start"
+    },
+    {
+      "Rank": "1967",
+      "spanish": "pasé",
+      "english": "pass"
+    },
+    {
+      "Rank": "1968",
+      "spanish": "encontraron",
+      "english": "they found"
+    },
+    {
+      "Rank": "1969",
+      "spanish": "elección",
+      "english": "choice"
+    },
+    {
+      "Rank": "1970",
+      "spanish": "ey",
+      "english": "ey"
+    },
+    {
+      "Rank": "1971",
+      "spanish": "salgan",
+      "english": "leave"
+    },
+    {
+      "Rank": "1972",
+      "spanish": "carro",
+      "english": "car"
+    },
+    {
+      "Rank": "1973",
+      "spanish": "piensan",
+      "english": "they think"
+    },
+    {
+      "Rank": "1974",
+      "spanish": "rostro",
+      "english": "face"
+    },
+    {
+      "Rank": "1975",
+      "spanish": "razones",
+      "english": "reasons"
+    },
+    {
+      "Rank": "1976",
+      "spanish": "fué",
+      "english": "It was"
+    },
+    {
+      "Rank": "1977",
+      "spanish": "propiedad",
+      "english": "property"
+    },
+    {
+      "Rank": "1978",
+      "spanish": "mundial",
+      "english": "world"
+    },
+    {
+      "Rank": "1979",
+      "spanish": "familiar",
+      "english": "family"
+    },
+    {
+      "Rank": "1980",
+      "spanish": "libras",
+      "english": "pounds"
+    },
+    {
+      "Rank": "1981",
+      "spanish": "hablemos",
+      "english": "let's talk"
+    },
+    {
+      "Rank": "1982",
+      "spanish": "pedazo",
+      "english": "piece"
+    },
+    {
+      "Rank": "1983",
+      "spanish": "continúa",
+      "english": "keep going"
+    },
+    {
+      "Rank": "1984",
+      "spanish": "cola",
+      "english": "tail"
+    },
+    {
+      "Rank": "1985",
+      "spanish": "enemigos",
+      "english": "enemies"
+    },
+    {
+      "Rank": "1986",
+      "spanish": "marca",
+      "english": "brand"
+    },
+    {
+      "Rank": "1987",
+      "spanish": "líder",
+      "english": "Leader"
+    },
+    {
+      "Rank": "1988",
+      "spanish": "hablan",
+      "english": "speak"
+    },
+    {
+      "Rank": "1989",
+      "spanish": "durmiendo",
+      "english": "sleeping"
+    },
+    {
+      "Rank": "1990",
+      "spanish": "socorro",
+      "english": "Help"
+    },
+    {
+      "Rank": "1991",
+      "spanish": "fútbol",
+      "english": "football"
+    },
+    {
+      "Rank": "1992",
+      "spanish": "detalles",
+      "english": "Details"
+    },
+    {
+      "Rank": "1993",
+      "spanish": "hiciera",
+      "english": "do"
+    },
+    {
+      "Rank": "1994",
+      "spanish": "recibido",
+      "english": "received"
+    },
+    {
+      "Rank": "1995",
+      "spanish": "tesoro",
+      "english": "treasure"
+    },
+    {
+      "Rank": "1996",
+      "spanish": "camisa",
+      "english": "shirt"
+    },
+    {
+      "Rank": "1997",
+      "spanish": "thomas",
+      "english": "thomas"
+    },
+    {
+      "Rank": "1998",
+      "spanish": "comienza",
+      "english": "begins"
+    },
+    {
+      "Rank": "1999",
+      "spanish": "conducir",
+      "english": "drive"
+    },
+    {
+      "Rank": "2000",
+      "spanish": "andar",
+      "english": "walk"
+    }
+  ]

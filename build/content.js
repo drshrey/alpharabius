@@ -23103,13 +23103,21 @@
 
 	var _findandreplacedomtext2 = _interopRequireDefault(_findandreplacedomtext);
 
-	var _portuguese = __webpack_require__(235);
+	var _spanish = __webpack_require__(235);
+
+	var _spanish2 = _interopRequireDefault(_spanish);
+
+	var _portuguese = __webpack_require__(236);
 
 	var _portuguese2 = _interopRequireDefault(_portuguese);
 
-	var _french = __webpack_require__(236);
+	var _french = __webpack_require__(237);
 
 	var _french2 = _interopRequireDefault(_french);
+
+	var _german = __webpack_require__(238);
+
+	var _german2 = _interopRequireDefault(_german);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23119,7 +23127,7 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var Mark = __webpack_require__(237);
+	var Mark = __webpack_require__(239);
 
 	var originalEl = {};
 	var SITES = {
@@ -23259,6 +23267,14 @@
 	      langDict = _french2.default;
 	      langKey = "french";
 	      break;
+	    case "Spanish":
+	      langDict = _spanish2.default;
+	      langKey = "spanish";
+	      break;
+	    case "German":
+	      langDict = _german2.default;
+	      langKey = "german";
+	      break;
 	    case "English":
 	      engTrue = true;
 	    default:
@@ -23286,8 +23302,44 @@
 	    // modify stylesheets
 	    var ss = document.styleSheets;
 	    for (var i = 0; i < ss.length; i++) {
-	      ss[i].insertRule("acronym { background-color: yellow;}", 0);
+	      ss[i].insertRule(' \
+	        acronym { \
+	          background-color: #F0F8FF; \
+	          font-size: 108%; \
+	        } \
+	      ', 0);
+	      ss[i].insertRule('\
+	        acronym:hover{\
+	          color: #ff2283;\
+	          position: relative;\
+	        }      \
+	        ', 0);
+	      ss[i].insertRule('\
+	        acronym[title]:hover:after { \
+	          content: attr(title);\
+	          padding: 3px 15px;\
+	          color: black;\
+	          position: absolute;\
+	          left: 0;\
+	          top: 100%;\
+	          white-space: nowrap;\
+	          z-index: 20;\
+	          -moz-border-radius: 3px;\
+	          -webkit-border-radius: 3px;\
+	          border-radius: 3px;\
+	          -moz-box-shadow: 0px 0px 2px #c0c1c2;\
+	          box-shadow: 0px 0px 2px #c0c1c2;\
+	          background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ffffff),color-stop(1, #eeeeee));\
+	          background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -o-linear-gradient(top, #ffffff, #eeeeee);\
+	        } \
+	      ', 0);
 	    }
+
+	    console.log(_spanish2.default);
 
 	    for (var i = 0; i < elements.length; i++) {
 	      for (var j = 0; j < randWords.length; j++) {
@@ -23326,9 +23378,6 @@
 	  _createClass(App, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      if (this.props.power == false) {
-	        return;
-	      }
 	      var el = getElements();
 	      for (var i = 0; i < el.length; i++) {
 	        originalEl[i] = el[i].innerHTML;
@@ -23352,8 +23401,6 @@
 	          chrome.storage.local.set({ "immersion": request.immersion }, function () {});
 	          chrome.storage.sync.set({ "immersion": request.immersion }, function () {});
 
-	          console.log("POWERRRR");
-	          console.log(request.power);
 	          chrome.storage.local.set({ "power": request.power }, function () {});
 	          chrome.storage.sync.set({ "power": request.power }, function () {});
 
@@ -23372,8 +23419,6 @@
 	      // check if lang, immersion, power already set
 	      if (!set) {
 	        chrome.storage.local.get(["language", "power", "immersion"], function (items) {
-	          console.log("local");
-	          console.log(items);
 	          startupLang = items["language"];
 	          startupPower = items["power"];
 	          startupImmersion = items["immersion"];
@@ -23382,15 +23427,10 @@
 	          }
 	          if (!set) {
 	            chrome.storage.sync.get(["language", "power", "immersion"], function (items) {
-	              console.log("sync");
-	              console.log(items);
 	              startupLang = items["language"];
 	              startupPower = items["power"];
 	              startupImmersion = items["immersion"];
-	              console.log("FOUNDNNDNDNDND SYNC");
-	              console.log(startupLang);
-	              console.log(startupImmersion);
-	              console.log(startupPower);
+
 	              if (startupLang && startupPower && startupImmersion) {
 	                switchPower(startupLang, startupImmersion, startupPower);
 	              } else {
@@ -24058,4504 +24098,10019 @@
 
 	module.exports = [
 		{
-			"english": "Mr.",
-			"number": "101",
-			"portuguese": "senhor"
+			"Rank": "1",
+			"spanish": "de",
+			"english": "of",
+			"Notes": "1) This list was created using public/free subtitles, particularly from opensubtitles.org."
 		},
 		{
-			"english": "also",
-			"number": "102",
-			"portuguese": "tambAm"
-		},
-		{
+			"Rank": "2",
+			"spanish": "que",
 			"english": "what",
-			"number": "103",
-			"portuguese": "quAa"
+			"Notes": "The order is based on the number of occurences of each word in the subtitles."
 		},
 		{
-			"english": "you",
-			"number": "104",
-			"portuguese": "vocAas"
+			"Rank": "3",
+			"spanish": "no",
+			"english": "no"
 		},
 		{
-			"english": "something",
-			"number": "105",
-			"portuguese": "algo"
+			"Rank": "4",
+			"spanish": "a",
+			"english": "to",
+			"Notes": "2) The english translation is by Google and can be un-reliable for some words."
 		},
 		{
-			"english": "of",
-			"number": "106",
-			"portuguese": "dos"
+			"Rank": "5",
+			"spanish": "la",
+			"english": "the"
 		},
 		{
-			"english": "thank you",
-			"number": "107",
-			"portuguese": "obrigado"
+			"Rank": "6",
+			"spanish": "el",
+			"english": "he",
+			"Notes": "3) You can change the translation from english to another language."
 		},
 		{
-			"english": "as",
-			"number": "108",
-			"portuguese": "tAo"
+			"Rank": "7",
+			"spanish": "y",
+			"english": "Y",
+			"Notes": "To do this you will first need to make a copy of this spreadsheet.  (File > Make a copy...)"
 		},
 		{
-			"english": "that",
-			"number": "109",
-			"portuguese": "esse"
+			"Rank": "8",
+			"spanish": "es",
+			"english": "is",
+			"Notes": "Then replace the \"en\" in the function in the cells in Column C with your desired language code."
 		},
 		{
-			"english": "day",
-			"number": "110",
-			"portuguese": "dia"
+			"Rank": "9",
+			"spanish": "en",
+			"english": "in",
+			"Notes": "e.g. Replace \"en\" with \"sv\" for Swedish."
 		},
 		{
-			"english": "go",
-			"number": "111",
-			"portuguese": "ir"
-		},
-		{
-			"english": "that",
-			"number": "112",
-			"portuguese": "essa"
-		},
-		{
-			"english": "god",
-			"number": "113",
-			"portuguese": "deus"
-		},
-		{
-			"english": "this",
-			"number": "114",
-			"portuguese": "este"
-		},
-		{
-			"english": "you",
-			"number": "115",
-			"portuguese": "lhe"
-		},
-		{
-			"english": "face",
-			"number": "116",
-			"portuguese": "cara"
-		},
-		{
-			"english": "better",
-			"number": "117",
-			"portuguese": "melhor"
-		},
-		{
-			"english": "oh",
-			"number": "118",
-			"portuguese": "oh"
-		},
-		{
-			"english": "yet",
-			"number": "119",
-			"portuguese": "ainda"
-		},
-		{
-			"english": "have",
-			"number": "120",
-			"portuguese": "temos"
-		},
-		{
-			"english": "Mr.",
-			"number": "121",
-			"portuguese": "sr"
-		},
-		{
-			"english": "father",
-			"number": "122",
-			"portuguese": "pai"
-		},
-		{
-			"english": "always",
-			"number": "123",
-			"portuguese": "sempre"
-		},
-		{
-			"english": "without",
-			"number": "124",
-			"portuguese": "sem"
-		},
-		{
-			"english": "life",
-			"number": "125",
-			"portuguese": "vida"
-		},
-		{
-			"english": "time",
-			"number": "126",
-			"portuguese": "vez"
-		},
-		{
-			"english": "we",
-			"number": "127",
-			"portuguese": "estamos"
-		},
-		{
-			"english": "man",
-			"number": "128",
-			"portuguese": "homem"
-		},
-		{
-			"english": "perhaps",
-			"number": "129",
-			"portuguese": "talvez"
-		},
-		{
-			"english": "their",
-			"number": "130",
-			"portuguese": "seus"
-		},
-		{
-			"english": "years",
-			"number": "131",
-			"portuguese": "anos"
-		},
-		{
-			"english": "mother",
-			"number": "132",
-			"portuguese": "mAe"
-		},
-		{
-			"english": "someone",
-			"number": "133",
-			"portuguese": "alguAm"
-		},
-		{
-			"english": "after",
-			"number": "134",
-			"portuguese": "depois"
-		},
-		{
-			"english": "truth",
-			"number": "135",
-			"portuguese": "verdade"
-		},
-		{
-			"english": "clear",
-			"number": "136",
-			"portuguese": "claro"
-		},
-		{
-			"english": "good",
-			"number": "137",
-			"portuguese": "boa"
-		},
-		{
-			"english": "nor",
-			"number": "138",
-			"portuguese": "nem"
-		},
-		{
-			"english": "little",
-			"number": "139",
-			"portuguese": "pouco"
-		},
-		{
-			"english": "there",
-			"number": "140",
-			"portuguese": "há"
-		},
-		{
-			"english": "stay",
-			"number": "141",
-			"portuguese": "ficar"
-		},
-		{
-			"english": "stuff",
-			"number": "142",
-			"portuguese": "coisas"
-		},
-		{
-			"english": "had",
-			"number": "143",
-			"portuguese": "tinha"
-		},
-		{
-			"english": "two",
-			"number": "144",
-			"portuguese": "dois"
-		},
-		{
-			"english": "talk",
-			"number": "145",
-			"portuguese": "falar"
-		},
-		{
-			"english": "should",
-			"number": "146",
-			"portuguese": "deve"
-		},
-		{
-			"english": "makes",
-			"number": "147",
-			"portuguese": "faz"
-		},
-		{
-			"english": "by the",
-			"number": "148",
-			"portuguese": "pelo"
-		},
-		{
-			"english": "before",
-			"number": "149",
-			"portuguese": "antes"
-		},
-		{
-			"english": "it seems",
-			"number": "150",
-			"portuguese": "parece"
-		},
-		{
-			"english": "his",
-			"number": "151",
-			"portuguese": "dele"
-		},
-		{
-			"english": "every",
-			"number": "152",
-			"portuguese": "todo"
-		},
-		{
-			"english": "out",
-			"number": "153",
-			"portuguese": "fora"
-		},
-		{
-			"english": "people",
-			"number": "154",
-			"portuguese": "pessoas"
-		},
-		{
-			"english": "hey",
-			"number": "155",
-			"portuguese": "ei"
-		},
-		{
-			"english": "place",
-			"number": "156",
-			"portuguese": "lugar"
-		},
-		{
-			"english": "only",
-			"number": "157",
-			"portuguese": "apenas"
-		},
-		{
-			"english": "making",
-			"number": "158",
-			"portuguese": "fazendo"
-		},
-		{
+			"Rank": "10",
+			"spanish": "lo",
 			"english": "it",
-			"number": "159",
-			"portuguese": "la"
+			"Notes": "List of supported languages:"
 		},
 		{
-			"english": "nobody",
-			"number": "160",
-			"portuguese": "ninguAm"
+			"Rank": "11",
+			"spanish": "un",
+			"english": "a",
+			"Notes": "https://cloud.google.com/translate/v2/using_rest?hl=en#language-params"
 		},
 		{
-			"english": "money",
-			"number": "161",
-			"portuguese": "dinheiro"
+			"Rank": "12",
+			"spanish": "por",
+			"english": "by"
 		},
 		{
-			"english": "of",
-			"number": "162",
-			"portuguese": "das"
+			"Rank": "13",
+			"spanish": "qué",
+			"english": "what",
+			"Notes": "4) The original source of this list can be found here:"
 		},
 		{
-			"english": "think",
-			"number": "163",
-			"portuguese": "acha"
-		},
-		{
-			"english": "accurate",
-			"number": "164",
-			"portuguese": "preciso"
-		},
-		{
-			"english": "go",
-			"number": "165",
-			"portuguese": "vA"
-		},
-		{
-			"english": "which",
-			"number": "166",
-			"portuguese": "qual"
-		},
-		{
+			"Rank": "14",
+			"spanish": "me",
 			"english": "me",
-			"number": "167",
-			"portuguese": "comigo"
+			"Notes": "https://invokeit.wordpress.com/frequency-word-lists/"
 		},
 		{
-			"english": "some",
-			"number": "168",
-			"portuguese": "alguma"
+			"Rank": "15",
+			"spanish": "una",
+			"english": "a"
 		},
 		{
-			"english": "be",
-			"number": "169",
-			"portuguese": "estar"
-		},
-		{
-			"english": "world",
-			"number": "170",
-			"portuguese": "mundo"
-		},
-		{
-			"english": "great",
-			"number": "171",
-			"portuguese": "grande"
-		},
-		{
-			"english": "work",
-			"number": "172",
-			"portuguese": "trabalho"
-		},
-		{
-			"english": "today",
-			"number": "173",
-			"portuguese": "hoje"
-		},
-		{
-			"english": "give",
-			"number": "174",
-			"portuguese": "dar"
-		},
-		{
-			"english": "its",
-			"number": "175",
-			"portuguese": "suas"
-		},
-		{
-			"english": "addition",
-			"number": "176",
-			"portuguese": "disso"
-		},
-		{
-			"english": "made",
-			"number": "177",
-			"portuguese": "fez"
-		},
-		{
-			"english": "is",
-			"number": "178",
-			"portuguese": "seja"
-		},
-		{
-			"english": "name",
-			"number": "179",
-			"portuguese": "nome"
-		},
-		{
-			"english": "new",
-			"number": "180",
-			"portuguese": "novo"
-		},
-		{
-			"english": "will",
-			"number": "181",
-			"portuguese": "serA"
-		},
-		{
-			"english": "son",
-			"number": "182",
-			"portuguese": "filho"
-		},
-		{
-			"english": "any",
-			"number": "183",
-			"portuguese": "qualquer"
-		},
-		{
-			"english": "other",
-			"number": "184",
-			"portuguese": "outro"
-		},
-		{
-			"english": "as",
-			"number": "185",
-			"portuguese": "quanto"
-		},
-		{
-			"english": "by",
-			"number": "186",
-			"portuguese": "pela"
-		},
-		{
-			"english": "know",
-			"number": "187",
-			"portuguese": "saber"
-		},
-		{
-			"english": "vain",
-			"number": "188",
-			"portuguese": "vAo"
-		},
-		{
-			"english": "wanted",
-			"number": "189",
-			"portuguese": "queria"
-		},
-		{
-			"english": "okay",
-			"number": "190",
-			"portuguese": "ok"
-		},
-		{
-			"english": "hello",
-			"number": "191",
-			"portuguese": "olA"
-		},
-		{
-			"english": "can",
-			"number": "192",
-			"portuguese": "podemos"
-		},
-		{
-			"english": "my",
-			"number": "193",
-			"portuguese": "meus"
-		},
-		{
-			"english": "our",
-			"number": "194",
-			"portuguese": "nossa"
-		},
-		{
-			"english": "need",
-			"number": "195",
-			"portuguese": "precisa"
-		},
-		{
-			"english": "other",
-			"number": "196",
-			"portuguese": "outra"
-		},
-		{
-			"english": "could",
-			"number": "197",
-			"portuguese": "poderia"
-		},
-		{
-			"english": "come on",
-			"number": "198",
-			"portuguese": "venha"
-		},
-		{
-			"english": "woman",
-			"number": "199",
-			"portuguese": "mulher"
-		},
-		{
-			"english": "our",
-			"number": "200",
-			"portuguese": "nosso"
-		},
-		{
-			"english": "feel",
-			"number": "201",
-			"portuguese": "sinto"
-		},
-		{
-			"english": "sorry",
-			"number": "202",
-			"portuguese": "desculpe"
-		},
-		{
-			"english": "shit",
-			"number": "203",
-			"portuguese": "merda"
-		},
-		{
-			"english": "whole",
-			"number": "204",
-			"portuguese": "toda"
-		},
-		{
-			"english": "time",
-			"number": "205",
-			"portuguese": "hora"
-		},
-		{
-			"english": "hence",
-			"number": "206",
-			"portuguese": "daqui"
-		},
-		{
-			"english": "Say",
-			"number": "207",
-			"portuguese": "diga"
-		},
-		{
-			"english": "leave",
-			"number": "208",
-			"portuguese": "sair"
-		},
-		{
-			"english": "friend",
-			"number": "209",
-			"portuguese": "amigo"
-		},
-		{
-			"english": "look",
-			"number": "210",
-			"portuguese": "olhe"
-		},
-		{
-			"english": "love",
-			"number": "211",
-			"portuguese": "amor"
-		},
-		{
-			"english": "problem",
-			"number": "212",
-			"portuguese": "problema"
-		},
-		{
-			"english": "wait",
-			"number": "213",
-			"portuguese": "espere"
-		},
-		{
-			"english": "three",
-			"number": "214",
-			"portuguese": "trAas"
-		},
-		{
-			"english": "some",
-			"number": "215",
-			"portuguese": "algum"
-		},
-		{
-			"english": "ah",
-			"number": "216",
-			"portuguese": "ah"
-		},
-		{
-			"english": "return",
-			"number": "217",
-			"portuguese": "volta"
-		},
-		{
-			"english": "car",
-			"number": "218",
-			"portuguese": "carro"
-		},
-		{
-			"english": "says",
-			"number": "219",
-			"portuguese": "diz"
-		},
-		{
-			"english": "happened",
-			"number": "220",
-			"portuguese": "aconteceu"
-		},
-		{
-			"english": "certainty",
-			"number": "221",
-			"portuguese": "certeza"
-		},
-		{
-			"english": "comes",
-			"number": "222",
-			"portuguese": "vem"
-		},
-		{
-			"english": "her",
-			"number": "223",
-			"portuguese": "dela"
-		},
-		{
-			"english": "less",
-			"number": "224",
-			"portuguese": "menos"
-		},
-		{
-			"english": "between",
-			"number": "225",
-			"portuguese": "entre"
-		},
-		{
-			"english": "although",
-			"number": "226",
-			"portuguese": "embora"
-		},
-		{
-			"english": "times",
-			"number": "227",
-			"portuguese": "vezes"
-		},
-		{
-			"english": "hi",
-			"number": "228",
-			"portuguese": "oi"
-		},
-		{
-			"english": "really",
-			"number": "229",
-			"portuguese": "realmente"
-		},
-		{
-			"english": "knew",
-			"number": "230",
-			"portuguese": "sabia"
-		},
-		{
-			"english": "first",
-			"number": "231",
-			"portuguese": "primeiro"
-		},
-		{
-			"english": "to",
-			"number": "232",
-			"portuguese": "A s"
-		},
-		{
-			"english": "type",
-			"number": "233",
-			"portuguese": "tipo"
-		},
-		{
-			"english": "vi",
-			"number": "234",
-			"portuguese": "vi"
-		},
-		{
-			"english": "do",
-			"number": "235",
-			"portuguese": "faAa"
-		},
-		{
-			"english": "talking",
-			"number": "236",
-			"portuguese": "falando"
-		},
-		{
-			"english": "return",
-			"number": "237",
-			"portuguese": "voltar"
-		},
-		{
-			"english": "has",
-			"number": "238",
-			"portuguese": "tenha"
-		},
-		{
-			"english": "all",
-			"number": "239",
-			"portuguese": "todas"
-		},
-		{
-			"english": "dear",
-			"number": "240",
-			"portuguese": "querida"
-		},
-		{
-			"english": "afternoon",
-			"number": "241",
-			"portuguese": "tarde"
-		},
-		{
-			"english": "men",
-			"number": "242",
-			"portuguese": "homens"
-		},
-		{
-			"english": "that",
-			"number": "243",
-			"portuguese": "aquele"
-		},
-		{
-			"english": "ago",
-			"number": "244",
-			"portuguese": "atrAs"
-		},
-		{
-			"english": "saw",
-			"number": "245",
-			"portuguese": "viu"
-		},
-		{
-			"english": "part",
-			"number": "246",
-			"portuguese": "parte"
-		},
-		{
-			"english": "Thank you",
-			"number": "247",
-			"portuguese": "obrigada"
-		},
-		{
-			"english": "days",
-			"number": "248",
-			"portuguese": "dias"
-		},
-		{
-			"english": "people",
-			"number": "249",
-			"portuguese": "gente"
-		},
-		{
-			"english": "looks",
-			"number": "250",
-			"portuguese": "olha"
-		},
-		{
-			"english": "would",
-			"number": "251",
-			"portuguese": "seria"
-		},
-		{
-			"english": "stay",
-			"number": "252",
-			"portuguese": "fique"
-		},
-		{
-			"english": "within",
-			"number": "253",
-			"portuguese": "dentro"
-		},
-		{
-			"english": "tomorrow",
-			"number": "254",
-			"portuguese": "amanhA"
-		},
-		{
-			"english": "two",
-			"number": "255",
-			"portuguese": "duas"
-		},
-		{
-			"english": "front",
-			"number": "256",
-			"portuguese": "frente"
-		},
-		{
-			"english": "soon",
-			"number": "257",
-			"portuguese": "logo"
-		},
-		{
-			"english": "Stop",
-			"number": "258",
-			"portuguese": "pare"
-		},
-		{
-			"english": "taste",
-			"number": "259",
-			"portuguese": "gosto"
-		},
-		{
-			"english": "them",
-			"number": "260",
-			"portuguese": "los"
-		},
-		{
-			"english": "at the",
-			"number": "261",
-			"portuguese": "nas"
-		},
-		{
-			"english": "no",
-			"number": "262",
-			"portuguese": "nenhum"
-		},
-		{
-			"english": "head",
-			"number": "263",
-			"portuguese": "cabeAa"
-		},
-		{
-			"english": "should",
-			"number": "264",
-			"portuguese": "deveria"
-		},
-		{
-			"english": "city",
-			"number": "265",
-			"portuguese": "cidade"
-		},
-		{
-			"english": "thought",
-			"number": "266",
-			"portuguese": "pensei"
-		},
-		{
-			"english": "happy",
-			"number": "267",
-			"portuguese": "feliz"
-		},
-		{
-			"english": "leave",
-			"number": "268",
-			"portuguese": "deixar"
-		},
-		{
-			"english": "optimum",
-			"number": "269",
-			"portuguese": "A3timo"
-		},
-		{
-			"english": "side",
-			"number": "270",
-			"portuguese": "lado"
-		},
-		{
-			"english": "evil",
-			"number": "271",
-			"portuguese": "mal"
-		},
-		{
-			"english": "serious",
-			"number": "272",
-			"portuguese": "sArio"
-		},
-		{
-			"english": "can",
-			"number": "273",
-			"portuguese": "podem"
-		},
-		{
-			"english": "fear",
-			"number": "274",
-			"portuguese": "medo"
-		},
-		{
-			"english": "I was",
-			"number": "275",
-			"portuguese": "fui"
-		},
-		{
-			"english": "moment",
-			"number": "276",
-			"portuguese": "momento"
-		},
-		{
-			"english": "would",
-			"number": "277",
-			"portuguese": "gostaria"
-		},
-		{
-			"english": "going",
-			"number": "278",
-			"portuguese": "indo"
-		},
-		{
-			"english": "have",
-			"number": "279",
-			"portuguese": "tAam"
-		},
-		{
-			"english": "are",
-			"number": "280",
-			"portuguese": "somos"
-		},
-		{
-			"english": "there",
-			"number": "281",
-			"portuguese": "ali"
-		},
-		{
-			"english": "some",
-			"number": "282",
-			"portuguese": "alguns"
-		},
-		{
-			"english": "gives",
-			"number": "283",
-			"portuguese": "dA"
-		},
-		{
-			"english": "let",
-			"number": "284",
-			"portuguese": "deixe"
-		},
-		{
-			"english": "family",
-			"number": "285",
-			"portuguese": "famAlia"
-		},
-		{
-			"english": "fast",
-			"number": "286",
-			"portuguese": "rApido"
-		},
-		{
-			"english": "help",
-			"number": "287",
-			"portuguese": "ajudar"
-		},
-		{
-			"english": "Friends",
-			"number": "288",
-			"portuguese": "amigos"
-		},
-		{
-			"english": "both",
-			"number": "289",
-			"portuguese": "tanto"
-		},
-		{
-			"english": "each",
-			"number": "290",
-			"portuguese": "cada"
-		},
-		{
-			"english": "were",
-			"number": "291",
-			"portuguese": "fosse"
-		},
-		{
-			"english": "girl",
-			"number": "292",
-			"portuguese": "garota"
-		},
-		{
-			"english": "other",
-			"number": "293",
-			"portuguese": "outros"
-		},
-		{
-			"english": "a",
-			"number": "294",
-			"portuguese": "num"
-		},
-		{
-			"english": "were",
-			"number": "295",
-			"portuguese": "foram"
-		},
-		{
-			"english": "I",
-			"number": "296",
-			"portuguese": "fiz"
-		},
-		{
-			"english": "brother",
-			"number": "297",
-			"portuguese": "irmAo"
-		},
-		{
-			"english": "daddy",
-			"number": "298",
-			"portuguese": "papai"
-		},
-		{
-			"english": "from",
-			"number": "299",
-			"portuguese": "desde"
-		},
-		{
-			"english": "my",
-			"number": "300",
-			"portuguese": "minhas"
-		},
-		{
-			"english": "kill",
-			"number": "301",
-			"portuguese": "matar"
-		},
-		{
-			"english": "catch",
-			"number": "302",
-			"portuguese": "pegar"
-		},
-		{
-			"english": "to",
-			"number": "303",
-			"portuguese": "aos"
-		},
-		{
-			"english": "top",
-			"number": "304",
-			"portuguese": "cima"
-		},
-		{
-			"english": "hours",
-			"number": "305",
-			"portuguese": "horas"
-		},
-		{
-			"english": "care",
-			"number": "306",
-			"portuguese": "cuidado"
-		},
-		{
-			"english": "their",
-			"number": "307",
-			"portuguese": "deles"
-		},
-		{
-			"english": "enter",
-			"number": "308",
-			"portuguese": "entrar"
-		},
-		{
-			"english": "is",
-			"number": "309",
-			"portuguese": "fica"
-		},
-		{
-			"english": "master",
-			"number": "310",
-			"portuguese": "amo"
-		},
-		{
-			"english": "Give",
-			"number": "311",
-			"portuguese": "dAa"
-		},
-		{
-			"english": "almost",
-			"number": "312",
-			"portuguese": "quase"
-		},
-		{
-			"english": "door",
-			"number": "313",
-			"portuguese": "porta"
-		},
-		{
-			"english": "while",
-			"number": "314",
-			"portuguese": "enquanto"
-		},
-		{
-			"english": "history",
-			"number": "315",
-			"portuguese": "histA3ria"
-		},
-		{
-			"english": "new",
-			"number": "316",
-			"portuguese": "nova"
-		},
-		{
-			"english": "see",
-			"number": "317",
-			"portuguese": "vejo"
-		},
-		{
-			"english": "luck",
-			"number": "318",
-			"portuguese": "sorte"
-		},
-		{
-			"english": "idea",
-			"number": "319",
-			"portuguese": "idAia"
-		},
-		{
-			"english": "matter",
-			"number": "320",
-			"portuguese": "importa"
-		},
-		{
-			"english": "want",
-			"number": "321",
-			"portuguese": "quiser"
-		},
-		{
-			"english": "dead",
-			"number": "322",
-			"portuguese": "morto"
-		},
-		{
-			"english": "morning",
-			"number": "323",
-			"portuguese": "manhA"
-		},
-		{
-			"english": "water",
-			"number": "324",
-			"portuguese": "Agua"
-		},
-		{
-			"english": "first",
-			"number": "325",
-			"portuguese": "primeira"
-		},
-		{
-			"english": "too",
-			"number": "326",
-			"portuguese": "demais"
-		},
-		{
-			"english": "room",
-			"number": "327",
-			"portuguese": "quarto"
-		},
-		{
-			"english": "case",
-			"number": "328",
-			"portuguese": "caso"
-		},
-		{
-			"english": "mom",
-			"number": "329",
-			"portuguese": "mamAe"
-		},
-		{
-			"english": "look",
-			"number": "330",
-			"portuguese": "veja"
-		},
-		{
-			"english": "hope",
-			"number": "331",
-			"portuguese": "espero"
-		},
-		{
-			"english": "like",
-			"number": "332",
-			"portuguese": "gosta"
-		},
-		{
-			"english": "against",
-			"number": "333",
-			"portuguese": "contra"
-		},
-		{
-			"english": "police",
-			"number": "334",
-			"portuguese": "polAcia"
-		},
-		{
-			"english": "path",
-			"number": "335",
-			"portuguese": "caminho"
-		},
-		{
-			"english": "person",
-			"number": "336",
-			"portuguese": "pessoa"
-		},
-		{
-			"english": "close",
-			"number": "337",
-			"portuguese": "perto"
-		},
-		{
-			"english": "form",
-			"number": "338",
-			"portuguese": "forma"
-		},
-		{
-			"english": "that",
-			"number": "339",
-			"portuguese": "aquela"
-		},
-		{
-			"english": "eyes",
-			"number": "340",
-			"portuguese": "olhos"
-		},
-		{
-			"english": "find",
-			"number": "341",
-			"portuguese": "encontrar"
-		},
-		{
-			"english": "children",
-			"number": "342",
-			"portuguese": "crianAas"
-		},
-		{
-			"english": "some",
-			"number": "343",
-			"portuguese": "algumas"
-		},
-		{
-			"english": "year",
-			"number": "344",
-			"portuguese": "ano"
-		},
-		{
-			"english": "die",
-			"number": "345",
-			"portuguese": "morrer"
-		},
-		{
-			"english": "middle",
-			"number": "346",
-			"portuguese": "meio"
-		},
-		{
-			"english": "death",
-			"number": "347",
-			"portuguese": "morte"
-		},
-		{
-			"english": "reason",
-			"number": "348",
-			"portuguese": "razAo"
-		},
-		{
-			"english": "war",
-			"number": "349",
-			"portuguese": "guerra"
-		},
-		{
-			"english": "week",
-			"number": "350",
-			"portuguese": "semana"
-		},
-		{
-			"english": "waiting",
-			"number": "351",
-			"portuguese": "espera"
-		},
-		{
-			"english": "lady",
-			"number": "352",
-			"portuguese": "senhora"
-		},
-		{
-			"english": "way",
-			"number": "353",
-			"portuguese": "jeito"
-		},
-		{
-			"english": "think",
-			"number": "354",
-			"portuguese": "pensar"
-		},
-		{
-			"english": "those",
-			"number": "355",
-			"portuguese": "esses"
-		},
-		{
-			"english": "those",
-			"number": "356",
-			"portuguese": "essas"
-		},
-		{
-			"english": "wrong",
-			"number": "357",
-			"portuguese": "errado"
-		},
-		{
-			"english": "legal",
-			"number": "358",
-			"portuguese": "legal"
-		},
-		{
-			"english": "they",
-			"number": "359",
-			"portuguese": "elas"
-		},
-		{
-			"english": "arrive",
-			"number": "360",
-			"portuguese": "chegar"
-		},
-		{
-			"english": "minutes",
-			"number": "361",
-			"portuguese": "minutos"
-		},
-		{
-			"english": "Mrs.",
-			"number": "362",
-			"portuguese": "sra"
-		},
-		{
-			"english": "ready",
-			"number": "363",
-			"portuguese": "pronto"
-		},
-		{
-			"english": "need",
-			"number": "364",
-			"portuguese": "precisamos"
-		},
-		{
-			"english": "some",
-			"number": "365",
-			"portuguese": "uns"
-		},
-		{
-			"english": "saying",
-			"number": "366",
-			"portuguese": "dizendo"
-		},
-		{
-			"english": "a",
-			"number": "367",
-			"portuguese": "numa"
-		},
-		{
-			"english": "boy",
-			"number": "368",
-			"portuguese": "garoto"
-		},
-		{
-			"english": "I",
-			"number": "369",
-			"portuguese": "tive"
-		},
-		{
-			"english": "take",
-			"number": "370",
-			"portuguese": "levar"
-		},
-		{
-			"english": "done",
-			"number": "371",
-			"portuguese": "feito"
-		},
-		{
-			"english": "gave",
-			"number": "372",
-			"portuguese": "deu"
-		},
-		{
-			"english": "drug",
-			"number": "373",
-			"portuguese": "droga"
-		},
-		{
-			"english": "hands",
-			"number": "374",
-			"portuguese": "mAos"
-		},
-		{
-			"english": "is",
-			"number": "375",
-			"portuguese": "for"
-		},
-		{
-			"english": "help",
-			"number": "376",
-			"portuguese": "ajuda"
-		},
-		{
-			"english": "I",
-			"number": "377",
-			"portuguese": "devo"
-		},
-		{
-			"english": "believe",
-			"number": "378",
-			"portuguese": "acredito"
-		},
-		{
-			"english": "account",
-			"number": "379",
-			"portuguese": "conta"
-		},
-		{
-			"english": "idiot",
-			"number": "380",
-			"portuguese": "idiota"
-		},
-		{
-			"english": "land",
-			"number": "381",
-			"portuguese": "terra"
-		},
-		{
-			"english": "together",
-			"number": "382",
-			"portuguese": "juntos"
-		},
-		{
-			"english": "ok",
-			"number": "383",
-			"portuguese": "tA"
-		},
-		{
-			"english": "come",
-			"number": "384",
-			"portuguese": "vir"
-		},
-		{
-			"english": "had",
-			"number": "385",
-			"portuguese": "havia"
-		},
-		{
-			"english": "should",
-			"number": "386",
-			"portuguese": "devia"
-		},
-		{
-			"english": "been",
-			"number": "387",
-			"portuguese": "sido"
-		},
-		{
-			"english": "would",
-			"number": "388",
-			"portuguese": "ia"
-		},
-		{
-			"english": "came",
-			"number": "389",
-			"portuguese": "veio"
-		},
-		{
-			"english": "our",
-			"number": "390",
-			"portuguese": "nossos"
-		},
-		{
-			"english": "old",
-			"number": "391",
-			"portuguese": "velho"
-		},
-		{
-			"english": "wife",
-			"number": "392",
-			"portuguese": "esposa"
-		},
-		{
-			"english": "trying",
-			"number": "393",
-			"portuguese": "tentando"
-		},
-		{
-			"english": "it",
-			"number": "394",
-			"portuguese": "nisso"
-		},
-		{
-			"english": "daughter",
-			"number": "395",
-			"portuguese": "filha"
-		},
-		{
-			"english": "hand",
-			"number": "396",
-			"portuguese": "mAo"
-		},
-		{
-			"english": "heart",
-			"number": "397",
-			"portuguese": "coraAAo"
-		},
-		{
-			"english": "can",
-			"number": "398",
-			"portuguese": "consigo"
-		},
-		{
-			"english": "had",
-			"number": "399",
-			"portuguese": "teve"
-		},
-		{
-			"english": "could",
-			"number": "400",
-			"portuguese": "podia"
-		},
-		{
-			"english": "same",
-			"number": "401",
-			"portuguese": "mesma"
-		},
-		{
-			"english": "pass",
-			"number": "402",
-			"portuguese": "passar"
-		},
-		{
-			"english": "chief",
-			"number": "403",
-			"portuguese": "chefe"
-		},
-		{
-			"english": "end",
-			"number": "404",
-			"portuguese": "fim"
-		},
-		{
-			"english": "such",
-			"number": "405",
-			"portuguese": "tal"
-		},
-		{
-			"english": "listen",
-			"number": "406",
-			"portuguese": "ouvir"
-		},
-		{
-			"english": "important",
-			"number": "407",
-			"portuguese": "importante"
-		},
-		{
-			"english": "Welcome",
-			"number": "408",
-			"portuguese": "vindo"
-		},
-		{
-			"english": "staff",
-			"number": "409",
-			"portuguese": "pessoal"
-		},
-		{
-			"english": "speech",
-			"number": "410",
-			"portuguese": "fala"
-		},
-		{
-			"english": "school",
-			"number": "411",
-			"portuguese": "escola"
-		},
-		{
-			"english": "mouth",
-			"number": "412",
-			"portuguese": "boca"
-		},
-		{
-			"english": "no",
-			"number": "413",
-			"portuguese": "nenhuma"
-		},
-		{
-			"english": "just",
-			"number": "414",
-			"portuguese": "acabou"
-		},
-		{
-			"english": "want",
-			"number": "415",
-			"portuguese": "querem"
-		},
-		{
-			"english": "see",
-			"number": "416",
-			"portuguese": "vAa"
-		},
-		{
-			"english": "game",
-			"number": "417",
-			"portuguese": "jogo"
-		},
-		{
-			"english": "difficult",
-			"number": "418",
-			"portuguese": "difAcil"
-		},
-		{
-			"english": "would",
-			"number": "419",
-			"portuguese": "teria"
-		},
-		{
-			"english": "understand",
-			"number": "420",
-			"portuguese": "entendo"
-		},
-		{
-			"english": "problems",
-			"number": "421",
-			"portuguese": "problemas"
-		},
-		{
-			"english": "cue",
-			"number": "422",
-			"portuguese": "deixa"
-		},
-		{
-			"english": "dear",
-			"number": "423",
-			"portuguese": "querido"
-		},
-		{
-			"english": "weapon",
-			"number": "424",
-			"portuguese": "arma"
-		},
-		{
-			"english": "far",
-			"number": "425",
-			"portuguese": "longe"
-		},
-		{
-			"english": "five",
-			"number": "426",
-			"portuguese": "cinco"
-		},
-		{
-			"english": "because",
-			"number": "427",
-			"portuguese": "pois"
-		},
-		{
-			"english": "know",
-			"number": "428",
-			"portuguese": "conhece"
-		},
-		{
-			"english": "women",
-			"number": "429",
-			"portuguese": "mulheres"
-		},
-		{
-			"english": "eat",
-			"number": "430",
-			"portuguese": "comer"
-		},
-		{
-			"english": "skirt",
-			"number": "431",
-			"portuguese": "saia"
-		},
-		{
-			"english": "happening",
-			"number": "432",
-			"portuguese": "acontecendo"
-		},
-		{
-			"english": "count",
-			"number": "433",
-			"portuguese": "contar"
-		},
-		{
-			"english": "worry",
-			"number": "434",
-			"portuguese": "preocupe"
-		},
-		{
-			"english": "power",
-			"number": "435",
-			"portuguese": "poder"
-		},
-		{
-			"english": "last",
-			"number": "436",
-			"portuguese": "Aoltima"
-		},
-		{
-			"english": "husband",
-			"number": "437",
-			"portuguese": "marido"
-		},
-		{
-			"english": "captain",
-			"number": "438",
-			"portuguese": "capitAo"
-		},
-		{
-			"english": "means",
-			"number": "439",
-			"portuguese": "significa"
-		},
-		{
-			"english": "was",
-			"number": "440",
-			"portuguese": "ficou"
-		},
-		{
-			"english": "here",
-			"number": "441",
-			"portuguese": "cA"
-		},
-		{
-			"english": "stop",
-			"number": "442",
-			"portuguese": "parar"
-		},
-		{
-			"english": "more",
-			"number": "443",
-			"portuguese": "maior"
-		},
-		{
-			"english": "sleep",
-			"number": "444",
-			"portuguese": "dormir"
-		},
-		{
-			"english": "pleasure",
-			"number": "445",
-			"portuguese": "prazer"
-		},
-		{
-			"english": "try",
-			"number": "446",
-			"portuguese": "tentar"
-		},
-		{
-			"english": "I",
-			"number": "447",
-			"portuguese": "faAo"
-		},
-		{
-			"english": "body",
-			"number": "448",
-			"portuguese": "corpo"
-		},
-		{
-			"english": "goodbye",
-			"number": "449",
-			"portuguese": "adeus"
-		},
-		{
-			"english": "thinking",
-			"number": "450",
-			"portuguese": "pensando"
-		},
-		{
-			"english": "say",
-			"number": "451",
-			"portuguese": "digo"
-		},
-		{
-			"english": "in this",
-			"number": "452",
-			"portuguese": "neste"
-		},
-		{
-			"english": "many",
-			"number": "453",
-			"portuguese": "muitos"
-		},
-		{
-			"english": "license",
-			"number": "454",
-			"portuguese": "licenAa"
-		},
-		{
-			"english": "dr",
-			"number": "455",
-			"portuguese": "dr"
-		},
-		{
-			"english": "Cum",
-			"number": "456",
-			"portuguese": "porra"
-		},
-		{
-			"english": "start",
-			"number": "457",
-			"portuguese": "comeAar"
-		},
-		{
-			"english": "four",
-			"number": "458",
-			"portuguese": "quatro"
-		},
-		{
-			"english": "yesterday",
-			"number": "459",
-			"portuguese": "ontem"
-		},
-		{
-			"english": "waiting",
-			"number": "460",
-			"portuguese": "esperando"
-		},
-		{
-			"english": "during",
-			"number": "461",
-			"portuguese": "durante"
-		},
-		{
-			"english": "wait",
-			"number": "462",
-			"portuguese": "esperar"
-		},
-		{
-			"english": "work",
-			"number": "463",
-			"portuguese": "trabalhar"
-		},
-		{
-			"english": "found",
-			"number": "464",
-			"portuguese": "achei"
-		},
-		{
-			"english": "number",
-			"number": "465",
-			"portuguese": "nAomero"
-		},
-		{
-			"english": "had",
-			"number": "466",
-			"portuguese": "tivesse"
-		},
-		{
-			"english": "this",
-			"number": "467",
-			"portuguese": "desta"
-		},
-		{
-			"english": "cause",
-			"number": "468",
-			"portuguese": "causa"
-		},
-		{
-			"english": "only",
-			"number": "469",
-			"portuguese": "Aonica"
-		},
-		{
-			"english": "take",
-			"number": "470",
-			"portuguese": "tomar"
-		},
-		{
-			"english": "way",
-			"number": "471",
-			"portuguese": "maneira"
-		},
-		{
-			"english": "many",
-			"number": "472",
-			"portuguese": "muitas"
-		},
-		{
-			"english": "exactly",
-			"number": "473",
-			"portuguese": "exatamente"
-		},
-		{
-			"english": "calm",
-			"number": "474",
-			"portuguese": "calma"
-		},
-		{
-			"english": "think",
-			"number": "475",
-			"portuguese": "pensa"
-		},
-		{
-			"english": "second",
-			"number": "476",
-			"portuguese": "segundo"
-		},
-		{
-			"english": "thou",
-			"number": "477",
-			"portuguese": "tu"
-		},
-		{
-			"english": "blood",
-			"number": "478",
-			"portuguese": "sangue"
-		},
-		{
-			"english": "heard",
-			"number": "479",
-			"portuguese": "ouvi"
-		},
-		{
-			"english": "sister",
-			"number": "480",
-			"portuguese": "irmA"
-		},
-		{
-			"english": "much",
-			"number": "481",
-			"portuguese": "muita"
-		},
-		{
-			"english": "arrives",
-			"number": "482",
-			"portuguese": "chega"
-		},
-		{
-			"english": "know",
-			"number": "483",
-			"portuguese": "conheAo"
-		},
-		{
-			"english": "died",
-			"number": "484",
-			"portuguese": "morreu"
-		},
-		{
-			"english": "children",
-			"number": "485",
-			"portuguese": "filhos"
-		},
-		{
-			"english": "live",
-			"number": "486",
-			"portuguese": "viver"
-		},
-		{
-			"english": "quite",
-			"number": "487",
-			"portuguese": "bastante"
-		},
-		{
-			"english": "were",
-			"number": "488",
-			"portuguese": "eram"
-		},
-		{
-			"english": "months",
-			"number": "489",
-			"portuguese": "meses"
-		},
-		{
-			"english": "coffee",
-			"number": "490",
-			"portuguese": "cafA"
-		},
-		{
-			"english": "peace",
-			"number": "491",
-			"portuguese": "paz"
-		},
-		{
-			"english": "crazy",
-			"number": "492",
-			"portuguese": "louco"
-		},
-		{
-			"english": "that",
-			"number": "493",
-			"portuguese": "aquilo"
-		},
-		{
-			"english": "easy",
-			"number": "494",
-			"portuguese": "fAcil"
-		},
-		{
-			"english": "again",
-			"number": "495",
-			"portuguese": "novamente"
-		},
-		{
-			"english": "being",
-			"number": "496",
-			"portuguese": "sendo"
-		},
-		{
-			"english": "strange",
-			"number": "497",
-			"portuguese": "estranho"
-		},
-		{
-			"english": "thousand",
-			"number": "498",
-			"portuguese": "mil"
-		},
-		{
-			"english": "take",
-			"number": "499",
-			"portuguese": "pegue"
-		},
-		{
-			"english": "s",
-			"number": "500",
-			"portuguese": "s"
-		},
-		{
-			"english": "party",
-			"number": "501",
-			"portuguese": "festa"
-		},
-		{
-			"english": "phone",
-			"number": "502",
-			"portuguese": "telefone"
-		},
-		{
-			"english": "these",
-			"number": "503",
-			"portuguese": "estes"
-		},
-		{
-			"english": "bed",
-			"number": "504",
-			"portuguese": "cama"
-		},
-		{
-			"english": "remove",
-			"number": "505",
-			"portuguese": "tirar"
-		},
-		{
-			"english": "young",
-			"number": "506",
-			"portuguese": "jovem"
-		},
-		{
-			"english": "use",
-			"number": "507",
-			"portuguese": "usar"
-		},
-		{
-			"english": "will",
-			"number": "508",
-			"portuguese": "terA"
-		},
-		{
-			"english": "music",
-			"number": "509",
-			"portuguese": "mAosica"
-		},
-		{
-			"english": "beyond",
-			"number": "510",
-			"portuguese": "alAm"
-		},
-		{
-			"english": "hooker",
-			"number": "511",
-			"portuguese": "puta"
-		},
-		{
-			"english": "there",
-			"number": "512",
-			"portuguese": "houve"
-		},
-		{
-			"english": "listen",
-			"number": "513",
-			"portuguese": "ouAa"
-		},
-		{
-			"english": "arrived",
-			"number": "514",
-			"portuguese": "chegou"
-		},
-		{
-			"english": "movie",
-			"number": "515",
-			"portuguese": "filme"
-		},
-		{
-			"english": "get",
-			"number": "516",
-			"portuguese": "conseguir"
-		},
-		{
-			"english": "small",
-			"number": "517",
-			"portuguese": "pequeno"
-		},
-		{
-			"english": "alone",
-			"number": "518",
-			"portuguese": "sozinho"
-		},
-		{
-			"english": "know",
-			"number": "519",
-			"portuguese": "sabem"
-		},
-		{
-			"english": "child",
-			"number": "520",
-			"portuguese": "crianAa"
-		},
-		{
-			"english": "parents",
-			"number": "521",
-			"portuguese": "pais"
-		},
-		{
-			"english": "enough",
-			"number": "522",
-			"portuguese": "suficiente"
-		},
-		{
-			"english": "hell",
-			"number": "523",
-			"portuguese": "diabos"
-		},
-		{
-			"english": "question",
-			"number": "524",
-			"portuguese": "pergunta"
-		},
-		{
-			"english": "can",
-			"number": "525",
-			"portuguese": "consegue"
-		},
-		{
-			"english": "minute",
-			"number": "526",
-			"portuguese": "minuto"
-		},
-		{
-			"english": "thy",
-			"number": "527",
-			"portuguese": "teu"
-		},
-		{
-			"english": "can",
-			"number": "528",
-			"portuguese": "possa"
-		},
-		{
-			"english": "remember",
-			"number": "529",
-			"portuguese": "lembra"
-		},
-		{
-			"english": "of this",
-			"number": "530",
-			"portuguese": "desse"
-		},
-		{
-			"english": "will",
-			"number": "531",
-			"portuguese": "irA"
-		},
-		{
-			"english": "hello",
-			"number": "532",
-			"portuguese": "alA "
-		},
-		{
-			"english": "were",
-			"number": "533",
-			"portuguese": "estavam"
-		},
-		{
-			"english": "strong",
-			"number": "534",
-			"portuguese": "forte"
-		},
-		{
-			"english": "left",
-			"number": "535",
-			"portuguese": "deixou"
-		},
-		{
-			"english": "fire",
-			"number": "536",
-			"portuguese": "fogo"
-		},
-		{
-			"english": "country",
-			"number": "537",
-			"portuguese": "paAs"
-		},
-		{
-			"english": "live",
-			"number": "538",
-			"portuguese": "vivo"
-		},
-		{
-			"english": "say",
-			"number": "539",
-			"portuguese": "dizem"
-		},
-		{
-			"english": "john",
-			"number": "540",
-			"portuguese": "john"
-		},
-		{
-			"english": "pay",
-			"number": "541",
-			"portuguese": "pagar"
-		},
-		{
-			"english": "where",
-			"number": "542",
-			"portuguese": "aonde"
-		},
-		{
-			"english": "dinner",
-			"number": "543",
-			"portuguese": "jantar"
-		},
-		{
-			"english": "killed",
-			"number": "544",
-			"portuguese": "matou"
-		},
-		{
-			"english": "this",
-			"number": "545",
-			"portuguese": "dessa"
-		},
-		{
-			"english": "wanted",
-			"number": "546",
-			"portuguese": "quis"
-		},
-		{
-			"english": "is",
-			"number": "547",
-			"portuguese": "esteja"
-		},
-		{
-			"english": "back",
-			"number": "548",
-			"portuguese": "trAs"
-		},
-		{
-			"english": "our",
-			"number": "549",
-			"portuguese": "nossas"
-		},
-		{
-			"english": "food",
-			"number": "550",
-			"portuguese": "comida"
-		},
-		{
-			"english": "possible",
-			"number": "551",
-			"portuguese": "possAvel"
-		},
-		{
-			"english": "happen",
-			"number": "552",
-			"portuguese": "acontecer"
-		},
-		{
-			"english": "talk",
-			"number": "553",
-			"portuguese": "fale"
-		},
-		{
-			"english": "right",
-			"number": "554",
-			"portuguese": "direito"
-		},
-		{
-			"english": "back",
-			"number": "555",
-			"portuguese": "volte"
-		},
-		{
-			"english": "chance",
-			"number": "556",
-			"portuguese": "chance"
-		},
-		{
-			"english": "boys",
-			"number": "557",
-			"portuguese": "rapazes"
-		},
-		{
-			"english": "word",
-			"number": "558",
-			"portuguese": "palavra"
-		},
-		{
-			"english": "seeing",
-			"number": "559",
-			"portuguese": "vendo"
-		},
-		{
-			"english": "we",
-			"number": "560",
-			"portuguese": "devemos"
-		},
-		{
-			"english": "low",
-			"number": "561",
-			"portuguese": "baixo"
-		},
-		{
-			"english": "other",
-			"number": "562",
-			"portuguese": "outras"
-		},
-		{
-			"english": "these",
-			"number": "563",
-			"portuguese": "estas"
-		},
-		{
-			"english": "penalty",
-			"number": "564",
-			"portuguese": "pena"
-		},
-		{
-			"english": "lack",
-			"number": "565",
-			"portuguese": "falta"
-		},
-		{
-			"english": "guilt",
-			"number": "566",
-			"portuguese": "culpa"
-		},
-		{
-			"english": "them",
-			"number": "567",
-			"portuguese": "lhes"
-		},
-		{
-			"english": "listen",
-			"number": "568",
-			"portuguese": "escute"
-		},
-		{
-			"english": "dollars",
-			"number": "569",
-			"portuguese": "dA3lares"
-		},
-		{
-			"english": "feel",
-			"number": "570",
-			"portuguese": "sentir"
-		},
-		{
-			"english": "heard",
-			"number": "571",
-			"portuguese": "ouviu"
-		},
-		{
-			"english": "light",
-			"number": "572",
-			"portuguese": "luz"
-		},
-		{
-			"english": "understands",
-			"number": "573",
-			"portuguese": "entende"
-		},
-		{
-			"english": "six",
-			"number": "574",
-			"portuguese": "seis"
-		},
-		{
-			"english": "your",
-			"number": "575",
-			"portuguese": "tua"
-		},
-		{
-			"english": "there",
-			"number": "576",
-			"portuguese": "existe"
-		},
-		{
-			"english": "jack",
-			"number": "577",
-			"portuguese": "jack"
-		},
-		{
-			"english": "king",
-			"number": "578",
-			"portuguese": "rei"
-		},
-		{
-			"english": "attention",
-			"number": "579",
-			"portuguese": "atenAAo"
-		},
-		{
-			"english": "believe",
-			"number": "580",
-			"portuguese": "acreditar"
-		},
-		{
-			"english": "different",
-			"number": "581",
-			"portuguese": "diferente"
-		},
-		{
-			"english": "boy",
-			"number": "582",
-			"portuguese": "rapaz"
-		},
-		{
-			"english": "Miss",
-			"number": "583",
-			"portuguese": "srta"
-		},
-		{
-			"english": "lose",
-			"number": "584",
-			"portuguese": "perder"
-		},
-		{
-			"english": "feel",
-			"number": "585",
-			"portuguese": "sente"
-		},
-		{
-			"english": "book",
-			"number": "586",
-			"portuguese": "livro"
-		},
-		{
-			"english": "bye",
-			"number": "587",
-			"portuguese": "tchau"
-		},
-		{
-			"english": "single",
-			"number": "588",
-			"portuguese": "Aonico"
-		},
-		{
-			"english": "some",
-			"number": "589",
-			"portuguese": "umas"
-		},
-		{
-			"english": "agreement",
-			"number": "590",
-			"portuguese": "acordo"
-		},
-		{
-			"english": "force",
-			"number": "591",
-			"portuguese": "forAa"
-		},
-		{
-			"english": "brought",
-			"number": "592",
-			"portuguese": "trouxe"
-		},
-		{
-			"english": "this",
-			"number": "593",
-			"portuguese": "deste"
-		},
-		{
-			"english": "Jesus",
-			"number": "594",
-			"portuguese": "jesus"
-		},
-		{
-			"english": "do",
-			"number": "595",
-			"portuguese": "fazem"
-		},
-		{
-			"english": "point",
-			"number": "596",
-			"portuguese": "ponto"
-		},
-		{
-			"english": "look",
-			"number": "597",
-			"portuguese": "olhar"
-		},
-		{
-			"english": "ouch",
-			"number": "598",
-			"portuguese": "ai"
-		},
-		{
-			"english": "know",
-			"number": "599",
-			"portuguese": "sabemos"
-		},
-		{
-			"english": "baby",
-			"number": "600",
-			"portuguese": "bebAa"
-		},
-		{
-			"english": "beautiful",
-			"number": "601",
-			"portuguese": "linda"
-		},
-		{
-			"english": "final",
-			"number": "602",
-			"portuguese": "final"
-		},
-		{
-			"english": "probably",
-			"number": "603",
-			"portuguese": "provavelmente"
-		},
-		{
-			"english": "in that",
-			"number": "604",
-			"portuguese": "nessa"
-		},
-		{
-			"english": "guys",
-			"number": "605",
-			"portuguese": "caras"
-		},
-		{
-			"english": "in this",
-			"number": "606",
-			"portuguese": "nesta"
-		},
-		{
-			"english": "marriage",
-			"number": "607",
-			"portuguese": "casamento"
-		},
-		{
-			"english": "looking",
-			"number": "608",
-			"portuguese": "procurando"
-		},
-		{
-			"english": "play",
-			"number": "609",
-			"portuguese": "jogar"
-		},
-		{
-			"english": "excuse",
-			"number": "610",
-			"portuguese": "desculpa"
-		},
-		{
-			"english": "doctor",
-			"number": "611",
-			"portuguese": "doutor"
-		},
-		{
-			"english": "beautiful",
-			"number": "612",
-			"portuguese": "bonito"
-		},
-		{
-			"english": "ask",
-			"number": "613",
-			"portuguese": "pedir"
-		},
-		{
-			"english": "change",
-			"number": "614",
-			"portuguese": "mudar"
-		},
-		{
-			"english": "state",
-			"number": "615",
-			"portuguese": "estado"
-		},
-		{
-			"english": "president",
-			"number": "616",
-			"portuguese": "presidente"
-		},
-		{
-			"english": "happens",
-			"number": "617",
-			"portuguese": "acontece"
-		},
-		{
-			"english": "past",
-			"number": "618",
-			"portuguese": "passado"
-		},
-		{
-			"english": "in that",
-			"number": "619",
-			"portuguese": "nesse"
-		},
-		{
-			"english": "managed",
-			"number": "620",
-			"portuguese": "conseguiu"
-		},
-		{
-			"english": "it",
-			"number": "621",
-			"portuguese": "nele"
-		},
-		{
-			"english": "street",
-			"number": "622",
-			"portuguese": "rua"
-		},
-		{
-			"english": "spoke",
-			"number": "623",
-			"portuguese": "falou"
-		},
-		{
-			"english": "next",
-			"number": "624",
-			"portuguese": "prA3xima"
-		},
-		{
-			"english": "out",
-			"number": "625",
-			"portuguese": "sai"
-		},
-		{
-			"english": "right",
-			"number": "626",
-			"portuguese": "certa"
-		},
-		{
-			"english": "doctor",
-			"number": "627",
-			"portuguese": "mAdico"
-		},
-		{
-			"english": "weapons",
-			"number": "628",
-			"portuguese": "armas"
-		},
-		{
-			"english": "show",
-			"number": "629",
-			"portuguese": "mostrar"
-		},
-		{
-			"english": "vim",
-			"number": "630",
-			"portuguese": "vim"
-		},
-		{
-			"english": "mode",
-			"number": "631",
-			"portuguese": "modo"
-		},
-		{
-			"english": "been",
-			"number": "632",
-			"portuguese": "esteve"
-		},
-		{
-			"english": "room",
-			"number": "633",
-			"portuguese": "sala"
-		},
-		{
-			"english": "continue",
-			"number": "634",
-			"portuguese": "continuar"
-		},
-		{
-			"english": "should",
-			"number": "635",
-			"portuguese": "devem"
-		},
-		{
-			"english": "would",
-			"number": "636",
-			"portuguese": "faria"
-		},
-		{
-			"english": "small",
-			"number": "637",
-			"portuguese": "pequena"
-		},
-		{
-			"english": "security",
-			"number": "638",
-			"portuguese": "seguranAa"
-		},
-		{
-			"english": "re",
-			"number": "639",
-			"portuguese": "estAs"
-		},
-		{
-			"english": "call",
-			"number": "640",
-			"portuguese": "chamar"
-		},
-		{
-			"english": "bad",
-			"number": "641",
-			"portuguese": "ruim"
-		},
-		{
-			"english": "end",
-			"number": "642",
-			"portuguese": "acabar"
-		},
-		{
-			"english": "rest",
-			"number": "643",
-			"portuguese": "resto"
-		},
-		{
-			"english": "worse",
-			"number": "644",
-			"portuguese": "pior"
-		},
-		{
-			"english": "business",
-			"number": "645",
-			"portuguese": "negA3cio"
-		},
-		{
-			"english": "those",
-			"number": "646",
-			"portuguese": "aqueles"
-		},
-		{
-			"english": "girls",
-			"number": "647",
-			"portuguese": "garotas"
-		},
-		{
-			"english": "foot",
-			"number": "648",
-			"portuguese": "pA"
-		},
-		{
-			"english": "beautiful",
-			"number": "649",
-			"portuguese": "bonita"
-		},
-		{
-			"english": "remember",
-			"number": "650",
-			"portuguese": "lembro"
-		},
-		{
-			"english": "walks",
-			"number": "651",
-			"portuguese": "anda"
-		},
-		{
-			"english": "high",
-			"number": "652",
-			"portuguese": "alto"
-		},
-		{
-			"english": "are",
-			"number": "653",
-			"portuguese": "estiver"
-		},
-		{
-			"english": "buy",
-			"number": "654",
-			"portuguese": "comprar"
-		},
-		{
-			"english": "weeks",
-			"number": "655",
-			"portuguese": "semanas"
-		},
-		{
-			"english": "flame",
-			"number": "656",
-			"portuguese": "chama"
-		},
-		{
-			"english": "forget",
-			"number": "657",
-			"portuguese": "esqueAa"
-		},
-		{
-			"english": "special",
-			"number": "658",
-			"portuguese": "especial"
-		},
-		{
-			"english": "beneath",
-			"number": "659",
-			"portuguese": "sob"
-		},
-		{
-			"english": "passes",
-			"number": "660",
-			"portuguese": "passa"
-		},
-		{
-			"english": "am",
-			"number": "661",
-			"portuguese": "fico"
-		},
-		{
-			"english": "si",
-			"number": "662",
-			"portuguese": "si"
-		},
-		{
-			"english": "close",
-			"number": "663",
-			"portuguese": "prA3ximo"
-		},
-		{
-			"english": "girl",
-			"number": "664",
-			"portuguese": "menina"
-		},
-		{
-			"english": "playing",
-			"number": "665",
-			"portuguese": "brincando"
-		},
-		{
-			"english": "would",
-			"number": "666",
-			"portuguese": "iria"
-		},
-		{
-			"english": "by",
-			"number": "667",
-			"portuguese": "pelos"
-		},
-		{
-			"english": "early",
-			"number": "668",
-			"portuguese": "cedo"
-		},
-		{
-			"english": "ten",
-			"number": "669",
-			"portuguese": "dez"
-		},
-		{
-			"english": "marry",
-			"number": "670",
-			"portuguese": "casar"
-		},
-		{
-			"english": "find",
-			"number": "671",
-			"portuguese": "achar"
-		},
-		{
-			"english": "uncle",
-			"number": "672",
-			"portuguese": "tio"
-		},
-		{
-			"english": "plan",
-			"number": "673",
-			"portuguese": "plano"
-		},
-		{
-			"english": "talk",
-			"number": "674",
-			"portuguese": "conversar"
-		},
-		{
-			"english": "nurse",
-			"number": "675",
-			"portuguese": "ama"
-		},
-		{
-			"english": "the",
-			"number": "676",
-			"portuguese": "the"
-		},
-		{
-			"english": "started",
-			"number": "677",
-			"portuguese": "comeAou"
-		},
-		{
-			"english": "want",
-			"number": "678",
-			"portuguese": "queremos"
-		},
-		{
-			"english": "respect",
-			"number": "679",
-			"portuguese": "respeito"
-		},
-		{
-			"english": "last",
-			"number": "680",
-			"portuguese": "Aoltimo"
-		},
-		{
-			"english": "link",
-			"number": "681",
-			"portuguese": "ligar"
-		},
-		{
-			"english": "ask",
-			"number": "682",
-			"portuguese": "perguntar"
-		},
-		{
-			"english": "hospital",
-			"number": "683",
-			"portuguese": "hospital"
-		},
-		{
-			"english": "want",
-			"number": "684",
-			"portuguese": "querer"
-		},
-		{
-			"english": "take",
-			"number": "685",
-			"portuguese": "tome"
-		},
-		{
-			"english": "sun",
-			"number": "686",
-			"portuguese": "sol"
-		},
-		{
-			"english": "light",
-			"number": "687",
-			"portuguese": "leve"
-		},
-		{
-			"english": "free",
-			"number": "688",
-			"portuguese": "livre"
-		},
-		{
-			"english": "own",
-			"number": "689",
-			"portuguese": "prA3prio"
-		},
-		{
-			"english": "floor",
-			"number": "690",
-			"portuguese": "andar"
-		},
-		{
-			"english": "words",
-			"number": "691",
-			"portuguese": "palavras"
-		},
-		{
-			"english": "will",
-			"number": "692",
-			"portuguese": "estarA"
-		},
-		{
-			"english": "thence",
-			"number": "693",
-			"portuguese": "daA"
-		},
-		{
-			"english": "I think",
-			"number": "694",
-			"portuguese": "penso"
-		},
-		{
-			"english": "large",
-			"number": "695",
-			"portuguese": "grandes"
-		},
-		{
-			"english": "air",
-			"number": "696",
-			"portuguese": "ar"
-		},
-		{
-			"english": "win",
-			"number": "697",
-			"portuguese": "ganhar"
-		},
-		{
-			"english": "leave",
-			"number": "698",
-			"portuguese": "partir"
-		},
-		{
-			"english": "million",
-			"number": "699",
-			"portuguese": "milhAes"
-		},
-		{
-			"english": "boy",
-			"number": "700",
-			"portuguese": "menino"
-		},
-		{
-			"english": "viewed",
-			"number": "701",
-			"portuguese": "visto"
-		},
-		{
-			"english": "understood",
-			"number": "702",
-			"portuguese": "entendeu"
-		},
-		{
-			"english": "believes",
-			"number": "703",
-			"portuguese": "acredita"
-		},
-		{
-			"english": "funny",
-			"number": "704",
-			"portuguese": "engraAado"
-		},
-		{
-			"english": "out",
-			"number": "705",
-			"portuguese": "saiu"
-		},
-		{
-			"english": "beautiful",
-			"number": "706",
-			"portuguese": "lindo"
-		},
-		{
+			"Rank": "16",
+			"spanish": "te",
 			"english": "you",
-			"number": "707",
-			"portuguese": "voce"
+			"Notes": "5) It is licensed under the following Creative Commons license:"
 		},
 		{
-			"english": "you",
-			"number": "708",
-			"portuguese": "senhores"
+			"Rank": "17",
+			"spanish": "se",
+			"english": "HE",
+			"Notes": "http://creativecommons.org/licenses/by-sa/3.0/"
 		},
 		{
-			"english": "think",
-			"number": "709",
-			"portuguese": "pense"
+			"Rank": "18",
+			"spanish": "los",
+			"english": "the"
 		},
 		{
-			"english": "put",
-			"number": "710",
-			"portuguese": "colocar"
+			"Rank": "19",
+			"spanish": "con",
+			"english": "with",
+			"Notes": "6) More Most Common word lists (other languages) can be found here:"
 		},
 		{
-			"english": "teacher",
-			"number": "711",
-			"portuguese": "professor"
+			"Rank": "20",
+			"spanish": "para",
+			"english": "for",
+			"Notes": "http://www.101languages.net/common-words/"
 		},
 		{
-			"english": "present",
-			"number": "712",
-			"portuguese": "presente"
+			"Rank": "21",
+			"spanish": "mi",
+			"english": "my"
 		},
 		{
-			"english": "real",
-			"number": "713",
-			"portuguese": "real"
+			"Rank": "22",
+			"spanish": "está",
+			"english": "this"
 		},
 		{
-			"english": "control",
-			"number": "714",
-			"portuguese": "controle"
+			"Rank": "23",
+			"spanish": "si",
+			"english": "yes"
 		},
 		{
-			"english": "trip",
-			"number": "715",
-			"portuguese": "viagem"
+			"Rank": "24",
+			"spanish": "sí",
+			"english": "yes"
 		},
 		{
-			"english": "insurance",
-			"number": "716",
-			"portuguese": "seguro"
+			"Rank": "25",
+			"spanish": "pero",
+			"english": "but"
 		},
 		{
-			"english": "quickly",
-			"number": "717",
-			"portuguese": "depressa"
+			"Rank": "26",
+			"spanish": "las",
+			"english": "the"
 		},
 		{
-			"english": "I was",
-			"number": "718",
-			"portuguese": "fiquei"
+			"Rank": "27",
+			"spanish": "bien",
+			"english": "all right"
 		},
 		{
-			"english": "natal",
-			"number": "719",
-			"portuguese": "natal"
+			"Rank": "28",
+			"spanish": "yo",
+			"english": "I"
 		},
 		{
-			"english": "hair",
-			"number": "720",
-			"portuguese": "cabelo"
+			"Rank": "29",
+			"spanish": "su",
+			"english": "his"
 		},
 		{
-			"english": "fact",
-			"number": "721",
-			"portuguese": "fato"
+			"Rank": "30",
+			"spanish": "eso",
+			"english": "that"
 		},
 		{
-			"english": "dead",
-			"number": "722",
-			"portuguese": "mortos"
+			"Rank": "31",
+			"spanish": "aquí",
+			"english": "here"
 		},
 		{
-			"english": "sick",
-			"number": "723",
-			"portuguese": "doente"
+			"Rank": "32",
+			"spanish": "del",
+			"english": "of the"
 		},
 		{
-			"english": "prison",
-			"number": "724",
-			"portuguese": "prisAo"
+			"Rank": "33",
+			"spanish": "al",
+			"english": "to the"
 		},
 		{
-			"english": "will",
-			"number": "725",
-			"portuguese": "vontade"
+			"Rank": "34",
+			"spanish": "como",
+			"english": "as"
 		},
 		{
-			"english": "lament",
-			"number": "726",
-			"portuguese": "lamento"
+			"Rank": "35",
+			"spanish": "le",
+			"english": "you"
 		},
 		{
-			"english": "order",
-			"number": "727",
-			"portuguese": "ordem"
+			"Rank": "36",
+			"spanish": "tu",
+			"english": "you"
 		},
 		{
-			"english": "perfect",
-			"number": "728",
-			"portuguese": "perfeito"
+			"Rank": "37",
+			"spanish": "más",
+			"english": "plus"
 		},
 		{
-			"english": "passed",
-			"number": "729",
-			"portuguese": "passou"
+			"Rank": "38",
+			"spanish": "todo",
+			"english": "all"
 		},
 		{
-			"english": "alone",
-			"number": "730",
-			"portuguese": "sozinha"
+			"Rank": "39",
+			"spanish": "ya",
+			"english": "already"
 		},
 		{
-			"english": "maintain",
-			"number": "731",
-			"portuguese": "manter"
+			"Rank": "40",
+			"spanish": "muy",
+			"english": "very"
 		},
 		{
-			"english": "general",
-			"number": "732",
-			"portuguese": "general"
+			"Rank": "41",
+			"spanish": "esto",
+			"english": "this"
 		},
 		{
-			"english": "pro",
-			"number": "733",
-			"portuguese": "pro"
+			"Rank": "42",
+			"spanish": "vamos",
+			"english": "come on"
 		},
 		{
-			"english": "were",
-			"number": "734",
-			"portuguese": "estAvamos"
+			"Rank": "43",
+			"spanish": "ha",
+			"english": "he has"
 		},
 		{
-			"english": "hot",
-			"number": "735",
-			"portuguese": "quente"
+			"Rank": "44",
+			"spanish": "ahora",
+			"english": "now"
 		},
 		{
-			"english": "caught",
-			"number": "736",
-			"portuguese": "pegou"
+			"Rank": "45",
+			"spanish": "esta",
+			"english": "this"
 		},
 		{
-			"english": "hell",
-			"number": "737",
-			"portuguese": "inferno"
+			"Rank": "46",
+			"spanish": "hay",
+			"english": "there"
 		},
 		{
-			"english": "said",
-			"number": "738",
-			"portuguese": "falei"
+			"Rank": "47",
+			"spanish": "estoy",
+			"english": "I am"
 		},
 		{
-			"english": "with us",
-			"number": "739",
-			"portuguese": "conosco"
+			"Rank": "48",
+			"spanish": "algo",
+			"english": "something"
 		},
 		{
-			"english": "mind",
-			"number": "740",
-			"portuguese": "mente"
+			"Rank": "49",
+			"spanish": "tú",
+			"english": "you"
 		},
 		{
-			"english": "office",
-			"number": "741",
-			"portuguese": "escritA3rio"
+			"Rank": "50",
+			"spanish": "tengo",
+			"english": "I have"
 		},
 		{
-			"english": "line",
-			"number": "742",
-			"portuguese": "linha"
+			"Rank": "51",
+			"spanish": "así",
+			"english": "A) Yes"
 		},
 		{
-			"english": "sense",
-			"number": "743",
-			"portuguese": "sentido"
+			"Rank": "52",
+			"spanish": "nada",
+			"english": "nothing"
 		},
 		{
-			"english": "looking",
-			"number": "744",
-			"portuguese": "olhando"
+			"Rank": "53",
+			"spanish": "nos",
+			"english": "us"
 		},
 		{
-			"english": "them",
-			"number": "745",
-			"portuguese": "las"
+			"Rank": "54",
+			"spanish": "cuando",
+			"english": "when"
 		},
 		{
-			"english": "I was",
-			"number": "746",
-			"portuguese": "estive"
+			"Rank": "55",
+			"spanish": "cómo",
+			"english": "how"
 		},
 		{
-			"english": "specify",
-			"number": "747",
-			"portuguese": "precisar"
+			"Rank": "56",
+			"spanish": "él",
+			"english": "he"
 		},
 		{
-			"english": "own",
-			"number": "748",
-			"portuguese": "prA3pria"
+			"Rank": "57",
+			"spanish": "sé",
+			"english": "HE"
 		},
 		{
-			"english": "army",
-			"number": "749",
-			"portuguese": "exArcito"
+			"Rank": "58",
+			"spanish": "estás",
+			"english": "these"
 		},
 		{
-			"english": "understand",
-			"number": "750",
-			"portuguese": "entender"
+			"Rank": "59",
+			"spanish": "sólo",
+			"english": "alone"
 		},
 		{
-			"english": "finally",
-			"number": "751",
-			"portuguese": "finalmente"
+			"Rank": "60",
+			"spanish": "o",
+			"english": "or"
 		},
 		{
-			"english": "simple",
-			"number": "752",
-			"portuguese": "simples"
+			"Rank": "61",
+			"spanish": "quiero",
+			"english": "I want"
 		},
 		{
-			"english": "people",
-			"number": "753",
-			"portuguese": "povo"
+			"Rank": "62",
+			"spanish": "este",
+			"english": "East"
 		},
 		{
-			"english": "after",
-			"number": "754",
-			"portuguese": "apA3s"
+			"Rank": "63",
+			"spanish": "tiene",
+			"english": "has"
 		},
 		{
-			"english": "i",
-			"number": "755",
-			"portuguese": "i"
+			"Rank": "64",
+			"spanish": "gracias",
+			"english": "Thank you"
 		},
 		{
-			"english": "open",
-			"number": "756",
-			"portuguese": "abra"
+			"Rank": "65",
+			"spanish": "he",
+			"english": "I have"
 		},
 		{
-			"english": "were",
-			"number": "757",
-			"portuguese": "estivesse"
+			"Rank": "66",
+			"spanish": "puedo",
+			"english": "may l"
 		},
 		{
-			"english": "field",
-			"number": "758",
-			"portuguese": "campo"
+			"Rank": "67",
+			"spanish": "bueno",
+			"english": "good"
 		},
 		{
-			"english": "incredible",
-			"number": "759",
-			"portuguese": "incrAvel"
+			"Rank": "68",
+			"spanish": "soy",
+			"english": "I am"
 		},
 		{
-			"english": "age",
-			"number": "760",
-			"portuguese": "idade"
+			"Rank": "69",
+			"spanish": "era",
+			"english": "was"
 		},
 		{
-			"english": "table",
-			"number": "761",
-			"portuguese": "mesa"
+			"Rank": "70",
+			"spanish": "ser",
+			"english": "be"
 		},
 		{
-			"english": "team",
-			"number": "762",
-			"portuguese": "equipe"
+			"Rank": "71",
+			"spanish": "vez",
+			"english": "time"
 		},
 		{
-			"english": "meeting",
-			"number": "763",
-			"portuguese": "encontro"
+			"Rank": "72",
+			"spanish": "hacer",
+			"english": "do"
 		},
 		{
-			"english": "hotel",
-			"number": "764",
-			"portuguese": "hotel"
+			"Rank": "73",
+			"spanish": "todos",
+			"english": "everybody"
 		},
 		{
-			"english": "take",
-			"number": "765",
-			"portuguese": "tire"
+			"Rank": "74",
+			"spanish": "ella",
+			"english": "she"
 		},
 		{
-			"english": "hunger",
-			"number": "766",
-			"portuguese": "fome"
+			"Rank": "75",
+			"spanish": "son",
+			"english": "They are"
 		},
 		{
-			"english": "why",
-			"number": "767",
-			"portuguese": "porquAa"
+			"Rank": "76",
+			"spanish": "fue",
+			"english": "it was"
 		},
 		{
-			"english": "try",
-			"number": "768",
-			"portuguese": "tente"
+			"Rank": "77",
+			"spanish": "eres",
+			"english": "you are"
 		},
 		{
-			"english": "frank",
-			"number": "769",
-			"portuguese": "frank"
+			"Rank": "78",
+			"spanish": "usted",
+			"english": "you"
 		},
 		{
-			"english": "pain",
-			"number": "770",
-			"portuguese": "dor"
+			"Rank": "79",
+			"spanish": "tienes",
+			"english": "do you have"
 		},
 		{
-			"english": "fucking",
-			"number": "771",
-			"portuguese": "maldito"
+			"Rank": "80",
+			"spanish": "puede",
+			"english": "can"
 		},
 		{
-			"english": "sky",
-			"number": "772",
-			"portuguese": "cAu"
+			"Rank": "81",
+			"spanish": "señor",
+			"english": "Mr"
 		},
 		{
-			"english": "group",
-			"number": "773",
-			"portuguese": "grupo"
+			"Rank": "82",
+			"spanish": "ese",
+			"english": "that"
 		},
 		{
-			"english": "letter",
-			"number": "774",
-			"portuguese": "carta"
+			"Rank": "83",
+			"spanish": "voy",
+			"english": "I go"
 		},
 		{
-			"english": "ground",
-			"number": "775",
-			"portuguese": "chAo"
+			"Rank": "84",
+			"spanish": "quién",
+			"english": "who"
 		},
 		{
-			"english": "care",
-			"number": "776",
-			"portuguese": "cuidar"
+			"Rank": "85",
+			"spanish": "casa",
+			"english": "home"
 		},
 		{
-			"english": "know",
-			"number": "777",
-			"portuguese": "conhecer"
+			"Rank": "86",
+			"spanish": "creo",
+			"english": "I believe"
 		},
 		{
-			"english": "drink",
-			"number": "778",
-			"portuguese": "beber"
+			"Rank": "87",
+			"spanish": "porque",
+			"english": "why"
 		},
 		{
-			"english": "future",
-			"number": "779",
-			"portuguese": "futuro"
+			"Rank": "88",
+			"spanish": "tan",
+			"english": "so"
 		},
 		{
-			"english": "good",
-			"number": "780",
-			"portuguese": "boas"
+			"Rank": "89",
+			"spanish": "favor",
+			"english": "favor"
 		},
 		{
-			"english": "sex",
-			"number": "781",
-			"portuguese": "sexo"
+			"Rank": "90",
+			"spanish": "hola",
+			"english": "Hello"
 		},
 		{
-			"english": "will",
-			"number": "782",
-			"portuguese": "irei"
+			"Rank": "91",
+			"spanish": "dónde",
+			"english": "where"
 		},
 		{
-			"english": "discover",
-			"number": "783",
-			"portuguese": "descobrir"
+			"Rank": "92",
+			"spanish": "nunca",
+			"english": "never"
 		},
 		{
-			"english": "situation",
-			"number": "784",
-			"portuguese": "situaAAo"
+			"Rank": "93",
+			"spanish": "sus",
+			"english": "their"
 		},
 		{
-			"english": "joe",
-			"number": "785",
-			"portuguese": "joe"
+			"Rank": "94",
+			"spanish": "sabes",
+			"english": "you know"
 		},
 		{
-			"english": "tone",
-			"number": "786",
-			"portuguese": "tom"
+			"Rank": "95",
+			"spanish": "dos",
+			"english": "two"
 		},
 		{
-			"english": "sam",
-			"number": "787",
-			"portuguese": "sam"
+			"Rank": "96",
+			"spanish": "verdad",
+			"english": "true"
 		},
 		{
-			"english": "continues",
-			"number": "788",
-			"portuguese": "continue"
+			"Rank": "97",
+			"spanish": "quieres",
+			"english": "you want"
 		},
 		{
-			"english": "lost",
-			"number": "789",
-			"portuguese": "perdeu"
+			"Rank": "98",
+			"spanish": "mucho",
+			"english": "a lot"
 		},
 		{
-			"english": "will",
-			"number": "790",
-			"portuguese": "farei"
+			"Rank": "99",
+			"spanish": "entonces",
+			"english": "so"
 		},
 		{
-			"english": "from this",
-			"number": "791",
-			"portuguese": "disto"
+			"Rank": "100",
+			"spanish": "estaba",
+			"english": "I was"
 		},
 		{
-			"english": "cold",
-			"number": "792",
-			"portuguese": "frio"
+			"Rank": "101",
+			"spanish": "tiempo",
+			"english": "weather"
 		},
 		{
-			"english": "dream",
-			"number": "793",
-			"portuguese": "sonho"
+			"Rank": "102",
+			"spanish": "mí",
+			"english": "my"
 		},
 		{
-			"english": "signal",
-			"number": "794",
-			"portuguese": "sinal"
+			"Rank": "103",
+			"spanish": "esa",
+			"english": "that"
 		},
 		{
-			"english": "girlfriend",
-			"number": "795",
-			"portuguese": "amiga"
+			"Rank": "104",
+			"spanish": "mejor",
+			"english": "best"
 		},
 		{
-			"english": "continues",
-			"number": "796",
-			"portuguese": "continua"
+			"Rank": "105",
+			"spanish": "hombre",
+			"english": "man"
 		},
 		{
-			"english": "valley",
-			"number": "797",
-			"portuguese": "vale"
+			"Rank": "106",
+			"spanish": "hace",
+			"english": "does"
 		},
 		{
-			"english": "david",
-			"number": "798",
-			"portuguese": "david"
+			"Rank": "107",
+			"spanish": "va",
+			"english": "goes"
 		},
 		{
-			"english": "countenance",
-			"number": "799",
-			"portuguese": "rosto"
+			"Rank": "108",
+			"spanish": "dios",
+			"english": "God"
 		},
 		{
-			"english": "with you",
-			"number": "800",
-			"portuguese": "contigo"
+			"Rank": "109",
+			"spanish": "también",
+			"english": "as well"
 		},
 		{
-			"english": "working",
-			"number": "801",
-			"portuguese": "trabalhando"
+			"Rank": "110",
+			"spanish": "has",
+			"english": "you"
 		},
 		{
-			"english": "plane",
-			"number": "802",
-			"portuguese": "aviAo"
+			"Rank": "111",
+			"spanish": "vida",
+			"english": "lifetime"
 		},
 		{
-			"english": "returned",
-			"number": "803",
-			"portuguese": "voltou"
+			"Rank": "112",
+			"spanish": "sin",
+			"english": "without"
 		},
 		{
-			"english": "law",
-			"number": "804",
-			"portuguese": "lei"
+			"Rank": "113",
+			"spanish": "están",
+			"english": "is it so"
 		},
 		{
-			"english": "boat",
-			"number": "805",
-			"portuguese": "barco"
+			"Rank": "114",
+			"spanish": "ver",
+			"english": "see"
 		},
 		{
-			"english": "priest",
-			"number": "806",
-			"portuguese": "padre"
+			"Rank": "115",
+			"spanish": "sr",
+			"english": "Mr"
 		},
 		{
-			"english": "employment",
-			"number": "807",
-			"portuguese": "emprego"
+			"Rank": "116",
+			"spanish": "siempre",
+			"english": "always"
 		},
 		{
-			"english": "bad",
-			"number": "808",
-			"portuguese": "mau"
+			"Rank": "117",
+			"spanish": "oh",
+			"english": "oh"
 		},
 		{
-			"english": "seek",
-			"number": "809",
-			"portuguese": "buscar"
+			"Rank": "118",
+			"spanish": "hasta",
+			"english": "until"
 		},
 		{
-			"english": "george",
-			"number": "810",
-			"portuguese": "george"
+			"Rank": "119",
+			"spanish": "ti",
+			"english": "you"
 		},
 		{
-			"english": "made",
-			"number": "811",
-			"portuguese": "fizeram"
+			"Rank": "120",
+			"spanish": "ahí",
+			"english": "there"
 		},
 		{
-			"english": "lieutenant",
-			"number": "812",
-			"portuguese": "tenente"
+			"Rank": "121",
+			"spanish": "siento",
+			"english": "I feel"
 		},
 		{
-			"english": "I believe",
-			"number": "813",
-			"portuguese": "creio"
+			"Rank": "122",
+			"spanish": "puedes",
+			"english": "can"
 		},
 		{
-			"english": "said",
-			"number": "814",
-			"portuguese": "disseram"
+			"Rank": "123",
+			"spanish": "decir",
+			"english": "say"
 		},
 		{
-			"english": "only",
-			"number": "815",
-			"portuguese": "somente"
+			"Rank": "124",
+			"spanish": "ni",
+			"english": "neither"
 		},
 		{
-			"english": "eye",
-			"number": "816",
-			"portuguese": "olho"
+			"Rank": "125",
+			"spanish": "sobre",
+			"english": "on"
 		},
 		{
-			"english": "am",
-			"number": "817",
-			"portuguese": "estarei"
+			"Rank": "126",
+			"spanish": "años",
+			"english": "years"
 		},
 		{
-			"english": "simply",
-			"number": "818",
-			"portuguese": "simplesmente"
+			"Rank": "127",
+			"spanish": "tenemos",
+			"english": "we have"
 		},
 		{
-			"english": "called",
-			"number": "819",
-			"portuguese": "chamado"
+			"Rank": "128",
+			"spanish": "uno",
+			"english": "one"
 		},
 		{
-			"english": "old woman",
-			"number": "820",
-			"portuguese": "velha"
+			"Rank": "129",
+			"spanish": "día",
+			"english": "day"
 		},
 		{
-			"english": "how many",
-			"number": "821",
-			"portuguese": "quantos"
+			"Rank": "130",
+			"spanish": "noche",
+			"english": "night"
 		},
 		{
-			"english": "bring",
-			"number": "822",
-			"portuguese": "trazer"
+			"Rank": "131",
+			"spanish": "cosas",
+			"english": "things"
 		},
 		{
-			"english": "hate",
-			"number": "823",
-			"portuguese": "odeio"
+			"Rank": "132",
+			"spanish": "alguien",
+			"english": "someone"
 		},
 		{
-			"english": "best",
-			"number": "824",
-			"portuguese": "melhores"
+			"Rank": "133",
+			"spanish": "antes",
+			"english": "before"
 		},
 		{
-			"english": "Ms.",
-			"number": "825",
-			"portuguese": "senhorita"
+			"Rank": "134",
+			"spanish": "mis",
+			"english": "my"
 		},
 		{
-			"english": "voice",
-			"number": "826",
-			"portuguese": "voz"
+			"Rank": "135",
+			"spanish": "ir",
+			"english": "go"
 		},
 		{
-			"english": "clothing",
-			"number": "827",
-			"portuguese": "roupa"
+			"Rank": "136",
+			"spanish": "poco",
+			"english": "little bit"
 		},
 		{
-			"english": "question",
-			"number": "828",
-			"portuguese": "questAo"
+			"Rank": "137",
+			"spanish": "otra",
+			"english": "other"
 		},
 		{
-			"english": "charlie",
-			"number": "829",
-			"portuguese": "charlie"
+			"Rank": "138",
+			"spanish": "quiere",
+			"english": "wants"
 		},
 		{
-			"english": "will",
-			"number": "830",
-			"portuguese": "ficarA"
+			"Rank": "139",
+			"spanish": "solo",
+			"english": "alone"
 		},
 		{
-			"english": "service",
-			"number": "831",
-			"portuguese": "serviAo"
+			"Rank": "140",
+			"spanish": "nadie",
+			"english": "no one"
 		},
 		{
-			"english": "poor",
-			"number": "832",
-			"portuguese": "pobre"
+			"Rank": "141",
+			"spanish": "nosotros",
+			"english": "US"
 		},
 		{
-			"english": "company",
-			"number": "833",
-			"portuguese": "companhia"
+			"Rank": "142",
+			"spanish": "padre",
+			"english": "father"
 		},
 		{
-			"english": "got it",
-			"number": "834",
-			"portuguese": "consegui"
+			"Rank": "143",
+			"spanish": "gente",
+			"english": "people"
 		},
 		{
-			"english": "colonel",
-			"number": "835",
-			"portuguese": "coronel"
+			"Rank": "144",
+			"spanish": "parece",
+			"english": "looks like"
 		},
 		{
-			"english": "by",
-			"number": "836",
-			"portuguese": "pelas"
+			"Rank": "145",
+			"spanish": "dinero",
+			"english": "money"
 		},
 		{
-			"english": "found",
-			"number": "837",
-			"portuguese": "encontrei"
+			"Rank": "146",
+			"spanish": "estar",
+			"english": "to be"
 		},
 		{
-			"english": "uh",
-			"number": "838",
-			"portuguese": "uh"
+			"Rank": "147",
+			"spanish": "hecho",
+			"english": "fact"
 		},
 		{
-			"english": "left",
-			"number": "839",
-			"portuguese": "esquerda"
+			"Rank": "148",
+			"spanish": "les",
+			"english": "them"
 		},
 		{
-			"english": "you",
-			"number": "840",
-			"portuguese": "ti"
+			"Rank": "149",
+			"spanish": "mismo",
+			"english": "same"
 		},
 		{
-			"english": "sound",
-			"number": "841",
-			"portuguese": "tocar"
+			"Rank": "150",
+			"spanish": "sea",
+			"english": "be"
 		},
 		{
-			"english": "hey",
-			"number": "842",
-			"portuguese": "hey"
+			"Rank": "151",
+			"spanish": "estamos",
+			"english": "we're"
 		},
 		{
-			"english": "horse",
-			"number": "843",
-			"portuguese": "cavalo"
+			"Rank": "152",
+			"spanish": "mira",
+			"english": "look"
 		},
 		{
-			"english": "learned",
-			"number": "844",
-			"portuguese": "soube"
+			"Rank": "153",
+			"spanish": "pasa",
+			"english": "pass"
 		},
 		{
-			"english": "system",
-			"number": "845",
-			"portuguese": "sistema"
+			"Rank": "154",
+			"spanish": "trabajo",
+			"english": "work"
 		},
 		{
-			"english": "month",
-			"number": "846",
-			"portuguese": "mAas"
+			"Rank": "155",
+			"spanish": "dijo",
+			"english": "He said"
 		},
 		{
-			"english": "would",
-			"number": "847",
-			"portuguese": "estaria"
+			"Rank": "156",
+			"spanish": "ellos",
+			"english": "they"
 		},
 		{
-			"english": "/ /",
-			"number": "848",
-			"portuguese": "//"
+			"Rank": "157",
+			"spanish": "vas",
+			"english": "you go"
 		},
 		{
-			"english": "arrested",
-			"number": "849",
-			"portuguese": "preso"
+			"Rank": "158",
+			"spanish": "claro",
+			"english": "Clear"
 		},
 		{
-			"english": "government",
-			"number": "850",
-			"portuguese": "governo"
+			"Rank": "159",
+			"spanish": "mañana",
+			"english": "morning"
 		},
 		{
-			"english": "right",
-			"number": "851",
-			"portuguese": "direita"
+			"Rank": "160",
+			"spanish": "han",
+			"english": "they have"
 		},
 		{
-			"english": "choice",
-			"number": "852",
-			"portuguese": "escolha"
+			"Rank": "161",
+			"spanish": "otro",
+			"english": "other"
 		},
 		{
-			"english": "michael",
-			"number": "853",
-			"portuguese": "michael"
+			"Rank": "162",
+			"spanish": "después",
+			"english": "after"
 		},
 		{
-			"english": "asked",
-			"number": "854",
-			"portuguese": "pediu"
+			"Rank": "163",
+			"spanish": "desde",
+			"english": "since"
 		},
 		{
-			"english": "bank",
-			"number": "855",
-			"portuguese": "banco"
+			"Rank": "164",
+			"spanish": "mundo",
+			"english": "world"
 		},
 		{
-			"english": "have",
-			"number": "856",
-			"portuguese": "tiver"
+			"Rank": "165",
+			"spanish": "hablar",
+			"english": "talk"
 		},
 		{
-			"english": "have",
-			"number": "857",
-			"portuguese": "tens"
+			"Rank": "166",
+			"spanish": "tal",
+			"english": "such"
 		},
 		{
-			"english": "seven",
-			"number": "858",
-			"portuguese": "sete"
+			"Rank": "167",
+			"spanish": "había",
+			"english": "there was"
 		},
 		{
-			"english": "gold",
-			"number": "859",
-			"portuguese": "ouro"
+			"Rank": "168",
+			"spanish": "sabe",
+			"english": "knows"
 		},
 		{
-			"english": "train",
-			"number": "860",
-			"portuguese": "trem"
+			"Rank": "169",
+			"spanish": "acuerdo",
+			"english": "agreement"
 		},
 		{
-			"english": "master",
-			"number": "861",
-			"portuguese": "mestre"
+			"Rank": "170",
+			"spanish": "momento",
+			"english": "moment"
 		},
 		{
-			"english": "read",
-			"number": "862",
-			"portuguese": "ler"
+			"Rank": "171",
+			"spanish": "donde",
+			"english": "where"
 		},
 		{
-			"english": "completely",
-			"number": "863",
-			"portuguese": "completamente"
+			"Rank": "172",
+			"spanish": "fuera",
+			"english": "outside"
 		},
 		{
-			"english": "open",
-			"number": "864",
-			"portuguese": "abrir"
+			"Rank": "173",
+			"spanish": "hijo",
+			"english": "son"
 		},
 		{
-			"english": "fight",
-			"number": "865",
-			"portuguese": "lutar"
+			"Rank": "174",
+			"spanish": "podría",
+			"english": "might"
 		},
 		{
-			"english": "accident",
-			"number": "866",
-			"portuguese": "acidente"
+			"Rank": "175",
+			"spanish": "seguro",
+			"english": "insurance"
 		},
 		{
-			"english": "road",
-			"number": "867",
-			"portuguese": "estrada"
+			"Rank": "176",
+			"spanish": "mujer",
+			"english": "woman"
 		},
 		{
-			"english": "normal",
-			"number": "868",
-			"portuguese": "normal"
+			"Rank": "177",
+			"spanish": "amigo",
+			"english": "friend"
 		},
 		{
-			"english": "soul",
-			"number": "869",
-			"portuguese": "alma"
+			"Rank": "178",
+			"spanish": "días",
+			"english": "days"
 		},
 		{
-			"english": "reply",
-			"number": "870",
-			"portuguese": "resposta"
+			"Rank": "179",
+			"spanish": "madre",
+			"english": "mother"
 		},
 		{
-			"english": "caught",
-			"number": "871",
-			"portuguese": "peguei"
+			"Rank": "180",
+			"spanish": "allí",
+			"english": "there"
 		},
 		{
-			"english": "TV",
-			"number": "872",
-			"portuguese": "tv"
+			"Rank": "181",
+			"spanish": "cosa",
+			"english": "thing"
 		},
 		{
-			"english": "subject",
-			"number": "873",
-			"portuguese": "assunto"
+			"Rank": "182",
+			"spanish": "tus",
+			"english": "your"
 		},
 		{
-			"english": "certainly",
-			"number": "874",
-			"portuguese": "certamente"
+			"Rank": "183",
+			"spanish": "lugar",
+			"english": "place"
 		},
 		{
-			"english": "will",
-			"number": "875",
-			"portuguese": "farA"
+			"Rank": "184",
+			"spanish": "dice",
+			"english": "He says"
 		},
 		{
-			"english": "birthday",
-			"number": "876",
-			"portuguese": "aniversArio"
+			"Rank": "185",
+			"spanish": "gusta",
+			"english": "like"
 		},
 		{
-			"english": "sergeant",
-			"number": "877",
-			"portuguese": "sargento"
+			"Rank": "186",
+			"spanish": "será",
+			"english": "be"
 		},
 		{
-			"english": "leads",
-			"number": "878",
-			"portuguese": "leva"
+			"Rank": "187",
+			"spanish": "gran",
+			"english": "great"
 		},
 		{
-			"english": "photo",
-			"number": "879",
-			"portuguese": "foto"
+			"Rank": "188",
+			"spanish": "mierda",
+			"english": "shit"
 		},
 		{
-			"english": "background",
-			"number": "880",
-			"portuguese": "fundo"
+			"Rank": "189",
+			"spanish": "tenía",
+			"english": "had"
 		},
 		{
-			"english": "huh",
-			"number": "881",
-			"portuguese": "hein"
+			"Rank": "190",
+			"spanish": "mamá",
+			"english": "mom"
 		},
 		{
-			"english": "attack",
-			"number": "882",
-			"portuguese": "ataque"
+			"Rank": "191",
+			"spanish": "papá",
+			"english": "dad"
 		},
 		{
-			"english": "cop",
-			"number": "883",
-			"portuguese": "policial"
+			"Rank": "192",
+			"spanish": "espera",
+			"english": "wait"
 		},
 		{
-			"english": "help",
-			"number": "884",
-			"portuguese": "ajude"
+			"Rank": "193",
+			"spanish": "hoy",
+			"english": "today"
 		},
 		{
-			"english": "good",
-			"number": "885",
-			"portuguese": "bons"
+			"Rank": "194",
+			"spanish": "tener",
+			"english": "to have"
 		},
 		{
-			"english": "could",
-			"number": "886",
-			"portuguese": "pudesse"
+			"Rank": "195",
+			"spanish": "ven",
+			"english": "come"
 		},
 		{
-			"english": "interest",
-			"number": "887",
-			"portuguese": "juro"
+			"Rank": "196",
+			"spanish": "buena",
+			"english": "good"
 		},
 		{
-			"english": "affairs",
-			"number": "888",
-			"portuguese": "negA3cios"
+			"Rank": "197",
+			"spanish": "estado",
+			"english": "state"
 		},
 		{
-			"english": "be",
-			"number": "889",
-			"portuguese": "haver"
+			"Rank": "198",
+			"spanish": "nuevo",
+			"english": "new"
 		},
 		{
-			"english": "river",
-			"number": "890",
-			"portuguese": "rio"
+			"Rank": "199",
+			"spanish": "luego",
+			"english": "then"
 		},
 		{
-			"english": "wonderful",
-			"number": "891",
-			"portuguese": "maravilhoso"
+			"Rank": "200",
+			"spanish": "podemos",
+			"english": "we can"
 		},
 		{
-			"english": "surprise",
-			"number": "892",
-			"portuguese": "surpresa"
+			"Rank": "201",
+			"spanish": "tres",
+			"english": "three"
 		},
 		{
-			"english": "view",
-			"number": "893",
-			"portuguese": "vista"
+			"Rank": "202",
+			"spanish": "dije",
+			"english": "said"
 		},
 		{
-			"english": "dead",
-			"number": "894",
-			"portuguese": "morta"
+			"Rank": "203",
+			"spanish": "nuestro",
+			"english": "our"
 		},
 		{
-			"english": "write",
-			"number": "895",
-			"portuguese": "escrever"
+			"Rank": "204",
+			"spanish": "sido",
+			"english": "been"
 		},
 		{
-			"english": "finish",
-			"number": "896",
-			"portuguese": "terminar"
+			"Rank": "205",
+			"spanish": "menos",
+			"english": "less"
 		},
 		{
-			"english": "questions",
-			"number": "897",
-			"portuguese": "perguntas"
+			"Rank": "206",
+			"spanish": "debe",
+			"english": "should"
 		},
 		{
-			"english": "half",
-			"number": "898",
-			"portuguese": "metade"
+			"Rank": "207",
+			"spanish": "tipo",
+			"english": "kind"
 		},
 		{
-			"english": "killer",
-			"number": "899",
-			"portuguese": "assassino"
+			"Rank": "208",
+			"spanish": "buen",
+			"english": "good"
 		},
 		{
-			"english": "works",
-			"number": "900",
-			"portuguese": "trabalha"
+			"Rank": "209",
+			"spanish": "conmigo",
+			"english": "with me"
 		},
 		{
-			"english": "listening",
-			"number": "901",
-			"portuguese": "ouvindo"
+			"Rank": "210",
+			"spanish": "mal",
+			"english": "evil"
 		},
 		{
-			"english": "News",
-			"number": "902",
-			"portuguese": "notAcias"
+			"Rank": "211",
+			"spanish": "todas",
+			"english": "all"
 		},
 		{
-			"english": "led",
-			"number": "903",
-			"portuguese": "levou"
+			"Rank": "212",
+			"spanish": "nombre",
+			"english": "first name"
 		},
 		{
-			"english": "fall",
-			"number": "904",
-			"portuguese": "cair"
+			"Rank": "213",
+			"spanish": "haciendo",
+			"english": "doing"
 		},
 		{
-			"english": "local",
-			"number": "905",
-			"portuguese": "local"
+			"Rank": "214",
+			"spanish": "crees",
+			"english": "you think"
 		},
 		{
-			"english": "feet",
-			"number": "906",
-			"portuguese": "pAs"
+			"Rank": "215",
+			"spanish": "toda",
+			"english": "all"
 		},
 		{
-			"english": "idea",
-			"number": "907",
-			"portuguese": "ideia"
+			"Rank": "216",
+			"spanish": "amor",
+			"english": "love"
 		},
 		{
-			"english": "hard",
-			"number": "908",
-			"portuguese": "duro"
+			"Rank": "217",
+			"spanish": "mío",
+			"english": "my own"
 		},
 		{
-			"english": "dog",
-			"number": "909",
-			"portuguese": "cachorro"
+			"Rank": "218",
+			"spanish": "visto",
+			"english": "viewed"
 		},
 		{
-			"english": "through",
-			"number": "910",
-			"portuguese": "atravAs"
+			"Rank": "219",
+			"spanish": "estas",
+			"english": "these"
 		},
 		{
-			"english": "love",
-			"number": "911",
-			"portuguese": "adoro"
+			"Rank": "220",
+			"spanish": "quería",
+			"english": "wanted to"
 		},
 		{
-			"english": "getting",
-			"number": "912",
-			"portuguese": "ficando"
+			"Rank": "221",
+			"spanish": "eh",
+			"english": "Hey"
 		},
 		{
-			"english": "were",
-			"number": "913",
-			"portuguese": "fomos"
+			"Rank": "222",
+			"spanish": "tarde",
+			"english": "late"
 		},
 		{
-			"english": "immediately",
-			"number": "914",
-			"portuguese": "imediatamente"
+			"Rank": "223",
+			"spanish": "importa",
+			"english": "matter"
 		},
 		{
-			"english": "save",
-			"number": "915",
-			"portuguese": "salvar"
+			"Rank": "224",
+			"spanish": "parte",
+			"english": "part"
 		},
 		{
-			"english": "beautiful",
-			"number": "916",
-			"portuguese": "bela"
+			"Rank": "225",
+			"spanish": "aún",
+			"english": "yet"
 		},
 		{
-			"english": "viva",
-			"number": "917",
-			"portuguese": "viva"
+			"Rank": "226",
+			"spanish": "nuestra",
+			"english": "our"
 		},
 		{
-			"english": "agent",
-			"number": "918",
-			"portuguese": "agente"
+			"Rank": "227",
+			"spanish": "tienen",
+			"english": "they have"
 		},
 		{
-			"english": "thanks",
-			"number": "919",
-			"portuguese": "graAas"
+			"Rank": "228",
+			"spanish": "tanto",
+			"english": "so much"
 		},
 		{
-			"english": "shop",
-			"number": "920",
-			"portuguese": "loja"
+			"Rank": "229",
+			"spanish": "cada",
+			"english": "each"
 		},
 		{
-			"english": "fully",
-			"number": "921",
-			"portuguese": "totalmente"
+			"Rank": "230",
+			"spanish": "hora",
+			"english": "hour"
 		},
 		{
-			"english": "box",
-			"number": "922",
-			"portuguese": "caixa"
+			"Rank": "231",
+			"spanish": "veces",
+			"english": "times"
 		},
 		{
-			"english": "paper",
-			"number": "923",
-			"portuguese": "papel"
+			"Rank": "232",
+			"spanish": "necesito",
+			"english": "I need"
 		},
 		{
-			"english": "explain",
-			"number": "924",
-			"portuguese": "explicar"
+			"Rank": "233",
+			"spanish": "contigo",
+			"english": "with you"
 		},
 		{
-			"english": "fight",
-			"number": "925",
-			"portuguese": "luta"
+			"Rank": "234",
+			"spanish": "ve",
+			"english": "go"
 		},
 		{
-			"english": "got it",
-			"number": "926",
-			"portuguese": "entendi"
+			"Rank": "235",
+			"spanish": "haber",
+			"english": "to have"
 		},
 		{
-			"english": "need",
-			"number": "927",
-			"portuguese": "precisam"
+			"Rank": "236",
+			"spanish": "buenas",
+			"english": "good"
 		},
 		{
-			"english": "look",
-			"number": "928",
-			"portuguese": "olhada"
+			"Rank": "237",
+			"spanish": "dicho",
+			"english": "saying"
 		},
 		{
-			"english": "ball",
-			"number": "929",
-			"portuguese": "bola"
+			"Rank": "238",
+			"spanish": "quien",
+			"english": "who"
 		},
 		{
-			"english": "terrible",
-			"number": "930",
-			"portuguese": "terrAvel"
+			"Rank": "239",
+			"spanish": "hacerlo",
+			"english": "do it"
 		},
 		{
-			"english": "second",
-			"number": "931",
-			"portuguese": "segunda"
+			"Rank": "240",
+			"spanish": "demasiado",
+			"english": "too"
 		},
 		{
-			"english": "search",
-			"number": "932",
-			"portuguese": "procurar"
+			"Rank": "241",
+			"spanish": "oye",
+			"english": "hears"
 		},
 		{
-			"english": "lost",
-			"number": "933",
-			"portuguese": "perdi"
+			"Rank": "242",
+			"spanish": "ah",
+			"english": "ah"
 		},
 		{
-			"english": "follow",
-			"number": "934",
-			"portuguese": "seguir"
+			"Rank": "243",
+			"spanish": "haces",
+			"english": "you do"
 		},
 		{
-			"english": "show",
-			"number": "935",
-			"portuguese": "show"
+			"Rank": "244",
+			"spanish": "hombres",
+			"english": "mens"
 		},
 		{
-			"english": "TRUE",
-			"number": "936",
-			"portuguese": "verdadeiro"
+			"Rank": "245",
+			"spanish": "saber",
+			"english": "to know"
 		},
 		{
-			"english": "sad",
-			"number": "937",
-			"portuguese": "triste"
+			"Rank": "246",
+			"spanish": "entre",
+			"english": "between"
 		},
 		{
-			"english": "full",
-			"number": "938",
-			"portuguese": "cheio"
+			"Rank": "247",
+			"spanish": "adiós",
+			"english": "bye"
 		},
 		{
-			"english": "gave",
-			"number": "939",
-			"portuguese": "dei"
+			"Rank": "248",
+			"spanish": "problema",
+			"english": "problem"
 		},
 		{
-			"english": "impossible",
-			"number": "940",
-			"portuguese": "impossAvel"
+			"Rank": "249",
+			"spanish": "unos",
+			"english": "some"
 		},
 		{
-			"english": "told",
-			"number": "941",
-			"portuguese": "contou"
+			"Rank": "250",
+			"spanish": "vaya",
+			"english": "go"
 		},
 		{
-			"english": "piece",
-			"number": "942",
-			"portuguese": "peAa"
+			"Rank": "251",
+			"spanish": "hemos",
+			"english": "we have"
 		},
 		{
-			"english": "found",
-			"number": "943",
-			"portuguese": "encontrou"
+			"Rank": "252",
+			"spanish": "cierto",
+			"english": "true"
 		},
 		{
-			"english": "call",
-			"number": "944",
-			"portuguese": "chame"
+			"Rank": "253",
+			"spanish": "debo",
+			"english": "I must"
 		},
 		{
-			"english": "key",
-			"number": "945",
-			"portuguese": "chave"
+			"Rank": "254",
+			"spanish": "razón",
+			"english": "reason"
 		},
 		{
-			"english": "enough",
-			"number": "946",
-			"portuguese": "basta"
+			"Rank": "255",
+			"spanish": "alguna",
+			"english": "any"
 		},
 		{
-			"english": "come",
-			"number": "947",
-			"portuguese": "venham"
+			"Rank": "256",
+			"spanish": "esos",
+			"english": "those"
 		},
 		{
-			"english": "fair",
-			"number": "948",
-			"portuguese": "feira"
+			"Rank": "257",
+			"spanish": "pues",
+			"english": "well"
 		},
 		{
-			"english": "lawyer",
-			"number": "949",
-			"portuguese": "advogado"
+			"Rank": "258",
+			"spanish": "veo",
+			"english": "I see"
 		},
 		{
-			"english": "bathroom",
-			"number": "950",
-			"portuguese": "banheiro"
+			"Rank": "259",
+			"spanish": "idea",
+			"english": "idea"
 		},
 		{
-			"english": "horrible",
-			"number": "951",
-			"portuguese": "horrAvel"
+			"Rank": "260",
+			"spanish": "chica",
+			"english": "girl"
 		},
 		{
-			"english": "seemed",
-			"number": "952",
-			"portuguese": "parecia"
+			"Rank": "261",
+			"spanish": "realmente",
+			"english": "Really"
 		},
 		{
-			"english": "we",
-			"number": "953",
-			"portuguese": "teremos"
+			"Rank": "262",
+			"spanish": "policía",
+			"english": "police"
 		},
 		{
-			"english": "garment",
-			"number": "954",
-			"portuguese": "roupas"
+			"Rank": "263",
+			"spanish": "hizo",
+			"english": "did"
 		},
 		{
-			"english": "meat",
-			"number": "955",
-			"portuguese": "carne"
+			"Rank": "264",
+			"spanish": "estos",
+			"english": "these"
 		},
 		{
-			"english": "message",
-			"number": "956",
-			"portuguese": "mensagem"
+			"Rank": "265",
+			"spanish": "amigos",
+			"english": "friends"
 		},
 		{
-			"english": "church",
-			"number": "957",
-			"portuguese": "igreja"
+			"Rank": "266",
+			"spanish": "ustedes",
+			"english": "you"
 		},
 		{
-			"english": "guard",
-			"number": "958",
-			"portuguese": "guarda"
+			"Rank": "267",
+			"spanish": "quizá",
+			"english": "maybe"
 		},
 		{
-			"english": "back",
-			"number": "959",
-			"portuguese": "costas"
+			"Rank": "268",
+			"spanish": "serio",
+			"english": "serious"
 		},
 		{
-			"english": "white",
-			"number": "960",
-			"portuguese": "branco"
+			"Rank": "269",
+			"spanish": "cabeza",
+			"english": "head"
 		},
 		{
-			"english": "instructions",
-			"number": "961",
-			"portuguese": "ordens"
+			"Rank": "270",
+			"spanish": "hermano",
+			"english": "brother"
 		},
 		{
-			"english": "south",
-			"number": "962",
-			"portuguese": "sul"
+			"Rank": "271",
+			"spanish": "digo",
+			"english": "I say"
 		},
 		{
-			"english": "dance",
-			"number": "963",
-			"portuguese": "danAar"
+			"Rank": "272",
+			"spanish": "van",
+			"english": "go"
 		},
 		{
-			"english": "drink",
-			"number": "964",
-			"portuguese": "bebida"
+			"Rank": "273",
+			"spanish": "pasado",
+			"english": "past"
 		},
 		{
-			"english": "would",
-			"number": "965",
-			"portuguese": "diria"
+			"Rank": "274",
+			"spanish": "salir",
+			"english": "get out"
 		},
 		{
-			"english": "remember",
-			"number": "966",
-			"portuguese": "lembrar"
+			"Rank": "275",
+			"spanish": "cuenta",
+			"english": "account"
 		},
 		{
-			"english": "just",
-			"number": "967",
-			"portuguese": "acabei"
+			"Rank": "276",
+			"spanish": "familia",
+			"english": "family"
 		},
 		{
-			"english": "promise",
-			"number": "968",
-			"portuguese": "prometo"
+			"Rank": "277",
+			"spanish": "cariño",
+			"english": "sweetie"
 		},
 		{
-			"english": "interesting",
-			"number": "969",
-			"portuguese": "interessante"
+			"Rank": "278",
+			"spanish": "vale",
+			"english": "okay"
 		},
 		{
-			"english": "bet",
-			"number": "970",
-			"portuguese": "aposto"
+			"Rank": "279",
+			"spanish": "algún",
+			"english": "some"
 		},
 		{
-			"english": "phallus",
-			"number": "971",
-			"portuguese": "falo"
+			"Rank": "280",
+			"spanish": "muchas",
+			"english": "many"
 		},
 		{
-			"english": "mount",
-			"number": "972",
-			"portuguese": "monte"
+			"Rank": "281",
+			"spanish": "señora",
+			"english": "Mrs"
 		},
 		{
-			"english": "official",
-			"number": "973",
-			"portuguese": "oficial"
+			"Rank": "282",
+			"spanish": "somos",
+			"english": "we are"
 		},
 		{
-			"english": "are",
-			"number": "974",
-			"portuguese": "As"
+			"Rank": "283",
+			"spanish": "pueden",
+			"english": "may"
 		},
 		{
-			"english": "north",
-			"number": "975",
-			"portuguese": "norte"
+			"Rank": "284",
+			"spanish": "noches",
+			"english": "nights"
 		},
 		{
-			"english": "will",
-			"number": "976",
-			"portuguese": "serAo"
+			"Rank": "285",
+			"spanish": "muerto",
+			"english": "dead"
 		},
 		{
-			"english": "congratulations",
-			"number": "977",
-			"portuguese": "parabAns"
+			"Rank": "286",
+			"spanish": "ud",
+			"english": "You"
 		},
 		{
-			"english": "m",
-			"number": "978",
-			"portuguese": "m"
+			"Rank": "287",
+			"spanish": "todavía",
+			"english": "still"
 		},
 		{
-			"english": "had",
-			"number": "979",
-			"portuguese": "tinham"
+			"Rank": "288",
+			"spanish": "rápido",
+			"english": "Quick"
 		},
 		{
-			"english": "conversation",
-			"number": "980",
-			"portuguese": "conversa"
+			"Rank": "289",
+			"spanish": "viejo",
+			"english": "old"
 		},
 		{
-			"english": "photos",
-			"number": "981",
-			"portuguese": "fotos"
+			"Rank": "290",
+			"spanish": "lado",
+			"english": "side"
 		},
 		{
-			"english": "ihe",
-			"number": "982",
-			"portuguese": "ihe"
+			"Rank": "291",
+			"spanish": "debería",
+			"english": "should"
 		},
 		{
-			"english": "error",
-			"number": "983",
-			"portuguese": "erro"
+			"Rank": "292",
+			"spanish": "ves",
+			"english": "you see"
 		},
 		{
-			"english": "space",
-			"number": "984",
-			"portuguese": "espaAo"
+			"Rank": "293",
+			"spanish": "sabía",
+			"english": "I knew"
 		},
 		{
-			"english": "mike",
-			"number": "985",
-			"portuguese": "mike"
+			"Rank": "294",
+			"spanish": "suerte",
+			"english": "luck"
 		},
 		{
-			"english": "under",
-			"number": "986",
-			"portuguese": "embaixo"
+			"Rank": "295",
+			"spanish": "cuidado",
+			"english": "watch out"
 		},
 		{
-			"english": "mission",
-			"number": "987",
-			"portuguese": "missAo"
+			"Rank": "296",
+			"spanish": "buenos",
+			"english": "good ones"
 		},
 		{
-			"english": "did",
-			"number": "988",
-			"portuguese": "fizemos"
+			"Rank": "297",
+			"spanish": "sería",
+			"english": "would"
 		},
 		{
-			"english": "relief",
-			"number": "989",
-			"portuguese": "socorro"
+			"Rank": "298",
+			"spanish": "da",
+			"english": "gives"
 		},
 		{
-			"english": "back",
-			"number": "990",
-			"portuguese": "volto"
+			"Rank": "299",
+			"spanish": "mientras",
+			"english": "While"
 		},
 		{
-			"english": "health",
-			"number": "991",
-			"portuguese": "saAode"
+			"Rank": "300",
+			"spanish": "miedo",
+			"english": "fear"
 		},
 		{
-			"english": "found",
-			"number": "992",
-			"portuguese": "achou"
+			"Rank": "301",
+			"spanish": "primera",
+			"english": "first"
 		},
 		{
-			"english": "apartment",
-			"number": "993",
-			"portuguese": "apartamento"
+			"Rank": "302",
+			"spanish": "contra",
+			"english": "Against"
 		},
 		{
-			"english": "call",
-			"number": "994",
-			"portuguese": "ligue"
+			"Rank": "303",
+			"spanish": "puerta",
+			"english": "door"
 		},
 		{
-			"english": "paul",
-			"number": "995",
-			"portuguese": "paul"
+			"Rank": "304",
+			"spanish": "pronto",
+			"english": "soon"
 		},
 		{
-			"english": "that",
-			"number": "996",
-			"portuguese": "naquela"
+			"Rank": "305",
+			"spanish": "e",
+			"english": "and"
 		},
 		{
-			"english": "boys",
-			"number": "997",
-			"portuguese": "garotos"
+			"Rank": "306",
+			"spanish": "casi",
+			"english": "almost"
 		},
 		{
-			"english": "touch",
-			"number": "998",
-			"portuguese": "toque"
+			"Rank": "307",
+			"spanish": "nueva",
+			"english": "new"
 		},
 		{
-			"english": "together",
-			"number": "999",
-			"portuguese": "junto"
+			"Rank": "308",
+			"spanish": "espero",
+			"english": "I hope"
 		},
 		{
-			"english": "never",
-			"number": "1000",
-			"portuguese": "jamais"
+			"Rank": "309",
+			"spanish": "cualquier",
+			"english": "any"
+		},
+		{
+			"Rank": "310",
+			"spanish": "esas",
+			"english": "those"
+		},
+		{
+			"Rank": "311",
+			"spanish": "agua",
+			"english": "Water"
+		},
+		{
+			"Rank": "312",
+			"spanish": "os",
+			"english": "you"
+		},
+		{
+			"Rank": "313",
+			"spanish": "chico",
+			"english": "boy"
+		},
+		{
+			"Rank": "314",
+			"spanish": "cuánto",
+			"english": "how much"
+		},
+		{
+			"Rank": "315",
+			"spanish": "niños",
+			"english": "children"
+		},
+		{
+			"Rank": "316",
+			"spanish": "venga",
+			"english": "come on"
+		},
+		{
+			"Rank": "317",
+			"spanish": "camino",
+			"english": "path"
+		},
+		{
+			"Rank": "318",
+			"spanish": "primero",
+			"english": "First"
+		},
+		{
+			"Rank": "319",
+			"spanish": "hacia",
+			"english": "toward"
+		},
+		{
+			"Rank": "320",
+			"spanish": "pensé",
+			"english": "I thought"
+		},
+		{
+			"Rank": "321",
+			"spanish": "dentro",
+			"english": "inside"
+		},
+		{
+			"Rank": "322",
+			"spanish": "pasó",
+			"english": "He passed"
+		},
+		{
+			"Rank": "323",
+			"spanish": "debes",
+			"english": "you must"
+		},
+		{
+			"Rank": "324",
+			"spanish": "ciudad",
+			"english": "city"
+		},
+		{
+			"Rank": "325",
+			"spanish": "historia",
+			"english": "history"
+		},
+		{
+			"Rank": "326",
+			"spanish": "año",
+			"english": "year"
+		},
+		{
+			"Rank": "327",
+			"spanish": "viene",
+			"english": "comes"
+		},
+		{
+			"Rank": "328",
+			"spanish": "deja",
+			"english": "leaves"
+		},
+		{
+			"Rank": "329",
+			"spanish": "durante",
+			"english": "during"
+		},
+		{
+			"Rank": "330",
+			"spanish": "forma",
+			"english": "shape"
+		},
+		{
+			"Rank": "331",
+			"spanish": "volver",
+			"english": "return"
+		},
+		{
+			"Rank": "332",
+			"spanish": "feliz",
+			"english": "happy"
+		},
+		{
+			"Rank": "333",
+			"spanish": "ojos",
+			"english": "eyes"
+		},
+		{
+			"Rank": "334",
+			"spanish": "guerra",
+			"english": "war"
+		},
+		{
+			"Rank": "335",
+			"spanish": "caso",
+			"english": "case"
+		},
+		{
+			"Rank": "336",
+			"spanish": "chicos",
+			"english": "Boys"
+		},
+		{
+			"Rank": "337",
+			"spanish": "esposa",
+			"english": "wife"
+		},
+		{
+			"Rank": "338",
+			"spanish": "adelante",
+			"english": "ahead"
+		},
+		{
+			"Rank": "339",
+			"spanish": "cuál",
+			"english": "which"
+		},
+		{
+			"Rank": "340",
+			"spanish": "mano",
+			"english": "hand"
+		},
+		{
+			"Rank": "341",
+			"spanish": "hice",
+			"english": "I did"
+		},
+		{
+			"Rank": "342",
+			"spanish": "vi",
+			"english": "saw"
+		},
+		{
+			"Rank": "343",
+			"spanish": "gustaría",
+			"english": "would like"
+		},
+		{
+			"Rank": "344",
+			"spanish": "muerte",
+			"english": "death"
+		},
+		{
+			"Rank": "345",
+			"spanish": "allá",
+			"english": "there"
+		},
+		{
+			"Rank": "346",
+			"spanish": "mas",
+			"english": "more"
+		},
+		{
+			"Rank": "347",
+			"spanish": "loco",
+			"english": "crazy"
+		},
+		{
+			"Rank": "348",
+			"spanish": "supuesto",
+			"english": "supposed"
+		},
+		{
+			"Rank": "349",
+			"spanish": "toma",
+			"english": "taking"
+		},
+		{
+			"Rank": "350",
+			"spanish": "minutos",
+			"english": "minutes"
+		},
+		{
+			"Rank": "351",
+			"spanish": "haré",
+			"english": "I will do"
+		},
+		{
+			"Rank": "352",
+			"spanish": "entiendo",
+			"english": "I get it"
+		},
+		{
+			"Rank": "353",
+			"spanish": "pasar",
+			"english": "happen"
+		},
+		{
+			"Rank": "354",
+			"spanish": "iba",
+			"english": "I was going"
+		},
+		{
+			"Rank": "355",
+			"spanish": "corazón",
+			"english": "heart"
+		},
+		{
+			"Rank": "356",
+			"spanish": "semana",
+			"english": "week"
+		},
+		{
+			"Rank": "357",
+			"spanish": "jefe",
+			"english": "boss"
+		},
+		{
+			"Rank": "358",
+			"spanish": "venir",
+			"english": "come"
+		},
+		{
+			"Rank": "359",
+			"spanish": "manos",
+			"english": "hands"
+		},
+		{
+			"Rank": "360",
+			"spanish": "ayuda",
+			"english": "help"
+		},
+		{
+			"Rank": "361",
+			"spanish": "problemas",
+			"english": "problems"
+		},
+		{
+			"Rank": "362",
+			"spanish": "juntos",
+			"english": "together"
+		},
+		{
+			"Rank": "363",
+			"spanish": "supongo",
+			"english": "I suppose"
+		},
+		{
+			"Rank": "364",
+			"spanish": "déjame",
+			"english": "let me"
+		},
+		{
+			"Rank": "365",
+			"spanish": "importante",
+			"english": "important"
+		},
+		{
+			"Rank": "366",
+			"spanish": "vete",
+			"english": "go away"
+		},
+		{
+			"Rank": "367",
+			"spanish": "niño",
+			"english": "boy"
+		},
+		{
+			"Rank": "368",
+			"spanish": "arriba",
+			"english": "above"
+		},
+		{
+			"Rank": "369",
+			"spanish": "hija",
+			"english": "daughter"
+		},
+		{
+			"Rank": "370",
+			"spanish": "otros",
+			"english": "others"
+		},
+		{
+			"Rank": "371",
+			"spanish": "sra",
+			"english": "Mrs"
+		},
+		{
+			"Rank": "372",
+			"spanish": "personas",
+			"english": "people"
+		},
+		{
+			"Rank": "373",
+			"spanish": "tierra",
+			"english": "Earth"
+		},
+		{
+			"Rank": "374",
+			"spanish": "manera",
+			"english": "way"
+		},
+		{
+			"Rank": "375",
+			"spanish": "hablando",
+			"english": "speaking"
+		},
+		{
+			"Rank": "376",
+			"spanish": "fin",
+			"english": "end"
+		},
+		{
+			"Rank": "377",
+			"spanish": "mujeres",
+			"english": "women"
+		},
+		{
+			"Rank": "378",
+			"spanish": "cara",
+			"english": "expensive"
+		},
+		{
+			"Rank": "379",
+			"spanish": "grande",
+			"english": "big"
+		},
+		{
+			"Rank": "380",
+			"spanish": "ningún",
+			"english": "any"
+		},
+		{
+			"Rank": "381",
+			"spanish": "nuestros",
+			"english": "our"
+		},
+		{
+			"Rank": "382",
+			"spanish": "cinco",
+			"english": "five"
+		},
+		{
+			"Rank": "383",
+			"spanish": "llama",
+			"english": "call"
+		},
+		{
+			"Rank": "384",
+			"spanish": "hey",
+			"english": "hey"
+		},
+		{
+			"Rank": "385",
+			"spanish": "habla",
+			"english": "speaks"
+		},
+		{
+			"Rank": "386",
+			"spanish": "bajo",
+			"english": "low"
+		},
+		{
+			"Rank": "387",
+			"spanish": "dices",
+			"english": "you say"
+		},
+		{
+			"Rank": "388",
+			"spanish": "poder",
+			"english": "power"
+		},
+		{
+			"Rank": "389",
+			"spanish": "cuándo",
+			"english": "when"
+		},
+		{
+			"Rank": "390",
+			"spanish": "quizás",
+			"english": "maybe"
+		},
+		{
+			"Rank": "391",
+			"spanish": "escucha",
+			"english": "listen out"
+		},
+		{
+			"Rank": "392",
+			"spanish": "persona",
+			"english": "person"
+		},
+		{
+			"Rank": "393",
+			"spanish": "horas",
+			"english": "hours"
+		},
+		{
+			"Rank": "394",
+			"spanish": "tío",
+			"english": "uncle"
+		},
+		{
+			"Rank": "395",
+			"spanish": "aunque",
+			"english": "although"
+		},
+		{
+			"Rank": "396",
+			"spanish": "io",
+			"english": "io"
+		},
+		{
+			"Rank": "397",
+			"spanish": "único",
+			"english": "only"
+		},
+		{
+			"Rank": "398",
+			"spanish": "dijiste",
+			"english": "said"
+		},
+		{
+			"Rank": "399",
+			"spanish": "siquiera",
+			"english": "at least"
+		},
+		{
+			"Rank": "400",
+			"spanish": "quieren",
+			"english": "they want"
+		},
+		{
+			"Rank": "401",
+			"spanish": "ninguna",
+			"english": "any"
+		},
+		{
+			"Rank": "402",
+			"spanish": "cerca",
+			"english": "close"
+		},
+		{
+			"Rank": "403",
+			"spanish": "pequeño",
+			"english": "little"
+		},
+		{
+			"Rank": "404",
+			"spanish": "debemos",
+			"english": "we must"
+		},
+		{
+			"Rank": "405",
+			"spanish": "cree",
+			"english": "cree"
+		},
+		{
+			"Rank": "406",
+			"spanish": "dame",
+			"english": "give to me"
+		},
+		{
+			"Rank": "407",
+			"spanish": "sigue",
+			"english": "follow"
+		},
+		{
+			"Rank": "408",
+			"spanish": "auto",
+			"english": "car"
+		},
+		{
+			"Rank": "409",
+			"spanish": "cuatro",
+			"english": "four"
+		},
+		{
+			"Rank": "410",
+			"spanish": "dejar",
+			"english": "leave"
+		},
+		{
+			"Rank": "411",
+			"spanish": "muchos",
+			"english": "Many"
+		},
+		{
+			"Rank": "412",
+			"spanish": "igual",
+			"english": "same"
+		},
+		{
+			"Rank": "413",
+			"spanish": "hago",
+			"english": "I make"
+		},
+		{
+			"Rank": "414",
+			"spanish": "listo",
+			"english": "ready"
+		},
+		{
+			"Rank": "415",
+			"spanish": "significa",
+			"english": "it means"
+		},
+		{
+			"Rank": "416",
+			"spanish": "capitán",
+			"english": "captain"
+		},
+		{
+			"Rank": "417",
+			"spanish": "clase",
+			"english": "class"
+		},
+		{
+			"Rank": "418",
+			"spanish": "llegar",
+			"english": "arrive"
+		},
+		{
+			"Rank": "419",
+			"spanish": "doctor",
+			"english": "doctor"
+		},
+		{
+			"Rank": "420",
+			"spanish": "suficiente",
+			"english": "enough"
+		},
+		{
+			"Rank": "421",
+			"spanish": "tomar",
+			"english": "drink"
+		},
+		{
+			"Rank": "422",
+			"spanish": "vivir",
+			"english": "live"
+		},
+		{
+			"Rank": "423",
+			"spanish": "joven",
+			"english": "young"
+		},
+		{
+			"Rank": "424",
+			"spanish": "trabajar",
+			"english": "to work"
+		},
+		{
+			"Rank": "425",
+			"spanish": "haya",
+			"english": "beech"
+		},
+		{
+			"Rank": "426",
+			"spanish": "abajo",
+			"english": "down"
+		},
+		{
+			"Rank": "427",
+			"spanish": "hubiera",
+			"english": "had"
+		},
+		{
+			"Rank": "428",
+			"spanish": "primer",
+			"english": "first"
+		},
+		{
+			"Rank": "429",
+			"spanish": "genial",
+			"english": "great"
+		},
+		{
+			"Rank": "430",
+			"spanish": "justo",
+			"english": "fair"
+		},
+		{
+			"Rank": "431",
+			"spanish": "pensar",
+			"english": "think"
+		},
+		{
+			"Rank": "432",
+			"spanish": "misma",
+			"english": "same"
+		},
+		{
+			"Rank": "433",
+			"spanish": "puta",
+			"english": "bitch"
+		},
+		{
+			"Rank": "434",
+			"spanish": "comer",
+			"english": "eat"
+		},
+		{
+			"Rank": "435",
+			"spanish": "necesita",
+			"english": "needs to"
+		},
+		{
+			"Rank": "436",
+			"spanish": "conozco",
+			"english": "I know"
+		},
+		{
+			"Rank": "437",
+			"spanish": "fui",
+			"english": "I was"
+		},
+		{
+			"Rank": "438",
+			"spanish": "algunos",
+			"english": "Some"
+		},
+		{
+			"Rank": "439",
+			"spanish": "entrar",
+			"english": "get in"
+		},
+		{
+			"Rank": "440",
+			"spanish": "fuerte",
+			"english": "strong"
+		},
+		{
+			"Rank": "441",
+			"spanish": "número",
+			"english": "number"
+		},
+		{
+			"Rank": "442",
+			"spanish": "srta",
+			"english": "Ms"
+		},
+		{
+			"Rank": "443",
+			"spanish": "morir",
+			"english": "die"
+		},
+		{
+			"Rank": "444",
+			"spanish": "basta",
+			"english": "Enough"
+		},
+		{
+			"Rank": "445",
+			"spanish": "dar",
+			"english": "give"
+		},
+		{
+			"Rank": "446",
+			"spanish": "bastante",
+			"english": "quite"
+		},
+		{
+			"Rank": "447",
+			"spanish": "amo",
+			"english": "love"
+		},
+		{
+			"Rank": "448",
+			"spanish": "atrás",
+			"english": "behind"
+		},
+		{
+			"Rank": "449",
+			"spanish": "dicen",
+			"english": "they say"
+		},
+		{
+			"Rank": "450",
+			"spanish": "difícil",
+			"english": "difficult"
+		},
+		{
+			"Rank": "451",
+			"spanish": "éste",
+			"english": "East"
+		},
+		{
+			"Rank": "452",
+			"spanish": "pueda",
+			"english": "can"
+		},
+		{
+			"Rank": "453",
+			"spanish": "punto",
+			"english": "point"
+		},
+		{
+			"Rank": "454",
+			"spanish": "vino",
+			"english": "came"
+		},
+		{
+			"Rank": "455",
+			"spanish": "hermana",
+			"english": "sister"
+		},
+		{
+			"Rank": "456",
+			"spanish": "hijos",
+			"english": "children"
+		},
+		{
+			"Rank": "457",
+			"spanish": "unas",
+			"english": "nail"
+		},
+		{
+			"Rank": "458",
+			"spanish": "final",
+			"english": "final"
+		},
+		{
+			"Rank": "459",
+			"spanish": "escuela",
+			"english": "school"
+		},
+		{
+			"Rank": "460",
+			"spanish": "podía",
+			"english": "could"
+		},
+		{
+			"Rank": "461",
+			"spanish": "pueblo",
+			"english": "town"
+		},
+		{
+			"Rank": "462",
+			"spanish": "haga",
+			"english": "make"
+		},
+		{
+			"Rank": "463",
+			"spanish": "sangre",
+			"english": "blood"
+		},
+		{
+			"Rank": "464",
+			"spanish": "meses",
+			"english": "months"
+		},
+		{
+			"Rank": "465",
+			"spanish": "coche",
+			"english": "car"
+		},
+		{
+			"Rank": "466",
+			"spanish": "juego",
+			"english": "game"
+		},
+		{
+			"Rank": "467",
+			"spanish": "encontrar",
+			"english": "find"
+		},
+		{
+			"Rank": "468",
+			"spanish": "realidad",
+			"english": "reality"
+		},
+		{
+			"Rank": "469",
+			"spanish": "cuerpo",
+			"english": "body"
+		},
+		{
+			"Rank": "470",
+			"spanish": "mayor",
+			"english": "higher"
+		},
+		{
+			"Rank": "471",
+			"spanish": "última",
+			"english": "last"
+		},
+		{
+			"Rank": "472",
+			"spanish": "eran",
+			"english": "they were"
+		},
+		{
+			"Rank": "473",
+			"spanish": "queda",
+			"english": "remains"
+		},
+		{
+			"Rank": "474",
+			"spanish": "ok",
+			"english": "okay"
+		},
+		{
+			"Rank": "475",
+			"spanish": "paz",
+			"english": "peace"
+		},
+		{
+			"Rank": "476",
+			"spanish": "dime",
+			"english": "tell me"
+		},
+		{
+			"Rank": "477",
+			"spanish": "vuelta",
+			"english": "return"
+		},
+		{
+			"Rank": "478",
+			"spanish": "hiciste",
+			"english": "did"
+		},
+		{
+			"Rank": "479",
+			"spanish": "tenido",
+			"english": "had"
+		},
+		{
+			"Rank": "480",
+			"spanish": "sola",
+			"english": "alone"
+		},
+		{
+			"Rank": "481",
+			"spanish": "hacen",
+			"english": "make"
+		},
+		{
+			"Rank": "482",
+			"spanish": "ido",
+			"english": "gone"
+		},
+		{
+			"Rank": "483",
+			"spanish": "querida",
+			"english": "Dear"
+		},
+		{
+			"Rank": "484",
+			"spanish": "iré",
+			"english": "I will go"
+		},
+		{
+			"Rank": "485",
+			"spanish": "culpa",
+			"english": "guilt"
+		},
+		{
+			"Rank": "486",
+			"spanish": "malo",
+			"english": "bad"
+		},
+		{
+			"Rank": "487",
+			"spanish": "chicas",
+			"english": "girls"
+		},
+		{
+			"Rank": "488",
+			"spanish": "comida",
+			"english": "food"
+		},
+		{
+			"Rank": "489",
+			"spanish": "dólares",
+			"english": "Dollars"
+		},
+		{
+			"Rank": "490",
+			"spanish": "dr",
+			"english": "dr"
+		},
+		{
+			"Rank": "491",
+			"spanish": "saben",
+			"english": "they know"
+		},
+		{
+			"Rank": "492",
+			"spanish": "fácil",
+			"english": "easy"
+		},
+		{
+			"Rank": "493",
+			"spanish": "alto",
+			"english": "high"
+		},
+		{
+			"Rank": "494",
+			"spanish": "posible",
+			"english": "possible"
+		},
+		{
+			"Rank": "495",
+			"spanish": "maldito",
+			"english": "damned"
+		},
+		{
+			"Rank": "496",
+			"spanish": "dormir",
+			"english": "sleep"
+		},
+		{
+			"Rank": "497",
+			"spanish": "deberías",
+			"english": "you should"
+		},
+		{
+			"Rank": "498",
+			"spanish": "maldita",
+			"english": "damn"
+		},
+		{
+			"Rank": "499",
+			"spanish": "pregunta",
+			"english": "Question"
+		},
+		{
+			"Rank": "500",
+			"spanish": "incluso",
+			"english": "even"
+		},
+		{
+			"Rank": "501",
+			"spanish": "fiesta",
+			"english": "party"
+		},
+		{
+			"Rank": "502",
+			"spanish": "tampoco",
+			"english": "neither"
+		},
+		{
+			"Rank": "503",
+			"spanish": "cama",
+			"english": "bed"
+		},
+		{
+			"Rank": "504",
+			"spanish": "lejos",
+			"english": "far"
+		},
+		{
+			"Rank": "505",
+			"spanish": "medio",
+			"english": "medium"
+		},
+		{
+			"Rank": "506",
+			"spanish": "preocupes",
+			"english": "worry"
+		},
+		{
+			"Rank": "507",
+			"spanish": "ay",
+			"english": "Oh"
+		},
+		{
+			"Rank": "508",
+			"spanish": "teléfono",
+			"english": "phone"
+		},
+		{
+			"Rank": "509",
+			"spanish": "diga",
+			"english": "tell"
+		},
+		{
+			"Rank": "510",
+			"spanish": "ei",
+			"english": "ei"
+		},
+		{
+			"Rank": "511",
+			"spanish": "trata",
+			"english": "about"
+		},
+		{
+			"Rank": "512",
+			"spanish": "equipo",
+			"english": "equipment"
+		},
+		{
+			"Rank": "513",
+			"spanish": "palabra",
+			"english": "word"
+		},
+		{
+			"Rank": "514",
+			"spanish": "cuanto",
+			"english": "how much"
+		},
+		{
+			"Rank": "515",
+			"spanish": "idiota",
+			"english": "moron"
+		},
+		{
+			"Rank": "516",
+			"spanish": "esté",
+			"english": "East"
+		},
+		{
+			"Rank": "517",
+			"spanish": "luz",
+			"english": "light"
+		},
+		{
+			"Rank": "518",
+			"spanish": "tuve",
+			"english": "I had"
+		},
+		{
+			"Rank": "519",
+			"spanish": "país",
+			"english": "country"
+		},
+		{
+			"Rank": "520",
+			"spanish": "segundo",
+			"english": "second"
+		},
+		{
+			"Rank": "521",
+			"spanish": "querido",
+			"english": "Dear"
+		},
+		{
+			"Rank": "522",
+			"spanish": "diablos",
+			"english": "Devils"
+		},
+		{
+			"Rank": "523",
+			"spanish": "hagas",
+			"english": "you do"
+		},
+		{
+			"Rank": "524",
+			"spanish": "señorita",
+			"english": "miss"
+		},
+		{
+			"Rank": "525",
+			"spanish": "oportunidad",
+			"english": "opportunity"
+		},
+		{
+			"Rank": "526",
+			"spanish": "matar",
+			"english": "to kill"
+		},
+		{
+			"Rank": "527",
+			"spanish": "algunas",
+			"english": "some"
+		},
+		{
+			"Rank": "528",
+			"spanish": "esperando",
+			"english": "waiting"
+		},
+		{
+			"Rank": "529",
+			"spanish": "necesitamos",
+			"english": "we need"
+		},
+		{
+			"Rank": "530",
+			"spanish": "adónde",
+			"english": "where"
+		},
+		{
+			"Rank": "531",
+			"spanish": "verte",
+			"english": "to see you"
+		},
+		{
+			"Rank": "532",
+			"spanish": "estará",
+			"english": "will be"
+		},
+		{
+			"Rank": "533",
+			"spanish": "venido",
+			"english": "I come"
+		},
+		{
+			"Rank": "534",
+			"spanish": "estabas",
+			"english": "you were"
+		},
+		{
+			"Rank": "535",
+			"spanish": "fueron",
+			"english": "were"
+		},
+		{
+			"Rank": "536",
+			"spanish": "seis",
+			"english": "six"
+		},
+		{
+			"Rank": "537",
+			"spanish": "tenga",
+			"english": "have"
+		},
+		{
+			"Rank": "538",
+			"spanish": "cuarto",
+			"english": "fourth"
+		},
+		{
+			"Rank": "539",
+			"spanish": "cielo",
+			"english": "heaven"
+		},
+		{
+			"Rank": "540",
+			"spanish": "vivo",
+			"english": "alive"
+		},
+		{
+			"Rank": "541",
+			"spanish": "recuerdo",
+			"english": "memory"
+		},
+		{
+			"Rank": "542",
+			"spanish": "perdón",
+			"english": "sorry"
+		},
+		{
+			"Rank": "543",
+			"spanish": "falta",
+			"english": "lack"
+		},
+		{
+			"Rank": "544",
+			"spanish": "pequeña",
+			"english": "little"
+		},
+		{
+			"Rank": "545",
+			"spanish": "oído",
+			"english": "ear"
+		},
+		{
+			"Rank": "546",
+			"spanish": "creer",
+			"english": "believe"
+		},
+		{
+			"Rank": "547",
+			"spanish": "john",
+			"english": "john"
+		},
+		{
+			"Rank": "548",
+			"spanish": "pienso",
+			"english": "I think"
+		},
+		{
+			"Rank": "549",
+			"spanish": "ésta",
+			"english": "this"
+		},
+		{
+			"Rank": "550",
+			"spanish": "esperar",
+			"english": "wait"
+		},
+		{
+			"Rank": "551",
+			"spanish": "necesitas",
+			"english": "you need"
+		},
+		{
+			"Rank": "552",
+			"spanish": "aqui",
+			"english": "here"
+		},
+		{
+			"Rank": "553",
+			"spanish": "película",
+			"english": "movie"
+		},
+		{
+			"Rank": "554",
+			"spanish": "además",
+			"english": "Besides"
+		},
+		{
+			"Rank": "555",
+			"spanish": "marido",
+			"english": "husband"
+		},
+		{
+			"Rank": "556",
+			"spanish": "perro",
+			"english": "dog"
+		},
+		{
+			"Rank": "557",
+			"spanish": "general",
+			"english": "general"
+		},
+		{
+			"Rank": "558",
+			"spanish": "calle",
+			"english": "Street"
+		},
+		{
+			"Rank": "559",
+			"spanish": "exactamente",
+			"english": "exactly"
+		},
+		{
+			"Rank": "560",
+			"spanish": "rey",
+			"english": "king"
+		},
+		{
+			"Rank": "561",
+			"spanish": "padres",
+			"english": "parents"
+		},
+		{
+			"Rank": "562",
+			"spanish": "lista",
+			"english": "list"
+		},
+		{
+			"Rank": "563",
+			"spanish": "habrá",
+			"english": "there will be"
+		},
+		{
+			"Rank": "564",
+			"spanish": "habitación",
+			"english": "room"
+		},
+		{
+			"Rank": "565",
+			"spanish": "carajo",
+			"english": "fuck"
+		},
+		{
+			"Rank": "566",
+			"spanish": "pensando",
+			"english": "thinking"
+		},
+		{
+			"Rank": "567",
+			"spanish": "par",
+			"english": "pair"
+		},
+		{
+			"Rank": "568",
+			"spanish": "fuego",
+			"english": "fire"
+		},
+		{
+			"Rank": "569",
+			"spanish": "niña",
+			"english": "girl"
+		},
+		{
+			"Rank": "570",
+			"spanish": "seguir",
+			"english": "follow"
+		},
+		{
+			"Rank": "571",
+			"spanish": "música",
+			"english": "music"
+		},
+		{
+			"Rank": "572",
+			"spanish": "di",
+			"english": "gave"
+		},
+		{
+			"Rank": "573",
+			"spanish": "habría",
+			"english": "there would be"
+		},
+		{
+			"Rank": "574",
+			"spanish": "mucha",
+			"english": "a lot"
+		},
+		{
+			"Rank": "575",
+			"spanish": "paso",
+			"english": "He passed"
+		},
+		{
+			"Rank": "576",
+			"spanish": "sentido",
+			"english": "sense"
+		},
+		{
+			"Rank": "577",
+			"spanish": "diré",
+			"english": "I will say"
+		},
+		{
+			"Rank": "578",
+			"spanish": "podrías",
+			"english": "could you"
+		},
+		{
+			"Rank": "579",
+			"spanish": "afuera",
+			"english": "outside"
+		},
+		{
+			"Rank": "580",
+			"spanish": "digas",
+			"english": "you say"
+		},
+		{
+			"Rank": "581",
+			"spanish": "ia",
+			"english": "ia"
+		},
+		{
+			"Rank": "582",
+			"spanish": "mía",
+			"english": "mine"
+		},
+		{
+			"Rank": "583",
+			"spanish": "murió",
+			"english": "died"
+		},
+		{
+			"Rank": "584",
+			"spanish": "dio",
+			"english": "it gave"
+		},
+		{
+			"Rank": "585",
+			"spanish": "café",
+			"english": "coffee"
+		},
+		{
+			"Rank": "586",
+			"spanish": "entiendes",
+			"english": "You understand"
+		},
+		{
+			"Rank": "587",
+			"spanish": "nuestras",
+			"english": "our"
+		},
+		{
+			"Rank": "588",
+			"spanish": "piensa",
+			"english": "think"
+		},
+		{
+			"Rank": "589",
+			"spanish": "ello",
+			"english": "it"
+		},
+		{
+			"Rank": "590",
+			"spanish": "lleva",
+			"english": "carries"
+		},
+		{
+			"Rank": "591",
+			"spanish": "estuvo",
+			"english": "he was"
+		},
+		{
+			"Rank": "592",
+			"spanish": "último",
+			"english": "latest"
+		},
+		{
+			"Rank": "593",
+			"spanish": "diciendo",
+			"english": "saying"
+		},
+		{
+			"Rank": "594",
+			"spanish": "grandes",
+			"english": "big"
+		},
+		{
+			"Rank": "595",
+			"spanish": "sitio",
+			"english": "site"
+		},
+		{
+			"Rank": "596",
+			"spanish": "libro",
+			"english": "book"
+		},
+		{
+			"Rank": "597",
+			"spanish": "buscando",
+			"english": "searching"
+		},
+		{
+			"Rank": "598",
+			"spanish": "bebé",
+			"english": "baby"
+		},
+		{
+			"Rank": "599",
+			"spanish": "cállate",
+			"english": "shut up"
+		},
+		{
+			"Rank": "600",
+			"spanish": "vuelve",
+			"english": "returns"
+		},
+		{
+			"Rank": "601",
+			"spanish": "jamás",
+			"english": "never"
+		},
+		{
+			"Rank": "602",
+			"spanish": "minuto",
+			"english": "minute"
+		},
+		{
+			"Rank": "603",
+			"spanish": "arma",
+			"english": "weapon"
+		},
+		{
+			"Rank": "604",
+			"spanish": "viaje",
+			"english": "travel"
+		},
+		{
+			"Rank": "605",
+			"spanish": "única",
+			"english": "only"
+		},
+		{
+			"Rank": "606",
+			"spanish": "muchachos",
+			"english": "boys"
+		},
+		{
+			"Rank": "607",
+			"spanish": "perdido",
+			"english": "lost"
+		},
+		{
+			"Rank": "608",
+			"spanish": "jugar",
+			"english": "to play"
+		},
+		{
+			"Rank": "609",
+			"spanish": "diez",
+			"english": "ten"
+		},
+		{
+			"Rank": "610",
+			"spanish": "vemos",
+			"english": "we see"
+		},
+		{
+			"Rank": "611",
+			"spanish": "dado",
+			"english": "dice"
+		},
+		{
+			"Rank": "612",
+			"spanish": "sabemos",
+			"english": "we know"
+		},
+		{
+			"Rank": "613",
+			"spanish": "mil",
+			"english": "one thousand"
+		},
+		{
+			"Rank": "614",
+			"spanish": "demás",
+			"english": "the rest"
+		},
+		{
+			"Rank": "615",
+			"spanish": "gusto",
+			"english": "taste"
+		},
+		{
+			"Rank": "616",
+			"spanish": "peor",
+			"english": "worst"
+		},
+		{
+			"Rank": "617",
+			"spanish": "irme",
+			"english": "leave"
+		},
+		{
+			"Rank": "618",
+			"spanish": "jack",
+			"english": "Jack"
+		},
+		{
+			"Rank": "619",
+			"spanish": "estaban",
+			"english": "They were"
+		},
+		{
+			"Rank": "620",
+			"spanish": "orden",
+			"english": "order"
+		},
+		{
+			"Rank": "621",
+			"spanish": "pasando",
+			"english": "happening"
+		},
+		{
+			"Rank": "622",
+			"spanish": "cambio",
+			"english": "change"
+		},
+		{
+			"Rank": "623",
+			"spanish": "extraño",
+			"english": "strange"
+		},
+		{
+			"Rank": "624",
+			"spanish": "pobre",
+			"english": "poor"
+		},
+		{
+			"Rank": "625",
+			"spanish": "ropa",
+			"english": "clothes"
+		},
+		{
+			"Rank": "626",
+			"spanish": "queremos",
+			"english": "we want"
+		},
+		{
+			"Rank": "627",
+			"spanish": "oficina",
+			"english": "office"
+		},
+		{
+			"Rank": "628",
+			"spanish": "sino",
+			"english": "if not"
+		},
+		{
+			"Rank": "629",
+			"spanish": "modo",
+			"english": "mode"
+		},
+		{
+			"Rank": "630",
+			"spanish": "ocurre",
+			"english": "occurs"
+		},
+		{
+			"Rank": "631",
+			"spanish": "muchacho",
+			"english": "boy"
+		},
+		{
+			"Rank": "632",
+			"spanish": "otras",
+			"english": "other"
+		},
+		{
+			"Rank": "633",
+			"spanish": "hará",
+			"english": "will"
+		},
+		{
+			"Rank": "634",
+			"spanish": "libre",
+			"english": "free"
+		},
+		{
+			"Rank": "635",
+			"spanish": "conoces",
+			"english": "you know"
+		},
+		{
+			"Rank": "636",
+			"spanish": "piensas",
+			"english": "you think"
+		},
+		{
+			"Rank": "637",
+			"spanish": "presidente",
+			"english": "President"
+		},
+		{
+			"Rank": "638",
+			"spanish": "especial",
+			"english": "special"
+		},
+		{
+			"Rank": "639",
+			"spanish": "anoche",
+			"english": "last night"
+		},
+		{
+			"Rank": "640",
+			"spanish": "millones",
+			"english": "millions"
+		},
+		{
+			"Rank": "641",
+			"spanish": "acerca",
+			"english": "about"
+		},
+		{
+			"Rank": "642",
+			"spanish": "derecho",
+			"english": "law"
+		},
+		{
+			"Rank": "643",
+			"spanish": "negro",
+			"english": "black"
+		},
+		{
+			"Rank": "644",
+			"spanish": "acá",
+			"english": "here"
+		},
+		{
+			"Rank": "645",
+			"spanish": "caballeros",
+			"english": "gentlemen"
+		},
+		{
+			"Rank": "646",
+			"spanish": "semanas",
+			"english": "weeks"
+		},
+		{
+			"Rank": "647",
+			"spanish": "palabras",
+			"english": "words"
+		},
+		{
+			"Rank": "648",
+			"spanish": "buscar",
+			"english": "search"
+		},
+		{
+			"Rank": "649",
+			"spanish": "segura",
+			"english": "safe"
+		},
+		{
+			"Rank": "650",
+			"spanish": "correcto",
+			"english": "Right"
+		},
+		{
+			"Rank": "651",
+			"spanish": "frente",
+			"english": "front"
+		},
+		{
+			"Rank": "652",
+			"spanish": "hacemos",
+			"english": "we make"
+		},
+		{
+			"Rank": "653",
+			"spanish": "seas",
+			"english": "you are"
+		},
+		{
+			"Rank": "654",
+			"spanish": "detrás",
+			"english": "behind"
+		},
+		{
+			"Rank": "655",
+			"spanish": "puesto",
+			"english": "post"
+		},
+		{
+			"Rank": "656",
+			"spanish": "asunto",
+			"english": "affair"
+		},
+		{
+			"Rank": "657",
+			"spanish": "duro",
+			"english": "hard"
+		},
+		{
+			"Rank": "658",
+			"spanish": "sucede",
+			"english": "happens"
+		},
+		{
+			"Rank": "659",
+			"spanish": "llamar",
+			"english": "to call"
+		},
+		{
+			"Rank": "660",
+			"spanish": "disculpe",
+			"english": "sorry"
+		},
+		{
+			"Rank": "661",
+			"spanish": "boca",
+			"english": "mouth"
+		},
+		{
+			"Rank": "662",
+			"spanish": "atención",
+			"english": "Attention"
+		},
+		{
+			"Rank": "663",
+			"spanish": "mire",
+			"english": "Look"
+		},
+		{
+			"Rank": "664",
+			"spanish": "armas",
+			"english": "weapons"
+		},
+		{
+			"Rank": "665",
+			"spanish": "encima",
+			"english": "above"
+		},
+		{
+			"Rank": "666",
+			"spanish": "demonios",
+			"english": "got damn"
+		},
+		{
+			"Rank": "667",
+			"spanish": "mala",
+			"english": "bad"
+		},
+		{
+			"Rank": "668",
+			"spanish": "llevar",
+			"english": "carry"
+		},
+		{
+			"Rank": "669",
+			"spanish": "cual",
+			"english": "which"
+		},
+		{
+			"Rank": "670",
+			"spanish": "odio",
+			"english": "hate"
+		},
+		{
+			"Rank": "671",
+			"spanish": "hospital",
+			"english": "hospital"
+		},
+		{
+			"Rank": "672",
+			"spanish": "deben",
+			"english": "should"
+		},
+		{
+			"Rank": "673",
+			"spanish": "sueño",
+			"english": "dream"
+		},
+		{
+			"Rank": "674",
+			"spanish": "quieras",
+			"english": "you want"
+		},
+		{
+			"Rank": "675",
+			"spanish": "resto",
+			"english": "rest"
+		},
+		{
+			"Rank": "676",
+			"spanish": "llamo",
+			"english": "I call"
+		},
+		{
+			"Rank": "677",
+			"spanish": "perder",
+			"english": "to lose"
+		},
+		{
+			"Rank": "678",
+			"spanish": "llamado",
+			"english": "called"
+		},
+		{
+			"Rank": "679",
+			"spanish": "perfecto",
+			"english": "perfect"
+		},
+		{
+			"Rank": "680",
+			"spanish": "estaré",
+			"english": "I will be"
+		},
+		{
+			"Rank": "681",
+			"spanish": "tranquilo",
+			"english": "calm"
+		},
+		{
+			"Rank": "682",
+			"spanish": "york",
+			"english": "york"
+		},
+		{
+			"Rank": "683",
+			"spanish": "seguridad",
+			"english": "security"
+		},
+		{
+			"Rank": "684",
+			"spanish": "ayudar",
+			"english": "help"
+		},
+		{
+			"Rank": "685",
+			"spanish": "tuvo",
+			"english": "He had"
+		},
+		{
+			"Rank": "686",
+			"spanish": "largo",
+			"english": "long"
+		},
+		{
+			"Rank": "687",
+			"spanish": "pena",
+			"english": "pain"
+		},
+		{
+			"Rank": "688",
+			"spanish": "probablemente",
+			"english": "probably"
+		},
+		{
+			"Rank": "689",
+			"spanish": "ayer",
+			"english": "Yesterday"
+		},
+		{
+			"Rank": "690",
+			"spanish": "dile",
+			"english": "tell him"
+		},
+		{
+			"Rank": "691",
+			"spanish": "prueba",
+			"english": "proof"
+		},
+		{
+			"Rank": "692",
+			"spanish": "siendo",
+			"english": "being"
+		},
+		{
+			"Rank": "693",
+			"spanish": "bonito",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "694",
+			"spanish": "recuerdas",
+			"english": "remember"
+		},
+		{
+			"Rank": "695",
+			"spanish": "haz",
+			"english": "make"
+		},
+		{
+			"Rank": "696",
+			"spanish": "real",
+			"english": "real"
+		},
+		{
+			"Rank": "697",
+			"spanish": "veras",
+			"english": "you will see"
+		},
+		{
+			"Rank": "698",
+			"spanish": "increíble",
+			"english": "amazing"
+		},
+		{
+			"Rank": "699",
+			"spanish": "quisiera",
+			"english": "I would like"
+		},
+		{
+			"Rank": "700",
+			"spanish": "tonto",
+			"english": "fool"
+		},
+		{
+			"Rank": "701",
+			"spanish": "simplemente",
+			"english": "simply"
+		},
+		{
+			"Rank": "702",
+			"spanish": "vámonos",
+			"english": "let's move on"
+		},
+		{
+			"Rank": "703",
+			"spanish": "haría",
+			"english": "would do"
+		},
+		{
+			"Rank": "704",
+			"spanish": "preguntas",
+			"english": "questions"
+		},
+		{
+			"Rank": "705",
+			"spanish": "aire",
+			"english": "air"
+		},
+		{
+			"Rank": "706",
+			"spanish": "conoce",
+			"english": "known"
+		},
+		{
+			"Rank": "707",
+			"spanish": "fuerza",
+			"english": "force"
+		},
+		{
+			"Rank": "708",
+			"spanish": "carta",
+			"english": "letter"
+		},
+		{
+			"Rank": "709",
+			"spanish": "trato",
+			"english": "treatment"
+		},
+		{
+			"Rank": "710",
+			"spanish": "plan",
+			"english": "plan"
+		},
+		{
+			"Rank": "711",
+			"spanish": "ése",
+			"english": "that"
+		},
+		{
+			"Rank": "712",
+			"spanish": "verlo",
+			"english": "see him"
+		},
+		{
+			"Rank": "713",
+			"spanish": "hambre",
+			"english": "hungry"
+		},
+		{
+			"Rank": "714",
+			"spanish": "vuelto",
+			"english": "turned"
+		},
+		{
+			"Rank": "715",
+			"spanish": "empezar",
+			"english": "start"
+		},
+		{
+			"Rank": "716",
+			"spanish": "campo",
+			"english": "countryside"
+		},
+		{
+			"Rank": "717",
+			"spanish": "acaba",
+			"english": "just"
+		},
+		{
+			"Rank": "718",
+			"spanish": "hablas",
+			"english": "speak"
+		},
+		{
+			"Rank": "719",
+			"spanish": "vive",
+			"english": "lives"
+		},
+		{
+			"Rank": "720",
+			"spanish": "barco",
+			"english": "ship"
+		},
+		{
+			"Rank": "721",
+			"spanish": "hotel",
+			"english": "hotel"
+		},
+		{
+			"Rank": "722",
+			"spanish": "poner",
+			"english": "place"
+		},
+		{
+			"Rank": "723",
+			"spanish": "grupo",
+			"english": "group"
+		},
+		{
+			"Rank": "724",
+			"spanish": "creí",
+			"english": "I thought"
+		},
+		{
+			"Rank": "725",
+			"spanish": "sol",
+			"english": "Sun"
+		},
+		{
+			"Rank": "726",
+			"spanish": "tuyo",
+			"english": "of yours"
+		},
+		{
+			"Rank": "727",
+			"spanish": "pase",
+			"english": "pass"
+		},
+		{
+			"Rank": "728",
+			"spanish": "joe",
+			"english": "joe"
+		},
+		{
+			"Rank": "729",
+			"spanish": "voz",
+			"english": "voice"
+		},
+		{
+			"Rank": "730",
+			"spanish": "baño",
+			"english": "bath"
+		},
+		{
+			"Rank": "731",
+			"spanish": "usar",
+			"english": "use"
+		},
+		{
+			"Rank": "732",
+			"spanish": "conseguir",
+			"english": "get"
+		},
+		{
+			"Rank": "733",
+			"spanish": "placer",
+			"english": "pleasure"
+		},
+		{
+			"Rank": "734",
+			"spanish": "llegado",
+			"english": "arrived"
+		},
+		{
+			"Rank": "735",
+			"spanish": "decirte",
+			"english": "tell you"
+		},
+		{
+			"Rank": "736",
+			"spanish": "profesor",
+			"english": "Teacher"
+		},
+		{
+			"Rank": "737",
+			"spanish": "noticias",
+			"english": "news"
+		},
+		{
+			"Rank": "738",
+			"spanish": "lamento",
+			"english": "lament"
+		},
+		{
+			"Rank": "739",
+			"spanish": "decirle",
+			"english": "tell"
+		},
+		{
+			"Rank": "740",
+			"spanish": "blanco",
+			"english": "White"
+		},
+		{
+			"Rank": "741",
+			"spanish": "quédate",
+			"english": "stay"
+		},
+		{
+			"Rank": "742",
+			"spanish": "estuve",
+			"english": "I was"
+		},
+		{
+			"Rank": "743",
+			"spanish": "pie",
+			"english": "foot"
+		},
+		{
+			"Rank": "744",
+			"spanish": "anda",
+			"english": "anda"
+		},
+		{
+			"Rank": "745",
+			"spanish": "espere",
+			"english": "I waited"
+		},
+		{
+			"Rank": "746",
+			"spanish": "edad",
+			"english": "age"
+		},
+		{
+			"Rank": "747",
+			"spanish": "secreto",
+			"english": "secret"
+		},
+		{
+			"Rank": "748",
+			"spanish": "podríamos",
+			"english": "we could"
+		},
+		{
+			"Rank": "749",
+			"spanish": "compañía",
+			"english": "company"
+		},
+		{
+			"Rank": "750",
+			"spanish": "tren",
+			"english": "train"
+		},
+		{
+			"Rank": "751",
+			"spanish": "recuerda",
+			"english": "remember"
+		},
+		{
+			"Rank": "752",
+			"spanish": "tras",
+			"english": "after"
+		},
+		{
+			"Rank": "753",
+			"spanish": "siéntate",
+			"english": "Sit down"
+		},
+		{
+			"Rank": "754",
+			"spanish": "prisa",
+			"english": "hurry"
+		},
+		{
+			"Rank": "755",
+			"spanish": "vista",
+			"english": "view"
+		},
+		{
+			"Rank": "756",
+			"spanish": "hermosa",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "757",
+			"spanish": "negocio",
+			"english": "deal"
+		},
+		{
+			"Rank": "758",
+			"spanish": "deberíamos",
+			"english": "we should"
+		},
+		{
+			"Rank": "759",
+			"spanish": "gustan",
+			"english": "like"
+		},
+		{
+			"Rank": "760",
+			"spanish": "pagar",
+			"english": "pay"
+		},
+		{
+			"Rank": "761",
+			"spanish": "george",
+			"english": "george"
+		},
+		{
+			"Rank": "762",
+			"spanish": "futuro",
+			"english": "future"
+		},
+		{
+			"Rank": "763",
+			"spanish": "silencio",
+			"english": "silence"
+		},
+		{
+			"Rank": "764",
+			"spanish": "siente",
+			"english": "feels"
+		},
+		{
+			"Rank": "765",
+			"spanish": "médico",
+			"english": "doctor"
+		},
+		{
+			"Rank": "766",
+			"spanish": "maestro",
+			"english": "teacher"
+		},
+		{
+			"Rank": "767",
+			"spanish": "quiera",
+			"english": "want"
+		},
+		{
+			"Rank": "768",
+			"spanish": "llegó",
+			"english": "I arrive"
+		},
+		{
+			"Rank": "769",
+			"spanish": "loca",
+			"english": "crazy"
+		},
+		{
+			"Rank": "770",
+			"spanish": "cambiar",
+			"english": "change"
+		},
+		{
+			"Rank": "771",
+			"spanish": "frank",
+			"english": "frank"
+		},
+		{
+			"Rank": "772",
+			"spanish": "sal",
+			"english": "Salt"
+		},
+		{
+			"Rank": "773",
+			"spanish": "control",
+			"english": "control"
+		},
+		{
+			"Rank": "774",
+			"spanish": "raro",
+			"english": "rare"
+		},
+		{
+			"Rank": "775",
+			"spanish": "viste",
+			"english": "Dresses"
+		},
+		{
+			"Rank": "776",
+			"spanish": "novia",
+			"english": "girlfriend"
+		},
+		{
+			"Rank": "777",
+			"spanish": "diferente",
+			"english": "different"
+		},
+		{
+			"Rank": "778",
+			"spanish": "imposible",
+			"english": "impossible"
+		},
+		{
+			"Rank": "779",
+			"spanish": "i",
+			"english": "i"
+		},
+		{
+			"Rank": "780",
+			"spanish": "amiga",
+			"english": "friend"
+		},
+		{
+			"Rank": "781",
+			"spanish": "enseguida",
+			"english": "right away"
+		},
+		{
+			"Rank": "782",
+			"spanish": "llamada",
+			"english": "call"
+		},
+		{
+			"Rank": "783",
+			"spanish": "dan",
+			"english": "give"
+		},
+		{
+			"Rank": "784",
+			"spanish": "dejó",
+			"english": "left"
+		},
+		{
+			"Rank": "785",
+			"spanish": "mes",
+			"english": "month"
+		},
+		{
+			"Rank": "786",
+			"spanish": "llevo",
+			"english": "I wear"
+		},
+		{
+			"Rank": "787",
+			"spanish": "avión",
+			"english": "airplane"
+		},
+		{
+			"Rank": "788",
+			"spanish": "pelo",
+			"english": "hair"
+		},
+		{
+			"Rank": "789",
+			"spanish": "the",
+			"english": "the"
+		},
+		{
+			"Rank": "790",
+			"spanish": "error",
+			"english": "error"
+		},
+		{
+			"Rank": "791",
+			"spanish": "haremos",
+			"english": "will"
+		},
+		{
+			"Rank": "792",
+			"spanish": "tendrá",
+			"english": "will have"
+		},
+		{
+			"Rank": "793",
+			"spanish": "propia",
+			"english": "own"
+		},
+		{
+			"Rank": "794",
+			"spanish": "siguiente",
+			"english": "following"
+		},
+		{
+			"Rank": "795",
+			"spanish": "ganar",
+			"english": "win"
+		},
+		{
+			"Rank": "796",
+			"spanish": "ley",
+			"english": "law"
+		},
+		{
+			"Rank": "797",
+			"spanish": "dolor",
+			"english": "pain"
+		},
+		{
+			"Rank": "798",
+			"spanish": "oro",
+			"english": "gold"
+		},
+		{
+			"Rank": "799",
+			"spanish": "ten",
+			"english": "ten"
+		},
+		{
+			"Rank": "800",
+			"spanish": "acabó",
+			"english": "finished"
+		},
+		{
+			"Rank": "801",
+			"spanish": "maldición",
+			"english": "curse"
+		},
+		{
+			"Rank": "802",
+			"spanish": "oficial",
+			"english": "official"
+		},
+		{
+			"Rank": "803",
+			"spanish": "situación",
+			"english": "situation"
+		},
+		{
+			"Rank": "804",
+			"spanish": "daño",
+			"english": "hurt"
+		},
+		{
+			"Rank": "805",
+			"spanish": "sientes",
+			"english": "you feel"
+		},
+		{
+			"Rank": "806",
+			"spanish": "entendido",
+			"english": "it is understood"
+		},
+		{
+			"Rank": "807",
+			"spanish": "deseo",
+			"english": "wish"
+		},
+		{
+			"Rank": "808",
+			"spanish": "mente",
+			"english": "mind"
+		},
+		{
+			"Rank": "809",
+			"spanish": "ejército",
+			"english": "army"
+		},
+		{
+			"Rank": "810",
+			"spanish": "comprar",
+			"english": "to buy"
+		},
+		{
+			"Rank": "811",
+			"spanish": "muertos",
+			"english": "dead"
+		},
+		{
+			"Rank": "812",
+			"spanish": "pensaba",
+			"english": "thought"
+		},
+		{
+			"Rank": "813",
+			"spanish": "darle",
+			"english": "give him"
+		},
+		{
+			"Rank": "814",
+			"spanish": "estúpido",
+			"english": "stupid"
+		},
+		{
+			"Rank": "815",
+			"spanish": "decía",
+			"english": "He said"
+		},
+		{
+			"Rank": "816",
+			"spanish": "acabo",
+			"english": "finished"
+		},
+		{
+			"Rank": "817",
+			"spanish": "david",
+			"english": "David"
+		},
+		{
+			"Rank": "818",
+			"spanish": "suena",
+			"english": "it sounds"
+		},
+		{
+			"Rank": "819",
+			"spanish": "mitad",
+			"english": "half"
+		},
+		{
+			"Rank": "820",
+			"spanish": "caballo",
+			"english": "horse"
+		},
+		{
+			"Rank": "821",
+			"spanish": "asesino",
+			"english": "killer"
+		},
+		{
+			"Rank": "822",
+			"spanish": "vio",
+			"english": "he saw"
+		},
+		{
+			"Rank": "823",
+			"spanish": "permiso",
+			"english": "permission"
+		},
+		{
+			"Rank": "824",
+			"spanish": "ellas",
+			"english": "they"
+		},
+		{
+			"Rank": "825",
+			"spanish": "trabajando",
+			"english": "working"
+		},
+		{
+			"Rank": "826",
+			"spanish": "maravilloso",
+			"english": "wonderful"
+		},
+		{
+			"Rank": "827",
+			"spanish": "mesa",
+			"english": "table"
+		},
+		{
+			"Rank": "828",
+			"spanish": "divertido",
+			"english": "funny"
+		},
+		{
+			"Rank": "829",
+			"spanish": "mejores",
+			"english": "top"
+		},
+		{
+			"Rank": "830",
+			"spanish": "próxima",
+			"english": "next"
+		},
+		{
+			"Rank": "831",
+			"spanish": "entra",
+			"english": "enters"
+		},
+		{
+			"Rank": "832",
+			"spanish": "tom",
+			"english": "tom"
+		},
+		{
+			"Rank": "833",
+			"spanish": "mar",
+			"english": "sea"
+		},
+		{
+			"Rank": "834",
+			"spanish": "siete",
+			"english": "seven"
+		},
+		{
+			"Rank": "835",
+			"spanish": "hacía",
+			"english": "toward"
+		},
+		{
+			"Rank": "836",
+			"spanish": "sexo",
+			"english": "sex"
+		},
+		{
+			"Rank": "837",
+			"spanish": "encanta",
+			"english": "love"
+		},
+		{
+			"Rank": "838",
+			"spanish": "amable",
+			"english": "friendly"
+		},
+		{
+			"Rank": "839",
+			"spanish": "mensaje",
+			"english": "message"
+		},
+		{
+			"Rank": "840",
+			"spanish": "información",
+			"english": "information"
+		},
+		{
+			"Rank": "841",
+			"spanish": "traje",
+			"english": "suit"
+		},
+		{
+			"Rank": "842",
+			"spanish": "alma",
+			"english": "soul"
+		},
+		{
+			"Rank": "843",
+			"spanish": "encontrado",
+			"english": "found"
+		},
+		{
+			"Rank": "844",
+			"spanish": "coronel",
+			"english": "colonel"
+		},
+		{
+			"Rank": "845",
+			"spanish": "dale",
+			"english": "Go ahead"
+		},
+		{
+			"Rank": "846",
+			"spanish": "san",
+			"english": "saint"
+		},
+		{
+			"Rank": "847",
+			"spanish": "cena",
+			"english": "Dinner"
+		},
+		{
+			"Rank": "848",
+			"spanish": "encontré",
+			"english": "I found"
+		},
+		{
+			"Rank": "849",
+			"spanish": "charlie",
+			"english": "charlie"
+		},
+		{
+			"Rank": "850",
+			"spanish": "tendrás",
+			"english": "will you have"
+		},
+		{
+			"Rank": "851",
+			"spanish": "eras",
+			"english": "ages"
+		},
+		{
+			"Rank": "852",
+			"spanish": "propio",
+			"english": "own"
+		},
+		{
+			"Rank": "853",
+			"spanish": "culo",
+			"english": "ass"
+		},
+		{
+			"Rank": "854",
+			"spanish": "asi",
+			"english": "A) Yes"
+		},
+		{
+			"Rank": "855",
+			"spanish": "adentro",
+			"english": "in"
+		},
+		{
+			"Rank": "856",
+			"spanish": "canción",
+			"english": "song"
+		},
+		{
+			"Rank": "857",
+			"spanish": "gobierno",
+			"english": "government"
+		},
+		{
+			"Rank": "858",
+			"spanish": "sam",
+			"english": "sam"
+		},
+		{
+			"Rank": "859",
+			"spanish": "temo",
+			"english": "I fear"
+		},
+		{
+			"Rank": "860",
+			"spanish": "abre",
+			"english": "opens"
+		},
+		{
+			"Rank": "861",
+			"spanish": "dijeron",
+			"english": "they said"
+		},
+		{
+			"Rank": "862",
+			"spanish": "fuiste",
+			"english": "you were"
+		},
+		{
+			"Rank": "863",
+			"spanish": "media",
+			"english": "half"
+		},
+		{
+			"Rank": "864",
+			"spanish": "das",
+			"english": "you give"
+		},
+		{
+			"Rank": "865",
+			"spanish": "estábamos",
+			"english": "we were"
+		},
+		{
+			"Rank": "866",
+			"spanish": "estaría",
+			"english": "It would"
+		},
+		{
+			"Rank": "867",
+			"spanish": "daré",
+			"english": "I'll give"
+		},
+		{
+			"Rank": "868",
+			"spanish": "vosotros",
+			"english": "you"
+		},
+		{
+			"Rank": "869",
+			"spanish": "frío",
+			"english": "cold"
+		},
+		{
+			"Rank": "870",
+			"spanish": "foto",
+			"english": "Photo"
+		},
+		{
+			"Rank": "871",
+			"spanish": "accidente",
+			"english": "accident"
+		},
+		{
+			"Rank": "872",
+			"spanish": "derecha",
+			"english": "right"
+		},
+		{
+			"Rank": "873",
+			"spanish": "funciona",
+			"english": "it works"
+		},
+		{
+			"Rank": "874",
+			"spanish": "vayas",
+			"english": "go"
+		},
+		{
+			"Rank": "875",
+			"spanish": "centro",
+			"english": "center"
+		},
+		{
+			"Rank": "876",
+			"spanish": "necesario",
+			"english": "necessary"
+		},
+		{
+			"Rank": "877",
+			"spanish": "miren",
+			"english": "look"
+		},
+		{
+			"Rank": "878",
+			"spanish": "bonita",
+			"english": "pretty"
+		},
+		{
+			"Rank": "879",
+			"spanish": "ante",
+			"english": "before"
+		},
+		{
+			"Rank": "880",
+			"spanish": "terrible",
+			"english": "terrible"
+		},
+		{
+			"Rank": "881",
+			"spanish": "pude",
+			"english": "I could"
+		},
+		{
+			"Rank": "882",
+			"spanish": "teniente",
+			"english": "lieutenant"
+		},
+		{
+			"Rank": "883",
+			"spanish": "luna",
+			"english": "Moon"
+		},
+		{
+			"Rank": "884",
+			"spanish": "izquierda",
+			"english": "left"
+		},
+		{
+			"Rank": "885",
+			"spanish": "uds",
+			"english": "You"
+		},
+		{
+			"Rank": "886",
+			"spanish": "doy",
+			"english": "I give"
+		},
+		{
+			"Rank": "887",
+			"spanish": "servicio",
+			"english": "service"
+		},
+		{
+			"Rank": "888",
+			"spanish": "llamas",
+			"english": "flames"
+		},
+		{
+			"Rank": "889",
+			"spanish": "normal",
+			"english": "normal"
+		},
+		{
+			"Rank": "890",
+			"spanish": "junto",
+			"english": "together"
+		},
+		{
+			"Rank": "891",
+			"spanish": "tienda",
+			"english": "store"
+		},
+		{
+			"Rank": "892",
+			"spanish": "navidad",
+			"english": "Christmas"
+		},
+		{
+			"Rank": "893",
+			"spanish": "dirección",
+			"english": "address"
+		},
+		{
+			"Rank": "894",
+			"spanish": "abuela",
+			"english": "grandmother"
+		},
+		{
+			"Rank": "895",
+			"spanish": "alrededor",
+			"english": "around"
+		},
+		{
+			"Rank": "896",
+			"spanish": "vine",
+			"english": "came"
+		},
+		{
+			"Rank": "897",
+			"spanish": "tendré",
+			"english": "I will have"
+		},
+		{
+			"Rank": "898",
+			"spanish": "libertad",
+			"english": "freedom"
+		},
+		{
+			"Rank": "899",
+			"spanish": "sale",
+			"english": "comes out"
+		},
+		{
+			"Rank": "900",
+			"spanish": "línea",
+			"english": "line"
+		},
+		{
+			"Rank": "901",
+			"spanish": "abogado",
+			"english": "attorney"
+		},
+		{
+			"Rank": "902",
+			"spanish": "pies",
+			"english": "feet"
+		},
+		{
+			"Rank": "903",
+			"spanish": "honor",
+			"english": "honor"
+		},
+		{
+			"Rank": "904",
+			"spanish": "tratando",
+			"english": "trying"
+		},
+		{
+			"Rank": "905",
+			"spanish": "regresar",
+			"english": "to return"
+		},
+		{
+			"Rank": "906",
+			"spanish": "hablo",
+			"english": "I speak"
+		},
+		{
+			"Rank": "907",
+			"spanish": "vieja",
+			"english": "old woman"
+		},
+		{
+			"Rank": "908",
+			"spanish": "papel",
+			"english": "paper"
+		},
+		{
+			"Rank": "909",
+			"spanish": "terminado",
+			"english": "finished"
+		},
+		{
+			"Rank": "910",
+			"spanish": "dejado",
+			"english": "left"
+		},
+		{
+			"Rank": "911",
+			"spanish": "juro",
+			"english": "I swear"
+		},
+		{
+			"Rank": "912",
+			"spanish": "hermoso",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "913",
+			"spanish": "dulce",
+			"english": "candy"
+		},
+		{
+			"Rank": "914",
+			"spanish": "sentir",
+			"english": "feel"
+		},
+		{
+			"Rank": "915",
+			"spanish": "principio",
+			"english": "beginning"
+		},
+		{
+			"Rank": "916",
+			"spanish": "interesante",
+			"english": "interesting"
+		},
+		{
+			"Rank": "917",
+			"spanish": "caja",
+			"english": "box"
+		},
+		{
+			"Rank": "918",
+			"spanish": "cualquiera",
+			"english": "anyone"
+		},
+		{
+			"Rank": "919",
+			"spanish": "ocho",
+			"english": "eight"
+		},
+		{
+			"Rank": "920",
+			"spanish": "horrible",
+			"english": "horrible"
+		},
+		{
+			"Rank": "921",
+			"spanish": "respuesta",
+			"english": "answer"
+		},
+		{
+			"Rank": "922",
+			"spanish": "perra",
+			"english": "female dog"
+		},
+		{
+			"Rank": "923",
+			"spanish": "gracioso",
+			"english": "funny"
+		},
+		{
+			"Rank": "924",
+			"spanish": "s",
+			"english": "s"
+		},
+		{
+			"Rank": "925",
+			"spanish": "trae",
+			"english": "brings"
+		},
+		{
+			"Rank": "926",
+			"spanish": "personal",
+			"english": "personal"
+		},
+		{
+			"Rank": "927",
+			"spanish": "mató",
+			"english": "he killed"
+		},
+		{
+			"Rank": "928",
+			"spanish": "completamente",
+			"english": "completely"
+		},
+		{
+			"Rank": "929",
+			"spanish": "paul",
+			"english": "paul"
+		},
+		{
+			"Rank": "930",
+			"spanish": "vienen",
+			"english": "they come"
+		},
+		{
+			"Rank": "931",
+			"spanish": "sean",
+			"english": "are"
+		},
+		{
+			"Rank": "932",
+			"spanish": "llega",
+			"english": "arrives"
+		},
+		{
+			"Rank": "933",
+			"spanish": "abuelo",
+			"english": "grandfather"
+		},
+		{
+			"Rank": "934",
+			"spanish": "tengas",
+			"english": "you have"
+		},
+		{
+			"Rank": "935",
+			"spanish": "linda",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "936",
+			"spanish": "tendremos",
+			"english": "we will have"
+		},
+		{
+			"Rank": "937",
+			"spanish": "michael",
+			"english": "Michael"
+		},
+		{
+			"Rank": "938",
+			"spanish": "partes",
+			"english": "parts"
+		},
+		{
+			"Rank": "939",
+			"spanish": "cárcel",
+			"english": "jail"
+		},
+		{
+			"Rank": "940",
+			"spanish": "hubo",
+			"english": "there was"
+		},
+		{
+			"Rank": "941",
+			"spanish": "sistema",
+			"english": "system"
+		},
+		{
+			"Rank": "942",
+			"spanish": "lindo",
+			"english": "cute"
+		},
+		{
+			"Rank": "943",
+			"spanish": "director",
+			"english": "director"
+		},
+		{
+			"Rank": "944",
+			"spanish": "hazlo",
+			"english": "do it"
+		},
+		{
+			"Rank": "945",
+			"spanish": "hicieron",
+			"english": "they did"
+		},
+		{
+			"Rank": "946",
+			"spanish": "tía",
+			"english": "aunt"
+		},
+		{
+			"Rank": "947",
+			"spanish": "busca",
+			"english": "search"
+		},
+		{
+			"Rank": "948",
+			"spanish": "don",
+			"english": "gift"
+		},
+		{
+			"Rank": "949",
+			"spanish": "baja",
+			"english": "low"
+		},
+		{
+			"Rank": "950",
+			"spanish": "pudo",
+			"english": "could"
+		},
+		{
+			"Rank": "951",
+			"spanish": "salud",
+			"english": "Health"
+		},
+		{
+			"Rank": "952",
+			"spanish": "listos",
+			"english": "ready"
+		},
+		{
+			"Rank": "953",
+			"spanish": "cita",
+			"english": "appointment"
+		},
+		{
+			"Rank": "954",
+			"spanish": "tenías",
+			"english": "you had"
+		},
+		{
+			"Rank": "955",
+			"spanish": "negocios",
+			"english": "business"
+		},
+		{
+			"Rank": "956",
+			"spanish": "tipos",
+			"english": "types"
+		},
+		{
+			"Rank": "957",
+			"spanish": "cámara",
+			"english": "camera"
+		},
+		{
+			"Rank": "958",
+			"spanish": "agente",
+			"english": "agent"
+		},
+		{
+			"Rank": "959",
+			"spanish": "verás",
+			"english": "you will see"
+		},
+		{
+			"Rank": "960",
+			"spanish": "infierno",
+			"english": "hell"
+		},
+		{
+			"Rank": "961",
+			"spanish": "regalo",
+			"english": "present"
+		},
+		{
+			"Rank": "962",
+			"spanish": "río",
+			"english": "River"
+		},
+		{
+			"Rank": "963",
+			"spanish": "través",
+			"english": "through"
+		},
+		{
+			"Rank": "964",
+			"spanish": "carne",
+			"english": "meat"
+		},
+		{
+			"Rank": "965",
+			"spanish": "totalmente",
+			"english": "totally"
+		},
+		{
+			"Rank": "966",
+			"spanish": "decirme",
+			"english": "tell me"
+		},
+		{
+			"Rank": "967",
+			"spanish": "piso",
+			"english": "floor"
+		},
+		{
+			"Rank": "968",
+			"spanish": "esposo",
+			"english": "husband"
+		},
+		{
+			"Rank": "969",
+			"spanish": "oír",
+			"english": "hear"
+		},
+		{
+			"Rank": "970",
+			"spanish": "harry",
+			"english": "harry"
+		},
+		{
+			"Rank": "971",
+			"spanish": "sargento",
+			"english": "sergeant"
+		},
+		{
+			"Rank": "972",
+			"spanish": "deje",
+			"english": "leave"
+		},
+		{
+			"Rank": "973",
+			"spanish": "tuya",
+			"english": "yours"
+		},
+		{
+			"Rank": "974",
+			"spanish": "ambos",
+			"english": "both of them"
+		},
+		{
+			"Rank": "975",
+			"spanish": "beber",
+			"english": "to drink"
+		},
+		{
+			"Rank": "976",
+			"spanish": "calma",
+			"english": "calm"
+		},
+		{
+			"Rank": "977",
+			"spanish": "vestido",
+			"english": "dress"
+		},
+		{
+			"Rank": "978",
+			"spanish": "salvo",
+			"english": "except"
+		},
+		{
+			"Rank": "979",
+			"spanish": "ésa",
+			"english": "that"
+		},
+		{
+			"Rank": "980",
+			"spanish": "verdadero",
+			"english": "true"
+		},
+		{
+			"Rank": "981",
+			"spanish": "basura",
+			"english": "trash"
+		},
+		{
+			"Rank": "982",
+			"spanish": "suelo",
+			"english": "floor"
+		},
+		{
+			"Rank": "983",
+			"spanish": "carrera",
+			"english": "career"
+		},
+		{
+			"Rank": "984",
+			"spanish": "cumpleaños",
+			"english": "birthday"
+		},
+		{
+			"Rank": "985",
+			"spanish": "rato",
+			"english": "little while"
+		},
+		{
+			"Rank": "986",
+			"spanish": "iremos",
+			"english": "we'll go"
+		},
+		{
+			"Rank": "987",
+			"spanish": "universidad",
+			"english": "college"
+		},
+		{
+			"Rank": "988",
+			"spanish": "bailar",
+			"english": "dance"
+		},
+		{
+			"Rank": "989",
+			"spanish": "triste",
+			"english": "sad"
+		},
+		{
+			"Rank": "990",
+			"spanish": "iglesia",
+			"english": "church"
+		},
+		{
+			"Rank": "991",
+			"spanish": "m",
+			"english": "m"
+		},
+		{
+			"Rank": "992",
+			"spanish": "delante",
+			"english": "in front"
+		},
+		{
+			"Rank": "993",
+			"spanish": "nena",
+			"english": "baby"
+		},
+		{
+			"Rank": "994",
+			"spanish": "banco",
+			"english": "Bank"
+		},
+		{
+			"Rank": "995",
+			"spanish": "cuántos",
+			"english": "how many"
+		},
+		{
+			"Rank": "996",
+			"spanish": "encuentra",
+			"english": "find"
+		},
+		{
+			"Rank": "997",
+			"spanish": "supone",
+			"english": "means"
+		},
+		{
+			"Rank": "998",
+			"spanish": "existe",
+			"english": "exists"
+		},
+		{
+			"Rank": "999",
+			"spanish": "programa",
+			"english": "program"
+		},
+		{
+			"Rank": "1000",
+			"spanish": "alegro",
+			"english": "glad"
+		},
+		{
+			"Rank": "1001",
+			"spanish": "santo",
+			"english": "holy"
+		},
+		{
+			"Rank": "1002",
+			"spanish": "porqué",
+			"english": "why"
+		},
+		{
+			"Rank": "1003",
+			"spanish": "novio",
+			"english": "boyfriend"
+		},
+		{
+			"Rank": "1004",
+			"spanish": "broma",
+			"english": "joke"
+		},
+		{
+			"Rank": "1005",
+			"spanish": "diría",
+			"english": "would say"
+		},
+		{
+			"Rank": "1006",
+			"spanish": "salió",
+			"english": "he left"
+		},
+		{
+			"Rank": "1007",
+			"spanish": "jesús",
+			"english": "Jesus"
+		},
+		{
+			"Rank": "1008",
+			"spanish": "prometo",
+			"english": "I promise"
+		},
+		{
+			"Rank": "1009",
+			"spanish": "partido",
+			"english": "match"
+		},
+		{
+			"Rank": "1010",
+			"spanish": "pregunto",
+			"english": "I ask"
+		},
+		{
+			"Rank": "1011",
+			"spanish": "radio",
+			"english": "radio"
+		},
+		{
+			"Rank": "1012",
+			"spanish": "vuelva",
+			"english": "return"
+		},
+		{
+			"Rank": "1013",
+			"spanish": "cenar",
+			"english": "dine"
+		},
+		{
+			"Rank": "1014",
+			"spanish": "ocurrió",
+			"english": "occurred"
+		},
+		{
+			"Rank": "1015",
+			"spanish": "creía",
+			"english": "thought"
+		},
+		{
+			"Rank": "1016",
+			"spanish": "corre",
+			"english": "run"
+		},
+		{
+			"Rank": "1017",
+			"spanish": "disculpa",
+			"english": "Sorry"
+		},
+		{
+			"Rank": "1018",
+			"spanish": "vienes",
+			"english": "Viennese"
+		},
+		{
+			"Rank": "1019",
+			"spanish": "cerveza",
+			"english": "beer"
+		},
+		{
+			"Rank": "1020",
+			"spanish": "muerta",
+			"english": "dead"
+		},
+		{
+			"Rank": "1021",
+			"spanish": "pensado",
+			"english": "thought-out"
+		},
+		{
+			"Rank": "1022",
+			"spanish": "destino",
+			"english": "destination"
+		},
+		{
+			"Rank": "1023",
+			"spanish": "bob",
+			"english": "bob"
+		},
+		{
+			"Rank": "1024",
+			"spanish": "matrimonio",
+			"english": "marriage"
+		},
+		{
+			"Rank": "1025",
+			"spanish": "fotos",
+			"english": "Photos"
+		},
+		{
+			"Rank": "1026",
+			"spanish": "diablo",
+			"english": "Devil"
+		},
+		{
+			"Rank": "1027",
+			"spanish": "volveré",
+			"english": "I will be back"
+		},
+		{
+			"Rank": "1028",
+			"spanish": "saberlo",
+			"english": "I know"
+		},
+		{
+			"Rank": "1029",
+			"spanish": "cielos",
+			"english": "Heavens"
+		},
+		{
+			"Rank": "1030",
+			"spanish": "norte",
+			"english": "north"
+		},
+		{
+			"Rank": "1031",
+			"spanish": "sala",
+			"english": "living room"
+		},
+		{
+			"Rank": "1032",
+			"spanish": "órdenes",
+			"english": "orders"
+		},
+		{
+			"Rank": "1033",
+			"spanish": "según",
+			"english": "according"
+		},
+		{
+			"Rank": "1034",
+			"spanish": "harás",
+			"english": "you will do"
+		},
+		{
+			"Rank": "1035",
+			"spanish": "ataque",
+			"english": "attack"
+		},
+		{
+			"Rank": "1036",
+			"spanish": "parís",
+			"english": "Paris"
+		},
+		{
+			"Rank": "1037",
+			"spanish": "ejemplo",
+			"english": "example"
+		},
+		{
+			"Rank": "1038",
+			"spanish": "sorpresa",
+			"english": "surprise"
+		},
+		{
+			"Rank": "1039",
+			"spanish": "té",
+			"english": "tea"
+		},
+		{
+			"Rank": "1040",
+			"spanish": "pudiera",
+			"english": "could"
+		},
+		{
+			"Rank": "1041",
+			"spanish": "baile",
+			"english": "dance"
+		},
+		{
+			"Rank": "1042",
+			"spanish": "club",
+			"english": "club"
+		},
+		{
+			"Rank": "1043",
+			"spanish": "temprano",
+			"english": "early"
+		},
+		{
+			"Rank": "1044",
+			"spanish": "público",
+			"english": "public"
+		},
+		{
+			"Rank": "1045",
+			"spanish": "tí",
+			"english": "you"
+		},
+		{
+			"Rank": "1046",
+			"spanish": "oí",
+			"english": "I heard"
+		},
+		{
+			"Rank": "1047",
+			"spanish": "mirando",
+			"english": "looking"
+		},
+		{
+			"Rank": "1048",
+			"spanish": "ventana",
+			"english": "window"
+		},
+		{
+			"Rank": "1049",
+			"spanish": "conocido",
+			"english": "known"
+		},
+		{
+			"Rank": "1050",
+			"spanish": "duda",
+			"english": "doubt"
+		},
+		{
+			"Rank": "1051",
+			"spanish": "boda",
+			"english": "wedding"
+		},
+		{
+			"Rank": "1052",
+			"spanish": "peligro",
+			"english": "danger"
+		},
+		{
+			"Rank": "1053",
+			"spanish": "trabaja",
+			"english": "works"
+		},
+		{
+			"Rank": "1054",
+			"spanish": "quise",
+			"english": "I wanted"
+		},
+		{
+			"Rank": "1055",
+			"spanish": "querías",
+			"english": "you wanted"
+		},
+		{
+			"Rank": "1056",
+			"spanish": "caliente",
+			"english": "hot"
+		},
+		{
+			"Rank": "1057",
+			"spanish": "escribir",
+			"english": "to write"
+		},
+		{
+			"Rank": "1058",
+			"spanish": "reina",
+			"english": "Queen"
+		},
+		{
+			"Rank": "1059",
+			"spanish": "esperaba",
+			"english": "I expected"
+		},
+		{
+			"Rank": "1060",
+			"spanish": "embargo",
+			"english": "embargo"
+		},
+		{
+			"Rank": "1061",
+			"spanish": "sur",
+			"english": "south"
+		},
+		{
+			"Rank": "1062",
+			"spanish": "enfermo",
+			"english": "sick"
+		},
+		{
+			"Rank": "1063",
+			"spanish": "excelente",
+			"english": "Excellent"
+		},
+		{
+			"Rank": "1064",
+			"spanish": "pone",
+			"english": "places"
+		},
+		{
+			"Rank": "1065",
+			"spanish": "estés",
+			"english": "you're"
+		},
+		{
+			"Rank": "1066",
+			"spanish": "escena",
+			"english": "scene"
+		},
+		{
+			"Rank": "1067",
+			"spanish": "encuentro",
+			"english": "meeting"
+		},
+		{
+			"Rank": "1068",
+			"spanish": "asesinato",
+			"english": "murder"
+		},
+		{
+			"Rank": "1069",
+			"spanish": "mike",
+			"english": "mike"
+		},
+		{
+			"Rank": "1070",
+			"spanish": "obra",
+			"english": "work"
+		},
+		{
+			"Rank": "1071",
+			"spanish": "n",
+			"english": "n"
+		},
+		{
+			"Rank": "1072",
+			"spanish": "veré",
+			"english": "I will see"
+		},
+		{
+			"Rank": "1073",
+			"spanish": "llamó",
+			"english": "I call"
+		},
+		{
+			"Rank": "1074",
+			"spanish": "aquel",
+			"english": "that"
+		},
+		{
+			"Rank": "1075",
+			"spanish": "terminar",
+			"english": "end up"
+		},
+		{
+			"Rank": "1076",
+			"spanish": "ganas",
+			"english": "want"
+		},
+		{
+			"Rank": "1077",
+			"spanish": "conocer",
+			"english": "know"
+		},
+		{
+			"Rank": "1078",
+			"spanish": "pruebas",
+			"english": "tests"
+		},
+		{
+			"Rank": "1079",
+			"spanish": "señores",
+			"english": "Sirs"
+		},
+		{
+			"Rank": "1080",
+			"spanish": "vos",
+			"english": "you"
+		},
+		{
+			"Rank": "1081",
+			"spanish": "escúchame",
+			"english": "listen to me"
+		},
+		{
+			"Rank": "1082",
+			"spanish": "veamos",
+			"english": "let's see"
+		},
+		{
+			"Rank": "1083",
+			"spanish": "creen",
+			"english": "believe"
+		},
+		{
+			"Rank": "1084",
+			"spanish": "aun",
+			"english": "yet"
+		},
+		{
+			"Rank": "1085",
+			"spanish": "ninguno",
+			"english": "any"
+		},
+		{
+			"Rank": "1086",
+			"spanish": "parecía",
+			"english": "looked like"
+		},
+		{
+			"Rank": "1087",
+			"spanish": "mary",
+			"english": "mary"
+		},
+		{
+			"Rank": "1088",
+			"spanish": "viva",
+			"english": "live"
+		},
+		{
+			"Rank": "1089",
+			"spanish": "apenas",
+			"english": "barely"
+		},
+		{
+			"Rank": "1090",
+			"spanish": "segunda",
+			"english": "second"
+		},
+		{
+			"Rank": "1091",
+			"spanish": "bill",
+			"english": "bill"
+		},
+		{
+			"Rank": "1092",
+			"spanish": "llave",
+			"english": "key"
+		},
+		{
+			"Rank": "1093",
+			"spanish": "regreso",
+			"english": "he came back"
+		},
+		{
+			"Rank": "1094",
+			"spanish": "trasero",
+			"english": "rear"
+		},
+		{
+			"Rank": "1095",
+			"spanish": "ojalá",
+			"english": "hopefully"
+		},
+		{
+			"Rank": "1096",
+			"spanish": "veremos",
+			"english": "we will see"
+		},
+		{
+			"Rank": "1097",
+			"spanish": "simple",
+			"english": "simple"
+		},
+		{
+			"Rank": "1098",
+			"spanish": "seré",
+			"english": "I will be"
+		},
+		{
+			"Rank": "1099",
+			"spanish": "éi",
+			"english": "ei"
+		},
+		{
+			"Rank": "1100",
+			"spanish": "irse",
+			"english": "leave"
+		},
+		{
+			"Rank": "1101",
+			"spanish": "cartas",
+			"english": "letters"
+		},
+		{
+			"Rank": "1102",
+			"spanish": "l",
+			"english": "l"
+		},
+		{
+			"Rank": "1103",
+			"spanish": "libros",
+			"english": "books"
+		},
+		{
+			"Rank": "1104",
+			"spanish": "apuesto",
+			"english": "dapper"
+		},
+		{
+			"Rank": "1105",
+			"spanish": "leer",
+			"english": "read"
+		},
+		{
+			"Rank": "1106",
+			"spanish": "imbécil",
+			"english": "moron"
+		},
+		{
+			"Rank": "1107",
+			"spanish": "opinión",
+			"english": "opinion"
+		},
+		{
+			"Rank": "1108",
+			"spanish": "joder",
+			"english": "fuck"
+		},
+		{
+			"Rank": "1109",
+			"spanish": "cambiado",
+			"english": "changed"
+		},
+		{
+			"Rank": "1110",
+			"spanish": "sucedió",
+			"english": "it happened"
+		},
+		{
+			"Rank": "1111",
+			"spanish": "señal",
+			"english": "signal"
+		},
+		{
+			"Rank": "1112",
+			"spanish": "habían",
+			"english": "they had"
+		},
+		{
+			"Rank": "1113",
+			"spanish": "agradable",
+			"english": "nice"
+		},
+		{
+			"Rank": "1114",
+			"spanish": "cocina",
+			"english": "kitchen"
+		},
+		{
+			"Rank": "1115",
+			"spanish": "relación",
+			"english": "relationship"
+		},
+		{
+			"Rank": "1116",
+			"spanish": "sueños",
+			"english": "dreams"
+		},
+		{
+			"Rank": "1117",
+			"spanish": "segundos",
+			"english": "seconds"
+		},
+		{
+			"Rank": "1118",
+			"spanish": "corte",
+			"english": "cut"
+		},
+		{
+			"Rank": "1119",
+			"spanish": "escuchar",
+			"english": "listen"
+		},
+		{
+			"Rank": "1120",
+			"spanish": "cerebro",
+			"english": "brain"
+		},
+		{
+			"Rank": "1121",
+			"spanish": "locura",
+			"english": "madness"
+		},
+		{
+			"Rank": "1122",
+			"spanish": "peligroso",
+			"english": "dangerous"
+		},
+		{
+			"Rank": "1123",
+			"spanish": "hermanos",
+			"english": "brothers"
+		},
+		{
+			"Rank": "1124",
+			"spanish": "entender",
+			"english": "understand"
+		},
+		{
+			"Rank": "1125",
+			"spanish": "cine",
+			"english": "cinema"
+		},
+		{
+			"Rank": "1126",
+			"spanish": "dejes",
+			"english": "let"
+		},
+		{
+			"Rank": "1127",
+			"spanish": "reunión",
+			"english": "meeting"
+		},
+		{
+			"Rank": "1128",
+			"spanish": "tendría",
+			"english": "would have"
+		},
+		{
+			"Rank": "1129",
+			"spanish": "verla",
+			"english": "see"
+		},
+		{
+			"Rank": "1130",
+			"spanish": "duele",
+			"english": "it hurt"
+		},
+		{
+			"Rank": "1131",
+			"spanish": "hicimos",
+			"english": "we did"
+		},
+		{
+			"Rank": "1132",
+			"spanish": "londres",
+			"english": "London"
+		},
+		{
+			"Rank": "1133",
+			"spanish": "tocar",
+			"english": "touch"
+		},
+		{
+			"Rank": "1134",
+			"spanish": "mirar",
+			"english": "look"
+		},
+		{
+			"Rank": "1135",
+			"spanish": "verme",
+			"english": "see me"
+		},
+		{
+			"Rank": "1136",
+			"spanish": "ben",
+			"english": "ben"
+		},
+		{
+			"Rank": "1137",
+			"spanish": "suyo",
+			"english": "yours"
+		},
+		{
+			"Rank": "1138",
+			"spanish": "causa",
+			"english": "cause"
+		},
+		{
+			"Rank": "1139",
+			"spanish": "pelea",
+			"english": "Fight"
+		},
+		{
+			"Rank": "1140",
+			"spanish": "prisión",
+			"english": "prison"
+		},
+		{
+			"Rank": "1141",
+			"spanish": "jim",
+			"english": "jim"
+		},
+		{
+			"Rank": "1142",
+			"spanish": "mayoría",
+			"english": "most"
+		},
+		{
+			"Rank": "1143",
+			"spanish": "fondo",
+			"english": "background"
+		},
+		{
+			"Rank": "1144",
+			"spanish": "acaso",
+			"english": "perhaps"
+		},
+		{
+			"Rank": "1145",
+			"spanish": "vuelvo",
+			"english": "I come back"
+		},
+		{
+			"Rank": "1146",
+			"spanish": "serán",
+			"english": "will be"
+		},
+		{
+			"Rank": "1147",
+			"spanish": "montón",
+			"english": "heap"
+		},
+		{
+			"Rank": "1148",
+			"spanish": "toca",
+			"english": "touches"
+		},
+		{
+			"Rank": "1149",
+			"spanish": "comandante",
+			"english": "commander"
+		},
+		{
+			"Rank": "1150",
+			"spanish": "tome",
+			"english": "take"
+		},
+		{
+			"Rank": "1151",
+			"spanish": "éxito",
+			"english": "success"
+		},
+		{
+			"Rank": "1152",
+			"spanish": "misión",
+			"english": "mission"
+		},
+		{
+			"Rank": "1153",
+			"spanish": "vidas",
+			"english": "lives"
+		},
+		{
+			"Rank": "1154",
+			"spanish": "decisión",
+			"english": "decision"
+		},
+		{
+			"Rank": "1155",
+			"spanish": "hogar",
+			"english": "home"
+		},
+		{
+			"Rank": "1156",
+			"spanish": "rico",
+			"english": "rich"
+		},
+		{
+			"Rank": "1157",
+			"spanish": "trago",
+			"english": "drink"
+		},
+		{
+			"Rank": "1158",
+			"spanish": "capaz",
+			"english": "able"
+		},
+		{
+			"Rank": "1159",
+			"spanish": "cargo",
+			"english": "position"
+		},
+		{
+			"Rank": "1160",
+			"spanish": "unidos",
+			"english": "United"
+		},
+		{
+			"Rank": "1161",
+			"spanish": "lleno",
+			"english": "full"
+		},
+		{
+			"Rank": "1162",
+			"spanish": "bar",
+			"english": "Pub"
+		},
+		{
+			"Rank": "1163",
+			"spanish": "estrella",
+			"english": "star"
+		},
+		{
+			"Rank": "1164",
+			"spanish": "posición",
+			"english": "position"
+		},
+		{
+			"Rank": "1165",
+			"spanish": "estación",
+			"english": "station"
+		},
+		{
+			"Rank": "1166",
+			"spanish": "interesa",
+			"english": "interested"
+		},
+		{
+			"Rank": "1167",
+			"spanish": "uh",
+			"english": "uh"
+		},
+		{
+			"Rank": "1168",
+			"spanish": "edificio",
+			"english": "building"
+		},
+		{
+			"Rank": "1169",
+			"spanish": "vayan",
+			"english": "go"
+		},
+		{
+			"Rank": "1170",
+			"spanish": "consejo",
+			"english": "advice"
+		},
+		{
+			"Rank": "1171",
+			"spanish": "pistola",
+			"english": "gun"
+		},
+		{
+			"Rank": "1172",
+			"spanish": "humano",
+			"english": "human"
+		},
+		{
+			"Rank": "1173",
+			"spanish": "irnos",
+			"english": "leave"
+		},
+		{
+			"Rank": "1174",
+			"spanish": "fantástico",
+			"english": "fantastic"
+		},
+		{
+			"Rank": "1175",
+			"spanish": "ojo",
+			"english": "eye"
+		},
+		{
+			"Rank": "1176",
+			"spanish": "jóvenes",
+			"english": "young boys"
+		},
+		{
+			"Rank": "1177",
+			"spanish": "zapatos",
+			"english": "shoes"
+		},
+		{
+			"Rank": "1178",
+			"spanish": "majestad",
+			"english": "majesty"
+		},
+		{
+			"Rank": "1179",
+			"spanish": "lee",
+			"english": "read"
+		},
+		{
+			"Rank": "1180",
+			"spanish": "flores",
+			"english": "flowers"
+		},
+		{
+			"Rank": "1181",
+			"spanish": "ocupado",
+			"english": "occupied"
+		},
+		{
+			"Rank": "1182",
+			"spanish": "bienvenido",
+			"english": "your welcome"
+		},
+		{
+			"Rank": "1183",
+			"spanish": "zona",
+			"english": "zone"
+		},
+		{
+			"Rank": "1184",
+			"spanish": "contacto",
+			"english": "Contact"
+		},
+		{
+			"Rank": "1185",
+			"spanish": "henry",
+			"english": "Henry"
+		},
+		{
+			"Rank": "1186",
+			"spanish": "sacar",
+			"english": "take"
+		},
+		{
+			"Rank": "1187",
+			"spanish": "podrían",
+			"english": "could"
+		},
+		{
+			"Rank": "1188",
+			"spanish": "jimmy",
+			"english": "jimmy"
+		},
+		{
+			"Rank": "1189",
+			"spanish": "tema",
+			"english": "theme"
+		},
+		{
+			"Rank": "1190",
+			"spanish": "matado",
+			"english": "killed"
+		},
+		{
+			"Rank": "1191",
+			"spanish": "soldado",
+			"english": "soldier"
+		},
+		{
+			"Rank": "1192",
+			"spanish": "sabías",
+			"english": "you know"
+		},
+		{
+			"Rank": "1193",
+			"spanish": "johnny",
+			"english": "johnny"
+		},
+		{
+			"Rank": "1194",
+			"spanish": "pido",
+			"english": "I ask"
+		},
+		{
+			"Rank": "1195",
+			"spanish": "cierra",
+			"english": "closes"
+		},
+		{
+			"Rank": "1196",
+			"spanish": "peter",
+			"english": "peter"
+		},
+		{
+			"Rank": "1197",
+			"spanish": "intento",
+			"english": "tried"
+		},
+		{
+			"Rank": "1198",
+			"spanish": "irá",
+			"english": "go to"
+		},
+		{
+			"Rank": "1199",
+			"spanish": "calor",
+			"english": "hot"
+		},
+		{
+			"Rank": "1200",
+			"spanish": "finalmente",
+			"english": "Finally"
+		},
+		{
+			"Rank": "1201",
+			"spanish": "equivocado",
+			"english": "wrong"
+		},
+		{
+			"Rank": "1202",
+			"spanish": "animales",
+			"english": "animals"
+		},
+		{
+			"Rank": "1203",
+			"spanish": "departamento",
+			"english": "Department"
+		},
+		{
+			"Rank": "1204",
+			"spanish": "enemigo",
+			"english": "enemy"
+		},
+		{
+			"Rank": "1205",
+			"spanish": "caballero",
+			"english": "gentleman"
+		},
+		{
+			"Rank": "1206",
+			"spanish": "color",
+			"english": "color"
+		},
+		{
+			"Rank": "1207",
+			"spanish": "necesitan",
+			"english": "they need"
+		},
+		{
+			"Rank": "1208",
+			"spanish": "empieza",
+			"english": "starts"
+		},
+		{
+			"Rank": "1209",
+			"spanish": "soldados",
+			"english": "soldiers"
+		},
+		{
+			"Rank": "1210",
+			"spanish": "vea",
+			"english": "see"
+		},
+		{
+			"Rank": "1211",
+			"spanish": "entiende",
+			"english": "understands"
+		},
+		{
+			"Rank": "1212",
+			"spanish": "valor",
+			"english": "value"
+		},
+		{
+			"Rank": "1213",
+			"spanish": "azul",
+			"english": "blue"
+		},
+		{
+			"Rank": "1214",
+			"spanish": "miles",
+			"english": "Thousands"
+		},
+		{
+			"Rank": "1215",
+			"spanish": "espacio",
+			"english": "space"
+		},
+		{
+			"Rank": "1216",
+			"spanish": "estarás",
+			"english": "you will be"
+		},
+		{
+			"Rank": "1217",
+			"spanish": "mantener",
+			"english": "keep"
+		},
+		{
+			"Rank": "1218",
+			"spanish": "aprender",
+			"english": "to learn"
+		},
+		{
+			"Rank": "1219",
+			"spanish": "inteligente",
+			"english": "intelligent"
+		},
+		{
+			"Rank": "1220",
+			"spanish": "serás",
+			"english": "you will"
+		},
+		{
+			"Rank": "1221",
+			"spanish": "arte",
+			"english": "art"
+		},
+		{
+			"Rank": "1222",
+			"spanish": "respeto",
+			"english": "respect"
+		},
+		{
+			"Rank": "1223",
+			"spanish": "pedir",
+			"english": "ask"
+		},
+		{
+			"Rank": "1224",
+			"spanish": "puso",
+			"english": "put"
+		},
+		{
+			"Rank": "1225",
+			"spanish": "llaman",
+			"english": "call"
+		},
+		{
+			"Rank": "1226",
+			"spanish": "oiga",
+			"english": "Listen"
+		},
+		{
+			"Rank": "1227",
+			"spanish": "juez",
+			"english": "judge"
+		},
+		{
+			"Rank": "1228",
+			"spanish": "inglés",
+			"english": "english"
+		},
+		{
+			"Rank": "1229",
+			"spanish": "precio",
+			"english": "price"
+		},
+		{
+			"Rank": "1230",
+			"spanish": "rojo",
+			"english": "Red"
+		},
+		{
+			"Rank": "1231",
+			"spanish": "formas",
+			"english": "shapes"
+		},
+		{
+			"Rank": "1232",
+			"spanish": "hagan",
+			"english": "make"
+		},
+		{
+			"Rank": "1233",
+			"spanish": "verano",
+			"english": "summer"
+		},
+		{
+			"Rank": "1234",
+			"spanish": "podido",
+			"english": "I have"
+		},
+		{
+			"Rank": "1235",
+			"spanish": "piernas",
+			"english": "legs"
+		},
+		{
+			"Rank": "1236",
+			"spanish": "isla",
+			"english": "island"
+		},
+		{
+			"Rank": "1237",
+			"spanish": "darme",
+			"english": "give me"
+		},
+		{
+			"Rank": "1238",
+			"spanish": "damas",
+			"english": "ladies"
+		},
+		{
+			"Rank": "1239",
+			"spanish": "guardia",
+			"english": "guard"
+		},
+		{
+			"Rank": "1240",
+			"spanish": "espalda",
+			"english": "back"
+		},
+		{
+			"Rank": "1241",
+			"spanish": "c",
+			"english": "c"
+		},
+		{
+			"Rank": "1242",
+			"spanish": "vengan",
+			"english": "come"
+		},
+		{
+			"Rank": "1243",
+			"spanish": "parar",
+			"english": "stop"
+		},
+		{
+			"Rank": "1244",
+			"spanish": "llevas",
+			"english": "take"
+		},
+		{
+			"Rank": "1245",
+			"spanish": "banda",
+			"english": "band"
+		},
+		{
+			"Rank": "1246",
+			"spanish": "quedarme",
+			"english": "stay"
+		},
+		{
+			"Rank": "1247",
+			"spanish": "habéis",
+			"english": "you have"
+		},
+		{
+			"Rank": "1248",
+			"spanish": "marcha",
+			"english": "March"
+		},
+		{
+			"Rank": "1249",
+			"spanish": "luces",
+			"english": "lights"
+		},
+		{
+			"Rank": "1250",
+			"spanish": "estuviera",
+			"english": "he was"
+		},
+		{
+			"Rank": "1251",
+			"spanish": "crimen",
+			"english": "crime"
+		},
+		{
+			"Rank": "1252",
+			"spanish": "dejo",
+			"english": "left"
+		},
+		{
+			"Rank": "1253",
+			"spanish": "ayudarte",
+			"english": "help you"
+		},
+		{
+			"Rank": "1254",
+			"spanish": "esperen",
+			"english": "expect"
+		},
+		{
+			"Rank": "1255",
+			"spanish": "teníamos",
+			"english": "we had"
+		},
+		{
+			"Rank": "1256",
+			"spanish": "diferencia",
+			"english": "difference"
+		},
+		{
+			"Rank": "1257",
+			"spanish": "llamaré",
+			"english": "I'll call"
+		},
+		{
+			"Rank": "1258",
+			"spanish": "ama",
+			"english": "Loves"
+		},
+		{
+			"Rank": "1259",
+			"spanish": "conocí",
+			"english": "I met"
+		},
+		{
+			"Rank": "1260",
+			"spanish": "tiempos",
+			"english": "time"
+		},
+		{
+			"Rank": "1261",
+			"spanish": "déjalo",
+			"english": "leave it alone"
+		},
+		{
+			"Rank": "1262",
+			"spanish": "debajo",
+			"english": "below"
+		},
+		{
+			"Rank": "1263",
+			"spanish": "compañero",
+			"english": "companion"
+		},
+		{
+			"Rank": "1264",
+			"spanish": "dejé",
+			"english": "leave"
+		},
+		{
+			"Rank": "1265",
+			"spanish": "come",
+			"english": "eat"
+		},
+		{
+			"Rank": "1266",
+			"spanish": "déjeme",
+			"english": "let me"
+		},
+		{
+			"Rank": "1267",
+			"spanish": "molesta",
+			"english": "upset"
+		},
+		{
+			"Rank": "1268",
+			"spanish": "contar",
+			"english": "tell"
+		},
+		{
+			"Rank": "1269",
+			"spanish": "dejaré",
+			"english": "I'll leave"
+		},
+		{
+			"Rank": "1270",
+			"spanish": "hablamos",
+			"english": "We speak"
+		},
+		{
+			"Rank": "1271",
+			"spanish": "cansado",
+			"english": "tired"
+		},
+		{
+			"Rank": "1272",
+			"spanish": "ganado",
+			"english": "won"
+		},
+		{
+			"Rank": "1273",
+			"spanish": "pareces",
+			"english": "you seem"
+		},
+		{
+			"Rank": "1274",
+			"spanish": "juicio",
+			"english": "judgment"
+		},
+		{
+			"Rank": "1275",
+			"spanish": "hablado",
+			"english": "spoken"
+		},
+		{
+			"Rank": "1276",
+			"spanish": "estilo",
+			"english": "style"
+		},
+		{
+			"Rank": "1277",
+			"spanish": "ayúdame",
+			"english": "Help me"
+		},
+		{
+			"Rank": "1278",
+			"spanish": "sepa",
+			"english": "know"
+		},
+		{
+			"Rank": "1279",
+			"spanish": "viendo",
+			"english": "seeing"
+		},
+		{
+			"Rank": "1280",
+			"spanish": "salida",
+			"english": "departure"
+		},
+		{
+			"Rank": "1281",
+			"spanish": "alegra",
+			"english": "happy"
+		},
+		{
+			"Rank": "1282",
+			"spanish": "despierta",
+			"english": "awake"
+		},
+		{
+			"Rank": "1283",
+			"spanish": "estupendo",
+			"english": "great"
+		},
+		{
+			"Rank": "1284",
+			"spanish": "darte",
+			"english": "to give you"
+		},
+		{
+			"Rank": "1285",
+			"spanish": "estados",
+			"english": "state"
+		},
+		{
+			"Rank": "1286",
+			"spanish": "quedan",
+			"english": "are"
+		},
+		{
+			"Rank": "1287",
+			"spanish": "próximo",
+			"english": "next"
+		},
+		{
+			"Rank": "1288",
+			"spanish": "nota",
+			"english": "note"
+		},
+		{
+			"Rank": "1289",
+			"spanish": "llevó",
+			"english": "I wear"
+		},
+		{
+			"Rank": "1290",
+			"spanish": "puedas",
+			"english": "you can"
+		},
+		{
+			"Rank": "1291",
+			"spanish": "podrá",
+			"english": "you can"
+		},
+		{
+			"Rank": "1292",
+			"spanish": "james",
+			"english": "James"
+		},
+		{
+			"Rank": "1293",
+			"spanish": "nave",
+			"english": "ship"
+		},
+		{
+			"Rank": "1294",
+			"spanish": "base",
+			"english": "base"
+		},
+		{
+			"Rank": "1295",
+			"spanish": "tenían",
+			"english": "They had"
+		},
+		{
+			"Rank": "1296",
+			"spanish": "sube",
+			"english": "goes up"
+		},
+		{
+			"Rank": "1297",
+			"spanish": "vuelo",
+			"english": "flight"
+		},
+		{
+			"Rank": "1298",
+			"spanish": "excepto",
+			"english": "except"
+		},
+		{
+			"Rank": "1299",
+			"spanish": "golpe",
+			"english": "knock"
+		},
+		{
+			"Rank": "1300",
+			"spanish": "d",
+			"english": "d"
+		},
+		{
+			"Rank": "1301",
+			"spanish": "viento",
+			"english": "wind"
+		},
+		{
+			"Rank": "1302",
+			"spanish": "estaremos",
+			"english": "we will be"
+		},
+		{
+			"Rank": "1303",
+			"spanish": "acción",
+			"english": "action"
+		},
+		{
+			"Rank": "1304",
+			"spanish": "tonterías",
+			"english": "silly stuff"
+		},
+		{
+			"Rank": "1305",
+			"spanish": "respecto",
+			"english": "respect"
+		},
+		{
+			"Rank": "1306",
+			"spanish": "desea",
+			"english": "you want"
+		},
+		{
+			"Rank": "1307",
+			"spanish": "sigues",
+			"english": "are you still"
+		},
+		{
+			"Rank": "1308",
+			"spanish": "debía",
+			"english": "should"
+		},
+		{
+			"Rank": "1309",
+			"spanish": "vendrá",
+			"english": "will come"
+		},
+		{
+			"Rank": "1310",
+			"spanish": "encontramos",
+			"english": "we find"
+		},
+		{
+			"Rank": "1311",
+			"spanish": "beso",
+			"english": "kiss"
+		},
+		{
+			"Rank": "1312",
+			"spanish": "cuestión",
+			"english": "question"
+		},
+		{
+			"Rank": "1313",
+			"spanish": "volvió",
+			"english": "went back"
+		},
+		{
+			"Rank": "1314",
+			"spanish": "reglas",
+			"english": "rules"
+		},
+		{
+			"Rank": "1315",
+			"spanish": "ruido",
+			"english": "noise"
+		},
+		{
+			"Rank": "1316",
+			"spanish": "acabado",
+			"english": "finish"
+		},
+		{
+			"Rank": "1317",
+			"spanish": "salga",
+			"english": "out"
+		},
+		{
+			"Rank": "1318",
+			"spanish": "olvidado",
+			"english": "forgotten"
+		},
+		{
+			"Rank": "1319",
+			"spanish": "mentira",
+			"english": "lie"
+		},
+		{
+			"Rank": "1320",
+			"spanish": "brazo",
+			"english": "arm"
+		},
+		{
+			"Rank": "1321",
+			"spanish": "empezó",
+			"english": "it started"
+		},
+		{
+			"Rank": "1322",
+			"spanish": "cálmate",
+			"english": "take it easy"
+		},
+		{
+			"Rank": "1323",
+			"spanish": "caballos",
+			"english": "horses"
+		},
+		{
+			"Rank": "1324",
+			"spanish": "experiencia",
+			"english": "experience"
+		},
+		{
+			"Rank": "1325",
+			"spanish": "tranquila",
+			"english": "quiet"
+		},
+		{
+			"Rank": "1326",
+			"spanish": "quedar",
+			"english": "stay"
+		},
+		{
+			"Rank": "1327",
+			"spanish": "esperanza",
+			"english": "hope"
+		},
+		{
+			"Rank": "1328",
+			"spanish": "irte",
+			"english": "leave"
+		},
+		{
+			"Rank": "1329",
+			"spanish": "vd",
+			"english": "you"
+		},
+		{
+			"Rank": "1330",
+			"spanish": "perros",
+			"english": "dogs"
+		},
+		{
+			"Rank": "1331",
+			"spanish": "casado",
+			"english": "married"
+		},
+		{
+			"Rank": "1332",
+			"spanish": "llegue",
+			"english": "I arrived"
+		},
+		{
+			"Rank": "1333",
+			"spanish": "drogas",
+			"english": "drugs"
+		},
+		{
+			"Rank": "1334",
+			"spanish": "pidió",
+			"english": "he asked"
+		},
+		{
+			"Rank": "1335",
+			"spanish": "espíritu",
+			"english": "spirit"
+		},
+		{
+			"Rank": "1336",
+			"spanish": "vacaciones",
+			"english": "holidays"
+		},
+		{
+			"Rank": "1337",
+			"spanish": "copa",
+			"english": "Cup"
+		},
+		{
+			"Rank": "1338",
+			"spanish": "investigación",
+			"english": "investigation"
+		},
+		{
+			"Rank": "1339",
+			"spanish": "prefiero",
+			"english": "I prefer"
+		},
+		{
+			"Rank": "1340",
+			"spanish": "solía",
+			"english": "used to"
+		},
+		{
+			"Rank": "1341",
+			"spanish": "llevaré",
+			"english": "I'll take"
+		},
+		{
+			"Rank": "1342",
+			"spanish": "menudo",
+			"english": "often"
+		},
+		{
+			"Rank": "1343",
+			"spanish": "partir",
+			"english": "from"
+		},
+		{
+			"Rank": "1344",
+			"spanish": "visita",
+			"english": "visit"
+		},
+		{
+			"Rank": "1345",
+			"spanish": "alta",
+			"english": "high"
+		},
+		{
+			"Rank": "1346",
+			"spanish": "abrir",
+			"english": "to open"
+		},
+		{
+			"Rank": "1347",
+			"spanish": "tony",
+			"english": "tony"
+		},
+		{
+			"Rank": "1348",
+			"spanish": "nueve",
+			"english": "nine"
+		},
+		{
+			"Rank": "1349",
+			"spanish": "bomba",
+			"english": "bomb"
+		},
+		{
+			"Rank": "1350",
+			"spanish": "energía",
+			"english": "Energy"
+		},
+		{
+			"Rank": "1351",
+			"spanish": "bolsa",
+			"english": "bag"
+		},
+		{
+			"Rank": "1352",
+			"spanish": "hacerte",
+			"english": "make"
+		},
+		{
+			"Rank": "1353",
+			"spanish": "santa",
+			"english": "St."
+		},
+		{
+			"Rank": "1354",
+			"spanish": "pan",
+			"english": "bread"
+		},
+		{
+			"Rank": "1355",
+			"spanish": "piel",
+			"english": "skin"
+		},
+		{
+			"Rank": "1356",
+			"spanish": "usa",
+			"english": "uses"
+		},
+		{
+			"Rank": "1357",
+			"spanish": "metros",
+			"english": "meters"
+		},
+		{
+			"Rank": "1358",
+			"spanish": "perdona",
+			"english": "forgives"
+		},
+		{
+			"Rank": "1359",
+			"spanish": "escrito",
+			"english": "written"
+		},
+		{
+			"Rank": "1360",
+			"spanish": "exacto",
+			"english": "exact"
+		},
+		{
+			"Rank": "1361",
+			"spanish": "jugando",
+			"english": "Playing"
+		},
+		{
+			"Rank": "1362",
+			"spanish": "cuello",
+			"english": "neck"
+		},
+		{
+			"Rank": "1363",
+			"spanish": "larga",
+			"english": "long"
+		},
+		{
+			"Rank": "1364",
+			"spanish": "escapar",
+			"english": "escape"
+		},
+		{
+			"Rank": "1365",
+			"spanish": "salvar",
+			"english": "save"
+		},
+		{
+			"Rank": "1366",
+			"spanish": "escuche",
+			"english": "I heard"
+		},
+		{
+			"Rank": "1367",
+			"spanish": "perdone",
+			"english": "forgive"
+		},
+		{
+			"Rank": "1368",
+			"spanish": "sirve",
+			"english": "it serves"
+		},
+		{
+			"Rank": "1369",
+			"spanish": "preocupe",
+			"english": "worry"
+		},
+		{
+			"Rank": "1370",
+			"spanish": "especie",
+			"english": "species"
+		},
+		{
+			"Rank": "1371",
+			"spanish": "aquella",
+			"english": "that"
+		},
+		{
+			"Rank": "1372",
+			"spanish": "verá",
+			"english": "you will see"
+		},
+		{
+			"Rank": "1373",
+			"spanish": "brazos",
+			"english": "arms"
+		},
+		{
+			"Rank": "1374",
+			"spanish": "llena",
+			"english": "full"
+		},
+		{
+			"Rank": "1375",
+			"spanish": "subir",
+			"english": "go up"
+		},
+		{
+			"Rank": "1376",
+			"spanish": "blanca",
+			"english": "white"
+		},
+		{
+			"Rank": "1377",
+			"spanish": "fe",
+			"english": "faith"
+		},
+		{
+			"Rank": "1378",
+			"spanish": "steve",
+			"english": "steve"
+		},
+		{
+			"Rank": "1379",
+			"spanish": "modos",
+			"english": "modes"
+		},
+		{
+			"Rank": "1380",
+			"spanish": "traído",
+			"english": "brought"
+		},
+		{
+			"Rank": "1381",
+			"spanish": "películas",
+			"english": "films"
+		},
+		{
+			"Rank": "1382",
+			"spanish": "dama",
+			"english": "Lady"
+		},
+		{
+			"Rank": "1383",
+			"spanish": "suya",
+			"english": "his"
+		},
+		{
+			"Rank": "1384",
+			"spanish": "decirlo",
+			"english": "say"
+		},
+		{
+			"Rank": "1385",
+			"spanish": "doble",
+			"english": "double"
+		},
+		{
+			"Rank": "1386",
+			"spanish": "inmediatamente",
+			"english": "immediately"
+		},
+		{
+			"Rank": "1387",
+			"spanish": "culpable",
+			"english": "guilty"
+		},
+		{
+			"Rank": "1388",
+			"spanish": "preocupa",
+			"english": "worries"
+		},
+		{
+			"Rank": "1389",
+			"spanish": "tardes",
+			"english": "afternoon"
+		},
+		{
+			"Rank": "1390",
+			"spanish": "vengo",
+			"english": "I come"
+		},
+		{
+			"Rank": "1391",
+			"spanish": "bosque",
+			"english": "forest"
+		},
+		{
+			"Rank": "1392",
+			"spanish": "perdí",
+			"english": "I missed"
+		},
+		{
+			"Rank": "1393",
+			"spanish": "max",
+			"english": "max"
+		},
+		{
+			"Rank": "1394",
+			"spanish": "volverá",
+			"english": "will return"
+		},
+		{
+			"Rank": "1395",
+			"spanish": "taxi",
+			"english": "cab"
+		},
+		{
+			"Rank": "1396",
+			"spanish": "volar",
+			"english": "fly"
+		},
+		{
+			"Rank": "1397",
+			"spanish": "debido",
+			"english": "due"
+		},
+		{
+			"Rank": "1398",
+			"spanish": "repente",
+			"english": "suddenly"
+		},
+		{
+			"Rank": "1399",
+			"spanish": "bromeando",
+			"english": "joking"
+		},
+		{
+			"Rank": "1400",
+			"spanish": "ios",
+			"english": "ios"
+		},
+		{
+			"Rank": "1401",
+			"spanish": "viejos",
+			"english": "old"
+		},
+		{
+			"Rank": "1402",
+			"spanish": "planeta",
+			"english": "planet"
+		},
+		{
+			"Rank": "1403",
+			"spanish": "leche",
+			"english": "milk"
+		},
+		{
+			"Rank": "1404",
+			"spanish": "nick",
+			"english": "nick"
+		},
+		{
+			"Rank": "1405",
+			"spanish": "tanta",
+			"english": "so much"
+		},
+		{
+			"Rank": "1406",
+			"spanish": "tuviera",
+			"english": "had"
+		},
+		{
+			"Rank": "1407",
+			"spanish": "encantado",
+			"english": "charmed"
+		},
+		{
+			"Rank": "1408",
+			"spanish": "cabrón",
+			"english": "dumbass"
+		},
+		{
+			"Rank": "1409",
+			"spanish": "correr",
+			"english": "run"
+		},
+		{
+			"Rank": "1410",
+			"spanish": "depende",
+			"english": "It depends"
+		},
+		{
+			"Rank": "1411",
+			"spanish": "eddie",
+			"english": "eddie"
+		},
+		{
+			"Rank": "1412",
+			"spanish": "común",
+			"english": "common"
+		},
+		{
+			"Rank": "1413",
+			"spanish": "informe",
+			"english": "report"
+		},
+		{
+			"Rank": "1414",
+			"spanish": "billy",
+			"english": "billy"
+		},
+		{
+			"Rank": "1415",
+			"spanish": "solamente",
+			"english": "only"
+		},
+		{
+			"Rank": "1416",
+			"spanish": "máquina",
+			"english": "machine"
+		},
+		{
+			"Rank": "1417",
+			"spanish": "muere",
+			"english": "go dead"
+		},
+		{
+			"Rank": "1418",
+			"spanish": "principal",
+			"english": "principal"
+		},
+		{
+			"Rank": "1419",
+			"spanish": "ridículo",
+			"english": "ridiculous"
+		},
+		{
+			"Rank": "1420",
+			"spanish": "entrada",
+			"english": "entry"
+		},
+		{
+			"Rank": "1421",
+			"spanish": "encontró",
+			"english": "he found"
+		},
+		{
+			"Rank": "1422",
+			"spanish": "podamos",
+			"english": "we can"
+		},
+		{
+			"Rank": "1423",
+			"spanish": "acabar",
+			"english": "finish"
+		},
+		{
+			"Rank": "1424",
+			"spanish": "américa",
+			"english": "America"
+		},
+		{
+			"Rank": "1425",
+			"spanish": "regresa",
+			"english": "came back"
+		},
+		{
+			"Rank": "1426",
+			"spanish": "probar",
+			"english": "try"
+		},
+		{
+			"Rank": "1427",
+			"spanish": "príncipe",
+			"english": "the prince"
+		},
+		{
+			"Rank": "1428",
+			"spanish": "mr",
+			"english": "mr"
+		},
+		{
+			"Rank": "1429",
+			"spanish": "preparado",
+			"english": "prepared"
+		},
+		{
+			"Rank": "1430",
+			"spanish": "pedido",
+			"english": "order"
+		},
+		{
+			"Rank": "1431",
+			"spanish": "propósito",
+			"english": "purpose"
+		},
+		{
+			"Rank": "1432",
+			"spanish": "dieron",
+			"english": "they gave"
+		},
+		{
+			"Rank": "1433",
+			"spanish": "salido",
+			"english": "stepped out"
+		},
+		{
+			"Rank": "1434",
+			"spanish": "cliente",
+			"english": "client"
+		},
+		{
+			"Rank": "1435",
+			"spanish": "árbol",
+			"english": "tree"
+		},
+		{
+			"Rank": "1436",
+			"spanish": "absoluto",
+			"english": "absolute"
+		},
+		{
+			"Rank": "1437",
+			"spanish": "dejas",
+			"english": "you let"
+		},
+		{
+			"Rank": "1438",
+			"spanish": "quiénes",
+			"english": "Who"
+		},
+		{
+			"Rank": "1439",
+			"spanish": "habías",
+			"english": "you had"
+		},
+		{
+			"Rank": "1440",
+			"spanish": "b",
+			"english": "b"
+		},
+		{
+			"Rank": "1441",
+			"spanish": "parecen",
+			"english": "they look like"
+		},
+		{
+			"Rank": "1442",
+			"spanish": "belleza",
+			"english": "beauty"
+		},
+		{
+			"Rank": "1443",
+			"spanish": "llame",
+			"english": "I called"
+		},
+		{
+			"Rank": "1444",
+			"spanish": "intenta",
+			"english": "try"
+		},
+		{
+			"Rank": "1445",
+			"spanish": "humanos",
+			"english": "humans"
+		},
+		{
+			"Rank": "1446",
+			"spanish": "you",
+			"english": "you"
+		},
+		{
+			"Rank": "1447",
+			"spanish": "tratar",
+			"english": "try"
+		},
+		{
+			"Rank": "1448",
+			"spanish": "vuestra",
+			"english": "your"
+		},
+		{
+			"Rank": "1449",
+			"spanish": "hayas",
+			"english": "you have"
+		},
+		{
+			"Rank": "1450",
+			"spanish": "princesa",
+			"english": "Princess"
+		},
+		{
+			"Rank": "1451",
+			"spanish": "sigo",
+			"english": "I follow"
+		},
+		{
+			"Rank": "1452",
+			"spanish": "quedarse",
+			"english": "stay"
+		},
+		{
+			"Rank": "1453",
+			"spanish": "oeste",
+			"english": "West"
+		},
+		{
+			"Rank": "1454",
+			"spanish": "traer",
+			"english": "bring"
+		},
+		{
+			"Rank": "1455",
+			"spanish": "olvídalo",
+			"english": "forget this"
+		},
+		{
+			"Rank": "1456",
+			"spanish": "francia",
+			"english": "France"
+		},
+		{
+			"Rank": "1457",
+			"spanish": "tuvimos",
+			"english": "we had"
+		},
+		{
+			"Rank": "1458",
+			"spanish": "ayudarme",
+			"english": "help me"
+		},
+		{
+			"Rank": "1459",
+			"spanish": "deprisa",
+			"english": "quickly"
+		},
+		{
+			"Rank": "1460",
+			"spanish": "llaves",
+			"english": "keys"
+		},
+		{
+			"Rank": "1461",
+			"spanish": "tiro",
+			"english": "threw"
+		},
+		{
+			"Rank": "1462",
+			"spanish": "cerdo",
+			"english": "pork"
+		},
+		{
+			"Rank": "1463",
+			"spanish": "gato",
+			"english": "cat"
+		},
+		{
+			"Rank": "1464",
+			"spanish": "inglaterra",
+			"english": "England"
+		},
+		{
+			"Rank": "1465",
+			"spanish": "vistazo",
+			"english": "glance"
+		},
+		{
+			"Rank": "1466",
+			"spanish": "cuántas",
+			"english": "how many"
+		},
+		{
+			"Rank": "1467",
+			"spanish": "defensa",
+			"english": "defending"
+		},
+		{
+			"Rank": "1468",
+			"spanish": "nuevos",
+			"english": "new"
+		},
+		{
+			"Rank": "1469",
+			"spanish": "últimos",
+			"english": "latest"
+		},
+		{
+			"Rank": "1470",
+			"spanish": "reloj",
+			"english": "clock"
+		},
+		{
+			"Rank": "1471",
+			"spanish": "fuimos",
+			"english": "we went"
+		},
+		{
+			"Rank": "1472",
+			"spanish": "batalla",
+			"english": "battle"
+		},
+		{
+			"Rank": "1473",
+			"spanish": "hable",
+			"english": "I talked"
+		},
+		{
+			"Rank": "1474",
+			"spanish": "caminar",
+			"english": "walk"
+		},
+		{
+			"Rank": "1475",
+			"spanish": "hacerle",
+			"english": "give"
+		},
+		{
+			"Rank": "1476",
+			"spanish": "vayamos",
+			"english": "we go"
+		},
+		{
+			"Rank": "1477",
+			"spanish": "interior",
+			"english": "inside"
+		},
+		{
+			"Rank": "1478",
+			"spanish": "bella",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1479",
+			"spanish": "felices",
+			"english": "happy"
+		},
+		{
+			"Rank": "1480",
+			"spanish": "intentando",
+			"english": "trying"
+		},
+		{
+			"Rank": "1481",
+			"spanish": "apartamento",
+			"english": "apartment"
+		},
+		{
+			"Rank": "1482",
+			"spanish": "teatro",
+			"english": "theater"
+		},
+		{
+			"Rank": "1483",
+			"spanish": "hacerme",
+			"english": "me"
+		},
+		{
+			"Rank": "1484",
+			"spanish": "papi",
+			"english": "Daddy"
+		},
+		{
+			"Rank": "1485",
+			"spanish": "ee",
+			"english": "ee"
+		},
+		{
+			"Rank": "1486",
+			"spanish": "asuntos",
+			"english": "issues"
+		},
+		{
+			"Rank": "1487",
+			"spanish": "confiar",
+			"english": "trust"
+		},
+		{
+			"Rank": "1488",
+			"spanish": "hielo",
+			"english": "ice"
+		},
+		{
+			"Rank": "1489",
+			"spanish": "detective",
+			"english": "detective"
+		},
+		{
+			"Rank": "1490",
+			"spanish": "deberían",
+			"english": "should"
+		},
+		{
+			"Rank": "1491",
+			"spanish": "cantar",
+			"english": "to sing"
+		},
+		{
+			"Rank": "1492",
+			"spanish": "bajar",
+			"english": "get low"
+		},
+		{
+			"Rank": "1493",
+			"spanish": "vuestro",
+			"english": "your"
+		},
+		{
+			"Rank": "1494",
+			"spanish": "pelear",
+			"english": "fight"
+		},
+		{
+			"Rank": "1495",
+			"spanish": "locos",
+			"english": "crazy"
+		},
+		{
+			"Rank": "1496",
+			"spanish": "paga",
+			"english": "pay"
+		},
+		{
+			"Rank": "1497",
+			"spanish": "oyes",
+			"english": "you hear"
+		},
+		{
+			"Rank": "1498",
+			"spanish": "completo",
+			"english": "full"
+		},
+		{
+			"Rank": "1499",
+			"spanish": "lucha",
+			"english": "fight"
+		},
+		{
+			"Rank": "1500",
+			"spanish": "fuerzas",
+			"english": "forces"
+		},
+		{
+			"Rank": "1501",
+			"spanish": "ideas",
+			"english": "Ideas"
+		},
+		{
+			"Rank": "1502",
+			"spanish": "borracho",
+			"english": "drunk"
+		},
+		{
+			"Rank": "1503",
+			"spanish": "héroe",
+			"english": "hero"
+		},
+		{
+			"Rank": "1504",
+			"spanish": "camión",
+			"english": "truck"
+		},
+		{
+			"Rank": "1505",
+			"spanish": "cabo",
+			"english": "cape"
+		},
+		{
+			"Rank": "1506",
+			"spanish": "dientes",
+			"english": "teeth"
+		},
+		{
+			"Rank": "1507",
+			"spanish": "verde",
+			"english": "green"
+		},
+		{
+			"Rank": "1508",
+			"spanish": "despacio",
+			"english": "slowly"
+		},
+		{
+			"Rank": "1509",
+			"spanish": "decidido",
+			"english": "decided"
+		},
+		{
+			"Rank": "1510",
+			"spanish": "sociedad",
+			"english": "society"
+		},
+		{
+			"Rank": "1511",
+			"spanish": "pareja",
+			"english": "couple"
+		},
+		{
+			"Rank": "1512",
+			"spanish": "dígame",
+			"english": "tell me"
+		},
+		{
+			"Rank": "1513",
+			"spanish": "estuviste",
+			"english": "you were"
+		},
+		{
+			"Rank": "1514",
+			"spanish": "nariz",
+			"english": "nose"
+		},
+		{
+			"Rank": "1515",
+			"spanish": "vergüenza",
+			"english": "shame"
+		},
+		{
+			"Rank": "1516",
+			"spanish": "caer",
+			"english": "fall"
+		},
+		{
+			"Rank": "1517",
+			"spanish": "j",
+			"english": "j"
+		},
+		{
+			"Rank": "1518",
+			"spanish": "herido",
+			"english": "injured"
+		},
+		{
+			"Rank": "1519",
+			"spanish": "uu",
+			"english": "uu"
+		},
+		{
+			"Rank": "1520",
+			"spanish": "cuentas",
+			"english": "accounts"
+		},
+		{
+			"Rank": "1521",
+			"spanish": "pista",
+			"english": "track"
+		},
+		{
+			"Rank": "1522",
+			"spanish": "siéntese",
+			"english": "sit"
+		},
+		{
+			"Rank": "1523",
+			"spanish": "bebe",
+			"english": "baby"
+		},
+		{
+			"Rank": "1524",
+			"spanish": "sonido",
+			"english": "sound"
+		},
+		{
+			"Rank": "1525",
+			"spanish": "estrellas",
+			"english": "stars"
+		},
+		{
+			"Rank": "1526",
+			"spanish": "sombrero",
+			"english": "hat"
+		},
+		{
+			"Rank": "1527",
+			"spanish": "cayó",
+			"english": "it fell"
+		},
+		{
+			"Rank": "1528",
+			"spanish": "evitar",
+			"english": "avoid"
+		},
+		{
+			"Rank": "1529",
+			"spanish": "pasará",
+			"english": "it will happen"
+		},
+		{
+			"Rank": "1530",
+			"spanish": "maría",
+			"english": "Maria"
+		},
+		{
+			"Rank": "1531",
+			"spanish": "memoria",
+			"english": "memory"
+		},
+		{
+			"Rank": "1532",
+			"spanish": "solos",
+			"english": "alone"
+		},
+		{
+			"Rank": "1533",
+			"spanish": "llorar",
+			"english": "cry"
+		},
+		{
+			"Rank": "1534",
+			"spanish": "nervioso",
+			"english": "nervous"
+		},
+		{
+			"Rank": "1535",
+			"spanish": "lástima",
+			"english": "pity"
+		},
+		{
+			"Rank": "1536",
+			"spanish": "haberlo",
+			"english": "I have"
+		},
+		{
+			"Rank": "1537",
+			"spanish": "época",
+			"english": "time"
+		},
+		{
+			"Rank": "1538",
+			"spanish": "naturaleza",
+			"english": "nature"
+		},
+		{
+			"Rank": "1539",
+			"spanish": "vender",
+			"english": "sell"
+		},
+		{
+			"Rank": "1540",
+			"spanish": "política",
+			"english": "politics"
+		},
+		{
+			"Rank": "1541",
+			"spanish": "levántate",
+			"english": "Get up"
+		},
+		{
+			"Rank": "1542",
+			"spanish": "estudio",
+			"english": "study"
+		},
+		{
+			"Rank": "1543",
+			"spanish": "brillante",
+			"english": "sparkly"
+		},
+		{
+			"Rank": "1544",
+			"spanish": "nivel",
+			"english": "level"
+		},
+		{
+			"Rank": "1545",
+			"spanish": "diferentes",
+			"english": "different"
+		},
+		{
+			"Rank": "1546",
+			"spanish": "dando",
+			"english": "giving"
+		},
+		{
+			"Rank": "1547",
+			"spanish": "hubiese",
+			"english": "I had"
+		},
+		{
+			"Rank": "1548",
+			"spanish": "permite",
+			"english": "It allows"
+		},
+		{
+			"Rank": "1549",
+			"spanish": "justicia",
+			"english": "Justice"
+		},
+		{
+			"Rank": "1550",
+			"spanish": "planes",
+			"english": "plans"
+		},
+		{
+			"Rank": "1551",
+			"spanish": "gay",
+			"english": "gay"
+		},
+		{
+			"Rank": "1552",
+			"spanish": "mírame",
+			"english": "Look at me"
+		},
+		{
+			"Rank": "1553",
+			"spanish": "llegamos",
+			"english": "we arrived"
+		},
+		{
+			"Rank": "1554",
+			"spanish": "roma",
+			"english": "Rome"
+		},
+		{
+			"Rank": "1555",
+			"spanish": "seguramente",
+			"english": "surely"
+		},
+		{
+			"Rank": "1556",
+			"spanish": "papa",
+			"english": "dad"
+		},
+		{
+			"Rank": "1557",
+			"spanish": "parecer",
+			"english": "look"
+		},
+		{
+			"Rank": "1558",
+			"spanish": "t",
+			"english": "t"
+		},
+		{
+			"Rank": "1559",
+			"spanish": "terminó",
+			"english": "finished"
+		},
+		{
+			"Rank": "1560",
+			"spanish": "pierna",
+			"english": "leg"
+		},
+		{
+			"Rank": "1561",
+			"spanish": "quienes",
+			"english": "Who"
+		},
+		{
+			"Rank": "1562",
+			"spanish": "ray",
+			"english": "ray"
+		},
+		{
+			"Rank": "1563",
+			"spanish": "millón",
+			"english": "million"
+		},
+		{
+			"Rank": "1564",
+			"spanish": "enorme",
+			"english": "huge"
+		},
+		{
+			"Rank": "1565",
+			"spanish": "charles",
+			"english": "charles"
+		},
+		{
+			"Rank": "1566",
+			"spanish": "inocente",
+			"english": "innocent"
+		},
+		{
+			"Rank": "1567",
+			"spanish": "mismos",
+			"english": "same"
+		},
+		{
+			"Rank": "1568",
+			"spanish": "pantalones",
+			"english": "pants"
+		},
+		{
+			"Rank": "1569",
+			"spanish": "ministro",
+			"english": "Minister"
+		},
+		{
+			"Rank": "1570",
+			"spanish": "bienvenida",
+			"english": "welcome"
+		},
+		{
+			"Rank": "1571",
+			"spanish": "u",
+			"english": "or"
+		},
+		{
+			"Rank": "1572",
+			"spanish": "refiero",
+			"english": "I mean"
+		},
+		{
+			"Rank": "1573",
+			"spanish": "nombres",
+			"english": "Name (s"
+		},
+		{
+			"Rank": "1574",
+			"spanish": "mando",
+			"english": "I send"
+		},
+		{
+			"Rank": "1575",
+			"spanish": "ponte",
+			"english": "ponte"
+		},
+		{
+			"Rank": "1576",
+			"spanish": "preciosa",
+			"english": "precious"
+		},
+		{
+			"Rank": "1577",
+			"spanish": "alex",
+			"english": "alex"
+		},
+		{
+			"Rank": "1578",
+			"spanish": "quedó",
+			"english": "remained"
+		},
+		{
+			"Rank": "1579",
+			"spanish": "podrás",
+			"english": "you can"
+		},
+		{
+			"Rank": "1580",
+			"spanish": "pesar",
+			"english": "to weigh"
+		},
+		{
+			"Rank": "1581",
+			"spanish": "animal",
+			"english": "animal"
+		},
+		{
+			"Rank": "1582",
+			"spanish": "enferma",
+			"english": "sick"
+		},
+		{
+			"Rank": "1583",
+			"spanish": "extraña",
+			"english": "strange"
+		},
+		{
+			"Rank": "1584",
+			"spanish": "enamorado",
+			"english": "in love"
+		},
+		{
+			"Rank": "1585",
+			"spanish": "tv",
+			"english": "TV"
+		},
+		{
+			"Rank": "1586",
+			"spanish": "autobús",
+			"english": "bus"
+		},
+		{
+			"Rank": "1587",
+			"spanish": "recordar",
+			"english": "remember"
+		},
+		{
+			"Rank": "1588",
+			"spanish": "estáis",
+			"english": "you are"
+		},
+		{
+			"Rank": "1589",
+			"spanish": "pequeños",
+			"english": "little ones"
+		},
+		{
+			"Rank": "1590",
+			"spanish": "luchar",
+			"english": "to struggle"
+		},
+		{
+			"Rank": "1591",
+			"spanish": "date",
+			"english": "date"
+		},
+		{
+			"Rank": "1592",
+			"spanish": "contrario",
+			"english": "contrary"
+		},
+		{
+			"Rank": "1593",
+			"spanish": "tomado",
+			"english": "taken"
+		},
+		{
+			"Rank": "1594",
+			"spanish": "sois",
+			"english": "you are"
+		},
+		{
+			"Rank": "1595",
+			"spanish": "movimiento",
+			"english": "movement"
+		},
+		{
+			"Rank": "1596",
+			"spanish": "estan",
+			"english": "is it so"
+		},
+		{
+			"Rank": "1597",
+			"spanish": "sentado",
+			"english": "seated"
+		},
+		{
+			"Rank": "1598",
+			"spanish": "gana",
+			"english": "desire"
+		},
+		{
+			"Rank": "1599",
+			"spanish": "robert",
+			"english": "robert"
+		},
+		{
+			"Rank": "1600",
+			"spanish": "estén",
+			"english": "are"
+		},
+		{
+			"Rank": "1601",
+			"spanish": "motivo",
+			"english": "reason"
+		},
+		{
+			"Rank": "1602",
+			"spanish": "absolutamente",
+			"english": "absolutely"
+		},
+		{
+			"Rank": "1603",
+			"spanish": "dé",
+			"english": "from"
+		},
+		{
+			"Rank": "1604",
+			"spanish": "puente",
+			"english": "bridge"
+		},
+		{
+			"Rank": "1605",
+			"spanish": "comprendo",
+			"english": "I understand"
+		},
+		{
+			"Rank": "1606",
+			"spanish": "huevos",
+			"english": "eggs"
+		},
+		{
+			"Rank": "1607",
+			"spanish": "tomó",
+			"english": "I take"
+		},
+		{
+			"Rank": "1608",
+			"spanish": "cuento",
+			"english": "story"
+		},
+		{
+			"Rank": "1609",
+			"spanish": "botella",
+			"english": "bottle"
+		},
+		{
+			"Rank": "1610",
+			"spanish": "cuesta",
+			"english": "cost"
+		},
+		{
+			"Rank": "1611",
+			"spanish": "detente",
+			"english": "stop"
+		},
+		{
+			"Rank": "1612",
+			"spanish": "corriendo",
+			"english": "running"
+		},
+		{
+			"Rank": "1613",
+			"spanish": "confianza",
+			"english": "confidence"
+		},
+		{
+			"Rank": "1614",
+			"spanish": "felicidad",
+			"english": "happiness"
+		},
+		{
+			"Rank": "1615",
+			"spanish": "espada",
+			"english": "sword"
+		},
+		{
+			"Rank": "1616",
+			"spanish": "silla",
+			"english": "chair"
+		},
+		{
+			"Rank": "1617",
+			"spanish": "bobby",
+			"english": "bobby"
+		},
+		{
+			"Rank": "1618",
+			"spanish": "noticia",
+			"english": "News"
+		},
+		{
+			"Rank": "1619",
+			"spanish": "casas",
+			"english": "houses"
+		},
+		{
+			"Rank": "1620",
+			"spanish": "televisión",
+			"english": "TV"
+		},
+		{
+			"Rank": "1621",
+			"spanish": "acuerdas",
+			"english": "remember"
+		},
+		{
+			"Rank": "1622",
+			"spanish": "necesitaba",
+			"english": "needed"
+		},
+		{
+			"Rank": "1623",
+			"spanish": "pared",
+			"english": "Wall"
+		},
+		{
+			"Rank": "1624",
+			"spanish": "aquellos",
+			"english": "those"
+		},
+		{
+			"Rank": "1625",
+			"spanish": "prensa",
+			"english": "press"
+		},
+		{
+			"Rank": "1626",
+			"spanish": "trampa",
+			"english": "trap"
+		},
+		{
+			"Rank": "1627",
+			"spanish": "presente",
+			"english": "I presented"
+		},
+		{
+			"Rank": "1628",
+			"spanish": "estarán",
+			"english": "will be"
+		},
+		{
+			"Rank": "1629",
+			"spanish": "jardín",
+			"english": "garden"
+		},
+		{
+			"Rank": "1630",
+			"spanish": "cabello",
+			"english": "hair"
+		},
+		{
+			"Rank": "1631",
+			"spanish": "espectáculo",
+			"english": "show"
+		},
+		{
+			"Rank": "1632",
+			"spanish": "podré",
+			"english": "I will be able"
+		},
+		{
+			"Rank": "1633",
+			"spanish": "grave",
+			"english": "serious"
+		},
+		{
+			"Rank": "1634",
+			"spanish": "bastardo",
+			"english": "bastard"
+		},
+		{
+			"Rank": "1635",
+			"spanish": "dará",
+			"english": "give to"
+		},
+		{
+			"Rank": "1636",
+			"spanish": "siga",
+			"english": "follow"
+		},
+		{
+			"Rank": "1637",
+			"spanish": "periódico",
+			"english": "Newspaper"
+		},
+		{
+			"Rank": "1638",
+			"spanish": "coño",
+			"english": "cone"
+		},
+		{
+			"Rank": "1639",
+			"spanish": "danny",
+			"english": "danny"
+		},
+		{
+			"Rank": "1640",
+			"spanish": "negros",
+			"english": "black"
+		},
+		{
+			"Rank": "1641",
+			"spanish": "alguno",
+			"english": "any"
+		},
+		{
+			"Rank": "1642",
+			"spanish": "anillo",
+			"english": "ring"
+		},
+		{
+			"Rank": "1643",
+			"spanish": "monstruo",
+			"english": "monster"
+		},
+		{
+			"Rank": "1644",
+			"spanish": "total",
+			"english": "total"
+		},
+		{
+			"Rank": "1645",
+			"spanish": "ai",
+			"english": "ai"
+		},
+		{
+			"Rank": "1646",
+			"spanish": "tommy",
+			"english": "tommy"
+		},
+		{
+			"Rank": "1647",
+			"spanish": "piedra",
+			"english": "stone"
+		},
+		{
+			"Rank": "1648",
+			"spanish": "contento",
+			"english": "happy"
+		},
+		{
+			"Rank": "1649",
+			"spanish": "quedarte",
+			"english": "stay"
+		},
+		{
+			"Rank": "1650",
+			"spanish": "tengan",
+			"english": "have"
+		},
+		{
+			"Rank": "1651",
+			"spanish": "oigan",
+			"english": "hear"
+		},
+		{
+			"Rank": "1652",
+			"spanish": "sentí",
+			"english": "I felt"
+		},
+		{
+			"Rank": "1653",
+			"spanish": "debí",
+			"english": "I should"
+		},
+		{
+			"Rank": "1654",
+			"spanish": "ahi",
+			"english": "there"
+		},
+		{
+			"Rank": "1655",
+			"spanish": "policías",
+			"english": "police"
+		},
+		{
+			"Rank": "1656",
+			"spanish": "lugares",
+			"english": "places"
+		},
+		{
+			"Rank": "1657",
+			"spanish": "contrato",
+			"english": "contract"
+		},
+		{
+			"Rank": "1658",
+			"spanish": "playa",
+			"english": "Beach"
+		},
+		{
+			"Rank": "1659",
+			"spanish": "costa",
+			"english": "coast"
+		},
+		{
+			"Rank": "1660",
+			"spanish": "puertas",
+			"english": "doors"
+		},
+		{
+			"Rank": "1661",
+			"spanish": "asiento",
+			"english": "seat"
+		},
+		{
+			"Rank": "1662",
+			"spanish": "tarjeta",
+			"english": "card"
+		},
+		{
+			"Rank": "1663",
+			"spanish": "restaurante",
+			"english": "restaurant"
+		},
+		{
+			"Rank": "1664",
+			"spanish": "quede",
+			"english": "stay"
+		},
+		{
+			"Rank": "1665",
+			"spanish": "paseo",
+			"english": "walk"
+		},
+		{
+			"Rank": "1666",
+			"spanish": "hechos",
+			"english": "acts"
+		},
+		{
+			"Rank": "1667",
+			"spanish": "hagamos",
+			"english": "let's do"
+		},
+		{
+			"Rank": "1668",
+			"spanish": "maravillosa",
+			"english": "wonderful"
+		},
+		{
+			"Rank": "1669",
+			"spanish": "pon",
+			"english": "put"
+		},
+		{
+			"Rank": "1670",
+			"spanish": "inspector",
+			"english": "inspector"
+		},
+		{
+			"Rank": "1671",
+			"spanish": "domingo",
+			"english": "Sunday"
+		},
+		{
+			"Rank": "1672",
+			"spanish": "especialmente",
+			"english": "especially"
+		},
+		{
+			"Rank": "1673",
+			"spanish": "velocidad",
+			"english": "speed"
+		},
+		{
+			"Rank": "1674",
+			"spanish": "negra",
+			"english": "black"
+		},
+		{
+			"Rank": "1675",
+			"spanish": "richard",
+			"english": "richard"
+		},
+		{
+			"Rank": "1676",
+			"spanish": "intentar",
+			"english": "try"
+		},
+		{
+			"Rank": "1677",
+			"spanish": "proyecto",
+			"english": "draft"
+		},
+		{
+			"Rank": "1678",
+			"spanish": "clientes",
+			"english": "customers"
+		},
+		{
+			"Rank": "1679",
+			"spanish": "victoria",
+			"english": "victory"
+		},
+		{
+			"Rank": "1680",
+			"spanish": "encantaría",
+			"english": "love"
+		},
+		{
+			"Rank": "1681",
+			"spanish": "operación",
+			"english": "operation"
+		},
+		{
+			"Rank": "1682",
+			"spanish": "perdió",
+			"english": "lost"
+		},
+		{
+			"Rank": "1683",
+			"spanish": "tonta",
+			"english": "dumb"
+		},
+		{
+			"Rank": "1684",
+			"spanish": "imagen",
+			"english": "image"
+		},
+		{
+			"Rank": "1685",
+			"spanish": "show",
+			"english": "Show"
+		},
+		{
+			"Rank": "1686",
+			"spanish": "lleve",
+			"english": "I carried"
+		},
+		{
+			"Rank": "1687",
+			"spanish": "amas",
+			"english": "love"
+		},
+		{
+			"Rank": "1688",
+			"spanish": "responsable",
+			"english": "responsable"
+		},
+		{
+			"Rank": "1689",
+			"spanish": "gustaba",
+			"english": "He liked"
+		},
+		{
+			"Rank": "1690",
+			"spanish": "aspecto",
+			"english": "appearance"
+		},
+		{
+			"Rank": "1691",
+			"spanish": "tantos",
+			"english": "many"
+		},
+		{
+			"Rank": "1692",
+			"spanish": "sentimientos",
+			"english": "feelings"
+		},
+		{
+			"Rank": "1693",
+			"spanish": "creerlo",
+			"english": "I believe it"
+		},
+		{
+			"Rank": "1694",
+			"spanish": "objetivo",
+			"english": "objective"
+		},
+		{
+			"Rank": "1695",
+			"spanish": "sarah",
+			"english": "sarah"
+		},
+		{
+			"Rank": "1696",
+			"spanish": "llevan",
+			"english": "lead"
+		},
+		{
+			"Rank": "1697",
+			"spanish": "malas",
+			"english": "bad"
+		},
+		{
+			"Rank": "1698",
+			"spanish": "red",
+			"english": "network"
+		},
+		{
+			"Rank": "1699",
+			"spanish": "dejen",
+			"english": "leave"
+		},
+		{
+			"Rank": "1700",
+			"spanish": "nuevas",
+			"english": "news"
+		},
+		{
+			"Rank": "1701",
+			"spanish": "muchacha",
+			"english": "girl"
+		},
+		{
+			"Rank": "1702",
+			"spanish": "dormido",
+			"english": "asleep"
+		},
+		{
+			"Rank": "1703",
+			"spanish": "and",
+			"english": "and"
+		},
+		{
+			"Rank": "1704",
+			"spanish": "historias",
+			"english": "stories"
+		},
+		{
+			"Rank": "1705",
+			"spanish": "arreglar",
+			"english": "fix"
+		},
+		{
+			"Rank": "1706",
+			"spanish": "turno",
+			"english": "turn"
+		},
+		{
+			"Rank": "1707",
+			"spanish": "yendo",
+			"english": "going"
+		},
+		{
+			"Rank": "1708",
+			"spanish": "tuviste",
+			"english": "You saw"
+		},
+		{
+			"Rank": "1709",
+			"spanish": "ponga",
+			"english": "put"
+		},
+		{
+			"Rank": "1710",
+			"spanish": "olvides",
+			"english": "forget"
+		},
+		{
+			"Rank": "1711",
+			"spanish": "escuché",
+			"english": "I heard"
+		},
+		{
+			"Rank": "1712",
+			"spanish": "pasada",
+			"english": "pass"
+		},
+		{
+			"Rank": "1713",
+			"spanish": "mata",
+			"english": "Bush"
+		},
+		{
+			"Rank": "1714",
+			"spanish": "tantas",
+			"english": "many"
+		},
+		{
+			"Rank": "1715",
+			"spanish": "montaña",
+			"english": "Montana"
+		},
+		{
+			"Rank": "1716",
+			"spanish": "gracia",
+			"english": "Grace"
+		},
+		{
+			"Rank": "1717",
+			"spanish": "enfermedad",
+			"english": "disease"
+		},
+		{
+			"Rank": "1718",
+			"spanish": "dedos",
+			"english": "fingers"
+		},
+		{
+			"Rank": "1719",
+			"spanish": "guapa",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1720",
+			"spanish": "querer",
+			"english": "to want"
+		},
+		{
+			"Rank": "1721",
+			"spanish": "p",
+			"english": "p"
+		},
+		{
+			"Rank": "1722",
+			"spanish": "ocurrido",
+			"english": "happened"
+		},
+		{
+			"Rank": "1723",
+			"spanish": "pocos",
+			"english": "few"
+		},
+		{
+			"Rank": "1724",
+			"spanish": "deber",
+			"english": "duty"
+		},
+		{
+			"Rank": "1725",
+			"spanish": "refieres",
+			"english": "you mean"
+		},
+		{
+			"Rank": "1726",
+			"spanish": "viernes",
+			"english": "Friday"
+		},
+		{
+			"Rank": "1727",
+			"spanish": "preocupado",
+			"english": "worried"
+		},
+		{
+			"Rank": "1728",
+			"spanish": "clases",
+			"english": "lessons"
+		},
+		{
+			"Rank": "1729",
+			"spanish": "rayos",
+			"english": "Ray"
+		},
+		{
+			"Rank": "1730",
+			"spanish": "inútil",
+			"english": "Useless"
+		},
+		{
+			"Rank": "1731",
+			"spanish": "washington",
+			"english": "Washington"
+		},
+		{
+			"Rank": "1732",
+			"spanish": "abierto",
+			"english": "open"
+		},
+		{
+			"Rank": "1733",
+			"spanish": "haberte",
+			"english": "sorry"
+		},
+		{
+			"Rank": "1734",
+			"spanish": "oscuridad",
+			"english": "darkness"
+		},
+		{
+			"Rank": "1735",
+			"spanish": "verdadera",
+			"english": "real"
+		},
+		{
+			"Rank": "1736",
+			"spanish": "americano",
+			"english": "American"
+		},
+		{
+			"Rank": "1737",
+			"spanish": "trajo",
+			"english": "He brought"
+		},
+		{
+			"Rank": "1738",
+			"spanish": "gustó",
+			"english": "taste"
+		},
+		{
+			"Rank": "1739",
+			"spanish": "primo",
+			"english": "cousin"
+		},
+		{
+			"Rank": "1740",
+			"spanish": "nacional",
+			"english": "national"
+		},
+		{
+			"Rank": "1741",
+			"spanish": "supe",
+			"english": "I knew"
+		},
+		{
+			"Rank": "1742",
+			"spanish": "colegio",
+			"english": "school"
+		},
+		{
+			"Rank": "1743",
+			"spanish": "malditos",
+			"english": "accursed"
+		},
+		{
+			"Rank": "1744",
+			"spanish": "cuchillo",
+			"english": "knife"
+		},
+		{
+			"Rank": "1745",
+			"spanish": "ibas",
+			"english": "you were"
+		},
+		{
+			"Rank": "1746",
+			"spanish": "llegué",
+			"english": "I arrived"
+		},
+		{
+			"Rank": "1747",
+			"spanish": "sir",
+			"english": "sir"
+		},
+		{
+			"Rank": "1748",
+			"spanish": "diario",
+			"english": "daily"
+		},
+		{
+			"Rank": "1749",
+			"spanish": "francés",
+			"english": "French"
+		},
+		{
+			"Rank": "1750",
+			"spanish": "quedo",
+			"english": "I remain"
+		},
+		{
+			"Rank": "1751",
+			"spanish": "podremos",
+			"english": "we can"
+		},
+		{
+			"Rank": "1752",
+			"spanish": "orgulloso",
+			"english": "proud"
+		},
+		{
+			"Rank": "1753",
+			"spanish": "ladrón",
+			"english": "thief"
+		},
+		{
+			"Rank": "1754",
+			"spanish": "martin",
+			"english": "Martin"
+		},
+		{
+			"Rank": "1755",
+			"spanish": "preguntar",
+			"english": "ask"
+		},
+		{
+			"Rank": "1756",
+			"spanish": "pedí",
+			"english": "I asked"
+		},
+		{
+			"Rank": "1757",
+			"spanish": "central",
+			"english": "central"
+		},
+		{
+			"Rank": "1758",
+			"spanish": "voluntad",
+			"english": "Will"
+		},
+		{
+			"Rank": "1759",
+			"spanish": "harán",
+			"english": "they will"
+		},
+		{
+			"Rank": "1760",
+			"spanish": "jake",
+			"english": "jake"
+		},
+		{
+			"Rank": "1761",
+			"spanish": "www",
+			"english": "www"
+		},
+		{
+			"Rank": "1762",
+			"spanish": "militar",
+			"english": "military"
+		},
+		{
+			"Rank": "1763",
+			"spanish": "agradezco",
+			"english": "I appreciate"
+		},
+		{
+			"Rank": "1764",
+			"spanish": "llevaba",
+			"english": "He is wearing"
+		},
+		{
+			"Rank": "1765",
+			"spanish": "mami",
+			"english": "Mommy"
+		},
+		{
+			"Rank": "1766",
+			"spanish": "lluvia",
+			"english": "rain"
+		},
+		{
+			"Rank": "1767",
+			"spanish": "éramos",
+			"english": "we were"
+		},
+		{
+			"Rank": "1768",
+			"spanish": "natural",
+			"english": "natural"
+		},
+		{
+			"Rank": "1769",
+			"spanish": "calles",
+			"english": "streets"
+		},
+		{
+			"Rank": "1770",
+			"spanish": "cien",
+			"english": "hundred"
+		},
+		{
+			"Rank": "1771",
+			"spanish": "lengua",
+			"english": "language"
+		},
+		{
+			"Rank": "1772",
+			"spanish": "china",
+			"english": "China"
+		},
+		{
+			"Rank": "1773",
+			"spanish": "testigo",
+			"english": "witness"
+		},
+		{
+			"Rank": "1774",
+			"spanish": "ayude",
+			"english": "help"
+		},
+		{
+			"Rank": "1775",
+			"spanish": "quiso",
+			"english": "he wanted"
+		},
+		{
+			"Rank": "1776",
+			"spanish": "cansada",
+			"english": "tired"
+		},
+		{
+			"Rank": "1777",
+			"spanish": "puse",
+			"english": "I put"
+		},
+		{
+			"Rank": "1778",
+			"spanish": "irás",
+			"english": "you will go"
+		},
+		{
+			"Rank": "1779",
+			"spanish": "alemanes",
+			"english": "German"
+		},
+		{
+			"Rank": "1780",
+			"spanish": "pago",
+			"english": "payment"
+		},
+		{
+			"Rank": "1781",
+			"spanish": "mirada",
+			"english": "look"
+		},
+		{
+			"Rank": "1782",
+			"spanish": "momentos",
+			"english": "moments"
+		},
+		{
+			"Rank": "1783",
+			"spanish": "quieto",
+			"english": "still"
+		},
+		{
+			"Rank": "1784",
+			"spanish": "sentía",
+			"english": "he felt"
+		},
+		{
+			"Rank": "1785",
+			"spanish": "escuchen",
+			"english": "listen"
+		},
+		{
+			"Rank": "1786",
+			"spanish": "descansar",
+			"english": "rest"
+		},
+		{
+			"Rank": "1787",
+			"spanish": "mercado",
+			"english": "market"
+		},
+		{
+			"Rank": "1788",
+			"spanish": "dura",
+			"english": "hard"
+		},
+		{
+			"Rank": "1789",
+			"spanish": "humana",
+			"english": "human"
+		},
+		{
+			"Rank": "1790",
+			"spanish": "estúpida",
+			"english": "stupid"
+		},
+		{
+			"Rank": "1791",
+			"spanish": "humor",
+			"english": "humor"
+		},
+		{
+			"Rank": "1792",
+			"spanish": "bienvenidos",
+			"english": "Welcome"
+		},
+		{
+			"Rank": "1793",
+			"spanish": "conocía",
+			"english": "he knew"
+		},
+		{
+			"Rank": "1794",
+			"spanish": "jane",
+			"english": "jane"
+		},
+		{
+			"Rank": "1795",
+			"spanish": "entero",
+			"english": "whole"
+		},
+		{
+			"Rank": "1796",
+			"spanish": "roja",
+			"english": "red"
+		},
+		{
+			"Rank": "1797",
+			"spanish": "larry",
+			"english": "larry"
+		},
+		{
+			"Rank": "1798",
+			"spanish": "llamaba",
+			"english": "He called"
+		},
+		{
+			"Rank": "1799",
+			"spanish": "tomas",
+			"english": "shots"
+		},
+		{
+			"Rank": "1800",
+			"spanish": "dueño",
+			"english": "owner"
+		},
+		{
+			"Rank": "1801",
+			"spanish": "echar",
+			"english": "throw"
+		},
+		{
+			"Rank": "1802",
+			"spanish": "emergencia",
+			"english": "emergency"
+		},
+		{
+			"Rank": "1803",
+			"spanish": "roto",
+			"english": "broken"
+		},
+		{
+			"Rank": "1804",
+			"spanish": "actuar",
+			"english": "Act"
+		},
+		{
+			"Rank": "1805",
+			"spanish": "mark",
+			"english": "mark"
+		},
+		{
+			"Rank": "1806",
+			"spanish": "inmediato",
+			"english": "righ now"
+		},
+		{
+			"Rank": "1807",
+			"spanish": "puntos",
+			"english": "points"
+		},
+		{
+			"Rank": "1808",
+			"spanish": "paciente",
+			"english": "patient"
+		},
+		{
+			"Rank": "1809",
+			"spanish": "olvidé",
+			"english": "forgot"
+		},
+		{
+			"Rank": "1810",
+			"spanish": "hables",
+			"english": "you speak"
+		},
+		{
+			"Rank": "1811",
+			"spanish": "varios",
+			"english": "various"
+		},
+		{
+			"Rank": "1812",
+			"spanish": "polvo",
+			"english": "dust"
+		},
+		{
+			"Rank": "1813",
+			"spanish": "ángeles",
+			"english": "angels"
+		},
+		{
+			"Rank": "1814",
+			"spanish": "coger",
+			"english": "take"
+		},
+		{
+			"Rank": "1815",
+			"spanish": "distancia",
+			"english": "distance"
+		},
+		{
+			"Rank": "1816",
+			"spanish": "bravo",
+			"english": "Bravo"
+		},
+		{
+			"Rank": "1817",
+			"spanish": "europa",
+			"english": "Europe"
+		},
+		{
+			"Rank": "1818",
+			"spanish": "mataron",
+			"english": "they killed"
+		},
+		{
+			"Rank": "1819",
+			"spanish": "tomando",
+			"english": "taking"
+		},
+		{
+			"Rank": "1820",
+			"spanish": "verle",
+			"english": "see"
+		},
+		{
+			"Rank": "1821",
+			"spanish": "señoría",
+			"english": "lordship"
+		},
+		{
+			"Rank": "1822",
+			"spanish": "casarse",
+			"english": "get marry"
+		},
+		{
+			"Rank": "1823",
+			"spanish": "toque",
+			"english": "I touched"
+		},
+		{
+			"Rank": "1824",
+			"spanish": "toques",
+			"english": "touches"
+		},
+		{
+			"Rank": "1825",
+			"spanish": "ángel",
+			"english": "Angel"
+		},
+		{
+			"Rank": "1826",
+			"spanish": "amante",
+			"english": "lover"
+		},
+		{
+			"Rank": "1827",
+			"spanish": "habló",
+			"english": "I speak"
+		},
+		{
+			"Rank": "1828",
+			"spanish": "saca",
+			"english": "pulls out"
+		},
+		{
+			"Rank": "1829",
+			"spanish": "digamos",
+			"english": "let say"
+		},
+		{
+			"Rank": "1830",
+			"spanish": "perfecta",
+			"english": "perfect"
+		},
+		{
+			"Rank": "1831",
+			"spanish": "rosa",
+			"english": "pink"
+		},
+		{
+			"Rank": "1832",
+			"spanish": "llámame",
+			"english": "Giving me a call"
+		},
+		{
+			"Rank": "1833",
+			"spanish": "nosotras",
+			"english": "we"
+		},
+		{
+			"Rank": "1834",
+			"spanish": "peso",
+			"english": "weight"
+		},
+		{
+			"Rank": "1835",
+			"spanish": "carga",
+			"english": "load"
+		},
+		{
+			"Rank": "1836",
+			"spanish": "acto",
+			"english": "act"
+		},
+		{
+			"Rank": "1837",
+			"spanish": "robar",
+			"english": "Steal"
+		},
+		{
+			"Rank": "1838",
+			"spanish": "dejaste",
+			"english": "you left"
+		},
+		{
+			"Rank": "1839",
+			"spanish": "desastre",
+			"english": "disaster"
+		},
+		{
+			"Rank": "1840",
+			"spanish": "bote",
+			"english": "boat"
+		},
+		{
+			"Rank": "1841",
+			"spanish": "huele",
+			"english": "smells"
+		},
+		{
+			"Rank": "1842",
+			"spanish": "embarazada",
+			"english": "pregnant"
+		},
+		{
+			"Rank": "1843",
+			"spanish": "muestra",
+			"english": "sample"
+		},
+		{
+			"Rank": "1844",
+			"spanish": "gordo",
+			"english": "Fat"
+		},
+		{
+			"Rank": "1845",
+			"spanish": "puto",
+			"english": "fucking"
+		},
+		{
+			"Rank": "1846",
+			"spanish": "sheriff",
+			"english": "sheriff"
+		},
+		{
+			"Rank": "1847",
+			"spanish": "viviendo",
+			"english": "living"
+		},
+		{
+			"Rank": "1848",
+			"spanish": "anna",
+			"english": "anna"
+		},
+		{
+			"Rank": "1849",
+			"spanish": "cerrar",
+			"english": "close"
+		},
+		{
+			"Rank": "1850",
+			"spanish": "papeles",
+			"english": "papers"
+		},
+		{
+			"Rank": "1851",
+			"spanish": "valiente",
+			"english": "brave"
+		},
+		{
+			"Rank": "1852",
+			"spanish": "gloria",
+			"english": "glory"
+		},
+		{
+			"Rank": "1853",
+			"spanish": "aceptar",
+			"english": "to accept"
+		},
+		{
+			"Rank": "1854",
+			"spanish": "perdóname",
+			"english": "forgive me"
+		},
+		{
+			"Rank": "1855",
+			"spanish": "perfectamente",
+			"english": "perfectly"
+		},
+		{
+			"Rank": "1856",
+			"spanish": "oscuro",
+			"english": "Dark"
+		},
+		{
+			"Rank": "1857",
+			"spanish": "cuidar",
+			"english": "look after"
+		},
+		{
+			"Rank": "1858",
+			"spanish": "dedo",
+			"english": "finger"
+		},
+		{
+			"Rank": "1859",
+			"spanish": "ruego",
+			"english": "I beg"
+		},
+		{
+			"Rank": "1860",
+			"spanish": "pareció",
+			"english": "it seemed"
+		},
+		{
+			"Rank": "1861",
+			"spanish": "tumba",
+			"english": "tomb"
+		},
+		{
+			"Rank": "1862",
+			"spanish": "coge",
+			"english": "gets"
+		},
+		{
+			"Rank": "1863",
+			"spanish": "resulta",
+			"english": "result"
+		},
+		{
+			"Rank": "1864",
+			"spanish": "dejarlo",
+			"english": "leave"
+		},
+		{
+			"Rank": "1865",
+			"spanish": "comenzar",
+			"english": "begin"
+		},
+		{
+			"Rank": "1866",
+			"spanish": "área",
+			"english": "area"
+		},
+		{
+			"Rank": "1867",
+			"spanish": "metido",
+			"english": "I got"
+		},
+		{
+			"Rank": "1868",
+			"spanish": "limpio",
+			"english": "cleansed"
+		},
+		{
+			"Rank": "1869",
+			"spanish": "descanso",
+			"english": "break"
+		},
+		{
+			"Rank": "1870",
+			"spanish": "lados",
+			"english": "sides"
+		},
+		{
+			"Rank": "1871",
+			"spanish": "posibilidad",
+			"english": "possibility"
+		},
+		{
+			"Rank": "1872",
+			"spanish": "jerry",
+			"english": "jerry"
+		},
+		{
+			"Rank": "1873",
+			"spanish": "guapo",
+			"english": "Handsome"
+		},
+		{
+			"Rank": "1874",
+			"spanish": "uso",
+			"english": "use"
+		},
+		{
+			"Rank": "1875",
+			"spanish": "talento",
+			"english": "talent"
+		},
+		{
+			"Rank": "1876",
+			"spanish": "matarme",
+			"english": "kill me"
+		},
+		{
+			"Rank": "1877",
+			"spanish": "continuar",
+			"english": "continue"
+		},
+		{
+			"Rank": "1878",
+			"spanish": "código",
+			"english": "code"
+		},
+		{
+			"Rank": "1879",
+			"spanish": "comenzó",
+			"english": "started"
+		},
+		{
+			"Rank": "1880",
+			"spanish": "duerme",
+			"english": "sleeps"
+		},
+		{
+			"Rank": "1881",
+			"spanish": "r",
+			"english": "r"
+		},
+		{
+			"Rank": "1882",
+			"spanish": "definitivamente",
+			"english": "definitely"
+		},
+		{
+			"Rank": "1883",
+			"spanish": "dave",
+			"english": "dave"
+		},
+		{
+			"Rank": "1884",
+			"spanish": "directo",
+			"english": "direct"
+		},
+		{
+			"Rank": "1885",
+			"spanish": "vuelvas",
+			"english": "you return"
+		},
+		{
+			"Rank": "1886",
+			"spanish": "dia",
+			"english": "day"
+		},
+		{
+			"Rank": "1887",
+			"spanish": "demonio",
+			"english": "demon"
+		},
+		{
+			"Rank": "1888",
+			"spanish": "parque",
+			"english": "Park"
+		},
+		{
+			"Rank": "1889",
+			"spanish": "cambia",
+			"english": "change"
+		},
+		{
+			"Rank": "1890",
+			"spanish": "olvidar",
+			"english": "to forget"
+		},
+		{
+			"Rank": "1891",
+			"spanish": "cinta",
+			"english": "tape"
+		},
+		{
+			"Rank": "1892",
+			"spanish": "famoso",
+			"english": "famous"
+		},
+		{
+			"Rank": "1893",
+			"spanish": "mataré",
+			"english": "I will kill"
+		},
+		{
+			"Rank": "1894",
+			"spanish": "siguen",
+			"english": "follow"
+		},
+		{
+			"Rank": "1895",
+			"spanish": "saliendo",
+			"english": "coming out"
+		},
+		{
+			"Rank": "1896",
+			"spanish": "muevas",
+			"english": "you move"
+		},
+		{
+			"Rank": "1897",
+			"spanish": "señoras",
+			"english": "ladies"
+		},
+		{
+			"Rank": "1898",
+			"spanish": "disparar",
+			"english": "shoot"
+		},
+		{
+			"Rank": "1899",
+			"spanish": "to",
+			"english": "to"
+		},
+		{
+			"Rank": "1900",
+			"spanish": "chris",
+			"english": "chris"
+		},
+		{
+			"Rank": "1901",
+			"spanish": "sóio",
+			"english": "onIy"
+		},
+		{
+			"Rank": "1902",
+			"spanish": "ja",
+			"english": "ja"
+		},
+		{
+			"Rank": "1903",
+			"spanish": "pide",
+			"english": "asks"
+		},
+		{
+			"Rank": "1904",
+			"spanish": "debió",
+			"english": "He had to"
+		},
+		{
+			"Rank": "1905",
+			"spanish": "empresa",
+			"english": "business"
+		},
+		{
+			"Rank": "1906",
+			"spanish": "precioso",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1907",
+			"spanish": "termina",
+			"english": "ends"
+		},
+		{
+			"Rank": "1908",
+			"spanish": "intención",
+			"english": "intention"
+		},
+		{
+			"Rank": "1909",
+			"spanish": "tambien",
+			"english": "also"
+		},
+		{
+			"Rank": "1910",
+			"spanish": "recibir",
+			"english": "to receive"
+		},
+		{
+			"Rank": "1911",
+			"spanish": "hubieras",
+			"english": "you had"
+		},
+		{
+			"Rank": "1912",
+			"spanish": "abrigo",
+			"english": "coat"
+		},
+		{
+			"Rank": "1913",
+			"spanish": "encuentras",
+			"english": "you find"
+		},
+		{
+			"Rank": "1914",
+			"spanish": "diste",
+			"english": "you gave"
+		},
+		{
+			"Rank": "1915",
+			"spanish": "tendrán",
+			"english": "will"
+		},
+		{
+			"Rank": "1916",
+			"spanish": "cerrado",
+			"english": "closed"
+		},
+		{
+			"Rank": "1917",
+			"spanish": "conocerte",
+			"english": "meet"
+		},
+		{
+			"Rank": "1918",
+			"spanish": "hablé",
+			"english": "I talked"
+		},
+		{
+			"Rank": "1919",
+			"spanish": "menor",
+			"english": "less"
+		},
+		{
+			"Rank": "1920",
+			"spanish": "querría",
+			"english": "I would want"
+		},
+		{
+			"Rank": "1921",
+			"spanish": "imagino",
+			"english": "I imagine"
+		},
+		{
+			"Rank": "1922",
+			"spanish": "genio",
+			"english": "genius"
+		},
+		{
+			"Rank": "1923",
+			"spanish": "profesional",
+			"english": "professional"
+		},
+		{
+			"Rank": "1924",
+			"spanish": "oigo",
+			"english": "I hear"
+		},
+		{
+			"Rank": "1925",
+			"spanish": "pongo",
+			"english": "I put"
+		},
+		{
+			"Rank": "1926",
+			"spanish": "niñas",
+			"english": "girls"
+		},
+		{
+			"Rank": "1927",
+			"spanish": "muévete",
+			"english": "move on"
+		},
+		{
+			"Rank": "1928",
+			"spanish": "opción",
+			"english": "option"
+		},
+		{
+			"Rank": "1929",
+			"spanish": "tribunal",
+			"english": "court"
+		},
+		{
+			"Rank": "1930",
+			"spanish": "tenéis",
+			"english": "you have"
+		},
+		{
+			"Rank": "1931",
+			"spanish": "lago",
+			"english": "lake"
+		},
+		{
+			"Rank": "1932",
+			"spanish": "unidad",
+			"english": "unity"
+		},
+		{
+			"Rank": "1933",
+			"spanish": "abierta",
+			"english": "open"
+		},
+		{
+			"Rank": "1934",
+			"spanish": "efecto",
+			"english": "effect"
+		},
+		{
+			"Rank": "1935",
+			"spanish": "presión",
+			"english": "Pressure"
+		},
+		{
+			"Rank": "1936",
+			"spanish": "varias",
+			"english": "several"
+		},
+		{
+			"Rank": "1937",
+			"spanish": "robo",
+			"english": "Stole"
+		},
+		{
+			"Rank": "1938",
+			"spanish": "saldrá",
+			"english": "will"
+		},
+		{
+			"Rank": "1939",
+			"spanish": "veía",
+			"english": "saw"
+		},
+		{
+			"Rank": "1940",
+			"spanish": "quedado",
+			"english": "left"
+		},
+		{
+			"Rank": "1941",
+			"spanish": "alcalde",
+			"english": "mayor"
+		},
+		{
+			"Rank": "1942",
+			"spanish": "empleo",
+			"english": "job"
+		},
+		{
+			"Rank": "1943",
+			"spanish": "pollo",
+			"english": "chicken"
+		},
+		{
+			"Rank": "1944",
+			"spanish": "whisky",
+			"english": "whiskey"
+		},
+		{
+			"Rank": "1945",
+			"spanish": "california",
+			"english": "California"
+		},
+		{
+			"Rank": "1946",
+			"spanish": "carretera",
+			"english": "highway"
+		},
+		{
+			"Rank": "1947",
+			"spanish": "sábado",
+			"english": "Saturday"
+		},
+		{
+			"Rank": "1948",
+			"spanish": "aeropuerto",
+			"english": "airport"
+		},
+		{
+			"Rank": "1949",
+			"spanish": "jodido",
+			"english": "fucking"
+		},
+		{
+			"Rank": "1950",
+			"spanish": "pobres",
+			"english": "poor"
+		},
+		{
+			"Rank": "1951",
+			"spanish": "medicina",
+			"english": "medicine"
+		},
+		{
+			"Rank": "1952",
+			"spanish": "llevará",
+			"english": "carry"
+		},
+		{
+			"Rank": "1953",
+			"spanish": "gratis",
+			"english": "free"
+		},
+		{
+			"Rank": "1954",
+			"spanish": "cae",
+			"english": "falls off"
+		},
+		{
+			"Rank": "1955",
+			"spanish": "fortuna",
+			"english": "fortune"
+		},
+		{
+			"Rank": "1956",
+			"spanish": "castillo",
+			"english": "castle"
+		},
+		{
+			"Rank": "1957",
+			"spanish": "nieve",
+			"english": "snow"
+		},
+		{
+			"Rank": "1958",
+			"spanish": "busco",
+			"english": "I search"
+		},
+		{
+			"Rank": "1959",
+			"spanish": "riesgo",
+			"english": "risk"
+		},
+		{
+			"Rank": "1960",
+			"spanish": "alemán",
+			"english": "German"
+		},
+		{
+			"Rank": "1961",
+			"spanish": "sucio",
+			"english": "dirty"
+		},
+		{
+			"Rank": "1962",
+			"spanish": "idiotas",
+			"english": "idiots"
+		},
+		{
+			"Rank": "1963",
+			"spanish": "walter",
+			"english": "walter"
+		},
+		{
+			"Rank": "1964",
+			"spanish": "conversación",
+			"english": "conversation"
+		},
+		{
+			"Rank": "1965",
+			"spanish": "fuese",
+			"english": "it was"
+		},
+		{
+			"Rank": "1966",
+			"spanish": "comienzo",
+			"english": "Start"
+		},
+		{
+			"Rank": "1967",
+			"spanish": "pasé",
+			"english": "pass"
+		},
+		{
+			"Rank": "1968",
+			"spanish": "encontraron",
+			"english": "they found"
+		},
+		{
+			"Rank": "1969",
+			"spanish": "elección",
+			"english": "choice"
+		},
+		{
+			"Rank": "1970",
+			"spanish": "ey",
+			"english": "ey"
+		},
+		{
+			"Rank": "1971",
+			"spanish": "salgan",
+			"english": "leave"
+		},
+		{
+			"Rank": "1972",
+			"spanish": "carro",
+			"english": "car"
+		},
+		{
+			"Rank": "1973",
+			"spanish": "piensan",
+			"english": "they think"
+		},
+		{
+			"Rank": "1974",
+			"spanish": "rostro",
+			"english": "face"
+		},
+		{
+			"Rank": "1975",
+			"spanish": "razones",
+			"english": "reasons"
+		},
+		{
+			"Rank": "1976",
+			"spanish": "fué",
+			"english": "It was"
+		},
+		{
+			"Rank": "1977",
+			"spanish": "propiedad",
+			"english": "property"
+		},
+		{
+			"Rank": "1978",
+			"spanish": "mundial",
+			"english": "world"
+		},
+		{
+			"Rank": "1979",
+			"spanish": "familiar",
+			"english": "family"
+		},
+		{
+			"Rank": "1980",
+			"spanish": "libras",
+			"english": "pounds"
+		},
+		{
+			"Rank": "1981",
+			"spanish": "hablemos",
+			"english": "let's talk"
+		},
+		{
+			"Rank": "1982",
+			"spanish": "pedazo",
+			"english": "piece"
+		},
+		{
+			"Rank": "1983",
+			"spanish": "continúa",
+			"english": "keep going"
+		},
+		{
+			"Rank": "1984",
+			"spanish": "cola",
+			"english": "tail"
+		},
+		{
+			"Rank": "1985",
+			"spanish": "enemigos",
+			"english": "enemies"
+		},
+		{
+			"Rank": "1986",
+			"spanish": "marca",
+			"english": "brand"
+		},
+		{
+			"Rank": "1987",
+			"spanish": "líder",
+			"english": "Leader"
+		},
+		{
+			"Rank": "1988",
+			"spanish": "hablan",
+			"english": "speak"
+		},
+		{
+			"Rank": "1989",
+			"spanish": "durmiendo",
+			"english": "sleeping"
+		},
+		{
+			"Rank": "1990",
+			"spanish": "socorro",
+			"english": "Help"
+		},
+		{
+			"Rank": "1991",
+			"spanish": "fútbol",
+			"english": "football"
+		},
+		{
+			"Rank": "1992",
+			"spanish": "detalles",
+			"english": "Details"
+		},
+		{
+			"Rank": "1993",
+			"spanish": "hiciera",
+			"english": "do"
+		},
+		{
+			"Rank": "1994",
+			"spanish": "recibido",
+			"english": "received"
+		},
+		{
+			"Rank": "1995",
+			"spanish": "tesoro",
+			"english": "treasure"
+		},
+		{
+			"Rank": "1996",
+			"spanish": "camisa",
+			"english": "shirt"
+		},
+		{
+			"Rank": "1997",
+			"spanish": "thomas",
+			"english": "thomas"
+		},
+		{
+			"Rank": "1998",
+			"spanish": "comienza",
+			"english": "begins"
+		},
+		{
+			"Rank": "1999",
+			"spanish": "conducir",
+			"english": "drive"
+		},
+		{
+			"Rank": "2000",
+			"spanish": "andar",
+			"english": "walk"
 		}
 	];
 
@@ -28565,10009 +34120,30041 @@
 
 	module.exports = [
 		{
-			"english": "of",
-			"french": "de",
-			"number": "1"
+			"Rank": "1",
+			"portuguese": "que",
+			"english": "what",
+			"Notes": "1) This list was created using public/free subtitles, particularly from opensubtitles.org."
 		},
 		{
+			"Rank": "2",
+			"portuguese": "o",
+			"english": "O",
+			"Notes": "The order is based on the number of occurences of each word in the subtitles."
+		},
+		{
+			"Rank": "3",
+			"portuguese": "a",
+			"english": "The"
+		},
+		{
+			"Rank": "4",
+			"portuguese": "não",
+			"english": "not",
+			"Notes": "2) The english translation is by Google and can be un-reliable for some words."
+		},
+		{
+			"Rank": "5",
+			"portuguese": "de",
+			"english": "in"
+		},
+		{
+			"Rank": "6",
+			"portuguese": "é",
+			"english": "It is",
+			"Notes": "3) You can change the translation from english to another language."
+		},
+		{
+			"Rank": "7",
+			"portuguese": "e",
+			"english": "and",
+			"Notes": "To do this you will first need to make a copy of this spreadsheet.  (File > Make a copy...)"
+		},
+		{
+			"Rank": "8",
+			"portuguese": "um",
+			"english": "one",
+			"Notes": "Then replace the \"en\" in the function in the cells in Column C with your desired language code."
+		},
+		{
+			"Rank": "9",
+			"portuguese": "eu",
 			"english": "I",
-			"french": "je",
-			"number": "2"
+			"Notes": "e.g. Replace \"en\" with \"sv\" for Swedish."
 		},
 		{
-			"english": "East",
-			"french": "est",
-			"number": "3"
-		},
-		{
-			"english": "not",
-			"french": "pas",
-			"number": "4"
-		},
-		{
-			"english": "the",
-			"french": "le",
-			"number": "5"
-		},
-		{
-			"english": "you",
-			"french": "vous",
-			"number": "6"
-		},
-		{
-			"english": "the",
-			"french": "la",
-			"number": "7"
-		},
-		{
-			"english": "you",
-			"french": "tu",
-			"number": "8"
-		},
-		{
-			"english": "than",
-			"french": "que",
-			"number": "9"
-		},
-		{
-			"english": "a",
-			"french": "un",
-			"number": "10"
-		},
-		{
-			"english": "he",
-			"french": "il",
-			"number": "11"
-		},
-		{
-			"english": "and",
-			"french": "et",
-			"number": "12"
-		},
-		{
-			"english": "at",
-			"french": "IE",
-			"number": "13"
-		},
-		{
-			"english": "at",
-			"french": "a",
-			"number": "14"
-		},
-		{
-			"english": "born",
-			"french": "ne",
-			"number": "15"
-		},
-		{
-			"english": "the",
-			"french": "les",
-			"number": "16"
-		},
-		{
-			"english": "this",
-			"french": "ce",
-			"number": "17"
-		},
-		{
-			"english": "in",
-			"french": "en",
-			"number": "18"
-		},
-		{
-			"english": "we",
-			"french": "on",
-			"number": "19"
-		},
-		{
-			"english": "it",
-			"french": "Ia",
-			"number": "20"
-		},
-		{
-			"english": "a",
-			"french": "une",
-			"number": "21"
-		},
-		{
-			"english": "have",
-			"french": "ai",
-			"number": "22"
-		},
-		{
+			"Rank": "10",
+			"portuguese": "para",
 			"english": "for",
-			"french": "pour",
-			"number": "23"
+			"Notes": "List of supported languages:"
 		},
 		{
-			"english": "of the",
-			"french": "des",
-			"number": "24"
-		},
-		{
-			"english": "me",
-			"french": "moi",
-			"number": "25"
-		},
-		{
-			"english": "who",
-			"french": "qui",
-			"number": "26"
-		},
-		{
-			"english": "we",
-			"french": "nous",
-			"number": "27"
-		},
-		{
-			"english": "but",
-			"french": "mais",
-			"number": "28"
-		},
-		{
-			"english": "there",
-			"french": "y",
-			"number": "29"
-		},
-		{
-			"english": "me",
-			"french": "me",
-			"number": "30"
-		},
-		{
-			"english": "in",
-			"french": "dans",
-			"number": "31"
-		},
-		{
-			"english": "of",
-			"french": "du",
-			"number": "32"
-		},
-		{
-			"english": "good",
-			"french": "bien",
-			"number": "33"
-		},
-		{
-			"english": "she",
-			"french": "elle",
-			"number": "34"
-		},
-		{
+			"Rank": "11",
+			"portuguese": "se",
 			"english": "if",
-			"french": "si",
-			"number": "35"
+			"Notes": "https://cloud.google.com/translate/v2/using_rest?hl=en#language-params"
 		},
 		{
-			"english": "all",
-			"french": "tout",
-			"number": "36"
+			"Rank": "12",
+			"portuguese": "me",
+			"english": "me"
 		},
 		{
-			"english": "more",
-			"french": "plus",
-			"number": "37"
+			"Rank": "13",
+			"portuguese": "uma",
+			"english": "an",
+			"Notes": "4) The original source of this list can be found here:"
 		},
 		{
-			"english": "no",
-			"french": "non",
-			"number": "38"
+			"Rank": "14",
+			"portuguese": "está",
+			"english": "it is",
+			"Notes": "https://invokeit.wordpress.com/frequency-word-lists/"
 		},
 		{
-			"english": "my",
-			"french": "mon",
-			"number": "39"
+			"Rank": "15",
+			"portuguese": "com",
+			"english": "with"
 		},
 		{
-			"english": "am",
-			"french": "suis",
-			"number": "40"
+			"Rank": "16",
+			"portuguese": "por",
+			"english": "per",
+			"Notes": "5) It is licensed under the following Creative Commons license:"
 		},
 		{
-			"english": "you",
-			"french": "te",
-			"number": "41"
-		},
-		{
-			"english": "the",
-			"french": "au",
-			"number": "42"
-		},
-		{
-			"english": "with",
-			"french": "avec",
-			"number": "43"
-		},
-		{
-			"english": "Yes",
-			"french": "oui",
-			"number": "44"
-		},
-		{
-			"english": "go",
-			"french": "va",
-			"number": "45"
-		},
-		{
-			"english": "you",
-			"french": "toi",
-			"number": "46"
-		},
-		{
-			"english": "fact",
-			"french": "fait",
-			"number": "47"
-		},
-		{
-			"english": "they",
-			"french": "ils",
-			"number": "48"
-		},
-		{
-			"english": "ace",
-			"french": "as",
-			"number": "49"
-		},
-		{
-			"english": "be",
-			"french": "Itre",
-			"number": "50"
-		},
-		{
-			"english": "make",
-			"french": "faire",
-			"number": "51"
-		},
-		{
-			"english": "himself",
-			"french": "se",
-			"number": "52"
-		},
-		{
-			"english": "as",
-			"french": "comme",
-			"number": "53"
-		},
-		{
-			"english": "was",
-			"french": "Itait",
-			"number": "54"
-		},
-		{
-			"english": "sure",
-			"french": "sur",
-			"number": "55"
-		},
-		{
-			"english": "what",
-			"french": "quoi",
-			"number": "56"
-		},
-		{
-			"english": "right here",
-			"french": "ici",
-			"number": "57"
-		},
-		{
-			"english": "know",
-			"french": "sais",
-			"number": "58"
-		},
-		{
-			"english": "him",
-			"french": "lui",
-			"number": "59"
-		},
-		{
-			"english": "want",
-			"french": "veux",
-			"number": "60"
-		},
-		{
-			"english": "my",
-			"french": "ma",
-			"number": "61"
-		},
-		{
-			"english": "the",
-			"french": "lIE",
-			"number": "62"
-		},
-		{
-			"english": "nothing",
-			"french": "rien",
-			"number": "63"
-		},
-		{
-			"english": "said",
-			"french": "dit",
-			"number": "64"
-		},
-		{
-			"english": "es",
-			"french": "es",
-			"number": "65"
-		},
-		{
-			"english": "or",
-			"french": "oI_",
-			"number": "66"
-		},
-		{
-			"english": "your",
-			"french": "votre",
-			"number": "67"
-		},
-		{
-			"english": "Why",
-			"french": "pourquoi",
-			"number": "68"
-		},
-		{
-			"english": "are",
-			"french": "sont",
-			"number": "69"
-		},
-		{
-			"english": "this",
-			"french": "cette",
-			"number": "70"
-		},
-		{
-			"english": "when",
-			"french": "quand",
-			"number": "71"
-		},
-		{
-			"english": "by",
-			"french": "par",
-			"number": "72"
-		},
-		{
-			"english": "his",
-			"french": "son",
-			"number": "73"
-		},
-		{
-			"english": "your",
-			"french": "ton",
-			"number": "74"
-		},
-		{
-			"english": "can",
-			"french": "peux",
-			"number": "75"
-		},
-		{
-			"english": "so",
-			"french": "alors",
-			"number": "76"
-		},
-		{
-			"english": "say",
-			"french": "dire",
-			"number": "77"
-		},
-		{
-			"english": "am going to",
-			"french": "vais",
-			"number": "78"
-		},
-		{
-			"english": "how",
-			"french": "comment",
-			"number": "79"
-		},
-		{
-			"english": "have",
-			"french": "avez",
-			"number": "80"
-		},
-		{
-			"english": "good",
-			"french": "bon",
-			"number": "81"
-		},
-		{
-			"english": "or",
-			"french": "ou",
-			"number": "82"
-		},
-		{
-			"english": "very",
-			"french": "trIs",
-			"number": "83"
-		},
-		{
-			"english": "even",
-			"french": "mIme",
-			"number": "84"
-		},
-		{
-			"english": "thank you",
-			"french": "merci",
-			"number": "85"
-		},
-		{
-			"english": "have",
-			"french": "ont",
-			"number": "86"
-		},
-		{
-			"english": "never",
-			"french": "jamais",
-			"number": "87"
-		},
-		{
-			"english": "also",
-			"french": "aussi",
-			"number": "88"
-		},
-		{
-			"english": "thing",
-			"french": "chose",
-			"number": "89"
-		},
-		{
-			"english": "see",
-			"french": "voir",
-			"number": "90"
-		},
-		{
-			"english": "going",
-			"french": "allez",
-			"number": "91"
-		},
-		{
-			"english": "all",
-			"french": "tous",
-			"number": "92"
-		},
-		{
-			"english": "these",
-			"french": "ces",
-			"number": "93"
-		},
-		{
-			"english": "two",
-			"french": "deux",
-			"number": "94"
-		},
-		{
-			"english": "her",
-			"french": "sa",
-			"number": "95"
-		},
-		{
-			"english": "must",
-			"french": "faut",
-			"number": "96"
-		},
-		{
-			"english": "summer",
-			"french": "ItI",
-			"number": "97"
-		},
-		{
-			"english": "are",
-			"french": "Ites",
-			"number": "98"
-		},
-		{
-			"english": "your",
-			"french": "ta",
-			"number": "99"
-		},
-		{
-			"english": "to have",
-			"french": "avoir",
-			"number": "100"
-		},
-		{
-			"english": "do",
-			"french": "fais",
-			"number": "101"
-		},
-		{
-			"english": "can",
-			"french": "peut",
-			"number": "102"
-		},
-		{
-			"english": "other",
-			"french": "autre",
-			"number": "103"
-		},
-		{
-			"english": "now",
-			"french": "maintenant",
-			"number": "104"
-		},
-		{
-			"english": "again",
-			"french": "encore",
-			"number": "105"
-		},
-		{
-			"english": "little",
-			"french": "peu",
-			"number": "106"
-		},
-		{
-			"english": "really",
-			"french": "vraiment",
-			"number": "107"
-		},
-		{
-			"english": "m",
-			"french": "m",
-			"number": "108"
-		},
-		{
-			"english": "my",
-			"french": "mes",
-			"number": "109"
-		},
-		{
-			"english": "time",
-			"french": "temps",
-			"number": "110"
-		},
-		{
-			"english": "always",
-			"french": "toujours",
-			"number": "111"
-		},
-		{
-			"english": "our",
-			"french": "notre",
-			"number": "112"
-		},
-		{
-			"english": "life",
-			"french": "vie",
-			"number": "113"
-		},
-		{
-			"english": "Oh",
-			"french": "oh",
-			"number": "114"
-		},
-		{
-			"english": "just",
-			"french": "juste",
-			"number": "115"
-		},
-		{
-			"english": "without",
-			"french": "sans",
-			"number": "116"
-		},
-		{
-			"english": "had",
-			"french": "avait",
-			"number": "117"
-		},
-		{
-			"english": "some",
-			"french": "quelque",
-			"number": "118"
-		},
-		{
-			"english": "world",
-			"french": "monde",
-			"number": "119"
-		},
-		{
-			"english": "agreement",
-			"french": "accord",
-			"number": "120"
-		},
-		{
-			"english": "seen",
-			"french": "vu",
-			"number": "121"
-		},
-		{
-			"english": "time",
-			"french": "fois",
-			"number": "122"
-		},
-		{
-			"english": "go",
-			"french": "aller",
-			"number": "123"
-		},
-		{
-			"english": "too much",
-			"french": "trop",
-			"number": "124"
-		},
-		{
-			"english": "come",
-			"french": "viens",
-			"number": "125"
-		},
-		{
-			"english": "think",
-			"french": "crois",
-			"number": "126"
-		},
-		{
-			"english": "have",
-			"french": "dois",
-			"number": "127"
-		},
-		{
-			"english": "Father",
-			"french": "pIre",
-			"number": "128"
-		},
-		{
-			"english": "God",
-			"french": "dieu",
-			"number": "129"
-		},
-		{
-			"english": "man",
-			"french": "homme",
-			"number": "130"
-		},
-		{
-			"english": "sure",
-			"french": "sIEr",
-			"number": "131"
-		},
-		{
-			"english": "the",
-			"french": "aux",
-			"number": "132"
-		},
-		{
-			"english": "their",
-			"french": "leur",
-			"number": "133"
-		},
-		{
-			"english": "before",
-			"french": "avant",
-			"number": "134"
-		},
-		{
-			"english": "was",
-			"french": "Itais",
-			"number": "135"
-		},
-		{
-			"english": "need",
-			"french": "besoin",
-			"number": "136"
-		},
-		{
-			"english": "wife",
-			"french": "femme",
-			"number": "137"
-		},
-		{
-			"english": "no one",
-			"french": "personne",
-			"number": "138"
-		},
-		{
-			"english": "had",
-			"french": "avais",
-			"number": "139"
-		},
-		{
-			"english": "love",
-			"french": "aime",
-			"number": "140"
-		},
-		{
-			"english": "in",
-			"french": "chez",
-			"number": "141"
-		},
-		{
-			"english": "TRUE",
-			"french": "vrai",
-			"number": "142"
-		},
-		{
-			"english": "years",
-			"french": "ans",
-			"number": "143"
-		},
-		{
-			"english": "his",
-			"french": "ses",
-			"number": "144"
-		},
-		{
-			"english": "wrong",
-			"french": "mal",
-			"number": "145"
-		},
-		{
-			"english": "speak",
-			"french": "parler",
-			"number": "146"
-		},
-		{
-			"english": "your",
-			"french": "vos",
-			"number": "147"
-		},
-		{
-			"english": "after",
-			"french": "aprIs",
-			"number": "148"
-		},
-		{
-			"english": "death",
-			"french": "mort",
-			"number": "149"
-		},
-		{
-			"english": "it",
-			"french": "ca",
-			"number": "150"
-		},
-		{
-			"english": "had",
-			"french": "eu",
-			"number": "151"
-		},
-		{
-			"english": "wants",
-			"french": "veut",
-			"number": "152"
-		},
-		{
-			"english": "by",
-			"french": "parce",
-			"number": "153"
-		},
-		{
-			"english": "will be",
-			"french": "sera",
-			"number": "154"
-		},
-		{
-			"english": "better",
-			"french": "mieux",
-			"number": "155"
-		},
-		{
-			"english": "good",
-			"french": "bonne",
-			"number": "156"
-		},
-		{
-			"english": "small",
-			"french": "petit",
-			"number": "157"
-		},
-		{
-			"english": "your",
-			"french": "tes",
-			"number": "158"
-		},
-		{
-			"english": "tell",
-			"french": "dis",
-			"number": "159"
-		},
-		{
-			"english": "a lot",
-			"french": "beaucoup",
-			"number": "160"
-		},
-		{
-			"english": "gentleman",
-			"french": "monsieur",
-			"number": "161"
-		},
-		{
-			"english": "here",
-			"french": "voilIE",
-			"number": "162"
-		},
-		{
-			"english": "since",
-			"french": "depuis",
-			"number": "163"
-		},
-		{
-			"english": "must",
-			"french": "doit",
-			"number": "164"
-		},
-		{
-			"english": "mother",
-			"french": "mIre",
-			"number": "165"
-		},
-		{
-			"english": "what",
-			"french": "quel",
-			"number": "166"
-		},
-		{
-			"english": "going",
-			"french": "vas",
-			"number": "167"
-		},
-		{
-			"english": "see",
-			"french": "vois",
-			"number": "168"
-		},
-		{
-			"english": "girl",
-			"french": "fille",
-			"number": "169"
-		},
-		{
-			"english": "already",
-			"french": "dIjIE",
-			"number": "170"
-		},
-		{
-			"english": "people",
-			"french": "gens",
-			"number": "171"
-		},
-		{
-			"english": "so",
-			"french": "donc",
-			"number": "172"
-		},
-		{
-			"english": "day",
-			"french": "jour",
-			"number": "173"
-		},
-		{
-			"english": "ll",
-			"french": "ll",
-			"number": "174"
-		},
-		{
-			"english": "other",
-			"french": "autres",
-			"number": "175"
-		},
-		{
-			"english": "evening",
-			"french": "soir",
-			"number": "176"
-		},
-		{
-			"english": "all",
-			"french": "toute",
-			"number": "177"
-		},
-		{
-			"english": "yeah",
-			"french": "ouais",
-			"number": "178"
-		},
-		{
-			"english": "money",
-			"french": "argent",
-			"number": "179"
-		},
-		{
-			"english": "House",
-			"french": "maison",
-			"number": "180"
-		},
-		{
-			"english": "name",
-			"french": "nom",
-			"number": "181"
-		},
-		{
-			"english": "Hello",
-			"french": "bonjour",
-			"number": "182"
-		},
-		{
-			"english": "thought",
-			"french": "pense",
-			"number": "183"
-		},
-		{
-			"english": "our",
-			"french": "nos",
-			"number": "184"
-		},
-		{
-			"english": "this",
-			"french": "cela",
-			"number": "185"
-		},
-		{
-			"english": "night",
-			"french": "nuit",
-			"number": "186"
-		},
-		{
-			"english": "have",
-			"french": "avons",
-			"number": "187"
-		},
-		{
-			"english": "ii",
-			"french": "ii",
-			"number": "188"
-		},
-		{
-			"english": "shit",
-			"french": "merde",
-			"number": "189"
-		},
-		{
-			"english": "this",
-			"french": "cet",
-			"number": "190"
-		},
-		{
-			"english": "dad",
-			"french": "papa",
-			"number": "191"
-		},
-		{
-			"english": "mom",
-			"french": "maman",
-			"number": "192"
-		},
-		{
-			"english": "rest",
-			"french": "reste",
-			"number": "193"
-		},
-		{
-			"english": "fear",
-			"french": "peur",
-			"number": "194"
-		},
-		{
-			"english": "sorry",
-			"french": "dIsolI",
-			"number": "195"
-		},
-		{
-			"english": "Hello",
-			"french": "salut",
-			"number": "196"
-		},
-		{
-			"english": "alone",
-			"french": "seul",
-			"number": "197"
-		},
-		{
-			"english": "come",
-			"french": "arrive",
-			"number": "198"
-		},
-		{
-			"english": "quick",
-			"french": "vite",
-			"number": "199"
-		},
-		{
-			"english": "take",
-			"french": "prendre",
-			"number": "200"
-		},
-		{
-			"english": "look",
-			"french": "regarde",
-			"number": "201"
-		},
-		{
-			"english": "is",
-			"french": "soit",
-			"number": "202"
-		},
-		{
-			"english": "air",
-			"french": "air",
-			"number": "203"
-		},
-		{
-			"english": "what",
-			"french": "quelle",
-			"number": "204"
-		},
-		{
-			"english": "past",
-			"french": "passI",
-			"number": "205"
-		},
-		{
-			"english": "three",
-			"french": "trois",
-			"number": "206"
-		},
-		{
-			"english": "know",
-			"french": "savoir",
-			"number": "207"
-		},
-		{
-			"english": "please",
-			"french": "plaI t",
-			"number": "208"
-		},
-		{
-			"english": "things",
-			"french": "choses",
-			"number": "209"
-		},
-		{
-			"english": "son",
-			"french": "fils",
-			"number": "210"
-		},
-		{
-			"english": "ha",
-			"french": "ah",
-			"number": "211"
-		},
-		{
-			"english": "low",
-			"french": "bas",
-			"number": "212"
-		},
-		{
-			"english": "less",
-			"french": "moins",
-			"number": "213"
-		},
-		{
-			"english": "enter",
-			"french": "entre",
-			"number": "214"
-		},
-		{
-			"english": "past",
-			"french": "passe",
-			"number": "215"
-		},
-		{
-			"english": "Hey",
-			"french": "hI",
-			"number": "216"
-		},
-		{
-			"english": "tomorrow",
-			"french": "demain",
-			"number": "217"
-		},
-		{
-			"english": "call",
-			"french": "appelle",
-			"number": "218"
-		},
-		{
-			"english": "great",
-			"french": "grand",
-			"number": "219"
-		},
-		{
-			"english": "head",
-			"french": "tIte",
-			"number": "220"
-		},
-		{
-			"english": "want",
-			"french": "voulez",
-			"number": "221"
-		},
-		{
-			"english": "make",
-			"french": "faites",
-			"number": "222"
-		},
-		{
-			"english": "stopped",
-			"french": "arrIte",
-			"number": "223"
-		},
-		{
-			"english": "huh",
-			"french": "hein",
-			"number": "224"
-		},
-		{
-			"english": "hold on",
-			"french": "attends",
-			"number": "225"
-		},
-		{
-			"english": "OK",
-			"french": "ok",
-			"number": "226"
-		},
-		{
-			"english": "reason",
-			"french": "raison",
-			"number": "227"
-		},
-		{
-			"english": "children",
-			"french": "enfants",
-			"number": "228"
-		},
-		{
-			"english": "enough",
-			"french": "assez",
-			"number": "229"
-		},
-		{
-			"english": "would have",
-			"french": "aurais",
-			"number": "230"
-		},
-		{
-			"english": "they",
-			"french": "elles",
-			"number": "231"
-		},
-		{
-			"english": "wanted",
-			"french": "voulais",
-			"number": "232"
-		},
-		{
-			"english": "are",
-			"french": "sommes",
-			"number": "233"
-		},
-		{
-			"english": "days",
-			"french": "jours",
-			"number": "234"
-		},
-		{
-			"english": "spoken",
-			"french": "parle",
-			"number": "235"
-		},
-		{
-			"english": "moment",
-			"french": "moment",
-			"number": "236"
-		},
-		{
-			"english": "love",
-			"french": "amour",
-			"number": "237"
-		},
-		{
-			"english": "all",
-			"french": "toutes",
-			"number": "238"
-		},
-		{
-			"english": "hour",
-			"french": "heure",
-			"number": "239"
-		},
-		{
-			"english": "then",
-			"french": "puis",
-			"number": "240"
-		},
-		{
-			"english": "late",
-			"french": "tard",
-			"number": "241"
-		},
-		{
-			"english": "kill",
-			"french": "tuer",
-			"number": "242"
-		},
-		{
-			"english": "eh",
-			"french": "eh",
-			"number": "243"
-		},
-		{
+			"Rank": "17",
+			"portuguese": "do",
 			"english": "of",
-			"french": "dIE",
-			"number": "244"
+			"Notes": "http://creativecommons.org/licenses/by-sa/3.0/"
 		},
 		{
-			"english": "friend",
-			"french": "ami",
-			"number": "245"
+			"Rank": "18",
+			"portuguese": "te",
+			"english": "you"
 		},
 		{
-			"english": "small",
-			"french": "petite",
-			"number": "246"
+			"Rank": "19",
+			"portuguese": "os",
+			"english": "the",
+			"Notes": "6) More Most Common word lists (other languages) can be found here:"
 		},
 		{
-			"english": "go",
-			"french": "partir",
-			"number": "247"
-		},
-		{
-			"english": "men",
-			"french": "hommes",
-			"number": "248"
-		},
-		{
-			"english": "know",
-			"french": "connais",
-			"number": "249"
-		},
-		{
-			"english": "help",
-			"french": "aider",
-			"number": "250"
-		},
-		{
-			"english": "know",
-			"french": "savez",
-			"number": "251"
-		},
-		{
-			"english": "guys",
-			"french": "gars",
-			"number": "252"
-		},
-		{
-			"english": "luck",
-			"french": "chance",
-			"number": "253"
-		},
-		{
-			"english": "how much",
-			"french": "combien",
-			"number": "254"
-		},
-		{
-			"english": "so",
-			"french": "tant",
-			"number": "255"
-		},
-		{
-			"english": "know",
-			"french": "sait",
-			"number": "256"
-		},
-		{
-			"english": "part",
-			"french": "part",
-			"number": "257"
-		},
-		{
-			"english": "car",
-			"french": "voiture",
-			"number": "258"
-		},
-		{
-			"english": "taken",
-			"french": "pris",
-			"number": "259"
-		},
-		{
-			"english": "problem",
-			"french": "problIme",
-			"number": "260"
-		},
-		{
-			"english": "hui",
-			"french": "hui",
-			"number": "261"
-		},
-		{
-			"english": "stroke",
-			"french": "coup",
-			"number": "262"
-		},
-		{
-			"english": "door",
-			"french": "porte",
-			"number": "263"
-		},
-		{
-			"english": "would be",
-			"french": "serait",
-			"number": "264"
-		},
-		{
-			"english": "take",
-			"french": "prends",
-			"number": "265"
-		},
-		{
-			"english": "come",
-			"french": "venir",
-			"number": "266"
-		},
-		{
-			"english": "job",
-			"french": "travail",
-			"number": "267"
-		},
-		{
-			"english": "could",
-			"french": "pu",
-			"number": "268"
-		},
-		{
-			"english": "family",
-			"french": "famille",
-			"number": "269"
-		},
-		{
-			"english": "alone",
-			"french": "seule",
-			"number": "270"
-		},
-		{
-			"english": "meaning",
-			"french": "sens",
-			"number": "271"
-		},
-		{
-			"english": "will",
-			"french": "allons",
-			"number": "272"
-		},
-		{
-			"english": "whore",
-			"french": "putain",
-			"number": "273"
-		},
-		{
-			"english": "idea",
-			"french": "idIe",
-			"number": "274"
-		},
-		{
-			"english": "or",
-			"french": "ni",
-			"number": "275"
-		},
-		{
-			"english": "against",
-			"french": "contre",
-			"number": "276"
-		},
-		{
-			"english": "meet again",
-			"french": "revoir",
-			"number": "277"
-		},
-		{
-			"english": "heard",
-			"french": "entendu",
-			"number": "278"
-		},
-		{
-			"english": "understand",
-			"french": "comprends",
-			"number": "279"
-		},
-		{
-			"english": "pass",
-			"french": "passer",
-			"number": "280"
-		},
-		{
-			"english": "while",
-			"french": "pendant",
-			"number": "281"
-		},
-		{
-			"english": "find",
-			"french": "trouvI",
-			"number": "282"
-		},
-		{
-			"english": "find",
-			"french": "trouver",
-			"number": "283"
-		},
-		{
-			"english": "a few",
-			"french": "quelques",
-			"number": "284"
-		},
-		{
-			"english": "just",
-			"french": "vient",
-			"number": "285"
-		},
-		{
-			"english": "old",
-			"french": "vieux",
-			"number": "286"
-		},
-		{
-			"english": "would have",
-			"french": "aurait",
-			"number": "287"
-		},
-		{
-			"english": "Warning",
-			"french": "attention",
-			"number": "288"
-		},
-		{
-			"english": "request",
-			"french": "demande",
-			"number": "289"
-		},
-		{
-			"english": "look for",
-			"french": "chercher",
-			"number": "290"
-		},
-		{
-			"english": "under",
-			"french": "sous",
-			"number": "291"
-		},
-		{
-			"english": "can",
-			"french": "pouvez",
-			"number": "292"
-		},
-		{
-			"english": "here is",
-			"french": "voici",
-			"number": "293"
-		},
-		{
-			"english": "could",
-			"french": "pourrait",
-			"number": "294"
-		},
-		{
-			"english": "blood",
-			"french": "sang",
-			"number": "295"
-		},
-		{
-			"english": "history",
-			"french": "histoire",
-			"number": "296"
-		},
-		{
-			"english": "friends",
-			"french": "amis",
-			"number": "297"
-		},
-		{
-			"english": "exit",
-			"french": "sortir",
-			"number": "298"
-		},
-		{
-			"english": "question",
-			"french": "question",
-			"number": "299"
-		},
-		{
-			"english": "come",
-			"french": "venez",
-			"number": "300"
-		},
-		{
-			"english": "stay",
-			"french": "rester",
-			"number": "301"
-		},
-		{
-			"english": "brother",
-			"french": "frIre",
-			"number": "302"
-		},
-		{
-			"english": "city",
-			"french": "ville",
-			"number": "303"
-		},
-		{
-			"english": "finished",
-			"french": "fini",
-			"number": "304"
-		},
-		{
-			"english": "new",
-			"french": "nouveau",
-			"number": "305"
-		},
-		{
-			"english": "them",
-			"french": "eux",
-			"number": "306"
-		},
-		{
-			"english": "thing",
-			"french": "truc",
-			"number": "307"
-		},
-		{
-			"english": "like",
-			"french": "tiens",
-			"number": "308"
-		},
-		{
-			"english": "eyes",
-			"french": "yeux",
-			"number": "309"
-		},
-		{
-			"english": "month",
-			"french": "mois",
-			"number": "310"
-		},
-		{
-			"english": "leash",
-			"french": "laisse",
-			"number": "311"
-		},
-		{
-			"english": "guy",
-			"french": "mec",
-			"number": "312"
-		},
-		{
-			"english": "long time",
-			"french": "longtemps",
-			"number": "313"
-		},
-		{
-			"english": "beautiful",
-			"french": "belle",
-			"number": "314"
-		},
-		{
-			"english": "police",
-			"french": "police",
-			"number": "315"
-		},
-		{
-			"english": "only",
-			"french": "seulement",
-			"number": "316"
-		},
-		{
-			"english": "imported",
-			"french": "importe",
-			"number": "317"
-		},
-		{
-			"english": "hours",
-			"french": "heures",
-			"number": "318"
-		},
-		{
-			"english": "water",
-			"french": "eau",
-			"number": "319"
-		},
-		{
-			"english": "because",
-			"french": "car",
-			"number": "320"
-		},
-		{
-			"english": "Great",
-			"french": "super",
-			"number": "321"
-		},
-		{
-			"english": "each",
-			"french": "chaque",
-			"number": "322"
-		},
-		{
-			"english": "case",
-			"french": "cas",
-			"number": "323"
-		},
-		{
-			"english": "will",
-			"french": "vont",
-			"number": "324"
-		},
-		{
-			"english": "kill",
-			"french": "tuI",
-			"number": "325"
-		},
-		{
-			"english": "Earth",
-			"french": "terre",
-			"number": "326"
-		},
-		{
-			"english": "square",
-			"french": "place",
-			"number": "327"
-		},
-		{
-			"english": "hand",
-			"french": "main",
-			"number": "328"
-		},
-		{
-			"english": "together",
-			"french": "ensemble",
-			"number": "329"
-		},
-		{
-			"english": "type",
-			"french": "type",
-			"number": "330"
-		},
-		{
-			"english": "beautiful",
-			"french": "beau",
-			"number": "331"
-		},
-		{
-			"english": "sorry",
-			"french": "pardon",
-			"number": "332"
-		},
-		{
-			"english": "towards",
-			"french": "vers",
-			"number": "333"
-		},
-		{
-			"english": "no",
-			"french": "aucun",
-			"number": "334"
-		},
-		{
-			"english": "war",
-			"french": "guerre",
-			"number": "335"
-		},
-		{
-			"english": "find",
-			"french": "trouve",
-			"number": "336"
-		},
-		{
-			"english": "part",
-			"french": "partie",
-			"number": "337"
-		},
-		{
-			"english": "after",
-			"french": "suite",
-			"number": "338"
-		},
-		{
-			"english": "pray",
-			"french": "prie",
-			"number": "339"
-		},
-		{
-			"english": "in front of",
-			"french": "devant",
-			"number": "340"
-		},
-		{
-			"english": "including",
-			"french": "compris",
-			"number": "341"
-		},
-		{
-			"english": "come",
-			"french": "arrivI",
-			"number": "342"
-		},
-		{
-			"english": "Mrs",
-			"french": "mme",
-			"number": "343"
-		},
-		{
-			"english": "their",
-			"french": "leurs",
-			"number": "344"
-		},
-		{
-			"english": "were",
-			"french": "Itaient",
-			"number": "345"
-		},
-		{
-			"english": "to put",
-			"french": "mettre",
-			"number": "346"
-		},
-		{
-			"english": "morning",
-			"french": "matin",
-			"number": "347"
-		},
-		{
-			"english": "help",
-			"french": "aide",
-			"number": "348"
-		},
-		{
-			"english": "above",
-			"french": "dessus",
-			"number": "349"
-		},
-		{
-			"english": "am",
-			"french": "sois",
-			"number": "350"
-		},
-		{
-			"english": "kind",
-			"french": "genre",
-			"number": "351"
-		},
-		{
-			"english": "end",
-			"french": "fin",
-			"number": "352"
-		},
-		{
-			"english": "lost",
-			"french": "perdu",
-			"number": "353"
-		},
-		{
-			"english": "young",
-			"french": "jeune",
-			"number": "354"
-		},
-		{
-			"english": "sweetheart",
-			"french": "chIrie",
-			"number": "355"
-		},
-		{
-			"english": "first",
-			"french": "premier",
-			"number": "356"
-		},
-		{
-			"english": "Wait",
-			"french": "attendez",
-			"number": "357"
-		},
-		{
-			"english": "child",
-			"french": "enfant",
-			"number": "358"
-		},
-		{
-			"english": "given",
-			"french": "donne",
-			"number": "359"
-		},
-		{
-			"english": "came",
-			"french": "venu",
-			"number": "360"
-		},
-		{
-			"english": "would like to",
-			"french": "aimerais",
-			"number": "361"
-		},
-		{
-			"english": "law",
-			"french": "droit",
-			"number": "362"
-		},
-		{
-			"english": "side",
-			"french": "cItI",
-			"number": "363"
-		},
-		{
-			"english": "bedroom",
-			"french": "chambre",
-			"number": "364"
-		},
-		{
-			"english": "far",
-			"french": "loin",
-			"number": "365"
-		},
-		{
-			"english": "give",
-			"french": "donner",
-			"number": "366"
-		},
-		{
-			"english": "should",
-			"french": "devrais",
-			"number": "367"
-		},
-		{
-			"english": "let",
-			"french": "laisser",
-			"number": "368"
-		},
-		{
-			"english": "fire",
-			"french": "feu",
-			"number": "369"
-		},
-		{
-			"english": "to play",
-			"french": "jouer",
-			"number": "370"
-		},
-		{
-			"english": "ie",
-			"french": "ie",
-			"number": "371"
-		},
-		{
-			"english": "train",
-			"french": "train",
-			"number": "372"
-		},
-		{
-			"english": "large",
-			"french": "gros",
-			"number": "373"
-		},
-		{
-			"english": "account",
-			"french": "compte",
-			"number": "374"
-		},
-		{
-			"english": "s",
-			"french": "s",
-			"number": "375"
-		},
-		{
-			"english": "knew",
-			"french": "savais",
-			"number": "376"
-		},
-		{
-			"english": "die",
-			"french": "mourir",
-			"number": "377"
-		},
-		{
-			"english": "power",
-			"french": "pouvoir",
-			"number": "378"
-		},
-		{
-			"english": "look",
-			"french": "regardez",
-			"number": "379"
-		},
-		{
-			"english": "spoken",
-			"french": "parlI",
-			"number": "380"
-		},
-		{
-			"english": "given",
-			"french": "donnI",
-			"number": "381"
-		},
-		{
-			"english": "first",
-			"french": "premiIre",
-			"number": "382"
-		},
-		{
-			"english": "will have",
-			"french": "aura",
-			"number": "383"
-		},
-		{
-			"english": "latest",
-			"french": "derniIre",
-			"number": "384"
-		},
-		{
-			"english": "minutes",
-			"french": "minutes",
-			"number": "385"
-		},
-		{
-			"english": "any",
-			"french": "aucune",
-			"number": "386"
-		},
-		{
-			"english": "husband",
-			"french": "mari",
-			"number": "387"
-		},
-		{
-			"english": "finally",
-			"french": "enfin",
-			"number": "388"
-		},
-		{
-			"english": "Mrs",
-			"french": "madame",
-			"number": "389"
-		},
-		{
-			"english": "way",
-			"french": "faIon",
-			"number": "390"
-		},
-		{
-			"english": "should",
-			"french": "devrait",
-			"number": "391"
-		},
-		{
-			"english": "placed",
-			"french": "mis",
-			"number": "392"
-		},
-		{
-			"english": "movie",
-			"french": "film",
-			"number": "393"
-		},
-		{
-			"english": "women",
-			"french": "femmes",
-			"number": "394"
-		},
-		{
-			"english": "fort",
-			"french": "fort",
-			"number": "395"
-		},
-		{
-			"english": "could",
-			"french": "pourrais",
-			"number": "396"
-		},
-		{
-			"english": "listening",
-			"french": "Icoute",
-			"number": "397"
-		},
-		{
-			"english": "country",
-			"french": "pays",
-			"number": "398"
-		},
-		{
-			"english": "left",
-			"french": "parti",
-			"number": "399"
-		},
-		{
-			"english": "case",
-			"french": "affaire",
-			"number": "400"
-		},
-		{
-			"english": "in law",
-			"french": "endroit",
-			"number": "401"
-		},
-		{
-			"english": "body",
-			"french": "corps",
-			"number": "402"
-		},
-		{
-			"english": "ia",
-			"french": "ia",
-			"number": "403"
-		},
-		{
-			"english": "crazy",
-			"french": "fou",
-			"number": "404"
-		},
-		{
-			"english": "live",
-			"french": "vivre",
-			"number": "405"
-		},
-		{
-			"english": "ready",
-			"french": "prIt",
-			"number": "406"
-		},
-		{
-			"english": "whose",
-			"french": "dont",
-			"number": "407"
-		},
-		{
-			"english": "hope",
-			"french": "espIre",
-			"number": "408"
-		},
-		{
-			"english": "great",
-			"french": "grande",
-			"number": "409"
-		},
-		{
-			"english": "cause",
-			"french": "cause",
-			"number": "410"
-		},
-		{
-			"english": "point",
-			"french": "point",
-			"number": "411"
-		},
-		{
-			"english": "girls",
-			"french": "filles",
-			"number": "412"
-		},
-		{
-			"english": "outside",
-			"french": "dehors",
-			"number": "413"
-		},
-		{
-			"english": "yesterday",
-			"french": "hier",
-			"number": "414"
-		},
-		{
-			"english": "job",
-			"french": "boulot",
-			"number": "415"
-		},
-		{
-			"english": "thought",
-			"french": "pensais",
-			"number": "416"
-		},
-		{
-			"english": "boy",
-			"french": "garIon",
-			"number": "417"
-		},
-		{
-			"english": "near",
-			"french": "prIs",
-			"number": "418"
-		},
-		{
-			"english": "sorry",
-			"french": "dIsolIe",
-			"number": "419"
-		},
-		{
-			"english": "five",
-			"french": "cinq",
-			"number": "420"
-		},
-		{
-			"english": "chief",
-			"french": "chef",
-			"number": "421"
-		},
-		{
-			"english": "h",
-			"french": "h",
-			"number": "422"
-		},
-		{
-			"english": "so",
-			"french": "ainsi",
-			"number": "423"
-		},
-		{
-			"english": "top",
-			"french": "haut",
-			"number": "424"
-		},
-		{
-			"english": "that",
-			"french": "celui",
-			"number": "425"
-		},
-		{
-			"english": "request",
-			"french": "demandI",
-			"number": "426"
-		},
-		{
-			"english": "would say",
-			"french": "dirait",
-			"number": "427"
-		},
-		{
-			"english": "baby",
-			"french": "bIbI",
-			"number": "428"
-		},
-		{
-			"english": "possible",
-			"french": "possible",
-			"number": "429"
-		},
-		{
-			"english": "school",
-			"french": "Icole",
-			"number": "430"
-		},
-		{
-			"english": "full",
-			"french": "plein",
-			"number": "431"
-		},
-		{
-			"english": "hands",
-			"french": "mains",
-			"number": "432"
-		},
-		{
-			"english": "years",
-			"french": "annIes",
-			"number": "433"
-		},
-		{
-			"english": "say",
-			"french": "dites",
-			"number": "434"
-		},
-		{
-			"english": "new",
-			"french": "nouvelle",
-			"number": "435"
-		},
-		{
-			"english": "eat",
-			"french": "manger",
-			"number": "436"
-		},
-		{
-			"english": "doctor",
-			"french": "docteur",
-			"number": "437"
-		},
-		{
-			"english": "tower",
-			"french": "tour",
-			"number": "438"
-		},
-		{
-			"english": "believe",
-			"french": "croire",
-			"number": "439"
-		},
-		{
-			"english": "those",
-			"french": "ceux",
-			"number": "440"
-		},
-		{
-			"english": "four",
-			"french": "quatre",
-			"number": "441"
-		},
-		{
-			"english": "rather",
-			"french": "plutIt",
-			"number": "442"
-		},
-		{
-			"english": "market",
-			"french": "marche",
-			"number": "443"
-		},
-		{
-			"english": "week",
-			"french": "semaine",
-			"number": "444"
-		},
-		{
-			"english": "truth",
-			"french": "vIritI",
-			"number": "445"
-		},
-		{
-			"english": "desire",
-			"french": "envie",
-			"number": "446"
-		},
-		{
-			"english": "captain",
-			"french": "capitaine",
-			"number": "447"
-		},
-		{
-			"english": "e",
-			"french": "e",
-			"number": "448"
-		},
-		{
-			"english": "Stop",
-			"french": "arrIter",
-			"number": "449"
-		},
-		{
-			"english": "business",
-			"french": "affaires",
-			"number": "450"
-		},
-		{
-			"english": "soon",
-			"french": "bientIt",
-			"number": "451"
-		},
-		{
-			"english": "view",
-			"french": "vue",
-			"number": "452"
-		},
-		{
-			"english": "request",
-			"french": "demander",
-			"number": "453"
-		},
-		{
-			"english": "latest",
-			"french": "dernier",
-			"number": "454"
-		},
-		{
-			"english": "moment",
-			"french": "instant",
-			"number": "455"
-		},
-		{
-			"english": "try",
-			"french": "essaie",
-			"number": "456"
-		},
-		{
-			"english": "arrive",
-			"french": "arriver",
-			"number": "457"
-		},
-		{
-			"english": "make",
-			"french": "font",
-			"number": "458"
-		},
-		{
-			"english": "so much",
-			"french": "tellement",
-			"number": "459"
-		},
-		{
-			"english": "behind",
-			"french": "derriIre",
-			"number": "460"
-		},
-		{
-			"english": "fall",
-			"french": "tomber",
-			"number": "461"
-		},
-		{
-			"english": "almost",
-			"french": "presque",
-			"number": "462"
-		},
-		{
-			"english": "wanted to",
-			"french": "voulait",
-			"number": "463"
-		},
-		{
-			"english": "better",
-			"french": "meilleur",
-			"number": "464"
-		},
-		{
-			"english": "number",
-			"french": "numIro",
-			"number": "465"
-		},
-		{
-			"english": "dr",
-			"french": "dr",
-			"number": "466"
-		},
-		{
-			"english": "day",
-			"french": "journIe",
-			"number": "467"
-		},
-		{
-			"english": "call",
-			"french": "appeler",
-			"number": "468"
-		},
-		{
-			"english": "dollars",
-			"french": "dollars",
-			"number": "469"
-		},
-		{
-			"english": "c",
-			"french": "c",
-			"number": "470"
-		},
-		{
-			"english": "expect",
-			"french": "attendre",
-			"number": "471"
-		},
-		{
-			"english": "trust",
-			"french": "confiance",
-			"number": "472"
-		},
-		{
-			"english": "keep",
-			"french": "garde",
-			"number": "473"
-		},
-		{
-			"english": "remember",
-			"french": "souviens",
-			"number": "474"
-		},
-		{
-			"english": "hard",
-			"french": "dur",
-			"number": "475"
-		},
-		{
-			"english": "will",
-			"french": "serai",
-			"number": "476"
-		},
-		{
-			"english": "office",
-			"french": "bureau",
-			"number": "477"
-		},
-		{
-			"english": "see",
-			"french": "voyez",
-			"number": "478"
-		},
-		{
-			"english": "on board",
-			"french": "abord",
-			"number": "479"
-		},
-		{
-			"english": "important",
-			"french": "important",
-			"number": "480"
-		},
-		{
-			"english": "must",
-			"french": "devez",
-			"number": "481"
-		},
-		{
-			"english": "ben",
-			"french": "ben",
-			"number": "482"
-		},
-		{
-			"english": "sentence",
-			"french": "peine",
-			"number": "483"
-		},
-		{
-			"english": "course",
-			"french": "cours",
-			"number": "484"
-		},
-		{
-			"english": "will",
-			"french": "fera",
-			"number": "485"
-		},
-		{
-			"english": "take",
-			"french": "prend",
-			"number": "486"
-		},
-		{
-			"english": "Lord",
-			"french": "seigneur",
-			"number": "487"
-		},
-		{
-			"english": "enough",
-			"french": "suffit",
-			"number": "488"
-		},
-		{
-			"english": "road",
-			"french": "route",
-			"number": "489"
-		},
-		{
-			"english": "ass",
-			"french": "cul",
-			"number": "490"
-		},
-		{
-			"english": "They",
-			"french": "lls",
-			"number": "491"
-		},
-		{
-			"english": "minute",
-			"french": "minute",
-			"number": "492"
-		},
-		{
-			"english": "Good evening",
-			"french": "bonsoir",
-			"number": "493"
-		},
-		{
-			"english": "thu",
-			"french": "jeu",
-			"number": "494"
-		},
-		{
-			"english": "thought",
-			"french": "croyais",
-			"number": "495"
-		},
-		{
-			"english": "closed",
-			"french": "ferme",
-			"number": "496"
-		},
-		{
-			"english": "pleasure",
-			"french": "plaisir",
-			"number": "497"
-		},
-		{
-			"english": "would like",
-			"french": "voudrais",
-			"number": "498"
-		},
-		{
-			"english": "happy",
-			"french": "heureux",
-			"number": "499"
-		},
-		{
-			"english": "word",
-			"french": "mot",
-			"number": "500"
-		},
-		{
-			"english": "music",
-			"french": "musique",
-			"number": "501"
-		},
-		{
-			"english": "dog",
-			"french": "chien",
-			"number": "502"
-		},
-		{
-			"english": "gentlemen",
-			"french": "messieurs",
-			"number": "503"
-		},
-		{
-			"english": "take",
-			"french": "prenez",
-			"number": "504"
-		},
-		{
-			"english": "calm",
-			"french": "calme",
-			"number": "505"
-		},
-		{
-			"english": "parents",
-			"french": "parents",
-			"number": "506"
-		},
-		{
-			"english": "o",
-			"french": "o",
-			"number": "507"
-		},
-		{
+			"Rank": "20",
+			"portuguese": "em",
 			"english": "in",
-			"french": "dedans",
-			"number": "508"
+			"Notes": "http://www.101languages.net/common-words/"
 		},
 		{
-			"english": "crazy",
-			"french": "fous",
-			"number": "509"
+			"Rank": "21",
+			"portuguese": "ele",
+			"english": "he"
 		},
 		{
-			"english": "stop",
-			"french": "arrItez",
-			"number": "510"
+			"Rank": "22",
+			"portuguese": "bem",
+			"english": "good"
 		},
 		{
-			"english": "wedding",
-			"french": "mariage",
-			"number": "511"
+			"Rank": "23",
+			"portuguese": "isso",
+			"english": "that"
 		},
 		{
-			"english": "enter",
-			"french": "entrer",
-			"number": "512"
+			"Rank": "24",
+			"portuguese": "mas",
+			"english": "but"
 		},
 		{
-			"english": "return",
-			"french": "rentrer",
-			"number": "513"
+			"Rank": "25",
+			"portuguese": "como",
+			"english": "as"
 		},
 		{
-			"english": "has",
-			"french": "ait",
-			"number": "514"
+			"Rank": "26",
+			"portuguese": "da",
+			"english": "gives"
 		},
 		{
-			"english": "bed",
-			"french": "lit",
-			"number": "515"
+			"Rank": "27",
+			"portuguese": "você",
+			"english": "you"
 		},
 		{
-			"english": "sees",
-			"french": "voit",
-			"number": "516"
+			"Rank": "28",
+			"portuguese": "sim",
+			"english": "Yes"
 		},
 		{
-			"english": "as much",
-			"french": "autant",
-			"number": "517"
+			"Rank": "29",
+			"portuguese": "no",
+			"english": "at the"
 		},
 		{
-			"english": "come back",
-			"french": "reviens",
-			"number": "518"
+			"Rank": "30",
+			"portuguese": "as",
+			"english": "at"
 		},
 		{
-			"english": "perfect",
-			"french": "parfait",
-			"number": "519"
+			"Rank": "31",
+			"portuguese": "mais",
+			"english": "more"
 		},
 		{
-			"english": "heart",
-			"french": "coeur",
-			"number": "520"
+			"Rank": "32",
+			"portuguese": "meu",
+			"english": "my"
 		},
 		{
-			"english": "this",
-			"french": "ceci",
-			"number": "521"
+			"Rank": "33",
+			"portuguese": "aqui",
+			"english": "on here"
 		},
 		{
-			"english": "service",
-			"french": "service",
-			"number": "522"
+			"Rank": "34",
+			"portuguese": "na",
+			"english": "at"
 		},
 		{
-			"english": "phone",
-			"french": "tIlIphone",
-			"number": "523"
+			"Rank": "35",
+			"portuguese": "muito",
+			"english": "much"
 		},
 		{
-			"english": "poor",
-			"french": "pauvre",
-			"number": "524"
+			"Rank": "36",
+			"portuguese": "vamos",
+			"english": "let's go"
 		},
 		{
-			"english": "Ms",
-			"french": "mlle",
-			"number": "525"
+			"Rank": "37",
+			"portuguese": "foi",
+			"english": "was"
 		},
 		{
-			"english": "waits",
-			"french": "attend",
-			"number": "526"
+			"Rank": "38",
+			"portuguese": "estou",
+			"english": "I am"
 		},
 		{
-			"english": "funny",
-			"french": "drIle",
-			"number": "527"
+			"Rank": "39",
+			"portuguese": "ela",
+			"english": "she"
 		},
 		{
-			"english": "will",
-			"french": "ira",
-			"number": "528"
+			"Rank": "40",
+			"portuguese": "vai",
+			"english": "go"
 		},
 		{
-			"english": "sometimes",
-			"french": "parfois",
-			"number": "529"
+			"Rank": "41",
+			"portuguese": "fazer",
+			"english": "do"
 		},
 		{
-			"english": "l",
-			"french": "l",
-			"number": "530"
+			"Rank": "42",
+			"portuguese": "tem",
+			"english": "has"
 		},
 		{
-			"english": "return",
-			"french": "retour",
-			"number": "531"
+			"Rank": "43",
+			"portuguese": "isto",
+			"english": "this"
 		},
 		{
-			"english": "at",
-			"french": "IA",
-			"number": "532"
+			"Rank": "44",
+			"portuguese": "já",
+			"english": "already"
 		},
 		{
-			"english": "glass",
-			"french": "verre",
-			"number": "533"
+			"Rank": "45",
+			"portuguese": "minha",
+			"english": "my"
 		},
 		{
-			"english": "thought",
-			"french": "pensI",
-			"number": "534"
+			"Rank": "46",
+			"portuguese": "tudo",
+			"english": "all"
 		},
 		{
-			"english": "six",
-			"french": "six",
-			"number": "535"
+			"Rank": "47",
+			"portuguese": "só",
+			"english": "only"
 		},
 		{
-			"english": "this",
-			"french": "ci",
-			"number": "536"
+			"Rank": "48",
+			"portuguese": "nos",
+			"english": "we"
 		},
 		{
-			"english": "impossible",
-			"french": "impossible",
-			"number": "537"
+			"Rank": "49",
+			"portuguese": "ser",
+			"english": "to be"
 		},
 		{
-			"english": "will",
-			"french": "ferai",
-			"number": "538"
+			"Rank": "50",
+			"portuguese": "ao",
+			"english": "to"
 		},
 		{
-			"english": "love",
-			"french": "aimes",
-			"number": "539"
+			"Rank": "51",
+			"portuguese": "tenho",
+			"english": "I have"
 		},
 		{
-			"english": "pay",
-			"french": "payer",
-			"number": "540"
+			"Rank": "52",
+			"portuguese": "agora",
+			"english": "now"
 		},
 		{
-			"english": "easy",
-			"french": "facile",
-			"number": "541"
+			"Rank": "53",
+			"portuguese": "tu",
+			"english": "you"
 		},
 		{
-			"english": "master",
-			"french": "maI tre",
-			"number": "542"
+			"Rank": "54",
+			"portuguese": "vou",
+			"english": "I will"
 		},
 		{
-			"english": "new",
-			"french": "new",
-			"number": "543"
+			"Rank": "55",
+			"portuguese": "à",
+			"english": "The"
 		},
 		{
-			"english": "called",
-			"french": "appelI",
-			"number": "544"
+			"Rank": "56",
+			"portuguese": "sei",
+			"english": "know"
 		},
 		{
-			"english": "bad",
-			"french": "mauvais",
-			"number": "545"
+			"Rank": "57",
+			"portuguese": "quando",
+			"english": "When"
 		},
 		{
-			"english": "general",
-			"french": "gInIral",
-			"number": "546"
+			"Rank": "58",
+			"portuguese": "lá",
+			"english": "over there"
 		},
 		{
-			"english": "doubt",
-			"french": "doute",
-			"number": "547"
+			"Rank": "59",
+			"portuguese": "há",
+			"english": "there is"
 		},
 		{
-			"english": "jail",
-			"french": "prison",
-			"number": "548"
+			"Rank": "60",
+			"portuguese": "porque",
+			"english": "because"
 		},
 		{
-			"english": "love",
-			"french": "adore",
-			"number": "549"
+			"Rank": "61",
+			"portuguese": "onde",
+			"english": "at where"
 		},
 		{
-			"english": "fault",
-			"french": "faute",
-			"number": "550"
+			"Rank": "62",
+			"portuguese": "nada",
+			"english": "anything"
 		},
 		{
-			"english": "hear",
-			"french": "entends",
-			"number": "551"
+			"Rank": "63",
+			"portuguese": "seu",
+			"english": "your"
 		},
 		{
-			"english": "forget it",
-			"french": "oubliI",
-			"number": "552"
+			"Rank": "64",
+			"portuguese": "estás",
+			"english": "these"
 		},
 		{
-			"english": "arms",
-			"french": "bras",
-			"number": "553"
+			"Rank": "65",
+			"portuguese": "quem",
+			"english": "who"
 		},
 		{
-			"english": "exactly",
-			"french": "exactement",
-			"number": "554"
+			"Rank": "66",
+			"portuguese": "então",
+			"english": "So"
 		},
 		{
-			"english": "Party",
-			"french": "fIte",
-			"number": "555"
+			"Rank": "67",
+			"portuguese": "era",
+			"english": "it was"
 		},
 		{
-			"english": "coffee",
-			"french": "cafI",
-			"number": "556"
+			"Rank": "68",
+			"portuguese": "sua",
+			"english": "your"
 		},
 		{
-			"english": "Darling",
-			"french": "chIri",
-			"number": "557"
+			"Rank": "69",
+			"portuguese": "ou",
+			"english": "or"
 		},
 		{
-			"english": "go outside",
-			"french": "sors",
-			"number": "558"
+			"Rank": "70",
+			"portuguese": "lhe",
+			"english": "you"
 		},
 		{
-			"english": "nice",
-			"french": "gentil",
-			"number": "559"
+			"Rank": "71",
+			"portuguese": "quero",
+			"english": "I want"
 		},
 		{
-			"english": "think",
-			"french": "penser",
-			"number": "560"
+			"Rank": "72",
+			"portuguese": "sou",
+			"english": "am"
 		},
 		{
-			"english": "worth",
-			"french": "vaut",
-			"number": "561"
+			"Rank": "73",
+			"portuguese": "nós",
+			"english": "we"
 		},
 		{
-			"english": "john",
-			"french": "john",
-			"number": "562"
+			"Rank": "74",
+			"portuguese": "coisa",
+			"english": "thing"
 		},
 		{
-			"english": "place",
-			"french": "lieu",
-			"number": "563"
+			"Rank": "75",
+			"portuguese": "são",
+			"english": "are"
 		},
 		{
-			"english": "sick",
-			"french": "malade",
-			"number": "564"
+			"Rank": "76",
+			"portuguese": "ter",
+			"english": "Tue"
 		},
 		{
-			"english": "change",
-			"french": "changer",
-			"number": "565"
+			"Rank": "77",
+			"portuguese": "dizer",
+			"english": "to say"
 		},
 		{
-			"english": "King",
-			"french": "roi",
-			"number": "566"
+			"Rank": "78",
+			"portuguese": "eles",
+			"english": "they"
 		},
 		{
-			"english": "begin",
-			"french": "commence",
-			"number": "567"
+			"Rank": "79",
+			"portuguese": "pode",
+			"english": "can"
 		},
 		{
-			"english": "hear",
-			"french": "entendre",
-			"number": "568"
+			"Rank": "80",
+			"portuguese": "esta",
+			"english": "it is"
 		},
 		{
-			"english": "President",
-			"french": "prIsident",
-			"number": "569"
+			"Rank": "81",
+			"portuguese": "bom",
+			"english": "good"
 		},
 		{
-			"english": "to work",
-			"french": "travailler",
-			"number": "570"
+			"Rank": "82",
+			"portuguese": "mesmo",
+			"english": "same"
 		},
 		{
-			"english": "all over",
-			"french": "partout",
-			"number": "571"
+			"Rank": "83",
+			"portuguese": "todos",
+			"english": "all"
 		},
 		{
-			"english": "expensive",
-			"french": "cher",
-			"number": "572"
+			"Rank": "84",
+			"portuguese": "mim",
+			"english": "me"
 		},
 		{
-			"english": "dead",
-			"french": "morts",
-			"number": "573"
+			"Rank": "85",
+			"portuguese": "dos",
+			"english": "of"
 		},
 		{
-			"english": "return",
-			"french": "rendre",
-			"number": "574"
+			"Rank": "86",
+			"portuguese": "estava",
+			"english": "was"
 		},
 		{
-			"english": "written",
-			"french": "Icrit",
-			"number": "575"
+			"Rank": "87",
+			"portuguese": "posso",
+			"english": "I can"
 		},
 		{
-			"english": "team",
-			"french": "Iquipe",
-			"number": "576"
+			"Rank": "88",
+			"portuguese": "este",
+			"english": "This one"
 		},
 		{
-			"english": "play",
-			"french": "joue",
-			"number": "577"
+			"Rank": "89",
+			"portuguese": "ver",
+			"english": "to see"
 		},
 		{
-			"english": "i",
-			"french": "i",
-			"number": "578"
+			"Rank": "90",
+			"portuguese": "nunca",
+			"english": "never"
 		},
 		{
-			"english": "if not",
-			"french": "sinon",
-			"number": "579"
+			"Rank": "91",
+			"portuguese": "assim",
+			"english": "like this"
 		},
 		{
-			"english": "mind",
-			"french": "esprit",
-			"number": "580"
+			"Rank": "92",
+			"portuguese": "estão",
+			"english": "They are"
 		},
 		{
-			"english": "watch",
-			"french": "regarder",
-			"number": "581"
+			"Rank": "93",
+			"portuguese": "casa",
+			"english": "home"
 		},
 		{
-			"english": "returns",
-			"french": "rentre",
-			"number": "582"
+			"Rank": "94",
+			"portuguese": "lo",
+			"english": "it"
 		},
 		{
-			"english": "plan",
-			"french": "plan",
-			"number": "583"
+			"Rank": "95",
+			"portuguese": "até",
+			"english": "up until"
 		},
 		{
-			"english": "heart",
-			"french": "cOur",
-			"number": "584"
+			"Rank": "96",
+			"portuguese": "disse",
+			"english": "said"
 		},
 		{
-			"english": "want",
-			"french": "veulent",
-			"number": "585"
+			"Rank": "97",
+			"portuguese": "quer",
+			"english": "would you like"
 		},
 		{
-			"english": "show",
-			"french": "montrer",
-			"number": "586"
+			"Rank": "98",
+			"portuguese": "temos",
+			"english": "we have"
 		},
 		{
-			"english": "desired",
-			"french": "voulu",
-			"number": "587"
+			"Rank": "99",
+			"portuguese": "tempo",
+			"english": "time"
 		},
 		{
-			"english": "to drink",
-			"french": "boire",
-			"number": "588"
+			"Rank": "100",
+			"portuguese": "acho",
+			"english": "think"
 		},
 		{
-			"english": "work",
-			"french": "travaille",
-			"number": "589"
+			"Rank": "101",
+			"portuguese": "ir",
+			"english": "go"
 		},
 		{
-			"english": "clean",
-			"french": "propre",
-			"number": "590"
+			"Rank": "102",
+			"portuguese": "favor",
+			"english": "favor"
 		},
 		{
-			"english": "year",
-			"french": "annIe",
-			"number": "591"
+			"Rank": "103",
+			"portuguese": "obrigado",
+			"english": "thank you"
 		},
 		{
-			"english": "state",
-			"french": "Itat",
-			"number": "592"
+			"Rank": "104",
+			"portuguese": "também",
+			"english": "also"
 		},
 		{
-			"english": "are",
-			"french": "soyez",
-			"number": "593"
+			"Rank": "105",
+			"portuguese": "tens",
+			"english": "you have"
 		},
 		{
-			"english": "wood",
-			"french": "bois",
-			"number": "594"
+			"Rank": "106",
+			"portuguese": "deus",
+			"english": "God"
 		},
 		{
-			"english": "looking",
-			"french": "cherche",
-			"number": "595"
+			"Rank": "107",
+			"portuguese": "quê",
+			"english": "what"
 		},
 		{
-			"english": "t",
-			"french": "t",
-			"number": "596"
+			"Rank": "108",
+			"portuguese": "ainda",
+			"english": "still"
 		},
 		{
-			"english": "leash",
-			"french": "laissI",
-			"number": "597"
+			"Rank": "109",
+			"portuguese": "vez",
+			"english": "turn"
 		},
 		{
-			"english": "try",
-			"french": "essayer",
-			"number": "598"
+			"Rank": "110",
+			"portuguese": "noite",
+			"english": "night"
 		},
 		{
-			"english": "from",
-			"french": "dIs",
-			"number": "599"
+			"Rank": "111",
+			"portuguese": "pai",
+			"english": "father"
 		},
 		{
-			"english": "seems",
-			"french": "semble",
-			"number": "600"
+			"Rank": "112",
+			"portuguese": "tão",
+			"english": "so"
 		},
 		{
-			"english": "ies",
-			"french": "ies",
-			"number": "601"
+			"Rank": "113",
+			"portuguese": "teu",
+			"english": "your"
 		},
 		{
-			"english": "jack",
-			"french": "jack",
-			"number": "602"
+			"Rank": "114",
+			"portuguese": "falar",
+			"english": "speak"
 		},
 		{
-			"english": "ten",
-			"french": "dix",
-			"number": "603"
+			"Rank": "115",
+			"portuguese": "tua",
+			"english": "your"
 		},
 		{
-			"english": "was",
-			"french": "faisait",
-			"number": "604"
+			"Rank": "116",
+			"portuguese": "melhor",
+			"english": "best"
 		},
 		{
-			"english": "awesome",
-			"french": "gInial",
-			"number": "605"
+			"Rank": "117",
+			"portuguese": "dia",
+			"english": "day"
 		},
 		{
-			"english": "think",
-			"french": "penses",
-			"number": "606"
+			"Rank": "118",
+			"portuguese": "sobre",
+			"english": "about"
 		},
 		{
-			"english": "security",
-			"french": "sIcuritI",
-			"number": "607"
+			"Rank": "119",
+			"portuguese": "certo",
+			"english": "right"
 		},
 		{
-			"english": "early",
-			"french": "tIt",
-			"number": "608"
+			"Rank": "120",
+			"portuguese": "sempre",
+			"english": "ever"
 		},
 		{
-			"english": "dish",
-			"french": "mets",
-			"number": "609"
+			"Rank": "121",
+			"portuguese": "sabe",
+			"english": "You know"
 		},
 		{
-			"english": "dream",
-			"french": "rIve",
-			"number": "610"
+			"Rank": "122",
+			"portuguese": "és",
+			"english": "are"
 		},
 		{
-			"english": "army",
-			"french": "armIe",
-			"number": "611"
+			"Rank": "123",
+			"portuguese": "depois",
+			"english": "after"
 		},
 		{
-			"english": "to lose",
-			"french": "perdre",
-			"number": "612"
+			"Rank": "124",
+			"portuguese": "vida",
+			"english": "life"
 		},
 		{
-			"english": "d",
-			"french": "d",
-			"number": "613"
+			"Rank": "125",
+			"portuguese": "mãe",
+			"english": "mother"
 		},
 		{
-			"english": "talk",
-			"french": "parles",
-			"number": "614"
+			"Rank": "126",
+			"portuguese": "oh",
+			"english": "oh"
 		},
 		{
-			"english": "notice",
-			"french": "avis",
-			"number": "615"
+			"Rank": "127",
+			"portuguese": "nem",
+			"english": "nor"
 		},
 		{
-			"english": "mostly",
-			"french": "surtout",
-			"number": "616"
+			"Rank": "128",
+			"portuguese": "senhor",
+			"english": "Mr"
 		},
 		{
-			"english": "difficult",
-			"french": "difficile",
-			"number": "617"
+			"Rank": "129",
+			"portuguese": "estamos",
+			"english": "we are"
 		},
 		{
-			"english": "york",
-			"french": "york",
-			"number": "618"
+			"Rank": "130",
+			"portuguese": "anos",
+			"english": "years"
 		},
 		{
-			"english": "to sleep",
-			"french": "dormir",
-			"number": "619"
+			"Rank": "131",
+			"portuguese": "olá",
+			"english": "Hello"
 		},
 		{
-			"english": "then",
-			"french": "ensuite",
-			"number": "620"
+			"Rank": "132",
+			"portuguese": "talvez",
+			"english": "perhaps"
 		},
 		{
-			"english": "worst",
-			"french": "pire",
-			"number": "621"
+			"Rank": "133",
+			"portuguese": "sr",
+			"english": "Mr."
 		},
 		{
-			"english": "listening",
-			"french": "ecoute",
-			"number": "622"
+			"Rank": "134",
+			"portuguese": "homem",
+			"english": "man"
 		},
 		{
-			"english": "simple",
-			"french": "simple",
-			"number": "623"
+			"Rank": "135",
+			"portuguese": "sem",
+			"english": "without"
 		},
 		{
-			"english": "was going to",
-			"french": "allait",
-			"number": "624"
+			"Rank": "136",
+			"portuguese": "sabes",
+			"english": "know"
 		},
 		{
-			"english": "peace",
-			"french": "paix",
-			"number": "625"
+			"Rank": "137",
+			"portuguese": "alguém",
+			"english": "someone"
 		},
 		{
-			"english": "dead woman",
-			"french": "morte",
-			"number": "626"
+			"Rank": "138",
+			"portuguese": "das",
+			"english": "of"
 		},
 		{
-			"english": "armed",
-			"french": "arme",
-			"number": "627"
+			"Rank": "139",
+			"portuguese": "boa",
+			"english": "good"
 		},
 		{
-			"english": "subject",
-			"french": "sujet",
-			"number": "628"
+			"Rank": "140",
+			"portuguese": "algo",
+			"english": "something"
 		},
 		{
-			"english": "delay",
-			"french": "retard",
-			"number": "629"
+			"Rank": "141",
+			"portuguese": "ti",
+			"english": "you"
 		},
 		{
-			"english": "see",
-			"french": "voyons",
-			"number": "630"
+			"Rank": "142",
+			"portuguese": "alguma",
+			"english": "some"
 		},
 		{
-			"english": "book",
-			"french": "livre",
-			"number": "631"
+			"Rank": "143",
+			"portuguese": "vocês",
+			"english": "you"
 		},
 		{
-			"english": "learned",
-			"french": "appris",
-			"number": "632"
+			"Rank": "144",
+			"portuguese": "coisas",
+			"english": "stuff"
 		},
 		{
-			"english": "can",
-			"french": "peuvent",
-			"number": "633"
+			"Rank": "145",
+			"portuguese": "tinha",
+			"english": "I had"
 		},
 		{
-			"english": "dirty",
-			"french": "sale",
-			"number": "634"
+			"Rank": "146",
+			"portuguese": "dois",
+			"english": "two"
 		},
 		{
-			"english": "would",
-			"french": "serais",
-			"number": "635"
+			"Rank": "147",
+			"portuguese": "dele",
+			"english": "his"
 		},
 		{
-			"english": "often",
-			"french": "souvent",
-			"number": "636"
+			"Rank": "148",
+			"portuguese": "claro",
+			"english": "Sure"
 		},
 		{
-			"english": "year",
-			"french": "an",
-			"number": "637"
+			"Rank": "149",
+			"portuguese": "vais",
+			"english": "going"
 		},
 		{
-			"english": "EXCEPT",
-			"french": "sauf",
-			"number": "638"
+			"Rank": "150",
+			"portuguese": "estar",
+			"english": "be"
 		},
 		{
-			"english": "choice",
-			"french": "choix",
-			"number": "639"
+			"Rank": "151",
+			"portuguese": "ficar",
+			"english": "stay"
 		},
 		{
-			"english": "surely",
-			"french": "sIErement",
-			"number": "640"
+			"Rank": "152",
+			"portuguese": "aí",
+			"english": "there"
 		},
 		{
-			"english": "were",
-			"french": "Itiez",
-			"number": "641"
+			"Rank": "153",
+			"portuguese": "pelo",
+			"english": "fur"
 		},
 		{
-			"english": "gold",
-			"french": "or",
-			"number": "642"
+			"Rank": "154",
+			"portuguese": "pessoas",
+			"english": "people"
 		},
 		{
-			"english": "face",
-			"french": "visage",
-			"number": "643"
+			"Rank": "155",
+			"portuguese": "queres",
+			"english": "want"
 		},
 		{
-			"english": "order",
-			"french": "ordre",
-			"number": "644"
+			"Rank": "156",
+			"portuguese": "essa",
+			"english": "That"
 		},
 		{
-			"english": "understand",
-			"french": "comprendre",
-			"number": "645"
+			"Rank": "157",
+			"portuguese": "esse",
+			"english": "that"
 		},
 		{
-			"english": "tried",
-			"french": "essayI",
-			"number": "646"
+			"Rank": "158",
+			"portuguese": "verdade",
+			"english": "truth"
 		},
 		{
-			"english": "black",
-			"french": "noir",
-			"number": "647"
+			"Rank": "159",
+			"portuguese": "faz",
+			"english": "does"
 		},
 		{
-			"english": "having dinner",
-			"french": "dI ner",
-			"number": "648"
+			"Rank": "160",
+			"portuguese": "parece",
+			"english": "looks"
 		},
 		{
-			"english": "age",
-			"french": "Ige",
-			"number": "649"
+			"Rank": "161",
+			"portuguese": "grande",
+			"english": "big"
 		},
 		{
-			"english": "path",
-			"french": "chemin",
-			"number": "650"
+			"Rank": "162",
+			"portuguese": "antes",
+			"english": "before"
 		},
 		{
-			"english": "exchange",
-			"french": "changI",
-			"number": "651"
+			"Rank": "163",
+			"portuguese": "dinheiro",
+			"english": "money"
 		},
 		{
-			"english": "end",
-			"french": "bout",
-			"number": "652"
+			"Rank": "164",
+			"portuguese": "ninguém",
+			"english": "no one"
 		},
 		{
-			"english": "face",
-			"french": "face",
-			"number": "653"
+			"Rank": "165",
+			"portuguese": "apenas",
+			"english": "only"
 		},
 		{
-			"english": "street",
-			"french": "rue",
-			"number": "654"
+			"Rank": "166",
+			"portuguese": "pouco",
+			"english": "little"
 		},
 		{
-			"english": "worry",
-			"french": "inquiIte",
-			"number": "655"
+			"Rank": "167",
+			"portuguese": "preciso",
+			"english": "need"
 		},
 		{
-			"english": "Photo",
-			"french": "photo",
-			"number": "656"
+			"Rank": "168",
+			"portuguese": "la",
+			"english": "over there"
 		},
 		{
-			"english": "go",
-			"french": "allI",
-			"number": "657"
+			"Rank": "169",
+			"portuguese": "comigo",
+			"english": "with me"
 		},
 		{
-			"english": "people",
-			"french": "personnes",
-			"number": "658"
+			"Rank": "170",
+			"portuguese": "outra",
+			"english": "other"
 		},
 		{
-			"english": "serious",
-			"french": "sIrieux",
-			"number": "659"
+			"Rank": "171",
+			"portuguese": "trabalho",
+			"english": "job"
 		},
 		{
-			"english": "sky",
-			"french": "ciel",
-			"number": "660"
+			"Rank": "172",
+			"portuguese": "merda",
+			"english": "Shit"
 		},
 		{
-			"english": "honor",
-			"french": "honneur",
-			"number": "661"
+			"Rank": "173",
+			"portuguese": "tipo",
+			"english": "kind"
 		},
 		{
-			"english": "friend",
-			"french": "amie",
-			"number": "662"
+			"Rank": "174",
+			"portuguese": "vão",
+			"english": "vain"
 		},
 		{
-			"english": "Questions",
-			"french": "questions",
-			"number": "663"
+			"Rank": "175",
+			"portuguese": "fora",
+			"english": "out"
 		},
 		{
-			"english": "strength",
-			"french": "force",
-			"number": "664"
+			"Rank": "176",
+			"portuguese": "vá",
+			"english": "go"
 		},
 		{
-			"english": "j",
-			"french": "j",
-			"number": "665"
+			"Rank": "177",
+			"portuguese": "espera",
+			"english": "waiting"
 		},
 		{
-			"english": "keep",
-			"french": "garder",
-			"number": "666"
+			"Rank": "178",
+			"portuguese": "qualquer",
+			"english": "any"
 		},
 		{
-			"english": "small",
-			"french": "petits",
-			"number": "667"
+			"Rank": "179",
+			"portuguese": "hoje",
+			"english": "today"
 		},
 		{
-			"english": "shoot",
-			"french": "tirer",
-			"number": "668"
+			"Rank": "180",
+			"portuguese": "qual",
+			"english": "what"
 		},
 		{
-			"english": "millions",
-			"french": "millions",
-			"number": "669"
+			"Rank": "181",
+			"portuguese": "todo",
+			"english": "all"
 		},
 		{
-			"english": "serious",
-			"french": "grave",
-			"number": "670"
+			"Rank": "182",
+			"portuguese": "olha",
+			"english": "looks"
 		},
 		{
-			"english": "market",
-			"french": "marchI",
-			"number": "671"
+			"Rank": "183",
+			"portuguese": "pela",
+			"english": "through the"
 		},
 		{
-			"english": "new",
-			"french": "nouvelles",
-			"number": "672"
+			"Rank": "184",
+			"portuguese": "podes",
+			"english": "can"
 		},
 		{
-			"english": "voice",
-			"french": "voix",
-			"number": "673"
+			"Rank": "185",
+			"portuguese": "saber",
+			"english": "to know"
 		},
 		{
-			"english": "weeks",
-			"french": "semaines",
-			"number": "674"
+			"Rank": "186",
+			"portuguese": "toda",
+			"english": "all"
 		},
 		{
-			"english": "could",
-			"french": "pouvais",
-			"number": "675"
+			"Rank": "187",
+			"portuguese": "deve",
+			"english": "should"
 		},
 		{
-			"english": "current",
-			"french": "courant",
-			"number": "676"
+			"Rank": "188",
+			"portuguese": "daqui",
+			"english": "from here"
 		},
 		{
-			"english": "About",
-			"french": "propos",
-			"number": "677"
+			"Rank": "189",
+			"portuguese": "podemos",
+			"english": "we can"
 		},
 		{
-			"english": "boat",
-			"french": "bateau",
-			"number": "678"
+			"Rank": "190",
+			"portuguese": "filho",
+			"english": "son"
 		},
 		{
-			"english": "forget it",
-			"french": "oublie",
-			"number": "679"
+			"Rank": "191",
+			"portuguese": "mulher",
+			"english": "woman"
 		},
 		{
-			"english": "cunt",
-			"french": "con",
-			"number": "680"
+			"Rank": "192",
+			"portuguese": "mundo",
+			"english": "world"
 		},
 		{
-			"english": "that",
-			"french": "celle",
-			"number": "681"
+			"Rank": "193",
+			"portuguese": "ok",
+			"english": "OK"
 		},
 		{
-			"english": "left",
-			"french": "gauche",
-			"number": "682"
+			"Rank": "194",
+			"portuguese": "disso",
+			"english": "of this"
 		},
 		{
-			"english": "happy",
-			"french": "content",
-			"number": "683"
+			"Rank": "195",
+			"portuguese": "meus",
+			"english": "my"
 		},
 		{
-			"english": "price",
-			"french": "prix",
-			"number": "684"
+			"Rank": "196",
+			"portuguese": "seus",
+			"english": "their"
 		},
 		{
-			"english": "red",
-			"french": "rouge",
-			"number": "685"
+			"Rank": "197",
+			"portuguese": "nome",
+			"english": "name"
 		},
 		{
-			"english": "hunger",
-			"french": "faim",
-			"number": "686"
+			"Rank": "198",
+			"portuguese": "dar",
+			"english": "to give"
 		},
 		{
-			"english": "would",
-			"french": "ferais",
-			"number": "687"
+			"Rank": "199",
+			"portuguese": "cá",
+			"english": "here"
 		},
 		{
-			"english": "plane",
-			"french": "avion",
-			"number": "688"
+			"Rank": "200",
+			"portuguese": "seja",
+			"english": "be"
 		},
 		{
-			"english": "to become",
-			"french": "devenir",
-			"number": "689"
+			"Rank": "201",
+			"portuguese": "outro",
+			"english": "other"
 		},
 		{
-			"english": "duty",
-			"french": "devoir",
-			"number": "690"
+			"Rank": "202",
+			"portuguese": "nosso",
+			"english": "our"
 		},
 		{
-			"english": "next",
-			"french": "prochaine",
-			"number": "691"
+			"Rank": "203",
+			"portuguese": "pois",
+			"english": "because"
 		},
 		{
-			"english": "stay",
-			"french": "restez",
-			"number": "692"
+			"Rank": "204",
+			"portuguese": "diz",
+			"english": "says"
 		},
 		{
-			"english": "buy",
-			"french": "acheter",
-			"number": "693"
+			"Rank": "205",
+			"portuguese": "num",
+			"english": "on one"
 		},
 		{
-			"english": "trip",
-			"french": "voyage",
-			"number": "694"
+			"Rank": "206",
+			"portuguese": "nossa",
+			"english": "Wow"
 		},
 		{
-			"english": "kind",
-			"french": "sorte",
-			"number": "695"
+			"Rank": "207",
+			"portuguese": "quanto",
+			"english": "how much"
 		},
 		{
-			"english": "long",
-			"french": "long",
-			"number": "696"
+			"Rank": "208",
+			"portuguese": "ei",
+			"english": "Hey"
 		},
 		{
-			"english": "species",
-			"french": "espIce",
-			"number": "697"
+			"Rank": "209",
+			"portuguese": "sair",
+			"english": "get out"
 		},
 		{
-			"english": "idiot",
-			"french": "idiot",
-			"number": "698"
+			"Rank": "210",
+			"portuguese": "queria",
+			"english": "I wanted"
 		},
 		{
-			"english": "mouth",
-			"french": "gueule",
-			"number": "699"
+			"Rank": "211",
+			"portuguese": "vem",
+			"english": "comes"
 		},
 		{
-			"english": "beginning",
-			"french": "dIbut",
-			"number": "700"
+			"Rank": "212",
+			"portuguese": "volta",
+			"english": "come back"
 		},
 		{
-			"english": "moves",
-			"french": "bouge",
-			"number": "701"
+			"Rank": "213",
+			"portuguese": "amigo",
+			"english": "friend"
 		},
 		{
-			"english": "keep on going",
-			"french": "continue",
-			"number": "702"
+			"Rank": "214",
+			"portuguese": "novo",
+			"english": "new"
 		},
 		{
-			"english": "hospital",
-			"french": "hIpital",
-			"number": "703"
+			"Rank": "215",
+			"portuguese": "embora",
+			"english": "though"
 		},
 		{
-			"english": "fate",
-			"french": "sort",
-			"number": "704"
+			"Rank": "216",
+			"portuguese": "lugar",
+			"english": "place"
 		},
 		{
-			"english": "grace",
-			"french": "grIce",
-			"number": "705"
+			"Rank": "217",
+			"portuguese": "será",
+			"english": "it will be"
 		},
 		{
-			"english": "problems",
-			"french": "problImes",
-			"number": "706"
+			"Rank": "218",
+			"portuguese": "certeza",
+			"english": "assurance"
 		},
 		{
-			"english": "message",
-			"french": "message",
-			"number": "707"
+			"Rank": "219",
+			"portuguese": "três",
+			"english": "three"
 		},
 		{
-			"english": "some",
-			"french": "certains",
-			"number": "708"
+			"Rank": "220",
+			"portuguese": "sério",
+			"english": "Really"
 		},
 		{
-			"english": "boss",
-			"french": "patron",
-			"number": "709"
+			"Rank": "221",
+			"portuguese": "mal",
+			"english": "bad"
 		},
 		{
-			"english": "safe",
-			"french": "sIEre",
-			"number": "710"
+			"Rank": "222",
+			"portuguese": "têm",
+			"english": "has"
 		},
 		{
-			"english": "received",
-			"french": "reIu",
-			"number": "711"
+			"Rank": "223",
+			"portuguese": "desculpa",
+			"english": "excuse"
 		},
 		{
-			"english": "stuff",
-			"french": "trucs",
-			"number": "712"
+			"Rank": "224",
+			"portuguese": "carro",
+			"english": "car"
 		},
 		{
-			"english": "had",
-			"french": "avaient",
-			"number": "713"
+			"Rank": "225",
+			"portuguese": "às",
+			"english": "at"
 		},
 		{
-			"english": "opens",
-			"french": "ouvre",
-			"number": "714"
+			"Rank": "226",
+			"portuguese": "problema",
+			"english": "problem"
 		},
 		{
-			"english": "promised",
-			"french": "promis",
-			"number": "715"
+			"Rank": "227",
+			"portuguese": "menos",
+			"english": "any less"
 		},
 		{
-			"english": "tea",
-			"french": "the",
-			"number": "716"
+			"Rank": "228",
+			"portuguese": "passa",
+			"english": "goes by"
 		},
 		{
-			"english": "uncle",
-			"french": "oncle",
-			"number": "717"
+			"Rank": "229",
+			"portuguese": "vezes",
+			"english": "times"
 		},
 		{
-			"english": "uh",
-			"french": "euh",
-			"number": "718"
+			"Rank": "230",
+			"portuguese": "nas",
+			"english": "at the"
 		},
 		{
-			"english": "know",
-			"french": "connaissez",
-			"number": "719"
+			"Rank": "231",
+			"portuguese": "ali",
+			"english": "there"
 		},
 		{
-			"english": "leave",
-			"french": "laissez",
-			"number": "720"
+			"Rank": "232",
+			"portuguese": "dela",
+			"english": "her"
 		},
 		{
-			"english": "must",
-			"french": "devons",
-			"number": "721"
+			"Rank": "233",
+			"portuguese": "dentro",
+			"english": "inside"
 		},
 		{
-			"english": "welcome",
-			"french": "bienvenue",
-			"number": "722"
+			"Rank": "234",
+			"portuguese": "aconteceu",
+			"english": "It happened"
 		},
 		{
-			"english": "occupied",
-			"french": "occupe",
-			"number": "723"
+			"Rank": "235",
+			"portuguese": "querida",
+			"english": "Dear"
 		},
 		{
-			"english": "going",
-			"french": "allais",
-			"number": "724"
+			"Rank": "236",
+			"portuguese": "primeiro",
+			"english": "first"
 		},
 		{
-			"english": "camp",
-			"french": "camp",
-			"number": "725"
+			"Rank": "237",
+			"portuguese": "amor",
+			"english": "love"
 		},
 		{
-			"english": "lack",
-			"french": "manque",
-			"number": "726"
+			"Rank": "238",
+			"portuguese": "pensar",
+			"english": "think"
 		},
 		{
-			"english": "Sun",
-			"french": "soleil",
-			"number": "727"
+			"Rank": "239",
+			"portuguese": "todas",
+			"english": "all"
 		},
 		{
-			"english": "was",
-			"french": "devait",
-			"number": "728"
+			"Rank": "240",
+			"portuguese": "cara",
+			"english": "face"
 		},
 		{
-			"english": "leave",
-			"french": "pars",
-			"number": "729"
+			"Rank": "241",
+			"portuguese": "lado",
+			"english": "side"
 		},
 		{
-			"english": "could",
-			"french": "pouvait",
-			"number": "730"
+			"Rank": "242",
+			"portuguese": "fez",
+			"english": "did"
 		},
 		{
-			"english": "hair",
-			"french": "cheveux",
-			"number": "731"
+			"Rank": "243",
+			"portuguese": "contigo",
+			"english": "with you"
 		},
 		{
-			"english": "arms",
-			"french": "armes",
-			"number": "732"
+			"Rank": "244",
+			"portuguese": "aos",
+			"english": "to"
 		},
 		{
-			"english": "think",
-			"french": "pensez",
-			"number": "733"
+			"Rank": "245",
+			"portuguese": "parte",
+			"english": "part"
 		},
 		{
-			"english": "room",
-			"french": "salle",
-			"number": "734"
+			"Rank": "246",
+			"portuguese": "consigo",
+			"english": "I can"
 		},
 		{
-			"english": "believe",
-			"french": "croyez",
-			"number": "735"
+			"Rank": "247",
+			"portuguese": "anda",
+			"english": "walking"
 		},
 		{
-			"english": "weird",
-			"french": "bizarre",
-			"number": "736"
+			"Rank": "248",
+			"portuguese": "algum",
+			"english": "some"
 		},
 		{
-			"english": "to win",
-			"french": "gagner",
-			"number": "737"
+			"Rank": "249",
+			"portuguese": "numa",
+			"english": "a"
 		},
 		{
-			"english": "begin",
-			"french": "commencI",
-			"number": "738"
+			"Rank": "250",
+			"portuguese": "aquele",
+			"english": "that"
 		},
 		{
-			"english": "background",
-			"french": "fond",
-			"number": "739"
+			"Rank": "251",
+			"portuguese": "hora",
+			"english": "hour"
 		},
 		{
-			"english": "to save",
-			"french": "sauver",
-			"number": "740"
+			"Rank": "252",
+			"portuguese": "voltar",
+			"english": "come back"
 		},
 		{
-			"english": "piece",
-			"french": "piIce",
-			"number": "741"
+			"Rank": "253",
+			"portuguese": "homens",
+			"english": "men"
 		},
 		{
-			"english": "error",
-			"french": "erreur",
-			"number": "742"
+			"Rank": "254",
+			"portuguese": "dias",
+			"english": "days"
 		},
 		{
-			"english": "elsewhere",
-			"french": "ailleurs",
-			"number": "743"
+			"Rank": "255",
+			"portuguese": "gente",
+			"english": "people"
 		},
 		{
-			"english": "report",
-			"french": "rapport",
-			"number": "744"
+			"Rank": "256",
+			"portuguese": "tentar",
+			"english": "to attempt"
 		},
 		{
-			"english": "cold",
-			"french": "froid",
-			"number": "745"
+			"Rank": "257",
+			"portuguese": "gosto",
+			"english": "like"
 		},
 		{
-			"english": "learn",
-			"french": "apprendre",
-			"number": "746"
+			"Rank": "258",
+			"portuguese": "porquê",
+			"english": "because"
 		},
 		{
-			"english": "scene",
-			"french": "scIne",
-			"number": "747"
+			"Rank": "259",
+			"portuguese": "vi",
+			"english": "saw"
 		},
 		{
-			"english": "secret",
-			"french": "secret",
-			"number": "748"
+			"Rank": "260",
+			"portuguese": "tarde",
+			"english": "afternoon"
 		},
 		{
-			"english": "bag",
-			"french": "sac",
-			"number": "749"
+			"Rank": "261",
+			"portuguese": "pensei",
+			"english": "thought"
 		},
 		{
-			"english": "second",
-			"french": "seconde",
-			"number": "750"
+			"Rank": "262",
+			"portuguese": "entre",
+			"english": "in between"
 		},
 		{
-			"english": "vintage",
-			"french": "cru",
-			"number": "751"
+			"Rank": "263",
+			"portuguese": "suas",
+			"english": "your"
 		},
 		{
-			"english": "Hello",
-			"french": "allI",
-			"number": "752"
+			"Rank": "264",
+			"portuguese": "los",
+			"english": "them"
 		},
 		{
-			"english": "come back",
-			"french": "revenir",
-			"number": "753"
+			"Rank": "265",
+			"portuguese": "duas",
+			"english": "two"
 		},
 		{
-			"english": "beat",
-			"french": "battre",
-			"number": "754"
+			"Rank": "266",
+			"portuguese": "obrigada",
+			"english": "thanks"
 		},
 		{
-			"english": "hotel",
-			"french": "hItel",
-			"number": "755"
+			"Rank": "267",
+			"portuguese": "desculpe",
+			"english": "excuse me"
 		},
 		{
-			"english": "evening",
-			"french": "soirIe",
-			"number": "756"
+			"Rank": "268",
+			"portuguese": "sabia",
+			"english": "I knew"
 		},
 		{
-			"english": "have",
-			"french": "aurai",
-			"number": "757"
+			"Rank": "269",
+			"portuguese": "fui",
+			"english": "went"
 		},
 		{
-			"english": "sister",
-			"french": "soeur",
-			"number": "758"
+			"Rank": "270",
+			"portuguese": "podem",
+			"english": "can"
 		},
 		{
-			"english": "feet",
-			"french": "pieds",
-			"number": "759"
+			"Rank": "271",
+			"portuguese": "atrás",
+			"english": "behind"
 		},
 		{
-			"english": "shalt",
-			"french": "seras",
-			"number": "760"
+			"Rank": "272",
+			"portuguese": "uns",
+			"english": "some"
 		},
 		{
-			"english": "map",
-			"french": "carte",
-			"number": "761"
+			"Rank": "273",
+			"portuguese": "cabeça",
+			"english": "head"
 		},
 		{
-			"english": "pretty one",
-			"french": "jolie",
-			"number": "762"
+			"Rank": "274",
+			"portuguese": "fica",
+			"english": "stay"
 		},
 		{
-			"english": "not",
-			"french": "n",
-			"number": "763"
+			"Rank": "275",
+			"portuguese": "somos",
+			"english": "we are"
 		},
 		{
-			"english": "foot",
-			"french": "pied",
-			"number": "764"
+			"Rank": "276",
+			"portuguese": "pra",
+			"english": "for"
 		},
 		{
-			"english": "group",
-			"french": "groupe",
-			"number": "765"
+			"Rank": "277",
+			"portuguese": "frente",
+			"english": "front"
 		},
 		{
-			"english": "arrival",
-			"french": "venue",
-			"number": "766"
+			"Rank": "278",
+			"portuguese": "cidade",
+			"english": "City"
 		},
 		{
-			"english": "mounted",
-			"french": "monte",
-			"number": "767"
+			"Rank": "279",
+			"portuguese": "amanhã",
+			"english": "tomorrow"
 		},
 		{
-			"english": "agent",
-			"french": "agent",
-			"number": "768"
+			"Rank": "280",
+			"portuguese": "cima",
+			"english": "top"
 		},
 		{
-			"english": "needed",
-			"french": "fallait",
-			"number": "769"
+			"Rank": "281",
+			"portuguese": "momento",
+			"english": "time"
 		},
 		{
-			"english": "effect",
-			"french": "effet",
-			"number": "770"
+			"Rank": "282",
+			"portuguese": "razão",
+			"english": "reason"
 		},
 		{
-			"english": "free",
-			"french": "libre",
-			"number": "771"
+			"Rank": "283",
+			"portuguese": "nenhum",
+			"english": "none"
 		},
 		{
-			"english": "will",
-			"french": "seront",
-			"number": "772"
+			"Rank": "284",
+			"portuguese": "família",
+			"english": "family"
 		},
 		{
-			"english": "fuck",
-			"french": "foutre",
-			"number": "773"
+			"Rank": "285",
+			"portuguese": "amigos",
+			"english": "friends"
 		},
 		{
-			"english": "whorehouse",
-			"french": "bordel",
-			"number": "774"
+			"Rank": "286",
+			"portuguese": "desde",
+			"english": "since"
 		},
 		{
-			"english": "words",
-			"french": "mots",
-			"number": "775"
+			"Rank": "287",
+			"portuguese": "vos",
+			"english": "you"
 		},
 		{
-			"english": "new",
-			"french": "neuf",
-			"number": "776"
+			"Rank": "288",
+			"portuguese": "tal",
+			"english": "such"
 		},
 		{
-			"english": "drawn",
-			"french": "tire",
-			"number": "777"
+			"Rank": "289",
+			"portuguese": "horas",
+			"english": "hours"
 		},
 		{
-			"english": "FALSE",
-			"french": "faux",
-			"number": "778"
+			"Rank": "290",
+			"portuguese": "sinto",
+			"english": "I"
 		},
 		{
-			"english": "situation",
-			"french": "situation",
-			"number": "779"
+			"Rank": "291",
+			"portuguese": "acha",
+			"english": "think"
 		},
 		{
-			"english": "kill",
-			"french": "tue",
-			"number": "780"
+			"Rank": "292",
+			"portuguese": "achas",
+			"english": "think"
 		},
 		{
-			"english": "light",
-			"french": "lumiIre",
-			"number": "781"
+			"Rank": "293",
+			"portuguese": "polícia",
+			"english": "police"
 		},
 		{
-			"english": "old",
-			"french": "vieille",
-			"number": "782"
+			"Rank": "294",
+			"portuguese": "outros",
+			"english": "others"
 		},
 		{
-			"english": "right",
-			"french": "droite",
-			"number": "783"
+			"Rank": "295",
+			"portuguese": "foram",
+			"english": "were"
 		},
 		{
-			"english": "standing",
-			"french": "debout",
-			"number": "784"
+			"Rank": "296",
+			"portuguese": "tenha",
+			"english": "has"
 		},
 		{
-			"english": "Christmas",
-			"french": "noICl",
-			"number": "785"
+			"Rank": "297",
+			"portuguese": "seria",
+			"english": "would be"
 		},
 		{
-			"english": "horse",
-			"french": "cheval",
-			"number": "786"
+			"Rank": "298",
+			"portuguese": "medo",
+			"english": "fear"
 		},
 		{
-			"english": "inside",
-			"french": "intIrieur",
-			"number": "787"
+			"Rank": "299",
+			"portuguese": "tanto",
+			"english": "so much"
 		},
 		{
-			"english": "listen",
-			"french": "Icoutez",
-			"number": "788"
+			"Rank": "300",
+			"portuguese": "pronto",
+			"english": "ready"
 		},
 		{
-			"english": "pretty",
-			"french": "joli",
-			"number": "789"
+			"Rank": "301",
+			"portuguese": "precisa",
+			"english": "need"
 		},
 		{
-			"english": "won",
-			"french": "gagnI",
-			"number": "790"
+			"Rank": "302",
+			"portuguese": "entrar",
+			"english": "get in"
 		},
 		{
-			"english": "law",
-			"french": "loi",
-			"number": "791"
+			"Rank": "303",
+			"portuguese": "nova",
+			"english": "new"
 		},
 		{
-			"english": "Come in",
-			"french": "entrez",
-			"number": "792"
+			"Rank": "304",
+			"portuguese": "deles",
+			"english": "their"
 		},
 		{
-			"english": "auras",
-			"french": "auras",
-			"number": "793"
+			"Rank": "305",
+			"portuguese": "si",
+			"english": "si"
 		},
 		{
-			"english": "unbelievable",
-			"french": "incroyable",
-			"number": "794"
+			"Rank": "306",
+			"portuguese": "forma",
+			"english": "form"
 		},
 		{
-			"english": "letter",
-			"french": "lettre",
-			"number": "795"
+			"Rank": "307",
+			"portuguese": "aquilo",
+			"english": "that"
 		},
 		{
-			"english": "present",
-			"french": "prIsent",
-			"number": "796"
+			"Rank": "308",
+			"portuguese": "passar",
+			"english": "pass"
 		},
 		{
-			"english": "to occupy",
-			"french": "occuper",
-			"number": "797"
+			"Rank": "309",
+			"portuguese": "chegar",
+			"english": "to arrive"
 		},
 		{
-			"english": "knows",
-			"french": "connaI t",
-			"number": "798"
+			"Rank": "310",
+			"portuguese": "quase",
+			"english": "almost"
 		},
 		{
-			"english": "absolutely",
-			"french": "absolument",
-			"number": "799"
+			"Rank": "311",
+			"portuguese": "história",
+			"english": "history"
 		},
 		{
-			"english": "had",
-			"french": "aviez",
-			"number": "800"
+			"Rank": "312",
+			"portuguese": "deixar",
+			"english": "leave"
 		},
 		{
-			"english": "lady",
-			"french": "dame",
-			"number": "801"
+			"Rank": "313",
+			"portuguese": "porta",
+			"english": "door"
 		},
 		{
-			"english": "professor",
-			"french": "professeur",
-			"number": "802"
+			"Rank": "314",
+			"portuguese": "cuidado",
+			"english": "caution"
 		},
 		{
-			"english": "money",
-			"french": "fric",
-			"number": "803"
+			"Rank": "315",
+			"portuguese": "cada",
+			"english": "each"
 		},
 		{
-			"english": "george",
-			"french": "george",
-			"number": "804"
+			"Rank": "316",
+			"portuguese": "ia",
+			"english": "would"
 		},
 		{
-			"english": "find",
-			"french": "retrouver",
-			"number": "805"
+			"Rank": "317",
+			"portuguese": "podia",
+			"english": "could"
 		},
 		{
-			"english": "corner",
-			"french": "coin",
-			"number": "806"
+			"Rank": "318",
+			"portuguese": "ah",
+			"english": "ah"
 		},
 		{
-			"english": "table",
-			"french": "table",
-			"number": "807"
+			"Rank": "319",
+			"portuguese": "fiz",
+			"english": "I did"
 		},
 		{
-			"english": "colonel",
-			"french": "colonel",
-			"number": "808"
+			"Rank": "320",
+			"portuguese": "pessoa",
+			"english": "person"
 		},
 		{
-			"english": "soul",
-			"french": "Ime",
-			"number": "809"
+			"Rank": "321",
+			"portuguese": "lhes",
+			"english": "them"
 		},
 		{
-			"english": "back",
-			"french": "dos",
-			"number": "810"
+			"Rank": "322",
+			"portuguese": "realmente",
+			"english": "really"
 		},
 		{
-			"english": "magnificent",
-			"french": "magnifique",
-			"number": "811"
+			"Rank": "323",
+			"portuguese": "ideia",
+			"english": "idea"
 		},
 		{
-			"english": "meet",
-			"french": "rencontrer",
-			"number": "812"
+			"Rank": "324",
+			"portuguese": "fosse",
+			"english": "was"
 		},
 		{
-			"english": "successful",
-			"french": "rIussi",
-			"number": "813"
+			"Rank": "325",
+			"portuguese": "irmão",
+			"english": "brother"
 		},
 		{
-			"english": "best",
-			"french": "meilleure",
-			"number": "814"
+			"Rank": "326",
+			"portuguese": "morrer",
+			"english": "die"
 		},
 		{
-			"english": "remember",
-			"french": "rappelle",
-			"number": "815"
+			"Rank": "327",
+			"portuguese": "devia",
+			"english": "should"
 		},
 		{
-			"english": "quiet",
-			"french": "tranquille",
-			"number": "816"
+			"Rank": "328",
+			"portuguese": "alguns",
+			"english": "some"
 		},
 		{
-			"english": "was",
-			"french": "fut",
-			"number": "817"
+			"Rank": "329",
+			"portuguese": "morto",
+			"english": "dead"
 		},
 		{
-			"english": "hot",
-			"french": "chaud",
-			"number": "818"
+			"Rank": "330",
+			"portuguese": "minhas",
+			"english": "my"
 		},
 		{
-			"english": "mr",
-			"french": "mr",
-			"number": "819"
+			"Rank": "331",
+			"portuguese": "adeus",
+			"english": "goodbye"
 		},
 		{
-			"english": "to start",
-			"french": "commencer",
-			"number": "820"
+			"Rank": "332",
+			"portuguese": "feliz",
+			"english": "happy"
 		},
 		{
-			"english": "sister",
-			"french": "sOur",
-			"number": "821"
+			"Rank": "333",
+			"portuguese": "minutos",
+			"english": "minutes"
 		},
 		{
-			"english": "These",
-			"french": "agit",
-			"number": "822"
+			"Rank": "334",
+			"portuguese": "primeira",
+			"english": "first"
 		},
 		{
-			"english": "cool",
-			"french": "cool",
-			"number": "823"
+			"Rank": "335",
+			"portuguese": "ajudar",
+			"english": "help out"
 		},
 		{
-			"english": "slowly",
-			"french": "doucement",
-			"number": "824"
+			"Rank": "336",
+			"portuguese": "caso",
+			"english": "case"
 		},
 		{
-			"english": "the same",
-			"french": "pareil",
-			"number": "825"
+			"Rank": "337",
+			"portuguese": "contra",
+			"english": "against"
 		},
 		{
-			"english": "youth",
-			"french": "jeunes",
-			"number": "826"
+			"Rank": "338",
+			"portuguese": "sorte",
+			"english": "luck"
 		},
 		{
-			"english": "joe",
-			"french": "joe",
-			"number": "827"
+			"Rank": "339",
+			"portuguese": "aquela",
+			"english": "that"
 		},
 		{
-			"english": "accident",
-			"french": "accident",
-			"number": "828"
+			"Rank": "340",
+			"portuguese": "ano",
+			"english": "year"
 		},
 		{
-			"english": "call",
-			"french": "appel",
-			"number": "829"
+			"Rank": "341",
+			"portuguese": "encontrar",
+			"english": "meet"
 		},
 		{
-			"english": "anniversary",
-			"french": "anniversaire",
-			"number": "830"
+			"Rank": "342",
+			"portuguese": "vir",
+			"english": "come over"
 		},
 		{
-			"english": "White",
-			"french": "blanc",
-			"number": "831"
+			"Rank": "343",
+			"portuguese": "caminho",
+			"english": "way"
 		},
 		{
-			"english": "finish",
-			"french": "finir",
-			"number": "832"
+			"Rank": "344",
+			"portuguese": "rapaz",
+			"english": "boy"
 		},
 		{
-			"english": "risk",
-			"french": "risque",
-			"number": "833"
+			"Rank": "345",
+			"portuguese": "ouvir",
+			"english": "hear"
 		},
 		{
-			"english": "have to",
-			"french": "doivent",
-			"number": "834"
+			"Rank": "346",
+			"portuguese": "enquanto",
+			"english": "While"
 		},
 		{
-			"english": "way",
-			"french": "moyen",
-			"number": "835"
+			"Rank": "347",
+			"portuguese": "näo",
+			"english": "no"
 		},
 		{
-			"english": "completed",
-			"french": "terminI",
-			"number": "836"
+			"Rank": "348",
+			"portuguese": "maneira",
+			"english": "way"
 		},
 		{
-			"english": "completely",
-			"french": "complItement",
-			"number": "837"
+			"Rank": "349",
+			"portuguese": "olhos",
+			"english": "eyes"
 		},
 		{
-			"english": "clear",
-			"french": "clair",
-			"number": "838"
+			"Rank": "350",
+			"portuguese": "estes",
+			"english": "these"
 		},
 		{
-			"english": "murder",
-			"french": "meurtre",
-			"number": "839"
+			"Rank": "351",
+			"portuguese": "espero",
+			"english": "I expect"
 		},
 		{
-			"english": "sat",
-			"french": "sam",
-			"number": "840"
+			"Rank": "352",
+			"portuguese": "sido",
+			"english": "been"
 		},
 		{
-			"english": "speak",
-			"french": "parlez",
-			"number": "841"
+			"Rank": "353",
+			"portuguese": "poderia",
+			"english": "could"
 		},
 		{
-			"english": "happy",
-			"french": "heureuse",
-			"number": "842"
+			"Rank": "354",
+			"portuguese": "semana",
+			"english": "week"
 		},
 		{
-			"english": "orders",
-			"french": "ordres",
-			"number": "843"
+			"Rank": "355",
+			"portuguese": "desta",
+			"english": "this"
 		},
 		{
-			"english": "said",
-			"french": "disais",
-			"number": "844"
+			"Rank": "356",
+			"portuguese": "trabalhar",
+			"english": "work"
 		},
 		{
-			"english": "touch",
-			"french": "touche",
-			"number": "845"
+			"Rank": "357",
+			"portuguese": "água",
+			"english": "Water"
 		},
 		{
-			"english": "frank",
-			"french": "frank",
-			"number": "846"
+			"Rank": "358",
+			"portuguese": "matar",
+			"english": "kill"
 		},
 		{
-			"english": "loans",
-			"french": "prIts",
-			"number": "847"
+			"Rank": "359",
+			"portuguese": "durante",
+			"english": "during"
 		},
 		{
-			"english": "make",
-			"french": "fasse",
-			"number": "848"
+			"Rank": "360",
+			"portuguese": "quarto",
+			"english": "bedroom"
 		},
 		{
-			"english": "can",
-			"french": "puisse",
-			"number": "849"
+			"Rank": "361",
+			"portuguese": "conta",
+			"english": "account"
 		},
 		{
-			"english": "lunch",
-			"french": "dIjeuner",
-			"number": "850"
+			"Rank": "362",
+			"portuguese": "senhora",
+			"english": "Mrs"
 		},
 		{
-			"english": "sent",
-			"french": "envoyI",
-			"number": "851"
+			"Rank": "363",
+			"portuguese": "morte",
+			"english": "death"
 		},
 		{
-			"english": "read",
-			"french": "lire",
-			"number": "852"
+			"Rank": "364",
+			"portuguese": "tive",
+			"english": "I had"
 		},
 		{
-			"english": "said",
-			"french": "disait",
-			"number": "853"
+			"Rank": "365",
+			"portuguese": "neste",
+			"english": "in this"
 		},
 		{
-			"english": "falls",
-			"french": "tombe",
-			"number": "854"
+			"Rank": "366",
+			"portuguese": "terra",
+			"english": "Earth"
 		},
 		{
-			"english": "su",
-			"french": "su",
-			"number": "855"
+			"Rank": "367",
+			"portuguese": "logo",
+			"english": "soon"
 		},
 		{
-			"english": "walk",
-			"french": "marcher",
-			"number": "856"
+			"Rank": "368",
+			"portuguese": "ajuda",
+			"english": "help"
 		},
 		{
-			"english": "advanced",
-			"french": "avance",
-			"number": "857"
+			"Rank": "369",
+			"portuguese": "guerra",
+			"english": "war"
 		},
 		{
-			"english": "hated",
-			"french": "dIteste",
-			"number": "858"
+			"Rank": "370",
+			"portuguese": "estas",
+			"english": "these"
 		},
 		{
-			"english": "form",
-			"french": "forme",
-			"number": "859"
+			"Rank": "371",
+			"portuguese": "dá",
+			"english": "gives"
 		},
 		{
-			"english": "at",
-			"french": "I",
-			"number": "860"
+			"Rank": "372",
+			"portuguese": "rápido",
+			"english": "fast"
 		},
 		{
-			"english": "bad",
-			"french": "mauvaise",
-			"number": "861"
+			"Rank": "373",
+			"portuguese": "feito",
+			"english": "done"
 		},
 		{
-			"english": "edge",
-			"french": "bord",
-			"number": "862"
+			"Rank": "374",
+			"portuguese": "pára",
+			"english": "for"
 		},
 		{
-			"english": "decided",
-			"french": "dIcidI",
-			"number": "863"
+			"Rank": "375",
+			"portuguese": "querido",
+			"english": "Darling"
 		},
 		{
-			"english": "sea",
-			"french": "mer",
-			"number": "864"
+			"Rank": "376",
+			"portuguese": "levar",
+			"english": "lead"
 		},
 		{
-			"english": "living",
-			"french": "vivant",
-			"number": "865"
+			"Rank": "377",
+			"portuguese": "óptimo",
+			"english": "great"
 		},
 		{
-			"english": "doctor",
-			"french": "mIdecin",
-			"number": "866"
+			"Rank": "378",
+			"portuguese": "mãos",
+			"english": "hands"
 		},
 		{
-			"english": "midday",
-			"french": "midi",
-			"number": "867"
+			"Rank": "379",
+			"portuguese": "jogo",
+			"english": "game"
 		},
 		{
-			"english": "become",
-			"french": "devenu",
-			"number": "868"
+			"Rank": "380",
+			"portuguese": "manhã",
+			"english": "morning"
 		},
 		{
-			"english": "watch",
-			"french": "montre",
-			"number": "869"
+			"Rank": "381",
+			"portuguese": "arma",
+			"english": "arm"
 		},
 		{
-			"english": "carry",
-			"french": "porter",
-			"number": "870"
+			"Rank": "382",
+			"portuguese": "querem",
+			"english": "they want"
 		},
 		{
-			"english": "real",
-			"french": "vraie",
-			"number": "871"
+			"Rank": "383",
+			"portuguese": "fala",
+			"english": "speaks"
 		},
 		{
-			"english": "say",
-			"french": "disent",
-			"number": "872"
+			"Rank": "384",
+			"portuguese": "perto",
+			"english": "close"
 		},
 		{
-			"english": "would",
-			"french": "ferait",
-			"number": "873"
+			"Rank": "385",
+			"portuguese": "for",
+			"english": "is"
 		},
 		{
-			"english": "unknown",
-			"french": "ignore",
-			"number": "874"
+			"Rank": "386",
+			"portuguese": "nossos",
+			"english": "our"
 		},
 		{
-			"english": "charlie",
-			"french": "charlie",
-			"number": "875"
+			"Rank": "387",
+			"portuguese": "importante",
+			"english": "important"
 		},
 		{
-			"english": "know",
-			"french": "connaI tre",
-			"number": "876"
+			"Rank": "388",
+			"portuguese": "algumas",
+			"english": "some"
 		},
 		{
-			"english": "silence",
-			"french": "silence",
-			"number": "877"
+			"Rank": "389",
+			"portuguese": "faço",
+			"english": "I do"
 		},
 		{
-			"english": "Devil",
-			"french": "diable",
-			"number": "878"
+			"Rank": "390",
+			"portuguese": "poder",
+			"english": "power"
 		},
 		{
-			"english": "get out",
-			"french": "sortez",
-			"number": "879"
+			"Rank": "391",
+			"portuguese": "cinco",
+			"english": "five"
 		},
 		{
-			"english": "tom",
-			"french": "tom",
-			"number": "880"
+			"Rank": "392",
+			"portuguese": "pessoal",
+			"english": "folks"
 		},
 		{
-			"english": "gift",
-			"french": "cadeau",
-			"number": "881"
+			"Rank": "393",
+			"portuguese": "calma",
+			"english": "calm"
 		},
 		{
-			"english": "Assumed",
-			"french": "suppose",
-			"number": "882"
+			"Rank": "394",
+			"portuguese": "teus",
+			"english": "your"
 		},
 		{
-			"english": "b",
-			"french": "b",
-			"number": "883"
+			"Rank": "395",
+			"portuguese": "precisamos",
+			"english": "We need"
 		},
 		{
-			"english": "cops",
-			"french": "flics",
-			"number": "884"
+			"Rank": "396",
+			"portuguese": "rapazes",
+			"english": "boys"
 		},
 		{
-			"english": "lawyer",
-			"french": "avocat",
-			"number": "885"
+			"Rank": "397",
+			"portuguese": "á",
+			"english": "The"
 		},
 		{
-			"english": "sworn",
-			"french": "jure",
-			"number": "886"
+			"Rank": "398",
+			"portuguese": "juntos",
+			"english": "together"
 		},
 		{
-			"english": "English",
-			"french": "anglais",
-			"number": "887"
+			"Rank": "399",
+			"portuguese": "acontecer",
+			"english": "to happen"
 		},
 		{
-			"english": "seven",
-			"french": "sept",
-			"number": "888"
+			"Rank": "400",
+			"portuguese": "comer",
+			"english": "eat"
 		},
 		{
-			"english": "should",
-			"french": "devriez",
-			"number": "889"
+			"Rank": "401",
+			"portuguese": "filha",
+			"english": "daughter"
 		},
 		{
-			"english": "half",
-			"french": "moitiI",
-			"number": "890"
+			"Rank": "402",
+			"portuguese": "fim",
+			"english": "end"
 		},
 		{
-			"english": "love",
-			"french": "aimI",
-			"number": "891"
+			"Rank": "403",
+			"portuguese": "faça",
+			"english": "do it"
 		},
 		{
-			"english": "surprise",
-			"french": "surprise",
-			"number": "892"
+			"Rank": "404",
+			"portuguese": "acredito",
+			"english": "I believe"
 		},
 		{
-			"english": "each",
-			"french": "chacun",
-			"number": "893"
+			"Rank": "405",
+			"portuguese": "diga",
+			"english": "say it"
 		},
 		{
-			"english": "will",
-			"french": "serez",
-			"number": "894"
+			"Rank": "406",
+			"portuguese": "baixo",
+			"english": "low"
 		},
 		{
-			"english": "exact",
-			"french": "exact",
-			"number": "895"
+			"Rank": "407",
+			"portuguese": "venha",
+			"english": "come on"
 		},
 		{
-			"english": "commanding officer",
-			"french": "commandant",
-			"number": "896"
+			"Rank": "408",
+			"portuguese": "causa",
+			"english": "cause"
 		},
 		{
-			"english": "TV",
-			"french": "tIlI",
-			"number": "897"
+			"Rank": "409",
+			"portuguese": "sra",
+			"english": "Mrs."
 		},
 		{
-			"english": "around",
-			"french": "autour",
-			"number": "898"
+			"Rank": "410",
+			"portuguese": "espere",
+			"english": "hang on"
 		},
 		{
-			"english": "faded away",
-			"french": "disparu",
-			"number": "899"
+			"Rank": "411",
+			"portuguese": "escola",
+			"english": "school"
 		},
 		{
-			"english": "line",
-			"french": "ligne",
-			"number": "900"
+			"Rank": "412",
+			"portuguese": "meio",
+			"english": "means"
 		},
 		{
-			"english": "explain",
-			"french": "expliquer",
-			"number": "901"
+			"Rank": "413",
+			"portuguese": "maior",
+			"english": "larger"
 		},
 		{
-			"english": "like",
-			"french": "aimer",
-			"number": "902"
+			"Rank": "414",
+			"portuguese": "umas",
+			"english": "some"
 		},
 		{
-			"english": "arrival",
-			"french": "arrivIe",
-			"number": "903"
+			"Rank": "415",
+			"portuguese": "vê",
+			"english": "see"
 		},
 		{
-			"english": "big",
-			"french": "grosse",
-			"number": "904"
+			"Rank": "416",
+			"portuguese": "mão",
+			"english": "hand"
 		},
 		{
-			"english": "simply",
-			"french": "simplement",
-			"number": "905"
+			"Rank": "417",
+			"portuguese": "problemas",
+			"english": "problems"
 		},
 		{
-			"english": "mission",
-			"french": "mission",
-			"number": "906"
+			"Rank": "418",
+			"portuguese": "vejo",
+			"english": "watch"
 		},
 		{
-			"english": "ascend",
-			"french": "monter",
-			"number": "907"
+			"Rank": "419",
+			"portuguese": "nisso",
+			"english": "in that"
 		},
 		{
-			"english": "hold",
-			"french": "tenir",
-			"number": "908"
+			"Rank": "420",
+			"portuguese": "mesma",
+			"english": "same"
 		},
 		{
-			"english": "good",
-			"french": "bons",
-			"number": "909"
+			"Rank": "421",
+			"portuguese": "começar",
+			"english": "begin"
 		},
 		{
-			"english": "ball",
-			"french": "balle",
-			"number": "910"
+			"Rank": "422",
+			"portuguese": "chefe",
+			"english": "boss"
 		},
 		{
-			"english": "to leave",
-			"french": "quitter",
-			"number": "911"
+			"Rank": "423",
+			"portuguese": "dormir",
+			"english": "to sleep"
 		},
 		{
-			"english": "according to",
-			"french": "selon",
-			"number": "912"
+			"Rank": "424",
+			"portuguese": "velho",
+			"english": "old"
 		},
 		{
-			"english": "class",
-			"french": "classe",
-			"number": "913"
+			"Rank": "425",
+			"portuguese": "havia",
+			"english": "there were"
 		},
 		{
-			"english": "Paris",
-			"french": "paris",
-			"number": "914"
+			"Rank": "426",
+			"portuguese": "acabou",
+			"english": "ended up"
 		},
 		{
-			"english": "got out",
-			"french": "sorti",
-			"number": "915"
+			"Rank": "427",
+			"portuguese": "disto",
+			"english": "from this"
 		},
 		{
-			"english": "eat",
-			"french": "mange",
-			"number": "916"
+			"Rank": "428",
+			"portuguese": "dr",
+			"english": "dr"
 		},
 		{
-			"english": "people",
-			"french": "peuple",
-			"number": "917"
+			"Rank": "429",
+			"portuguese": "mulheres",
+			"english": "women"
 		},
 		{
-			"english": "habit",
-			"french": "habitude",
-			"number": "918"
+			"Rank": "430",
+			"portuguese": "idiota",
+			"english": "idiot"
 		},
 		{
-			"english": "way",
-			"french": "voie",
-			"number": "919"
+			"Rank": "431",
+			"portuguese": "única",
+			"english": "only"
 		},
 		{
-			"english": "dangerous",
-			"french": "dangereux",
-			"number": "920"
+			"Rank": "432",
+			"portuguese": "última",
+			"english": "last"
 		},
 		{
-			"english": "mate",
-			"french": "pote",
-			"number": "921"
+			"Rank": "433",
+			"portuguese": "sabem",
+			"english": "know"
 		},
 		{
-			"english": "control",
-			"french": "contrIle",
-			"number": "922"
+			"Rank": "434",
+			"portuguese": "nenhuma",
+			"english": "none"
 		},
 		{
-			"english": "ready",
-			"french": "prIte",
-			"number": "923"
+			"Rank": "435",
+			"portuguese": "viu",
+			"english": "saw"
 		},
 		{
-			"english": "shame",
-			"french": "honte",
-			"number": "924"
+			"Rank": "436",
+			"portuguese": "dólares",
+			"english": "dollars"
 		},
 		{
-			"english": "meet",
-			"french": "rencontrI",
-			"number": "925"
+			"Rank": "437",
+			"portuguese": "difícil",
+			"english": "difficult"
 		},
 		{
-			"english": "pics",
-			"french": "photos",
-			"number": "926"
+			"Rank": "438",
+			"portuguese": "quatro",
+			"english": "four"
 		},
 		{
-			"english": "impression",
-			"french": "impression",
-			"number": "927"
+			"Rank": "439",
+			"portuguese": "coração",
+			"english": "heart"
 		},
 		{
-			"english": "crazy woman",
-			"french": "folle",
-			"number": "928"
+			"Rank": "440",
+			"portuguese": "número",
+			"english": "number"
 		},
 		{
-			"english": "to write",
-			"french": "Icrire",
-			"number": "929"
+			"Rank": "441",
+			"portuguese": "deste",
+			"english": "this"
 		},
 		{
-			"english": "to follow",
-			"french": "suivre",
-			"number": "930"
+			"Rank": "442",
+			"portuguese": "lamento",
+			"english": "am sorry"
 		},
 		{
-			"english": "forget",
-			"french": "oublier",
-			"number": "931"
+			"Rank": "443",
+			"portuguese": "viver",
+			"english": "to live"
 		},
 		{
-			"english": "books",
-			"french": "livres",
-			"number": "932"
+			"Rank": "444",
+			"portuguese": "prazer",
+			"english": "pleasure"
 		},
 		{
-			"english": "go",
-			"french": "aille",
-			"number": "933"
+			"Rank": "445",
+			"portuguese": "sai",
+			"english": "leaves"
 		},
 		{
-			"english": "return",
-			"french": "retourner",
-			"number": "934"
+			"Rank": "446",
+			"portuguese": "crianças",
+			"english": "children"
 		},
 		{
-			"english": "offer",
-			"french": "offre",
-			"number": "935"
+			"Rank": "447",
+			"portuguese": "olhe",
+			"english": "look"
 		},
 		{
-			"english": "song",
-			"french": "chanson",
-			"number": "936"
+			"Rank": "448",
+			"portuguese": "ouve",
+			"english": "hears"
 		},
 		{
-			"english": "send",
-			"french": "envoie",
-			"number": "937"
+			"Rank": "449",
+			"portuguese": "segundo",
+			"english": "second"
 		},
 		{
-			"english": "hole",
-			"french": "trou",
-			"number": "938"
+			"Rank": "450",
+			"portuguese": "chega",
+			"english": "arrives"
 		},
 		{
-			"english": "back",
-			"french": "arriIre",
-			"number": "939"
+			"Rank": "451",
+			"portuguese": "eram",
+			"english": "they were"
 		},
 		{
-			"english": "post",
-			"french": "poste",
-			"number": "940"
+			"Rank": "452",
+			"portuguese": "fazendo",
+			"english": "doing"
 		},
 		{
-			"english": "America",
-			"french": "amIrique",
-			"number": "941"
+			"Rank": "453",
+			"portuguese": "andar",
+			"english": "floor"
 		},
 		{
-			"english": "eight",
-			"french": "huit",
-			"number": "942"
+			"Rank": "454",
+			"portuguese": "capitão",
+			"english": "captain"
 		},
 		{
-			"english": "radio",
-			"french": "radio",
-			"number": "943"
+			"Rank": "455",
+			"portuguese": "muitas",
+			"english": "many"
 		},
 		{
-			"english": "paul",
-			"french": "paul",
-			"number": "944"
+			"Rank": "456",
+			"portuguese": "ouvi",
+			"english": "I heard"
 		},
 		{
-			"english": "looks like",
-			"french": "ressemble",
-			"number": "945"
+			"Rank": "457",
+			"portuguese": "muitos",
+			"english": "Many"
 		},
 		{
-			"english": "attack",
-			"french": "attaque",
-			"number": "946"
+			"Rank": "458",
+			"portuguese": "elas",
+			"english": "they"
 		},
 		{
-			"english": "stopped",
-			"french": "arrItI",
-			"number": "947"
+			"Rank": "459",
+			"portuguese": "sangue",
+			"english": "blood"
 		},
 		{
-			"english": "exchange",
-			"french": "change",
-			"number": "948"
+			"Rank": "460",
+			"portuguese": "estado",
+			"english": "state"
 		},
 		{
-			"english": "kiss",
-			"french": "baiser",
-			"number": "949"
+			"Rank": "461",
+			"portuguese": "importa",
+			"english": "it matters"
 		},
 		{
-			"english": "However",
-			"french": "pourtant",
-			"number": "950"
+			"Rank": "462",
+			"portuguese": "corpo",
+			"english": "body"
 		},
 		{
-			"english": "reply",
-			"french": "rIponse",
-			"number": "951"
+			"Rank": "463",
+			"portuguese": "teve",
+			"english": "had"
 		},
 		{
-			"english": "known",
-			"french": "connu",
-			"number": "952"
+			"Rank": "464",
+			"portuguese": "penso",
+			"english": "I think"
 		},
 		{
-			"english": "k",
-			"french": "k",
-			"number": "953"
+			"Rank": "465",
+			"portuguese": "parar",
+			"english": "stop"
 		},
 		{
-			"english": "shithead",
-			"french": "connard",
-			"number": "954"
+			"Rank": "466",
+			"portuguese": "gostaria",
+			"english": "would"
 		},
 		{
-			"english": "read",
-			"french": "lu",
-			"number": "955"
+			"Rank": "467",
+			"portuguese": "mil",
+			"english": "thousand"
 		},
 		{
-			"english": "bitch",
-			"french": "pute",
-			"number": "956"
+			"Rank": "468",
+			"portuguese": "usar",
+			"english": "use"
 		},
 		{
-			"english": "band",
-			"french": "bande",
-			"number": "957"
+			"Rank": "469",
+			"portuguese": "ontem",
+			"english": "yesterday"
 		},
 		{
-			"english": "hell",
-			"french": "enfer",
-			"number": "958"
+			"Rank": "470",
+			"portuguese": "rapariga",
+			"english": "girl"
 		},
 		{
-			"english": "hold",
-			"french": "tenez",
-			"number": "959"
+			"Rank": "471",
+			"portuguese": "significa",
+			"english": "means"
 		},
 		{
-			"english": "makes",
-			"french": "rend",
-			"number": "960"
+			"Rank": "472",
+			"portuguese": "festa",
+			"english": "party"
 		},
 		{
-			"english": "sad",
-			"french": "triste",
-			"number": "961"
+			"Rank": "473",
+			"portuguese": "deixa",
+			"english": "cue"
 		},
 		{
-			"english": "such",
-			"french": "tel",
-			"number": "962"
+			"Rank": "474",
+			"portuguese": "pequeno",
+			"english": "little"
 		},
 		{
-			"english": "Bravo",
-			"french": "bravo",
-			"number": "963"
+			"Rank": "475",
+			"portuguese": "devo",
+			"english": "I must"
 		},
 		{
-			"english": "be",
-			"french": "etre",
-			"number": "964"
+			"Rank": "476",
+			"portuguese": "mau",
+			"english": "bad"
 		},
 		{
-			"english": "knew",
-			"french": "savait",
-			"number": "965"
+			"Rank": "477",
+			"portuguese": "força",
+			"english": "force"
 		},
 		{
-			"english": "david",
-			"french": "david",
-			"number": "966"
+			"Rank": "478",
+			"portuguese": "longe",
+			"english": "far"
 		},
 		{
-			"english": "many",
-			"french": "plusieurs",
-			"number": "967"
+			"Rank": "479",
+			"portuguese": "filhos",
+			"english": "children"
 		},
 		{
-			"english": "exist",
-			"french": "existe",
-			"number": "968"
+			"Rank": "480",
+			"portuguese": "depressa",
+			"english": "quickly"
 		},
 		{
-			"english": "puts",
-			"french": "met",
-			"number": "969"
+			"Rank": "481",
+			"portuguese": "morreu",
+			"english": "died"
 		},
 		{
-			"english": "to laugh",
-			"french": "rire",
-			"number": "970"
+			"Rank": "482",
+			"portuguese": "marido",
+			"english": "husband"
 		},
 		{
-			"english": "company",
-			"french": "compagnie",
-			"number": "971"
+			"Rank": "483",
+			"portuguese": "olhar",
+			"english": "look"
 		},
 		{
-			"english": "strange",
-			"french": "Itrange",
-			"number": "972"
+			"Rank": "484",
+			"portuguese": "presidente",
+			"english": "president"
 		},
 		{
-			"english": "example",
-			"french": "exemple",
-			"number": "973"
+			"Rank": "485",
+			"portuguese": "tomar",
+			"english": "to take"
 		},
 		{
-			"english": "had",
-			"french": "devais",
-			"number": "974"
+			"Rank": "486",
+			"portuguese": "essas",
+			"english": "these"
 		},
 		{
-			"english": "lives",
-			"french": "vit",
-			"number": "975"
+			"Rank": "487",
+			"portuguese": "nesta",
+			"english": "in this"
 		},
 		{
-			"english": "fight",
-			"french": "combat",
-			"number": "976"
+			"Rank": "488",
+			"portuguese": "demais",
+			"english": "too"
 		},
 		{
-			"english": "rescue",
-			"french": "secours",
-			"number": "977"
+			"Rank": "489",
+			"portuguese": "meses",
+			"english": "months"
 		},
 		{
-			"english": "will",
-			"french": "aurez",
-			"number": "978"
+			"Rank": "490",
+			"portuguese": "gosta",
+			"english": "like"
 		},
 		{
-			"english": "bullshit",
-			"french": "conneries",
-			"number": "979"
+			"Rank": "491",
+			"portuguese": "esses",
+			"english": "Those"
 		},
 		{
-			"english": "visit",
-			"french": "visite",
-			"number": "980"
+			"Rank": "492",
+			"portuguese": "muita",
+			"english": "lots of"
 		},
 		{
-			"english": "play",
-			"french": "jouI",
-			"number": "981"
+			"Rank": "493",
+			"portuguese": "pena",
+			"english": "feather"
 		},
 		{
-			"english": "michael",
-			"french": "michael",
-			"number": "982"
+			"Rank": "494",
+			"portuguese": "pensa",
+			"english": "think"
 		},
 		{
-			"english": "will",
-			"french": "pourra",
-			"number": "983"
+			"Rank": "495",
+			"portuguese": "jack",
+			"english": "jack"
 		},
 		{
-			"english": "sleep",
-			"french": "coucher",
-			"number": "984"
+			"Rank": "496",
+			"portuguese": "perder",
+			"english": "lose"
 		},
 		{
-			"english": "conceived",
-			"french": "imagine",
-			"number": "985"
+			"Rank": "497",
+			"portuguese": "veio",
+			"english": "came"
 		},
 		{
-			"english": "bob",
-			"french": "bob",
-			"number": "986"
+			"Rank": "498",
+			"portuguese": "trás",
+			"english": "back"
 		},
 		{
-			"english": "wonderful",
-			"french": "merveilleux",
-			"number": "987"
+			"Rank": "499",
+			"portuguese": "esperar",
+			"english": "wait"
 		},
 		{
-			"english": "Carry on",
-			"french": "continuer",
-			"number": "988"
+			"Rank": "500",
+			"portuguese": "contar",
+			"english": "tell"
 		},
 		{
-			"english": "ecoutez",
-			"french": "ecoutez",
-			"number": "989"
+			"Rank": "501",
+			"portuguese": "john",
+			"english": "john"
 		},
 		{
-			"english": "tell",
-			"french": "dirai",
-			"number": "990"
+			"Rank": "502",
+			"portuguese": "buscar",
+			"english": "to seek"
 		},
 		{
-			"english": "stolen",
-			"french": "volI",
-			"number": "991"
+			"Rank": "503",
+			"portuguese": "paz",
+			"english": "peace"
 		},
 		{
-			"english": "Moon",
-			"french": "lune",
-			"number": "992"
+			"Rank": "504",
+			"portuguese": "procura",
+			"english": "demand"
 		},
 		{
-			"english": "stuffy",
-			"french": "bouche",
-			"number": "993"
+			"Rank": "505",
+			"portuguese": "porra",
+			"english": "Cum"
 		},
 		{
-			"english": "South",
-			"french": "sud",
-			"number": "994"
+			"Rank": "506",
+			"portuguese": "telefone",
+			"english": "phone"
 		},
 		{
-			"english": "dance",
-			"french": "danse",
-			"number": "995"
+			"Rank": "507",
+			"portuguese": "irmã",
+			"english": "sister"
 		},
 		{
-			"english": "trouble",
-			"french": "ennuis",
-			"number": "996"
+			"Rank": "508",
+			"portuguese": "disseste",
+			"english": "said"
 		},
 		{
-			"english": "goal",
-			"french": "but",
-			"number": "997"
+			"Rank": "509",
+			"portuguese": "raio",
+			"english": "lightning"
 		},
 		{
-			"english": "Ouch",
-			"french": "aie",
-			"number": "998"
+			"Rank": "510",
+			"portuguese": "teria",
+			"english": "it would have"
 		},
 		{
-			"english": "except",
-			"french": "hors",
-			"number": "999"
+			"Rank": "511",
+			"portuguese": "pais",
+			"english": "parents"
 		},
 		{
-			"english": "exit",
-			"french": "sortie",
-			"number": "1000"
+			"Rank": "512",
+			"portuguese": "altura",
+			"english": "height"
 		},
 		{
-			"english": "box",
-			"french": "boI te",
-			"number": "1001"
+			"Rank": "513",
+			"portuguese": "digo",
+			"english": "I say"
 		},
 		{
-			"english": "flight",
-			"french": "vol",
-			"number": "1002"
+			"Rank": "514",
+			"portuguese": "menina",
+			"english": "girl"
 		},
 		{
-			"english": "public",
-			"french": "public",
-			"number": "1003"
+			"Rank": "515",
+			"portuguese": "estavam",
+			"english": "They were"
 		},
 		{
-			"english": "lieutenant",
-			"french": "lieutenant",
-			"number": "1004"
+			"Rank": "516",
+			"portuguese": "errado",
+			"english": "wrong"
 		},
 		{
-			"english": "listen",
-			"french": "Icouter",
-			"number": "1005"
+			"Rank": "517",
+			"portuguese": "tivesse",
+			"english": "had"
 		},
 		{
-			"english": "present",
-			"french": "prIsente",
-			"number": "1006"
+			"Rank": "518",
+			"portuguese": "fazes",
+			"english": "doest"
 		},
 		{
-			"english": "system",
-			"french": "systIme",
-			"number": "1007"
+			"Rank": "519",
+			"portuguese": "vindo",
+			"english": "coming"
 		},
 		{
-			"english": "time",
-			"french": "Ipoque",
-			"number": "1008"
+			"Rank": "520",
+			"portuguese": "filme",
+			"english": "movie"
 		},
 		{
-			"english": "return",
-			"french": "retourne",
-			"number": "1009"
+			"Rank": "521",
+			"portuguese": "fácil",
+			"english": "easy"
 		},
 		{
-			"english": "certain",
-			"french": "certain",
-			"number": "1010"
+			"Rank": "522",
+			"portuguese": "acordo",
+			"english": "wake up"
 		},
 		{
-			"english": "stupid",
-			"french": "bIte",
-			"number": "1011"
+			"Rank": "523",
+			"portuguese": "nao",
+			"english": "no"
 		},
 		{
-			"english": "sale",
-			"french": "vendre",
-			"number": "1012"
+			"Rank": "524",
+			"portuguese": "pergunta",
+			"english": "question"
 		},
 		{
-			"english": "to come up",
-			"french": "avenir",
-			"number": "1013"
+			"Rank": "525",
+			"portuguese": "possível",
+			"english": "possible"
 		},
 		{
-			"english": "great",
-			"french": "grands",
-			"number": "1014"
+			"Rank": "526",
+			"portuguese": "vivo",
+			"english": "live"
 		},
 		{
-			"english": "shots",
-			"french": "coups",
-			"number": "1015"
+			"Rank": "527",
+			"portuguese": "cama",
+			"english": "bed"
 		},
 		{
-			"english": "health",
-			"french": "santI",
-			"number": "1016"
+			"Rank": "528",
+			"portuguese": "dizem",
+			"english": "they say"
 		},
 		{
-			"english": "leave",
-			"french": "partez",
-			"number": "1017"
+			"Rank": "529",
+			"portuguese": "acabar",
+			"english": "end"
 		},
 		{
-			"english": "lover",
-			"french": "amoureux",
-			"number": "1018"
+			"Rank": "530",
+			"portuguese": "suficiente",
+			"english": "enough"
 		},
 		{
-			"english": "to send",
-			"french": "envoyer",
-			"number": "1019"
+			"Rank": "531",
+			"portuguese": "fizeste",
+			"english": "did"
 		},
 		{
-			"english": "kitchen room",
-			"french": "cuisine",
-			"number": "1020"
+			"Rank": "532",
+			"portuguese": "estranho",
+			"english": "weird"
 		},
 		{
-			"english": "normal",
-			"french": "normal",
-			"number": "1021"
+			"Rank": "533",
+			"portuguese": "sabemos",
+			"english": "we know"
 		},
 		{
-			"english": "danger",
-			"french": "danger",
-			"number": "1022"
+			"Rank": "534",
+			"portuguese": "segurança",
+			"english": "safety"
 		},
 		{
-			"english": "government",
-			"french": "gouvernement",
-			"number": "1023"
+			"Rank": "535",
+			"portuguese": "puta",
+			"english": "hooker"
 		},
 		{
-			"english": "town",
-			"french": "village",
-			"number": "1024"
+			"Rank": "536",
+			"portuguese": "brincar",
+			"english": "play"
 		},
 		{
-			"english": "to pose",
-			"french": "poser",
-			"number": "1025"
+			"Rank": "537",
+			"portuguese": "licença",
+			"english": "license"
 		},
 		{
-			"english": "open",
-			"french": "ouvrir",
-			"number": "1026"
+			"Rank": "538",
+			"portuguese": "além",
+			"english": "beyond"
 		},
 		{
-			"english": "newspaper",
-			"french": "journal",
-			"number": "1027"
+			"Rank": "539",
+			"portuguese": "conseguir",
+			"english": "get"
 		},
 		{
-			"english": "approach",
-			"french": "approche",
-			"number": "1028"
+			"Rank": "540",
+			"portuguese": "livro",
+			"english": "book"
 		},
 		{
-			"english": "will",
-			"french": "faudra",
-			"number": "1029"
+			"Rank": "541",
+			"portuguese": "tirar",
+			"english": "take"
 		},
 		{
-			"english": "pity",
-			"french": "dommage",
-			"number": "1030"
+			"Rank": "542",
+			"portuguese": "país",
+			"english": "parents"
 		},
 		{
-			"english": "skin",
-			"french": "peau",
-			"number": "1031"
+			"Rank": "543",
+			"portuguese": "jantar",
+			"english": "have a dinner"
 		},
 		{
-			"english": "full",
-			"french": "pleine",
-			"number": "1032"
+			"Rank": "544",
+			"portuguese": "palavra",
+			"english": "word"
 		},
 		{
-			"english": "steal",
-			"french": "voler",
-			"number": "1033"
+			"Rank": "545",
+			"portuguese": "seis",
+			"english": "six"
 		},
 		{
-			"english": "nose",
-			"french": "nez",
-			"number": "1034"
+			"Rank": "546",
+			"portuguese": "conheço",
+			"english": "I know"
 		},
 		{
-			"english": "dance",
-			"french": "danser",
-			"number": "1035"
+			"Rank": "547",
+			"portuguese": "deu",
+			"english": "He gave"
 		},
 		{
-			"english": "serve",
-			"french": "servir",
-			"number": "1036"
+			"Rank": "548",
+			"portuguese": "nossas",
+			"english": "our"
 		},
 		{
-			"english": "friendly",
-			"french": "sympa",
-			"number": "1037"
+			"Rank": "549",
+			"portuguese": "passado",
+			"english": "past"
 		},
 		{
-			"english": "good",
-			"french": "bonnes",
-			"number": "1038"
+			"Rank": "550",
+			"portuguese": "fique",
+			"english": "stay"
 		},
 		{
-			"english": "thousand",
-			"french": "mille",
-			"number": "1039"
+			"Rank": "551",
+			"portuguese": "boca",
+			"english": "mouth"
 		},
 		{
-			"english": "hero",
-			"french": "hIros",
-			"number": "1040"
+			"Rank": "552",
+			"portuguese": "outras",
+			"english": "others"
 		},
 		{
-			"english": "bank",
-			"french": "banque",
-			"number": "1041"
+			"Rank": "553",
+			"portuguese": "comida",
+			"english": "food"
 		},
 		{
-			"english": "sergeant",
-			"french": "sergent",
-			"number": "1042"
+			"Rank": "554",
+			"portuguese": "falta",
+			"english": "lack"
 		},
 		{
-			"english": "key",
-			"french": "clI",
-			"number": "1043"
+			"Rank": "555",
+			"portuguese": "armas",
+			"english": "weapons"
 		},
 		{
-			"english": "seconds",
-			"french": "secondes",
-			"number": "1044"
+			"Rank": "556",
+			"portuguese": "ficou",
+			"english": "stayed"
 		},
 		{
-			"english": "North",
-			"french": "nord",
-			"number": "1045"
+			"Rank": "557",
+			"portuguese": "fazem",
+			"english": "make"
 		},
 		{
-			"english": "inspector",
-			"french": "inspecteur",
-			"number": "1046"
+			"Rank": "558",
+			"portuguese": "bastante",
+			"english": "enough"
 		},
 		{
-			"english": "hey",
-			"french": "hey",
-			"number": "1047"
+			"Rank": "559",
+			"portuguese": "sozinho",
+			"english": "Alone"
 		},
 		{
-			"english": "freedom",
-			"french": "libertI",
-			"number": "1048"
+			"Rank": "560",
+			"portuguese": "deveria",
+			"english": "should"
 		},
 		{
-			"english": "bastard",
-			"french": "salaud",
-			"number": "1049"
+			"Rank": "561",
+			"portuguese": "ai",
+			"english": "there"
 		},
 		{
-			"english": "Please",
-			"french": "plait",
-			"number": "1050"
+			"Rank": "562",
+			"portuguese": "minuto",
+			"english": "minute"
 		},
 		{
-			"english": "court",
-			"french": "cour",
-			"number": "1051"
+			"Rank": "563",
+			"portuguese": "pelos",
+			"english": "by"
 		},
 		{
-			"english": "judge",
-			"french": "juge",
-			"number": "1052"
+			"Rank": "564",
+			"portuguese": "luz",
+			"english": "light"
 		},
 		{
-			"english": "are coming",
-			"french": "viennent",
-			"number": "1053"
+			"Rank": "565",
+			"portuguese": "ar",
+			"english": "air"
 		},
 		{
-			"english": "noise",
-			"french": "bruit",
-			"number": "1054"
+			"Rank": "566",
+			"portuguese": "tuas",
+			"english": "your"
 		},
 		{
-			"english": "cop",
-			"french": "flic",
-			"number": "1055"
+			"Rank": "567",
+			"portuguese": "música",
+			"english": "music"
 		},
 		{
-			"english": "is holding",
-			"french": "tient",
-			"number": "1056"
+			"Rank": "568",
+			"portuguese": "pagar",
+			"english": "pay"
 		},
 		{
-			"english": "terrible",
-			"french": "terrible",
-			"number": "1057"
+			"Rank": "569",
+			"portuguese": "fogo",
+			"english": "fire"
 		},
 		{
-			"english": "seems",
-			"french": "paraI t",
-			"number": "1058"
+			"Rank": "570",
+			"portuguese": "próprio",
+			"english": "own"
 		},
 		{
-			"english": "crime",
-			"french": "crime",
-			"number": "1059"
+			"Rank": "571",
+			"portuguese": "atenção",
+			"english": "attention"
 		},
 		{
-			"english": "next",
-			"french": "prochain",
-			"number": "1060"
+			"Rank": "572",
+			"portuguese": "jesus",
+			"english": "Jesus"
 		},
 		{
-			"english": "can",
-			"french": "pouvons",
-			"number": "1061"
+			"Rank": "573",
+			"portuguese": "chegou",
+			"english": "has arrived"
 		},
 		{
-			"english": "seated",
-			"french": "assis",
-			"number": "1062"
+			"Rank": "574",
+			"portuguese": "quiser",
+			"english": "want"
 		},
 		{
-			"english": "tea",
-			"french": "thI",
-			"number": "1063"
+			"Rank": "575",
+			"portuguese": "forte",
+			"english": "strong"
 		},
 		{
-			"english": "happiness",
-			"french": "bonheur",
-			"number": "1064"
+			"Rank": "576",
+			"portuguese": "existe",
+			"english": "exist"
 		},
 		{
-			"english": "paid",
-			"french": "payI",
-			"number": "1065"
+			"Rank": "577",
+			"portuguese": "possa",
+			"english": "be likely to"
 		},
 		{
-			"english": "heap",
-			"french": "tas",
-			"number": "1066"
+			"Rank": "578",
+			"portuguese": "pedir",
+			"english": "ask"
 		},
 		{
-			"english": "through",
-			"french": "travers",
-			"number": "1067"
+			"Rank": "579",
+			"portuguese": "sentir",
+			"english": "to feel"
 		},
 		{
-			"english": "dumb",
-			"french": "stupide",
-			"number": "1068"
+			"Rank": "580",
+			"portuguese": "acreditar",
+			"english": "to believe"
 		},
 		{
-			"english": "joke",
-			"french": "blague",
-			"number": "1069"
+			"Rank": "581",
+			"portuguese": "partir",
+			"english": "leave"
 		},
 		{
-			"english": "prefer",
-			"french": "prIfIre",
-			"number": "1070"
+			"Rank": "582",
+			"portuguese": "continua",
+			"english": "to be continued"
 		},
 		{
-			"english": "advice",
-			"french": "conseil",
-			"number": "1071"
+			"Rank": "583",
+			"portuguese": "mudar",
+			"english": "to change"
 		},
 		{
-			"english": "dress",
-			"french": "robe",
-			"number": "1072"
+			"Rank": "584",
+			"portuguese": "toma",
+			"english": "takes"
 		},
 		{
-			"english": "drawn",
-			"french": "tirI",
-			"number": "1073"
+			"Rank": "585",
+			"portuguese": "rei",
+			"english": "King"
 		},
 		{
-			"english": "protect",
-			"french": "protIger",
-			"number": "1074"
+			"Rank": "586",
+			"portuguese": "direito",
+			"english": "right"
 		},
 		{
-			"english": "dreams",
-			"french": "rIves",
-			"number": "1075"
+			"Rank": "587",
+			"portuguese": "jovem",
+			"english": "young"
 		},
 		{
-			"english": "only",
-			"french": "seuls",
-			"number": "1076"
+			"Rank": "588",
+			"portuguese": "único",
+			"english": "one of a kind"
 		},
 		{
-			"english": "pity",
-			"french": "pitiI",
-			"number": "1077"
+			"Rank": "589",
+			"portuguese": "café",
+			"english": "coffee"
 		},
 		{
-			"english": "eye",
-			"french": "oeil",
-			"number": "1078"
+			"Rank": "590",
+			"portuguese": "diferente",
+			"english": "different"
 		},
 		{
-			"english": "same",
-			"french": "mImes",
-			"number": "1079"
+			"Rank": "591",
+			"portuguese": "vossa",
+			"english": "yours"
 		},
 		{
-			"english": "wine",
-			"french": "vin",
-			"number": "1080"
+			"Rank": "592",
+			"portuguese": "culpa",
+			"english": "fault"
 		},
 		{
-			"english": "had",
-			"french": "avions",
-			"number": "1081"
+			"Rank": "593",
+			"portuguese": "plano",
+			"english": "plan"
 		},
 		{
-			"english": "Don",
-			"french": "don",
-			"number": "1082"
+			"Rank": "594",
+			"portuguese": "rua",
+			"english": "Street"
 		},
 		{
-			"english": "ground",
-			"french": "sol",
-			"number": "1083"
+			"Rank": "595",
+			"portuguese": "foste",
+			"english": "wast"
 		},
 		{
-			"english": "wind",
-			"french": "vent",
-			"number": "1084"
+			"Rank": "596",
+			"portuguese": "milhões",
+			"english": "millions"
 		},
 		{
-			"english": "club",
-			"french": "club",
-			"number": "1085"
+			"Rank": "597",
+			"portuguese": "consegue",
+			"english": "can"
 		},
 		{
-			"english": "boys",
-			"french": "garIons",
-			"number": "1086"
+			"Rank": "598",
+			"portuguese": "pé",
+			"english": "foot"
 		},
 		{
-			"english": "kid",
-			"french": "gamin",
-			"number": "1087"
+			"Rank": "599",
+			"portuguese": "correr",
+			"english": "run"
 		},
 		{
-			"english": "aunt",
-			"french": "tante",
-			"number": "1088"
+			"Rank": "600",
+			"portuguese": "próxima",
+			"english": "next"
 		},
 		{
-			"english": "believes",
-			"french": "croit",
-			"number": "1089"
+			"Rank": "601",
+			"portuguese": "devias",
+			"english": "You should"
 		},
 		{
-			"english": "ladies",
-			"french": "mesdames",
-			"number": "1090"
+			"Rank": "602",
+			"portuguese": "equipa",
+			"english": "team"
 		},
 		{
-			"english": "bar",
-			"french": "bar",
-			"number": "1091"
+			"Rank": "603",
+			"portuguese": "pequena",
+			"english": "little"
 		},
 		{
-			"english": "middle",
-			"french": "milieu",
-			"number": "1092"
+			"Rank": "604",
+			"portuguese": "linda",
+			"english": "beautiful"
 		},
 		{
-			"english": "Queen",
-			"french": "reine",
-			"number": "1093"
+			"Rank": "605",
+			"portuguese": "pare",
+			"english": "stop it"
 		},
 		{
-			"english": "sign",
-			"french": "signe",
-			"number": "1094"
+			"Rank": "606",
+			"portuguese": "sequer",
+			"english": "even"
 		},
 		{
-			"english": "center",
-			"french": "centre",
-			"number": "1095"
+			"Rank": "607",
+			"portuguese": "jogar",
+			"english": "play"
 		},
 		{
-			"english": "probably",
-			"french": "probablement",
-			"number": "1096"
+			"Rank": "608",
+			"portuguese": "fico",
+			"english": "I get"
 		},
 		{
-			"english": "beer",
-			"french": "biIre",
-			"number": "1097"
+			"Rank": "609",
+			"portuguese": "provavelmente",
+			"english": "most likely"
 		},
 		{
-			"english": "crazy",
-			"french": "dingue",
-			"number": "1098"
+			"Rank": "610",
+			"portuguese": "exactamente",
+			"english": "exactly"
 		},
 		{
-			"english": "useless",
-			"french": "inutile",
-			"number": "1099"
+			"Rank": "611",
+			"portuguese": "passou",
+			"english": "has passed"
 		},
 		{
-			"english": "nothing",
-			"french": "nulle",
-			"number": "1100"
+			"Rank": "612",
+			"portuguese": "casamento",
+			"english": "marriage"
 		},
 		{
-			"english": "mike",
-			"french": "mike",
-			"number": "1101"
+			"Rank": "613",
+			"portuguese": "deixe",
+			"english": "leave"
 		},
 		{
-			"english": "feels",
-			"french": "sent",
-			"number": "1102"
+			"Rank": "614",
+			"portuguese": "aqueles",
+			"english": "those"
 		},
 		{
-			"english": "different",
-			"french": "diffIrent",
-			"number": "1103"
+			"Rank": "615",
+			"portuguese": "especial",
+			"english": "special"
 		},
 		{
-			"english": "bring",
-			"french": "emmener",
-			"number": "1104"
+			"Rank": "616",
+			"portuguese": "ganhar",
+			"english": "win"
 		},
 		{
-			"english": "understand",
-			"french": "comprenez",
-			"number": "1105"
+			"Rank": "617",
+			"portuguese": "sala",
+			"english": "living room"
 		},
 		{
-			"english": "will",
-			"french": "verra",
-			"number": "1106"
+			"Rank": "618",
+			"portuguese": "grandes",
+			"english": "big ones"
 		},
 		{
-			"english": "taking",
-			"french": "prise",
-			"number": "1107"
+			"Rank": "619",
+			"portuguese": "semanas",
+			"english": "weeks"
 		},
 		{
-			"english": "clothing",
-			"french": "vItements",
-			"number": "1108"
+			"Rank": "620",
+			"portuguese": "resto",
+			"english": "rest"
 		},
 		{
-			"english": "listing",
-			"french": "liste",
-			"number": "1109"
+			"Rank": "621",
+			"portuguese": "houve",
+			"english": "there was"
 		},
 		{
-			"english": "know",
-			"french": "savent",
-			"number": "1110"
+			"Rank": "622",
+			"portuguese": "pior",
+			"english": "worse"
 		},
 		{
-			"english": "United",
-			"french": "unis",
-			"number": "1111"
+			"Rank": "623",
+			"portuguese": "esteja",
+			"english": "is"
 		},
 		{
-			"english": "society",
-			"french": "sociItI",
-			"number": "1112"
+			"Rank": "624",
+			"portuguese": "esposa",
+			"english": "wife"
 		},
 		{
-			"english": "Dear",
-			"french": "chIre",
-			"number": "1113"
+			"Rank": "625",
+			"portuguese": "natal",
+			"english": "Christmas"
 		},
 		{
-			"english": "care",
-			"french": "soin",
-			"number": "1114"
+			"Rank": "626",
+			"portuguese": "mr",
+			"english": "mr"
 		},
 		{
-			"english": "Pierre",
-			"french": "pierre",
-			"number": "1115"
+			"Rank": "627",
+			"portuguese": "continuar",
+			"english": "continue"
 		},
 		{
-			"english": "call",
-			"french": "appelez",
-			"number": "1116"
+			"Rank": "628",
+			"portuguese": "quis",
+			"english": "wanted"
 		},
 		{
-			"english": "use",
-			"french": "utiliser",
-			"number": "1117"
+			"Rank": "629",
+			"portuguese": "veja",
+			"english": "Look"
 		},
 		{
-			"english": "bought",
-			"french": "achetI",
-			"number": "1118"
+			"Rank": "630",
+			"portuguese": "dez",
+			"english": "ten"
 		},
 		{
-			"english": "which",
-			"french": "laquelle",
-			"number": "1119"
+			"Rank": "631",
+			"portuguese": "bonito",
+			"english": "beautiful"
 		},
 		{
-			"english": "plug",
-			"french": "fiche",
-			"number": "1120"
+			"Rank": "632",
+			"portuguese": "precisas",
+			"english": "accurate"
 		},
 		{
-			"english": "speech",
-			"french": "parole",
-			"number": "1121"
+			"Rank": "633",
+			"portuguese": "ponto",
+			"english": "Score"
 		},
 		{
-			"english": "guys",
-			"french": "mecs",
-			"number": "1122"
+			"Rank": "634",
+			"portuguese": "cão",
+			"english": "dog"
 		},
 		{
-			"english": "doing",
-			"french": "faisais",
-			"number": "1123"
+			"Rank": "635",
+			"portuguese": "visto",
+			"english": "seen"
 		},
 		{
-			"english": "marry",
-			"french": "marier",
-			"number": "1124"
+			"Rank": "636",
+			"portuguese": "médico",
+			"english": "doctor"
 		},
 		{
-			"english": "departure",
-			"french": "dIpart",
-			"number": "1125"
+			"Rank": "637",
+			"portuguese": "estavas",
+			"english": "wast"
 		},
 		{
-			"english": "enemy",
-			"french": "ennemi",
-			"number": "1126"
+			"Rank": "638",
+			"portuguese": "estive",
+			"english": "I have been"
 		},
 		{
-			"english": "go",
-			"french": "irai",
-			"number": "1127"
+			"Rank": "639",
+			"portuguese": "criança",
+			"english": "child"
 		},
 		{
-			"english": "like",
-			"french": "aimez",
-			"number": "1128"
+			"Rank": "640",
+			"portuguese": "vim",
+			"english": "vim"
 		},
 		{
-			"english": "show",
-			"french": "spectacle",
-			"number": "1129"
+			"Rank": "641",
+			"portuguese": "louco",
+			"english": "Crazy"
 		},
 		{
-			"english": "want to",
-			"french": "vouloir",
-			"number": "1130"
+			"Rank": "642",
+			"portuguese": "raios",
+			"english": "rays"
 		},
 		{
-			"english": "research",
-			"french": "recherche",
-			"number": "1131"
+			"Rank": "643",
+			"portuguese": "queremos",
+			"english": "we want"
 		},
 		{
-			"english": "becomes",
-			"french": "devient",
-			"number": "1132"
+			"Rank": "644",
+			"portuguese": "amo",
+			"english": "master"
 		},
 		{
-			"english": "selected",
-			"french": "choisi",
-			"number": "1133"
+			"Rank": "645",
+			"portuguese": "devem",
+			"english": "must"
 		},
 		{
-			"english": "you",
-			"french": "you",
-			"number": "1134"
+			"Rank": "646",
+			"portuguese": "beber",
+			"english": "drink"
 		},
 		{
-			"english": "pose",
-			"french": "pose",
-			"number": "1135"
+			"Rank": "647",
+			"portuguese": "agente",
+			"english": "agent"
 		},
 		{
-			"english": "movies",
-			"french": "films",
-			"number": "1136"
+			"Rank": "648",
+			"portuguese": "seguir",
+			"english": "follow"
 		},
 		{
-			"english": "interest",
-			"french": "intIrIt",
-			"number": "1137"
+			"Rank": "649",
+			"portuguese": "negócio",
+			"english": "business"
 		},
 		{
-			"english": "interested",
-			"french": "intIresse",
-			"number": "1138"
+			"Rank": "650",
+			"portuguese": "alto",
+			"english": "high"
 		},
 		{
-			"english": "role",
-			"french": "rIle",
-			"number": "1139"
+			"Rank": "651",
+			"portuguese": "irá",
+			"english": "Will"
 		},
 		{
-			"english": "johnny",
-			"french": "johnny",
-			"number": "1140"
+			"Rank": "652",
+			"portuguese": "gostava",
+			"english": "enjoyed"
 		},
 		{
-			"english": "Congratulations",
-			"french": "fIlicitations",
-			"number": "1141"
+			"Rank": "653",
+			"portuguese": "las",
+			"english": "them"
 		},
 		{
-			"english": "go down",
-			"french": "descendre",
-			"number": "1142"
+			"Rank": "654",
+			"portuguese": "último",
+			"english": "last"
 		},
 		{
-			"english": "harry",
-			"french": "harry",
-			"number": "1143"
+			"Rank": "655",
+			"portuguese": "final",
+			"english": "end"
 		},
 		{
-			"english": "turned",
-			"french": "tourne",
-			"number": "1144"
+			"Rank": "656",
+			"portuguese": "modo",
+			"english": "mode"
 		},
 		{
-			"english": "position",
-			"french": "position",
-			"number": "1145"
+			"Rank": "657",
+			"portuguese": "oi",
+			"english": "Hi"
 		},
 		{
-			"english": "serves",
-			"french": "sert",
-			"number": "1146"
+			"Rank": "658",
+			"portuguese": "demasiado",
+			"english": "too"
 		},
 		{
-			"english": "injured",
-			"french": "blessI",
-			"number": "1147"
+			"Rank": "659",
+			"portuguese": "haver",
+			"english": "be"
 		},
 		{
-			"english": "human",
-			"french": "humain",
-			"number": "1148"
+			"Rank": "660",
+			"portuguese": "sentido",
+			"english": "sense"
 		},
 		{
-			"english": "seat",
-			"french": "asseoir",
-			"number": "1149"
+			"Rank": "661",
+			"portuguese": "bonita",
+			"english": "beautiful"
 		},
 		{
-			"english": "match",
-			"french": "match",
-			"number": "1150"
+			"Rank": "662",
+			"portuguese": "chamar",
+			"english": "Call"
 		},
 		{
-			"english": "guilty",
-			"french": "coupable",
-			"number": "1151"
+			"Rank": "663",
+			"portuguese": "acontece",
+			"english": "it happens"
 		},
 		{
-			"english": "about",
-			"french": "environ",
-			"number": "1152"
+			"Rank": "664",
+			"portuguese": "senhores",
+			"english": "gentlemen"
 		},
 		{
-			"english": "art",
-			"french": "art",
-			"number": "1153"
+			"Rank": "665",
+			"portuguese": "lindo",
+			"english": "pretty"
 		},
 		{
-			"english": "setting",
-			"french": "mise",
-			"number": "1154"
+			"Rank": "666",
+			"portuguese": "boas",
+			"english": "good"
 		},
 		{
-			"english": "London",
-			"french": "londres",
-			"number": "1155"
+			"Rank": "667",
+			"portuguese": "comprar",
+			"english": "purchase"
 		},
 		{
-			"english": "hope",
-			"french": "espoir",
-			"number": "1156"
+			"Rank": "668",
+			"portuguese": "matou",
+			"english": "killed"
 		},
 		{
-			"english": "quits",
-			"french": "quittI",
-			"number": "1157"
+			"Rank": "669",
+			"portuguese": "sol",
+			"english": "Sun"
 		},
 		{
-			"english": "which",
-			"french": "lequel",
-			"number": "1158"
+			"Rank": "670",
+			"portuguese": "devemos",
+			"english": "we must"
 		},
 		{
-			"english": "Wall",
-			"french": "mur",
-			"number": "1159"
+			"Rank": "671",
+			"portuguese": "vosso",
+			"english": "your"
 		},
 		{
-			"english": "to fart",
-			"french": "peter",
-			"number": "1160"
+			"Rank": "672",
+			"portuguese": "entra",
+			"english": "goes into"
 		},
 		{
-			"english": "open",
-			"french": "ouvert",
-			"number": "1161"
+			"Rank": "673",
+			"portuguese": "vês",
+			"english": "you see"
 		},
 		{
-			"english": "church",
-			"french": "Iglise",
-			"number": "1162"
+			"Rank": "674",
+			"portuguese": "falando",
+			"english": "Speaking"
 		},
 		{
-			"english": "slut",
-			"french": "salope",
-			"number": "1163"
+			"Rank": "675",
+			"portuguese": "consegues",
+			"english": "can you"
 		},
 		{
-			"english": "beauty",
-			"french": "beautI",
-			"number": "1164"
+			"Rank": "676",
+			"portuguese": "cedo",
+			"english": "early"
 		},
 		{
-			"english": "loose",
-			"french": "lIche",
-			"number": "1165"
+			"Rank": "677",
+			"portuguese": "chama",
+			"english": "flame"
 		},
 		{
-			"english": "address",
-			"french": "adresse",
-			"number": "1166"
+			"Rank": "678",
+			"portuguese": "tom",
+			"english": "tone"
 		},
 		{
-			"english": "miss",
-			"french": "mademoiselle",
-			"number": "1167"
+			"Rank": "679",
+			"portuguese": "entendo",
+			"english": "I understand"
 		},
 		{
-			"english": "small",
-			"french": "petites",
-			"number": "1168"
+			"Rank": "680",
+			"portuguese": "frank",
+			"english": "frank"
 		},
 		{
-			"english": "jump",
-			"french": "sauter",
-			"number": "1169"
+			"Rank": "681",
+			"portuguese": "viste",
+			"english": "you saw"
 		},
 		{
-			"english": "anger",
-			"french": "colIre",
-			"number": "1170"
+			"Rank": "682",
+			"portuguese": "esteve",
+			"english": "was"
 		},
 		{
-			"english": "director",
-			"french": "directeur",
-			"number": "1171"
+			"Rank": "683",
+			"portuguese": "livre",
+			"english": "free"
 		},
 		{
-			"english": "farewell",
-			"french": "adieu",
-			"number": "1172"
+			"Rank": "684",
+			"portuguese": "hospital",
+			"english": "hospital"
 		},
 		{
-			"english": "jimmy",
-			"french": "jimmy",
-			"number": "1173"
+			"Rank": "685",
+			"portuguese": "michael",
+			"english": "michael"
 		},
 		{
-			"english": "do",
-			"french": "faisons",
-			"number": "1174"
+			"Rank": "686",
+			"portuguese": "prisão",
+			"english": "prison"
 		},
 		{
-			"english": "bet",
-			"french": "parie",
-			"number": "1175"
+			"Rank": "687",
+			"portuguese": "viagem",
+			"english": "travel"
 		},
 		{
-			"english": "Entrance",
-			"french": "entrIe",
-			"number": "1176"
+			"Rank": "688",
+			"portuguese": "doutor",
+			"english": "doctor"
 		},
 		{
-			"english": "wrong",
-			"french": "tort",
-			"number": "1177"
+			"Rank": "689",
+			"portuguese": "palavras",
+			"english": "words"
 		},
 		{
-			"english": "drive",
-			"french": "conduire",
-			"number": "1178"
+			"Rank": "690",
+			"portuguese": "querer",
+			"english": "want"
 		},
 		{
-			"english": "American",
-			"french": "amIricain",
-			"number": "1179"
+			"Rank": "691",
+			"portuguese": "sistema",
+			"english": "system"
 		},
 		{
-			"english": "returned",
-			"french": "revenu",
-			"number": "1180"
+			"Rank": "692",
+			"portuguese": "tio",
+			"english": "uncle"
 		},
 		{
-			"english": "f",
-			"french": "f",
-			"number": "1181"
+			"Rank": "693",
+			"portuguese": "oportunidade",
+			"english": "opportunity"
 		},
 		{
-			"english": "justice",
-			"french": "justice",
-			"number": "1182"
+			"Rank": "694",
+			"portuguese": "campo",
+			"english": "field"
 		},
 		{
-			"english": "soldier",
-			"french": "soldat",
-			"number": "1183"
+			"Rank": "695",
+			"portuguese": "banho",
+			"english": "bath"
 		},
 		{
-			"english": "experience",
-			"french": "expIrience",
-			"number": "1184"
+			"Rank": "696",
+			"portuguese": "novamente",
+			"english": "again"
 		},
 		{
-			"english": "would",
-			"french": "auriez",
-			"number": "1185"
+			"Rank": "697",
+			"portuguese": "seguro",
+			"english": "safe"
 		},
 		{
-			"english": "brain",
-			"french": "cerveau",
-			"number": "1186"
+			"Rank": "698",
+			"portuguese": "pôr",
+			"english": "per"
 		},
 		{
-			"english": "window",
-			"french": "fenItre",
-			"number": "1187"
+			"Rank": "699",
+			"portuguese": "próximo",
+			"english": "next"
 		},
 		{
-			"english": "district",
-			"french": "quartier",
-			"number": "1188"
+			"Rank": "700",
+			"portuguese": "conhece",
+			"english": "knows"
 		},
 		{
-			"english": "prince",
-			"french": "prince",
-			"number": "1189"
+			"Rank": "701",
+			"portuguese": "preocupes",
+			"english": "worry"
 		},
 		{
-			"english": "screw",
-			"french": "vis",
-			"number": "1190"
+			"Rank": "702",
+			"portuguese": "vontade",
+			"english": "will"
 		},
 		{
-			"english": "promise",
-			"french": "promets",
-			"number": "1191"
+			"Rank": "703",
+			"portuguese": "general",
+			"english": "general"
 		},
 		{
-			"english": "Venus",
-			"french": "venus",
-			"number": "1192"
+			"Rank": "704",
+			"portuguese": "sexo",
+			"english": "sex"
 		},
 		{
-			"english": "soldiers",
-			"french": "soldats",
-			"number": "1193"
+			"Rank": "705",
+			"portuguese": "sob",
+			"english": "under"
 		},
 		{
-			"english": "falls",
-			"french": "tombI",
-			"number": "1194"
+			"Rank": "706",
+			"portuguese": "mortos",
+			"english": "dead"
 		},
 		{
-			"english": "rich",
-			"french": "riche",
-			"number": "1195"
+			"Rank": "707",
+			"portuguese": "barco",
+			"english": "boat"
 		},
 		{
-			"english": "flowers",
-			"french": "fleurs",
-			"number": "1196"
+			"Rank": "708",
+			"portuguese": "adoro",
+			"english": "love"
 		},
 		{
-			"english": "bill",
-			"french": "bill",
-			"number": "1197"
+			"Rank": "709",
+			"portuguese": "respeito",
+			"english": "respect"
 		},
 		{
-			"english": "mary",
-			"french": "mary",
-			"number": "1198"
+			"Rank": "710",
+			"portuguese": "grupo",
+			"english": "group"
 		},
 		{
-			"english": "eye",
-			"french": "Oil",
-			"number": "1199"
+			"Rank": "711",
+			"portuguese": "professor",
+			"english": "teacher"
 		},
 		{
-			"english": "present",
-			"french": "prIsenter",
-			"number": "1200"
+			"Rank": "712",
+			"portuguese": "descobrir",
+			"english": "to discover"
 		},
 		{
-			"english": "press",
-			"french": "presse",
-			"number": "1201"
+			"Rank": "713",
+			"portuguese": "cabelo",
+			"english": "hair"
 		},
 		{
-			"english": "brothers",
-			"french": "frIres",
-			"number": "1202"
+			"Rank": "714",
+			"portuguese": "chão",
+			"english": "floor"
 		},
 		{
-			"english": "ridiculous",
-			"french": "ridicule",
-			"number": "1203"
+			"Rank": "715",
+			"portuguese": "fazemos",
+			"english": "We do"
 		},
 		{
-			"english": "evidence",
-			"french": "preuve",
-			"number": "1204"
+			"Rank": "716",
+			"portuguese": "certa",
+			"english": "certain"
 		},
 		{
-			"english": "open",
-			"french": "ouvrez",
-			"number": "1205"
+			"Rank": "717",
+			"portuguese": "ligar",
+			"english": "turn on"
 		},
 		{
-			"english": "come back",
-			"french": "revient",
-			"number": "1206"
+			"Rank": "718",
+			"portuguese": "manter",
+			"english": "keep"
 		},
 		{
-			"english": "might",
-			"french": "pourriez",
-			"number": "1207"
+			"Rank": "719",
+			"portuguese": "perfeito",
+			"english": "Perfect"
 		},
 		{
-			"english": "marry",
-			"french": "Ipouser",
-			"number": "1208"
+			"Rank": "720",
+			"portuguese": "miúdo",
+			"english": "kid"
 		},
 		{
-			"english": "interesting",
-			"french": "intIressant",
-			"number": "1209"
+			"Rank": "721",
+			"portuguese": "terá",
+			"english": "will have"
 		},
 		{
-			"english": "kid",
-			"french": "gosse",
-			"number": "1210"
+			"Rank": "722",
+			"portuguese": "capaz",
+			"english": "able"
 		},
 		{
-			"english": "should",
-			"french": "faudrait",
-			"number": "1211"
+			"Rank": "723",
+			"portuguese": "portanto",
+			"english": "therefore"
 		},
 		{
-			"english": "p",
-			"french": "p",
-			"number": "1212"
+			"Rank": "724",
+			"portuguese": "situação",
+			"english": "situation"
 		},
 		{
-			"english": "stories",
-			"french": "histoires",
-			"number": "1213"
+			"Rank": "725",
+			"portuguese": "arranjar",
+			"english": "get"
 		},
 		{
-			"english": "pink",
-			"french": "rose",
-			"number": "1214"
+			"Rank": "726",
+			"portuguese": "avião",
+			"english": "airplane"
 		},
 		{
-			"english": "please",
-			"french": "veuillez",
-			"number": "1215"
+			"Rank": "727",
+			"portuguese": "começou",
+			"english": "started"
 		},
 		{
-			"english": "nature",
-			"french": "nature",
-			"number": "1216"
+			"Rank": "728",
+			"portuguese": "simples",
+			"english": "simple"
 		},
 		{
-			"english": "empty",
-			"french": "vide",
-			"number": "1217"
+			"Rank": "729",
+			"portuguese": "finalmente",
+			"english": "finally"
 		},
 		{
-			"english": "responsible",
-			"french": "responsable",
-			"number": "1218"
+			"Rank": "730",
+			"portuguese": "ordem",
+			"english": "order"
 		},
 		{
-			"english": "courage",
-			"french": "courage",
-			"number": "1219"
+			"Rank": "731",
+			"portuguese": "futuro",
+			"english": "future"
 		},
 		{
-			"english": "able",
-			"french": "capable",
-			"number": "1220"
+			"Rank": "732",
+			"portuguese": "própria",
+			"english": "own"
 		},
 		{
-			"english": "cinema",
-			"french": "cinIma",
-			"number": "1221"
+			"Rank": "733",
+			"portuguese": "dessa",
+			"english": "of that"
 		},
 		{
-			"english": "max",
-			"french": "max",
-			"number": "1222"
+			"Rank": "734",
+			"portuguese": "bebé",
+			"english": "drink"
 		},
 		{
-			"english": "decision",
-			"french": "dIcision",
-			"number": "1223"
+			"Rank": "735",
+			"portuguese": "george",
+			"english": "george"
 		},
 		{
-			"english": "Taxi",
-			"french": "taxi",
-			"number": "1224"
+			"Rank": "736",
+			"portuguese": "connosco",
+			"english": "us"
 		},
 		{
-			"english": "sing",
-			"french": "chanter",
-			"number": "1225"
+			"Rank": "737",
+			"portuguese": "linha",
+			"english": "line"
 		},
 		{
-			"english": "excuse",
-			"french": "excuse",
-			"number": "1226"
+			"Rank": "738",
+			"portuguese": "deves",
+			"english": "you should"
 		},
 		{
-			"english": "feel",
-			"french": "sentir",
-			"number": "1227"
+			"Rank": "739",
+			"portuguese": "real",
+			"english": "real"
 		},
 		{
-			"english": "jim",
-			"french": "jim",
-			"number": "1228"
+			"Rank": "740",
+			"portuguese": "sítio",
+			"english": "site"
 		},
 		{
-			"english": "doors",
-			"french": "portes",
-			"number": "1229"
+			"Rank": "741",
+			"portuguese": "encontro",
+			"english": "meeting"
 		},
 		{
-			"english": "james",
-			"french": "james",
-			"number": "1230"
+			"Rank": "742",
+			"portuguese": "vista",
+			"english": "View"
 		},
 		{
-			"english": "proud",
-			"french": "fier",
-			"number": "1231"
+			"Rank": "743",
+			"portuguese": "saia",
+			"english": "skirt"
 		},
 		{
-			"english": "second",
-			"french": "deuxiIme",
-			"number": "1232"
+			"Rank": "744",
+			"portuguese": "charlie",
+			"english": "charlie"
 		},
 		{
-			"english": "eiie",
-			"french": "eiie",
-			"number": "1233"
+			"Rank": "745",
+			"portuguese": "questão",
+			"english": "question"
 		},
 		{
-			"english": "apartment",
-			"french": "appartement",
-			"number": "1234"
+			"Rank": "746",
+			"portuguese": "gostas",
+			"english": "like"
 		},
 		{
-			"english": "contact",
-			"french": "contact",
-			"number": "1235"
+			"Rank": "747",
+			"portuguese": "precisar",
+			"english": "need"
 		},
 		{
-			"english": "try",
-			"french": "essayez",
-			"number": "1236"
+			"Rank": "748",
+			"portuguese": "achei",
+			"english": "I found"
 		},
 		{
-			"english": "saved",
-			"french": "sauvI",
-			"number": "1237"
+			"Rank": "749",
+			"portuguese": "david",
+			"english": "david"
 		},
 		{
-			"english": "hide",
-			"french": "cacher",
-			"number": "1238"
+			"Rank": "750",
+			"portuguese": "sinal",
+			"english": "sign"
 		},
 		{
-			"english": "iÌÊ",
-			"french": "iIE",
-			"number": "1239"
+			"Rank": "751",
+			"portuguese": "desse",
+			"english": "of this"
 		},
 		{
-			"english": "reply",
-			"french": "rIpondre",
-			"number": "1240"
+			"Rank": "752",
+			"portuguese": "deixou",
+			"english": "left"
 		},
 		{
-			"english": "way",
-			"french": "maniIre",
-			"number": "1241"
+			"Rank": "753",
+			"portuguese": "aonde",
+			"english": "where"
 		},
 		{
-			"english": "liked",
-			"french": "aimais",
-			"number": "1242"
+			"Rank": "754",
+			"portuguese": "emprego",
+			"english": "employment"
 		},
 		{
-			"english": "legs",
-			"french": "jambes",
-			"number": "1243"
+			"Rank": "755",
+			"portuguese": "completamente",
+			"english": "completely"
 		},
 		{
-			"english": "opportunity",
-			"french": "occasion",
-			"number": "1244"
+			"Rank": "756",
+			"portuguese": "sam",
+			"english": "sam"
 		},
 		{
-			"english": "defense",
-			"french": "dIfense",
-			"number": "1245"
+			"Rank": "757",
+			"portuguese": "dê",
+			"english": "in"
 		},
 		{
-			"english": "long",
-			"french": "longue",
-			"number": "1246"
+			"Rank": "758",
+			"portuguese": "local",
+			"english": "local"
 		},
 		{
-			"english": "Jesus",
-			"french": "jIsus",
-			"number": "1247"
+			"Rank": "759",
+			"portuguese": "vale",
+			"english": "Valley"
 		},
 		{
-			"english": "throw",
-			"french": "jeter",
-			"number": "1248"
+			"Rank": "760",
+			"portuguese": "droga",
+			"english": "damn it"
 		},
 		{
-			"english": "driveway",
-			"french": "allIe",
-			"number": "1249"
+			"Rank": "761",
+			"portuguese": "perguntar",
+			"english": "to ask"
 		},
 		{
-			"english": "wonderful",
-			"french": "formidable",
-			"number": "1250"
+			"Rank": "762",
+			"portuguese": "creio",
+			"english": "I think"
 		},
 		{
-			"english": "based",
-			"french": "base",
-			"number": "1251"
+			"Rank": "763",
+			"portuguese": "idade",
+			"english": "age"
 		},
 		{
-			"english": "such",
-			"french": "telle",
-			"number": "1252"
+			"Rank": "764",
+			"portuguese": "pelas",
+			"english": "by"
 		},
 		{
-			"english": "married",
-			"french": "marie",
-			"number": "1253"
+			"Rank": "765",
+			"portuguese": "the",
+			"english": "the"
 		},
 		{
-			"english": "san",
-			"french": "san",
-			"number": "1254"
+			"Rank": "766",
+			"portuguese": "nisto",
+			"english": "on this"
 		},
 		{
-			"english": "ice",
-			"french": "glace",
-			"number": "1255"
+			"Rank": "767",
+			"portuguese": "estávamos",
+			"english": "we were"
 		},
 		{
-			"english": "teeth",
-			"french": "dents",
-			"number": "1256"
+			"Rank": "768",
+			"portuguese": "bocado",
+			"english": "bit"
 		},
 		{
-			"english": "among",
-			"french": "parmi",
-			"number": "1257"
+			"Rank": "769",
+			"portuguese": "casar",
+			"english": "marry"
 		},
 		{
-			"english": "at once",
-			"french": "immIdiatement",
-			"number": "1258"
+			"Rank": "770",
+			"portuguese": "nessa",
+			"english": "in that"
 		},
 		{
-			"english": "married",
-			"french": "mariI",
-			"number": "1259"
+			"Rank": "771",
+			"portuguese": "lutar",
+			"english": "fight"
 		},
 		{
-			"english": "pay",
-			"french": "paie",
-			"number": "1260"
+			"Rank": "772",
+			"portuguese": "hey",
+			"english": "hey"
 		},
 		{
-			"english": "no",
-			"french": "nul",
-			"number": "1261"
+			"Rank": "773",
+			"portuguese": "carta",
+			"english": "letter"
 		},
 		{
-			"english": "machine",
-			"french": "machine",
-			"number": "1262"
+			"Rank": "774",
+			"portuguese": "apanhar",
+			"english": "take"
 		},
 		{
-			"english": "holidays",
-			"french": "vacances",
-			"number": "1263"
+			"Rank": "775",
+			"portuguese": "leva",
+			"english": "takes"
 		},
 		{
-			"english": "wife",
-			"french": "Ipouse",
-			"number": "1264"
+			"Rank": "776",
+			"portuguese": "peço",
+			"english": "I ask"
 		},
 		{
-			"english": "monster",
-			"french": "monstre",
-			"number": "1265"
+			"Rank": "777",
+			"portuguese": "pensas",
+			"english": "think"
 		},
 		{
-			"english": "memory",
-			"french": "souvenir",
-			"number": "1266"
+			"Rank": "778",
+			"portuguese": "jeito",
+			"english": "way"
 		},
 		{
-			"english": "killer",
-			"french": "tueur",
-			"number": "1267"
+			"Rank": "779",
+			"portuguese": "fundo",
+			"english": "bottom"
 		},
 		{
-			"english": "born",
-			"french": "nI",
-			"number": "1268"
+			"Rank": "780",
+			"portuguese": "tinham",
+			"english": "they had"
 		},
 		{
-			"english": "r",
-			"french": "r",
-			"number": "1269"
+			"Rank": "781",
+			"portuguese": "céu",
+			"english": "heaven"
 		},
 		{
-			"english": "go on",
-			"french": "continuez",
-			"number": "1270"
+			"Rank": "782",
+			"portuguese": "mesa",
+			"english": "table"
 		},
 		{
-			"english": "French",
-			"french": "franIais",
-			"number": "1271"
+			"Rank": "783",
+			"portuguese": "assunto",
+			"english": "subject matter"
 		},
 		{
-			"english": "made",
-			"french": "rendu",
-			"number": "1272"
+			"Rank": "784",
+			"portuguese": "fome",
+			"english": "hunger"
 		},
 		{
-			"english": "race",
-			"french": "course",
-			"number": "1273"
+			"Rank": "785",
+			"portuguese": "exército",
+			"english": "army"
 		},
 		{
-			"english": "majesty",
-			"french": "majestI",
-			"number": "1274"
+			"Rank": "786",
+			"portuguese": "ler",
+			"english": "read"
 		},
 		{
-			"english": "mine",
-			"french": "mien",
-			"number": "1275"
+			"Rank": "787",
+			"portuguese": "roupa",
+			"english": "clothing"
 		},
 		{
-			"english": "Types",
-			"french": "types",
-			"number": "1276"
+			"Rank": "788",
+			"portuguese": "perguntas",
+			"english": "questions"
 		},
 		{
-			"english": "certainly",
-			"french": "certainement",
-			"number": "1277"
+			"Rank": "789",
+			"portuguese": "nesse",
+			"english": "in that"
 		},
 		{
-			"english": "chopped off",
-			"french": "coupe",
-			"number": "1278"
+			"Rank": "790",
+			"portuguese": "sonho",
+			"english": "dream"
 		},
 		{
-			"english": "Ha",
-			"french": "ha",
-			"number": "1279"
+			"Rank": "791",
+			"portuguese": "gajo",
+			"english": "dude"
 		},
 		{
-			"english": "importance",
-			"french": "importance",
-			"number": "1280"
+			"Rank": "792",
+			"portuguese": "amiga",
+			"english": "friend"
 		},
 		{
-			"english": "Where is",
-			"french": "ouest",
-			"number": "1281"
+			"Rank": "793",
+			"portuguese": "notícias",
+			"english": "News"
 		},
 		{
-			"english": "ideas",
-			"french": "idIes",
-			"number": "1282"
+			"Rank": "794",
+			"portuguese": "miúda",
+			"english": "girl"
 		},
 		{
-			"english": "wins",
-			"french": "gagne",
-			"number": "1283"
+			"Rank": "795",
+			"portuguese": "quiseres",
+			"english": "want"
 		},
 		{
-			"english": "forget",
-			"french": "oubliez",
-			"number": "1284"
+			"Rank": "796",
+			"portuguese": "interessa",
+			"english": "interest"
 		},
 		{
-			"english": "cat",
-			"french": "chat",
-			"number": "1285"
+			"Rank": "797",
+			"portuguese": "doente",
+			"english": "ill"
 		},
 		{
-			"english": "have",
-			"french": "ayez",
-			"number": "1286"
+			"Rank": "798",
+			"portuguese": "governo",
+			"english": "government"
 		},
 		{
-			"english": "found",
-			"french": "trouves",
-			"number": "1287"
+			"Rank": "799",
+			"portuguese": "papá",
+			"english": "Papa"
 		},
 		{
-			"english": "releases",
-			"french": "dIgage",
-			"number": "1288"
+			"Rank": "800",
+			"portuguese": "conhecer",
+			"english": "to know"
 		},
 		{
-			"english": "take a dump",
-			"french": "chier",
-			"number": "1289"
+			"Rank": "801",
+			"portuguese": "estúpido",
+			"english": "Stupid"
 		},
 		{
-			"english": "delighted",
-			"french": "ravi",
-			"number": "1290"
+			"Rank": "802",
+			"portuguese": "estiver",
+			"english": "is"
 		},
 		{
-			"english": "were",
-			"french": "Itions",
-			"number": "1291"
+			"Rank": "803",
+			"portuguese": "melhores",
+			"english": "best"
 		},
 		{
-			"english": "arrive",
-			"french": "arrivent",
-			"number": "1292"
+			"Rank": "804",
+			"portuguese": "i",
+			"english": "i"
 		},
 		{
-			"english": "joy",
-			"french": "joie",
-			"number": "1293"
+			"Rank": "805",
+			"portuguese": "bons",
+			"english": "Good"
 		},
 		{
-			"english": "planned",
-			"french": "prIvu",
-			"number": "1294"
+			"Rank": "806",
+			"portuguese": "daí",
+			"english": "so"
 		},
 		{
-			"english": "when",
-			"french": "lorsque",
-			"number": "1295"
+			"Rank": "807",
+			"portuguese": "faria",
+			"english": "would make"
 		},
 		{
-			"english": "superb",
-			"french": "superbe",
-			"number": "1296"
+			"Rank": "808",
+			"portuguese": "mostrar",
+			"english": "Show"
 		},
 		{
-			"english": "touch",
-			"french": "touchI",
-			"number": "1297"
+			"Rank": "809",
+			"portuguese": "joe",
+			"english": "joe"
 		},
 		{
-			"english": "bath",
-			"french": "bain",
-			"number": "1298"
+			"Rank": "810",
+			"portuguese": "pegar",
+			"english": "take"
 		},
 		{
-			"english": "content",
-			"french": "contente",
-			"number": "1299"
+			"Rank": "811",
+			"portuguese": "fiquei",
+			"english": "I stayed"
 		},
 		{
-			"english": "horrible",
-			"french": "horrible",
-			"number": "1300"
+			"Rank": "812",
+			"portuguese": "tipos",
+			"english": "types"
 		},
 		{
-			"english": "finds",
-			"french": "retrouve",
-			"number": "1301"
+			"Rank": "813",
+			"portuguese": "estrada",
+			"english": "road"
 		},
 		{
-			"english": "short",
-			"french": "court",
-			"number": "1302"
+			"Rank": "814",
+			"portuguese": "banco",
+			"english": "Bank"
 		},
 		{
-			"english": "disturbs",
-			"french": "dIrange",
-			"number": "1303"
+			"Rank": "815",
+			"portuguese": "hotel",
+			"english": "Hotel"
 		},
 		{
-			"english": "and",
-			"french": "and",
-			"number": "1304"
+			"Rank": "816",
+			"portuguese": "verdadeiro",
+			"english": "true"
 		},
 		{
-			"english": "bomb",
-			"french": "bombe",
-			"number": "1305"
+			"Rank": "817",
+			"portuguese": "povo",
+			"english": "people"
 		},
 		{
-			"english": "bring back",
-			"french": "ramener",
-			"number": "1306"
+			"Rank": "818",
+			"portuguese": "sozinha",
+			"english": "alone"
 		},
 		{
-			"english": "some",
-			"french": "certaines",
-			"number": "1307"
+			"Rank": "819",
+			"portuguese": "escritório",
+			"english": "office"
 		},
 		{
-			"english": "reality",
-			"french": "rIalitI",
-			"number": "1308"
+			"Rank": "820",
+			"portuguese": "tocar",
+			"english": "touch"
 		},
 		{
-			"english": "investigation",
-			"french": "enquIte",
-			"number": "1309"
+			"Rank": "821",
+			"portuguese": "sete",
+			"english": "Seven"
 		},
 		{
-			"english": "truck",
-			"french": "camion",
-			"number": "1310"
+			"Rank": "822",
+			"portuguese": "indo",
+			"english": "going"
 		},
 		{
-			"english": "fucking",
-			"french": "foutu",
-			"number": "1311"
+			"Rank": "823",
+			"portuguese": "engraçado",
+			"english": "funny"
 		},
 		{
-			"english": "means",
-			"french": "signifie",
-			"number": "1312"
+			"Rank": "824",
+			"portuguese": "iria",
+			"english": "would go"
 		},
 		{
-			"english": "hundred",
-			"french": "cent",
-			"number": "1313"
+			"Rank": "825",
+			"portuguese": "nele",
+			"english": "in him"
 		},
 		{
-			"english": "to touch",
-			"french": "toucher",
-			"number": "1314"
+			"Rank": "826",
+			"portuguese": "lei",
+			"english": "law"
 		},
 		{
-			"english": "occupied",
-			"french": "occupI",
-			"number": "1315"
+			"Rank": "827",
+			"portuguese": "padre",
+			"english": "priest"
 		},
 		{
-			"english": "expecting",
-			"french": "attendais",
-			"number": "1316"
+			"Rank": "828",
+			"portuguese": "trouxe",
+			"english": "brought"
 		},
 		{
-			"english": "meet",
-			"french": "rencontre",
-			"number": "1317"
+			"Rank": "829",
+			"portuguese": "fizeram",
+			"english": "made"
 		},
 		{
-			"english": "excellent",
-			"french": "excellent",
-			"number": "1318"
+			"Rank": "830",
+			"portuguese": "dito",
+			"english": "said"
 		},
 		{
-			"english": "respect",
-			"french": "respect",
-			"number": "1319"
+			"Rank": "831",
+			"portuguese": "tá",
+			"english": "OK"
 		},
 		{
-			"english": "quits",
-			"french": "quitte",
-			"number": "1320"
+			"Rank": "832",
+			"portuguese": "simplesmente",
+			"english": "simply"
 		},
 		{
-			"english": "turn",
-			"french": "tourner",
-			"number": "1321"
+			"Rank": "833",
+			"portuguese": "tratar",
+			"english": "deal with"
 		},
 		{
-			"english": "ground",
-			"french": "terrain",
-			"number": "1322"
+			"Rank": "834",
+			"portuguese": "programa",
+			"english": "program"
 		},
 		{
-			"english": "white",
-			"french": "blanche",
-			"number": "1323"
+			"Rank": "835",
+			"portuguese": "diabo",
+			"english": "devil"
 		},
 		{
-			"english": "project",
-			"french": "projet",
-			"number": "1324"
+			"Rank": "836",
+			"portuguese": "mente",
+			"english": "mind"
 		},
 		{
-			"english": "to avoid",
-			"french": "Iviter",
-			"number": "1325"
+			"Rank": "837",
+			"portuguese": "serviço",
+			"english": "service"
 		},
 		{
-			"english": "fish",
-			"french": "poisson",
-			"number": "1326"
+			"Rank": "838",
+			"portuguese": "voz",
+			"english": "voice"
 		},
 		{
-			"english": "mostly",
-			"french": "plupart",
-			"number": "1327"
+			"Rank": "839",
+			"portuguese": "acredita",
+			"english": "believes"
 		},
 		{
-			"english": "down",
-			"french": "descends",
-			"number": "1328"
+			"Rank": "840",
+			"portuguese": "encontrei",
+			"english": "found it"
 		},
 		{
-			"english": "happy",
-			"french": "joyeux",
-			"number": "1329"
+			"Rank": "841",
+			"portuguese": "presente",
+			"english": "gift"
 		},
 		{
-			"english": "prevent",
-			"french": "empIcher",
-			"number": "1330"
+			"Rank": "842",
+			"portuguese": "após",
+			"english": "after"
 		},
 		{
-			"english": "married",
-			"french": "mariIe",
-			"number": "1331"
+			"Rank": "843",
+			"portuguese": "resposta",
+			"english": "answer"
 		},
 		{
-			"english": "eat",
-			"french": "mangI",
-			"number": "1332"
+			"Rank": "844",
+			"portuguese": "mensagem",
+			"english": "message"
 		},
 		{
-			"english": "towards",
-			"french": "envers",
-			"number": "1333"
+			"Rank": "845",
+			"portuguese": "fugir",
+			"english": "to run away"
 		},
 		{
-			"english": "km",
-			"french": "km",
-			"number": "1334"
+			"Rank": "846",
+			"portuguese": "quantos",
+			"english": "how many"
 		},
 		{
-			"english": "angel",
-			"french": "ange",
-			"number": "1335"
+			"Rank": "847",
+			"portuguese": "quente",
+			"english": "hot"
 		},
 		{
-			"english": "best",
-			"french": "meilleurs",
-			"number": "1336"
+			"Rank": "848",
+			"portuguese": "companhia",
+			"english": "company"
 		},
 		{
-			"english": "girlfriend",
-			"french": "copine",
-			"number": "1337"
+			"Rank": "849",
+			"portuguese": "chamada",
+			"english": "call"
 		},
 		{
-			"english": "shoes",
-			"french": "chaussures",
-			"number": "1338"
+			"Rank": "850",
+			"portuguese": "volto",
+			"english": "back"
 		},
 		{
-			"english": "folder",
-			"french": "dossier",
-			"number": "1339"
+			"Rank": "851",
+			"portuguese": "mike",
+			"english": "mike"
 		},
 		{
-			"english": "rules",
-			"french": "rIgles",
-			"number": "1340"
+			"Rank": "852",
+			"portuguese": "facto",
+			"english": "fact that"
 		},
 		{
-			"english": "tough",
-			"french": "dure",
-			"number": "1341"
+			"Rank": "853",
+			"portuguese": "conversa",
+			"english": "conversation"
 		},
 		{
-			"english": "u",
-			"french": "u",
-			"number": "1342"
+			"Rank": "854",
+			"portuguese": "mamã",
+			"english": "mom"
 		},
 		{
-			"english": "animals",
-			"french": "animaux",
-			"number": "1343"
+			"Rank": "855",
+			"portuguese": "através",
+			"english": "through"
 		},
 		{
-			"english": "language",
-			"french": "langue",
-			"number": "1344"
+			"Rank": "856",
+			"portuguese": "acabei",
+			"english": "I have finished"
 		},
 		{
-			"english": "US",
-			"french": "amIricains",
-			"number": "1345"
+			"Rank": "857",
+			"portuguese": "tinhas",
+			"english": "you had"
 		},
 		{
-			"english": "imbecile",
-			"french": "imbIcile",
-			"number": "1346"
+			"Rank": "858",
+			"portuguese": "consegui",
+			"english": "got it"
 		},
 		{
-			"english": "horses",
-			"french": "chevaux",
-			"number": "1347"
+			"Rank": "859",
+			"portuguese": "olhem",
+			"english": "look"
 		},
 		{
-			"english": "princess",
-			"french": "princesse",
-			"number": "1348"
+			"Rank": "860",
+			"portuguese": "normal",
+			"english": "normal"
 		},
 		{
-			"english": "zoned",
-			"french": "zone",
-			"number": "1349"
+			"Rank": "861",
+			"portuguese": "espaço",
+			"english": "space"
 		},
 		{
-			"english": "pius",
-			"french": "pius",
-			"number": "1350"
+			"Rank": "862",
+			"portuguese": "escrever",
+			"english": "write"
 		},
 		{
-			"english": "drug",
-			"french": "drogue",
-			"number": "1351"
+			"Rank": "863",
+			"portuguese": "senhoras",
+			"english": "ladies"
 		},
 		{
-			"english": "charge",
-			"french": "charge",
-			"number": "1352"
+			"Rank": "864",
+			"portuguese": "incrível",
+			"english": "incredible"
 		},
 		{
-			"english": "Motherfucker",
-			"french": "enfoirI",
-			"number": "1353"
+			"Rank": "865",
+			"portuguese": "dizes",
+			"english": "sayest"
 		},
 		{
-			"english": "food",
-			"french": "nourriture",
-			"number": "1354"
+			"Rank": "866",
+			"portuguese": "viva",
+			"english": "alive"
 		},
 		{
-			"english": "bridge",
-			"french": "pont",
-			"number": "1355"
+			"Rank": "867",
+			"portuguese": "bela",
+			"english": "beautiful"
 		},
 		{
-			"english": "refuse",
-			"french": "refuse",
-			"number": "1356"
+			"Rank": "868",
+			"portuguese": "esquerda",
+			"english": "left"
 		},
 		{
-			"english": "dogs",
-			"french": "chiens",
-			"number": "1357"
+			"Rank": "869",
+			"portuguese": "breve",
+			"english": "short"
 		},
 		{
-			"english": "opposite",
-			"french": "contraire",
-			"number": "1358"
+			"Rank": "870",
+			"portuguese": "preso",
+			"english": "stuck"
 		},
 		{
-			"english": "nice to meet you",
-			"french": "enchantI",
-			"number": "1359"
+			"Rank": "871",
+			"portuguese": "abrir",
+			"english": "Open"
 		},
 		{
-			"english": "pain",
-			"french": "douleur",
-			"number": "1360"
+			"Rank": "872",
+			"portuguese": "procurar",
+			"english": "search"
 		},
 		{
-			"english": "policy",
-			"french": "politique",
-			"number": "1361"
+			"Rank": "873",
+			"portuguese": "preocupe",
+			"english": "worry"
 		},
 		{
-			"english": "facts",
-			"french": "faits",
-			"number": "1362"
+			"Rank": "874",
+			"portuguese": "faças",
+			"english": "do"
 		},
 		{
-			"english": "to arrive at",
-			"french": "arrivera",
-			"number": "1363"
+			"Rank": "875",
+			"portuguese": "feira",
+			"english": "market"
 		},
 		{
-			"english": "try",
-			"french": "essaye",
-			"number": "1364"
+			"Rank": "876",
+			"portuguese": "direita",
+			"english": "right"
 		},
 		{
-			"english": "shop",
-			"french": "magasin",
-			"number": "1365"
+			"Rank": "877",
+			"portuguese": "inferno",
+			"english": "hell"
 		},
 		{
-			"english": "are",
-			"french": "soient",
-			"number": "1366"
+			"Rank": "878",
+			"portuguese": "gostar",
+			"english": "to like"
 		},
 		{
-			"english": "say",
-			"french": "dirais",
-			"number": "1367"
+			"Rank": "879",
+			"portuguese": "ataque",
+			"english": "attack"
 		},
 		{
-			"english": "full",
-			"french": "entier",
-			"number": "1368"
+			"Rank": "880",
+			"portuguese": "acidente",
+			"english": "accident"
 		},
 		{
-			"english": "lived",
-			"french": "vIcu",
-			"number": "1369"
+			"Rank": "881",
+			"portuguese": "cabo",
+			"english": "cable"
 		},
 		{
-			"english": "v",
-			"french": "v",
-			"number": "1370"
+			"Rank": "882",
+			"portuguese": "saiu",
+			"english": "exited"
 		},
 		{
-			"english": "bus",
-			"french": "bus",
-			"number": "1371"
+			"Rank": "883",
+			"portuguese": "idéia",
+			"english": "idea"
 		},
 		{
-			"english": "to offer",
-			"french": "offrir",
-			"number": "1372"
+			"Rank": "884",
+			"portuguese": "fixe",
+			"english": "cool"
 		},
 		{
-			"english": "hat",
-			"french": "chapeau",
-			"number": "1373"
+			"Rank": "885",
+			"portuguese": "assassino",
+			"english": "killer"
 		},
 		{
-			"english": "recounts",
-			"french": "raconte",
-			"number": "1374"
+			"Rank": "886",
+			"portuguese": "tempos",
+			"english": "time"
 		},
 		{
-			"english": "cards",
-			"french": "cartes",
-			"number": "1375"
+			"Rank": "887",
+			"portuguese": "segundos",
+			"english": "the 2nd"
 		},
 		{
-			"english": "henry",
-			"french": "henry",
-			"number": "1376"
+			"Rank": "888",
+			"portuguese": "estivesse",
+			"english": "was"
 		},
 		{
-			"english": "discuss",
-			"french": "discuter",
-			"number": "1377"
+			"Rank": "889",
+			"portuguese": "costas",
+			"english": "back"
 		},
 		{
-			"english": "paper",
-			"french": "papier",
-			"number": "1378"
+			"Rank": "890",
+			"portuguese": "graças",
+			"english": "thanks"
 		},
 		{
-			"english": "action",
-			"french": "action",
-			"number": "1379"
+			"Rank": "891",
+			"portuguese": "olho",
+			"english": "eye"
 		},
 		{
-			"english": "permit",
-			"french": "permis",
-			"number": "1380"
+			"Rank": "892",
+			"portuguese": "mar",
+			"english": "sea"
 		},
 		{
-			"english": "drank",
-			"french": "bu",
-			"number": "1381"
+			"Rank": "893",
+			"portuguese": "papel",
+			"english": "paper"
 		},
 		{
-			"english": "fast",
-			"french": "rapide",
-			"number": "1382"
+			"Rank": "894",
+			"portuguese": "chamado",
+			"english": "called"
 		},
 		{
-			"english": "sheriff",
-			"french": "shIrif",
-			"number": "1383"
+			"Rank": "895",
+			"portuguese": "fomos",
+			"english": "we"
 		},
 		{
-			"english": "fresh",
-			"french": "frais",
-			"number": "1384"
+			"Rank": "896",
+			"portuguese": "salvar",
+			"english": "to save"
 		},
 		{
-			"english": "gone",
-			"french": "partis",
-			"number": "1385"
+			"Rank": "897",
+			"portuguese": "ambos",
+			"english": "both"
 		},
 		{
-			"english": "takes",
-			"french": "emmIne",
-			"number": "1386"
+			"Rank": "898",
+			"portuguese": "dor",
+			"english": "ache"
 		},
 		{
-			"english": "meeting",
-			"french": "rIunion",
-			"number": "1387"
+			"Rank": "899",
+			"portuguese": "frio",
+			"english": "cold"
 		},
 		{
-			"english": "put",
-			"french": "mettez",
-			"number": "1388"
+			"Rank": "900",
+			"portuguese": "esperem",
+			"english": "expect"
 		},
 		{
-			"english": "island",
-			"french": "I le",
-			"number": "1389"
+			"Rank": "901",
+			"portuguese": "missão",
+			"english": "mission"
 		},
 		{
-			"english": "bathroom",
-			"french": "toilettes",
-			"number": "1390"
+			"Rank": "902",
+			"portuguese": "diabos",
+			"english": "hell"
 		},
 		{
-			"english": "code",
-			"french": "code",
-			"number": "1391"
+			"Rank": "903",
+			"portuguese": "s",
+			"english": "s"
 		},
 		{
-			"english": "billy",
-			"french": "billy",
-			"number": "1392"
+			"Rank": "904",
+			"portuguese": "pensava",
+			"english": "I thought"
 		},
 		{
-			"english": "surgery",
-			"french": "opIration",
-			"number": "1393"
+			"Rank": "905",
+			"portuguese": "ouça",
+			"english": "listen"
 		},
 		{
-			"english": "special",
-			"french": "spIcial",
-			"number": "1394"
+			"Rank": "906",
+			"portuguese": "pés",
+			"english": "feet"
 		},
 		{
-			"english": "planet",
-			"french": "planIte",
-			"number": "1395"
+			"Rank": "907",
+			"portuguese": "imediatamente",
+			"english": "immediately"
 		},
 		{
-			"english": "will come",
-			"french": "viendra",
-			"number": "1396"
+			"Rank": "908",
+			"portuguese": "cair",
+			"english": "fall down"
 		},
 		{
-			"english": "field",
-			"french": "champ",
-			"number": "1397"
+			"Rank": "909",
+			"portuguese": "ouro",
+			"english": "gold"
 		},
 		{
-			"english": "color",
-			"french": "couleur",
-			"number": "1398"
+			"Rank": "910",
+			"portuguese": "tenente",
+			"english": "Lieutenant"
 		},
 		{
-			"english": "bread",
-			"french": "pain",
-			"number": "1399"
+			"Rank": "911",
+			"portuguese": "escuta",
+			"english": "listening"
 		},
 		{
-			"english": "excuse",
-			"french": "excuser",
-			"number": "1400"
+			"Rank": "912",
+			"portuguese": "chave",
+			"english": "key"
 		},
 		{
-			"english": "destiny",
-			"french": "destin",
-			"number": "1401"
+			"Rank": "913",
+			"portuguese": "mês",
+			"english": "month"
 		},
 		{
-			"english": "thank",
-			"french": "rends",
-			"number": "1402"
+			"Rank": "914",
+			"portuguese": "luta",
+			"english": "fight"
 		},
 		{
-			"english": "discovered",
-			"french": "dIcouvert",
-			"number": "1403"
+			"Rank": "915",
+			"portuguese": "crime",
+			"english": "crime"
 		},
 		{
-			"english": "since",
-			"french": "puisque",
-			"number": "1404"
+			"Rank": "916",
+			"portuguese": "bebida",
+			"english": "beverage"
 		},
 		{
-			"english": "cut",
-			"french": "taille",
-			"number": "1405"
+			"Rank": "917",
+			"portuguese": "maldito",
+			"english": "damn you"
 		},
 		{
-			"english": "nick",
-			"french": "nick",
-			"number": "1406"
+			"Rank": "918",
+			"portuguese": "venham",
+			"english": "will"
 		},
 		{
-			"english": "tony",
-			"french": "tony",
-			"number": "1407"
+			"Rank": "919",
+			"portuguese": "ora",
+			"english": "now"
 		},
 		{
-			"english": "vessel",
-			"french": "vaisseau",
-			"number": "1408"
+			"Rank": "920",
+			"portuguese": "centro",
+			"english": "center"
 		},
 		{
-			"english": "sex",
-			"french": "sexe",
-			"number": "1409"
+			"Rank": "921",
+			"portuguese": "bola",
+			"english": "ball"
 		},
 		{
-			"english": "sacred",
-			"french": "sacrI",
-			"number": "1410"
+			"Rank": "922",
+			"portuguese": "ótimo",
+			"english": "great"
 		},
 		{
-			"english": "meal",
-			"french": "repas",
-			"number": "1411"
+			"Rank": "923",
+			"portuguese": "sente",
+			"english": "feels"
 		},
 		{
-			"english": "contract",
-			"french": "contrat",
-			"number": "1412"
+			"Rank": "924",
+			"portuguese": "cavalo",
+			"english": "horse"
 		},
 		{
-			"english": "that",
-			"french": "qu",
-			"number": "1413"
+			"Rank": "925",
+			"portuguese": "lembro",
+			"english": "I remember"
 		},
 		{
-			"english": "necessary",
-			"french": "nIcessaire",
-			"number": "1414"
+			"Rank": "926",
+			"portuguese": "fantástico",
+			"english": "Fantastic"
 		},
 		{
-			"english": "customer",
-			"french": "client",
-			"number": "1415"
+			"Rank": "927",
+			"portuguese": "norte",
+			"english": "north"
 		},
 		{
-			"english": "destroy",
-			"french": "dItruire",
-			"number": "1416"
+			"Rank": "928",
+			"portuguese": "velha",
+			"english": "old woman"
 		},
 		{
-			"english": "milk",
-			"french": "lait",
-			"number": "1417"
+			"Rank": "929",
+			"portuguese": "parabéns",
+			"english": "congratulations"
 		},
 		{
-			"english": "iis",
-			"french": "iis",
-			"number": "1418"
+			"Rank": "930",
+			"portuguese": "guarda",
+			"english": "guard"
 		},
 		{
-			"english": "done",
-			"french": "faite",
-			"number": "1419"
+			"Rank": "931",
+			"portuguese": "caixa",
+			"english": "Cashier"
 		},
 		{
-			"english": "memory",
-			"french": "mImoire",
-			"number": "1420"
+			"Rank": "932",
+			"portuguese": "aposto",
+			"english": "bet"
 		},
 		{
-			"english": "cry",
-			"french": "pleurer",
-			"number": "1421"
+			"Rank": "933",
+			"portuguese": "segunda",
+			"english": "Monday"
 		},
 		{
-			"english": "boyfriend",
-			"french": "copain",
-			"number": "1422"
+			"Rank": "934",
+			"portuguese": "relação",
+			"english": "relationship"
 		},
 		{
-			"english": "Miss",
-			"french": "miss",
-			"number": "1423"
+			"Rank": "935",
+			"portuguese": "disseram",
+			"english": "they said"
 		},
 		{
-			"english": "remains",
-			"french": "restes",
-			"number": "1424"
+			"Rank": "936",
+			"portuguese": "coronel",
+			"english": "colonel"
 		},
 		{
-			"english": "ray",
-			"french": "ray",
-			"number": "1425"
+			"Rank": "937",
+			"portuguese": "excelente",
+			"english": "excellent"
 		},
 		{
-			"english": "staff",
-			"french": "personnel",
-			"number": "1426"
+			"Rank": "938",
+			"portuguese": "conseguiu",
+			"english": "got"
 		},
 		{
-			"english": "double",
-			"french": "double",
-			"number": "1427"
+			"Rank": "939",
+			"portuguese": "trazer",
+			"english": "bring to"
 		},
 		{
-			"english": "cute",
-			"french": "mignon",
-			"number": "1428"
+			"Rank": "940",
+			"portuguese": "metade",
+			"english": "half"
 		},
 		{
-			"english": "knife",
-			"french": "couteau",
-			"number": "1429"
+			"Rank": "941",
+			"portuguese": "menino",
+			"english": "boy"
 		},
 		{
-			"english": "know",
-			"french": "sache",
-			"number": "1430"
+			"Rank": "942",
+			"portuguese": "sendo",
+			"english": "and"
 		},
 		{
-			"english": "witness",
-			"french": "tImoin",
-			"number": "1431"
+			"Rank": "943",
+			"portuguese": "alma",
+			"english": "soul"
 		},
 		{
-			"english": "faith",
-			"french": "foi",
-			"number": "1432"
+			"Rank": "944",
+			"portuguese": "juro",
+			"english": "swear"
 		},
 		{
-			"english": "sleep",
-			"french": "dors",
-			"number": "1433"
+			"Rank": "945",
+			"portuguese": "má",
+			"english": "bad"
 		},
 		{
-			"english": "thank",
-			"french": "remercie",
-			"number": "1434"
+			"Rank": "946",
+			"portuguese": "loja",
+			"english": "store"
 		},
 		{
-			"english": "direction",
-			"french": "direction",
-			"number": "1435"
+			"Rank": "947",
+			"portuguese": "estará",
+			"english": "will be"
 		},
 		{
-			"english": "steve",
-			"french": "steve",
-			"number": "1436"
+			"Rank": "948",
+			"portuguese": "parem",
+			"english": "stop"
 		},
 		{
-			"english": "malignant",
-			"french": "malin",
-			"number": "1437"
+			"Rank": "949",
+			"portuguese": "almoço",
+			"english": "lunch"
 		},
 		{
-			"english": "level",
-			"french": "niveau",
-			"number": "1438"
+			"Rank": "950",
+			"portuguese": "advogado",
+			"english": "lawyer"
 		},
 		{
-			"english": "reset",
-			"french": "remettre",
-			"number": "1439"
+			"Rank": "951",
+			"portuguese": "sul",
+			"english": "south"
 		},
 		{
-			"english": "lives",
-			"french": "habite",
-			"number": "1440"
+			"Rank": "952",
+			"portuguese": "mestre",
+			"english": "master"
 		},
 		{
-			"english": "brought",
-			"french": "apportI",
-			"number": "1441"
+			"Rank": "953",
+			"portuguese": "cheio",
+			"english": "full"
 		},
 		{
-			"english": "love",
-			"french": "aiment",
-			"number": "1442"
+			"Rank": "954",
+			"portuguese": "surpresa",
+			"english": "surprise"
 		},
 		{
-			"english": "mine",
-			"french": "mienne",
-			"number": "1443"
+			"Rank": "955",
+			"portuguese": "garota",
+			"english": "girl"
 		},
 		{
-			"english": "trial",
-			"french": "procIs",
-			"number": "1444"
+			"Rank": "956",
+			"portuguese": "lista",
+			"english": "list"
 		},
 		{
-			"english": "soft",
-			"french": "doux",
-			"number": "1445"
+			"Rank": "957",
+			"portuguese": "abre",
+			"english": "opens"
 		},
 		{
-			"english": "eddie",
-			"french": "eddie",
-			"number": "1446"
+			"Rank": "958",
+			"portuguese": "acerca",
+			"english": "about"
 		},
 		{
-			"english": "find",
-			"french": "trouvez",
-			"number": "1447"
+			"Rank": "959",
+			"portuguese": "ordens",
+			"english": "instructions"
 		},
 		{
-			"english": "solution",
-			"french": "solution",
-			"number": "1448"
+			"Rank": "960",
+			"portuguese": "oito",
+			"english": "eight"
 		},
 		{
-			"english": "tell",
-			"french": "raconter",
-			"number": "1449"
+			"Rank": "961",
+			"portuguese": "morta",
+			"english": "dead"
 		},
 		{
-			"english": "to close",
-			"french": "fermer",
-			"number": "1450"
+			"Rank": "962",
+			"portuguese": "paul",
+			"english": "paul"
 		},
 		{
-			"english": "to choose",
-			"french": "choisir",
-			"number": "1451"
+			"Rank": "963",
+			"portuguese": "erro",
+			"english": "error"
 		},
 		{
-			"english": "taste",
-			"french": "goIEt",
-			"number": "1452"
+			"Rank": "964",
+			"portuguese": "d",
+			"english": "d"
 		},
 		{
-			"english": "new",
-			"french": "nouveaux",
-			"number": "1453"
+			"Rank": "965",
+			"portuguese": "namorada",
+			"english": "girlfriend"
 		},
 		{
-			"english": "end",
-			"french": "end",
-			"number": "1454"
+			"Rank": "966",
+			"portuguese": "começa",
+			"english": "begins"
 		},
 		{
-			"english": "amuse",
-			"french": "amuser",
-			"number": "1455"
+			"Rank": "967",
+			"portuguese": "américa",
+			"english": "America"
 		},
 		{
-			"english": "difference",
-			"french": "diffIrence",
-			"number": "1456"
+			"Rank": "968",
+			"portuguese": "pobre",
+			"english": "poor"
 		},
 		{
-			"english": "stop",
-			"french": "stop",
-			"number": "1457"
+			"Rank": "969",
+			"portuguese": "dançar",
+			"english": "to dance"
 		},
 		{
-			"english": "charles",
-			"french": "charles",
-			"number": "1458"
+			"Rank": "970",
+			"portuguese": "fazia",
+			"english": "did"
 		},
 		{
-			"english": "kids",
-			"french": "gosses",
-			"number": "1459"
+			"Rank": "971",
+			"portuguese": "saiam",
+			"english": "leave"
 		},
 		{
-			"english": "reflect",
-			"french": "rIflIchir",
-			"number": "1460"
+			"Rank": "972",
+			"portuguese": "carne",
+			"english": "meat"
 		},
 		{
-			"english": "customers",
-			"french": "clients",
-			"number": "1461"
+			"Rank": "973",
+			"portuguese": "cena",
+			"english": "scene"
 		},
 		{
-			"english": "pregnant",
-			"french": "enceinte",
-			"number": "1462"
+			"Rank": "974",
+			"portuguese": "falou",
+			"english": "spoke"
 		},
 		{
-			"english": "beautiful",
-			"french": "beaux",
-			"number": "1463"
+			"Rank": "975",
+			"portuguese": "impossível",
+			"english": "impossible"
 		},
 		{
-			"english": "university",
-			"french": "universitI",
-			"number": "1464"
+			"Rank": "976",
+			"portuguese": "conversar",
+			"english": "talk"
 		},
 		{
-			"english": "blue",
-			"french": "bleu",
-			"number": "1465"
+			"Rank": "977",
+			"portuguese": "escolha",
+			"english": "choice"
 		},
 		{
-			"english": "meters",
-			"french": "mItres",
-			"number": "1466"
+			"Rank": "978",
+			"portuguese": "informação",
+			"english": "information"
 		},
 		{
-			"english": "seen",
-			"french": "vus",
-			"number": "1467"
+			"Rank": "979",
+			"portuguese": "animais",
+			"english": "animals"
 		},
 		{
-			"english": "loved",
-			"french": "aimait",
-			"number": "1468"
+			"Rank": "980",
+			"portuguese": "interessante",
+			"english": "interesting"
 		},
 		{
-			"english": "fed up",
-			"french": "marre",
-			"number": "1469"
+			"Rank": "981",
+			"portuguese": "posição",
+			"english": "position"
 		},
 		{
-			"english": "lied",
-			"french": "menti",
-			"number": "1470"
+			"Rank": "982",
+			"portuguese": "branco",
+			"english": "White"
 		},
 		{
-			"english": "call",
-			"french": "appelles",
-			"number": "1471"
+			"Rank": "983",
+			"portuguese": "legal",
+			"english": "cool"
 		},
 		{
-			"english": "run",
-			"french": "courir",
-			"number": "1472"
+			"Rank": "984",
+			"portuguese": "rio",
+			"english": "River"
 		},
 		{
-			"english": "arrange",
-			"french": "arranger",
-			"number": "1473"
+			"Rank": "985",
+			"portuguese": "voltou",
+			"english": "came back"
 		},
 		{
-			"english": "work",
-			"french": "travaillI",
-			"number": "1474"
+			"Rank": "986",
+			"portuguese": "digas",
+			"english": "tell"
 		},
 		{
-			"english": "papers",
-			"french": "papiers",
-			"number": "1475"
+			"Rank": "987",
+			"portuguese": "realidade",
+			"english": "reality"
 		},
 		{
-			"english": "found",
-			"french": "retrouvI",
-			"number": "1476"
+			"Rank": "988",
+			"portuguese": "belo",
+			"english": "beautiful"
 		},
 		{
-			"english": "officer",
-			"french": "officier",
-			"number": "1477"
+			"Rank": "989",
+			"portuguese": "devíamos",
+			"english": "should"
 		},
 		{
-			"english": "space",
-			"french": "espace",
-			"number": "1478"
+			"Rank": "990",
+			"portuguese": "tiro",
+			"english": "shot"
 		},
 		{
-			"english": "smile",
-			"french": "sourire",
-			"number": "1479"
+			"Rank": "991",
+			"portuguese": "comandante",
+			"english": "commander"
 		},
 		{
-			"english": "tell",
-			"french": "dise",
-			"number": "1480"
+			"Rank": "992",
+			"portuguese": "aprender",
+			"english": "learn"
 		},
 		{
-			"english": "deserved",
-			"french": "mIrite",
-			"number": "1481"
+			"Rank": "993",
+			"portuguese": "dizendo",
+			"english": "saying"
 		},
 		{
-			"english": "letters",
-			"french": "lettres",
-			"number": "1482"
+			"Rank": "994",
+			"portuguese": "prova",
+			"english": "proof"
 		},
 		{
-			"english": "accept",
-			"french": "accepter",
-			"number": "1483"
+			"Rank": "995",
+			"portuguese": "harry",
+			"english": "harry"
 		},
 		{
-			"english": "what",
-			"french": "quels",
-			"number": "1484"
+			"Rank": "996",
+			"portuguese": "soube",
+			"english": "I knew"
 		},
 		{
-			"english": "bankrupt",
-			"french": "failli",
-			"number": "1485"
+			"Rank": "997",
+			"portuguese": "ouviu",
+			"english": "heard"
 		},
 		{
-			"english": "England",
-			"french": "angleterre",
-			"number": "1486"
+			"Rank": "998",
+			"portuguese": "negócios",
+			"english": "Business"
 		},
 		{
-			"english": "speed",
-			"french": "vitesse",
-			"number": "1487"
+			"Rank": "999",
+			"portuguese": "vestido",
+			"english": "dress"
 		},
 		{
-			"english": "leg",
-			"french": "jambe",
-			"number": "1488"
+			"Rank": "1000",
+			"portuguese": "sargento",
+			"english": "sergeant"
 		},
 		{
-			"english": "camera",
-			"french": "camIra",
-			"number": "1489"
+			"Rank": "1001",
+			"portuguese": "destino",
+			"english": "destiny"
 		},
 		{
-			"english": "call back",
-			"french": "rappeler",
-			"number": "1490"
+			"Rank": "1002",
+			"portuguese": "tivemos",
+			"english": "we had"
 		},
 		{
-			"english": "tree",
-			"french": "arbre",
-			"number": "1491"
+			"Rank": "1003",
+			"portuguese": "abaixo",
+			"english": "below"
 		},
 		{
-			"english": "rooms",
-			"french": "piIces",
-			"number": "1492"
+			"Rank": "1004",
+			"portuguese": "hei",
+			"english": "hei"
 		},
 		{
-			"english": "strengths",
-			"french": "forces",
-			"number": "1493"
+			"Rank": "1005",
+			"portuguese": "honra",
+			"english": "honor"
 		},
 		{
-			"english": "treasure",
-			"french": "trIsor",
-			"number": "1494"
+			"Rank": "1006",
+			"portuguese": "energia",
+			"english": "energy"
 		},
 		{
-			"english": "victim",
-			"french": "victime",
-			"number": "1495"
+			"Rank": "1007",
+			"portuguese": "falo",
+			"english": "phallus"
 		},
 		{
-			"english": "energy",
-			"french": "Inergie",
-			"number": "1496"
+			"Rank": "1008",
+			"portuguese": "fizemos",
+			"english": "We did"
 		},
 		{
-			"english": "say",
-			"french": "disons",
-			"number": "1497"
+			"Rank": "1009",
+			"portuguese": "igreja",
+			"english": "church"
 		},
 		{
-			"english": "huge",
-			"french": "Inorme",
-			"number": "1498"
+			"Rank": "1010",
+			"portuguese": "trabalha",
+			"english": "works"
 		},
 		{
-			"english": "returns",
-			"french": "rentrI",
-			"number": "1499"
+			"Rank": "1011",
+			"portuguese": "passo",
+			"english": "step"
 		},
 		{
-			"english": "alex",
-			"french": "alex",
-			"number": "1500"
+			"Rank": "1012",
+			"portuguese": "ben",
+			"english": "ben"
 		},
 		{
-			"english": "belongs",
-			"french": "appartient",
-			"number": "1501"
+			"Rank": "1013",
+			"portuguese": "vidas",
+			"english": "lives"
 		},
 		{
-			"english": "to prepare",
-			"french": "prIparer",
-			"number": "1502"
+			"Rank": "1014",
+			"portuguese": "funciona",
+			"english": "it works"
 		},
 		{
-			"english": "own",
-			"french": "propres",
-			"number": "1503"
+			"Rank": "1015",
+			"portuguese": "falei",
+			"english": "I said"
 		},
 		{
-			"english": "sorry",
-			"french": "regrette",
-			"number": "1504"
+			"Rank": "1016",
+			"portuguese": "liberdade",
+			"english": "freedom"
 		},
 		{
-			"english": "finally",
-			"french": "finalement",
-			"number": "1505"
+			"Rank": "1017",
+			"portuguese": "socorro",
+			"english": "help"
 		},
 		{
-			"english": "la France",
-			"french": "france",
-			"number": "1506"
+			"Rank": "1018",
+			"portuguese": "vêm",
+			"english": "comes"
 		},
 		{
-			"english": "guest",
-			"french": "invitI",
-			"number": "1507"
+			"Rank": "1019",
+			"portuguese": "vive",
+			"english": "lives"
 		},
 		{
-			"english": "lesser",
-			"french": "moindre",
-			"number": "1508"
+			"Rank": "1020",
+			"portuguese": "parecia",
+			"english": "It looked"
 		},
 		{
-			"english": "supposed",
-			"french": "censI",
-			"number": "1509"
+			"Rank": "1021",
+			"portuguese": "cerca",
+			"english": "about"
 		},
 		{
-			"english": "Washington",
-			"french": "washington",
-			"number": "1510"
+			"Rank": "1022",
+			"portuguese": "esquece",
+			"english": "forgets"
 		},
 		{
-			"english": "bobby",
-			"french": "bobby",
-			"number": "1511"
+			"Rank": "1023",
+			"portuguese": "tenham",
+			"english": "have"
 		},
 		{
-			"english": "picture",
-			"french": "image",
-			"number": "1512"
+			"Rank": "1024",
+			"portuguese": "conseguimos",
+			"english": "could"
 		},
 		{
-			"english": "exactly",
-			"french": "justement",
-			"number": "1513"
+			"Rank": "1025",
+			"portuguese": "câmara",
+			"english": "chamber"
 		},
 		{
-			"english": "to",
-			"french": "to",
-			"number": "1514"
+			"Rank": "1026",
+			"portuguese": "papai",
+			"english": "dad"
 		},
 		{
-			"english": "count",
-			"french": "compter",
-			"number": "1515"
+			"Rank": "1027",
+			"portuguese": "bar",
+			"english": "Pub"
 		},
 		{
-			"english": "to take off",
-			"french": "enlever",
-			"number": "1516"
+			"Rank": "1028",
+			"portuguese": "tira",
+			"english": "strip"
 		},
 		{
-			"english": "hunt",
-			"french": "chasse",
-			"number": "1517"
+			"Rank": "1029",
+			"portuguese": "horrível",
+			"english": "horrible"
 		},
 		{
-			"english": "unique",
-			"french": "unique",
-			"number": "1518"
+			"Rank": "1030",
+			"portuguese": "pá",
+			"english": "Pan"
 		},
 		{
-			"english": "fout",
-			"french": "fout",
-			"number": "1519"
+			"Rank": "1031",
+			"portuguese": "segredo",
+			"english": "secret"
 		},
 		{
-			"english": "stop",
-			"french": "arrIt",
-			"number": "1520"
+			"Rank": "1032",
+			"portuguese": "maravilhoso",
+			"english": "wonderful"
 		},
 		{
-			"english": "file",
-			"french": "file",
-			"number": "1521"
+			"Rank": "1033",
+			"portuguese": "cerveja",
+			"english": "beer"
 		},
 		{
-			"english": "bullets",
-			"french": "balles",
-			"number": "1522"
+			"Rank": "1034",
+			"portuguese": "precisam",
+			"english": "They need"
 		},
 		{
-			"english": "evidence",
-			"french": "preuves",
-			"number": "1523"
+			"Rank": "1035",
+			"portuguese": "divertido",
+			"english": "funny"
 		},
 		{
-			"english": "Sunday",
-			"french": "dimanche",
-			"number": "1524"
+			"Rank": "1036",
+			"portuguese": "m",
+			"english": "m"
 		},
 		{
-			"english": "high school",
-			"french": "lycIe",
-			"number": "1525"
+			"Rank": "1037",
+			"portuguese": "naquela",
+			"english": "at that"
 		},
 		{
-			"english": "wire",
-			"french": "fil",
-			"number": "1526"
+			"Rank": "1038",
+			"portuguese": "uh",
+			"english": "uh"
 		},
 		{
-			"english": "piece",
-			"french": "morceau",
-			"number": "1527"
+			"Rank": "1039",
+			"portuguese": "basta",
+			"english": "enough"
 		},
 		{
-			"english": "names",
-			"french": "noms",
-			"number": "1528"
+			"Rank": "1040",
+			"portuguese": "ouviste",
+			"english": "heard"
 		},
 		{
-			"english": "during",
-			"french": "durant",
-			"number": "1529"
+			"Rank": "1041",
+			"portuguese": "reunião",
+			"english": "meeting"
 		},
 		{
-			"english": "sarah",
-			"french": "sarah",
-			"number": "1530"
+			"Rank": "1042",
+			"portuguese": "contente",
+			"english": "content"
 		},
 		{
-			"english": "broken",
-			"french": "cassI",
-			"number": "1531"
+			"Rank": "1043",
+			"portuguese": "foder",
+			"english": "fuck"
 		},
 		{
-			"english": "fingers",
-			"french": "doigts",
-			"number": "1532"
+			"Rank": "1044",
+			"portuguese": "volte",
+			"english": "come back"
 		},
 		{
-			"english": "check",
-			"french": "vIrifier",
-			"number": "1533"
+			"Rank": "1045",
+			"portuguese": "regras",
+			"english": "rules"
 		},
 		{
-			"english": "million",
-			"french": "million",
-			"number": "1534"
+			"Rank": "1046",
+			"portuguese": "miúdos",
+			"english": "kids"
 		},
 		{
-			"english": "apparatus",
-			"french": "appareil",
-			"number": "1535"
+			"Rank": "1047",
+			"portuguese": "peter",
+			"english": "peter"
 		},
 		{
-			"english": "PULL",
-			"french": "tirez",
-			"number": "1536"
+			"Rank": "1048",
+			"portuguese": "planeta",
+			"english": "planet"
 		},
 		{
-			"english": "brings",
-			"french": "apporte",
-			"number": "1537"
+			"Rank": "1049",
+			"portuguese": "triste",
+			"english": "sad"
 		},
 		{
-			"english": "answer",
-			"french": "rIponds",
-			"number": "1538"
+			"Rank": "1050",
+			"portuguese": "piada",
+			"english": "joke"
 		},
 		{
-			"english": "track",
-			"french": "piste",
-			"number": "1539"
+			"Rank": "1051",
+			"portuguese": "ihe",
+			"english": "ihe"
 		},
 		{
-			"english": "last",
-			"french": "derniers",
-			"number": "1540"
+			"Rank": "1052",
+			"portuguese": "vejam",
+			"english": "see"
 		},
 		{
-			"english": "man",
-			"french": "man",
-			"number": "1541"
+			"Rank": "1053",
+			"portuguese": "entender",
+			"english": "understand"
 		},
 		{
-			"english": "third",
-			"french": "troisiIme",
-			"number": "1542"
+			"Rank": "1054",
+			"portuguese": "prometo",
+			"english": "promise"
 		},
 		{
-			"english": "depends",
-			"french": "dIpend",
-			"number": "1543"
+			"Rank": "1055",
+			"portuguese": "passada",
+			"english": "last"
 		},
 		{
-			"english": "humans",
-			"french": "humains",
-			"number": "1544"
+			"Rank": "1056",
+			"portuguese": "jimmy",
+			"english": "jimmy"
 		},
 		{
-			"english": "program",
-			"french": "programme",
-			"number": "1545"
+			"Rank": "1057",
+			"portuguese": "aniversário",
+			"english": "birthday"
 		},
 		{
-			"english": "honest",
-			"french": "honnIte",
-			"number": "1546"
+			"Rank": "1058",
+			"portuguese": "pudesse",
+			"english": "could"
 		},
 		{
-			"english": "Car",
-			"french": "voitures",
-			"number": "1547"
+			"Rank": "1059",
+			"portuguese": "exemplo",
+			"english": "example"
 		},
 		{
-			"english": "move",
-			"french": "bougez",
-			"number": "1548"
+			"Rank": "1060",
+			"portuguese": "tiver",
+			"english": "have"
 		},
 		{
-			"english": "richard",
-			"french": "richard",
-			"number": "1549"
+			"Rank": "1061",
+			"portuguese": "eras",
+			"english": "ages"
 		},
 		{
-			"english": "beautiful",
-			"french": "belles",
-			"number": "1550"
+			"Rank": "1062",
+			"portuguese": "acaba",
+			"english": "ends"
 		},
 		{
-			"english": "adjust",
-			"french": "rIgler",
-			"number": "1551"
+			"Rank": "1063",
+			"portuguese": "perdi",
+			"english": "I've lost"
 		},
 		{
-			"english": "gat",
-			"french": "flingue",
-			"number": "1552"
+			"Rank": "1064",
+			"portuguese": "tenta",
+			"english": "tries"
 		},
 		{
-			"english": "cut",
-			"french": "couper",
-			"number": "1553"
+			"Rank": "1065",
+			"portuguese": "fato",
+			"english": "fact"
 		},
 		{
-			"english": "black",
-			"french": "noire",
-			"number": "1554"
+			"Rank": "1066",
+			"portuguese": "miss",
+			"english": "miss"
 		},
 		{
-			"english": "hear",
-			"french": "entendez",
-			"number": "1555"
+			"Rank": "1067",
+			"portuguese": "debaixo",
+			"english": "under"
 		},
 		{
-			"english": "blinded",
-			"french": "aveugle",
-			"number": "1556"
+			"Rank": "1068",
+			"portuguese": "sejas",
+			"english": "thou be"
 		},
 		{
-			"english": "move",
-			"french": "bouger",
-			"number": "1557"
+			"Rank": "1069",
+			"portuguese": "prontos",
+			"english": "ready"
 		},
 		{
-			"english": "had",
-			"french": "venait",
-			"number": "1558"
+			"Rank": "1070",
+			"portuguese": "tentei",
+			"english": "I Tried"
 		},
 		{
-			"english": "presence",
-			"french": "prIsence",
-			"number": "1559"
+			"Rank": "1071",
+			"portuguese": "mary",
+			"english": "mary"
 		},
 		{
-			"english": "know",
-			"french": "savons",
-			"number": "1560"
+			"Rank": "1072",
+			"portuguese": "serão",
+			"english": "will be"
 		},
 		{
-			"english": "crisis",
-			"french": "crise",
-			"number": "1561"
+			"Rank": "1073",
+			"portuguese": "explicar",
+			"english": "explain"
 		},
 		{
-			"english": "bring",
-			"french": "amIne",
-			"number": "1562"
+			"Rank": "1074",
+			"portuguese": "americano",
+			"english": "American"
 		},
 		{
-			"english": "not allowed",
-			"french": "interdit",
-			"number": "1563"
+			"Rank": "1075",
+			"portuguese": "avó",
+			"english": "Grandma"
 		},
 		{
-			"english": "very",
-			"french": "trIs",
-			"number": "1564"
+			"Rank": "1076",
+			"portuguese": "levou",
+			"english": "it took"
 		},
 		{
-			"english": "raise",
-			"french": "lever",
-			"number": "1565"
+			"Rank": "1077",
+			"portuguese": "meia",
+			"english": "sock"
 		},
 		{
-			"english": "leave",
-			"french": "partons",
-			"number": "1566"
+			"Rank": "1078",
+			"portuguese": "totalmente",
+			"english": "fully"
 		},
 		{
-			"english": "Keywords",
-			"french": "clIs",
-			"number": "1567"
+			"Rank": "1079",
+			"portuguese": "delas",
+			"english": "from them"
 		},
 		{
-			"english": "get",
-			"french": "obtenir",
-			"number": "1568"
+			"Rank": "1080",
+			"portuguese": "l",
+			"english": "l"
 		},
 		{
-			"english": "rain",
-			"french": "pluie",
-			"number": "1569"
+			"Rank": "1081",
+			"portuguese": "receber",
+			"english": "to receive"
 		},
 		{
-			"english": "recover",
-			"french": "rIcupIrer",
-			"number": "1570"
+			"Rank": "1082",
+			"portuguese": "perigo",
+			"english": "Danger"
 		},
 		{
-			"english": "great",
-			"french": "grandes",
-			"number": "1571"
+			"Rank": "1083",
+			"portuguese": "saúde",
+			"english": "Cheers"
 		},
 		{
-			"english": "what",
-			"french": "quelles",
-			"number": "1572"
+			"Rank": "1084",
+			"portuguese": "máquina",
+			"english": "machine"
 		},
 		{
-			"english": "prove",
-			"french": "prouver",
-			"number": "1573"
+			"Rank": "1085",
+			"portuguese": "tentando",
+			"english": "trying"
 		},
 		{
-			"english": "mouse",
-			"french": "souris",
-			"number": "1574"
+			"Rank": "1086",
+			"portuguese": "namorado",
+			"english": "boyfriend"
 		},
 		{
-			"english": "restaurant",
-			"french": "restaurant",
-			"number": "1575"
+			"Rank": "1087",
+			"portuguese": "diria",
+			"english": "would say"
 		},
 		{
-			"english": "look",
-			"french": "regard",
-			"number": "1576"
+			"Rank": "1088",
+			"portuguese": "conheci",
+			"english": "I met"
 		},
 		{
-			"english": "okay",
-			"french": "okay",
-			"number": "1577"
+			"Rank": "1089",
+			"portuguese": "cristo",
+			"english": "Christ"
 		},
 		{
-			"english": "intention",
-			"french": "intention",
-			"number": "1578"
+			"Rank": "1090",
+			"portuguese": "quantas",
+			"english": "how many"
 		},
 		{
-			"english": "strong",
-			"french": "forte",
-			"number": "1579"
+			"Rank": "1091",
+			"portuguese": "tínhamos",
+			"english": "We had"
 		},
 		{
-			"english": "danny",
-			"french": "danny",
-			"number": "1580"
+			"Rank": "1092",
+			"portuguese": "saída",
+			"english": "output"
 		},
 		{
-			"english": "neck",
-			"french": "cou",
-			"number": "1581"
+			"Rank": "1093",
+			"portuguese": "tenhas",
+			"english": "thou"
 		},
 		{
-			"english": "points",
-			"french": "points",
-			"number": "1582"
+			"Rank": "1094",
+			"portuguese": "maioria",
+			"english": "majority"
 		},
 		{
-			"english": "lack",
-			"french": "manquI",
-			"number": "1583"
+			"Rank": "1095",
+			"portuguese": "bater",
+			"english": "beat"
 		},
 		{
-			"english": "close",
-			"french": "proche",
-			"number": "1584"
+			"Rank": "1096",
+			"portuguese": "bolas",
+			"english": "balls"
 		},
 		{
-			"english": "emergency",
-			"french": "urgence",
-			"number": "1585"
+			"Rank": "1097",
+			"portuguese": "apartamento",
+			"english": "apartment"
 		},
 		{
-			"english": "madness",
-			"french": "folie",
-			"number": "1586"
+			"Rank": "1098",
+			"portuguese": "diferentes",
+			"english": "many different"
 		},
 		{
-			"english": "former",
-			"french": "ancien",
-			"number": "1587"
+			"Rank": "1099",
+			"portuguese": "negro",
+			"english": "black"
 		},
 		{
-			"english": "relationship",
-			"french": "relation",
-			"number": "1588"
+			"Rank": "1100",
+			"portuguese": "podias",
+			"english": "You could"
 		},
 		{
-			"english": "bottle",
-			"french": "bouteille",
-			"number": "1589"
+			"Rank": "1101",
+			"portuguese": "estarei",
+			"english": "will be"
 		},
 		{
-			"english": "floor",
-			"french": "Itage",
-			"number": "1590"
+			"Rank": "1102",
+			"portuguese": "desejo",
+			"english": "desire"
 		},
 		{
-			"english": "rejoin",
-			"french": "rejoindre",
-			"number": "1591"
+			"Rank": "1103",
+			"portuguese": "perdeu",
+			"english": "lost"
 		},
 		{
-			"english": "broken",
-			"french": "casse",
-			"number": "1592"
+			"Rank": "1104",
+			"portuguese": "garoto",
+			"english": "boy"
 		},
 		{
-			"english": "garden",
-			"french": "jardin",
-			"number": "1593"
+			"Rank": "1105",
+			"portuguese": "naquele",
+			"english": "that"
 		},
 		{
-			"english": "despite",
-			"french": "malgrI",
-			"number": "1594"
+			"Rank": "1106",
+			"portuguese": "tanta",
+			"english": "so much"
 		},
 		{
-			"english": "bird",
-			"french": "oiseau",
-			"number": "1595"
+			"Rank": "1107",
+			"portuguese": "livros",
+			"english": "books"
 		},
 		{
-			"english": "bad",
-			"french": "mIchant",
-			"number": "1596"
+			"Rank": "1108",
+			"portuguese": "năo",
+			"english": "no"
 		},
 		{
-			"english": "reasons",
-			"french": "raisons",
-			"number": "1597"
+			"Rank": "1109",
+			"portuguese": "leve",
+			"english": "Light"
 		},
 		{
-			"english": "lose",
-			"french": "perds",
-			"number": "1598"
+			"Rank": "1110",
+			"portuguese": "diferença",
+			"english": "difference"
 		},
 		{
-			"english": "cry",
-			"french": "pleure",
-			"number": "1599"
+			"Rank": "1111",
+			"portuguese": "rádio",
+			"english": "radio"
 		},
 		{
-			"english": "dies",
-			"french": "meurt",
-			"number": "1600"
+			"Rank": "1112",
+			"portuguese": "fale",
+			"english": "speak"
 		},
 		{
-			"english": "clear",
-			"french": "claire",
-			"number": "1601"
+			"Rank": "1113",
+			"portuguese": "destes",
+			"english": "of these"
 		},
 		{
-			"english": "hit",
-			"french": "frappI",
-			"number": "1602"
+			"Rank": "1114",
+			"portuguese": "base",
+			"english": "base"
 		},
 		{
-			"english": "sung",
-			"french": "chante",
-			"number": "1603"
+			"Rank": "1115",
+			"portuguese": "perceber",
+			"english": "to perceive"
 		},
 		{
-			"english": "could",
-			"french": "pourrai",
-			"number": "1604"
+			"Rank": "1116",
+			"portuguese": "humano",
+			"english": "human"
 		},
 		{
-			"english": "number",
-			"french": "nombre",
-			"number": "1605"
+			"Rank": "1117",
+			"portuguese": "esquecer",
+			"english": "forget"
 		},
 		{
-			"english": "robert",
-			"french": "robert",
-			"number": "1606"
+			"Rank": "1118",
+			"portuguese": "bob",
+			"english": "bob"
 		},
 		{
-			"english": "gentle",
-			"french": "gentille",
-			"number": "1607"
+			"Rank": "1119",
+			"portuguese": "quais",
+			"english": "which are"
 		},
 		{
-			"english": "able",
-			"french": "pourras",
-			"number": "1608"
+			"Rank": "1120",
+			"portuguese": "irei",
+			"english": "I will go"
 		},
 		{
-			"english": "feelings",
-			"french": "sentiments",
-			"number": "1609"
+			"Rank": "1121",
+			"portuguese": "james",
+			"english": "james"
 		},
 		{
-			"english": "watched",
-			"french": "regardI",
-			"number": "1610"
+			"Rank": "1122",
+			"portuguese": "terrível",
+			"english": "terrible"
 		},
 		{
-			"english": "roof",
-			"french": "toit",
-			"number": "1611"
+			"Rank": "1123",
+			"portuguese": "mamãe",
+			"english": "mom"
 		},
 		{
-			"english": "then",
-			"french": "lors",
-			"number": "1612"
+			"Rank": "1124",
+			"portuguese": "duro",
+			"english": "hard"
 		},
 		{
-			"english": "job",
-			"french": "mItier",
-			"number": "1613"
+			"Rank": "1125",
+			"portuguese": "mandar",
+			"english": "send"
 		},
 		{
-			"english": "disease",
-			"french": "maladie",
-			"number": "1614"
+			"Rank": "1126",
+			"portuguese": "janela",
+			"english": "window"
 		},
 		{
-			"english": "poached",
-			"french": "poche",
-			"number": "1615"
+			"Rank": "1127",
+			"portuguese": "junto",
+			"english": "together"
 		},
 		{
-			"english": "very",
-			"french": "trIs",
-			"number": "1616"
+			"Rank": "1128",
+			"portuguese": "vender",
+			"english": "sell"
 		},
 		{
-			"english": "hit",
-			"french": "frapper",
-			"number": "1617"
+			"Rank": "1129",
+			"portuguese": "ama",
+			"english": "love"
 		},
 		{
-			"english": "tommy",
-			"french": "tommy",
-			"number": "1618"
+			"Rank": "1130",
+			"portuguese": "público",
+			"english": "public"
 		},
 		{
-			"english": "success",
-			"french": "succIs",
-			"number": "1619"
+			"Rank": "1131",
+			"portuguese": "henry",
+			"english": "henry"
 		},
 		{
-			"english": "being",
-			"french": "Itant",
-			"number": "1620"
+			"Rank": "1132",
+			"portuguese": "b",
+			"english": "B"
 		},
 		{
-			"english": "lee",
-			"french": "lee",
-			"number": "1621"
+			"Rank": "1133",
+			"portuguese": "ás",
+			"english": "at"
 		},
 		{
-			"english": "below",
-			"french": "dessous",
-			"number": "1622"
+			"Rank": "1134",
+			"portuguese": "nave",
+			"english": "nave"
 		},
 		{
-			"english": "would",
-			"french": "voudrait",
-			"number": "1623"
+			"Rank": "1135",
+			"portuguese": "sonhos",
+			"english": "Dreams"
 		},
 		{
-			"english": "theater",
-			"french": "thIItre",
-			"number": "1624"
+			"Rank": "1136",
+			"portuguese": "põe",
+			"english": "put"
 		},
 		{
-			"english": "Chinese",
-			"french": "chinois",
-			"number": "1625"
+			"Rank": "1137",
+			"portuguese": "tradução",
+			"english": "translation"
 		},
 		{
-			"english": "fear",
-			"french": "crains",
-			"number": "1626"
+			"Rank": "1138",
+			"portuguese": "provas",
+			"english": "evidences"
 		},
 		{
-			"english": "to",
-			"french": "afin",
-			"number": "1627"
+			"Rank": "1139",
+			"portuguese": "entendido",
+			"english": "understood"
 		},
 		{
-			"english": "station",
-			"french": "gare",
-			"number": "1628"
+			"Rank": "1140",
+			"portuguese": "tribunal",
+			"english": "court"
 		},
 		{
-			"english": "tickets",
-			"french": "billets",
-			"number": "1629"
+			"Rank": "1141",
+			"portuguese": "billy",
+			"english": "billy"
 		},
 		{
-			"english": "fresh",
-			"french": "douce",
-			"number": "1630"
+			"Rank": "1142",
+			"portuguese": "monte",
+			"english": "hill"
 		},
 		{
-			"english": "hit",
-			"french": "frappe",
-			"number": "1631"
+			"Rank": "1143",
+			"portuguese": "meninas",
+			"english": "girls"
 		},
 		{
-			"english": "Note",
-			"french": "remarquI",
-			"number": "1632"
+			"Rank": "1144",
+			"portuguese": "área",
+			"english": "area"
 		},
 		{
-			"english": "paradise",
-			"french": "paradis",
-			"number": "1633"
+			"Rank": "1145",
+			"portuguese": "conheces",
+			"english": "know"
 		},
 		{
-			"english": "foreign",
-			"french": "Itranger",
-			"number": "1634"
+			"Rank": "1146",
+			"portuguese": "bomba",
+			"english": "bomb"
 		},
 		{
-			"english": "campaign",
-			"french": "campagne",
-			"number": "1635"
+			"Rank": "1147",
+			"portuguese": "farei",
+			"english": "I will"
 		},
 		{
-			"english": "closed",
-			"french": "fermI",
-			"number": "1636"
+			"Rank": "1148",
+			"portuguese": "perigoso",
+			"english": "dangerous"
 		},
 		{
-			"english": "g",
-			"french": "g",
-			"number": "1637"
+			"Rank": "1149",
+			"portuguese": "experiência",
+			"english": "experience"
 		},
 		{
-			"english": "alcohol",
-			"french": "alcool",
-			"number": "1638"
+			"Rank": "1150",
+			"portuguese": "bill",
+			"english": "bill"
 		},
 		{
-			"english": "jerry",
-			"french": "jerry",
-			"number": "1639"
+			"Rank": "1151",
+			"portuguese": "acima",
+			"english": "above"
 		},
 		{
-			"english": "sold",
-			"french": "vendu",
-			"number": "1640"
+			"Rank": "1152",
+			"portuguese": "percebo",
+			"english": "I realize"
 		},
 		{
-			"english": "Saturday",
-			"french": "samedi",
-			"number": "1641"
+			"Rank": "1153",
+			"portuguese": "existem",
+			"english": "there"
 		},
 		{
-			"english": "speaking",
-			"french": "parlait",
-			"number": "1642"
+			"Rank": "1154",
+			"portuguese": "pernas",
+			"english": "legs"
 		},
 		{
-			"english": "product",
-			"french": "produit",
-			"number": "1643"
+			"Rank": "1155",
+			"portuguese": "lua",
+			"english": "moon"
 		},
 		{
-			"english": "say again",
-			"french": "rIpIte",
-			"number": "1644"
+			"Rank": "1156",
+			"portuguese": "graça",
+			"english": "grace"
 		},
 		{
-			"english": "in love",
-			"french": "amoureuse",
-			"number": "1645"
+			"Rank": "1157",
+			"portuguese": "c",
+			"english": "w"
 		},
 		{
-			"english": "wish",
-			"french": "souhaite",
-			"number": "1646"
+			"Rank": "1158",
+			"portuguese": "acaso",
+			"english": "chance"
 		},
 		{
-			"english": "Odour",
-			"french": "odeur",
-			"number": "1647"
+			"Rank": "1159",
+			"portuguese": "peça",
+			"english": "ask"
 		},
 		{
-			"english": "called",
-			"french": "appelait",
-			"number": "1648"
+			"Rank": "1160",
+			"portuguese": "estaria",
+			"english": "would"
 		},
 		{
-			"english": "your",
-			"french": "vItre",
-			"number": "1649"
+			"Rank": "1161",
+			"portuguese": "decisão",
+			"english": "decision"
 		},
 		{
-			"english": "Meanwhile",
-			"french": "attendant",
-			"number": "1650"
+			"Rank": "1162",
+			"portuguese": "odeio",
+			"english": "I hate"
 		},
 		{
-			"english": "Mountain",
-			"french": "montagne",
-			"number": "1651"
+			"Rank": "1163",
+			"portuguese": "par",
+			"english": "pair"
 		},
 		{
-			"english": "or",
-			"french": "oIE",
-			"number": "1652"
+			"Rank": "1164",
+			"portuguese": "sabias",
+			"english": "you knew"
 		},
 		{
-			"english": "lives",
-			"french": "vies",
-			"number": "1653"
+			"Rank": "1165",
+			"portuguese": "pronta",
+			"english": "ready"
 		},
 		{
-			"english": "ask",
-			"french": "demandez",
-			"number": "1654"
+			"Rank": "1166",
+			"portuguese": "metros",
+			"english": "meters"
 		},
 		{
-			"english": "fantastic",
-			"french": "fantastique",
-			"number": "1655"
+			"Rank": "1167",
+			"portuguese": "silêncio",
+			"english": "silence"
 		},
 		{
-			"english": "victory",
-			"french": "victoire",
-			"number": "1656"
+			"Rank": "1168",
+			"portuguese": "humanos",
+			"english": "humans"
 		},
 		{
-			"english": "mens",
-			"french": "mens",
-			"number": "1657"
+			"Rank": "1169",
+			"portuguese": "seguinte",
+			"english": "following"
 		},
 		{
-			"english": "career",
-			"french": "carriIre",
-			"number": "1658"
+			"Rank": "1170",
+			"portuguese": "caralho",
+			"english": "fuck"
 		},
 		{
-			"english": "removes",
-			"french": "enlIve",
-			"number": "1659"
+			"Rank": "1171",
+			"portuguese": "subir",
+			"english": "move up"
 		},
 		{
-			"english": "tired",
-			"french": "fatiguI",
-			"number": "1660"
+			"Rank": "1172",
+			"portuguese": "devagar",
+			"english": "slowly"
 		},
 		{
-			"english": "followed",
-			"french": "suivi",
-			"number": "1661"
+			"Rank": "1173",
+			"portuguese": "espécie",
+			"english": "species"
 		},
 		{
-			"english": "animal",
-			"french": "animal",
-			"number": "1662"
+			"Rank": "1174",
+			"portuguese": "clube",
+			"english": "club"
 		},
 		{
-			"english": "missed",
-			"french": "ratI",
-			"number": "1663"
+			"Rank": "1175",
+			"portuguese": "oficial",
+			"english": "official"
 		},
 		{
-			"english": "rule",
-			"french": "rIgle",
-			"number": "1664"
+			"Rank": "1176",
+			"portuguese": "dei",
+			"english": "I gave"
 		},
 		{
-			"english": "die",
-			"french": "meurs",
-			"number": "1665"
+			"Rank": "1177",
+			"portuguese": "percebi",
+			"english": "I noticed"
 		},
 		{
-			"english": "thank",
-			"french": "remercier",
-			"number": "1666"
+			"Rank": "1178",
+			"portuguese": "senão",
+			"english": "if no"
 		},
 		{
-			"english": "assure",
-			"french": "assurer",
-			"number": "1667"
+			"Rank": "1179",
+			"portuguese": "compreendo",
+			"english": "I understand"
 		},
 		{
-			"english": "tail",
-			"french": "queue",
-			"number": "1668"
+			"Rank": "1180",
+			"portuguese": "verão",
+			"english": "summer"
 		},
 		{
-			"english": "meat",
-			"french": "viande",
-			"number": "1669"
+			"Rank": "1181",
+			"portuguese": "enorme",
+			"english": "huge"
 		},
 		{
-			"english": "river",
-			"french": "riviIre",
-			"number": "1670"
+			"Rank": "1182",
+			"portuguese": "avô",
+			"english": "Grandma"
 		},
 		{
-			"english": "have to",
-			"french": "falloir",
-			"number": "1671"
+			"Rank": "1183",
+			"portuguese": "cérebro",
+			"english": "brain"
 		},
 		{
-			"english": "following",
-			"french": "suivant",
-			"number": "1672"
+			"Rank": "1184",
+			"portuguese": "televisão",
+			"english": "TV"
 		},
 		{
-			"english": "assures",
-			"french": "assure",
-			"number": "1673"
+			"Rank": "1185",
+			"portuguese": "johnny",
+			"english": "johnny"
 		},
 		{
-			"english": "forced",
-			"french": "obligI",
-			"number": "1674"
+			"Rank": "1186",
+			"portuguese": "propósito",
+			"english": "purpose"
 		},
 		{
-			"english": "martin",
-			"french": "martin",
-			"number": "1675"
+			"Rank": "1187",
+			"portuguese": "resolver",
+			"english": "solve"
 		},
 		{
-			"english": "gun",
-			"french": "fusil",
-			"number": "1676"
+			"Rank": "1188",
+			"portuguese": "últimos",
+			"english": "last"
 		},
 		{
-			"english": "passage",
-			"french": "passage",
-			"number": "1677"
+			"Rank": "1189",
+			"portuguese": "inglês",
+			"english": "english"
 		},
 		{
-			"english": "hazard",
-			"french": "hasard",
-			"number": "1678"
+			"Rank": "1190",
+			"portuguese": "esperança",
+			"english": "hope"
 		},
 		{
-			"english": "poor",
-			"french": "pauvres",
-			"number": "1679"
+			"Rank": "1191",
+			"portuguese": "trata",
+			"english": "treats"
 		},
 		{
-			"english": "snow",
-			"french": "neige",
-			"number": "1680"
+			"Rank": "1192",
+			"portuguese": "maluco",
+			"english": "crazy"
 		},
 		{
-			"english": "perfectly",
-			"french": "parfaitement",
-			"number": "1681"
+			"Rank": "1193",
+			"portuguese": "irmãos",
+			"english": "brothers"
 		},
 		{
-			"english": "newspapers",
-			"french": "journaux",
-			"number": "1682"
+			"Rank": "1194",
+			"portuguese": "apesar",
+			"english": "although"
 		},
 		{
-			"english": "escape",
-			"french": "Ichapper",
-			"number": "1683"
+			"Rank": "1195",
+			"portuguese": "dessas",
+			"english": "these"
 		},
 		{
-			"english": "beach",
-			"french": "plage",
-			"number": "1684"
+			"Rank": "1196",
+			"portuguese": "poderá",
+			"english": "can"
 		},
 		{
-			"english": "secrets",
-			"french": "secrets",
-			"number": "1685"
+			"Rank": "1197",
+			"portuguese": "contrário",
+			"english": "contrary"
 		},
 		{
-			"english": "signal",
-			"french": "signal",
-			"number": "1686"
+			"Rank": "1198",
+			"portuguese": "rainha",
+			"english": "queen"
 		},
 		{
-			"english": "dumbass",
-			"french": "crItin",
-			"number": "1687"
+			"Rank": "1199",
+			"portuguese": "igual",
+			"english": "equal"
 		},
 		{
-			"english": "hast",
-			"french": "aies",
-			"number": "1688"
+			"Rank": "1200",
+			"portuguese": "jim",
+			"english": "jim"
 		},
 		{
-			"english": "video",
-			"french": "vidIo",
-			"number": "1689"
+			"Rank": "1201",
+			"portuguese": "parecer",
+			"english": "seem"
 		},
 		{
-			"english": "chest",
-			"french": "coffre",
-			"number": "1690"
+			"Rank": "1202",
+			"portuguese": "ray",
+			"english": "ray"
 		},
 		{
-			"english": "pressure",
-			"french": "pression",
-			"number": "1691"
+			"Rank": "1203",
+			"portuguese": "suponho",
+			"english": "I suppose"
 		},
 		{
-			"english": "suit",
-			"french": "costume",
-			"number": "1692"
+			"Rank": "1204",
+			"portuguese": "dúvida",
+			"english": "doubt"
 		},
 		{
-			"english": "news",
-			"french": "informations",
-			"number": "1693"
+			"Rank": "1205",
+			"portuguese": "achar",
+			"english": "find"
 		},
 		{
-			"english": "future",
-			"french": "futur",
-			"number": "1694"
+			"Rank": "1206",
+			"portuguese": "doce",
+			"english": "candy"
 		},
 		{
-			"english": "saying",
-			"french": "disant",
-			"number": "1695"
+			"Rank": "1207",
+			"portuguese": "danny",
+			"english": "danny"
 		},
 		{
-			"english": "universe",
-			"french": "univers",
-			"number": "1696"
+			"Rank": "1208",
+			"portuguese": "ilha",
+			"english": "island"
 		},
 		{
-			"english": "would",
-			"french": "auraient",
-			"number": "1697"
+			"Rank": "1209",
+			"portuguese": "repente",
+			"english": "suddenly"
 		},
 		{
-			"english": "guards",
-			"french": "gardes",
-			"number": "1698"
+			"Rank": "1210",
+			"portuguese": "conselho",
+			"english": "advice"
 		},
 		{
-			"english": "Lily",
-			"french": "lis",
-			"number": "1699"
+			"Rank": "1211",
+			"portuguese": "colocar",
+			"english": "place"
 		},
 		{
-			"english": "will",
-			"french": "volontI",
-			"number": "1700"
+			"Rank": "1212",
+			"portuguese": "aquelas",
+			"english": "those"
 		},
 		{
-			"english": "expected",
-			"french": "attendu",
-			"number": "1701"
+			"Rank": "1213",
+			"portuguese": "espírito",
+			"english": "spirit"
 		},
 		{
-			"english": "see",
-			"french": "verras",
-			"number": "1702"
+			"Rank": "1214",
+			"portuguese": "tome",
+			"english": "take"
 		},
 		{
-			"english": "give",
-			"french": "donnez",
-			"number": "1703"
+			"Rank": "1215",
+			"portuguese": "corre",
+			"english": "run"
 		},
 		{
-			"english": "asked",
-			"french": "demandais",
-			"number": "1704"
+			"Rank": "1216",
+			"portuguese": "cartas",
+			"english": "letters"
 		},
 		{
-			"english": "apology",
-			"french": "excuses",
-			"number": "1705"
+			"Rank": "1217",
+			"portuguese": "tv",
+			"english": "TV"
 		},
 		{
-			"english": "come",
-			"french": "vienne",
-			"number": "1706"
+			"Rank": "1218",
+			"portuguese": "raparigas",
+			"english": "girls"
 		},
 		{
-			"english": "think",
-			"french": "pensent",
-			"number": "1707"
+			"Rank": "1219",
+			"portuguese": "vossos",
+			"english": "your"
 		},
 		{
-			"english": "low",
-			"french": "faible",
-			"number": "1708"
+			"Rank": "1220",
+			"portuguese": "paris",
+			"english": "Paris"
 		},
 		{
-			"english": "hidden",
-			"french": "cache",
-			"number": "1709"
+			"Rank": "1221",
+			"portuguese": "encontrou",
+			"english": "found"
 		},
 		{
-			"english": "son",
-			"french": "fiston",
-			"number": "1710"
+			"Rank": "1222",
+			"portuguese": "saco",
+			"english": "bag"
 		},
 		{
-			"english": "van",
-			"french": "van",
-			"number": "1711"
+			"Rank": "1223",
+			"portuguese": "empresa",
+			"english": "company"
 		},
 		{
-			"english": "will take",
-			"french": "prendra",
-			"number": "1712"
+			"Rank": "1224",
+			"portuguese": "foto",
+			"english": "Photograph"
 		},
 		{
-			"english": "to catch",
-			"french": "attraper",
-			"number": "1713"
+			"Rank": "1225",
+			"portuguese": "loucura",
+			"english": "madness"
 		},
 		{
-			"english": "sleeps",
-			"french": "dort",
-			"number": "1714"
+			"Rank": "1226",
+			"portuguese": "acham",
+			"english": "They find"
 		},
 		{
-			"english": "decide",
-			"french": "dIcider",
-			"number": "1715"
+			"Rank": "1227",
+			"portuguese": "sejam",
+			"english": "are"
 		},
 		{
-			"english": "worry",
-			"french": "inquiItez",
-			"number": "1716"
+			"Rank": "1228",
+			"portuguese": "controlo",
+			"english": "control"
 		},
 		{
-			"english": "constantly",
-			"french": "cesse",
-			"number": "1717"
+			"Rank": "1229",
+			"portuguese": "voce",
+			"english": "you"
 		},
 		{
-			"english": "gaffe",
-			"french": "gaffe",
-			"number": "1718"
+			"Rank": "1230",
+			"portuguese": "pensando",
+			"english": "thinking"
 		},
 		{
-			"english": "will",
-			"french": "serons",
-			"number": "1719"
+			"Rank": "1231",
+			"portuguese": "azul",
+			"english": "blue"
 		},
 		{
-			"english": "minister",
-			"french": "ministre",
-			"number": "1720"
+			"Rank": "1232",
+			"portuguese": "comboio",
+			"english": "train"
 		},
 		{
-			"english": "birth",
-			"french": "naissance",
-			"number": "1721"
+			"Rank": "1233",
+			"portuguese": "vermelho",
+			"english": "red"
 		},
 		{
-			"english": "to act",
-			"french": "agir",
-			"number": "1722"
+			"Rank": "1234",
+			"portuguese": "hipótese",
+			"english": "hypothesis"
 		},
 		{
-			"english": "useful",
-			"french": "utile",
-			"number": "1723"
+			"Rank": "1235",
+			"portuguese": "alex",
+			"english": "alex"
 		},
 		{
-			"english": "gas",
-			"french": "gaz",
-			"number": "1724"
+			"Rank": "1236",
+			"portuguese": "destas",
+			"english": "these"
 		},
 		{
-			"english": "battle",
-			"french": "bataille",
-			"number": "1725"
+			"Rank": "1237",
+			"portuguese": "roupas",
+			"english": "clothes"
 		},
 		{
-			"english": "black",
-			"french": "noirs",
-			"number": "1726"
+			"Rank": "1238",
+			"portuguese": "inteligente",
+			"english": "intelligent"
 		},
 		{
-			"english": "wanted",
-			"french": "vouliez",
-			"number": "1727"
+			"Rank": "1239",
+			"portuguese": "afinal",
+			"english": "after all"
 		},
 		{
-			"english": "retirement",
-			"french": "retraite",
-			"number": "1728"
+			"Rank": "1240",
+			"portuguese": "estrela",
+			"english": "star"
 		},
 		{
-			"english": "thief",
-			"french": "voleur",
-			"number": "1729"
+			"Rank": "1241",
+			"portuguese": "max",
+			"english": "max"
 		},
 		{
-			"english": "weight",
-			"french": "poids",
-			"number": "1730"
+			"Rank": "1242",
+			"portuguese": "filmes",
+			"english": "movies"
 		},
 		{
-			"english": "speech",
-			"french": "discours",
-			"number": "1731"
+			"Rank": "1243",
+			"portuguese": "gelo",
+			"english": "ice"
 		},
 		{
-			"english": "star",
-			"french": "star",
-			"number": "1732"
+			"Rank": "1244",
+			"portuguese": "principal",
+			"english": "main"
 		},
 		{
-			"english": "new",
-			"french": "nouvel",
-			"number": "1733"
+			"Rank": "1245",
+			"portuguese": "chá",
+			"english": "tea"
 		},
 		{
-			"english": "Cake",
-			"french": "gIteau",
-			"number": "1734"
+			"Rank": "1246",
+			"portuguese": "parecem",
+			"english": "look"
 		},
 		{
-			"english": "cents",
-			"french": "cents",
-			"number": "1735"
+			"Rank": "1247",
+			"portuguese": "terminar",
+			"english": "end"
 		},
 		{
-			"english": "belly",
-			"french": "ventre",
-			"number": "1736"
+			"Rank": "1248",
+			"portuguese": "motivo",
+			"english": "reason"
 		},
 		{
-			"english": "knowledge",
-			"french": "connaissance",
-			"number": "1737"
+			"Rank": "1249",
+			"portuguese": "desculpem",
+			"english": "sorry"
 		},
 		{
-			"english": "want to",
-			"french": "voulons",
-			"number": "1738"
+			"Rank": "1250",
+			"portuguese": "soldados",
+			"english": "military"
 		},
 		{
-			"english": "viva",
-			"french": "vive",
-			"number": "1739"
+			"Rank": "1251",
+			"portuguese": "teres",
+			"english": "teres"
 		},
 		{
-			"english": "whites",
-			"french": "blancs",
-			"number": "1740"
+			"Rank": "1252",
+			"portuguese": "vinho",
+			"english": "wine"
 		},
 		{
-			"english": "assassin",
-			"french": "assassin",
-			"number": "1741"
+			"Rank": "1253",
+			"portuguese": "americanos",
+			"english": "American"
 		},
 		{
-			"english": "games",
-			"french": "jeux",
-			"number": "1742"
+			"Rank": "1254",
+			"portuguese": "longo",
+			"english": "long"
 		},
 		{
-			"english": "Friday",
-			"french": "vendredi",
-			"number": "1743"
+			"Rank": "1255",
+			"portuguese": "dizia",
+			"english": "said"
 		},
 		{
-			"english": "Europe",
-			"french": "europe",
-			"number": "1744"
+			"Rank": "1256",
+			"portuguese": "chorar",
+			"english": "cry"
 		},
 		{
-			"english": "accepted",
-			"french": "accepte",
-			"number": "1745"
+			"Rank": "1257",
+			"portuguese": "universidade",
+			"english": "university"
 		},
 		{
-			"english": "let's talk",
-			"french": "parlons",
-			"number": "1746"
+			"Rank": "1258",
+			"portuguese": "certamente",
+			"english": "Certainly"
 		},
 		{
-			"english": "some",
-			"french": "certaine",
-			"number": "1747"
+			"Rank": "1259",
+			"portuguese": "usa",
+			"english": "uses"
 		},
 		{
-			"english": "couple",
-			"french": "couple",
-			"number": "1748"
+			"Rank": "1260",
+			"portuguese": "perdido",
+			"english": "lost"
 		},
 		{
-			"english": "seriously",
-			"french": "sIrieusement",
-			"number": "1749"
+			"Rank": "1261",
+			"portuguese": "defesa",
+			"english": "defense"
 		},
 		{
-			"english": "military",
-			"french": "militaire",
-			"number": "1750"
+			"Rank": "1262",
+			"portuguese": "buraco",
+			"english": "hole"
 		},
 		{
-			"english": "dated",
-			"french": "date",
-			"number": "1751"
+			"Rank": "1263",
+			"portuguese": "teste",
+			"english": "Test"
 		},
 		{
-			"english": "Rome",
-			"french": "rome",
-			"number": "1752"
+			"Rank": "1264",
+			"portuguese": "preço",
+			"english": "price"
 		},
 		{
-			"english": "hears",
-			"french": "entend",
-			"number": "1753"
+			"Rank": "1265",
+			"portuguese": "roubar",
+			"english": "to steal"
 		},
 		{
-			"english": "rights",
-			"french": "droits",
-			"number": "1754"
+			"Rank": "1266",
+			"portuguese": "r",
+			"english": "r"
 		},
 		{
-			"english": "rest",
-			"french": "restI",
-			"number": "1755"
+			"Rank": "1267",
+			"portuguese": "braço",
+			"english": "arm"
 		},
 		{
-			"english": "mount",
-			"french": "montez",
-			"number": "1756"
+			"Rank": "1268",
+			"portuguese": "fotos",
+			"english": "photos"
 		},
 		{
-			"english": "title",
-			"french": "titre",
-			"number": "1757"
+			"Rank": "1269",
+			"portuguese": "inteiro",
+			"english": "all"
 		},
 		{
-			"english": "genius",
-			"french": "gInie",
-			"number": "1758"
+			"Rank": "1270",
+			"portuguese": "teremos",
+			"english": "will"
 		},
 		{
-			"english": "balls",
-			"french": "couilles",
-			"number": "1759"
+			"Rank": "1271",
+			"portuguese": "xerife",
+			"english": "sheriff"
 		},
 		{
-			"english": "return",
-			"french": "revenez",
-			"number": "1760"
+			"Rank": "1272",
+			"portuguese": "comando",
+			"english": "command"
 		},
 		{
-			"english": "to receive",
-			"french": "recevoir",
-			"number": "1761"
+			"Rank": "1273",
+			"portuguese": "carros",
+			"english": "cars"
 		},
 		{
-			"english": "other",
-			"french": "autrement",
-			"number": "1762"
+			"Rank": "1274",
+			"portuguese": "mentir",
+			"english": "to lie"
 		},
 		{
-			"english": "answered",
-			"french": "rIpondu",
-			"number": "1763"
+			"Rank": "1275",
+			"portuguese": "cantar",
+			"english": "sing"
 		},
 		{
-			"english": "bring",
-			"french": "amenI",
-			"number": "1764"
+			"Rank": "1276",
+			"portuguese": "cozinha",
+			"english": "kitchen"
 		},
 		{
-			"english": "bone",
-			"french": "os",
-			"number": "1765"
+			"Rank": "1277",
+			"portuguese": "porcaria",
+			"english": "filth"
 		},
 		{
-			"english": "loses",
-			"french": "perd",
-			"number": "1766"
+			"Rank": "1278",
+			"portuguese": "zona",
+			"english": "zone"
 		},
 		{
-			"english": "value",
-			"french": "valeur",
-			"number": "1767"
+			"Rank": "1279",
+			"portuguese": "lembrar",
+			"english": "remember"
 		},
 		{
-			"english": "powerful",
-			"french": "puissant",
-			"number": "1768"
+			"Rank": "1280",
+			"portuguese": "desapareceu",
+			"english": "disappeared"
 		},
 		{
-			"english": "style",
-			"french": "style",
-			"number": "1769"
+			"Rank": "1281",
+			"portuguese": "toca",
+			"english": "burrow"
 		},
 		{
-			"english": "green",
-			"french": "vert",
-			"number": "1770"
+			"Rank": "1282",
+			"portuguese": "necessário",
+			"english": "required"
 		},
 		{
-			"english": "fortune",
-			"french": "fortune",
-			"number": "1771"
+			"Rank": "1283",
+			"portuguese": "justo",
+			"english": "fair"
 		},
 		{
-			"english": "old",
-			"french": "vieil",
-			"number": "1772"
+			"Rank": "1284",
+			"portuguese": "confiar",
+			"english": "to trust"
 		},
 		{
-			"english": "Staff",
-			"french": "major",
-			"number": "1773"
+			"Rank": "1285",
+			"portuguese": "nick",
+			"english": "nick"
 		},
 		{
-			"english": "lead",
-			"french": "amener",
-			"number": "1774"
+			"Rank": "1286",
+			"portuguese": "façam",
+			"english": "make"
 		},
 		{
-			"english": "prepare",
-			"french": "prIpare",
-			"number": "1775"
+			"Rank": "1287",
+			"portuguese": "coragem",
+			"english": "courage"
 		},
 		{
-			"english": "chicken",
-			"french": "poulet",
-			"number": "1776"
+			"Rank": "1288",
+			"portuguese": "controle",
+			"english": "control"
 		},
 		{
-			"english": "to kiss",
-			"french": "embrasser",
-			"number": "1777"
+			"Rank": "1289",
+			"portuguese": "vós",
+			"english": "you"
 		},
 		{
-			"english": "knees",
-			"french": "genoux",
-			"number": "1778"
+			"Rank": "1290",
+			"portuguese": "pareces",
+			"english": "seem"
 		},
 		{
-			"english": "act",
-			"french": "acte",
-			"number": "1779"
+			"Rank": "1291",
+			"portuguese": "entende",
+			"english": "you see"
 		},
 		{
-			"english": "destroy",
-			"french": "dItruit",
-			"number": "1780"
+			"Rank": "1292",
+			"portuguese": "nove",
+			"english": "nine"
 		},
 		{
-			"english": "popular",
-			"french": "cIlIbre",
-			"number": "1781"
+			"Rank": "1293",
+			"portuguese": "traz",
+			"english": "brings"
 		},
 		{
-			"english": "target",
-			"french": "cible",
-			"number": "1782"
+			"Rank": "1294",
+			"portuguese": "proteger",
+			"english": "protect"
 		},
 		{
-			"english": "cousin",
-			"french": "cousin",
-			"number": "1783"
+			"Rank": "1295",
+			"portuguese": "aparecer",
+			"english": "appear"
 		},
 		{
-			"english": "consciousness",
-			"french": "conscience",
-			"number": "1784"
+			"Rank": "1296",
+			"portuguese": "fiquem",
+			"english": "stay"
 		},
 		{
-			"english": "prevent",
-			"french": "prIvenir",
-			"number": "1785"
+			"Rank": "1297",
+			"portuguese": "inimigo",
+			"english": "enemy"
 		},
 		{
-			"english": "brings back",
-			"french": "ramIne",
-			"number": "1786"
+			"Rank": "1298",
+			"portuguese": "pele",
+			"english": "skin"
 		},
 		{
-			"english": "arrived",
-			"french": "arrivIs",
-			"number": "1787"
+			"Rank": "1299",
+			"portuguese": "percebes",
+			"english": "barnacles"
 		},
 		{
-			"english": "finger",
-			"french": "doigt",
-			"number": "1788"
+			"Rank": "1300",
+			"portuguese": "contas",
+			"english": "accounts"
 		},
 		{
-			"english": "California",
-			"french": "californie",
-			"number": "1789"
+			"Rank": "1301",
+			"portuguese": "tia",
+			"english": "aunt"
 		},
 		{
-			"english": "article",
-			"french": "article",
-			"number": "1790"
+			"Rank": "1302",
+			"portuguese": "deixei",
+			"english": "I left"
 		},
 		{
-			"english": "looking",
-			"french": "cherchez",
-			"number": "1791"
+			"Rank": "1303",
+			"portuguese": "saiba",
+			"english": "know"
 		},
 		{
-			"english": "stars",
-			"french": "Itoiles",
-			"number": "1792"
+			"Rank": "1304",
+			"portuguese": "voar",
+			"english": "to fly"
 		},
 		{
-			"english": "thousands",
-			"french": "milliers",
-			"number": "1793"
+			"Rank": "1305",
+			"portuguese": "nível",
+			"english": "level"
 		},
 		{
-			"english": "resume",
-			"french": "reprendre",
-			"number": "1794"
+			"Rank": "1306",
+			"portuguese": "to",
+			"english": "to"
 		},
 		{
-			"english": "mine",
-			"french": "mine",
-			"number": "1795"
+			"Rank": "1307",
+			"portuguese": "desses",
+			"english": "these"
 		},
 		{
-			"english": "look",
-			"french": "regardes",
-			"number": "1796"
+			"Rank": "1308",
+			"portuguese": "lixo",
+			"english": "trash"
 		},
 		{
-			"english": "served",
-			"french": "servi",
-			"number": "1797"
+			"Rank": "1309",
+			"portuguese": "tentou",
+			"english": "he tried"
 		},
 		{
-			"english": "enemies",
-			"french": "ennemis",
-			"number": "1798"
+			"Rank": "1310",
+			"portuguese": "beleza",
+			"english": "beauty"
 		},
 		{
-			"english": "charming",
-			"french": "charmant",
-			"number": "1799"
+			"Rank": "1311",
+			"portuguese": "suposto",
+			"english": "supposed"
 		},
 		{
-			"english": "feeling",
-			"french": "sentiment",
-			"number": "1800"
+			"Rank": "1312",
+			"portuguese": "you",
+			"english": "you"
 		},
 		{
-			"english": "rest",
-			"french": "reposer",
-			"number": "1801"
+			"Rank": "1313",
+			"portuguese": "srta",
+			"english": "MS"
 		},
 		{
-			"english": "note",
-			"french": "note",
-			"number": "1802"
+			"Rank": "1314",
+			"portuguese": "preparar",
+			"english": "prepare"
 		},
 		{
-			"english": "layer",
-			"french": "couchI",
-			"number": "1803"
+			"Rank": "1315",
+			"portuguese": "noites",
+			"english": "nights"
 		},
 		{
-			"english": "keep",
-			"french": "gardez",
-			"number": "1804"
+			"Rank": "1316",
+			"portuguese": "dança",
+			"english": "dance"
 		},
 		{
-			"english": "jake",
-			"french": "jake",
-			"number": "1805"
+			"Rank": "1317",
+			"portuguese": "sapatos",
+			"english": "shoes"
 		},
 		{
-			"english": "www",
-			"french": "www",
-			"number": "1806"
+			"Rank": "1318",
+			"portuguese": "cuidar",
+			"english": "take care"
 		},
 		{
-			"english": "pleasant",
-			"french": "agrIable",
-			"number": "1807"
+			"Rank": "1319",
+			"portuguese": "soldado",
+			"english": "Soldier"
 		},
 		{
-			"english": "anna",
-			"french": "anna",
-			"number": "1808"
+			"Rank": "1320",
+			"portuguese": "gostei",
+			"english": "liked it"
 		},
 		{
-			"english": "prefer",
-			"french": "prIfIrI",
-			"number": "1809"
+			"Rank": "1321",
+			"portuguese": "novos",
+			"english": "new"
 		},
 		{
-			"english": "castle",
-			"french": "chIteau",
-			"number": "1810"
+			"Rank": "1322",
+			"portuguese": "come",
+			"english": "eats"
 		},
 		{
-			"english": "ball",
-			"french": "bal",
-			"number": "1811"
+			"Rank": "1323",
+			"portuguese": "segura",
+			"english": "secure"
 		},
 		{
-			"english": "ears",
-			"french": "oreilles",
-			"number": "1812"
+			"Rank": "1324",
+			"portuguese": "lembra",
+			"english": "remember"
 		},
 		{
-			"english": "discover",
-			"french": "dIcouvrir",
-			"number": "1813"
+			"Rank": "1325",
+			"portuguese": "entrada",
+			"english": "input"
 		},
 		{
-			"english": "apparently",
-			"french": "apparemment",
-			"number": "1814"
+			"Rank": "1326",
+			"portuguese": "entrou",
+			"english": "came in"
 		},
 		{
-			"english": "the bone",
-			"french": "los",
-			"number": "1815"
+			"Rank": "1327",
+			"portuguese": "arte",
+			"english": "art"
 		},
 		{
-			"english": "zero",
-			"french": "zIro",
-			"number": "1816"
+			"Rank": "1328",
+			"portuguese": "peixe",
+			"english": "fish"
 		},
 		{
-			"english": "saint",
-			"french": "saint",
-			"number": "1817"
+			"Rank": "1329",
+			"portuguese": "pense",
+			"english": "think"
 		},
 		{
-			"english": "sides",
-			"french": "cItIs",
-			"number": "1818"
+			"Rank": "1330",
+			"portuguese": "chance",
+			"english": "chance"
 		},
 		{
-			"english": "funny",
-			"french": "marrant",
-			"number": "1819"
+			"Rank": "1331",
+			"portuguese": "cheia",
+			"english": "flood"
 		},
 		{
-			"english": "includes",
-			"french": "comprend",
-			"number": "1820"
+			"Rank": "1332",
+			"portuguese": "opinião",
+			"english": "opinion"
 		},
 		{
-			"english": "can",
-			"french": "pourrez",
-			"number": "1821"
+			"Rank": "1333",
+			"portuguese": "podíamos",
+			"english": "could"
 		},
 		{
-			"english": "play",
-			"french": "joues",
-			"number": "1822"
+			"Rank": "1334",
+			"portuguese": "rabo",
+			"english": "tail"
 		},
 		{
-			"english": "living room",
-			"french": "salon",
-			"number": "1823"
+			"Rank": "1335",
+			"portuguese": "serei",
+			"english": "Will be"
 		},
 		{
-			"english": "survey",
-			"french": "lIve",
-			"number": "1824"
+			"Rank": "1336",
+			"portuguese": "senti",
+			"english": "I felt"
 		},
 		{
-			"english": "uses",
-			"french": "utilise",
-			"number": "1825"
+			"Rank": "1337",
+			"portuguese": "alta",
+			"english": "high"
 		},
 		{
-			"english": "conversation",
-			"french": "conversation",
-			"number": "1826"
+			"Rank": "1338",
+			"portuguese": "esperando",
+			"english": "waiting"
 		},
 		{
-			"english": "pilot",
-			"french": "pilote",
-			"number": "1827"
+			"Rank": "1339",
+			"portuguese": "aceitar",
+			"english": "accept"
 		},
 		{
-			"english": "iron",
-			"french": "fer",
-			"number": "1828"
+			"Rank": "1340",
+			"portuguese": "som",
+			"english": "sound"
 		},
 		{
-			"english": "wait",
-			"french": "attendent",
-			"number": "1829"
+			"Rank": "1341",
+			"portuguese": "querias",
+			"english": "wanted"
 		},
 		{
-			"english": "human",
-			"french": "humaine",
-			"number": "1830"
+			"Rank": "1342",
+			"portuguese": "ficam",
+			"english": "are"
 		},
 		{
-			"english": "pipe",
-			"french": "conduit",
-			"number": "1831"
+			"Rank": "1343",
+			"portuguese": "ficas",
+			"english": "you stay"
 		},
 		{
-			"english": "throat",
-			"french": "gorge",
-			"number": "1832"
+			"Rank": "1344",
+			"portuguese": "pega",
+			"english": "magpie"
 		},
 		{
-			"english": "victims",
-			"french": "victimes",
-			"number": "1833"
+			"Rank": "1345",
+			"portuguese": "férias",
+			"english": "vacation"
 		},
 		{
-			"english": "details",
-			"french": "dItails",
-			"number": "1834"
+			"Rank": "1346",
+			"portuguese": "esqueça",
+			"english": "forget"
 		},
 		{
-			"english": "talent",
-			"french": "talent",
-			"number": "1835"
+			"Rank": "1347",
+			"portuguese": "exatamente",
+			"english": "exactly"
 		},
 		{
-			"english": "past",
-			"french": "passIe",
-			"number": "1836"
+			"Rank": "1348",
+			"portuguese": "precisava",
+			"english": "needed"
 		},
 		{
-			"english": "sexy",
-			"french": "sexy",
-			"number": "1837"
+			"Rank": "1349",
+			"portuguese": "cabrão",
+			"english": "bastard"
 		},
 		{
-			"english": "iui",
-			"french": "iui",
-			"number": "1838"
+			"Rank": "1350",
+			"portuguese": "nela",
+			"english": "it"
 		},
 		{
-			"english": "maria",
-			"french": "maria",
-			"number": "1839"
+			"Rank": "1351",
+			"portuguese": "animal",
+			"english": "animal"
 		},
 		{
-			"english": "private",
-			"french": "privI",
-			"number": "1840"
+			"Rank": "1352",
+			"portuguese": "pediu",
+			"english": "asked"
 		},
 		{
-			"english": "to bring",
-			"french": "apporter",
-			"number": "1841"
+			"Rank": "1353",
+			"portuguese": "planos",
+			"english": "plans"
 		},
 		{
-			"english": "killed",
-			"french": "tuIe",
-			"number": "1842"
+			"Rank": "1354",
+			"portuguese": "sarah",
+			"english": "sarah"
 		},
 		{
-			"english": "violence",
-			"french": "violence",
-			"number": "1843"
+			"Rank": "1355",
+			"portuguese": "cheiro",
+			"english": "smell"
 		},
 		{
-			"english": "shalt",
-			"french": "feras",
-			"number": "1844"
+			"Rank": "1356",
+			"portuguese": "herói",
+			"english": "hero"
 		},
 		{
-			"english": "nervous",
-			"french": "nerveux",
-			"number": "1845"
+			"Rank": "1357",
+			"portuguese": "acontecendo",
+			"english": "going"
 		},
 		{
-			"english": "airport",
-			"french": "aIroport",
-			"number": "1846"
+			"Rank": "1358",
+			"portuguese": "funcionar",
+			"english": "function"
 		},
 		{
-			"english": "direct",
-			"french": "direct",
-			"number": "1847"
+			"Rank": "1359",
+			"portuguese": "passei",
+			"english": "I spent"
 		},
 		{
-			"english": "cocksucker",
-			"french": "enculI",
-			"number": "1848"
+			"Rank": "1360",
+			"portuguese": "código",
+			"english": "code"
 		},
 		{
-			"english": "court",
-			"french": "tribunal",
-			"number": "1849"
+			"Rank": "1361",
+			"portuguese": "perna",
+			"english": "leg"
 		},
 		{
-			"english": "order",
-			"french": "commande",
-			"number": "1850"
+			"Rank": "1362",
+			"portuguese": "londres",
+			"english": "London"
 		},
 		{
-			"english": "in",
-			"french": "in",
-			"number": "1851"
+			"Rank": "1363",
+			"portuguese": "drogas",
+			"english": "drugs"
 		},
 		{
-			"english": "throws",
-			"french": "jette",
-			"number": "1852"
+			"Rank": "1364",
+			"portuguese": "queira",
+			"english": "want"
 		},
 		{
-			"english": "package",
-			"french": "paquet",
-			"number": "1853"
+			"Rank": "1365",
+			"portuguese": "unidos",
+			"english": "United"
 		},
 		{
-			"english": "smoke",
-			"french": "fumer",
-			"number": "1854"
+			"Rank": "1366",
+			"portuguese": "lugares",
+			"english": "places"
 		},
 		{
-			"english": "easy",
-			"french": "aise",
-			"number": "1855"
+			"Rank": "1367",
+			"portuguese": "perdão",
+			"english": "pardon"
 		},
 		{
-			"english": "gods",
-			"french": "dieux",
-			"number": "1856"
+			"Rank": "1368",
+			"portuguese": "vossas",
+			"english": "yours"
 		},
 		{
-			"english": "hassle",
-			"french": "emmerde",
-			"number": "1857"
+			"Rank": "1369",
+			"portuguese": "estiveste",
+			"english": "you were"
 		},
 		{
-			"english": "join",
-			"french": "joindre",
-			"number": "1858"
+			"Rank": "1370",
+			"portuguese": "dentes",
+			"english": "teeth"
 		},
 		{
-			"english": "spear",
-			"french": "lance",
-			"number": "1859"
+			"Rank": "1371",
+			"portuguese": "t",
+			"english": "t"
 		},
 		{
-			"english": "factory",
-			"french": "usine",
-			"number": "1860"
+			"Rank": "1372",
+			"portuguese": "contacto",
+			"english": "contact"
 		},
 		{
-			"english": "defend",
-			"french": "dIfendre",
-			"number": "1861"
+			"Rank": "1373",
+			"portuguese": "viram",
+			"english": "saw"
 		},
 		{
-			"english": "will",
-			"french": "will",
-			"number": "1862"
+			"Rank": "1374",
+			"portuguese": "ideias",
+			"english": "ideas"
 		},
 		{
-			"english": "R",
-			"french": "",
-			"number": "1863"
+			"Rank": "1375",
+			"portuguese": "espectáculo",
+			"english": "show"
 		},
 		{
-			"english": "forest",
-			"french": "forIt",
-			"number": "1864"
+			"Rank": "1376",
+			"portuguese": "yeah",
+			"english": "yeah"
 		},
 		{
-			"english": "champion",
-			"french": "champion",
-			"number": "1865"
+			"Rank": "1377",
+			"portuguese": "novas",
+			"english": "new"
 		},
 		{
-			"english": "horror",
-			"french": "horreur",
-			"number": "1866"
+			"Rank": "1378",
+			"portuguese": "provar",
+			"english": "prove"
 		},
 		{
-			"english": "important",
-			"french": "importante",
-			"number": "1867"
+			"Rank": "1379",
+			"portuguese": "nariz",
+			"english": "nose"
 		},
 		{
-			"english": "lyrics",
-			"french": "paroles",
-			"number": "1868"
+			"Rank": "1380",
+			"portuguese": "vergonha",
+			"english": "shame"
 		},
 		{
-			"english": "test",
-			"french": "test",
-			"number": "1869"
+			"Rank": "1381",
+			"portuguese": "criar",
+			"english": "create"
 		},
 		{
-			"english": "henceforth",
-			"french": "dIsormais",
-			"number": "1870"
+			"Rank": "1382",
+			"portuguese": "chaves",
+			"english": "keys"
 		},
 		{
-			"english": "very",
-			"french": "tres",
-			"number": "1871"
+			"Rank": "1383",
+			"portuguese": "estados",
+			"english": "States"
 		},
 		{
-			"english": "latest",
-			"french": "derniIres",
-			"number": "1872"
+			"Rank": "1384",
+			"portuguese": "estrelas",
+			"english": "stars"
 		},
 		{
-			"english": "fall",
-			"french": "tombIe",
-			"number": "1873"
+			"Rank": "1385",
+			"portuguese": "louca",
+			"english": "crazy"
 		},
 		{
-			"english": "chris",
-			"french": "chris",
-			"number": "1874"
+			"Rank": "1386",
+			"portuguese": "fará",
+			"english": "will make"
 		},
 		{
-			"english": "outside",
-			"french": "extIrieur",
-			"number": "1875"
+			"Rank": "1387",
+			"portuguese": "natureza",
+			"english": "nature"
 		},
 		{
-			"english": "desert",
-			"french": "dIsert",
-			"number": "1876"
+			"Rank": "1388",
+			"portuguese": "vens",
+			"english": "come"
 		},
 		{
-			"english": "walter",
-			"french": "walter",
-			"number": "1877"
+			"Rank": "1389",
+			"portuguese": "cliente",
+			"english": "client"
 		},
 		{
-			"english": "larry",
-			"french": "larry",
-			"number": "1878"
+			"Rank": "1390",
+			"portuguese": "ocupado",
+			"english": "busy"
 		},
 		{
-			"english": "chopped off",
-			"french": "coupI",
-			"number": "1879"
+			"Rank": "1391",
+			"portuguese": "iorque",
+			"english": "york"
 		},
 		{
-			"english": "clever",
-			"french": "intelligent",
-			"number": "1880"
+			"Rank": "1392",
+			"portuguese": "jovens",
+			"english": "young"
 		},
 		{
-			"english": "help",
-			"french": "aidI",
-			"number": "1881"
+			"Rank": "1393",
+			"portuguese": "começo",
+			"english": "beginning"
 		},
 		{
-			"english": "hum",
-			"french": "hum",
-			"number": "1882"
+			"Rank": "1394",
+			"portuguese": "estação",
+			"english": "season"
 		},
 		{
-			"english": "will",
-			"french": "saura",
-			"number": "1883"
+			"Rank": "1395",
+			"portuguese": "vendo",
+			"english": "seeing"
 		},
 		{
-			"english": "tell",
-			"french": "dira",
-			"number": "1884"
+			"Rank": "1396",
+			"portuguese": "preto",
+			"english": "black"
 		},
 		{
-			"english": "job",
-			"french": "job",
-			"number": "1885"
+			"Rank": "1397",
+			"portuguese": "preocupado",
+			"english": "worried"
 		},
 		{
-			"english": "will pass",
-			"french": "passera",
-			"number": "1886"
+			"Rank": "1398",
+			"portuguese": "dum",
+			"english": "dum"
 		},
 		{
-			"english": "accounts",
-			"french": "comptes",
-			"number": "1887"
+			"Rank": "1399",
+			"portuguese": "mudou",
+			"english": "changed"
 		},
 		{
-			"english": "fashion",
-			"french": "mode",
-			"number": "1888"
+			"Rank": "1400",
+			"portuguese": "liga",
+			"english": "turns on"
 		},
 		{
-			"english": "speaking",
-			"french": "parlais",
-			"number": "1889"
+			"Rank": "1401",
+			"portuguese": "caras",
+			"english": "faces"
 		},
 		{
-			"english": "guests",
-			"french": "invitIs",
-			"number": "1890"
+			"Rank": "1402",
+			"portuguese": "copo",
+			"english": "cup"
 		},
 		{
-			"english": "series",
-			"french": "sIrie",
-			"number": "1891"
+			"Rank": "1403",
+			"portuguese": "cor",
+			"english": "color"
 		},
 		{
-			"english": "udder",
-			"french": "pis",
-			"number": "1892"
+			"Rank": "1404",
+			"portuguese": "tamanho",
+			"english": "size"
 		},
 		{
-			"english": "wise",
-			"french": "sage",
-			"number": "1893"
+			"Rank": "1405",
+			"portuguese": "cu",
+			"english": "ass"
 		},
 		{
-			"english": "remember",
-			"french": "rappelles",
-			"number": "1894"
+			"Rank": "1406",
+			"portuguese": "caiu",
+			"english": "dropped down"
 		},
 		{
-			"english": "concerned",
-			"french": "concerne",
-			"number": "1895"
+			"Rank": "1407",
+			"portuguese": "princesa",
+			"english": "princess"
 		},
 		{
-			"english": "married",
-			"french": "mariIs",
-			"number": "1896"
+			"Rank": "1408",
+			"portuguese": "pedra",
+			"english": "stone"
 		},
 		{
-			"english": "grown up",
-			"french": "grandi",
-			"number": "1897"
+			"Rank": "1409",
+			"portuguese": "eddie",
+			"english": "eddie"
 		},
 		{
-			"english": "shoot",
-			"french": "pousse",
-			"number": "1898"
+			"Rank": "1410",
+			"portuguese": "fbi",
+			"english": "fbi"
 		},
 		{
-			"english": "cow",
-			"french": "vache",
-			"number": "1899"
+			"Rank": "1411",
+			"portuguese": "corrida",
+			"english": "running"
 		},
 		{
-			"english": "accepted",
-			"french": "acceptI",
-			"number": "1900"
+			"Rank": "1412",
+			"portuguese": "nomes",
+			"english": "names"
 		},
 		{
-			"english": "even",
-			"french": "meme",
-			"number": "1901"
+			"Rank": "1413",
+			"portuguese": "fé",
+			"english": "faith"
 		},
 		{
-			"english": "thought",
-			"french": "pensait",
-			"number": "1902"
+			"Rank": "1414",
+			"portuguese": "branca",
+			"english": "white"
 		},
 		{
-			"english": "rest",
-			"french": "repos",
-			"number": "1903"
+			"Rank": "1415",
+			"portuguese": "escute",
+			"english": "Listen"
 		},
 		{
-			"english": "computer",
-			"french": "ordinateur",
-			"number": "1904"
+			"Rank": "1416",
+			"portuguese": "monstro",
+			"english": "monster"
 		},
 		{
-			"english": "rock",
-			"french": "rock",
-			"number": "1905"
+			"Rank": "1417",
+			"portuguese": "bobby",
+			"english": "bobby"
 		},
 		{
-			"english": "Hello",
-			"french": "allo",
-			"number": "1906"
+			"Rank": "1418",
+			"portuguese": "época",
+			"english": "time"
 		},
 		{
-			"english": "smith",
-			"french": "smith",
-			"number": "1907"
+			"Rank": "1419",
+			"portuguese": "brilhante",
+			"english": "bright"
 		},
 		{
-			"english": "shadow",
-			"french": "ombre",
-			"number": "1908"
+			"Rank": "1420",
+			"portuguese": "ficará",
+			"english": "will"
 		},
 		{
-			"english": "it",
-			"french": "it",
-			"number": "1909"
+			"Rank": "1421",
+			"portuguese": "terei",
+			"english": "I will"
 		},
 		{
-			"english": "Russian",
-			"french": "russe",
-			"number": "1910"
+			"Rank": "1422",
+			"portuguese": "direcção",
+			"english": "direction"
 		},
 		{
-			"english": "midnight",
-			"french": "minuit",
-			"number": "1911"
+			"Rank": "1423",
+			"portuguese": "daquele",
+			"english": "that"
 		},
 		{
-			"english": "stolen",
-			"french": "vole",
-			"number": "1912"
+			"Rank": "1424",
+			"portuguese": "vento",
+			"english": "wind"
 		},
 		{
-			"english": "amusing",
-			"french": "amusant",
-			"number": "1913"
+			"Rank": "1425",
+			"portuguese": "dou",
+			"english": "I give"
 		},
 		{
-			"english": "members",
-			"french": "membres",
-			"number": "1914"
+			"Rank": "1426",
+			"portuguese": "haverá",
+			"english": "there will be"
 		},
 		{
-			"english": "jane",
-			"french": "jane",
-			"number": "1915"
+			"Rank": "1427",
+			"portuguese": "casaco",
+			"english": "coat"
 		},
 		{
-			"english": "means",
-			"french": "moyens",
-			"number": "1916"
+			"Rank": "1428",
+			"portuguese": "chamas",
+			"english": "flames"
 		},
 		{
-			"english": "surprised",
-			"french": "surpris",
-			"number": "1917"
+			"Rank": "1429",
+			"portuguese": "início",
+			"english": "start"
 		},
 		{
-			"english": "opened",
-			"french": "ouverte",
-			"number": "1918"
+			"Rank": "1430",
+			"portuguese": "cansado",
+			"english": "tired out"
 		},
 		{
-			"english": "numerous",
-			"french": "nombreux",
-			"number": "1919"
+			"Rank": "1431",
+			"portuguese": "mala",
+			"english": "suitcase"
 		},
 		{
-			"english": "also",
-			"french": "Igalement",
-			"number": "1920"
+			"Rank": "1432",
+			"portuguese": "tiveste",
+			"english": "you had"
 		},
 		{
-			"english": "imagine",
-			"french": "imaginer",
-			"number": "1921"
+			"Rank": "1433",
+			"portuguese": "árvore",
+			"english": "tree"
 		},
 		{
-			"english": "slim",
-			"french": "mince",
-			"number": "1922"
+			"Rank": "1434",
+			"portuguese": "mentira",
+			"english": "lie"
 		},
 		{
-			"english": "slept",
-			"french": "dormi",
-			"number": "1923"
+			"Rank": "1435",
+			"portuguese": "batalha",
+			"english": "battle"
 		},
 		{
-			"english": "page",
-			"french": "page",
-			"number": "1924"
+			"Rank": "1436",
+			"portuguese": "continue",
+			"english": "continues"
 		},
 		{
-			"english": "gasoline",
-			"french": "essence",
-			"number": "1925"
+			"Rank": "1437",
+			"portuguese": "pegue",
+			"english": "take it"
 		},
 		{
-			"english": "mayor",
-			"french": "maire",
-			"number": "1926"
+			"Rank": "1438",
+			"portuguese": "jake",
+			"english": "jake"
 		},
 		{
-			"english": "making",
-			"french": "faisant",
-			"number": "1927"
+			"Rank": "1439",
+			"portuguese": "esperava",
+			"english": "expected"
 		},
 		{
-			"english": "Monday",
-			"french": "lundi",
-			"number": "1928"
+			"Rank": "1440",
+			"portuguese": "serve",
+			"english": "serves"
 		},
 		{
-			"english": "enter",
-			"french": "entrI",
-			"number": "1929"
+			"Rank": "1441",
+			"portuguese": "rico",
+			"english": "rich"
 		},
 		{
-			"english": "ticket",
-			"french": "billet",
-			"number": "1930"
+			"Rank": "1442",
+			"portuguese": "charles",
+			"english": "charles"
 		},
 		{
-			"english": "engine",
-			"french": "moteur",
-			"number": "1931"
+			"Rank": "1443",
+			"portuguese": "dado",
+			"english": "given away"
 		},
 		{
-			"english": "to repair",
-			"french": "rIparer",
-			"number": "1932"
+			"Rank": "1444",
+			"portuguese": "maria",
+			"english": "Maria"
 		},
 		{
-			"english": "frankly",
-			"french": "franchement",
-			"number": "1933"
+			"Rank": "1445",
+			"portuguese": "eua",
+			"english": "USA"
 		},
 		{
-			"english": "hidden",
-			"french": "cachI",
-			"number": "1934"
+			"Rank": "1446",
+			"portuguese": "verdadeira",
+			"english": "real"
 		},
 		{
-			"english": "cigarette",
-			"french": "cigarette",
-			"number": "1935"
+			"Rank": "1447",
+			"portuguese": "cheguei",
+			"english": "I arrived"
 		},
 		{
-			"english": "al",
-			"french": "al",
-			"number": "1936"
+			"Rank": "1448",
+			"portuguese": "costumava",
+			"english": "I used to"
 		},
 		{
-			"english": "rich",
-			"french": "riches",
-			"number": "1937"
+			"Rank": "1449",
+			"portuguese": "majestade",
+			"english": "majesty"
 		},
 		{
-			"english": "share",
-			"french": "partager",
-			"number": "1938"
+			"Rank": "1450",
+			"portuguese": "tente",
+			"english": "try"
 		},
 		{
-			"english": "power",
-			"french": "puissance",
-			"number": "1939"
+			"Rank": "1451",
+			"portuguese": "ido",
+			"english": "gone"
 		},
 		{
-			"english": "found",
-			"french": "trouvIe",
-			"number": "1940"
+			"Rank": "1452",
+			"portuguese": "sucesso",
+			"english": "success"
 		},
 		{
-			"english": "perfect",
-			"french": "parfaite",
-			"number": "1941"
+			"Rank": "1453",
+			"portuguese": "céus",
+			"english": "heaven"
 		},
 		{
-			"english": "winter",
-			"french": "hiver",
-			"number": "1942"
+			"Rank": "1454",
+			"portuguese": "pedido",
+			"english": "order"
 		},
 		{
-			"english": "sword",
-			"french": "IpIe",
-			"number": "1943"
+			"Rank": "1455",
+			"portuguese": "alvo",
+			"english": "target"
 		},
 		{
-			"english": "of",
-			"french": "of",
-			"number": "1944"
+			"Rank": "1456",
+			"portuguese": "rosto",
+			"english": "face"
 		},
 		{
-			"english": "will come back",
-			"french": "reviendra",
-			"number": "1945"
+			"Rank": "1457",
+			"portuguese": "termos",
+			"english": "terms"
 		},
 		{
-			"english": "high",
-			"french": "haute",
-			"number": "1946"
+			"Rank": "1458",
+			"portuguese": "classe",
+			"english": "class"
 		},
 		{
-			"english": "breath",
-			"french": "souffle",
-			"number": "1947"
+			"Rank": "1459",
+			"portuguese": "cães",
+			"english": "dogs"
 		},
 		{
-			"english": "attempted",
-			"french": "tente",
-			"number": "1948"
+			"Rank": "1460",
+			"portuguese": "velocidade",
+			"english": "speed"
 		},
 		{
-			"english": "twenty",
-			"french": "vingt",
-			"number": "1949"
+			"Rank": "1461",
+			"portuguese": "saudades",
+			"english": "miss you"
 		},
 		{
-			"english": "miracle",
-			"french": "miracle",
-			"number": "1950"
+			"Rank": "1462",
+			"portuguese": "forças",
+			"english": "forces"
 		},
 		{
-			"english": "trees",
-			"french": "arbres",
-			"number": "1951"
+			"Rank": "1463",
+			"portuguese": "santo",
+			"english": "Holy"
 		},
 		{
-			"english": "appreciate",
-			"french": "apprIcie",
-			"number": "1952"
+			"Rank": "1464",
+			"portuguese": "canção",
+			"english": "song"
 		},
 		{
-			"english": "felt",
-			"french": "senti",
-			"number": "1953"
+			"Rank": "1465",
+			"portuguese": "io",
+			"english": "io"
 		},
 		{
-			"english": "miss",
-			"french": "manquer",
-			"number": "1954"
+			"Rank": "1466",
+			"portuguese": "calças",
+			"english": "pants"
 		},
 		{
-			"english": "artist",
-			"french": "artiste",
-			"number": "1955"
+			"Rank": "1467",
+			"portuguese": "cabra",
+			"english": "goat"
 		},
 		{
-			"english": "create",
-			"french": "crIer",
-			"number": "1956"
+			"Rank": "1468",
+			"portuguese": "pensam",
+			"english": "think"
 		},
 		{
-			"english": "lake",
-			"french": "lac",
-			"number": "1957"
+			"Rank": "1469",
+			"portuguese": "departamento",
+			"english": "Department"
 		},
 		{
-			"english": "thrown",
-			"french": "jetI",
-			"number": "1958"
+			"Rank": "1470",
+			"portuguese": "maldita",
+			"english": "accursed"
 		},
 		{
-			"english": "memories",
-			"french": "souvenirs",
-			"number": "1959"
+			"Rank": "1471",
+			"portuguese": "limpar",
+			"english": "to clean"
 		},
 		{
-			"english": "sleep",
-			"french": "sommeil",
-			"number": "1960"
+			"Rank": "1472",
+			"portuguese": "cartão",
+			"english": "card"
 		},
 		{
-			"english": "real",
-			"french": "vrais",
-			"number": "1961"
+			"Rank": "1473",
+			"portuguese": "relatório",
+			"english": "report"
 		},
 		{
-			"english": "wake",
-			"french": "rIveiller",
-			"number": "1962"
+			"Rank": "1474",
+			"portuguese": "navio",
+			"english": "ship"
 		},
 		{
-			"english": "lesson",
-			"french": "leIon",
-			"number": "1963"
+			"Rank": "1475",
+			"portuguese": "velhos",
+			"english": "old"
 		},
 		{
-			"english": "break",
-			"french": "casser",
-			"number": "1964"
+			"Rank": "1476",
+			"portuguese": "barulho",
+			"english": "noise"
 		},
 		{
-			"english": "racing",
-			"french": "courses",
-			"number": "1965"
+			"Rank": "1477",
+			"portuguese": "flores",
+			"english": "flowers"
 		},
 		{
-			"english": "shirt",
-			"french": "chemise",
-			"number": "1966"
+			"Rank": "1478",
+			"portuguese": "ê",
+			"english": "and"
 		},
 		{
-			"english": "ghost",
-			"french": "fantIme",
-			"number": "1967"
+			"Rank": "1479",
+			"portuguese": "steve",
+			"english": "steve"
 		},
 		{
-			"english": "member",
-			"french": "membre",
-			"number": "1968"
+			"Rank": "1480",
+			"portuguese": "detective",
+			"english": "detective"
 		},
 		{
-			"english": "skip",
-			"french": "passez",
-			"number": "1969"
+			"Rank": "1481",
+			"portuguese": "visita",
+			"english": "visit"
 		},
 		{
-			"english": "actor",
-			"french": "acteur",
-			"number": "1970"
+			"Rank": "1482",
+			"portuguese": "lidar",
+			"english": "to deal"
 		},
 		{
-			"english": "beaten",
-			"french": "battu",
-			"number": "1971"
+			"Rank": "1483",
+			"portuguese": "atrasado",
+			"english": "late"
 		},
 		{
-			"english": "Park",
-			"french": "parc",
-			"number": "1972"
+			"Rank": "1484",
+			"portuguese": "pedi",
+			"english": "I asked"
 		},
 		{
-			"english": "flesh",
-			"french": "chair",
-			"number": "1973"
+			"Rank": "1485",
+			"portuguese": "gato",
+			"english": "cat"
 		},
 		{
-			"english": "angeles",
-			"french": "angeles",
-			"number": "1974"
+			"Rank": "1486",
+			"portuguese": "emergência",
+			"english": "emergency"
 		},
 		{
-			"english": "services",
-			"french": "services",
-			"number": "1975"
+			"Rank": "1487",
+			"portuguese": "disparar",
+			"english": "shoot"
 		},
 		{
-			"english": "streets",
-			"french": "rues",
-			"number": "1976"
+			"Rank": "1488",
+			"portuguese": "parede",
+			"english": "wall"
 		},
 		{
-			"english": "in use",
-			"french": "utilisI",
-			"number": "1977"
+			"Rank": "1489",
+			"portuguese": "operação",
+			"english": "operation"
 		},
 		{
-			"english": "step back",
-			"french": "reculez",
-			"number": "1978"
+			"Rank": "1490",
+			"portuguese": "jamais",
+			"english": "never"
 		},
 		{
-			"english": "Japanese",
-			"french": "japonais",
-			"number": "1979"
+			"Rank": "1491",
+			"portuguese": "tornar",
+			"english": "become"
 		},
 		{
-			"english": "lie",
-			"french": "mentir",
-			"number": "1980"
+			"Rank": "1492",
+			"portuguese": "longa",
+			"english": "long"
 		},
 		{
-			"english": "come back",
-			"french": "rentrez",
-			"number": "1981"
+			"Rank": "1493",
+			"portuguese": "sir",
+			"english": "Sir"
 		},
 		{
-			"english": "Plans",
-			"french": "plans",
-			"number": "1982"
+			"Rank": "1494",
+			"portuguese": "milhares",
+			"english": "thousands"
 		},
 		{
-			"english": "cost",
-			"french": "coIEte",
-			"number": "1983"
+			"Rank": "1495",
+			"portuguese": "cavalheiros",
+			"english": "gentlemen"
 		},
 		{
-			"english": "Champagne",
-			"french": "champagne",
-			"number": "1984"
+			"Rank": "1496",
+			"portuguese": "absolutamente",
+			"english": "absolutely"
 		},
 		{
-			"english": "No.",
-			"french": "no",
-			"number": "1985"
+			"Rank": "1497",
+			"portuguese": "sentes",
+			"english": "feel"
 		},
 		{
-			"english": "American",
-			"french": "amIricaine",
-			"number": "1986"
+			"Rank": "1498",
+			"portuguese": "lsso",
+			"english": "That"
 		},
 		{
-			"english": "risks",
-			"french": "risques",
-			"number": "1987"
+			"Rank": "1499",
+			"portuguese": "gostam",
+			"english": "like"
 		},
 		{
-			"english": "pete",
-			"french": "pete",
-			"number": "1988"
+			"Rank": "1500",
+			"portuguese": "vimos",
+			"english": "saw"
 		},
 		{
-			"english": "Free",
-			"french": "offert",
-			"number": "1989"
+			"Rank": "1501",
+			"portuguese": "destruir",
+			"english": "to destroy"
 		},
 		{
-			"english": "show",
-			"french": "semblant",
-			"number": "1990"
+			"Rank": "1502",
+			"portuguese": "tommy",
+			"english": "tommy"
 		},
 		{
-			"english": "ad",
-			"french": "annonce",
-			"number": "1991"
+			"Rank": "1503",
+			"portuguese": "beijo",
+			"english": "kiss"
 		},
 		{
-			"english": "exchange",
-			"french": "Ichange",
-			"number": "1992"
+			"Rank": "1504",
+			"portuguese": "risco",
+			"english": "risk"
 		},
 		{
-			"english": "paid",
-			"french": "paye",
-			"number": "1993"
+			"Rank": "1505",
+			"portuguese": "preparado",
+			"english": "prepared"
 		},
 		{
-			"english": "first",
-			"french": "premiers",
-			"number": "1994"
+			"Rank": "1506",
+			"portuguese": "seres",
+			"english": "beings"
 		},
 		{
-			"english": "get rid of",
-			"french": "dIbarrasser",
-			"number": "1995"
+			"Rank": "1507",
+			"portuguese": "ha",
+			"english": "there is"
 		},
 		{
-			"english": "to run away",
-			"french": "fuir",
-			"number": "1996"
+			"Rank": "1508",
+			"portuguese": "comum",
+			"english": "common"
 		},
 		{
-			"english": "louis",
-			"french": "louis",
-			"number": "1997"
+			"Rank": "1509",
+			"portuguese": "computador",
+			"english": "computer"
 		},
 		{
-			"english": "beseech",
-			"french": "supplie",
-			"number": "1998"
+			"Rank": "1510",
+			"portuguese": "cavalos",
+			"english": "horses"
 		},
 		{
-			"english": "jumped up",
-			"french": "saute",
-			"number": "1999"
+			"Rank": "1511",
+			"portuguese": "falamos",
+			"english": "we speak"
 		},
 		{
-			"english": "sign",
-			"french": "signer",
-			"number": "2000"
+			"Rank": "1512",
+			"portuguese": "restaurante",
+			"english": "restaurant"
+		},
+		{
+			"Rank": "1513",
+			"portuguese": "cinema",
+			"english": "movie theater"
+		},
+		{
+			"Rank": "1514",
+			"portuguese": "prefiro",
+			"english": "I prefer"
+		},
+		{
+			"Rank": "1515",
+			"portuguese": "responsável",
+			"english": "responsible"
+		},
+		{
+			"Rank": "1516",
+			"portuguese": "vinte",
+			"english": "twenty"
+		},
+		{
+			"Rank": "1517",
+			"portuguese": "jornal",
+			"english": "newspaper"
+		},
+		{
+			"Rank": "1518",
+			"portuguese": "li",
+			"english": "I read"
+		},
+		{
+			"Rank": "1519",
+			"portuguese": "descer",
+			"english": "come down"
+		},
+		{
+			"Rank": "1520",
+			"portuguese": "esperto",
+			"english": "clever"
+		},
+		{
+			"Rank": "1521",
+			"portuguese": "esconder",
+			"english": "to hide"
+		},
+		{
+			"Rank": "1522",
+			"portuguese": "daquela",
+			"english": "that"
+		},
+		{
+			"Rank": "1523",
+			"portuguese": "somente",
+			"english": "only"
+		},
+		{
+			"Rank": "1524",
+			"portuguese": "movimento",
+			"english": "movement"
+		},
+		{
+			"Rank": "1525",
+			"portuguese": "caro",
+			"english": "expensive"
+		},
+		{
+			"Rank": "1526",
+			"portuguese": "pista",
+			"english": "track"
+		},
+		{
+			"Rank": "1527",
+			"portuguese": "porco",
+			"english": "pig"
+		},
+		{
+			"Rank": "1528",
+			"portuguese": "doido",
+			"english": "crazy"
+		},
+		{
+			"Rank": "1529",
+			"portuguese": "rir",
+			"english": "laugh"
+		},
+		{
+			"Rank": "1530",
+			"portuguese": "praia",
+			"english": "beach"
+		},
+		{
+			"Rank": "1531",
+			"portuguese": "estilo",
+			"english": "style"
+		},
+		{
+			"Rank": "1532",
+			"portuguese": "acção",
+			"english": "action"
+		},
+		{
+			"Rank": "1533",
+			"portuguese": "ajude",
+			"english": "help"
+		},
+		{
+			"Rank": "1534",
+			"portuguese": "cortar",
+			"english": "cut"
+		},
+		{
+			"Rank": "1535",
+			"portuguese": "escolher",
+			"english": "to choose"
+		},
+		{
+			"Rank": "1536",
+			"portuguese": "richard",
+			"english": "richard"
+		},
+		{
+			"Rank": "1537",
+			"portuguese": "eie",
+			"english": "eie"
+		},
+		{
+			"Rank": "1538",
+			"portuguese": "maldição",
+			"english": "curse"
+		},
+		{
+			"Rank": "1539",
+			"portuguese": "vieram",
+			"english": "they came"
+		},
+		{
+			"Rank": "1540",
+			"portuguese": "imaginar",
+			"english": "to imagine"
+		},
+		{
+			"Rank": "1541",
+			"portuguese": "irão",
+			"english": "will"
+		},
+		{
+			"Rank": "1542",
+			"portuguese": "luzes",
+			"english": "lights"
+		},
+		{
+			"Rank": "1543",
+			"portuguese": "histórias",
+			"english": "stories"
+		},
+		{
+			"Rank": "1544",
+			"portuguese": "abra",
+			"english": "open it"
+		},
+		{
+			"Rank": "1545",
+			"portuguese": "língua",
+			"english": "language"
+		},
+		{
+			"Rank": "1546",
+			"portuguese": "distância",
+			"english": "distance"
+		},
+		{
+			"Rank": "1547",
+			"portuguese": "fechar",
+			"english": "close"
+		},
+		{
+			"Rank": "1548",
+			"portuguese": "evitar",
+			"english": "avoid"
+		},
+		{
+			"Rank": "1549",
+			"portuguese": "príncipe",
+			"english": "Prince"
+		},
+		{
+			"Rank": "1550",
+			"portuguese": "total",
+			"english": "total"
+		},
+		{
+			"Rank": "1551",
+			"portuguese": "errada",
+			"english": "wrong"
+		},
+		{
+			"Rank": "1552",
+			"portuguese": "conhecido",
+			"english": "known"
+		},
+		{
+			"Rank": "1553",
+			"portuguese": "toque",
+			"english": "Touch"
+		},
+		{
+			"Rank": "1554",
+			"portuguese": "discutir",
+			"english": "to discuss"
+		},
+		{
+			"Rank": "1555",
+			"portuguese": "juiz",
+			"english": "judge"
+		},
+		{
+			"Rank": "1556",
+			"portuguese": "ias",
+			"english": "ias"
+		},
+		{
+			"Rank": "1557",
+			"portuguese": "pressão",
+			"english": "pressure"
+		},
+		{
+			"Rank": "1558",
+			"portuguese": "informações",
+			"english": "information"
+		},
+		{
+			"Rank": "1559",
+			"portuguese": "especialmente",
+			"english": "especially"
+		},
+		{
+			"Rank": "1560",
+			"portuguese": "estranha",
+			"english": "strange"
+		},
+		{
+			"Rank": "1561",
+			"portuguese": "cadeia",
+			"english": "jail"
+		},
+		{
+			"Rank": "1562",
+			"portuguese": "banda",
+			"english": "band"
+		},
+		{
+			"Rank": "1563",
+			"portuguese": "devido",
+			"english": "due"
+		},
+		{
+			"Rank": "1564",
+			"portuguese": "justiça",
+			"english": "justice"
+		},
+		{
+			"Rank": "1565",
+			"portuguese": "verde",
+			"english": "green"
+		},
+		{
+			"Rank": "1566",
+			"portuguese": "puder",
+			"english": "can"
+		},
+		{
+			"Rank": "1567",
+			"portuguese": "quieto",
+			"english": "quiet"
+		},
+		{
+			"Rank": "1568",
+			"portuguese": "milhão",
+			"english": "million"
+		},
+		{
+			"Rank": "1569",
+			"portuguese": "duma",
+			"english": "of"
+		},
+		{
+			"Rank": "1570",
+			"portuguese": "pescoço",
+			"english": "neck"
+		},
+		{
+			"Rank": "1571",
+			"portuguese": "eh",
+			"english": "Eh"
+		},
+		{
+			"Rank": "1572",
+			"portuguese": "tony",
+			"english": "tony"
+		},
+		{
+			"Rank": "1573",
+			"portuguese": "mandou",
+			"english": "sent"
+		},
+		{
+			"Rank": "1574",
+			"portuguese": "imagem",
+			"english": "image"
+		},
+		{
+			"Rank": "1575",
+			"portuguese": "conhecemos",
+			"english": "We know"
+		},
+		{
+			"Rank": "1576",
+			"portuguese": "memória",
+			"english": "memory"
+		},
+		{
+			"Rank": "1577",
+			"portuguese": "ponte",
+			"english": "bridge"
+		},
+		{
+			"Rank": "1578",
+			"portuguese": "p",
+			"english": "P"
+		},
+		{
+			"Rank": "1579",
+			"portuguese": "máximo",
+			"english": "maximum"
+		},
+		{
+			"Rank": "1580",
+			"portuguese": "meninos",
+			"english": "boys"
+		},
+		{
+			"Rank": "1581",
+			"portuguese": "futebol",
+			"english": "soccer"
+		},
+		{
+			"Rank": "1582",
+			"portuguese": "responder",
+			"english": "answer"
+		},
+		{
+			"Rank": "1583",
+			"portuguese": "desculpas",
+			"english": "apologies"
+		},
+		{
+			"Rank": "1584",
+			"portuguese": "braços",
+			"english": "arms"
+		},
+		{
+			"Rank": "1585",
+			"portuguese": "deixes",
+			"english": "leave"
+		},
+		{
+			"Rank": "1586",
+			"portuguese": "agradável",
+			"english": "nice"
+		},
+		{
+			"Rank": "1587",
+			"portuguese": "porreiro",
+			"english": "cool"
+		},
+		{
+			"Rank": "1588",
+			"portuguese": "manda",
+			"english": "sends"
+		},
+		{
+			"Rank": "1589",
+			"portuguese": "j",
+			"english": "j"
+		},
+		{
+			"Rank": "1590",
+			"portuguese": "ligação",
+			"english": "link"
+		},
+		{
+			"Rank": "1591",
+			"portuguese": "tchau",
+			"english": "bye"
+		},
+		{
+			"Rank": "1592",
+			"portuguese": "oeste",
+			"english": "west"
+		},
+		{
+			"Rank": "1593",
+			"portuguese": "venho",
+			"english": "I come"
+		},
+		{
+			"Rank": "1594",
+			"portuguese": "alô",
+			"english": "Hello"
+		},
+		{
+			"Rank": "1595",
+			"portuguese": "ó",
+			"english": "O"
+		},
+		{
+			"Rank": "1596",
+			"portuguese": "pago",
+			"english": "paid out"
+		},
+		{
+			"Rank": "1597",
+			"portuguese": "nervoso",
+			"english": "nervous"
+		},
+		{
+			"Rank": "1598",
+			"portuguese": "don",
+			"english": "don"
+		},
+		{
+			"Rank": "1599",
+			"portuguese": "táxi",
+			"english": "taxi"
+		},
+		{
+			"Rank": "1600",
+			"portuguese": "vindos",
+			"english": "coming"
+		},
+		{
+			"Rank": "1601",
+			"portuguese": "sociedade",
+			"english": "society"
+		},
+		{
+			"Rank": "1602",
+			"portuguese": "calor",
+			"english": "heat"
+		},
+		{
+			"Rank": "1603",
+			"portuguese": "falas",
+			"english": "words"
+		},
+		{
+			"Rank": "1604",
+			"portuguese": "jerry",
+			"english": "jerry"
+		},
+		{
+			"Rank": "1605",
+			"portuguese": "confiança",
+			"english": "confidence"
+		},
+		{
+			"Rank": "1606",
+			"portuguese": "major",
+			"english": "major"
+		},
+		{
+			"Rank": "1607",
+			"portuguese": "noiva",
+			"english": "bride"
+		},
+		{
+			"Rank": "1608",
+			"portuguese": "relógio",
+			"english": "clock"
+		},
+		{
+			"Rank": "1609",
+			"portuguese": "casas",
+			"english": "houses"
+		},
+		{
+			"Rank": "1610",
+			"portuguese": "edifício",
+			"english": "building"
+		},
+		{
+			"Rank": "1611",
+			"portuguese": "casado",
+			"english": "married"
+		},
+		{
+			"Rank": "1612",
+			"portuguese": "parque",
+			"english": "park"
+		},
+		{
+			"Rank": "1613",
+			"portuguese": "nacional",
+			"english": "national"
+		},
+		{
+			"Rank": "1614",
+			"portuguese": "ridículo",
+			"english": "ridiculous"
+		},
+		{
+			"Rank": "1615",
+			"portuguese": "fotografia",
+			"english": "photography"
+		},
+		{
+			"Rank": "1616",
+			"portuguese": "washington",
+			"english": "washington"
+		},
+		{
+			"Rank": "1617",
+			"portuguese": "espada",
+			"english": "sword"
+		},
+		{
+			"Rank": "1618",
+			"portuguese": "felizes",
+			"english": "happy"
+		},
+		{
+			"Rank": "1619",
+			"portuguese": "partido",
+			"english": "broken"
+		},
+		{
+			"Rank": "1620",
+			"portuguese": "pequenos",
+			"english": "small"
+		},
+		{
+			"Rank": "1621",
+			"portuguese": "tire",
+			"english": "remove"
+		},
+		{
+			"Rank": "1622",
+			"portuguese": "humana",
+			"english": "human"
+		},
+		{
+			"Rank": "1623",
+			"portuguese": "valor",
+			"english": "value"
+		},
+		{
+			"Rank": "1624",
+			"portuguese": "levantar",
+			"english": "to get up"
+		},
+		{
+			"Rank": "1625",
+			"portuguese": "aula",
+			"english": "class"
+		},
+		{
+			"Rank": "1626",
+			"portuguese": "tido",
+			"english": "had"
+		},
+		{
+			"Rank": "1627",
+			"portuguese": "meter",
+			"english": "put"
+		},
+		{
+			"Rank": "1628",
+			"portuguese": "caramba",
+			"english": "damn it"
+		},
+		{
+			"Rank": "1629",
+			"portuguese": "gay",
+			"english": "gay"
+		},
+		{
+			"Rank": "1630",
+			"portuguese": "morre",
+			"english": "passes away"
+		},
+		{
+			"Rank": "1631",
+			"portuguese": "autocarro",
+			"english": "bus"
+		},
+		{
+			"Rank": "1632",
+			"portuguese": "inglaterra",
+			"english": "England"
+		},
+		{
+			"Rank": "1633",
+			"portuguese": "diante",
+			"english": "against"
+		},
+		{
+			"Rank": "1634",
+			"portuguese": "central",
+			"english": "central"
+		},
+		{
+			"Rank": "1635",
+			"portuguese": "iremos",
+			"english": "will"
+		},
+		{
+			"Rank": "1636",
+			"portuguese": "cadeira",
+			"english": "chair"
+		},
+		{
+			"Rank": "1637",
+			"portuguese": "chapéu",
+			"english": "hat"
+		},
+		{
+			"Rank": "1638",
+			"portuguese": "idiotas",
+			"english": "idiots"
+		},
+		{
+			"Rank": "1639",
+			"portuguese": "pontos",
+			"english": "points"
+		},
+		{
+			"Rank": "1640",
+			"portuguese": "serem",
+			"english": "being"
+		},
+		{
+			"Rank": "1641",
+			"portuguese": "deviam",
+			"english": "should"
+		},
+		{
+			"Rank": "1642",
+			"portuguese": "trato",
+			"english": "tract"
+		},
+		{
+			"Rank": "1643",
+			"portuguese": "robert",
+			"english": "robert"
+		},
+		{
+			"Rank": "1644",
+			"portuguese": "faca",
+			"english": "do it"
+		},
+		{
+			"Rank": "1645",
+			"portuguese": "ligou",
+			"english": "called"
+		},
+		{
+			"Rank": "1646",
+			"portuguese": "andando",
+			"english": "walking"
+		},
+		{
+			"Rank": "1647",
+			"portuguese": "vás",
+			"english": "Vás"
+		},
+		{
+			"Rank": "1648",
+			"portuguese": "acorda",
+			"english": "wake up"
+		},
+		{
+			"Rank": "1649",
+			"portuguese": "investigação",
+			"english": "investigation"
+		},
+		{
+			"Rank": "1650",
+			"portuguese": "ponha",
+			"english": "put"
+		},
+		{
+			"Rank": "1651",
+			"portuguese": "calhar",
+			"english": "handy"
+		},
+		{
+			"Rank": "1652",
+			"portuguese": "processo",
+			"english": "process"
+		},
+		{
+			"Rank": "1653",
+			"portuguese": "imenso",
+			"english": "immense"
+		},
+		{
+			"Rank": "1654",
+			"portuguese": "and",
+			"english": "and"
+		},
+		{
+			"Rank": "1655",
+			"portuguese": "apareceu",
+			"english": "appeared"
+		},
+		{
+			"Rank": "1656",
+			"portuguese": "sentado",
+			"english": "seated"
+		},
+		{
+			"Rank": "1657",
+			"portuguese": "escuro",
+			"english": "dark"
+		},
+		{
+			"Rank": "1658",
+			"portuguese": "uau",
+			"english": "wow"
+		},
+		{
+			"Rank": "1659",
+			"portuguese": "posto",
+			"english": "post"
+		},
+		{
+			"Rank": "1660",
+			"portuguese": "comecei",
+			"english": "started"
+		},
+		{
+			"Rank": "1661",
+			"portuguese": "aulas",
+			"english": "classes"
+		},
+		{
+			"Rank": "1662",
+			"portuguese": "inteira",
+			"english": "entire"
+		},
+		{
+			"Rank": "1663",
+			"portuguese": "dados",
+			"english": "data"
+		},
+		{
+			"Rank": "1664",
+			"portuguese": "acabado",
+			"english": "finished"
+		},
+		{
+			"Rank": "1665",
+			"portuguese": "corte",
+			"english": "court"
+		},
+		{
+			"Rank": "1666",
+			"portuguese": "baixa",
+			"english": "low"
+		},
+		{
+			"Rank": "1667",
+			"portuguese": "treinador",
+			"english": "coach"
+		},
+		{
+			"Rank": "1668",
+			"portuguese": "limpo",
+			"english": "clean"
+		},
+		{
+			"Rank": "1669",
+			"portuguese": "voo",
+			"english": "flight"
+		},
+		{
+			"Rank": "1670",
+			"portuguese": "várias",
+			"english": "various"
+		},
+		{
+			"Rank": "1671",
+			"portuguese": "combate",
+			"english": "combat"
+		},
+		{
+			"Rank": "1672",
+			"portuguese": "lee",
+			"english": "lee"
+		},
+		{
+			"Rank": "1673",
+			"portuguese": "jane",
+			"english": "jane"
+		},
+		{
+			"Rank": "1674",
+			"portuguese": "conduzir",
+			"english": "drive"
+		},
+		{
+			"Rank": "1675",
+			"portuguese": "gritar",
+			"english": "shout out"
+		},
+		{
+			"Rank": "1676",
+			"portuguese": "deixem",
+			"english": "leave"
+		},
+		{
+			"Rank": "1677",
+			"portuguese": "atirar",
+			"english": "shoot"
+		},
+		{
+			"Rank": "1678",
+			"portuguese": "york",
+			"english": "york"
+		},
+		{
+			"Rank": "1679",
+			"portuguese": "interior",
+			"english": "interior"
+		},
+		{
+			"Rank": "1680",
+			"portuguese": "dave",
+			"english": "dave"
+		},
+		{
+			"Rank": "1681",
+			"portuguese": "ficamos",
+			"english": "we"
+		},
+		{
+			"Rank": "1682",
+			"portuguese": "andas",
+			"english": "andas"
+		},
+		{
+			"Rank": "1683",
+			"portuguese": "portas",
+			"english": "doors"
+		},
+		{
+			"Rank": "1684",
+			"portuguese": "carreira",
+			"english": "career"
+		},
+		{
+			"Rank": "1685",
+			"portuguese": "matt",
+			"english": "matt"
+		},
+		{
+			"Rank": "1686",
+			"portuguese": "perdemos",
+			"english": "we lost"
+		},
+		{
+			"Rank": "1687",
+			"portuguese": "descansar",
+			"english": "rest"
+		},
+		{
+			"Rank": "1688",
+			"portuguese": "leite",
+			"english": "milk"
+		},
+		{
+			"Rank": "1689",
+			"portuguese": "bordo",
+			"english": "edge"
+		},
+		{
+			"Rank": "1690",
+			"portuguese": "simpático",
+			"english": "nice"
+		},
+		{
+			"Rank": "1691",
+			"portuguese": "chuva",
+			"english": "rain"
+		},
+		{
+			"Rank": "1692",
+			"portuguese": "walter",
+			"english": "walter"
+		},
+		{
+			"Rank": "1693",
+			"portuguese": "fumar",
+			"english": "smoke"
+		},
+		{
+			"Rank": "1694",
+			"portuguese": "faremos",
+			"english": "we will"
+		},
+		{
+			"Rank": "1695",
+			"portuguese": "visão",
+			"english": "vision"
+		},
+		{
+			"Rank": "1696",
+			"portuguese": "ouvido",
+			"english": "heard"
+		},
+		{
+			"Rank": "1697",
+			"portuguese": "ruas",
+			"english": "streets"
+		},
+		{
+			"Rank": "1698",
+			"portuguese": "policia",
+			"english": "police"
+		},
+		{
+			"Rank": "1699",
+			"portuguese": "pensou",
+			"english": "thought"
+		},
+		{
+			"Rank": "1700",
+			"portuguese": "política",
+			"english": "policy"
+		},
+		{
+			"Rank": "1701",
+			"portuguese": "universo",
+			"english": "universe"
+		},
+		{
+			"Rank": "1702",
+			"portuguese": "mark",
+			"english": "mark"
+		},
+		{
+			"Rank": "1703",
+			"portuguese": "tantas",
+			"english": "many"
+		},
+		{
+			"Rank": "1704",
+			"portuguese": "líder",
+			"english": "leader"
+		},
+		{
+			"Rank": "1705",
+			"portuguese": "mapa",
+			"english": "map"
+		},
+		{
+			"Rank": "1706",
+			"portuguese": "conseguia",
+			"english": "could"
+		},
+		{
+			"Rank": "1707",
+			"portuguese": "normalmente",
+			"english": "normally"
+		},
+		{
+			"Rank": "1708",
+			"portuguese": "dono",
+			"english": "owner"
+		},
+		{
+			"Rank": "1709",
+			"portuguese": "gozar",
+			"english": "enjoy"
+		},
+		{
+			"Rank": "1710",
+			"portuguese": "mercado",
+			"english": "Marketplace"
+		},
+		{
+			"Rank": "1711",
+			"portuguese": "uso",
+			"english": "use"
+		},
+		{
+			"Rank": "1712",
+			"portuguese": "salvo",
+			"english": "saved"
+		},
+		{
+			"Rank": "1713",
+			"portuguese": "dedos",
+			"english": "fingers"
+		},
+		{
+			"Rank": "1714",
+			"portuguese": "huh",
+			"english": "huh"
+		},
+		{
+			"Rank": "1715",
+			"portuguese": "infelizmente",
+			"english": "unfortunately"
+		},
+		{
+			"Rank": "1716",
+			"portuguese": "jogos",
+			"english": "games"
+		},
+		{
+			"Rank": "1717",
+			"portuguese": "troca",
+			"english": "exchange"
+		},
+		{
+			"Rank": "1718",
+			"portuguese": "inocente",
+			"english": "innocent"
+		},
+		{
+			"Rank": "1719",
+			"portuguese": "militar",
+			"english": "military"
+		},
+		{
+			"Rank": "1720",
+			"portuguese": "roma",
+			"english": "pomegranate"
+		},
+		{
+			"Rank": "1721",
+			"portuguese": "via",
+			"english": "via"
+		},
+		{
+			"Rank": "1722",
+			"portuguese": "aspecto",
+			"english": "aspect"
+		},
+		{
+			"Rank": "1723",
+			"portuguese": "escapar",
+			"english": "escape"
+		},
+		{
+			"Rank": "1724",
+			"portuguese": "entendi",
+			"english": "got it"
+		},
+		{
+			"Rank": "1725",
+			"portuguese": "bebê",
+			"english": "drink"
+		},
+		{
+			"Rank": "1726",
+			"portuguese": "km",
+			"english": "km"
+		},
+		{
+			"Rank": "1727",
+			"portuguese": "vieste",
+			"english": "you came"
+		},
+		{
+			"Rank": "1728",
+			"portuguese": "conseguiste",
+			"english": "did you get"
+		},
+		{
+			"Rank": "1729",
+			"portuguese": "série",
+			"english": "series"
+		},
+		{
+			"Rank": "1730",
+			"portuguese": "apoio",
+			"english": "support"
+		},
+		{
+			"Rank": "1731",
+			"portuguese": "matei",
+			"english": "killed"
+		},
+		{
+			"Rank": "1732",
+			"portuguese": "clientes",
+			"english": "customers"
+		},
+		{
+			"Rank": "1733",
+			"portuguese": "orgulho",
+			"english": "proud"
+		},
+		{
+			"Rank": "1734",
+			"portuguese": "éramos",
+			"english": "we were"
+		},
+		{
+			"Rank": "1735",
+			"portuguese": "verificar",
+			"english": "check"
+		},
+		{
+			"Rank": "1736",
+			"portuguese": "conseguem",
+			"english": "can"
+		},
+		{
+			"Rank": "1737",
+			"portuguese": "vêem",
+			"english": "see"
+		},
+		{
+			"Rank": "1738",
+			"portuguese": "vemos",
+			"english": "we see"
+		},
+		{
+			"Rank": "1739",
+			"portuguese": "números",
+			"english": "numbers"
+		},
+		{
+			"Rank": "1740",
+			"portuguese": "julgamento",
+			"english": "judgment"
+		},
+		{
+			"Rank": "1741",
+			"portuguese": "terem",
+			"english": "have"
+		},
+		{
+			"Rank": "1742",
+			"portuguese": "depende",
+			"english": "It depends"
+		},
+		{
+			"Rank": "1743",
+			"portuguese": "respirar",
+			"english": "breathe"
+		},
+		{
+			"Rank": "1744",
+			"portuguese": "teoria",
+			"english": "theory"
+		},
+		{
+			"Rank": "1745",
+			"portuguese": "larga",
+			"english": "wide"
+		},
+		{
+			"Rank": "1746",
+			"portuguese": "laboratório",
+			"english": "laboratory"
+		},
+		{
+			"Rank": "1747",
+			"portuguese": "larry",
+			"english": "larry"
+		},
+		{
+			"Rank": "1748",
+			"portuguese": "correcto",
+			"english": "correct"
+		},
+		{
+			"Rank": "1749",
+			"portuguese": "mo",
+			"english": "mo"
+		},
+		{
+			"Rank": "1750",
+			"portuguese": "rapidamente",
+			"english": "quickly"
+		},
+		{
+			"Rank": "1751",
+			"portuguese": "mudança",
+			"english": "change"
+		},
+		{
+			"Rank": "1752",
+			"portuguese": "faculdade",
+			"english": "college"
+		},
+		{
+			"Rank": "1753",
+			"portuguese": "pedaço",
+			"english": "piece"
+		},
+		{
+			"Rank": "1754",
+			"portuguese": "show",
+			"english": "show"
+		},
+		{
+			"Rank": "1755",
+			"portuguese": "rosa",
+			"english": "pink"
+		},
+		{
+			"Rank": "1756",
+			"portuguese": "maiores",
+			"english": "higher"
+		},
+		{
+			"Rank": "1757",
+			"portuguese": "sacana",
+			"english": "fucker"
+		},
+		{
+			"Rank": "1758",
+			"portuguese": "tiveram",
+			"english": "they had"
+		},
+		{
+			"Rank": "1759",
+			"portuguese": "natural",
+			"english": "Natural"
+		},
+		{
+			"Rank": "1760",
+			"portuguese": "preocupar",
+			"english": "bother"
+		},
+		{
+			"Rank": "1761",
+			"portuguese": "anel",
+			"english": "ring"
+		},
+		{
+			"Rank": "1762",
+			"portuguese": "patrão",
+			"english": "boss"
+		},
+		{
+			"Rank": "1763",
+			"portuguese": "vítima",
+			"english": "victim"
+		},
+		{
+			"Rank": "1764",
+			"portuguese": "encontramos",
+			"english": "we found"
+		},
+		{
+			"Rank": "1765",
+			"portuguese": "grávida",
+			"english": "pregnant"
+		},
+		{
+			"Rank": "1766",
+			"portuguese": "entanto",
+			"english": "However"
+		},
+		{
+			"Rank": "1767",
+			"portuguese": "bebe",
+			"english": "drink"
+		},
+		{
+			"Rank": "1768",
+			"portuguese": "confusão",
+			"english": "confusion"
+		},
+		{
+			"Rank": "1769",
+			"portuguese": "terceiro",
+			"english": "third"
+		},
+		{
+			"Rank": "1770",
+			"portuguese": "andy",
+			"english": "andy"
+		},
+		{
+			"Rank": "1771",
+			"portuguese": "busca",
+			"english": "search"
+		},
+		{
+			"Rank": "1772",
+			"portuguese": "lago",
+			"english": "lake"
+		},
+		{
+			"Rank": "1773",
+			"portuguese": "possamos",
+			"english": "can"
+		},
+		{
+			"Rank": "1774",
+			"portuguese": "procurando",
+			"english": "searching"
+		},
+		{
+			"Rank": "1775",
+			"portuguese": "escrito",
+			"english": "written"
+		},
+		{
+			"Rank": "1776",
+			"portuguese": "frança",
+			"english": "France"
+		},
+		{
+			"Rank": "1777",
+			"portuguese": "vários",
+			"english": "several"
+		},
+		{
+			"Rank": "1778",
+			"portuguese": "pude",
+			"english": "I could"
+		},
+		{
+			"Rank": "1779",
+			"portuguese": "corpos",
+			"english": "bodies"
+		},
+		{
+			"Rank": "1780",
+			"portuguese": "escreveu",
+			"english": "wrote"
+		},
+		{
+			"Rank": "1781",
+			"portuguese": "montanha",
+			"english": "mountain"
+		},
+		{
+			"Rank": "1782",
+			"portuguese": "aeroporto",
+			"english": "airport"
+		},
+		{
+			"Rank": "1783",
+			"portuguese": "estúpida",
+			"english": "stupid"
+		},
+		{
+			"Rank": "1784",
+			"portuguese": "mata",
+			"english": "Woods"
+		},
+		{
+			"Rank": "1785",
+			"portuguese": "andado",
+			"english": "been"
+		},
+		{
+			"Rank": "1786",
+			"portuguese": "chris",
+			"english": "chris"
+		},
+		{
+			"Rank": "1787",
+			"portuguese": "miúdas",
+			"english": "Girls"
+		},
+		{
+			"Rank": "1788",
+			"portuguese": "passe",
+			"english": "pass"
+		},
+		{
+			"Rank": "1789",
+			"portuguese": "sobreviver",
+			"english": "survive"
+		},
+		{
+			"Rank": "1790",
+			"portuguese": "bala",
+			"english": "bullet"
+		},
+		{
+			"Rank": "1791",
+			"portuguese": "prestes",
+			"english": "ready"
+		},
+		{
+			"Rank": "1792",
+			"portuguese": "dever",
+			"english": "to owe"
+		},
+		{
+			"Rank": "1793",
+			"portuguese": "excepto",
+			"english": "except"
+		},
+		{
+			"Rank": "1794",
+			"portuguese": "pressa",
+			"english": "hurry"
+		},
+		{
+			"Rank": "1795",
+			"portuguese": "suspeito",
+			"english": "suspect"
+		},
+		{
+			"Rank": "1796",
+			"portuguese": "marca",
+			"english": "brand"
+		},
+		{
+			"Rank": "1797",
+			"portuguese": "poucos",
+			"english": "few"
+		},
+		{
+			"Rank": "1798",
+			"portuguese": "brian",
+			"english": "brian"
+		},
+		{
+			"Rank": "1799",
+			"portuguese": "director",
+			"english": "director"
+		},
+		{
+			"Rank": "1800",
+			"portuguese": "acreditas",
+			"english": "believe"
+		},
+		{
+			"Rank": "1801",
+			"portuguese": "controlar",
+			"english": "to control"
+		},
+		{
+			"Rank": "1802",
+			"portuguese": "antigo",
+			"english": "old"
+		},
+		{
+			"Rank": "1803",
+			"portuguese": "interesse",
+			"english": "interest"
+		},
+		{
+			"Rank": "1804",
+			"portuguese": "mexer",
+			"english": "move"
+		},
+		{
+			"Rank": "1805",
+			"portuguese": "unidade",
+			"english": "unit"
+		},
+		{
+			"Rank": "1806",
+			"portuguese": "chame",
+			"english": "call"
+		},
+		{
+			"Rank": "1807",
+			"portuguese": "material",
+			"english": "material"
+		},
+		{
+			"Rank": "1808",
+			"portuguese": "perfeita",
+			"english": "perfect"
+		},
+		{
+			"Rank": "1809",
+			"portuguese": "construir",
+			"english": "ramp up"
+		},
+		{
+			"Rank": "1810",
+			"portuguese": "notícia",
+			"english": "news"
+		},
+		{
+			"Rank": "1811",
+			"portuguese": "telemóvel",
+			"english": "phone"
+		},
+		{
+			"Rank": "1812",
+			"portuguese": "correu",
+			"english": "ran"
+		},
+		{
+			"Rank": "1813",
+			"portuguese": "apresentar",
+			"english": "to introduce"
+		},
+		{
+			"Rank": "1814",
+			"portuguese": "ouçam",
+			"english": "listen"
+		},
+		{
+			"Rank": "1815",
+			"portuguese": "kate",
+			"english": "kate"
+		},
+		{
+			"Rank": "1816",
+			"portuguese": "carrinha",
+			"english": "Van"
+		},
+		{
+			"Rank": "1817",
+			"portuguese": "más",
+			"english": "but"
+		},
+		{
+			"Rank": "1818",
+			"portuguese": "acordar",
+			"english": "wake up"
+		},
+		{
+			"Rank": "1819",
+			"portuguese": "floresta",
+			"english": "forest"
+		},
+		{
+			"Rank": "1820",
+			"portuguese": "ando",
+			"english": "walk"
+		},
+		{
+			"Rank": "1821",
+			"portuguese": "costa",
+			"english": "coast"
+		},
+		{
+			"Rank": "1822",
+			"portuguese": "amar",
+			"english": "love"
+		},
+		{
+			"Rank": "1823",
+			"portuguese": "geral",
+			"english": "general"
+		},
+		{
+			"Rank": "1824",
+			"portuguese": "dedo",
+			"english": "finger"
+		},
+		{
+			"Rank": "1825",
+			"portuguese": "sentimentos",
+			"english": "feelings"
+		},
+		{
+			"Rank": "1826",
+			"portuguese": "parceiro",
+			"english": "partner"
+		},
+		{
+			"Rank": "1827",
+			"portuguese": "bolsa",
+			"english": "bag"
+		},
+		{
+			"Rank": "1828",
+			"portuguese": "profissional",
+			"english": "professional"
+		},
+		{
+			"Rank": "1829",
+			"portuguese": "merdas",
+			"english": "shits"
+		},
+		{
+			"Rank": "1830",
+			"portuguese": "morreram",
+			"english": "died"
+		},
+		{
+			"Rank": "1831",
+			"portuguese": "encontrado",
+			"english": "found"
+		},
+		{
+			"Rank": "1832",
+			"portuguese": "feita",
+			"english": "done"
+		},
+		{
+			"Rank": "1833",
+			"portuguese": "doença",
+			"english": "disease"
+		},
+		{
+			"Rank": "1834",
+			"portuguese": "mostra",
+			"english": "show"
+		},
+		{
+			"Rank": "1835",
+			"portuguese": "martin",
+			"english": "martin"
+		},
+		{
+			"Rank": "1836",
+			"portuguese": "crescer",
+			"english": "grow up"
+		},
+		{
+			"Rank": "1837",
+			"portuguese": "imbecil",
+			"english": "asshole"
+		},
+		{
+			"Rank": "1838",
+			"portuguese": "ferido",
+			"english": "injured"
+		},
+		{
+			"Rank": "1839",
+			"portuguese": "leste",
+			"english": "east"
+		},
+		{
+			"Rank": "1840",
+			"portuguese": "regressar",
+			"english": "return"
+		},
+		{
+			"Rank": "1841",
+			"portuguese": "queiras",
+			"english": "wanna"
+		},
+		{
+			"Rank": "1842",
+			"portuguese": "neve",
+			"english": "snow"
+		},
+		{
+			"Rank": "1843",
+			"portuguese": "peso",
+			"english": "Weight"
+		},
+		{
+			"Rank": "1844",
+			"portuguese": "baile",
+			"english": "prom"
+		},
+		{
+			"Rank": "1845",
+			"portuguese": "sentar",
+			"english": "sit"
+		},
+		{
+			"Rank": "1846",
+			"portuguese": "mundial",
+			"english": "worldwide"
+		},
+		{
+			"Rank": "1847",
+			"portuguese": "médicos",
+			"english": "doctors"
+		},
+		{
+			"Rank": "1848",
+			"portuguese": "dão",
+			"english": "give"
+		},
+		{
+			"Rank": "1849",
+			"portuguese": "judeus",
+			"english": "Jews"
+		},
+		{
+			"Rank": "1850",
+			"portuguese": "contou",
+			"english": "said"
+		},
+		{
+			"Rank": "1851",
+			"portuguese": "campeão",
+			"english": "champion"
+		},
+		{
+			"Rank": "1852",
+			"portuguese": "ovos",
+			"english": "eggs"
+		},
+		{
+			"Rank": "1853",
+			"portuguese": "importo",
+			"english": "care"
+		},
+		{
+			"Rank": "1854",
+			"portuguese": "servir",
+			"english": "serve"
+		},
+		{
+			"Rank": "1855",
+			"portuguese": "óptima",
+			"english": "great"
+		},
+		{
+			"Rank": "1856",
+			"portuguese": "garrafa",
+			"english": "bottle"
+		},
+		{
+			"Rank": "1857",
+			"portuguese": "momentos",
+			"english": "moments"
+		},
+		{
+			"Rank": "1858",
+			"portuguese": "vídeo",
+			"english": "video"
+		},
+		{
+			"Rank": "1859",
+			"portuguese": "deseja",
+			"english": "want"
+		},
+		{
+			"Rank": "1860",
+			"portuguese": "agentes",
+			"english": "agents"
+		},
+		{
+			"Rank": "1861",
+			"portuguese": "imprensa",
+			"english": "press"
+		},
+		{
+			"Rank": "1862",
+			"portuguese": "kevin",
+			"english": "kevin"
+		},
+		{
+			"Rank": "1863",
+			"portuguese": "aberta",
+			"english": "opening"
+		},
+		{
+			"Rank": "1864",
+			"portuguese": "quão",
+			"english": "how"
+		},
+		{
+			"Rank": "1865",
+			"portuguese": "recebi",
+			"english": "I received"
+		},
+		{
+			"Rank": "1866",
+			"portuguese": "ganhou",
+			"english": "has won"
+		},
+		{
+			"Rank": "1867",
+			"portuguese": "mano",
+			"english": "Bro"
+		},
+		{
+			"Rank": "1868",
+			"portuguese": "maravilhosa",
+			"english": "Wonderful"
+		},
+		{
+			"Rank": "1869",
+			"portuguese": "atacar",
+			"english": "attack"
+		},
+		{
+			"Rank": "1870",
+			"portuguese": "desistir",
+			"english": "give up"
+		},
+		{
+			"Rank": "1871",
+			"portuguese": "aldeia",
+			"english": "village"
+		},
+		{
+			"Rank": "1872",
+			"portuguese": "parecido",
+			"english": "like"
+		},
+		{
+			"Rank": "1873",
+			"portuguese": "entregar",
+			"english": "to deliver"
+		},
+		{
+			"Rank": "1874",
+			"portuguese": "disser",
+			"english": "says"
+		},
+		{
+			"Rank": "1875",
+			"portuguese": "rock",
+			"english": "rock"
+		},
+		{
+			"Rank": "1876",
+			"portuguese": "partida",
+			"english": "match"
+		},
+		{
+			"Rank": "1877",
+			"portuguese": "acesso",
+			"english": "access"
+		},
+		{
+			"Rank": "1878",
+			"portuguese": "tantos",
+			"english": "many"
+		},
+		{
+			"Rank": "1879",
+			"portuguese": "decidir",
+			"english": "decide"
+		},
+		{
+			"Rank": "1880",
+			"portuguese": "homicídio",
+			"english": "murder"
+		},
+		{
+			"Rank": "1881",
+			"portuguese": "entendes",
+			"english": "understand"
+		},
+		{
+			"Rank": "1882",
+			"portuguese": "chamam",
+			"english": "call"
+		},
+		{
+			"Rank": "1883",
+			"portuguese": "will",
+			"english": "will"
+		},
+		{
+			"Rank": "1884",
+			"portuguese": "instante",
+			"english": "moment"
+		},
+		{
+			"Rank": "1885",
+			"portuguese": "vivos",
+			"english": "living"
+		},
+		{
+			"Rank": "1886",
+			"portuguese": "madame",
+			"english": "madam"
+		},
+		{
+			"Rank": "1887",
+			"portuguese": "soubesse",
+			"english": "knew"
+		},
+		{
+			"Rank": "1888",
+			"portuguese": "deixado",
+			"english": "left"
+		},
+		{
+			"Rank": "1889",
+			"portuguese": "obviamente",
+			"english": "obviously"
+		},
+		{
+			"Rank": "1890",
+			"portuguese": "chegaram",
+			"english": "They arrived"
+		},
+		{
+			"Rank": "1891",
+			"portuguese": "viemos",
+			"english": "we came"
+		},
+		{
+			"Rank": "1892",
+			"portuguese": "culpado",
+			"english": "guilty"
+		},
+		{
+			"Rank": "1893",
+			"portuguese": "resultado",
+			"english": "result"
+		},
+		{
+			"Rank": "1894",
+			"portuguese": "direitos",
+			"english": "rights"
+		},
+		{
+			"Rank": "1895",
+			"portuguese": "desaparece",
+			"english": "fades away"
+		},
+		{
+			"Rank": "1896",
+			"portuguese": "jardim",
+			"english": "garden"
+		},
+		{
+			"Rank": "1897",
+			"portuguese": "deserto",
+			"english": "desert"
+		},
+		{
+			"Rank": "1898",
+			"portuguese": "nâo",
+			"english": "no"
+		},
+		{
+			"Rank": "1899",
+			"portuguese": "ficaria",
+			"english": "would"
+		},
+		{
+			"Rank": "1900",
+			"portuguese": "ruim",
+			"english": "bad"
+		},
+		{
+			"Rank": "1901",
+			"portuguese": "paga",
+			"english": "pay"
+		},
+		{
+			"Rank": "1902",
+			"portuguese": "n",
+			"english": "n"
+		},
+		{
+			"Rank": "1903",
+			"portuguese": "próprios",
+			"english": "own"
+		},
+		{
+			"Rank": "1904",
+			"portuguese": "lixar",
+			"english": "Sanding"
+		},
+		{
+			"Rank": "1905",
+			"portuguese": "interessado",
+			"english": "interested"
+		},
+		{
+			"Rank": "1906",
+			"portuguese": "ouvidos",
+			"english": "ears"
+		},
+		{
+			"Rank": "1907",
+			"portuguese": "fantasma",
+			"english": "ghost"
+		},
+		{
+			"Rank": "1908",
+			"portuguese": "angeles",
+			"english": "angeles"
+		},
+		{
+			"Rank": "1909",
+			"portuguese": "estudar",
+			"english": "to study"
+		},
+		{
+			"Rank": "1910",
+			"portuguese": "domingo",
+			"english": "Sunday"
+		},
+		{
+			"Rank": "1911",
+			"portuguese": "entrem",
+			"english": "enter"
+		},
+		{
+			"Rank": "1912",
+			"portuguese": "oferta",
+			"english": "offer"
+		},
+		{
+			"Rank": "1913",
+			"portuguese": "notas",
+			"english": "grades"
+		},
+		{
+			"Rank": "1914",
+			"portuguese": "contrato",
+			"english": "contract agreement"
+		},
+		{
+			"Rank": "1915",
+			"portuguese": "encontraram",
+			"english": "they found"
+		},
+		{
+			"Rank": "1916",
+			"portuguese": "brincadeira",
+			"english": "joke"
+		},
+		{
+			"Rank": "1917",
+			"portuguese": "sábado",
+			"english": "Saturday"
+		},
+		{
+			"Rank": "1918",
+			"portuguese": "san",
+			"english": "san"
+		},
+		{
+			"Rank": "1919",
+			"portuguese": "tempestade",
+			"english": "storm"
+		},
+		{
+			"Rank": "1920",
+			"portuguese": "bolo",
+			"english": "cake"
+		},
+		{
+			"Rank": "1921",
+			"portuguese": "lar",
+			"english": "home"
+		},
+		{
+			"Rank": "1922",
+			"portuguese": "gabinete",
+			"english": "cabinet"
+		},
+		{
+			"Rank": "1923",
+			"portuguese": "colega",
+			"english": "classmate"
+		},
+		{
+			"Rank": "1924",
+			"portuguese": "companheiro",
+			"english": "life partner"
+		},
+		{
+			"Rank": "1925",
+			"portuguese": "demorar",
+			"english": "delay"
+		},
+		{
+			"Rank": "1926",
+			"portuguese": "gás",
+			"english": "gas"
+		},
+		{
+			"Rank": "1927",
+			"portuguese": "agradecer",
+			"english": "to thank"
+		},
+		{
+			"Rank": "1928",
+			"portuguese": "thomas",
+			"english": "thomas"
+		},
+		{
+			"Rank": "1929",
+			"portuguese": "data",
+			"english": "date"
+		},
+		{
+			"Rank": "1930",
+			"portuguese": "tendo",
+			"english": "by having"
+		},
+		{
+			"Rank": "1931",
+			"portuguese": "fizer",
+			"english": "do"
+		},
+		{
+			"Rank": "1932",
+			"portuguese": "bêbado",
+			"english": "drunk"
+		},
+		{
+			"Rank": "1933",
+			"portuguese": "estaremos",
+			"english": "will be"
+		},
+		{
+			"Rank": "1934",
+			"portuguese": "acredite",
+			"english": "believe"
+		},
+		{
+			"Rank": "1935",
+			"portuguese": "enviar",
+			"english": "to send"
+		},
+		{
+			"Rank": "1936",
+			"portuguese": "bilhete",
+			"english": "ticket"
+		},
+		{
+			"Rank": "1937",
+			"portuguese": "pessoalmente",
+			"english": "personally"
+		},
+		{
+			"Rank": "1938",
+			"portuguese": "reino",
+			"english": "Kingdom"
+		},
+		{
+			"Rank": "1939",
+			"portuguese": "propriedade",
+			"english": "property"
+		},
+		{
+			"Rank": "1940",
+			"portuguese": "ministro",
+			"english": "minister"
+		},
+		{
+			"Rank": "1941",
+			"portuguese": "entendeu",
+			"english": "understood"
+		},
+		{
+			"Rank": "1942",
+			"portuguese": "aparece",
+			"english": "pops up"
+		},
+		{
+			"Rank": "1943",
+			"portuguese": "receio",
+			"english": "fear"
+		},
+		{
+			"Rank": "1944",
+			"portuguese": "visitar",
+			"english": "visit"
+		},
+		{
+			"Rank": "1945",
+			"portuguese": "crer",
+			"english": "believe"
+		},
+		{
+			"Rank": "1946",
+			"portuguese": "daqueles",
+			"english": "those"
+		},
+		{
+			"Rank": "1947",
+			"portuguese": "francês",
+			"english": "French"
+		},
+		{
+			"Rank": "1948",
+			"portuguese": "viajar",
+			"english": "travel"
+		},
+		{
+			"Rank": "1949",
+			"portuguese": "recuperar",
+			"english": "to recover"
+		},
+		{
+			"Rank": "1950",
+			"portuguese": "responsabilidade",
+			"english": "responsibility"
+		},
+		{
+			"Rank": "1951",
+			"portuguese": "voltas",
+			"english": "turns"
+		},
+		{
+			"Rank": "1952",
+			"portuguese": "mel",
+			"english": "honey"
+		},
+		{
+			"Rank": "1953",
+			"portuguese": "carl",
+			"english": "carl"
+		},
+		{
+			"Rank": "1954",
+			"portuguese": "alemães",
+			"english": "German"
+		},
+		{
+			"Rank": "1955",
+			"portuguese": "garotas",
+			"english": "girls"
+		},
+		{
+			"Rank": "1956",
+			"portuguese": "pro",
+			"english": "pro"
+		},
+		{
+			"Rank": "1957",
+			"portuguese": "testemunha",
+			"english": "witness"
+		},
+		{
+			"Rank": "1958",
+			"portuguese": "equipe",
+			"english": "team"
+		},
+		{
+			"Rank": "1959",
+			"portuguese": "simon",
+			"english": "simon"
+		},
+		{
+			"Rank": "1960",
+			"portuguese": "queriam",
+			"english": "they wanted"
+		},
+		{
+			"Rank": "1961",
+			"portuguese": "pão",
+			"english": "bread"
+		},
+		{
+			"Rank": "1962",
+			"portuguese": "pequenas",
+			"english": "small"
+		},
+		{
+			"Rank": "1963",
+			"portuguese": "califórnia",
+			"english": "California"
+		},
+		{
+			"Rank": "1964",
+			"portuguese": "senhorita",
+			"english": "Ms"
+		},
+		{
+			"Rank": "1965",
+			"portuguese": "conhecimento",
+			"english": "knowledge"
+		},
+		{
+			"Rank": "1966",
+			"portuguese": "primo",
+			"english": "cousin"
+		},
+		{
+			"Rank": "1967",
+			"portuguese": "cala",
+			"english": "cala"
+		},
+		{
+			"Rank": "1968",
+			"portuguese": "new",
+			"english": "new"
+		},
+		{
+			"Rank": "1969",
+			"portuguese": "europa",
+			"english": "Europe"
+		},
+		{
+			"Rank": "1970",
+			"portuguese": "méxico",
+			"english": "Mexico"
+		},
+		{
+			"Rank": "1971",
+			"portuguese": "peito",
+			"english": "chest"
+		},
+		{
+			"Rank": "1972",
+			"portuguese": "fugiu",
+			"english": "ran away"
+		},
+		{
+			"Rank": "1973",
+			"portuguese": "sensação",
+			"english": "sensation"
+		},
+		{
+			"Rank": "1974",
+			"portuguese": "william",
+			"english": "william"
+		},
+		{
+			"Rank": "1975",
+			"portuguese": "poderoso",
+			"english": "powerful"
+		},
+		{
+			"Rank": "1976",
+			"portuguese": "podiam",
+			"english": "could"
+		},
+		{
+			"Rank": "1977",
+			"portuguese": "centenas",
+			"english": "hundreds"
+		},
+		{
+			"Rank": "1978",
+			"portuguese": "inimigos",
+			"english": "enemies"
+		},
+		{
+			"Rank": "1979",
+			"portuguese": "hein",
+			"english": "huh"
+		},
+		{
+			"Rank": "1980",
+			"portuguese": "ganha",
+			"english": "wins"
+		},
+		{
+			"Rank": "1981",
+			"portuguese": "mantém",
+			"english": "keeps"
+		},
+		{
+			"Rank": "1982",
+			"portuguese": "farto",
+			"english": "tired"
+		},
+		{
+			"Rank": "1983",
+			"portuguese": "magia",
+			"english": "Magic"
+		},
+		{
+			"Rank": "1984",
+			"portuguese": "malta",
+			"english": "Malta"
+		},
+		{
+			"Rank": "1985",
+			"portuguese": "anna",
+			"english": "anna"
+		},
+		{
+			"Rank": "1986",
+			"portuguese": "agradeço",
+			"english": "I thank you"
+		},
+		{
+			"Rank": "1987",
+			"portuguese": "aberto",
+			"english": "Open"
+		},
+		{
+			"Rank": "1988",
+			"portuguese": "vitória",
+			"english": "victory"
+		},
+		{
+			"Rank": "1989",
+			"portuguese": "achou",
+			"english": "found"
+		},
+		{
+			"Rank": "1990",
+			"portuguese": "voltem",
+			"english": "return"
+		},
+		{
+			"Rank": "1991",
+			"portuguese": "partes",
+			"english": "parts"
+		},
+		{
+			"Rank": "1992",
+			"portuguese": "assassinato",
+			"english": "murder"
+		},
+		{
+			"Rank": "1993",
+			"portuguese": "massa",
+			"english": "pasta"
+		},
+		{
+			"Rank": "1994",
+			"portuguese": "fecha",
+			"english": "closes"
+		},
+		{
+			"Rank": "1995",
+			"portuguese": "bravo",
+			"english": "angry"
+		},
+		{
+			"Rank": "1996",
+			"portuguese": "ligue",
+			"english": "call"
+		},
+		{
+			"Rank": "1997",
+			"portuguese": "ligado",
+			"english": "switched on"
+		},
+		{
+			"Rank": "1998",
+			"portuguese": "boleia",
+			"english": "hitchhiking"
+		},
+		{
+			"Rank": "1999",
+			"portuguese": "vinha",
+			"english": "came"
+		},
+		{
+			"Rank": "2000",
+			"portuguese": "efeito",
+			"english": "It is made"
 		}
 	];
 
 /***/ },
 /* 237 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"Rank": "1",
+			"french": "de",
+			"english": "of",
+			"Notes": "1) This list was created using public/free subtitles, particularly from opensubtitles.org."
+		},
+		{
+			"Rank": "2",
+			"french": "je",
+			"english": "I",
+			"Notes": "The order is based on the number of occurences of each word in the subtitles."
+		},
+		{
+			"Rank": "3",
+			"french": "est",
+			"english": "East"
+		},
+		{
+			"Rank": "4",
+			"french": "pas",
+			"english": "not",
+			"Notes": "2) The english translation is by Google and can be un-reliable for some words."
+		},
+		{
+			"Rank": "5",
+			"french": "le",
+			"english": "the"
+		},
+		{
+			"Rank": "6",
+			"french": "vous",
+			"english": "you",
+			"Notes": "3) You can change the translation from english to another language."
+		},
+		{
+			"Rank": "7",
+			"french": "la",
+			"english": "the",
+			"Notes": "To do this you will first need to make a copy of this spreadsheet.  (File > Make a copy...)"
+		},
+		{
+			"Rank": "8",
+			"french": "tu",
+			"english": "you",
+			"Notes": "Then replace the \"en\" in the function in the cells in Column C with your desired language code."
+		},
+		{
+			"Rank": "9",
+			"french": "que",
+			"english": "than",
+			"Notes": "e.g. Replace \"en\" with \"sv\" for Swedish."
+		},
+		{
+			"Rank": "10",
+			"french": "un",
+			"english": "a",
+			"Notes": "List of supported languages:"
+		},
+		{
+			"Rank": "11",
+			"french": "il",
+			"english": "he",
+			"Notes": "https://cloud.google.com/translate/v2/using_rest?hl=en#language-params"
+		},
+		{
+			"Rank": "12",
+			"french": "et",
+			"english": "and"
+		},
+		{
+			"Rank": "13",
+			"french": "à",
+			"english": "at",
+			"Notes": "4) The original source of this list can be found here:"
+		},
+		{
+			"Rank": "14",
+			"french": "a",
+			"english": "at",
+			"Notes": "https://invokeit.wordpress.com/frequency-word-lists/"
+		},
+		{
+			"Rank": "15",
+			"french": "ne",
+			"english": "born"
+		},
+		{
+			"Rank": "16",
+			"french": "les",
+			"english": "the",
+			"Notes": "5) It is licensed under the following Creative Commons license:"
+		},
+		{
+			"Rank": "17",
+			"french": "ce",
+			"english": "this",
+			"Notes": "http://creativecommons.org/licenses/by-sa/3.0/"
+		},
+		{
+			"Rank": "18",
+			"french": "en",
+			"english": "in"
+		},
+		{
+			"Rank": "19",
+			"french": "on",
+			"english": "we",
+			"Notes": "6) More Most Common word lists (other languages) can be found here:"
+		},
+		{
+			"Rank": "20",
+			"french": "ça",
+			"english": "it",
+			"Notes": "http://www.101languages.net/common-words/"
+		},
+		{
+			"Rank": "21",
+			"french": "une",
+			"english": "a"
+		},
+		{
+			"Rank": "22",
+			"french": "ai",
+			"english": "have"
+		},
+		{
+			"Rank": "23",
+			"french": "pour",
+			"english": "for"
+		},
+		{
+			"Rank": "24",
+			"french": "des",
+			"english": "of the"
+		},
+		{
+			"Rank": "25",
+			"french": "moi",
+			"english": "me"
+		},
+		{
+			"Rank": "26",
+			"french": "qui",
+			"english": "who"
+		},
+		{
+			"Rank": "27",
+			"french": "nous",
+			"english": "we"
+		},
+		{
+			"Rank": "28",
+			"french": "mais",
+			"english": "but"
+		},
+		{
+			"Rank": "29",
+			"french": "y",
+			"english": "there"
+		},
+		{
+			"Rank": "30",
+			"french": "me",
+			"english": "me"
+		},
+		{
+			"Rank": "31",
+			"french": "dans",
+			"english": "in"
+		},
+		{
+			"Rank": "32",
+			"french": "du",
+			"english": "of"
+		},
+		{
+			"Rank": "33",
+			"french": "bien",
+			"english": "good"
+		},
+		{
+			"Rank": "34",
+			"french": "elle",
+			"english": "she"
+		},
+		{
+			"Rank": "35",
+			"french": "si",
+			"english": "if"
+		},
+		{
+			"Rank": "36",
+			"french": "tout",
+			"english": "all"
+		},
+		{
+			"Rank": "37",
+			"french": "plus",
+			"english": "more"
+		},
+		{
+			"Rank": "38",
+			"french": "non",
+			"english": "not"
+		},
+		{
+			"Rank": "39",
+			"french": "mon",
+			"english": "my"
+		},
+		{
+			"Rank": "40",
+			"french": "suis",
+			"english": "am"
+		},
+		{
+			"Rank": "41",
+			"french": "te",
+			"english": "you"
+		},
+		{
+			"Rank": "42",
+			"french": "au",
+			"english": "the"
+		},
+		{
+			"Rank": "43",
+			"french": "avec",
+			"english": "with"
+		},
+		{
+			"Rank": "44",
+			"french": "oui",
+			"english": "Yes"
+		},
+		{
+			"Rank": "45",
+			"french": "va",
+			"english": "go"
+		},
+		{
+			"Rank": "46",
+			"french": "toi",
+			"english": "you"
+		},
+		{
+			"Rank": "47",
+			"french": "fait",
+			"english": "fact"
+		},
+		{
+			"Rank": "48",
+			"french": "ils",
+			"english": "they"
+		},
+		{
+			"Rank": "49",
+			"french": "as",
+			"english": "ace"
+		},
+		{
+			"Rank": "50",
+			"french": "être",
+			"english": "be"
+		},
+		{
+			"Rank": "51",
+			"french": "faire",
+			"english": "make"
+		},
+		{
+			"Rank": "52",
+			"french": "se",
+			"english": "himself"
+		},
+		{
+			"Rank": "53",
+			"french": "comme",
+			"english": "as"
+		},
+		{
+			"Rank": "54",
+			"french": "était",
+			"english": "was"
+		},
+		{
+			"Rank": "55",
+			"french": "sur",
+			"english": "sure"
+		},
+		{
+			"Rank": "56",
+			"french": "quoi",
+			"english": "what"
+		},
+		{
+			"Rank": "57",
+			"french": "ici",
+			"english": "right here"
+		},
+		{
+			"Rank": "58",
+			"french": "sais",
+			"english": "know"
+		},
+		{
+			"Rank": "59",
+			"french": "lui",
+			"english": "him"
+		},
+		{
+			"Rank": "60",
+			"french": "veux",
+			"english": "want"
+		},
+		{
+			"Rank": "61",
+			"french": "ma",
+			"english": "my"
+		},
+		{
+			"Rank": "62",
+			"french": "là",
+			"english": "the"
+		},
+		{
+			"Rank": "63",
+			"french": "rien",
+			"english": "nothing"
+		},
+		{
+			"Rank": "64",
+			"french": "dit",
+			"english": "said"
+		},
+		{
+			"Rank": "65",
+			"french": "es",
+			"english": "es"
+		},
+		{
+			"Rank": "66",
+			"french": "où",
+			"english": "or"
+		},
+		{
+			"Rank": "67",
+			"french": "votre",
+			"english": "your"
+		},
+		{
+			"Rank": "68",
+			"french": "pourquoi",
+			"english": "Why"
+		},
+		{
+			"Rank": "69",
+			"french": "sont",
+			"english": "are"
+		},
+		{
+			"Rank": "70",
+			"french": "cette",
+			"english": "this"
+		},
+		{
+			"Rank": "71",
+			"french": "quand",
+			"english": "when"
+		},
+		{
+			"Rank": "72",
+			"french": "par",
+			"english": "by"
+		},
+		{
+			"Rank": "73",
+			"french": "son",
+			"english": "his"
+		},
+		{
+			"Rank": "74",
+			"french": "ton",
+			"english": "your"
+		},
+		{
+			"Rank": "75",
+			"french": "peux",
+			"english": "can"
+		},
+		{
+			"Rank": "76",
+			"french": "alors",
+			"english": "so"
+		},
+		{
+			"Rank": "77",
+			"french": "dire",
+			"english": "say"
+		},
+		{
+			"Rank": "78",
+			"french": "vais",
+			"english": "am going to"
+		},
+		{
+			"Rank": "79",
+			"french": "comment",
+			"english": "how"
+		},
+		{
+			"Rank": "80",
+			"french": "avez",
+			"english": "have"
+		},
+		{
+			"Rank": "81",
+			"french": "bon",
+			"english": "good"
+		},
+		{
+			"Rank": "82",
+			"french": "ou",
+			"english": "or"
+		},
+		{
+			"Rank": "83",
+			"french": "très",
+			"english": "very"
+		},
+		{
+			"Rank": "84",
+			"french": "même",
+			"english": "even"
+		},
+		{
+			"Rank": "85",
+			"french": "merci",
+			"english": "thank you"
+		},
+		{
+			"Rank": "86",
+			"french": "ont",
+			"english": "have"
+		},
+		{
+			"Rank": "87",
+			"french": "jamais",
+			"english": "never"
+		},
+		{
+			"Rank": "88",
+			"french": "aussi",
+			"english": "also"
+		},
+		{
+			"Rank": "89",
+			"french": "chose",
+			"english": "thing"
+		},
+		{
+			"Rank": "90",
+			"french": "voir",
+			"english": "see"
+		},
+		{
+			"Rank": "91",
+			"french": "allez",
+			"english": "going"
+		},
+		{
+			"Rank": "92",
+			"french": "tous",
+			"english": "all"
+		},
+		{
+			"Rank": "93",
+			"french": "ces",
+			"english": "these"
+		},
+		{
+			"Rank": "94",
+			"french": "deux",
+			"english": "two"
+		},
+		{
+			"Rank": "95",
+			"french": "sa",
+			"english": "her"
+		},
+		{
+			"Rank": "96",
+			"french": "faut",
+			"english": "must"
+		},
+		{
+			"Rank": "97",
+			"french": "été",
+			"english": "summer"
+		},
+		{
+			"Rank": "98",
+			"french": "êtes",
+			"english": "are"
+		},
+		{
+			"Rank": "99",
+			"french": "ta",
+			"english": "your"
+		},
+		{
+			"Rank": "100",
+			"french": "avoir",
+			"english": "to have"
+		},
+		{
+			"Rank": "101",
+			"french": "fais",
+			"english": "do"
+		},
+		{
+			"Rank": "102",
+			"french": "peut",
+			"english": "can"
+		},
+		{
+			"Rank": "103",
+			"french": "autre",
+			"english": "other"
+		},
+		{
+			"Rank": "104",
+			"french": "maintenant",
+			"english": "now"
+		},
+		{
+			"Rank": "105",
+			"french": "encore",
+			"english": "again"
+		},
+		{
+			"Rank": "106",
+			"french": "peu",
+			"english": "little"
+		},
+		{
+			"Rank": "107",
+			"french": "vraiment",
+			"english": "really"
+		},
+		{
+			"Rank": "108",
+			"french": "m",
+			"english": "m"
+		},
+		{
+			"Rank": "109",
+			"french": "mes",
+			"english": "my"
+		},
+		{
+			"Rank": "110",
+			"french": "temps",
+			"english": "time"
+		},
+		{
+			"Rank": "111",
+			"french": "toujours",
+			"english": "always"
+		},
+		{
+			"Rank": "112",
+			"french": "notre",
+			"english": "our"
+		},
+		{
+			"Rank": "113",
+			"french": "vie",
+			"english": "life"
+		},
+		{
+			"Rank": "114",
+			"french": "oh",
+			"english": "Oh"
+		},
+		{
+			"Rank": "115",
+			"french": "juste",
+			"english": "just"
+		},
+		{
+			"Rank": "116",
+			"french": "sans",
+			"english": "without"
+		},
+		{
+			"Rank": "117",
+			"french": "avait",
+			"english": "had"
+		},
+		{
+			"Rank": "118",
+			"french": "quelque",
+			"english": "some"
+		},
+		{
+			"Rank": "119",
+			"french": "monde",
+			"english": "world"
+		},
+		{
+			"Rank": "120",
+			"french": "accord",
+			"english": "agreement"
+		},
+		{
+			"Rank": "121",
+			"french": "vu",
+			"english": "seen"
+		},
+		{
+			"Rank": "122",
+			"french": "fois",
+			"english": "time"
+		},
+		{
+			"Rank": "123",
+			"french": "aller",
+			"english": "go"
+		},
+		{
+			"Rank": "124",
+			"french": "trop",
+			"english": "too much"
+		},
+		{
+			"Rank": "125",
+			"french": "viens",
+			"english": "come"
+		},
+		{
+			"Rank": "126",
+			"french": "crois",
+			"english": "think"
+		},
+		{
+			"Rank": "127",
+			"french": "dois",
+			"english": "have"
+		},
+		{
+			"Rank": "128",
+			"french": "père",
+			"english": "Father"
+		},
+		{
+			"Rank": "129",
+			"french": "dieu",
+			"english": "God"
+		},
+		{
+			"Rank": "130",
+			"french": "homme",
+			"english": "man"
+		},
+		{
+			"Rank": "131",
+			"french": "sûr",
+			"english": "sure"
+		},
+		{
+			"Rank": "132",
+			"french": "aux",
+			"english": "the"
+		},
+		{
+			"Rank": "133",
+			"french": "leur",
+			"english": "their"
+		},
+		{
+			"Rank": "134",
+			"french": "avant",
+			"english": "before"
+		},
+		{
+			"Rank": "135",
+			"french": "étais",
+			"english": "was"
+		},
+		{
+			"Rank": "136",
+			"french": "besoin",
+			"english": "need"
+		},
+		{
+			"Rank": "137",
+			"french": "femme",
+			"english": "wife"
+		},
+		{
+			"Rank": "138",
+			"french": "personne",
+			"english": "no one"
+		},
+		{
+			"Rank": "139",
+			"french": "avais",
+			"english": "had"
+		},
+		{
+			"Rank": "140",
+			"french": "aime",
+			"english": "love"
+		},
+		{
+			"Rank": "141",
+			"french": "chez",
+			"english": "in"
+		},
+		{
+			"Rank": "142",
+			"french": "vrai",
+			"english": "true"
+		},
+		{
+			"Rank": "143",
+			"french": "ans",
+			"english": "years"
+		},
+		{
+			"Rank": "144",
+			"french": "ses",
+			"english": "his"
+		},
+		{
+			"Rank": "145",
+			"french": "mal",
+			"english": "wrong"
+		},
+		{
+			"Rank": "146",
+			"french": "parler",
+			"english": "speak"
+		},
+		{
+			"Rank": "147",
+			"french": "vos",
+			"english": "your"
+		},
+		{
+			"Rank": "148",
+			"french": "après",
+			"english": "after"
+		},
+		{
+			"Rank": "149",
+			"french": "mort",
+			"english": "death"
+		},
+		{
+			"Rank": "150",
+			"french": "ca",
+			"english": "it"
+		},
+		{
+			"Rank": "151",
+			"french": "eu",
+			"english": "had"
+		},
+		{
+			"Rank": "152",
+			"french": "veut",
+			"english": "wants"
+		},
+		{
+			"Rank": "153",
+			"french": "parce",
+			"english": "by"
+		},
+		{
+			"Rank": "154",
+			"french": "sera",
+			"english": "will be"
+		},
+		{
+			"Rank": "155",
+			"french": "mieux",
+			"english": "better"
+		},
+		{
+			"Rank": "156",
+			"french": "bonne",
+			"english": "good"
+		},
+		{
+			"Rank": "157",
+			"french": "petit",
+			"english": "small"
+		},
+		{
+			"Rank": "158",
+			"french": "tes",
+			"english": "your"
+		},
+		{
+			"Rank": "159",
+			"french": "dis",
+			"english": "tell"
+		},
+		{
+			"Rank": "160",
+			"french": "beaucoup",
+			"english": "a lot"
+		},
+		{
+			"Rank": "161",
+			"french": "monsieur",
+			"english": "gentleman"
+		},
+		{
+			"Rank": "162",
+			"french": "voilà",
+			"english": "here"
+		},
+		{
+			"Rank": "163",
+			"french": "depuis",
+			"english": "since"
+		},
+		{
+			"Rank": "164",
+			"french": "doit",
+			"english": "must"
+		},
+		{
+			"Rank": "165",
+			"french": "mère",
+			"english": "mother"
+		},
+		{
+			"Rank": "166",
+			"french": "quel",
+			"english": "what"
+		},
+		{
+			"Rank": "167",
+			"french": "vas",
+			"english": "going"
+		},
+		{
+			"Rank": "168",
+			"french": "vois",
+			"english": "see"
+		},
+		{
+			"Rank": "169",
+			"french": "fille",
+			"english": "girl"
+		},
+		{
+			"Rank": "170",
+			"french": "déjà",
+			"english": "already"
+		},
+		{
+			"Rank": "171",
+			"french": "gens",
+			"english": "people"
+		},
+		{
+			"Rank": "172",
+			"french": "donc",
+			"english": "so"
+		},
+		{
+			"Rank": "173",
+			"french": "jour",
+			"english": "day"
+		},
+		{
+			"Rank": "174",
+			"french": "ll",
+			"english": "ll"
+		},
+		{
+			"Rank": "175",
+			"french": "autres",
+			"english": "other"
+		},
+		{
+			"Rank": "176",
+			"french": "soir",
+			"english": "evening"
+		},
+		{
+			"Rank": "177",
+			"french": "toute",
+			"english": "all"
+		},
+		{
+			"Rank": "178",
+			"french": "ouais",
+			"english": "yeah"
+		},
+		{
+			"Rank": "179",
+			"french": "argent",
+			"english": "money"
+		},
+		{
+			"Rank": "180",
+			"french": "maison",
+			"english": "House"
+		},
+		{
+			"Rank": "181",
+			"french": "nom",
+			"english": "name"
+		},
+		{
+			"Rank": "182",
+			"french": "bonjour",
+			"english": "Hello"
+		},
+		{
+			"Rank": "183",
+			"french": "pense",
+			"english": "thought"
+		},
+		{
+			"Rank": "184",
+			"french": "nos",
+			"english": "our"
+		},
+		{
+			"Rank": "185",
+			"french": "cela",
+			"english": "this"
+		},
+		{
+			"Rank": "186",
+			"french": "nuit",
+			"english": "night"
+		},
+		{
+			"Rank": "187",
+			"french": "avons",
+			"english": "have"
+		},
+		{
+			"Rank": "188",
+			"french": "ii",
+			"english": "ii"
+		},
+		{
+			"Rank": "189",
+			"french": "merde",
+			"english": "shit"
+		},
+		{
+			"Rank": "190",
+			"french": "cet",
+			"english": "this"
+		},
+		{
+			"Rank": "191",
+			"french": "papa",
+			"english": "dad"
+		},
+		{
+			"Rank": "192",
+			"french": "maman",
+			"english": "mom"
+		},
+		{
+			"Rank": "193",
+			"french": "reste",
+			"english": "rest"
+		},
+		{
+			"Rank": "194",
+			"french": "peur",
+			"english": "fear"
+		},
+		{
+			"Rank": "195",
+			"french": "désolé",
+			"english": "sorry"
+		},
+		{
+			"Rank": "196",
+			"french": "salut",
+			"english": "Hello"
+		},
+		{
+			"Rank": "197",
+			"french": "seul",
+			"english": "alone"
+		},
+		{
+			"Rank": "198",
+			"french": "arrive",
+			"english": "come"
+		},
+		{
+			"Rank": "199",
+			"french": "vite",
+			"english": "quick"
+		},
+		{
+			"Rank": "200",
+			"french": "prendre",
+			"english": "take"
+		},
+		{
+			"Rank": "201",
+			"french": "regarde",
+			"english": "look"
+		},
+		{
+			"Rank": "202",
+			"french": "soit",
+			"english": "is"
+		},
+		{
+			"Rank": "203",
+			"french": "air",
+			"english": "air"
+		},
+		{
+			"Rank": "204",
+			"french": "quelle",
+			"english": "what"
+		},
+		{
+			"Rank": "205",
+			"french": "passé",
+			"english": "past"
+		},
+		{
+			"Rank": "206",
+			"french": "trois",
+			"english": "three"
+		},
+		{
+			"Rank": "207",
+			"french": "savoir",
+			"english": "know"
+		},
+		{
+			"Rank": "208",
+			"french": "plaît",
+			"english": "please"
+		},
+		{
+			"Rank": "209",
+			"french": "choses",
+			"english": "things"
+		},
+		{
+			"Rank": "210",
+			"french": "fils",
+			"english": "son"
+		},
+		{
+			"Rank": "211",
+			"french": "ah",
+			"english": "ha"
+		},
+		{
+			"Rank": "212",
+			"french": "bas",
+			"english": "low"
+		},
+		{
+			"Rank": "213",
+			"french": "moins",
+			"english": "less"
+		},
+		{
+			"Rank": "214",
+			"french": "entre",
+			"english": "enter"
+		},
+		{
+			"Rank": "215",
+			"french": "passe",
+			"english": "past"
+		},
+		{
+			"Rank": "216",
+			"french": "hé",
+			"english": "Hey"
+		},
+		{
+			"Rank": "217",
+			"french": "demain",
+			"english": "tomorrow"
+		},
+		{
+			"Rank": "218",
+			"french": "appelle",
+			"english": "call"
+		},
+		{
+			"Rank": "219",
+			"french": "grand",
+			"english": "great"
+		},
+		{
+			"Rank": "220",
+			"french": "tête",
+			"english": "head"
+		},
+		{
+			"Rank": "221",
+			"french": "voulez",
+			"english": "want"
+		},
+		{
+			"Rank": "222",
+			"french": "faites",
+			"english": "make"
+		},
+		{
+			"Rank": "223",
+			"french": "arrête",
+			"english": "stopped"
+		},
+		{
+			"Rank": "224",
+			"french": "hein",
+			"english": "huh"
+		},
+		{
+			"Rank": "225",
+			"french": "attends",
+			"english": "hold on"
+		},
+		{
+			"Rank": "226",
+			"french": "ok",
+			"english": "OK"
+		},
+		{
+			"Rank": "227",
+			"french": "raison",
+			"english": "reason"
+		},
+		{
+			"Rank": "228",
+			"french": "enfants",
+			"english": "children"
+		},
+		{
+			"Rank": "229",
+			"french": "assez",
+			"english": "enough"
+		},
+		{
+			"Rank": "230",
+			"french": "aurais",
+			"english": "would have"
+		},
+		{
+			"Rank": "231",
+			"french": "elles",
+			"english": "they"
+		},
+		{
+			"Rank": "232",
+			"french": "voulais",
+			"english": "wanted"
+		},
+		{
+			"Rank": "233",
+			"french": "sommes",
+			"english": "are"
+		},
+		{
+			"Rank": "234",
+			"french": "jours",
+			"english": "days"
+		},
+		{
+			"Rank": "235",
+			"french": "parle",
+			"english": "spoken"
+		},
+		{
+			"Rank": "236",
+			"french": "moment",
+			"english": "moment"
+		},
+		{
+			"Rank": "237",
+			"french": "amour",
+			"english": "love"
+		},
+		{
+			"Rank": "238",
+			"french": "toutes",
+			"english": "all"
+		},
+		{
+			"Rank": "239",
+			"french": "heure",
+			"english": "hour"
+		},
+		{
+			"Rank": "240",
+			"french": "puis",
+			"english": "then"
+		},
+		{
+			"Rank": "241",
+			"french": "tard",
+			"english": "late"
+		},
+		{
+			"Rank": "242",
+			"french": "tuer",
+			"english": "kill"
+		},
+		{
+			"Rank": "243",
+			"french": "eh",
+			"english": "eh"
+		},
+		{
+			"Rank": "244",
+			"french": "dû",
+			"english": "of"
+		},
+		{
+			"Rank": "245",
+			"french": "ami",
+			"english": "friend"
+		},
+		{
+			"Rank": "246",
+			"french": "petite",
+			"english": "small"
+		},
+		{
+			"Rank": "247",
+			"french": "partir",
+			"english": "go"
+		},
+		{
+			"Rank": "248",
+			"french": "hommes",
+			"english": "men"
+		},
+		{
+			"Rank": "249",
+			"french": "connais",
+			"english": "know"
+		},
+		{
+			"Rank": "250",
+			"french": "aider",
+			"english": "help"
+		},
+		{
+			"Rank": "251",
+			"french": "savez",
+			"english": "know"
+		},
+		{
+			"Rank": "252",
+			"french": "gars",
+			"english": "guys"
+		},
+		{
+			"Rank": "253",
+			"french": "chance",
+			"english": "luck"
+		},
+		{
+			"Rank": "254",
+			"french": "combien",
+			"english": "how much"
+		},
+		{
+			"Rank": "255",
+			"french": "tant",
+			"english": "so"
+		},
+		{
+			"Rank": "256",
+			"french": "sait",
+			"english": "know"
+		},
+		{
+			"Rank": "257",
+			"french": "part",
+			"english": "part"
+		},
+		{
+			"Rank": "258",
+			"french": "voiture",
+			"english": "car"
+		},
+		{
+			"Rank": "259",
+			"french": "pris",
+			"english": "taken"
+		},
+		{
+			"Rank": "260",
+			"french": "problème",
+			"english": "problem"
+		},
+		{
+			"Rank": "261",
+			"french": "hui",
+			"english": "hui"
+		},
+		{
+			"Rank": "262",
+			"french": "coup",
+			"english": "stroke"
+		},
+		{
+			"Rank": "263",
+			"french": "porte",
+			"english": "door"
+		},
+		{
+			"Rank": "264",
+			"french": "serait",
+			"english": "would be"
+		},
+		{
+			"Rank": "265",
+			"french": "prends",
+			"english": "take"
+		},
+		{
+			"Rank": "266",
+			"french": "venir",
+			"english": "come"
+		},
+		{
+			"Rank": "267",
+			"french": "travail",
+			"english": "job"
+		},
+		{
+			"Rank": "268",
+			"french": "pu",
+			"english": "could"
+		},
+		{
+			"Rank": "269",
+			"french": "famille",
+			"english": "family"
+		},
+		{
+			"Rank": "270",
+			"french": "seule",
+			"english": "alone"
+		},
+		{
+			"Rank": "271",
+			"french": "sens",
+			"english": "meaning"
+		},
+		{
+			"Rank": "272",
+			"french": "allons",
+			"english": "will"
+		},
+		{
+			"Rank": "273",
+			"french": "putain",
+			"english": "whore"
+		},
+		{
+			"Rank": "274",
+			"french": "idée",
+			"english": "idea"
+		},
+		{
+			"Rank": "275",
+			"french": "ni",
+			"english": "or"
+		},
+		{
+			"Rank": "276",
+			"french": "contre",
+			"english": "against"
+		},
+		{
+			"Rank": "277",
+			"french": "revoir",
+			"english": "meet again"
+		},
+		{
+			"Rank": "278",
+			"french": "entendu",
+			"english": "heard"
+		},
+		{
+			"Rank": "279",
+			"french": "comprends",
+			"english": "understand"
+		},
+		{
+			"Rank": "280",
+			"french": "passer",
+			"english": "pass"
+		},
+		{
+			"Rank": "281",
+			"french": "pendant",
+			"english": "while"
+		},
+		{
+			"Rank": "282",
+			"french": "trouvé",
+			"english": "find"
+		},
+		{
+			"Rank": "283",
+			"french": "trouver",
+			"english": "find"
+		},
+		{
+			"Rank": "284",
+			"french": "quelques",
+			"english": "a few"
+		},
+		{
+			"Rank": "285",
+			"french": "vient",
+			"english": "just"
+		},
+		{
+			"Rank": "286",
+			"french": "vieux",
+			"english": "old"
+		},
+		{
+			"Rank": "287",
+			"french": "aurait",
+			"english": "would have"
+		},
+		{
+			"Rank": "288",
+			"french": "attention",
+			"english": "Warning"
+		},
+		{
+			"Rank": "289",
+			"french": "demande",
+			"english": "request"
+		},
+		{
+			"Rank": "290",
+			"french": "chercher",
+			"english": "look for"
+		},
+		{
+			"Rank": "291",
+			"french": "sous",
+			"english": "under"
+		},
+		{
+			"Rank": "292",
+			"french": "pouvez",
+			"english": "can"
+		},
+		{
+			"Rank": "293",
+			"french": "voici",
+			"english": "here is"
+		},
+		{
+			"Rank": "294",
+			"french": "pourrait",
+			"english": "could"
+		},
+		{
+			"Rank": "295",
+			"french": "sang",
+			"english": "blood"
+		},
+		{
+			"Rank": "296",
+			"french": "histoire",
+			"english": "history"
+		},
+		{
+			"Rank": "297",
+			"french": "amis",
+			"english": "friends"
+		},
+		{
+			"Rank": "298",
+			"french": "sortir",
+			"english": "exit"
+		},
+		{
+			"Rank": "299",
+			"french": "question",
+			"english": "question"
+		},
+		{
+			"Rank": "300",
+			"french": "venez",
+			"english": "come"
+		},
+		{
+			"Rank": "301",
+			"french": "rester",
+			"english": "stay"
+		},
+		{
+			"Rank": "302",
+			"french": "frère",
+			"english": "brother"
+		},
+		{
+			"Rank": "303",
+			"french": "ville",
+			"english": "city"
+		},
+		{
+			"Rank": "304",
+			"french": "fini",
+			"english": "finished"
+		},
+		{
+			"Rank": "305",
+			"french": "nouveau",
+			"english": "new"
+		},
+		{
+			"Rank": "306",
+			"french": "eux",
+			"english": "them"
+		},
+		{
+			"Rank": "307",
+			"french": "truc",
+			"english": "thing"
+		},
+		{
+			"Rank": "308",
+			"french": "tiens",
+			"english": "like"
+		},
+		{
+			"Rank": "309",
+			"french": "yeux",
+			"english": "eyes"
+		},
+		{
+			"Rank": "310",
+			"french": "mois",
+			"english": "month"
+		},
+		{
+			"Rank": "311",
+			"french": "laisse",
+			"english": "leash"
+		},
+		{
+			"Rank": "312",
+			"french": "mec",
+			"english": "guy"
+		},
+		{
+			"Rank": "313",
+			"french": "longtemps",
+			"english": "long time"
+		},
+		{
+			"Rank": "314",
+			"french": "belle",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "315",
+			"french": "police",
+			"english": "police"
+		},
+		{
+			"Rank": "316",
+			"french": "seulement",
+			"english": "only"
+		},
+		{
+			"Rank": "317",
+			"french": "importe",
+			"english": "imported"
+		},
+		{
+			"Rank": "318",
+			"french": "heures",
+			"english": "hours"
+		},
+		{
+			"Rank": "319",
+			"french": "eau",
+			"english": "water"
+		},
+		{
+			"Rank": "320",
+			"french": "car",
+			"english": "because"
+		},
+		{
+			"Rank": "321",
+			"french": "super",
+			"english": "Great"
+		},
+		{
+			"Rank": "322",
+			"french": "chaque",
+			"english": "each"
+		},
+		{
+			"Rank": "323",
+			"french": "cas",
+			"english": "case"
+		},
+		{
+			"Rank": "324",
+			"french": "vont",
+			"english": "will"
+		},
+		{
+			"Rank": "325",
+			"french": "tué",
+			"english": "kill"
+		},
+		{
+			"Rank": "326",
+			"french": "terre",
+			"english": "Earth"
+		},
+		{
+			"Rank": "327",
+			"french": "place",
+			"english": "square"
+		},
+		{
+			"Rank": "328",
+			"french": "main",
+			"english": "hand"
+		},
+		{
+			"Rank": "329",
+			"french": "ensemble",
+			"english": "together"
+		},
+		{
+			"Rank": "330",
+			"french": "type",
+			"english": "type"
+		},
+		{
+			"Rank": "331",
+			"french": "beau",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "332",
+			"french": "pardon",
+			"english": "sorry"
+		},
+		{
+			"Rank": "333",
+			"french": "vers",
+			"english": "towards"
+		},
+		{
+			"Rank": "334",
+			"french": "aucun",
+			"english": "no"
+		},
+		{
+			"Rank": "335",
+			"french": "guerre",
+			"english": "war"
+		},
+		{
+			"Rank": "336",
+			"french": "trouve",
+			"english": "find"
+		},
+		{
+			"Rank": "337",
+			"french": "partie",
+			"english": "part"
+		},
+		{
+			"Rank": "338",
+			"french": "suite",
+			"english": "after"
+		},
+		{
+			"Rank": "339",
+			"french": "prie",
+			"english": "pray"
+		},
+		{
+			"Rank": "340",
+			"french": "devant",
+			"english": "in front of"
+		},
+		{
+			"Rank": "341",
+			"french": "compris",
+			"english": "including"
+		},
+		{
+			"Rank": "342",
+			"french": "arrivé",
+			"english": "come"
+		},
+		{
+			"Rank": "343",
+			"french": "mme",
+			"english": "Mrs"
+		},
+		{
+			"Rank": "344",
+			"french": "leurs",
+			"english": "their"
+		},
+		{
+			"Rank": "345",
+			"french": "étaient",
+			"english": "were"
+		},
+		{
+			"Rank": "346",
+			"french": "mettre",
+			"english": "to put"
+		},
+		{
+			"Rank": "347",
+			"french": "matin",
+			"english": "morning"
+		},
+		{
+			"Rank": "348",
+			"french": "aide",
+			"english": "help"
+		},
+		{
+			"Rank": "349",
+			"french": "dessus",
+			"english": "above"
+		},
+		{
+			"Rank": "350",
+			"french": "sois",
+			"english": "am"
+		},
+		{
+			"Rank": "351",
+			"french": "genre",
+			"english": "kind"
+		},
+		{
+			"Rank": "352",
+			"french": "fin",
+			"english": "end"
+		},
+		{
+			"Rank": "353",
+			"french": "perdu",
+			"english": "lost"
+		},
+		{
+			"Rank": "354",
+			"french": "jeune",
+			"english": "young"
+		},
+		{
+			"Rank": "355",
+			"french": "chérie",
+			"english": "sweetheart"
+		},
+		{
+			"Rank": "356",
+			"french": "premier",
+			"english": "first"
+		},
+		{
+			"Rank": "357",
+			"french": "attendez",
+			"english": "Wait"
+		},
+		{
+			"Rank": "358",
+			"french": "enfant",
+			"english": "child"
+		},
+		{
+			"Rank": "359",
+			"french": "donne",
+			"english": "given"
+		},
+		{
+			"Rank": "360",
+			"french": "venu",
+			"english": "came"
+		},
+		{
+			"Rank": "361",
+			"french": "aimerais",
+			"english": "would like to"
+		},
+		{
+			"Rank": "362",
+			"french": "droit",
+			"english": "law"
+		},
+		{
+			"Rank": "363",
+			"french": "côté",
+			"english": "side"
+		},
+		{
+			"Rank": "364",
+			"french": "chambre",
+			"english": "bedroom"
+		},
+		{
+			"Rank": "365",
+			"french": "loin",
+			"english": "far"
+		},
+		{
+			"Rank": "366",
+			"french": "donner",
+			"english": "give"
+		},
+		{
+			"Rank": "367",
+			"french": "devrais",
+			"english": "should"
+		},
+		{
+			"Rank": "368",
+			"french": "laisser",
+			"english": "let"
+		},
+		{
+			"Rank": "369",
+			"french": "feu",
+			"english": "fire"
+		},
+		{
+			"Rank": "370",
+			"french": "jouer",
+			"english": "to play"
+		},
+		{
+			"Rank": "371",
+			"french": "ie",
+			"english": "ie"
+		},
+		{
+			"Rank": "372",
+			"french": "train",
+			"english": "train"
+		},
+		{
+			"Rank": "373",
+			"french": "gros",
+			"english": "big"
+		},
+		{
+			"Rank": "374",
+			"french": "compte",
+			"english": "account"
+		},
+		{
+			"Rank": "375",
+			"french": "s",
+			"english": "s"
+		},
+		{
+			"Rank": "376",
+			"french": "savais",
+			"english": "knew"
+		},
+		{
+			"Rank": "377",
+			"french": "mourir",
+			"english": "die"
+		},
+		{
+			"Rank": "378",
+			"french": "pouvoir",
+			"english": "power"
+		},
+		{
+			"Rank": "379",
+			"french": "regardez",
+			"english": "look"
+		},
+		{
+			"Rank": "380",
+			"french": "parlé",
+			"english": "spoken"
+		},
+		{
+			"Rank": "381",
+			"french": "donné",
+			"english": "given"
+		},
+		{
+			"Rank": "382",
+			"french": "première",
+			"english": "first"
+		},
+		{
+			"Rank": "383",
+			"french": "aura",
+			"english": "will have"
+		},
+		{
+			"Rank": "384",
+			"french": "dernière",
+			"english": "latest"
+		},
+		{
+			"Rank": "385",
+			"french": "minutes",
+			"english": "minutes"
+		},
+		{
+			"Rank": "386",
+			"french": "aucune",
+			"english": "any"
+		},
+		{
+			"Rank": "387",
+			"french": "mari",
+			"english": "husband"
+		},
+		{
+			"Rank": "388",
+			"french": "enfin",
+			"english": "finally"
+		},
+		{
+			"Rank": "389",
+			"french": "madame",
+			"english": "Mrs"
+		},
+		{
+			"Rank": "390",
+			"french": "façon",
+			"english": "way"
+		},
+		{
+			"Rank": "391",
+			"french": "devrait",
+			"english": "should"
+		},
+		{
+			"Rank": "392",
+			"french": "mis",
+			"english": "placed"
+		},
+		{
+			"Rank": "393",
+			"french": "film",
+			"english": "movie"
+		},
+		{
+			"Rank": "394",
+			"french": "femmes",
+			"english": "women"
+		},
+		{
+			"Rank": "395",
+			"french": "fort",
+			"english": "fort"
+		},
+		{
+			"Rank": "396",
+			"french": "pourrais",
+			"english": "could"
+		},
+		{
+			"Rank": "397",
+			"french": "écoute",
+			"english": "listening"
+		},
+		{
+			"Rank": "398",
+			"french": "pays",
+			"english": "country"
+		},
+		{
+			"Rank": "399",
+			"french": "parti",
+			"english": "left"
+		},
+		{
+			"Rank": "400",
+			"french": "affaire",
+			"english": "case"
+		},
+		{
+			"Rank": "401",
+			"french": "endroit",
+			"english": "in law"
+		},
+		{
+			"Rank": "402",
+			"french": "corps",
+			"english": "body"
+		},
+		{
+			"Rank": "403",
+			"french": "ia",
+			"english": "ia"
+		},
+		{
+			"Rank": "404",
+			"french": "fou",
+			"english": "crazy"
+		},
+		{
+			"Rank": "405",
+			"french": "vivre",
+			"english": "live"
+		},
+		{
+			"Rank": "406",
+			"french": "prêt",
+			"english": "ready"
+		},
+		{
+			"Rank": "407",
+			"french": "dont",
+			"english": "whose"
+		},
+		{
+			"Rank": "408",
+			"french": "espère",
+			"english": "hope"
+		},
+		{
+			"Rank": "409",
+			"french": "grande",
+			"english": "great"
+		},
+		{
+			"Rank": "410",
+			"french": "cause",
+			"english": "cause"
+		},
+		{
+			"Rank": "411",
+			"french": "point",
+			"english": "point"
+		},
+		{
+			"Rank": "412",
+			"french": "filles",
+			"english": "girls"
+		},
+		{
+			"Rank": "413",
+			"french": "dehors",
+			"english": "outside"
+		},
+		{
+			"Rank": "414",
+			"french": "hier",
+			"english": "yesterday"
+		},
+		{
+			"Rank": "415",
+			"french": "boulot",
+			"english": "job"
+		},
+		{
+			"Rank": "416",
+			"french": "pensais",
+			"english": "thought"
+		},
+		{
+			"Rank": "417",
+			"french": "garçon",
+			"english": "boy"
+		},
+		{
+			"Rank": "418",
+			"french": "près",
+			"english": "near"
+		},
+		{
+			"Rank": "419",
+			"french": "désolée",
+			"english": "sorry"
+		},
+		{
+			"Rank": "420",
+			"french": "cinq",
+			"english": "five"
+		},
+		{
+			"Rank": "421",
+			"french": "chef",
+			"english": "chief"
+		},
+		{
+			"Rank": "422",
+			"french": "h",
+			"english": "h"
+		},
+		{
+			"Rank": "423",
+			"french": "ainsi",
+			"english": "so"
+		},
+		{
+			"Rank": "424",
+			"french": "haut",
+			"english": "top"
+		},
+		{
+			"Rank": "425",
+			"french": "celui",
+			"english": "that"
+		},
+		{
+			"Rank": "426",
+			"french": "demandé",
+			"english": "request"
+		},
+		{
+			"Rank": "427",
+			"french": "dirait",
+			"english": "would say"
+		},
+		{
+			"Rank": "428",
+			"french": "bébé",
+			"english": "baby"
+		},
+		{
+			"Rank": "429",
+			"french": "possible",
+			"english": "possible"
+		},
+		{
+			"Rank": "430",
+			"french": "école",
+			"english": "school"
+		},
+		{
+			"Rank": "431",
+			"french": "plein",
+			"english": "full"
+		},
+		{
+			"Rank": "432",
+			"french": "mains",
+			"english": "hands"
+		},
+		{
+			"Rank": "433",
+			"french": "années",
+			"english": "years"
+		},
+		{
+			"Rank": "434",
+			"french": "dites",
+			"english": "say"
+		},
+		{
+			"Rank": "435",
+			"french": "nouvelle",
+			"english": "new"
+		},
+		{
+			"Rank": "436",
+			"french": "manger",
+			"english": "eat"
+		},
+		{
+			"Rank": "437",
+			"french": "docteur",
+			"english": "doctor"
+		},
+		{
+			"Rank": "438",
+			"french": "tour",
+			"english": "tower"
+		},
+		{
+			"Rank": "439",
+			"french": "croire",
+			"english": "believe"
+		},
+		{
+			"Rank": "440",
+			"french": "ceux",
+			"english": "those"
+		},
+		{
+			"Rank": "441",
+			"french": "quatre",
+			"english": "four"
+		},
+		{
+			"Rank": "442",
+			"french": "plutôt",
+			"english": "rather"
+		},
+		{
+			"Rank": "443",
+			"french": "marche",
+			"english": "market"
+		},
+		{
+			"Rank": "444",
+			"french": "semaine",
+			"english": "week"
+		},
+		{
+			"Rank": "445",
+			"french": "vérité",
+			"english": "truth"
+		},
+		{
+			"Rank": "446",
+			"french": "envie",
+			"english": "desire"
+		},
+		{
+			"Rank": "447",
+			"french": "capitaine",
+			"english": "captain"
+		},
+		{
+			"Rank": "448",
+			"french": "e",
+			"english": "e"
+		},
+		{
+			"Rank": "449",
+			"french": "arrêter",
+			"english": "Stop"
+		},
+		{
+			"Rank": "450",
+			"french": "affaires",
+			"english": "business"
+		},
+		{
+			"Rank": "451",
+			"french": "bientôt",
+			"english": "soon"
+		},
+		{
+			"Rank": "452",
+			"french": "vue",
+			"english": "view"
+		},
+		{
+			"Rank": "453",
+			"french": "demander",
+			"english": "request"
+		},
+		{
+			"Rank": "454",
+			"french": "dernier",
+			"english": "latest"
+		},
+		{
+			"Rank": "455",
+			"french": "instant",
+			"english": "moment"
+		},
+		{
+			"Rank": "456",
+			"french": "essaie",
+			"english": "try"
+		},
+		{
+			"Rank": "457",
+			"french": "arriver",
+			"english": "arrive"
+		},
+		{
+			"Rank": "458",
+			"french": "font",
+			"english": "make"
+		},
+		{
+			"Rank": "459",
+			"french": "tellement",
+			"english": "so much"
+		},
+		{
+			"Rank": "460",
+			"french": "derrière",
+			"english": "behind"
+		},
+		{
+			"Rank": "461",
+			"french": "tomber",
+			"english": "fall"
+		},
+		{
+			"Rank": "462",
+			"french": "presque",
+			"english": "almost"
+		},
+		{
+			"Rank": "463",
+			"french": "voulait",
+			"english": "wanted to"
+		},
+		{
+			"Rank": "464",
+			"french": "meilleur",
+			"english": "better"
+		},
+		{
+			"Rank": "465",
+			"french": "numéro",
+			"english": "number"
+		},
+		{
+			"Rank": "466",
+			"french": "dr",
+			"english": "dr"
+		},
+		{
+			"Rank": "467",
+			"french": "journée",
+			"english": "day"
+		},
+		{
+			"Rank": "468",
+			"french": "appeler",
+			"english": "call"
+		},
+		{
+			"Rank": "469",
+			"french": "dollars",
+			"english": "dollars"
+		},
+		{
+			"Rank": "470",
+			"french": "c",
+			"english": "c"
+		},
+		{
+			"Rank": "471",
+			"french": "attendre",
+			"english": "expect"
+		},
+		{
+			"Rank": "472",
+			"french": "confiance",
+			"english": "trust"
+		},
+		{
+			"Rank": "473",
+			"french": "garde",
+			"english": "keep"
+		},
+		{
+			"Rank": "474",
+			"french": "souviens",
+			"english": "remember"
+		},
+		{
+			"Rank": "475",
+			"french": "dur",
+			"english": "hard"
+		},
+		{
+			"Rank": "476",
+			"french": "serai",
+			"english": "will"
+		},
+		{
+			"Rank": "477",
+			"french": "bureau",
+			"english": "office"
+		},
+		{
+			"Rank": "478",
+			"french": "voyez",
+			"english": "see"
+		},
+		{
+			"Rank": "479",
+			"french": "abord",
+			"english": "on board"
+		},
+		{
+			"Rank": "480",
+			"french": "important",
+			"english": "important"
+		},
+		{
+			"Rank": "481",
+			"french": "devez",
+			"english": "must"
+		},
+		{
+			"Rank": "482",
+			"french": "ben",
+			"english": "ben"
+		},
+		{
+			"Rank": "483",
+			"french": "peine",
+			"english": "sentence"
+		},
+		{
+			"Rank": "484",
+			"french": "cours",
+			"english": "course"
+		},
+		{
+			"Rank": "485",
+			"french": "fera",
+			"english": "will"
+		},
+		{
+			"Rank": "486",
+			"french": "prend",
+			"english": "take"
+		},
+		{
+			"Rank": "487",
+			"french": "seigneur",
+			"english": "Lord"
+		},
+		{
+			"Rank": "488",
+			"french": "suffit",
+			"english": "enough"
+		},
+		{
+			"Rank": "489",
+			"french": "route",
+			"english": "road"
+		},
+		{
+			"Rank": "490",
+			"french": "cul",
+			"english": "ass"
+		},
+		{
+			"Rank": "491",
+			"french": "lls",
+			"english": "They"
+		},
+		{
+			"Rank": "492",
+			"french": "minute",
+			"english": "minute"
+		},
+		{
+			"Rank": "493",
+			"french": "bonsoir",
+			"english": "Good evening"
+		},
+		{
+			"Rank": "494",
+			"french": "jeu",
+			"english": "thu"
+		},
+		{
+			"Rank": "495",
+			"french": "croyais",
+			"english": "thought"
+		},
+		{
+			"Rank": "496",
+			"french": "ferme",
+			"english": "closed"
+		},
+		{
+			"Rank": "497",
+			"french": "plaisir",
+			"english": "pleasure"
+		},
+		{
+			"Rank": "498",
+			"french": "voudrais",
+			"english": "would like"
+		},
+		{
+			"Rank": "499",
+			"french": "heureux",
+			"english": "happy"
+		},
+		{
+			"Rank": "500",
+			"french": "mot",
+			"english": "word"
+		},
+		{
+			"Rank": "501",
+			"french": "musique",
+			"english": "music"
+		},
+		{
+			"Rank": "502",
+			"french": "chien",
+			"english": "dog"
+		},
+		{
+			"Rank": "503",
+			"french": "messieurs",
+			"english": "gentlemen"
+		},
+		{
+			"Rank": "504",
+			"french": "prenez",
+			"english": "take"
+		},
+		{
+			"Rank": "505",
+			"french": "calme",
+			"english": "calm"
+		},
+		{
+			"Rank": "506",
+			"french": "parents",
+			"english": "parents"
+		},
+		{
+			"Rank": "507",
+			"french": "o",
+			"english": "o"
+		},
+		{
+			"Rank": "508",
+			"french": "dedans",
+			"english": "in"
+		},
+		{
+			"Rank": "509",
+			"french": "fous",
+			"english": "crazy"
+		},
+		{
+			"Rank": "510",
+			"french": "arrêtez",
+			"english": "stop"
+		},
+		{
+			"Rank": "511",
+			"french": "mariage",
+			"english": "wedding"
+		},
+		{
+			"Rank": "512",
+			"french": "entrer",
+			"english": "enter"
+		},
+		{
+			"Rank": "513",
+			"french": "rentrer",
+			"english": "return"
+		},
+		{
+			"Rank": "514",
+			"french": "ait",
+			"english": "has"
+		},
+		{
+			"Rank": "515",
+			"french": "lit",
+			"english": "bed"
+		},
+		{
+			"Rank": "516",
+			"french": "voit",
+			"english": "sees"
+		},
+		{
+			"Rank": "517",
+			"french": "autant",
+			"english": "as much"
+		},
+		{
+			"Rank": "518",
+			"french": "reviens",
+			"english": "come back"
+		},
+		{
+			"Rank": "519",
+			"french": "parfait",
+			"english": "perfect"
+		},
+		{
+			"Rank": "520",
+			"french": "coeur",
+			"english": "heart"
+		},
+		{
+			"Rank": "521",
+			"french": "ceci",
+			"english": "this"
+		},
+		{
+			"Rank": "522",
+			"french": "service",
+			"english": "service"
+		},
+		{
+			"Rank": "523",
+			"french": "téléphone",
+			"english": "phone"
+		},
+		{
+			"Rank": "524",
+			"french": "pauvre",
+			"english": "poor"
+		},
+		{
+			"Rank": "525",
+			"french": "mlle",
+			"english": "Ms"
+		},
+		{
+			"Rank": "526",
+			"french": "attend",
+			"english": "waits"
+		},
+		{
+			"Rank": "527",
+			"french": "drôle",
+			"english": "funny"
+		},
+		{
+			"Rank": "528",
+			"french": "ira",
+			"english": "will"
+		},
+		{
+			"Rank": "529",
+			"french": "parfois",
+			"english": "sometimes"
+		},
+		{
+			"Rank": "530",
+			"french": "l",
+			"english": "l"
+		},
+		{
+			"Rank": "531",
+			"french": "retour",
+			"english": "return"
+		},
+		{
+			"Rank": "532",
+			"french": "á",
+			"english": "at"
+		},
+		{
+			"Rank": "533",
+			"french": "verre",
+			"english": "glass"
+		},
+		{
+			"Rank": "534",
+			"french": "pensé",
+			"english": "thought"
+		},
+		{
+			"Rank": "535",
+			"french": "six",
+			"english": "six"
+		},
+		{
+			"Rank": "536",
+			"french": "ci",
+			"english": "this"
+		},
+		{
+			"Rank": "537",
+			"french": "impossible",
+			"english": "impossible"
+		},
+		{
+			"Rank": "538",
+			"french": "ferai",
+			"english": "will"
+		},
+		{
+			"Rank": "539",
+			"french": "aimes",
+			"english": "love"
+		},
+		{
+			"Rank": "540",
+			"french": "payer",
+			"english": "pay"
+		},
+		{
+			"Rank": "541",
+			"french": "facile",
+			"english": "easy"
+		},
+		{
+			"Rank": "542",
+			"french": "maître",
+			"english": "master"
+		},
+		{
+			"Rank": "543",
+			"french": "new",
+			"english": "new"
+		},
+		{
+			"Rank": "544",
+			"french": "appelé",
+			"english": "called"
+		},
+		{
+			"Rank": "545",
+			"french": "mauvais",
+			"english": "bad"
+		},
+		{
+			"Rank": "546",
+			"french": "général",
+			"english": "general"
+		},
+		{
+			"Rank": "547",
+			"french": "doute",
+			"english": "doubt"
+		},
+		{
+			"Rank": "548",
+			"french": "prison",
+			"english": "jail"
+		},
+		{
+			"Rank": "549",
+			"french": "adore",
+			"english": "love"
+		},
+		{
+			"Rank": "550",
+			"french": "faute",
+			"english": "fault"
+		},
+		{
+			"Rank": "551",
+			"french": "entends",
+			"english": "hear"
+		},
+		{
+			"Rank": "552",
+			"french": "oublié",
+			"english": "forget it"
+		},
+		{
+			"Rank": "553",
+			"french": "bras",
+			"english": "arms"
+		},
+		{
+			"Rank": "554",
+			"french": "exactement",
+			"english": "exactly"
+		},
+		{
+			"Rank": "555",
+			"french": "fête",
+			"english": "Party"
+		},
+		{
+			"Rank": "556",
+			"french": "café",
+			"english": "coffee"
+		},
+		{
+			"Rank": "557",
+			"french": "chéri",
+			"english": "Darling"
+		},
+		{
+			"Rank": "558",
+			"french": "sors",
+			"english": "go outside"
+		},
+		{
+			"Rank": "559",
+			"french": "gentil",
+			"english": "nice"
+		},
+		{
+			"Rank": "560",
+			"french": "penser",
+			"english": "think"
+		},
+		{
+			"Rank": "561",
+			"french": "vaut",
+			"english": "worth"
+		},
+		{
+			"Rank": "562",
+			"french": "john",
+			"english": "john"
+		},
+		{
+			"Rank": "563",
+			"french": "lieu",
+			"english": "place"
+		},
+		{
+			"Rank": "564",
+			"french": "malade",
+			"english": "sick"
+		},
+		{
+			"Rank": "565",
+			"french": "changer",
+			"english": "change"
+		},
+		{
+			"Rank": "566",
+			"french": "roi",
+			"english": "King"
+		},
+		{
+			"Rank": "567",
+			"french": "commence",
+			"english": "begin"
+		},
+		{
+			"Rank": "568",
+			"french": "entendre",
+			"english": "hear"
+		},
+		{
+			"Rank": "569",
+			"french": "président",
+			"english": "President"
+		},
+		{
+			"Rank": "570",
+			"french": "travailler",
+			"english": "to work"
+		},
+		{
+			"Rank": "571",
+			"french": "partout",
+			"english": "all over"
+		},
+		{
+			"Rank": "572",
+			"french": "cher",
+			"english": "expensive"
+		},
+		{
+			"Rank": "573",
+			"french": "morts",
+			"english": "dead"
+		},
+		{
+			"Rank": "574",
+			"french": "rendre",
+			"english": "return"
+		},
+		{
+			"Rank": "575",
+			"french": "écrit",
+			"english": "written"
+		},
+		{
+			"Rank": "576",
+			"french": "équipe",
+			"english": "team"
+		},
+		{
+			"Rank": "577",
+			"french": "joue",
+			"english": "play"
+		},
+		{
+			"Rank": "578",
+			"french": "i",
+			"english": "i"
+		},
+		{
+			"Rank": "579",
+			"french": "sinon",
+			"english": "if not"
+		},
+		{
+			"Rank": "580",
+			"french": "esprit",
+			"english": "mind"
+		},
+		{
+			"Rank": "581",
+			"french": "regarder",
+			"english": "watch"
+		},
+		{
+			"Rank": "582",
+			"french": "rentre",
+			"english": "returns"
+		},
+		{
+			"Rank": "583",
+			"french": "plan",
+			"english": "plan"
+		},
+		{
+			"Rank": "584",
+			"french": "cœur",
+			"english": "heart"
+		},
+		{
+			"Rank": "585",
+			"french": "veulent",
+			"english": "want"
+		},
+		{
+			"Rank": "586",
+			"french": "montrer",
+			"english": "show"
+		},
+		{
+			"Rank": "587",
+			"french": "voulu",
+			"english": "desired"
+		},
+		{
+			"Rank": "588",
+			"french": "boire",
+			"english": "to drink"
+		},
+		{
+			"Rank": "589",
+			"french": "travaille",
+			"english": "work"
+		},
+		{
+			"Rank": "590",
+			"french": "propre",
+			"english": "clean"
+		},
+		{
+			"Rank": "591",
+			"french": "année",
+			"english": "year"
+		},
+		{
+			"Rank": "592",
+			"french": "état",
+			"english": "state"
+		},
+		{
+			"Rank": "593",
+			"french": "soyez",
+			"english": "are"
+		},
+		{
+			"Rank": "594",
+			"french": "bois",
+			"english": "wood"
+		},
+		{
+			"Rank": "595",
+			"french": "cherche",
+			"english": "looking"
+		},
+		{
+			"Rank": "596",
+			"french": "t",
+			"english": "t"
+		},
+		{
+			"Rank": "597",
+			"french": "laissé",
+			"english": "leash"
+		},
+		{
+			"Rank": "598",
+			"french": "essayer",
+			"english": "try"
+		},
+		{
+			"Rank": "599",
+			"french": "dès",
+			"english": "from"
+		},
+		{
+			"Rank": "600",
+			"french": "semble",
+			"english": "seems"
+		},
+		{
+			"Rank": "601",
+			"french": "ies",
+			"english": "ies"
+		},
+		{
+			"Rank": "602",
+			"french": "jack",
+			"english": "jack"
+		},
+		{
+			"Rank": "603",
+			"french": "dix",
+			"english": "ten"
+		},
+		{
+			"Rank": "604",
+			"french": "faisait",
+			"english": "was"
+		},
+		{
+			"Rank": "605",
+			"french": "génial",
+			"english": "awesome"
+		},
+		{
+			"Rank": "606",
+			"french": "penses",
+			"english": "think"
+		},
+		{
+			"Rank": "607",
+			"french": "sécurité",
+			"english": "security"
+		},
+		{
+			"Rank": "608",
+			"french": "tôt",
+			"english": "early"
+		},
+		{
+			"Rank": "609",
+			"french": "mets",
+			"english": "dish"
+		},
+		{
+			"Rank": "610",
+			"french": "rêve",
+			"english": "dream"
+		},
+		{
+			"Rank": "611",
+			"french": "armée",
+			"english": "army"
+		},
+		{
+			"Rank": "612",
+			"french": "perdre",
+			"english": "to lose"
+		},
+		{
+			"Rank": "613",
+			"french": "d",
+			"english": "d"
+		},
+		{
+			"Rank": "614",
+			"french": "parles",
+			"english": "talk"
+		},
+		{
+			"Rank": "615",
+			"french": "avis",
+			"english": "notice"
+		},
+		{
+			"Rank": "616",
+			"french": "surtout",
+			"english": "mostly"
+		},
+		{
+			"Rank": "617",
+			"french": "difficile",
+			"english": "difficult"
+		},
+		{
+			"Rank": "618",
+			"french": "york",
+			"english": "york"
+		},
+		{
+			"Rank": "619",
+			"french": "dormir",
+			"english": "to sleep"
+		},
+		{
+			"Rank": "620",
+			"french": "ensuite",
+			"english": "then"
+		},
+		{
+			"Rank": "621",
+			"french": "pire",
+			"english": "worst"
+		},
+		{
+			"Rank": "622",
+			"french": "ecoute",
+			"english": "listening"
+		},
+		{
+			"Rank": "623",
+			"french": "simple",
+			"english": "simple"
+		},
+		{
+			"Rank": "624",
+			"french": "allait",
+			"english": "was going to"
+		},
+		{
+			"Rank": "625",
+			"french": "paix",
+			"english": "peace"
+		},
+		{
+			"Rank": "626",
+			"french": "morte",
+			"english": "dead woman"
+		},
+		{
+			"Rank": "627",
+			"french": "arme",
+			"english": "armed"
+		},
+		{
+			"Rank": "628",
+			"french": "sujet",
+			"english": "subject"
+		},
+		{
+			"Rank": "629",
+			"french": "retard",
+			"english": "delay"
+		},
+		{
+			"Rank": "630",
+			"french": "voyons",
+			"english": "see"
+		},
+		{
+			"Rank": "631",
+			"french": "livre",
+			"english": "book"
+		},
+		{
+			"Rank": "632",
+			"french": "appris",
+			"english": "learned"
+		},
+		{
+			"Rank": "633",
+			"french": "peuvent",
+			"english": "can"
+		},
+		{
+			"Rank": "634",
+			"french": "sale",
+			"english": "dirty"
+		},
+		{
+			"Rank": "635",
+			"french": "serais",
+			"english": "would"
+		},
+		{
+			"Rank": "636",
+			"french": "souvent",
+			"english": "often"
+		},
+		{
+			"Rank": "637",
+			"french": "an",
+			"english": "year"
+		},
+		{
+			"Rank": "638",
+			"french": "sauf",
+			"english": "EXCEPT"
+		},
+		{
+			"Rank": "639",
+			"french": "choix",
+			"english": "choice"
+		},
+		{
+			"Rank": "640",
+			"french": "sûrement",
+			"english": "surely"
+		},
+		{
+			"Rank": "641",
+			"french": "étiez",
+			"english": "were"
+		},
+		{
+			"Rank": "642",
+			"french": "or",
+			"english": "gold"
+		},
+		{
+			"Rank": "643",
+			"french": "visage",
+			"english": "face"
+		},
+		{
+			"Rank": "644",
+			"french": "ordre",
+			"english": "order"
+		},
+		{
+			"Rank": "645",
+			"french": "comprendre",
+			"english": "understand"
+		},
+		{
+			"Rank": "646",
+			"french": "essayé",
+			"english": "tried"
+		},
+		{
+			"Rank": "647",
+			"french": "noir",
+			"english": "black"
+		},
+		{
+			"Rank": "648",
+			"french": "dîner",
+			"english": "having dinner"
+		},
+		{
+			"Rank": "649",
+			"french": "âge",
+			"english": "age"
+		},
+		{
+			"Rank": "650",
+			"french": "chemin",
+			"english": "path"
+		},
+		{
+			"Rank": "651",
+			"french": "changé",
+			"english": "exchange"
+		},
+		{
+			"Rank": "652",
+			"french": "bout",
+			"english": "end"
+		},
+		{
+			"Rank": "653",
+			"french": "face",
+			"english": "face"
+		},
+		{
+			"Rank": "654",
+			"french": "rue",
+			"english": "street"
+		},
+		{
+			"Rank": "655",
+			"french": "inquiète",
+			"english": "worry"
+		},
+		{
+			"Rank": "656",
+			"french": "photo",
+			"english": "photo"
+		},
+		{
+			"Rank": "657",
+			"french": "allé",
+			"english": "go"
+		},
+		{
+			"Rank": "658",
+			"french": "personnes",
+			"english": "people"
+		},
+		{
+			"Rank": "659",
+			"french": "sérieux",
+			"english": "serious"
+		},
+		{
+			"Rank": "660",
+			"french": "ciel",
+			"english": "sky"
+		},
+		{
+			"Rank": "661",
+			"french": "honneur",
+			"english": "honor"
+		},
+		{
+			"Rank": "662",
+			"french": "amie",
+			"english": "friend"
+		},
+		{
+			"Rank": "663",
+			"french": "questions",
+			"english": "Questions"
+		},
+		{
+			"Rank": "664",
+			"french": "force",
+			"english": "strength"
+		},
+		{
+			"Rank": "665",
+			"french": "j",
+			"english": "j"
+		},
+		{
+			"Rank": "666",
+			"french": "garder",
+			"english": "keep"
+		},
+		{
+			"Rank": "667",
+			"french": "petits",
+			"english": "small"
+		},
+		{
+			"Rank": "668",
+			"french": "tirer",
+			"english": "shoot"
+		},
+		{
+			"Rank": "669",
+			"french": "millions",
+			"english": "millions"
+		},
+		{
+			"Rank": "670",
+			"french": "grave",
+			"english": "serious"
+		},
+		{
+			"Rank": "671",
+			"french": "marché",
+			"english": "market"
+		},
+		{
+			"Rank": "672",
+			"french": "nouvelles",
+			"english": "new"
+		},
+		{
+			"Rank": "673",
+			"french": "voix",
+			"english": "voice"
+		},
+		{
+			"Rank": "674",
+			"french": "semaines",
+			"english": "weeks"
+		},
+		{
+			"Rank": "675",
+			"french": "pouvais",
+			"english": "could"
+		},
+		{
+			"Rank": "676",
+			"french": "courant",
+			"english": "current"
+		},
+		{
+			"Rank": "677",
+			"french": "propos",
+			"english": "About"
+		},
+		{
+			"Rank": "678",
+			"french": "bateau",
+			"english": "boat"
+		},
+		{
+			"Rank": "679",
+			"french": "oublie",
+			"english": "forget it"
+		},
+		{
+			"Rank": "680",
+			"french": "con",
+			"english": "cunt"
+		},
+		{
+			"Rank": "681",
+			"french": "celle",
+			"english": "that"
+		},
+		{
+			"Rank": "682",
+			"french": "gauche",
+			"english": "left"
+		},
+		{
+			"Rank": "683",
+			"french": "content",
+			"english": "happy"
+		},
+		{
+			"Rank": "684",
+			"french": "prix",
+			"english": "price"
+		},
+		{
+			"Rank": "685",
+			"french": "rouge",
+			"english": "red"
+		},
+		{
+			"Rank": "686",
+			"french": "faim",
+			"english": "hunger"
+		},
+		{
+			"Rank": "687",
+			"french": "ferais",
+			"english": "would"
+		},
+		{
+			"Rank": "688",
+			"french": "avion",
+			"english": "plane"
+		},
+		{
+			"Rank": "689",
+			"french": "devenir",
+			"english": "to become"
+		},
+		{
+			"Rank": "690",
+			"french": "devoir",
+			"english": "duty"
+		},
+		{
+			"Rank": "691",
+			"french": "prochaine",
+			"english": "next"
+		},
+		{
+			"Rank": "692",
+			"french": "restez",
+			"english": "stay"
+		},
+		{
+			"Rank": "693",
+			"french": "acheter",
+			"english": "buy"
+		},
+		{
+			"Rank": "694",
+			"french": "voyage",
+			"english": "trip"
+		},
+		{
+			"Rank": "695",
+			"french": "sorte",
+			"english": "kind"
+		},
+		{
+			"Rank": "696",
+			"french": "long",
+			"english": "long"
+		},
+		{
+			"Rank": "697",
+			"french": "espèce",
+			"english": "species"
+		},
+		{
+			"Rank": "698",
+			"french": "idiot",
+			"english": "idiot"
+		},
+		{
+			"Rank": "699",
+			"french": "gueule",
+			"english": "mouth"
+		},
+		{
+			"Rank": "700",
+			"french": "début",
+			"english": "beginning"
+		},
+		{
+			"Rank": "701",
+			"french": "bouge",
+			"english": "moves"
+		},
+		{
+			"Rank": "702",
+			"french": "continue",
+			"english": "keep on going"
+		},
+		{
+			"Rank": "703",
+			"french": "hôpital",
+			"english": "hospital"
+		},
+		{
+			"Rank": "704",
+			"french": "sort",
+			"english": "fate"
+		},
+		{
+			"Rank": "705",
+			"french": "grâce",
+			"english": "grace"
+		},
+		{
+			"Rank": "706",
+			"french": "problèmes",
+			"english": "problems"
+		},
+		{
+			"Rank": "707",
+			"french": "message",
+			"english": "message"
+		},
+		{
+			"Rank": "708",
+			"french": "certains",
+			"english": "some"
+		},
+		{
+			"Rank": "709",
+			"french": "patron",
+			"english": "boss"
+		},
+		{
+			"Rank": "710",
+			"french": "sûre",
+			"english": "safe"
+		},
+		{
+			"Rank": "711",
+			"french": "reçu",
+			"english": "received"
+		},
+		{
+			"Rank": "712",
+			"french": "trucs",
+			"english": "stuff"
+		},
+		{
+			"Rank": "713",
+			"french": "avaient",
+			"english": "had"
+		},
+		{
+			"Rank": "714",
+			"french": "ouvre",
+			"english": "opens"
+		},
+		{
+			"Rank": "715",
+			"french": "promis",
+			"english": "promised"
+		},
+		{
+			"Rank": "716",
+			"french": "the",
+			"english": "tea"
+		},
+		{
+			"Rank": "717",
+			"french": "oncle",
+			"english": "uncle"
+		},
+		{
+			"Rank": "718",
+			"french": "euh",
+			"english": "uh"
+		},
+		{
+			"Rank": "719",
+			"french": "connaissez",
+			"english": "know"
+		},
+		{
+			"Rank": "720",
+			"french": "laissez",
+			"english": "leave"
+		},
+		{
+			"Rank": "721",
+			"french": "devons",
+			"english": "must"
+		},
+		{
+			"Rank": "722",
+			"french": "bienvenue",
+			"english": "welcome"
+		},
+		{
+			"Rank": "723",
+			"french": "occupe",
+			"english": "occupied"
+		},
+		{
+			"Rank": "724",
+			"french": "allais",
+			"english": "going"
+		},
+		{
+			"Rank": "725",
+			"french": "camp",
+			"english": "camp"
+		},
+		{
+			"Rank": "726",
+			"french": "manque",
+			"english": "lack"
+		},
+		{
+			"Rank": "727",
+			"french": "soleil",
+			"english": "Sun"
+		},
+		{
+			"Rank": "728",
+			"french": "devait",
+			"english": "was"
+		},
+		{
+			"Rank": "729",
+			"french": "pars",
+			"english": "leave"
+		},
+		{
+			"Rank": "730",
+			"french": "pouvait",
+			"english": "could"
+		},
+		{
+			"Rank": "731",
+			"french": "cheveux",
+			"english": "hair"
+		},
+		{
+			"Rank": "732",
+			"french": "armes",
+			"english": "arms"
+		},
+		{
+			"Rank": "733",
+			"french": "pensez",
+			"english": "think"
+		},
+		{
+			"Rank": "734",
+			"french": "salle",
+			"english": "room"
+		},
+		{
+			"Rank": "735",
+			"french": "croyez",
+			"english": "believe"
+		},
+		{
+			"Rank": "736",
+			"french": "bizarre",
+			"english": "weird"
+		},
+		{
+			"Rank": "737",
+			"french": "gagner",
+			"english": "to win"
+		},
+		{
+			"Rank": "738",
+			"french": "commencé",
+			"english": "begin"
+		},
+		{
+			"Rank": "739",
+			"french": "fond",
+			"english": "background"
+		},
+		{
+			"Rank": "740",
+			"french": "sauver",
+			"english": "to save"
+		},
+		{
+			"Rank": "741",
+			"french": "pièce",
+			"english": "piece"
+		},
+		{
+			"Rank": "742",
+			"french": "erreur",
+			"english": "error"
+		},
+		{
+			"Rank": "743",
+			"french": "ailleurs",
+			"english": "elsewhere"
+		},
+		{
+			"Rank": "744",
+			"french": "rapport",
+			"english": "report"
+		},
+		{
+			"Rank": "745",
+			"french": "froid",
+			"english": "cold"
+		},
+		{
+			"Rank": "746",
+			"french": "apprendre",
+			"english": "learn"
+		},
+		{
+			"Rank": "747",
+			"french": "scène",
+			"english": "scene"
+		},
+		{
+			"Rank": "748",
+			"french": "secret",
+			"english": "secret"
+		},
+		{
+			"Rank": "749",
+			"french": "sac",
+			"english": "bag"
+		},
+		{
+			"Rank": "750",
+			"french": "seconde",
+			"english": "second"
+		},
+		{
+			"Rank": "751",
+			"french": "cru",
+			"english": "vintage"
+		},
+		{
+			"Rank": "752",
+			"french": "allô",
+			"english": "Hello"
+		},
+		{
+			"Rank": "753",
+			"french": "revenir",
+			"english": "come back"
+		},
+		{
+			"Rank": "754",
+			"french": "battre",
+			"english": "beat"
+		},
+		{
+			"Rank": "755",
+			"french": "hôtel",
+			"english": "hotel"
+		},
+		{
+			"Rank": "756",
+			"french": "soirée",
+			"english": "evening"
+		},
+		{
+			"Rank": "757",
+			"french": "aurai",
+			"english": "have"
+		},
+		{
+			"Rank": "758",
+			"french": "soeur",
+			"english": "sister"
+		},
+		{
+			"Rank": "759",
+			"french": "pieds",
+			"english": "feet"
+		},
+		{
+			"Rank": "760",
+			"french": "seras",
+			"english": "shalt"
+		},
+		{
+			"Rank": "761",
+			"french": "carte",
+			"english": "map"
+		},
+		{
+			"Rank": "762",
+			"french": "jolie",
+			"english": "pretty one"
+		},
+		{
+			"Rank": "763",
+			"french": "n",
+			"english": "not"
+		},
+		{
+			"Rank": "764",
+			"french": "pied",
+			"english": "foot"
+		},
+		{
+			"Rank": "765",
+			"french": "groupe",
+			"english": "group"
+		},
+		{
+			"Rank": "766",
+			"french": "venue",
+			"english": "arrival"
+		},
+		{
+			"Rank": "767",
+			"french": "monte",
+			"english": "mounted"
+		},
+		{
+			"Rank": "768",
+			"french": "agent",
+			"english": "agent"
+		},
+		{
+			"Rank": "769",
+			"french": "fallait",
+			"english": "needed"
+		},
+		{
+			"Rank": "770",
+			"french": "effet",
+			"english": "effect"
+		},
+		{
+			"Rank": "771",
+			"french": "libre",
+			"english": "free"
+		},
+		{
+			"Rank": "772",
+			"french": "seront",
+			"english": "will"
+		},
+		{
+			"Rank": "773",
+			"french": "foutre",
+			"english": "fuck"
+		},
+		{
+			"Rank": "774",
+			"french": "bordel",
+			"english": "whorehouse"
+		},
+		{
+			"Rank": "775",
+			"french": "mots",
+			"english": "words"
+		},
+		{
+			"Rank": "776",
+			"french": "neuf",
+			"english": "new"
+		},
+		{
+			"Rank": "777",
+			"french": "tire",
+			"english": "drawn"
+		},
+		{
+			"Rank": "778",
+			"french": "faux",
+			"english": "false"
+		},
+		{
+			"Rank": "779",
+			"french": "situation",
+			"english": "situation"
+		},
+		{
+			"Rank": "780",
+			"french": "tue",
+			"english": "kill"
+		},
+		{
+			"Rank": "781",
+			"french": "lumière",
+			"english": "light"
+		},
+		{
+			"Rank": "782",
+			"french": "vieille",
+			"english": "old"
+		},
+		{
+			"Rank": "783",
+			"french": "droite",
+			"english": "right"
+		},
+		{
+			"Rank": "784",
+			"french": "debout",
+			"english": "standing"
+		},
+		{
+			"Rank": "785",
+			"french": "noël",
+			"english": "Christmas"
+		},
+		{
+			"Rank": "786",
+			"french": "cheval",
+			"english": "horse"
+		},
+		{
+			"Rank": "787",
+			"french": "intérieur",
+			"english": "inside"
+		},
+		{
+			"Rank": "788",
+			"french": "écoutez",
+			"english": "listen"
+		},
+		{
+			"Rank": "789",
+			"french": "joli",
+			"english": "pretty"
+		},
+		{
+			"Rank": "790",
+			"french": "gagné",
+			"english": "won"
+		},
+		{
+			"Rank": "791",
+			"french": "loi",
+			"english": "law"
+		},
+		{
+			"Rank": "792",
+			"french": "entrez",
+			"english": "Come in"
+		},
+		{
+			"Rank": "793",
+			"french": "auras",
+			"english": "auras"
+		},
+		{
+			"Rank": "794",
+			"french": "incroyable",
+			"english": "unbelievable"
+		},
+		{
+			"Rank": "795",
+			"french": "lettre",
+			"english": "letter"
+		},
+		{
+			"Rank": "796",
+			"french": "présent",
+			"english": "present"
+		},
+		{
+			"Rank": "797",
+			"french": "occuper",
+			"english": "to occupy"
+		},
+		{
+			"Rank": "798",
+			"french": "connaît",
+			"english": "knows"
+		},
+		{
+			"Rank": "799",
+			"french": "absolument",
+			"english": "absolutely"
+		},
+		{
+			"Rank": "800",
+			"french": "aviez",
+			"english": "had"
+		},
+		{
+			"Rank": "801",
+			"french": "dame",
+			"english": "lady"
+		},
+		{
+			"Rank": "802",
+			"french": "professeur",
+			"english": "professor"
+		},
+		{
+			"Rank": "803",
+			"french": "fric",
+			"english": "money"
+		},
+		{
+			"Rank": "804",
+			"french": "george",
+			"english": "george"
+		},
+		{
+			"Rank": "805",
+			"french": "retrouver",
+			"english": "find"
+		},
+		{
+			"Rank": "806",
+			"french": "coin",
+			"english": "corner"
+		},
+		{
+			"Rank": "807",
+			"french": "table",
+			"english": "table"
+		},
+		{
+			"Rank": "808",
+			"french": "colonel",
+			"english": "colonel"
+		},
+		{
+			"Rank": "809",
+			"french": "âme",
+			"english": "soul"
+		},
+		{
+			"Rank": "810",
+			"french": "dos",
+			"english": "back"
+		},
+		{
+			"Rank": "811",
+			"french": "magnifique",
+			"english": "magnificent"
+		},
+		{
+			"Rank": "812",
+			"french": "rencontrer",
+			"english": "meet"
+		},
+		{
+			"Rank": "813",
+			"french": "réussi",
+			"english": "successful"
+		},
+		{
+			"Rank": "814",
+			"french": "meilleure",
+			"english": "best"
+		},
+		{
+			"Rank": "815",
+			"french": "rappelle",
+			"english": "remember"
+		},
+		{
+			"Rank": "816",
+			"french": "tranquille",
+			"english": "quiet"
+		},
+		{
+			"Rank": "817",
+			"french": "fut",
+			"english": "was"
+		},
+		{
+			"Rank": "818",
+			"french": "chaud",
+			"english": "hot"
+		},
+		{
+			"Rank": "819",
+			"french": "mr",
+			"english": "mr"
+		},
+		{
+			"Rank": "820",
+			"french": "commencer",
+			"english": "to start"
+		},
+		{
+			"Rank": "821",
+			"french": "sœur",
+			"english": "sister"
+		},
+		{
+			"Rank": "822",
+			"french": "agit",
+			"english": "These"
+		},
+		{
+			"Rank": "823",
+			"french": "cool",
+			"english": "cool"
+		},
+		{
+			"Rank": "824",
+			"french": "doucement",
+			"english": "slowly"
+		},
+		{
+			"Rank": "825",
+			"french": "pareil",
+			"english": "the same"
+		},
+		{
+			"Rank": "826",
+			"french": "jeunes",
+			"english": "youth"
+		},
+		{
+			"Rank": "827",
+			"french": "joe",
+			"english": "joe"
+		},
+		{
+			"Rank": "828",
+			"french": "accident",
+			"english": "accident"
+		},
+		{
+			"Rank": "829",
+			"french": "appel",
+			"english": "call"
+		},
+		{
+			"Rank": "830",
+			"french": "anniversaire",
+			"english": "anniversary"
+		},
+		{
+			"Rank": "831",
+			"french": "blanc",
+			"english": "White"
+		},
+		{
+			"Rank": "832",
+			"french": "finir",
+			"english": "finish"
+		},
+		{
+			"Rank": "833",
+			"french": "risque",
+			"english": "risk"
+		},
+		{
+			"Rank": "834",
+			"french": "doivent",
+			"english": "have to"
+		},
+		{
+			"Rank": "835",
+			"french": "moyen",
+			"english": "way"
+		},
+		{
+			"Rank": "836",
+			"french": "terminé",
+			"english": "completed"
+		},
+		{
+			"Rank": "837",
+			"french": "complètement",
+			"english": "completely"
+		},
+		{
+			"Rank": "838",
+			"french": "clair",
+			"english": "clear"
+		},
+		{
+			"Rank": "839",
+			"french": "meurtre",
+			"english": "murder"
+		},
+		{
+			"Rank": "840",
+			"french": "sam",
+			"english": "sat"
+		},
+		{
+			"Rank": "841",
+			"french": "parlez",
+			"english": "speak"
+		},
+		{
+			"Rank": "842",
+			"french": "heureuse",
+			"english": "happy"
+		},
+		{
+			"Rank": "843",
+			"french": "ordres",
+			"english": "orders"
+		},
+		{
+			"Rank": "844",
+			"french": "disais",
+			"english": "said"
+		},
+		{
+			"Rank": "845",
+			"french": "touche",
+			"english": "touch"
+		},
+		{
+			"Rank": "846",
+			"french": "frank",
+			"english": "frank"
+		},
+		{
+			"Rank": "847",
+			"french": "prêts",
+			"english": "loans"
+		},
+		{
+			"Rank": "848",
+			"french": "fasse",
+			"english": "make"
+		},
+		{
+			"Rank": "849",
+			"french": "puisse",
+			"english": "can"
+		},
+		{
+			"Rank": "850",
+			"french": "déjeuner",
+			"english": "lunch"
+		},
+		{
+			"Rank": "851",
+			"french": "envoyé",
+			"english": "sent"
+		},
+		{
+			"Rank": "852",
+			"french": "lire",
+			"english": "read"
+		},
+		{
+			"Rank": "853",
+			"french": "disait",
+			"english": "said"
+		},
+		{
+			"Rank": "854",
+			"french": "tombe",
+			"english": "falls"
+		},
+		{
+			"Rank": "855",
+			"french": "su",
+			"english": "su"
+		},
+		{
+			"Rank": "856",
+			"french": "marcher",
+			"english": "walk"
+		},
+		{
+			"Rank": "857",
+			"french": "avance",
+			"english": "advanced"
+		},
+		{
+			"Rank": "858",
+			"french": "déteste",
+			"english": "hated"
+		},
+		{
+			"Rank": "859",
+			"french": "forme",
+			"english": "form"
+		},
+		{
+			"Rank": "860",
+			"french": "â",
+			"english": "at"
+		},
+		{
+			"Rank": "861",
+			"french": "mauvaise",
+			"english": "bad"
+		},
+		{
+			"Rank": "862",
+			"french": "bord",
+			"english": "edge"
+		},
+		{
+			"Rank": "863",
+			"french": "décidé",
+			"english": "decided"
+		},
+		{
+			"Rank": "864",
+			"french": "mer",
+			"english": "sea"
+		},
+		{
+			"Rank": "865",
+			"french": "vivant",
+			"english": "living"
+		},
+		{
+			"Rank": "866",
+			"french": "médecin",
+			"english": "doctor"
+		},
+		{
+			"Rank": "867",
+			"french": "midi",
+			"english": "midday"
+		},
+		{
+			"Rank": "868",
+			"french": "devenu",
+			"english": "become"
+		},
+		{
+			"Rank": "869",
+			"french": "montre",
+			"english": "watch"
+		},
+		{
+			"Rank": "870",
+			"french": "porter",
+			"english": "carry"
+		},
+		{
+			"Rank": "871",
+			"french": "vraie",
+			"english": "real"
+		},
+		{
+			"Rank": "872",
+			"french": "disent",
+			"english": "say"
+		},
+		{
+			"Rank": "873",
+			"french": "ferait",
+			"english": "would"
+		},
+		{
+			"Rank": "874",
+			"french": "ignore",
+			"english": "unknown"
+		},
+		{
+			"Rank": "875",
+			"french": "charlie",
+			"english": "charlie"
+		},
+		{
+			"Rank": "876",
+			"french": "connaître",
+			"english": "know"
+		},
+		{
+			"Rank": "877",
+			"french": "silence",
+			"english": "silence"
+		},
+		{
+			"Rank": "878",
+			"french": "diable",
+			"english": "Devil"
+		},
+		{
+			"Rank": "879",
+			"french": "sortez",
+			"english": "get out"
+		},
+		{
+			"Rank": "880",
+			"french": "tom",
+			"english": "tom"
+		},
+		{
+			"Rank": "881",
+			"french": "cadeau",
+			"english": "gift"
+		},
+		{
+			"Rank": "882",
+			"french": "suppose",
+			"english": "Assumed"
+		},
+		{
+			"Rank": "883",
+			"french": "b",
+			"english": "b"
+		},
+		{
+			"Rank": "884",
+			"french": "flics",
+			"english": "cops"
+		},
+		{
+			"Rank": "885",
+			"french": "avocat",
+			"english": "lawyer"
+		},
+		{
+			"Rank": "886",
+			"french": "jure",
+			"english": "sworn"
+		},
+		{
+			"Rank": "887",
+			"french": "anglais",
+			"english": "english"
+		},
+		{
+			"Rank": "888",
+			"french": "sept",
+			"english": "seven"
+		},
+		{
+			"Rank": "889",
+			"french": "devriez",
+			"english": "should"
+		},
+		{
+			"Rank": "890",
+			"french": "moitié",
+			"english": "half"
+		},
+		{
+			"Rank": "891",
+			"french": "aimé",
+			"english": "love"
+		},
+		{
+			"Rank": "892",
+			"french": "surprise",
+			"english": "surprise"
+		},
+		{
+			"Rank": "893",
+			"french": "chacun",
+			"english": "each"
+		},
+		{
+			"Rank": "894",
+			"french": "serez",
+			"english": "will"
+		},
+		{
+			"Rank": "895",
+			"french": "exact",
+			"english": "exact"
+		},
+		{
+			"Rank": "896",
+			"french": "commandant",
+			"english": "commanding officer"
+		},
+		{
+			"Rank": "897",
+			"french": "télé",
+			"english": "TV"
+		},
+		{
+			"Rank": "898",
+			"french": "autour",
+			"english": "around"
+		},
+		{
+			"Rank": "899",
+			"french": "disparu",
+			"english": "faded away"
+		},
+		{
+			"Rank": "900",
+			"french": "ligne",
+			"english": "line"
+		},
+		{
+			"Rank": "901",
+			"french": "expliquer",
+			"english": "explain"
+		},
+		{
+			"Rank": "902",
+			"french": "aimer",
+			"english": "like"
+		},
+		{
+			"Rank": "903",
+			"french": "arrivée",
+			"english": "arrival"
+		},
+		{
+			"Rank": "904",
+			"french": "grosse",
+			"english": "big"
+		},
+		{
+			"Rank": "905",
+			"french": "simplement",
+			"english": "simply"
+		},
+		{
+			"Rank": "906",
+			"french": "mission",
+			"english": "mission"
+		},
+		{
+			"Rank": "907",
+			"french": "monter",
+			"english": "ascend"
+		},
+		{
+			"Rank": "908",
+			"french": "tenir",
+			"english": "hold"
+		},
+		{
+			"Rank": "909",
+			"french": "bons",
+			"english": "good"
+		},
+		{
+			"Rank": "910",
+			"french": "balle",
+			"english": "ball"
+		},
+		{
+			"Rank": "911",
+			"french": "quitter",
+			"english": "to leave"
+		},
+		{
+			"Rank": "912",
+			"french": "selon",
+			"english": "according to"
+		},
+		{
+			"Rank": "913",
+			"french": "classe",
+			"english": "class"
+		},
+		{
+			"Rank": "914",
+			"french": "paris",
+			"english": "Paris"
+		},
+		{
+			"Rank": "915",
+			"french": "sorti",
+			"english": "got out"
+		},
+		{
+			"Rank": "916",
+			"french": "mange",
+			"english": "eat"
+		},
+		{
+			"Rank": "917",
+			"french": "peuple",
+			"english": "people"
+		},
+		{
+			"Rank": "918",
+			"french": "habitude",
+			"english": "habit"
+		},
+		{
+			"Rank": "919",
+			"french": "voie",
+			"english": "way"
+		},
+		{
+			"Rank": "920",
+			"french": "dangereux",
+			"english": "dangerous"
+		},
+		{
+			"Rank": "921",
+			"french": "pote",
+			"english": "mate"
+		},
+		{
+			"Rank": "922",
+			"french": "contrôle",
+			"english": "control"
+		},
+		{
+			"Rank": "923",
+			"french": "prête",
+			"english": "ready"
+		},
+		{
+			"Rank": "924",
+			"french": "honte",
+			"english": "shame"
+		},
+		{
+			"Rank": "925",
+			"french": "rencontré",
+			"english": "meet"
+		},
+		{
+			"Rank": "926",
+			"french": "photos",
+			"english": "pics"
+		},
+		{
+			"Rank": "927",
+			"french": "impression",
+			"english": "impression"
+		},
+		{
+			"Rank": "928",
+			"french": "folle",
+			"english": "crazy woman"
+		},
+		{
+			"Rank": "929",
+			"french": "écrire",
+			"english": "to write"
+		},
+		{
+			"Rank": "930",
+			"french": "suivre",
+			"english": "to follow"
+		},
+		{
+			"Rank": "931",
+			"french": "oublier",
+			"english": "forget"
+		},
+		{
+			"Rank": "932",
+			"french": "livres",
+			"english": "books"
+		},
+		{
+			"Rank": "933",
+			"french": "aille",
+			"english": "go"
+		},
+		{
+			"Rank": "934",
+			"french": "retourner",
+			"english": "return"
+		},
+		{
+			"Rank": "935",
+			"french": "offre",
+			"english": "offer"
+		},
+		{
+			"Rank": "936",
+			"french": "chanson",
+			"english": "song"
+		},
+		{
+			"Rank": "937",
+			"french": "envoie",
+			"english": "send"
+		},
+		{
+			"Rank": "938",
+			"french": "trou",
+			"english": "hole"
+		},
+		{
+			"Rank": "939",
+			"french": "arrière",
+			"english": "back"
+		},
+		{
+			"Rank": "940",
+			"french": "poste",
+			"english": "post"
+		},
+		{
+			"Rank": "941",
+			"french": "amérique",
+			"english": "America"
+		},
+		{
+			"Rank": "942",
+			"french": "huit",
+			"english": "eight"
+		},
+		{
+			"Rank": "943",
+			"french": "radio",
+			"english": "radio"
+		},
+		{
+			"Rank": "944",
+			"french": "paul",
+			"english": "paul"
+		},
+		{
+			"Rank": "945",
+			"french": "ressemble",
+			"english": "looks like"
+		},
+		{
+			"Rank": "946",
+			"french": "attaque",
+			"english": "attack"
+		},
+		{
+			"Rank": "947",
+			"french": "arrêté",
+			"english": "stopped"
+		},
+		{
+			"Rank": "948",
+			"french": "change",
+			"english": "exchange"
+		},
+		{
+			"Rank": "949",
+			"french": "baiser",
+			"english": "kiss"
+		},
+		{
+			"Rank": "950",
+			"french": "pourtant",
+			"english": "However"
+		},
+		{
+			"Rank": "951",
+			"french": "réponse",
+			"english": "reply"
+		},
+		{
+			"Rank": "952",
+			"french": "connu",
+			"english": "known"
+		},
+		{
+			"Rank": "953",
+			"french": "k",
+			"english": "k"
+		},
+		{
+			"Rank": "954",
+			"french": "connard",
+			"english": "shithead"
+		},
+		{
+			"Rank": "955",
+			"french": "lu",
+			"english": "read"
+		},
+		{
+			"Rank": "956",
+			"french": "pute",
+			"english": "bitch"
+		},
+		{
+			"Rank": "957",
+			"french": "bande",
+			"english": "band"
+		},
+		{
+			"Rank": "958",
+			"french": "enfer",
+			"english": "hell"
+		},
+		{
+			"Rank": "959",
+			"french": "tenez",
+			"english": "hold"
+		},
+		{
+			"Rank": "960",
+			"french": "rend",
+			"english": "makes"
+		},
+		{
+			"Rank": "961",
+			"french": "triste",
+			"english": "sad"
+		},
+		{
+			"Rank": "962",
+			"french": "tel",
+			"english": "such"
+		},
+		{
+			"Rank": "963",
+			"french": "bravo",
+			"english": "Bravo"
+		},
+		{
+			"Rank": "964",
+			"french": "etre",
+			"english": "be"
+		},
+		{
+			"Rank": "965",
+			"french": "savait",
+			"english": "knew"
+		},
+		{
+			"Rank": "966",
+			"french": "david",
+			"english": "david"
+		},
+		{
+			"Rank": "967",
+			"french": "plusieurs",
+			"english": "many"
+		},
+		{
+			"Rank": "968",
+			"french": "existe",
+			"english": "exist"
+		},
+		{
+			"Rank": "969",
+			"french": "met",
+			"english": "puts"
+		},
+		{
+			"Rank": "970",
+			"french": "rire",
+			"english": "to laugh"
+		},
+		{
+			"Rank": "971",
+			"french": "compagnie",
+			"english": "company"
+		},
+		{
+			"Rank": "972",
+			"french": "étrange",
+			"english": "strange"
+		},
+		{
+			"Rank": "973",
+			"french": "exemple",
+			"english": "example"
+		},
+		{
+			"Rank": "974",
+			"french": "devais",
+			"english": "had"
+		},
+		{
+			"Rank": "975",
+			"french": "vit",
+			"english": "lives"
+		},
+		{
+			"Rank": "976",
+			"french": "combat",
+			"english": "fight"
+		},
+		{
+			"Rank": "977",
+			"french": "secours",
+			"english": "rescue"
+		},
+		{
+			"Rank": "978",
+			"french": "aurez",
+			"english": "will"
+		},
+		{
+			"Rank": "979",
+			"french": "conneries",
+			"english": "bullshit"
+		},
+		{
+			"Rank": "980",
+			"french": "visite",
+			"english": "visit"
+		},
+		{
+			"Rank": "981",
+			"french": "joué",
+			"english": "play"
+		},
+		{
+			"Rank": "982",
+			"french": "michael",
+			"english": "michael"
+		},
+		{
+			"Rank": "983",
+			"french": "pourra",
+			"english": "will"
+		},
+		{
+			"Rank": "984",
+			"french": "coucher",
+			"english": "sleep"
+		},
+		{
+			"Rank": "985",
+			"french": "imagine",
+			"english": "conceived"
+		},
+		{
+			"Rank": "986",
+			"french": "bob",
+			"english": "bob"
+		},
+		{
+			"Rank": "987",
+			"french": "merveilleux",
+			"english": "wonderful"
+		},
+		{
+			"Rank": "988",
+			"french": "continuer",
+			"english": "Carry on"
+		},
+		{
+			"Rank": "989",
+			"french": "ecoutez",
+			"english": "ecoutez"
+		},
+		{
+			"Rank": "990",
+			"french": "dirai",
+			"english": "tell"
+		},
+		{
+			"Rank": "991",
+			"french": "volé",
+			"english": "stolen"
+		},
+		{
+			"Rank": "992",
+			"french": "lune",
+			"english": "Moon"
+		},
+		{
+			"Rank": "993",
+			"french": "bouche",
+			"english": "stuffy"
+		},
+		{
+			"Rank": "994",
+			"french": "sud",
+			"english": "South"
+		},
+		{
+			"Rank": "995",
+			"french": "danse",
+			"english": "dance"
+		},
+		{
+			"Rank": "996",
+			"french": "ennuis",
+			"english": "trouble"
+		},
+		{
+			"Rank": "997",
+			"french": "but",
+			"english": "goal"
+		},
+		{
+			"Rank": "998",
+			"french": "aie",
+			"english": "Ouch"
+		},
+		{
+			"Rank": "999",
+			"french": "hors",
+			"english": "except"
+		},
+		{
+			"Rank": "1000",
+			"french": "sortie",
+			"english": "exit"
+		},
+		{
+			"Rank": "1001",
+			"french": "boîte",
+			"english": "box"
+		},
+		{
+			"Rank": "1002",
+			"french": "vol",
+			"english": "flight"
+		},
+		{
+			"Rank": "1003",
+			"french": "public",
+			"english": "public"
+		},
+		{
+			"Rank": "1004",
+			"french": "lieutenant",
+			"english": "lieutenant"
+		},
+		{
+			"Rank": "1005",
+			"french": "écouter",
+			"english": "listen"
+		},
+		{
+			"Rank": "1006",
+			"french": "présente",
+			"english": "present"
+		},
+		{
+			"Rank": "1007",
+			"french": "système",
+			"english": "system"
+		},
+		{
+			"Rank": "1008",
+			"french": "époque",
+			"english": "time"
+		},
+		{
+			"Rank": "1009",
+			"french": "retourne",
+			"english": "return"
+		},
+		{
+			"Rank": "1010",
+			"french": "certain",
+			"english": "certain"
+		},
+		{
+			"Rank": "1011",
+			"french": "bête",
+			"english": "stupid"
+		},
+		{
+			"Rank": "1012",
+			"french": "vendre",
+			"english": "sale"
+		},
+		{
+			"Rank": "1013",
+			"french": "avenir",
+			"english": "to come up"
+		},
+		{
+			"Rank": "1014",
+			"french": "grands",
+			"english": "great"
+		},
+		{
+			"Rank": "1015",
+			"french": "coups",
+			"english": "shots"
+		},
+		{
+			"Rank": "1016",
+			"french": "santé",
+			"english": "health"
+		},
+		{
+			"Rank": "1017",
+			"french": "partez",
+			"english": "leave"
+		},
+		{
+			"Rank": "1018",
+			"french": "amoureux",
+			"english": "lover"
+		},
+		{
+			"Rank": "1019",
+			"french": "envoyer",
+			"english": "to send"
+		},
+		{
+			"Rank": "1020",
+			"french": "cuisine",
+			"english": "kitchen room"
+		},
+		{
+			"Rank": "1021",
+			"french": "normal",
+			"english": "normal"
+		},
+		{
+			"Rank": "1022",
+			"french": "danger",
+			"english": "danger"
+		},
+		{
+			"Rank": "1023",
+			"french": "gouvernement",
+			"english": "government"
+		},
+		{
+			"Rank": "1024",
+			"french": "village",
+			"english": "town"
+		},
+		{
+			"Rank": "1025",
+			"french": "poser",
+			"english": "to pose"
+		},
+		{
+			"Rank": "1026",
+			"french": "ouvrir",
+			"english": "open"
+		},
+		{
+			"Rank": "1027",
+			"french": "journal",
+			"english": "newspaper"
+		},
+		{
+			"Rank": "1028",
+			"french": "approche",
+			"english": "approach"
+		},
+		{
+			"Rank": "1029",
+			"french": "faudra",
+			"english": "will"
+		},
+		{
+			"Rank": "1030",
+			"french": "dommage",
+			"english": "pity"
+		},
+		{
+			"Rank": "1031",
+			"french": "peau",
+			"english": "skin"
+		},
+		{
+			"Rank": "1032",
+			"french": "pleine",
+			"english": "full"
+		},
+		{
+			"Rank": "1033",
+			"french": "voler",
+			"english": "steal"
+		},
+		{
+			"Rank": "1034",
+			"french": "nez",
+			"english": "nose"
+		},
+		{
+			"Rank": "1035",
+			"french": "danser",
+			"english": "dance"
+		},
+		{
+			"Rank": "1036",
+			"french": "servir",
+			"english": "serve"
+		},
+		{
+			"Rank": "1037",
+			"french": "sympa",
+			"english": "friendly"
+		},
+		{
+			"Rank": "1038",
+			"french": "bonnes",
+			"english": "good"
+		},
+		{
+			"Rank": "1039",
+			"french": "mille",
+			"english": "thousand"
+		},
+		{
+			"Rank": "1040",
+			"french": "héros",
+			"english": "hero"
+		},
+		{
+			"Rank": "1041",
+			"french": "banque",
+			"english": "bank"
+		},
+		{
+			"Rank": "1042",
+			"french": "sergent",
+			"english": "sergeant"
+		},
+		{
+			"Rank": "1043",
+			"french": "clé",
+			"english": "key"
+		},
+		{
+			"Rank": "1044",
+			"french": "secondes",
+			"english": "seconds"
+		},
+		{
+			"Rank": "1045",
+			"french": "nord",
+			"english": "North"
+		},
+		{
+			"Rank": "1046",
+			"french": "inspecteur",
+			"english": "inspector"
+		},
+		{
+			"Rank": "1047",
+			"french": "hey",
+			"english": "hey"
+		},
+		{
+			"Rank": "1048",
+			"french": "liberté",
+			"english": "freedom"
+		},
+		{
+			"Rank": "1049",
+			"french": "salaud",
+			"english": "bastard"
+		},
+		{
+			"Rank": "1050",
+			"french": "plait",
+			"english": "Please"
+		},
+		{
+			"Rank": "1051",
+			"french": "cour",
+			"english": "court"
+		},
+		{
+			"Rank": "1052",
+			"french": "juge",
+			"english": "judge"
+		},
+		{
+			"Rank": "1053",
+			"french": "viennent",
+			"english": "are coming"
+		},
+		{
+			"Rank": "1054",
+			"french": "bruit",
+			"english": "noise"
+		},
+		{
+			"Rank": "1055",
+			"french": "flic",
+			"english": "cop"
+		},
+		{
+			"Rank": "1056",
+			"french": "tient",
+			"english": "is holding"
+		},
+		{
+			"Rank": "1057",
+			"french": "terrible",
+			"english": "terrible"
+		},
+		{
+			"Rank": "1058",
+			"french": "paraît",
+			"english": "seems"
+		},
+		{
+			"Rank": "1059",
+			"french": "crime",
+			"english": "crime"
+		},
+		{
+			"Rank": "1060",
+			"french": "prochain",
+			"english": "next"
+		},
+		{
+			"Rank": "1061",
+			"french": "pouvons",
+			"english": "can"
+		},
+		{
+			"Rank": "1062",
+			"french": "assis",
+			"english": "seated"
+		},
+		{
+			"Rank": "1063",
+			"french": "thé",
+			"english": "tea"
+		},
+		{
+			"Rank": "1064",
+			"french": "bonheur",
+			"english": "happiness"
+		},
+		{
+			"Rank": "1065",
+			"french": "payé",
+			"english": "paid"
+		},
+		{
+			"Rank": "1066",
+			"french": "tas",
+			"english": "heap"
+		},
+		{
+			"Rank": "1067",
+			"french": "travers",
+			"english": "through"
+		},
+		{
+			"Rank": "1068",
+			"french": "stupide",
+			"english": "dumb"
+		},
+		{
+			"Rank": "1069",
+			"french": "blague",
+			"english": "joke"
+		},
+		{
+			"Rank": "1070",
+			"french": "préfère",
+			"english": "prefer"
+		},
+		{
+			"Rank": "1071",
+			"french": "conseil",
+			"english": "advice"
+		},
+		{
+			"Rank": "1072",
+			"french": "robe",
+			"english": "dress"
+		},
+		{
+			"Rank": "1073",
+			"french": "tiré",
+			"english": "drawn"
+		},
+		{
+			"Rank": "1074",
+			"french": "protéger",
+			"english": "protect"
+		},
+		{
+			"Rank": "1075",
+			"french": "rêves",
+			"english": "dreams"
+		},
+		{
+			"Rank": "1076",
+			"french": "seuls",
+			"english": "only"
+		},
+		{
+			"Rank": "1077",
+			"french": "pitié",
+			"english": "pity"
+		},
+		{
+			"Rank": "1078",
+			"french": "oeil",
+			"english": "eye"
+		},
+		{
+			"Rank": "1079",
+			"french": "mêmes",
+			"english": "same"
+		},
+		{
+			"Rank": "1080",
+			"french": "vin",
+			"english": "wine"
+		},
+		{
+			"Rank": "1081",
+			"french": "avions",
+			"english": "had"
+		},
+		{
+			"Rank": "1082",
+			"french": "don",
+			"english": "Don"
+		},
+		{
+			"Rank": "1083",
+			"french": "sol",
+			"english": "ground"
+		},
+		{
+			"Rank": "1084",
+			"french": "vent",
+			"english": "wind"
+		},
+		{
+			"Rank": "1085",
+			"french": "club",
+			"english": "club"
+		},
+		{
+			"Rank": "1086",
+			"french": "garçons",
+			"english": "boys"
+		},
+		{
+			"Rank": "1087",
+			"french": "gamin",
+			"english": "kid"
+		},
+		{
+			"Rank": "1088",
+			"french": "tante",
+			"english": "aunt"
+		},
+		{
+			"Rank": "1089",
+			"french": "croit",
+			"english": "believes"
+		},
+		{
+			"Rank": "1090",
+			"french": "mesdames",
+			"english": "ladies"
+		},
+		{
+			"Rank": "1091",
+			"french": "bar",
+			"english": "bar"
+		},
+		{
+			"Rank": "1092",
+			"french": "milieu",
+			"english": "middle"
+		},
+		{
+			"Rank": "1093",
+			"french": "reine",
+			"english": "Queen"
+		},
+		{
+			"Rank": "1094",
+			"french": "signe",
+			"english": "sign"
+		},
+		{
+			"Rank": "1095",
+			"french": "centre",
+			"english": "center"
+		},
+		{
+			"Rank": "1096",
+			"french": "probablement",
+			"english": "probably"
+		},
+		{
+			"Rank": "1097",
+			"french": "bière",
+			"english": "beer"
+		},
+		{
+			"Rank": "1098",
+			"french": "dingue",
+			"english": "crazy"
+		},
+		{
+			"Rank": "1099",
+			"french": "inutile",
+			"english": "useless"
+		},
+		{
+			"Rank": "1100",
+			"french": "nulle",
+			"english": "nothing"
+		},
+		{
+			"Rank": "1101",
+			"french": "mike",
+			"english": "mike"
+		},
+		{
+			"Rank": "1102",
+			"french": "sent",
+			"english": "feels"
+		},
+		{
+			"Rank": "1103",
+			"french": "différent",
+			"english": "different"
+		},
+		{
+			"Rank": "1104",
+			"french": "emmener",
+			"english": "bring"
+		},
+		{
+			"Rank": "1105",
+			"french": "comprenez",
+			"english": "understand"
+		},
+		{
+			"Rank": "1106",
+			"french": "verra",
+			"english": "will"
+		},
+		{
+			"Rank": "1107",
+			"french": "prise",
+			"english": "taking"
+		},
+		{
+			"Rank": "1108",
+			"french": "vêtements",
+			"english": "clothing"
+		},
+		{
+			"Rank": "1109",
+			"french": "liste",
+			"english": "listing"
+		},
+		{
+			"Rank": "1110",
+			"french": "savent",
+			"english": "know"
+		},
+		{
+			"Rank": "1111",
+			"french": "unis",
+			"english": "United"
+		},
+		{
+			"Rank": "1112",
+			"french": "société",
+			"english": "society"
+		},
+		{
+			"Rank": "1113",
+			"french": "chère",
+			"english": "Dear"
+		},
+		{
+			"Rank": "1114",
+			"french": "soin",
+			"english": "care"
+		},
+		{
+			"Rank": "1115",
+			"french": "pierre",
+			"english": "Pierre"
+		},
+		{
+			"Rank": "1116",
+			"french": "appelez",
+			"english": "call"
+		},
+		{
+			"Rank": "1117",
+			"french": "utiliser",
+			"english": "use"
+		},
+		{
+			"Rank": "1118",
+			"french": "acheté",
+			"english": "bought"
+		},
+		{
+			"Rank": "1119",
+			"french": "laquelle",
+			"english": "which"
+		},
+		{
+			"Rank": "1120",
+			"french": "fiche",
+			"english": "plug"
+		},
+		{
+			"Rank": "1121",
+			"french": "parole",
+			"english": "speech"
+		},
+		{
+			"Rank": "1122",
+			"french": "mecs",
+			"english": "guys"
+		},
+		{
+			"Rank": "1123",
+			"french": "faisais",
+			"english": "doing"
+		},
+		{
+			"Rank": "1124",
+			"french": "marier",
+			"english": "marry"
+		},
+		{
+			"Rank": "1125",
+			"french": "départ",
+			"english": "departure"
+		},
+		{
+			"Rank": "1126",
+			"french": "ennemi",
+			"english": "enemy"
+		},
+		{
+			"Rank": "1127",
+			"french": "irai",
+			"english": "go"
+		},
+		{
+			"Rank": "1128",
+			"french": "aimez",
+			"english": "like"
+		},
+		{
+			"Rank": "1129",
+			"french": "spectacle",
+			"english": "show"
+		},
+		{
+			"Rank": "1130",
+			"french": "vouloir",
+			"english": "want to"
+		},
+		{
+			"Rank": "1131",
+			"french": "recherche",
+			"english": "research"
+		},
+		{
+			"Rank": "1132",
+			"french": "devient",
+			"english": "becomes"
+		},
+		{
+			"Rank": "1133",
+			"french": "choisi",
+			"english": "selected"
+		},
+		{
+			"Rank": "1134",
+			"french": "you",
+			"english": "you"
+		},
+		{
+			"Rank": "1135",
+			"french": "pose",
+			"english": "pose"
+		},
+		{
+			"Rank": "1136",
+			"french": "films",
+			"english": "movies"
+		},
+		{
+			"Rank": "1137",
+			"french": "intérêt",
+			"english": "interest"
+		},
+		{
+			"Rank": "1138",
+			"french": "intéresse",
+			"english": "interested"
+		},
+		{
+			"Rank": "1139",
+			"french": "rôle",
+			"english": "role"
+		},
+		{
+			"Rank": "1140",
+			"french": "johnny",
+			"english": "johnny"
+		},
+		{
+			"Rank": "1141",
+			"french": "félicitations",
+			"english": "Congratulations"
+		},
+		{
+			"Rank": "1142",
+			"french": "descendre",
+			"english": "go down"
+		},
+		{
+			"Rank": "1143",
+			"french": "harry",
+			"english": "harry"
+		},
+		{
+			"Rank": "1144",
+			"french": "tourne",
+			"english": "turned"
+		},
+		{
+			"Rank": "1145",
+			"french": "position",
+			"english": "position"
+		},
+		{
+			"Rank": "1146",
+			"french": "sert",
+			"english": "serves"
+		},
+		{
+			"Rank": "1147",
+			"french": "blessé",
+			"english": "injured"
+		},
+		{
+			"Rank": "1148",
+			"french": "humain",
+			"english": "human"
+		},
+		{
+			"Rank": "1149",
+			"french": "asseoir",
+			"english": "seat"
+		},
+		{
+			"Rank": "1150",
+			"french": "match",
+			"english": "match"
+		},
+		{
+			"Rank": "1151",
+			"french": "coupable",
+			"english": "guilty"
+		},
+		{
+			"Rank": "1152",
+			"french": "environ",
+			"english": "about"
+		},
+		{
+			"Rank": "1153",
+			"french": "art",
+			"english": "art"
+		},
+		{
+			"Rank": "1154",
+			"french": "mise",
+			"english": "setting"
+		},
+		{
+			"Rank": "1155",
+			"french": "londres",
+			"english": "London"
+		},
+		{
+			"Rank": "1156",
+			"french": "espoir",
+			"english": "hope"
+		},
+		{
+			"Rank": "1157",
+			"french": "quitté",
+			"english": "quits"
+		},
+		{
+			"Rank": "1158",
+			"french": "lequel",
+			"english": "which"
+		},
+		{
+			"Rank": "1159",
+			"french": "mur",
+			"english": "Wall"
+		},
+		{
+			"Rank": "1160",
+			"french": "peter",
+			"english": "to fart"
+		},
+		{
+			"Rank": "1161",
+			"french": "ouvert",
+			"english": "open"
+		},
+		{
+			"Rank": "1162",
+			"french": "église",
+			"english": "church"
+		},
+		{
+			"Rank": "1163",
+			"french": "salope",
+			"english": "slut"
+		},
+		{
+			"Rank": "1164",
+			"french": "beauté",
+			"english": "beauty"
+		},
+		{
+			"Rank": "1165",
+			"french": "lâche",
+			"english": "loose"
+		},
+		{
+			"Rank": "1166",
+			"french": "adresse",
+			"english": "address"
+		},
+		{
+			"Rank": "1167",
+			"french": "mademoiselle",
+			"english": "miss"
+		},
+		{
+			"Rank": "1168",
+			"french": "petites",
+			"english": "small"
+		},
+		{
+			"Rank": "1169",
+			"french": "sauter",
+			"english": "jump"
+		},
+		{
+			"Rank": "1170",
+			"french": "colère",
+			"english": "anger"
+		},
+		{
+			"Rank": "1171",
+			"french": "directeur",
+			"english": "director"
+		},
+		{
+			"Rank": "1172",
+			"french": "adieu",
+			"english": "farewell"
+		},
+		{
+			"Rank": "1173",
+			"french": "jimmy",
+			"english": "jimmy"
+		},
+		{
+			"Rank": "1174",
+			"french": "faisons",
+			"english": "do"
+		},
+		{
+			"Rank": "1175",
+			"french": "parie",
+			"english": "bet"
+		},
+		{
+			"Rank": "1176",
+			"french": "entrée",
+			"english": "Entrance"
+		},
+		{
+			"Rank": "1177",
+			"french": "tort",
+			"english": "wrong"
+		},
+		{
+			"Rank": "1178",
+			"french": "conduire",
+			"english": "drive"
+		},
+		{
+			"Rank": "1179",
+			"french": "américain",
+			"english": "American"
+		},
+		{
+			"Rank": "1180",
+			"french": "revenu",
+			"english": "returned"
+		},
+		{
+			"Rank": "1181",
+			"french": "f",
+			"english": "f"
+		},
+		{
+			"Rank": "1182",
+			"french": "justice",
+			"english": "justice"
+		},
+		{
+			"Rank": "1183",
+			"french": "soldat",
+			"english": "soldier"
+		},
+		{
+			"Rank": "1184",
+			"french": "expérience",
+			"english": "experience"
+		},
+		{
+			"Rank": "1185",
+			"french": "auriez",
+			"english": "would"
+		},
+		{
+			"Rank": "1186",
+			"french": "cerveau",
+			"english": "brain"
+		},
+		{
+			"Rank": "1187",
+			"french": "fenêtre",
+			"english": "window"
+		},
+		{
+			"Rank": "1188",
+			"french": "quartier",
+			"english": "district"
+		},
+		{
+			"Rank": "1189",
+			"french": "prince",
+			"english": "prince"
+		},
+		{
+			"Rank": "1190",
+			"french": "vis",
+			"english": "screw"
+		},
+		{
+			"Rank": "1191",
+			"french": "promets",
+			"english": "promise"
+		},
+		{
+			"Rank": "1192",
+			"french": "venus",
+			"english": "Venus"
+		},
+		{
+			"Rank": "1193",
+			"french": "soldats",
+			"english": "soldiers"
+		},
+		{
+			"Rank": "1194",
+			"french": "tombé",
+			"english": "falls"
+		},
+		{
+			"Rank": "1195",
+			"french": "riche",
+			"english": "rich"
+		},
+		{
+			"Rank": "1196",
+			"french": "fleurs",
+			"english": "flowers"
+		},
+		{
+			"Rank": "1197",
+			"french": "bill",
+			"english": "bill"
+		},
+		{
+			"Rank": "1198",
+			"french": "mary",
+			"english": "mary"
+		},
+		{
+			"Rank": "1199",
+			"french": "œil",
+			"english": "eye"
+		},
+		{
+			"Rank": "1200",
+			"french": "présenter",
+			"english": "present"
+		},
+		{
+			"Rank": "1201",
+			"french": "presse",
+			"english": "press"
+		},
+		{
+			"Rank": "1202",
+			"french": "frères",
+			"english": "brothers"
+		},
+		{
+			"Rank": "1203",
+			"french": "ridicule",
+			"english": "ridiculous"
+		},
+		{
+			"Rank": "1204",
+			"french": "preuve",
+			"english": "evidence"
+		},
+		{
+			"Rank": "1205",
+			"french": "ouvrez",
+			"english": "open"
+		},
+		{
+			"Rank": "1206",
+			"french": "revient",
+			"english": "come back"
+		},
+		{
+			"Rank": "1207",
+			"french": "pourriez",
+			"english": "might"
+		},
+		{
+			"Rank": "1208",
+			"french": "épouser",
+			"english": "marry"
+		},
+		{
+			"Rank": "1209",
+			"french": "intéressant",
+			"english": "interesting"
+		},
+		{
+			"Rank": "1210",
+			"french": "gosse",
+			"english": "kid"
+		},
+		{
+			"Rank": "1211",
+			"french": "faudrait",
+			"english": "should"
+		},
+		{
+			"Rank": "1212",
+			"french": "p",
+			"english": "p"
+		},
+		{
+			"Rank": "1213",
+			"french": "histoires",
+			"english": "stories"
+		},
+		{
+			"Rank": "1214",
+			"french": "rose",
+			"english": "pink"
+		},
+		{
+			"Rank": "1215",
+			"french": "veuillez",
+			"english": "please"
+		},
+		{
+			"Rank": "1216",
+			"french": "nature",
+			"english": "nature"
+		},
+		{
+			"Rank": "1217",
+			"french": "vide",
+			"english": "empty"
+		},
+		{
+			"Rank": "1218",
+			"french": "responsable",
+			"english": "responsible"
+		},
+		{
+			"Rank": "1219",
+			"french": "courage",
+			"english": "courage"
+		},
+		{
+			"Rank": "1220",
+			"french": "capable",
+			"english": "able"
+		},
+		{
+			"Rank": "1221",
+			"french": "cinéma",
+			"english": "cinema"
+		},
+		{
+			"Rank": "1222",
+			"french": "max",
+			"english": "max"
+		},
+		{
+			"Rank": "1223",
+			"french": "décision",
+			"english": "decision"
+		},
+		{
+			"Rank": "1224",
+			"french": "taxi",
+			"english": "Taxi"
+		},
+		{
+			"Rank": "1225",
+			"french": "chanter",
+			"english": "sing"
+		},
+		{
+			"Rank": "1226",
+			"french": "excuse",
+			"english": "excuse"
+		},
+		{
+			"Rank": "1227",
+			"french": "sentir",
+			"english": "feel"
+		},
+		{
+			"Rank": "1228",
+			"french": "jim",
+			"english": "jim"
+		},
+		{
+			"Rank": "1229",
+			"french": "portes",
+			"english": "doors"
+		},
+		{
+			"Rank": "1230",
+			"french": "james",
+			"english": "james"
+		},
+		{
+			"Rank": "1231",
+			"french": "fier",
+			"english": "proud"
+		},
+		{
+			"Rank": "1232",
+			"french": "deuxième",
+			"english": "second"
+		},
+		{
+			"Rank": "1233",
+			"french": "eiie",
+			"english": "eiie"
+		},
+		{
+			"Rank": "1234",
+			"french": "appartement",
+			"english": "apartment"
+		},
+		{
+			"Rank": "1235",
+			"french": "contact",
+			"english": "contact"
+		},
+		{
+			"Rank": "1236",
+			"french": "essayez",
+			"english": "try"
+		},
+		{
+			"Rank": "1237",
+			"french": "sauvé",
+			"english": "saved"
+		},
+		{
+			"Rank": "1238",
+			"french": "cacher",
+			"english": "hide"
+		},
+		{
+			"Rank": "1239",
+			"french": "ià",
+			"english": "ià"
+		},
+		{
+			"Rank": "1240",
+			"french": "répondre",
+			"english": "reply"
+		},
+		{
+			"Rank": "1241",
+			"french": "manière",
+			"english": "way"
+		},
+		{
+			"Rank": "1242",
+			"french": "aimais",
+			"english": "liked"
+		},
+		{
+			"Rank": "1243",
+			"french": "jambes",
+			"english": "legs"
+		},
+		{
+			"Rank": "1244",
+			"french": "occasion",
+			"english": "opportunity"
+		},
+		{
+			"Rank": "1245",
+			"french": "défense",
+			"english": "defense"
+		},
+		{
+			"Rank": "1246",
+			"french": "longue",
+			"english": "long"
+		},
+		{
+			"Rank": "1247",
+			"french": "jésus",
+			"english": "Jesus"
+		},
+		{
+			"Rank": "1248",
+			"french": "jeter",
+			"english": "throw"
+		},
+		{
+			"Rank": "1249",
+			"french": "allée",
+			"english": "driveway"
+		},
+		{
+			"Rank": "1250",
+			"french": "formidable",
+			"english": "wonderful"
+		},
+		{
+			"Rank": "1251",
+			"french": "base",
+			"english": "based"
+		},
+		{
+			"Rank": "1252",
+			"french": "telle",
+			"english": "such"
+		},
+		{
+			"Rank": "1253",
+			"french": "marie",
+			"english": "married"
+		},
+		{
+			"Rank": "1254",
+			"french": "san",
+			"english": "san"
+		},
+		{
+			"Rank": "1255",
+			"french": "glace",
+			"english": "ice"
+		},
+		{
+			"Rank": "1256",
+			"french": "dents",
+			"english": "teeth"
+		},
+		{
+			"Rank": "1257",
+			"french": "parmi",
+			"english": "among"
+		},
+		{
+			"Rank": "1258",
+			"french": "immédiatement",
+			"english": "at once"
+		},
+		{
+			"Rank": "1259",
+			"french": "marié",
+			"english": "married"
+		},
+		{
+			"Rank": "1260",
+			"french": "paie",
+			"english": "pay"
+		},
+		{
+			"Rank": "1261",
+			"french": "nul",
+			"english": "no"
+		},
+		{
+			"Rank": "1262",
+			"french": "machine",
+			"english": "machine"
+		},
+		{
+			"Rank": "1263",
+			"french": "vacances",
+			"english": "holidays"
+		},
+		{
+			"Rank": "1264",
+			"french": "épouse",
+			"english": "wife"
+		},
+		{
+			"Rank": "1265",
+			"french": "monstre",
+			"english": "monster"
+		},
+		{
+			"Rank": "1266",
+			"french": "souvenir",
+			"english": "memory"
+		},
+		{
+			"Rank": "1267",
+			"french": "tueur",
+			"english": "killer"
+		},
+		{
+			"Rank": "1268",
+			"french": "né",
+			"english": "born"
+		},
+		{
+			"Rank": "1269",
+			"french": "r",
+			"english": "r"
+		},
+		{
+			"Rank": "1270",
+			"french": "continuez",
+			"english": "go on"
+		},
+		{
+			"Rank": "1271",
+			"french": "français",
+			"english": "french"
+		},
+		{
+			"Rank": "1272",
+			"french": "rendu",
+			"english": "made"
+		},
+		{
+			"Rank": "1273",
+			"french": "course",
+			"english": "race"
+		},
+		{
+			"Rank": "1274",
+			"french": "majesté",
+			"english": "majesty"
+		},
+		{
+			"Rank": "1275",
+			"french": "mien",
+			"english": "mine"
+		},
+		{
+			"Rank": "1276",
+			"french": "types",
+			"english": "Types"
+		},
+		{
+			"Rank": "1277",
+			"french": "certainement",
+			"english": "certainly"
+		},
+		{
+			"Rank": "1278",
+			"french": "coupe",
+			"english": "chopped off"
+		},
+		{
+			"Rank": "1279",
+			"french": "ha",
+			"english": "Ha"
+		},
+		{
+			"Rank": "1280",
+			"french": "importance",
+			"english": "importance"
+		},
+		{
+			"Rank": "1281",
+			"french": "ouest",
+			"english": "Where is"
+		},
+		{
+			"Rank": "1282",
+			"french": "idées",
+			"english": "ideas"
+		},
+		{
+			"Rank": "1283",
+			"french": "gagne",
+			"english": "wins"
+		},
+		{
+			"Rank": "1284",
+			"french": "oubliez",
+			"english": "forget"
+		},
+		{
+			"Rank": "1285",
+			"french": "chat",
+			"english": "cat"
+		},
+		{
+			"Rank": "1286",
+			"french": "ayez",
+			"english": "have"
+		},
+		{
+			"Rank": "1287",
+			"french": "trouves",
+			"english": "found"
+		},
+		{
+			"Rank": "1288",
+			"french": "dégage",
+			"english": "releases"
+		},
+		{
+			"Rank": "1289",
+			"french": "chier",
+			"english": "take a dump"
+		},
+		{
+			"Rank": "1290",
+			"french": "ravi",
+			"english": "delighted"
+		},
+		{
+			"Rank": "1291",
+			"french": "étions",
+			"english": "were"
+		},
+		{
+			"Rank": "1292",
+			"french": "arrivent",
+			"english": "arrive"
+		},
+		{
+			"Rank": "1293",
+			"french": "joie",
+			"english": "joy"
+		},
+		{
+			"Rank": "1294",
+			"french": "prévu",
+			"english": "planned"
+		},
+		{
+			"Rank": "1295",
+			"french": "lorsque",
+			"english": "when"
+		},
+		{
+			"Rank": "1296",
+			"french": "superbe",
+			"english": "superb"
+		},
+		{
+			"Rank": "1297",
+			"french": "touché",
+			"english": "touch"
+		},
+		{
+			"Rank": "1298",
+			"french": "bain",
+			"english": "bath"
+		},
+		{
+			"Rank": "1299",
+			"french": "contente",
+			"english": "content"
+		},
+		{
+			"Rank": "1300",
+			"french": "horrible",
+			"english": "horrible"
+		},
+		{
+			"Rank": "1301",
+			"french": "retrouve",
+			"english": "finds"
+		},
+		{
+			"Rank": "1302",
+			"french": "court",
+			"english": "short"
+		},
+		{
+			"Rank": "1303",
+			"french": "dérange",
+			"english": "disturbs"
+		},
+		{
+			"Rank": "1304",
+			"french": "and",
+			"english": "and"
+		},
+		{
+			"Rank": "1305",
+			"french": "bombe",
+			"english": "bomb"
+		},
+		{
+			"Rank": "1306",
+			"french": "ramener",
+			"english": "bring back"
+		},
+		{
+			"Rank": "1307",
+			"french": "certaines",
+			"english": "some"
+		},
+		{
+			"Rank": "1308",
+			"french": "réalité",
+			"english": "reality"
+		},
+		{
+			"Rank": "1309",
+			"french": "enquête",
+			"english": "investigation"
+		},
+		{
+			"Rank": "1310",
+			"french": "camion",
+			"english": "truck"
+		},
+		{
+			"Rank": "1311",
+			"french": "foutu",
+			"english": "fucking"
+		},
+		{
+			"Rank": "1312",
+			"french": "signifie",
+			"english": "means"
+		},
+		{
+			"Rank": "1313",
+			"french": "cent",
+			"english": "hundred"
+		},
+		{
+			"Rank": "1314",
+			"french": "toucher",
+			"english": "to touch"
+		},
+		{
+			"Rank": "1315",
+			"french": "occupé",
+			"english": "occupied"
+		},
+		{
+			"Rank": "1316",
+			"french": "attendais",
+			"english": "expecting"
+		},
+		{
+			"Rank": "1317",
+			"french": "rencontre",
+			"english": "meet"
+		},
+		{
+			"Rank": "1318",
+			"french": "excellent",
+			"english": "excellent"
+		},
+		{
+			"Rank": "1319",
+			"french": "respect",
+			"english": "respect"
+		},
+		{
+			"Rank": "1320",
+			"french": "quitte",
+			"english": "quits"
+		},
+		{
+			"Rank": "1321",
+			"french": "tourner",
+			"english": "turn"
+		},
+		{
+			"Rank": "1322",
+			"french": "terrain",
+			"english": "ground"
+		},
+		{
+			"Rank": "1323",
+			"french": "blanche",
+			"english": "white"
+		},
+		{
+			"Rank": "1324",
+			"french": "projet",
+			"english": "project"
+		},
+		{
+			"Rank": "1325",
+			"french": "éviter",
+			"english": "to avoid"
+		},
+		{
+			"Rank": "1326",
+			"french": "poisson",
+			"english": "fish"
+		},
+		{
+			"Rank": "1327",
+			"french": "plupart",
+			"english": "mostly"
+		},
+		{
+			"Rank": "1328",
+			"french": "descends",
+			"english": "down"
+		},
+		{
+			"Rank": "1329",
+			"french": "joyeux",
+			"english": "happy"
+		},
+		{
+			"Rank": "1330",
+			"french": "empêcher",
+			"english": "prevent"
+		},
+		{
+			"Rank": "1331",
+			"french": "mariée",
+			"english": "married"
+		},
+		{
+			"Rank": "1332",
+			"french": "mangé",
+			"english": "eat"
+		},
+		{
+			"Rank": "1333",
+			"french": "envers",
+			"english": "towards"
+		},
+		{
+			"Rank": "1334",
+			"french": "km",
+			"english": "km"
+		},
+		{
+			"Rank": "1335",
+			"french": "ange",
+			"english": "angel"
+		},
+		{
+			"Rank": "1336",
+			"french": "meilleurs",
+			"english": "best"
+		},
+		{
+			"Rank": "1337",
+			"french": "copine",
+			"english": "girlfriend"
+		},
+		{
+			"Rank": "1338",
+			"french": "chaussures",
+			"english": "shoes"
+		},
+		{
+			"Rank": "1339",
+			"french": "dossier",
+			"english": "folder"
+		},
+		{
+			"Rank": "1340",
+			"french": "règles",
+			"english": "rules"
+		},
+		{
+			"Rank": "1341",
+			"french": "dure",
+			"english": "tough"
+		},
+		{
+			"Rank": "1342",
+			"french": "u",
+			"english": "u"
+		},
+		{
+			"Rank": "1343",
+			"french": "animaux",
+			"english": "animals"
+		},
+		{
+			"Rank": "1344",
+			"french": "langue",
+			"english": "language"
+		},
+		{
+			"Rank": "1345",
+			"french": "américains",
+			"english": "US"
+		},
+		{
+			"Rank": "1346",
+			"french": "imbécile",
+			"english": "imbecile"
+		},
+		{
+			"Rank": "1347",
+			"french": "chevaux",
+			"english": "horses"
+		},
+		{
+			"Rank": "1348",
+			"french": "princesse",
+			"english": "princess"
+		},
+		{
+			"Rank": "1349",
+			"french": "zone",
+			"english": "zoned"
+		},
+		{
+			"Rank": "1350",
+			"french": "pius",
+			"english": "pius"
+		},
+		{
+			"Rank": "1351",
+			"french": "drogue",
+			"english": "drug"
+		},
+		{
+			"Rank": "1352",
+			"french": "charge",
+			"english": "charge"
+		},
+		{
+			"Rank": "1353",
+			"french": "enfoiré",
+			"english": "Motherfucker"
+		},
+		{
+			"Rank": "1354",
+			"french": "nourriture",
+			"english": "food"
+		},
+		{
+			"Rank": "1355",
+			"french": "pont",
+			"english": "bridge"
+		},
+		{
+			"Rank": "1356",
+			"french": "refuse",
+			"english": "refuse"
+		},
+		{
+			"Rank": "1357",
+			"french": "chiens",
+			"english": "dogs"
+		},
+		{
+			"Rank": "1358",
+			"french": "contraire",
+			"english": "opposite"
+		},
+		{
+			"Rank": "1359",
+			"french": "enchanté",
+			"english": "nice to meet you"
+		},
+		{
+			"Rank": "1360",
+			"french": "douleur",
+			"english": "pain"
+		},
+		{
+			"Rank": "1361",
+			"french": "politique",
+			"english": "policy"
+		},
+		{
+			"Rank": "1362",
+			"french": "faits",
+			"english": "facts"
+		},
+		{
+			"Rank": "1363",
+			"french": "arrivera",
+			"english": "to arrive at"
+		},
+		{
+			"Rank": "1364",
+			"french": "essaye",
+			"english": "try"
+		},
+		{
+			"Rank": "1365",
+			"french": "magasin",
+			"english": "shop"
+		},
+		{
+			"Rank": "1366",
+			"french": "soient",
+			"english": "are"
+		},
+		{
+			"Rank": "1367",
+			"french": "dirais",
+			"english": "say"
+		},
+		{
+			"Rank": "1368",
+			"french": "entier",
+			"english": "full"
+		},
+		{
+			"Rank": "1369",
+			"french": "vécu",
+			"english": "lived"
+		},
+		{
+			"Rank": "1370",
+			"french": "v",
+			"english": "v"
+		},
+		{
+			"Rank": "1371",
+			"french": "bus",
+			"english": "bus"
+		},
+		{
+			"Rank": "1372",
+			"french": "offrir",
+			"english": "to offer"
+		},
+		{
+			"Rank": "1373",
+			"french": "chapeau",
+			"english": "hat"
+		},
+		{
+			"Rank": "1374",
+			"french": "raconte",
+			"english": "recounts"
+		},
+		{
+			"Rank": "1375",
+			"french": "cartes",
+			"english": "cards"
+		},
+		{
+			"Rank": "1376",
+			"french": "henry",
+			"english": "henry"
+		},
+		{
+			"Rank": "1377",
+			"french": "discuter",
+			"english": "discuss"
+		},
+		{
+			"Rank": "1378",
+			"french": "papier",
+			"english": "paper"
+		},
+		{
+			"Rank": "1379",
+			"french": "action",
+			"english": "action"
+		},
+		{
+			"Rank": "1380",
+			"french": "permis",
+			"english": "permit"
+		},
+		{
+			"Rank": "1381",
+			"french": "bu",
+			"english": "drank"
+		},
+		{
+			"Rank": "1382",
+			"french": "rapide",
+			"english": "fast"
+		},
+		{
+			"Rank": "1383",
+			"french": "shérif",
+			"english": "sheriff"
+		},
+		{
+			"Rank": "1384",
+			"french": "frais",
+			"english": "fresh"
+		},
+		{
+			"Rank": "1385",
+			"french": "partis",
+			"english": "gone"
+		},
+		{
+			"Rank": "1386",
+			"french": "emmène",
+			"english": "takes"
+		},
+		{
+			"Rank": "1387",
+			"french": "réunion",
+			"english": "meeting"
+		},
+		{
+			"Rank": "1388",
+			"french": "mettez",
+			"english": "put"
+		},
+		{
+			"Rank": "1389",
+			"french": "île",
+			"english": "island"
+		},
+		{
+			"Rank": "1390",
+			"french": "toilettes",
+			"english": "bathroom"
+		},
+		{
+			"Rank": "1391",
+			"french": "code",
+			"english": "code"
+		},
+		{
+			"Rank": "1392",
+			"french": "billy",
+			"english": "billy"
+		},
+		{
+			"Rank": "1393",
+			"french": "opération",
+			"english": "surgery"
+		},
+		{
+			"Rank": "1394",
+			"french": "spécial",
+			"english": "special"
+		},
+		{
+			"Rank": "1395",
+			"french": "planète",
+			"english": "planet"
+		},
+		{
+			"Rank": "1396",
+			"french": "viendra",
+			"english": "will come"
+		},
+		{
+			"Rank": "1397",
+			"french": "champ",
+			"english": "field"
+		},
+		{
+			"Rank": "1398",
+			"french": "couleur",
+			"english": "color"
+		},
+		{
+			"Rank": "1399",
+			"french": "pain",
+			"english": "bread"
+		},
+		{
+			"Rank": "1400",
+			"french": "excuser",
+			"english": "excuse"
+		},
+		{
+			"Rank": "1401",
+			"french": "destin",
+			"english": "destiny"
+		},
+		{
+			"Rank": "1402",
+			"french": "rends",
+			"english": "thank"
+		},
+		{
+			"Rank": "1403",
+			"french": "découvert",
+			"english": "discovered"
+		},
+		{
+			"Rank": "1404",
+			"french": "puisque",
+			"english": "since"
+		},
+		{
+			"Rank": "1405",
+			"french": "taille",
+			"english": "cut"
+		},
+		{
+			"Rank": "1406",
+			"french": "nick",
+			"english": "nick"
+		},
+		{
+			"Rank": "1407",
+			"french": "tony",
+			"english": "tony"
+		},
+		{
+			"Rank": "1408",
+			"french": "vaisseau",
+			"english": "vessel"
+		},
+		{
+			"Rank": "1409",
+			"french": "sexe",
+			"english": "sex"
+		},
+		{
+			"Rank": "1410",
+			"french": "sacré",
+			"english": "sacred"
+		},
+		{
+			"Rank": "1411",
+			"french": "repas",
+			"english": "meal"
+		},
+		{
+			"Rank": "1412",
+			"french": "contrat",
+			"english": "contract"
+		},
+		{
+			"Rank": "1413",
+			"french": "qu",
+			"english": "that"
+		},
+		{
+			"Rank": "1414",
+			"french": "nécessaire",
+			"english": "necessary"
+		},
+		{
+			"Rank": "1415",
+			"french": "client",
+			"english": "customer"
+		},
+		{
+			"Rank": "1416",
+			"french": "détruire",
+			"english": "destroy"
+		},
+		{
+			"Rank": "1417",
+			"french": "lait",
+			"english": "milk"
+		},
+		{
+			"Rank": "1418",
+			"french": "iis",
+			"english": "iis"
+		},
+		{
+			"Rank": "1419",
+			"french": "faite",
+			"english": "done"
+		},
+		{
+			"Rank": "1420",
+			"french": "mémoire",
+			"english": "memory"
+		},
+		{
+			"Rank": "1421",
+			"french": "pleurer",
+			"english": "cry"
+		},
+		{
+			"Rank": "1422",
+			"french": "copain",
+			"english": "boyfriend"
+		},
+		{
+			"Rank": "1423",
+			"french": "miss",
+			"english": "Miss"
+		},
+		{
+			"Rank": "1424",
+			"french": "restes",
+			"english": "remains"
+		},
+		{
+			"Rank": "1425",
+			"french": "ray",
+			"english": "ray"
+		},
+		{
+			"Rank": "1426",
+			"french": "personnel",
+			"english": "staff"
+		},
+		{
+			"Rank": "1427",
+			"french": "double",
+			"english": "double"
+		},
+		{
+			"Rank": "1428",
+			"french": "mignon",
+			"english": "cute"
+		},
+		{
+			"Rank": "1429",
+			"french": "couteau",
+			"english": "knife"
+		},
+		{
+			"Rank": "1430",
+			"french": "sache",
+			"english": "know"
+		},
+		{
+			"Rank": "1431",
+			"french": "témoin",
+			"english": "witness"
+		},
+		{
+			"Rank": "1432",
+			"french": "foi",
+			"english": "faith"
+		},
+		{
+			"Rank": "1433",
+			"french": "dors",
+			"english": "sleep"
+		},
+		{
+			"Rank": "1434",
+			"french": "remercie",
+			"english": "thank"
+		},
+		{
+			"Rank": "1435",
+			"french": "direction",
+			"english": "direction"
+		},
+		{
+			"Rank": "1436",
+			"french": "steve",
+			"english": "steve"
+		},
+		{
+			"Rank": "1437",
+			"french": "malin",
+			"english": "malignant"
+		},
+		{
+			"Rank": "1438",
+			"french": "niveau",
+			"english": "level"
+		},
+		{
+			"Rank": "1439",
+			"french": "remettre",
+			"english": "reset"
+		},
+		{
+			"Rank": "1440",
+			"french": "habite",
+			"english": "lives"
+		},
+		{
+			"Rank": "1441",
+			"french": "apporté",
+			"english": "brought"
+		},
+		{
+			"Rank": "1442",
+			"french": "aiment",
+			"english": "love"
+		},
+		{
+			"Rank": "1443",
+			"french": "mienne",
+			"english": "mine"
+		},
+		{
+			"Rank": "1444",
+			"french": "procès",
+			"english": "trial"
+		},
+		{
+			"Rank": "1445",
+			"french": "doux",
+			"english": "soft"
+		},
+		{
+			"Rank": "1446",
+			"french": "eddie",
+			"english": "eddie"
+		},
+		{
+			"Rank": "1447",
+			"french": "trouvez",
+			"english": "find"
+		},
+		{
+			"Rank": "1448",
+			"french": "solution",
+			"english": "solution"
+		},
+		{
+			"Rank": "1449",
+			"french": "raconter",
+			"english": "tell"
+		},
+		{
+			"Rank": "1450",
+			"french": "fermer",
+			"english": "to close"
+		},
+		{
+			"Rank": "1451",
+			"french": "choisir",
+			"english": "to choose"
+		},
+		{
+			"Rank": "1452",
+			"french": "goût",
+			"english": "taste"
+		},
+		{
+			"Rank": "1453",
+			"french": "nouveaux",
+			"english": "new"
+		},
+		{
+			"Rank": "1454",
+			"french": "end",
+			"english": "end"
+		},
+		{
+			"Rank": "1455",
+			"french": "amuser",
+			"english": "amuse"
+		},
+		{
+			"Rank": "1456",
+			"french": "différence",
+			"english": "difference"
+		},
+		{
+			"Rank": "1457",
+			"french": "stop",
+			"english": "stop"
+		},
+		{
+			"Rank": "1458",
+			"french": "charles",
+			"english": "charles"
+		},
+		{
+			"Rank": "1459",
+			"french": "gosses",
+			"english": "kids"
+		},
+		{
+			"Rank": "1460",
+			"french": "réfléchir",
+			"english": "reflect"
+		},
+		{
+			"Rank": "1461",
+			"french": "clients",
+			"english": "customers"
+		},
+		{
+			"Rank": "1462",
+			"french": "enceinte",
+			"english": "pregnant"
+		},
+		{
+			"Rank": "1463",
+			"french": "beaux",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1464",
+			"french": "université",
+			"english": "university"
+		},
+		{
+			"Rank": "1465",
+			"french": "bleu",
+			"english": "blue"
+		},
+		{
+			"Rank": "1466",
+			"french": "mètres",
+			"english": "meters"
+		},
+		{
+			"Rank": "1467",
+			"french": "vus",
+			"english": "seen"
+		},
+		{
+			"Rank": "1468",
+			"french": "aimait",
+			"english": "loved"
+		},
+		{
+			"Rank": "1469",
+			"french": "marre",
+			"english": "fed up"
+		},
+		{
+			"Rank": "1470",
+			"french": "menti",
+			"english": "lied"
+		},
+		{
+			"Rank": "1471",
+			"french": "appelles",
+			"english": "call"
+		},
+		{
+			"Rank": "1472",
+			"french": "courir",
+			"english": "run"
+		},
+		{
+			"Rank": "1473",
+			"french": "arranger",
+			"english": "arrange"
+		},
+		{
+			"Rank": "1474",
+			"french": "travaillé",
+			"english": "work"
+		},
+		{
+			"Rank": "1475",
+			"french": "papiers",
+			"english": "papers"
+		},
+		{
+			"Rank": "1476",
+			"french": "retrouvé",
+			"english": "found"
+		},
+		{
+			"Rank": "1477",
+			"french": "officier",
+			"english": "officer"
+		},
+		{
+			"Rank": "1478",
+			"french": "espace",
+			"english": "space"
+		},
+		{
+			"Rank": "1479",
+			"french": "sourire",
+			"english": "smile"
+		},
+		{
+			"Rank": "1480",
+			"french": "dise",
+			"english": "tell"
+		},
+		{
+			"Rank": "1481",
+			"french": "mérite",
+			"english": "deserved"
+		},
+		{
+			"Rank": "1482",
+			"french": "lettres",
+			"english": "letters"
+		},
+		{
+			"Rank": "1483",
+			"french": "accepter",
+			"english": "accept"
+		},
+		{
+			"Rank": "1484",
+			"french": "quels",
+			"english": "what"
+		},
+		{
+			"Rank": "1485",
+			"french": "failli",
+			"english": "bankrupt"
+		},
+		{
+			"Rank": "1486",
+			"french": "angleterre",
+			"english": "England"
+		},
+		{
+			"Rank": "1487",
+			"french": "vitesse",
+			"english": "speed"
+		},
+		{
+			"Rank": "1488",
+			"french": "jambe",
+			"english": "leg"
+		},
+		{
+			"Rank": "1489",
+			"french": "caméra",
+			"english": "camera"
+		},
+		{
+			"Rank": "1490",
+			"french": "rappeler",
+			"english": "call back"
+		},
+		{
+			"Rank": "1491",
+			"french": "arbre",
+			"english": "tree"
+		},
+		{
+			"Rank": "1492",
+			"french": "pièces",
+			"english": "rooms"
+		},
+		{
+			"Rank": "1493",
+			"french": "forces",
+			"english": "strengths"
+		},
+		{
+			"Rank": "1494",
+			"french": "trésor",
+			"english": "treasure"
+		},
+		{
+			"Rank": "1495",
+			"french": "victime",
+			"english": "victim"
+		},
+		{
+			"Rank": "1496",
+			"french": "énergie",
+			"english": "energy"
+		},
+		{
+			"Rank": "1497",
+			"french": "disons",
+			"english": "say"
+		},
+		{
+			"Rank": "1498",
+			"french": "énorme",
+			"english": "huge"
+		},
+		{
+			"Rank": "1499",
+			"french": "rentré",
+			"english": "returns"
+		},
+		{
+			"Rank": "1500",
+			"french": "alex",
+			"english": "alex"
+		},
+		{
+			"Rank": "1501",
+			"french": "appartient",
+			"english": "belongs"
+		},
+		{
+			"Rank": "1502",
+			"french": "préparer",
+			"english": "to prepare"
+		},
+		{
+			"Rank": "1503",
+			"french": "propres",
+			"english": "own"
+		},
+		{
+			"Rank": "1504",
+			"french": "regrette",
+			"english": "sorry"
+		},
+		{
+			"Rank": "1505",
+			"french": "finalement",
+			"english": "finally"
+		},
+		{
+			"Rank": "1506",
+			"french": "france",
+			"english": "la France"
+		},
+		{
+			"Rank": "1507",
+			"french": "invité",
+			"english": "guest"
+		},
+		{
+			"Rank": "1508",
+			"french": "moindre",
+			"english": "lesser"
+		},
+		{
+			"Rank": "1509",
+			"french": "censé",
+			"english": "supposed"
+		},
+		{
+			"Rank": "1510",
+			"french": "washington",
+			"english": "Washington"
+		},
+		{
+			"Rank": "1511",
+			"french": "bobby",
+			"english": "bobby"
+		},
+		{
+			"Rank": "1512",
+			"french": "image",
+			"english": "picture"
+		},
+		{
+			"Rank": "1513",
+			"french": "justement",
+			"english": "exactly"
+		},
+		{
+			"Rank": "1514",
+			"french": "to",
+			"english": "to"
+		},
+		{
+			"Rank": "1515",
+			"french": "compter",
+			"english": "count"
+		},
+		{
+			"Rank": "1516",
+			"french": "enlever",
+			"english": "to take off"
+		},
+		{
+			"Rank": "1517",
+			"french": "chasse",
+			"english": "hunt"
+		},
+		{
+			"Rank": "1518",
+			"french": "unique",
+			"english": "unique"
+		},
+		{
+			"Rank": "1519",
+			"french": "fout",
+			"english": "fout"
+		},
+		{
+			"Rank": "1520",
+			"french": "arrêt",
+			"english": "stop"
+		},
+		{
+			"Rank": "1521",
+			"french": "file",
+			"english": "file"
+		},
+		{
+			"Rank": "1522",
+			"french": "balles",
+			"english": "bullets"
+		},
+		{
+			"Rank": "1523",
+			"french": "preuves",
+			"english": "evidence"
+		},
+		{
+			"Rank": "1524",
+			"french": "dimanche",
+			"english": "Sunday"
+		},
+		{
+			"Rank": "1525",
+			"french": "lycée",
+			"english": "high school"
+		},
+		{
+			"Rank": "1526",
+			"french": "fil",
+			"english": "wire"
+		},
+		{
+			"Rank": "1527",
+			"french": "morceau",
+			"english": "piece"
+		},
+		{
+			"Rank": "1528",
+			"french": "noms",
+			"english": "names"
+		},
+		{
+			"Rank": "1529",
+			"french": "durant",
+			"english": "during"
+		},
+		{
+			"Rank": "1530",
+			"french": "sarah",
+			"english": "sarah"
+		},
+		{
+			"Rank": "1531",
+			"french": "cassé",
+			"english": "broken"
+		},
+		{
+			"Rank": "1532",
+			"french": "doigts",
+			"english": "fingers"
+		},
+		{
+			"Rank": "1533",
+			"french": "vérifier",
+			"english": "check"
+		},
+		{
+			"Rank": "1534",
+			"french": "million",
+			"english": "million"
+		},
+		{
+			"Rank": "1535",
+			"french": "appareil",
+			"english": "apparatus"
+		},
+		{
+			"Rank": "1536",
+			"french": "tirez",
+			"english": "PULL"
+		},
+		{
+			"Rank": "1537",
+			"french": "apporte",
+			"english": "brings"
+		},
+		{
+			"Rank": "1538",
+			"french": "réponds",
+			"english": "answer"
+		},
+		{
+			"Rank": "1539",
+			"french": "piste",
+			"english": "track"
+		},
+		{
+			"Rank": "1540",
+			"french": "derniers",
+			"english": "last"
+		},
+		{
+			"Rank": "1541",
+			"french": "man",
+			"english": "man"
+		},
+		{
+			"Rank": "1542",
+			"french": "troisième",
+			"english": "third"
+		},
+		{
+			"Rank": "1543",
+			"french": "dépend",
+			"english": "depends"
+		},
+		{
+			"Rank": "1544",
+			"french": "humains",
+			"english": "humans"
+		},
+		{
+			"Rank": "1545",
+			"french": "programme",
+			"english": "program"
+		},
+		{
+			"Rank": "1546",
+			"french": "honnête",
+			"english": "honest"
+		},
+		{
+			"Rank": "1547",
+			"french": "voitures",
+			"english": "Car"
+		},
+		{
+			"Rank": "1548",
+			"french": "bougez",
+			"english": "move"
+		},
+		{
+			"Rank": "1549",
+			"french": "richard",
+			"english": "richard"
+		},
+		{
+			"Rank": "1550",
+			"french": "belles",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1551",
+			"french": "régler",
+			"english": "adjust"
+		},
+		{
+			"Rank": "1552",
+			"french": "flingue",
+			"english": "gat"
+		},
+		{
+			"Rank": "1553",
+			"french": "couper",
+			"english": "cut"
+		},
+		{
+			"Rank": "1554",
+			"french": "noire",
+			"english": "black"
+		},
+		{
+			"Rank": "1555",
+			"french": "entendez",
+			"english": "hear"
+		},
+		{
+			"Rank": "1556",
+			"french": "aveugle",
+			"english": "blinded"
+		},
+		{
+			"Rank": "1557",
+			"french": "bouger",
+			"english": "move"
+		},
+		{
+			"Rank": "1558",
+			"french": "venait",
+			"english": "had"
+		},
+		{
+			"Rank": "1559",
+			"french": "présence",
+			"english": "presence"
+		},
+		{
+			"Rank": "1560",
+			"french": "savons",
+			"english": "know"
+		},
+		{
+			"Rank": "1561",
+			"french": "crise",
+			"english": "crisis"
+		},
+		{
+			"Rank": "1562",
+			"french": "amène",
+			"english": "bring"
+		},
+		{
+			"Rank": "1563",
+			"french": "interdit",
+			"english": "not allowed"
+		},
+		{
+			"Rank": "1564",
+			"french": "trés",
+			"english": "very"
+		},
+		{
+			"Rank": "1565",
+			"french": "lever",
+			"english": "raise"
+		},
+		{
+			"Rank": "1566",
+			"french": "partons",
+			"english": "leave"
+		},
+		{
+			"Rank": "1567",
+			"french": "clés",
+			"english": "Keywords"
+		},
+		{
+			"Rank": "1568",
+			"french": "obtenir",
+			"english": "get"
+		},
+		{
+			"Rank": "1569",
+			"french": "pluie",
+			"english": "rain"
+		},
+		{
+			"Rank": "1570",
+			"french": "récupérer",
+			"english": "recover"
+		},
+		{
+			"Rank": "1571",
+			"french": "grandes",
+			"english": "great"
+		},
+		{
+			"Rank": "1572",
+			"french": "quelles",
+			"english": "what"
+		},
+		{
+			"Rank": "1573",
+			"french": "prouver",
+			"english": "prove"
+		},
+		{
+			"Rank": "1574",
+			"french": "souris",
+			"english": "mouse"
+		},
+		{
+			"Rank": "1575",
+			"french": "restaurant",
+			"english": "restaurant"
+		},
+		{
+			"Rank": "1576",
+			"french": "regard",
+			"english": "look"
+		},
+		{
+			"Rank": "1577",
+			"french": "okay",
+			"english": "okay"
+		},
+		{
+			"Rank": "1578",
+			"french": "intention",
+			"english": "intention"
+		},
+		{
+			"Rank": "1579",
+			"french": "forte",
+			"english": "strong"
+		},
+		{
+			"Rank": "1580",
+			"french": "danny",
+			"english": "danny"
+		},
+		{
+			"Rank": "1581",
+			"french": "cou",
+			"english": "neck"
+		},
+		{
+			"Rank": "1582",
+			"french": "points",
+			"english": "points"
+		},
+		{
+			"Rank": "1583",
+			"french": "manqué",
+			"english": "lack"
+		},
+		{
+			"Rank": "1584",
+			"french": "proche",
+			"english": "close"
+		},
+		{
+			"Rank": "1585",
+			"french": "urgence",
+			"english": "emergency"
+		},
+		{
+			"Rank": "1586",
+			"french": "folie",
+			"english": "madness"
+		},
+		{
+			"Rank": "1587",
+			"french": "ancien",
+			"english": "former"
+		},
+		{
+			"Rank": "1588",
+			"french": "relation",
+			"english": "relationship"
+		},
+		{
+			"Rank": "1589",
+			"french": "bouteille",
+			"english": "bottle"
+		},
+		{
+			"Rank": "1590",
+			"french": "étage",
+			"english": "floor"
+		},
+		{
+			"Rank": "1591",
+			"french": "rejoindre",
+			"english": "rejoin"
+		},
+		{
+			"Rank": "1592",
+			"french": "casse",
+			"english": "broken"
+		},
+		{
+			"Rank": "1593",
+			"french": "jardin",
+			"english": "garden"
+		},
+		{
+			"Rank": "1594",
+			"french": "malgré",
+			"english": "despite"
+		},
+		{
+			"Rank": "1595",
+			"french": "oiseau",
+			"english": "bird"
+		},
+		{
+			"Rank": "1596",
+			"french": "méchant",
+			"english": "bad"
+		},
+		{
+			"Rank": "1597",
+			"french": "raisons",
+			"english": "reasons"
+		},
+		{
+			"Rank": "1598",
+			"french": "perds",
+			"english": "lose"
+		},
+		{
+			"Rank": "1599",
+			"french": "pleure",
+			"english": "cry"
+		},
+		{
+			"Rank": "1600",
+			"french": "meurt",
+			"english": "dies"
+		},
+		{
+			"Rank": "1601",
+			"french": "claire",
+			"english": "clear"
+		},
+		{
+			"Rank": "1602",
+			"french": "frappé",
+			"english": "hit"
+		},
+		{
+			"Rank": "1603",
+			"french": "chante",
+			"english": "sung"
+		},
+		{
+			"Rank": "1604",
+			"french": "pourrai",
+			"english": "could"
+		},
+		{
+			"Rank": "1605",
+			"french": "nombre",
+			"english": "number"
+		},
+		{
+			"Rank": "1606",
+			"french": "robert",
+			"english": "robert"
+		},
+		{
+			"Rank": "1607",
+			"french": "gentille",
+			"english": "gentle"
+		},
+		{
+			"Rank": "1608",
+			"french": "pourras",
+			"english": "able"
+		},
+		{
+			"Rank": "1609",
+			"french": "sentiments",
+			"english": "feelings"
+		},
+		{
+			"Rank": "1610",
+			"french": "regardé",
+			"english": "watched"
+		},
+		{
+			"Rank": "1611",
+			"french": "toit",
+			"english": "roof"
+		},
+		{
+			"Rank": "1612",
+			"french": "lors",
+			"english": "then"
+		},
+		{
+			"Rank": "1613",
+			"french": "métier",
+			"english": "job"
+		},
+		{
+			"Rank": "1614",
+			"french": "maladie",
+			"english": "disease"
+		},
+		{
+			"Rank": "1615",
+			"french": "poche",
+			"english": "poached"
+		},
+		{
+			"Rank": "1616",
+			"french": "três",
+			"english": "very"
+		},
+		{
+			"Rank": "1617",
+			"french": "frapper",
+			"english": "hit"
+		},
+		{
+			"Rank": "1618",
+			"french": "tommy",
+			"english": "tommy"
+		},
+		{
+			"Rank": "1619",
+			"french": "succès",
+			"english": "success"
+		},
+		{
+			"Rank": "1620",
+			"french": "étant",
+			"english": "being"
+		},
+		{
+			"Rank": "1621",
+			"french": "lee",
+			"english": "lee"
+		},
+		{
+			"Rank": "1622",
+			"french": "dessous",
+			"english": "below"
+		},
+		{
+			"Rank": "1623",
+			"french": "voudrait",
+			"english": "would"
+		},
+		{
+			"Rank": "1624",
+			"french": "théâtre",
+			"english": "theater"
+		},
+		{
+			"Rank": "1625",
+			"french": "chinois",
+			"english": "Chinese"
+		},
+		{
+			"Rank": "1626",
+			"french": "crains",
+			"english": "fear"
+		},
+		{
+			"Rank": "1627",
+			"french": "afin",
+			"english": "to"
+		},
+		{
+			"Rank": "1628",
+			"french": "gare",
+			"english": "station"
+		},
+		{
+			"Rank": "1629",
+			"french": "billets",
+			"english": "tickets"
+		},
+		{
+			"Rank": "1630",
+			"french": "douce",
+			"english": "fresh"
+		},
+		{
+			"Rank": "1631",
+			"french": "frappe",
+			"english": "hit"
+		},
+		{
+			"Rank": "1632",
+			"french": "remarqué",
+			"english": "Note"
+		},
+		{
+			"Rank": "1633",
+			"french": "paradis",
+			"english": "paradise"
+		},
+		{
+			"Rank": "1634",
+			"french": "étranger",
+			"english": "foreign"
+		},
+		{
+			"Rank": "1635",
+			"french": "campagne",
+			"english": "campaign"
+		},
+		{
+			"Rank": "1636",
+			"french": "fermé",
+			"english": "closed"
+		},
+		{
+			"Rank": "1637",
+			"french": "g",
+			"english": "g"
+		},
+		{
+			"Rank": "1638",
+			"french": "alcool",
+			"english": "alcohol"
+		},
+		{
+			"Rank": "1639",
+			"french": "jerry",
+			"english": "jerry"
+		},
+		{
+			"Rank": "1640",
+			"french": "vendu",
+			"english": "sold"
+		},
+		{
+			"Rank": "1641",
+			"french": "samedi",
+			"english": "Saturday"
+		},
+		{
+			"Rank": "1642",
+			"french": "parlait",
+			"english": "speaking"
+		},
+		{
+			"Rank": "1643",
+			"french": "produit",
+			"english": "product"
+		},
+		{
+			"Rank": "1644",
+			"french": "répète",
+			"english": "say again"
+		},
+		{
+			"Rank": "1645",
+			"french": "amoureuse",
+			"english": "in love"
+		},
+		{
+			"Rank": "1646",
+			"french": "souhaite",
+			"english": "wish"
+		},
+		{
+			"Rank": "1647",
+			"french": "odeur",
+			"english": "Odour"
+		},
+		{
+			"Rank": "1648",
+			"french": "appelait",
+			"english": "called"
+		},
+		{
+			"Rank": "1649",
+			"french": "vôtre",
+			"english": "your"
+		},
+		{
+			"Rank": "1650",
+			"french": "attendant",
+			"english": "Meanwhile"
+		},
+		{
+			"Rank": "1651",
+			"french": "montagne",
+			"english": "Mountain"
+		},
+		{
+			"Rank": "1652",
+			"french": "oû",
+			"english": "or"
+		},
+		{
+			"Rank": "1653",
+			"french": "vies",
+			"english": "lives"
+		},
+		{
+			"Rank": "1654",
+			"french": "demandez",
+			"english": "ask"
+		},
+		{
+			"Rank": "1655",
+			"french": "fantastique",
+			"english": "fantastic"
+		},
+		{
+			"Rank": "1656",
+			"french": "victoire",
+			"english": "victory"
+		},
+		{
+			"Rank": "1657",
+			"french": "mens",
+			"english": "mens"
+		},
+		{
+			"Rank": "1658",
+			"french": "carrière",
+			"english": "career"
+		},
+		{
+			"Rank": "1659",
+			"french": "enlève",
+			"english": "removes"
+		},
+		{
+			"Rank": "1660",
+			"french": "fatigué",
+			"english": "tired"
+		},
+		{
+			"Rank": "1661",
+			"french": "suivi",
+			"english": "followed"
+		},
+		{
+			"Rank": "1662",
+			"french": "animal",
+			"english": "animal"
+		},
+		{
+			"Rank": "1663",
+			"french": "raté",
+			"english": "missed"
+		},
+		{
+			"Rank": "1664",
+			"french": "règle",
+			"english": "rule"
+		},
+		{
+			"Rank": "1665",
+			"french": "meurs",
+			"english": "die"
+		},
+		{
+			"Rank": "1666",
+			"french": "remercier",
+			"english": "thank"
+		},
+		{
+			"Rank": "1667",
+			"french": "assurer",
+			"english": "assure"
+		},
+		{
+			"Rank": "1668",
+			"french": "queue",
+			"english": "tail"
+		},
+		{
+			"Rank": "1669",
+			"french": "viande",
+			"english": "meat"
+		},
+		{
+			"Rank": "1670",
+			"french": "rivière",
+			"english": "river"
+		},
+		{
+			"Rank": "1671",
+			"french": "falloir",
+			"english": "have to"
+		},
+		{
+			"Rank": "1672",
+			"french": "suivant",
+			"english": "following"
+		},
+		{
+			"Rank": "1673",
+			"french": "assure",
+			"english": "assures"
+		},
+		{
+			"Rank": "1674",
+			"french": "obligé",
+			"english": "forced"
+		},
+		{
+			"Rank": "1675",
+			"french": "martin",
+			"english": "martin"
+		},
+		{
+			"Rank": "1676",
+			"french": "fusil",
+			"english": "gun"
+		},
+		{
+			"Rank": "1677",
+			"french": "passage",
+			"english": "passage"
+		},
+		{
+			"Rank": "1678",
+			"french": "hasard",
+			"english": "hazard"
+		},
+		{
+			"Rank": "1679",
+			"french": "pauvres",
+			"english": "poor"
+		},
+		{
+			"Rank": "1680",
+			"french": "neige",
+			"english": "snow"
+		},
+		{
+			"Rank": "1681",
+			"french": "parfaitement",
+			"english": "perfectly"
+		},
+		{
+			"Rank": "1682",
+			"french": "journaux",
+			"english": "newspapers"
+		},
+		{
+			"Rank": "1683",
+			"french": "échapper",
+			"english": "escape"
+		},
+		{
+			"Rank": "1684",
+			"french": "plage",
+			"english": "beach"
+		},
+		{
+			"Rank": "1685",
+			"french": "secrets",
+			"english": "secrets"
+		},
+		{
+			"Rank": "1686",
+			"french": "signal",
+			"english": "signal"
+		},
+		{
+			"Rank": "1687",
+			"french": "crétin",
+			"english": "dumbass"
+		},
+		{
+			"Rank": "1688",
+			"french": "aies",
+			"english": "hast"
+		},
+		{
+			"Rank": "1689",
+			"french": "vidéo",
+			"english": "video"
+		},
+		{
+			"Rank": "1690",
+			"french": "coffre",
+			"english": "chest"
+		},
+		{
+			"Rank": "1691",
+			"french": "pression",
+			"english": "pressure"
+		},
+		{
+			"Rank": "1692",
+			"french": "costume",
+			"english": "suit"
+		},
+		{
+			"Rank": "1693",
+			"french": "informations",
+			"english": "news"
+		},
+		{
+			"Rank": "1694",
+			"french": "futur",
+			"english": "future"
+		},
+		{
+			"Rank": "1695",
+			"french": "disant",
+			"english": "saying"
+		},
+		{
+			"Rank": "1696",
+			"french": "univers",
+			"english": "universe"
+		},
+		{
+			"Rank": "1697",
+			"french": "auraient",
+			"english": "would"
+		},
+		{
+			"Rank": "1698",
+			"french": "gardes",
+			"english": "guards"
+		},
+		{
+			"Rank": "1699",
+			"french": "lis",
+			"english": "Lily"
+		},
+		{
+			"Rank": "1700",
+			"french": "volonté",
+			"english": "will"
+		},
+		{
+			"Rank": "1701",
+			"french": "attendu",
+			"english": "expected"
+		},
+		{
+			"Rank": "1702",
+			"french": "verras",
+			"english": "see"
+		},
+		{
+			"Rank": "1703",
+			"french": "donnez",
+			"english": "give"
+		},
+		{
+			"Rank": "1704",
+			"french": "demandais",
+			"english": "asked"
+		},
+		{
+			"Rank": "1705",
+			"french": "excuses",
+			"english": "apology"
+		},
+		{
+			"Rank": "1706",
+			"french": "vienne",
+			"english": "come"
+		},
+		{
+			"Rank": "1707",
+			"french": "pensent",
+			"english": "think"
+		},
+		{
+			"Rank": "1708",
+			"french": "faible",
+			"english": "low"
+		},
+		{
+			"Rank": "1709",
+			"french": "cache",
+			"english": "hidden"
+		},
+		{
+			"Rank": "1710",
+			"french": "fiston",
+			"english": "son"
+		},
+		{
+			"Rank": "1711",
+			"french": "van",
+			"english": "van"
+		},
+		{
+			"Rank": "1712",
+			"french": "prendra",
+			"english": "will take"
+		},
+		{
+			"Rank": "1713",
+			"french": "attraper",
+			"english": "to catch"
+		},
+		{
+			"Rank": "1714",
+			"french": "dort",
+			"english": "sleeps"
+		},
+		{
+			"Rank": "1715",
+			"french": "décider",
+			"english": "decide"
+		},
+		{
+			"Rank": "1716",
+			"french": "inquiétez",
+			"english": "worry"
+		},
+		{
+			"Rank": "1717",
+			"french": "cesse",
+			"english": "constantly"
+		},
+		{
+			"Rank": "1718",
+			"french": "gaffe",
+			"english": "gaffe"
+		},
+		{
+			"Rank": "1719",
+			"french": "serons",
+			"english": "will"
+		},
+		{
+			"Rank": "1720",
+			"french": "ministre",
+			"english": "minister"
+		},
+		{
+			"Rank": "1721",
+			"french": "naissance",
+			"english": "birth"
+		},
+		{
+			"Rank": "1722",
+			"french": "agir",
+			"english": "to act"
+		},
+		{
+			"Rank": "1723",
+			"french": "utile",
+			"english": "useful"
+		},
+		{
+			"Rank": "1724",
+			"french": "gaz",
+			"english": "gas"
+		},
+		{
+			"Rank": "1725",
+			"french": "bataille",
+			"english": "battle"
+		},
+		{
+			"Rank": "1726",
+			"french": "noirs",
+			"english": "black"
+		},
+		{
+			"Rank": "1727",
+			"french": "vouliez",
+			"english": "wanted"
+		},
+		{
+			"Rank": "1728",
+			"french": "retraite",
+			"english": "retirement"
+		},
+		{
+			"Rank": "1729",
+			"french": "voleur",
+			"english": "thief"
+		},
+		{
+			"Rank": "1730",
+			"french": "poids",
+			"english": "weight"
+		},
+		{
+			"Rank": "1731",
+			"french": "discours",
+			"english": "speech"
+		},
+		{
+			"Rank": "1732",
+			"french": "star",
+			"english": "star"
+		},
+		{
+			"Rank": "1733",
+			"french": "nouvel",
+			"english": "new"
+		},
+		{
+			"Rank": "1734",
+			"french": "gâteau",
+			"english": "Cake"
+		},
+		{
+			"Rank": "1735",
+			"french": "cents",
+			"english": "cents"
+		},
+		{
+			"Rank": "1736",
+			"french": "ventre",
+			"english": "belly"
+		},
+		{
+			"Rank": "1737",
+			"french": "connaissance",
+			"english": "knowledge"
+		},
+		{
+			"Rank": "1738",
+			"french": "voulons",
+			"english": "want to"
+		},
+		{
+			"Rank": "1739",
+			"french": "vive",
+			"english": "viva"
+		},
+		{
+			"Rank": "1740",
+			"french": "blancs",
+			"english": "whites"
+		},
+		{
+			"Rank": "1741",
+			"french": "assassin",
+			"english": "assassin"
+		},
+		{
+			"Rank": "1742",
+			"french": "jeux",
+			"english": "games"
+		},
+		{
+			"Rank": "1743",
+			"french": "vendredi",
+			"english": "Friday"
+		},
+		{
+			"Rank": "1744",
+			"french": "europe",
+			"english": "Europe"
+		},
+		{
+			"Rank": "1745",
+			"french": "accepte",
+			"english": "accepted"
+		},
+		{
+			"Rank": "1746",
+			"french": "parlons",
+			"english": "let's talk"
+		},
+		{
+			"Rank": "1747",
+			"french": "certaine",
+			"english": "some"
+		},
+		{
+			"Rank": "1748",
+			"french": "couple",
+			"english": "couple"
+		},
+		{
+			"Rank": "1749",
+			"french": "sérieusement",
+			"english": "seriously"
+		},
+		{
+			"Rank": "1750",
+			"french": "militaire",
+			"english": "military"
+		},
+		{
+			"Rank": "1751",
+			"french": "date",
+			"english": "dated"
+		},
+		{
+			"Rank": "1752",
+			"french": "rome",
+			"english": "Rome"
+		},
+		{
+			"Rank": "1753",
+			"french": "entend",
+			"english": "hears"
+		},
+		{
+			"Rank": "1754",
+			"french": "droits",
+			"english": "rights"
+		},
+		{
+			"Rank": "1755",
+			"french": "resté",
+			"english": "rest"
+		},
+		{
+			"Rank": "1756",
+			"french": "montez",
+			"english": "mount"
+		},
+		{
+			"Rank": "1757",
+			"french": "titre",
+			"english": "title"
+		},
+		{
+			"Rank": "1758",
+			"french": "génie",
+			"english": "genius"
+		},
+		{
+			"Rank": "1759",
+			"french": "couilles",
+			"english": "balls"
+		},
+		{
+			"Rank": "1760",
+			"french": "revenez",
+			"english": "return"
+		},
+		{
+			"Rank": "1761",
+			"french": "recevoir",
+			"english": "to receive"
+		},
+		{
+			"Rank": "1762",
+			"french": "autrement",
+			"english": "other"
+		},
+		{
+			"Rank": "1763",
+			"french": "répondu",
+			"english": "answered"
+		},
+		{
+			"Rank": "1764",
+			"french": "amené",
+			"english": "bring"
+		},
+		{
+			"Rank": "1765",
+			"french": "os",
+			"english": "bone"
+		},
+		{
+			"Rank": "1766",
+			"french": "perd",
+			"english": "loses"
+		},
+		{
+			"Rank": "1767",
+			"french": "valeur",
+			"english": "value"
+		},
+		{
+			"Rank": "1768",
+			"french": "puissant",
+			"english": "powerful"
+		},
+		{
+			"Rank": "1769",
+			"french": "style",
+			"english": "style"
+		},
+		{
+			"Rank": "1770",
+			"french": "vert",
+			"english": "green"
+		},
+		{
+			"Rank": "1771",
+			"french": "fortune",
+			"english": "fortune"
+		},
+		{
+			"Rank": "1772",
+			"french": "vieil",
+			"english": "old"
+		},
+		{
+			"Rank": "1773",
+			"french": "major",
+			"english": "Staff"
+		},
+		{
+			"Rank": "1774",
+			"french": "amener",
+			"english": "lead"
+		},
+		{
+			"Rank": "1775",
+			"french": "prépare",
+			"english": "prepare"
+		},
+		{
+			"Rank": "1776",
+			"french": "poulet",
+			"english": "chicken"
+		},
+		{
+			"Rank": "1777",
+			"french": "embrasser",
+			"english": "to kiss"
+		},
+		{
+			"Rank": "1778",
+			"french": "genoux",
+			"english": "knees"
+		},
+		{
+			"Rank": "1779",
+			"french": "acte",
+			"english": "act"
+		},
+		{
+			"Rank": "1780",
+			"french": "détruit",
+			"english": "destroy"
+		},
+		{
+			"Rank": "1781",
+			"french": "célèbre",
+			"english": "popular"
+		},
+		{
+			"Rank": "1782",
+			"french": "cible",
+			"english": "target"
+		},
+		{
+			"Rank": "1783",
+			"french": "cousin",
+			"english": "cousin"
+		},
+		{
+			"Rank": "1784",
+			"french": "conscience",
+			"english": "consciousness"
+		},
+		{
+			"Rank": "1785",
+			"french": "prévenir",
+			"english": "prevent"
+		},
+		{
+			"Rank": "1786",
+			"french": "ramène",
+			"english": "brings back"
+		},
+		{
+			"Rank": "1787",
+			"french": "arrivés",
+			"english": "arrived"
+		},
+		{
+			"Rank": "1788",
+			"french": "doigt",
+			"english": "finger"
+		},
+		{
+			"Rank": "1789",
+			"french": "californie",
+			"english": "California"
+		},
+		{
+			"Rank": "1790",
+			"french": "article",
+			"english": "article"
+		},
+		{
+			"Rank": "1791",
+			"french": "cherchez",
+			"english": "looking"
+		},
+		{
+			"Rank": "1792",
+			"french": "étoiles",
+			"english": "stars"
+		},
+		{
+			"Rank": "1793",
+			"french": "milliers",
+			"english": "thousands"
+		},
+		{
+			"Rank": "1794",
+			"french": "reprendre",
+			"english": "resume"
+		},
+		{
+			"Rank": "1795",
+			"french": "mine",
+			"english": "mine"
+		},
+		{
+			"Rank": "1796",
+			"french": "regardes",
+			"english": "look"
+		},
+		{
+			"Rank": "1797",
+			"french": "servi",
+			"english": "served"
+		},
+		{
+			"Rank": "1798",
+			"french": "ennemis",
+			"english": "enemies"
+		},
+		{
+			"Rank": "1799",
+			"french": "charmant",
+			"english": "charming"
+		},
+		{
+			"Rank": "1800",
+			"french": "sentiment",
+			"english": "feeling"
+		},
+		{
+			"Rank": "1801",
+			"french": "reposer",
+			"english": "rest"
+		},
+		{
+			"Rank": "1802",
+			"french": "note",
+			"english": "note"
+		},
+		{
+			"Rank": "1803",
+			"french": "couché",
+			"english": "layer"
+		},
+		{
+			"Rank": "1804",
+			"french": "gardez",
+			"english": "keep"
+		},
+		{
+			"Rank": "1805",
+			"french": "jake",
+			"english": "jake"
+		},
+		{
+			"Rank": "1806",
+			"french": "www",
+			"english": "www"
+		},
+		{
+			"Rank": "1807",
+			"french": "agréable",
+			"english": "pleasant"
+		},
+		{
+			"Rank": "1808",
+			"french": "anna",
+			"english": "anna"
+		},
+		{
+			"Rank": "1809",
+			"french": "préféré",
+			"english": "prefer"
+		},
+		{
+			"Rank": "1810",
+			"french": "château",
+			"english": "castle"
+		},
+		{
+			"Rank": "1811",
+			"french": "bal",
+			"english": "ball"
+		},
+		{
+			"Rank": "1812",
+			"french": "oreilles",
+			"english": "ears"
+		},
+		{
+			"Rank": "1813",
+			"french": "découvrir",
+			"english": "discover"
+		},
+		{
+			"Rank": "1814",
+			"french": "apparemment",
+			"english": "apparently"
+		},
+		{
+			"Rank": "1815",
+			"french": "los",
+			"english": "the bone"
+		},
+		{
+			"Rank": "1816",
+			"french": "zéro",
+			"english": "zero"
+		},
+		{
+			"Rank": "1817",
+			"french": "saint",
+			"english": "saint"
+		},
+		{
+			"Rank": "1818",
+			"french": "côtés",
+			"english": "sides"
+		},
+		{
+			"Rank": "1819",
+			"french": "marrant",
+			"english": "funny"
+		},
+		{
+			"Rank": "1820",
+			"french": "comprend",
+			"english": "includes"
+		},
+		{
+			"Rank": "1821",
+			"french": "pourrez",
+			"english": "can"
+		},
+		{
+			"Rank": "1822",
+			"french": "joues",
+			"english": "play"
+		},
+		{
+			"Rank": "1823",
+			"french": "salon",
+			"english": "living room"
+		},
+		{
+			"Rank": "1824",
+			"french": "lève",
+			"english": "survey"
+		},
+		{
+			"Rank": "1825",
+			"french": "utilise",
+			"english": "uses"
+		},
+		{
+			"Rank": "1826",
+			"french": "conversation",
+			"english": "conversation"
+		},
+		{
+			"Rank": "1827",
+			"french": "pilote",
+			"english": "pilot"
+		},
+		{
+			"Rank": "1828",
+			"french": "fer",
+			"english": "iron"
+		},
+		{
+			"Rank": "1829",
+			"french": "attendent",
+			"english": "wait"
+		},
+		{
+			"Rank": "1830",
+			"french": "humaine",
+			"english": "human"
+		},
+		{
+			"Rank": "1831",
+			"french": "conduit",
+			"english": "pipe"
+		},
+		{
+			"Rank": "1832",
+			"french": "gorge",
+			"english": "throat"
+		},
+		{
+			"Rank": "1833",
+			"french": "victimes",
+			"english": "victims"
+		},
+		{
+			"Rank": "1834",
+			"french": "détails",
+			"english": "details"
+		},
+		{
+			"Rank": "1835",
+			"french": "talent",
+			"english": "talent"
+		},
+		{
+			"Rank": "1836",
+			"french": "passée",
+			"english": "past"
+		},
+		{
+			"Rank": "1837",
+			"french": "sexy",
+			"english": "sexy"
+		},
+		{
+			"Rank": "1838",
+			"french": "iui",
+			"english": "iui"
+		},
+		{
+			"Rank": "1839",
+			"french": "maria",
+			"english": "maria"
+		},
+		{
+			"Rank": "1840",
+			"french": "privé",
+			"english": "private"
+		},
+		{
+			"Rank": "1841",
+			"french": "apporter",
+			"english": "to bring"
+		},
+		{
+			"Rank": "1842",
+			"french": "tuée",
+			"english": "killed"
+		},
+		{
+			"Rank": "1843",
+			"french": "violence",
+			"english": "violence"
+		},
+		{
+			"Rank": "1844",
+			"french": "feras",
+			"english": "shalt"
+		},
+		{
+			"Rank": "1845",
+			"french": "nerveux",
+			"english": "nervous"
+		},
+		{
+			"Rank": "1846",
+			"french": "aéroport",
+			"english": "airport"
+		},
+		{
+			"Rank": "1847",
+			"french": "direct",
+			"english": "direct"
+		},
+		{
+			"Rank": "1848",
+			"french": "enculé",
+			"english": "cocksucker"
+		},
+		{
+			"Rank": "1849",
+			"french": "tribunal",
+			"english": "court"
+		},
+		{
+			"Rank": "1850",
+			"french": "commande",
+			"english": "order"
+		},
+		{
+			"Rank": "1851",
+			"french": "in",
+			"english": "in"
+		},
+		{
+			"Rank": "1852",
+			"french": "jette",
+			"english": "throws"
+		},
+		{
+			"Rank": "1853",
+			"french": "paquet",
+			"english": "package"
+		},
+		{
+			"Rank": "1854",
+			"french": "fumer",
+			"english": "smoke"
+		},
+		{
+			"Rank": "1855",
+			"french": "aise",
+			"english": "easy"
+		},
+		{
+			"Rank": "1856",
+			"french": "dieux",
+			"english": "gods"
+		},
+		{
+			"Rank": "1857",
+			"french": "emmerde",
+			"english": "hassle"
+		},
+		{
+			"Rank": "1858",
+			"french": "joindre",
+			"english": "join"
+		},
+		{
+			"Rank": "1859",
+			"french": "lance",
+			"english": "spear"
+		},
+		{
+			"Rank": "1860",
+			"french": "usine",
+			"english": "factory"
+		},
+		{
+			"Rank": "1861",
+			"french": "défendre",
+			"english": "defend"
+		},
+		{
+			"Rank": "1862",
+			"french": "will",
+			"english": "will"
+		},
+		{
+			"Rank": "1863",
+			"french": "ŕ",
+			"english": "R"
+		},
+		{
+			"Rank": "1864",
+			"french": "forêt",
+			"english": "forest"
+		},
+		{
+			"Rank": "1865",
+			"french": "champion",
+			"english": "champion"
+		},
+		{
+			"Rank": "1866",
+			"french": "horreur",
+			"english": "horror"
+		},
+		{
+			"Rank": "1867",
+			"french": "importante",
+			"english": "important"
+		},
+		{
+			"Rank": "1868",
+			"french": "paroles",
+			"english": "lyrics"
+		},
+		{
+			"Rank": "1869",
+			"french": "test",
+			"english": "test"
+		},
+		{
+			"Rank": "1870",
+			"french": "désormais",
+			"english": "henceforth"
+		},
+		{
+			"Rank": "1871",
+			"french": "tres",
+			"english": "very"
+		},
+		{
+			"Rank": "1872",
+			"french": "dernières",
+			"english": "latest"
+		},
+		{
+			"Rank": "1873",
+			"french": "tombée",
+			"english": "fall"
+		},
+		{
+			"Rank": "1874",
+			"french": "chris",
+			"english": "chris"
+		},
+		{
+			"Rank": "1875",
+			"french": "extérieur",
+			"english": "outside"
+		},
+		{
+			"Rank": "1876",
+			"french": "désert",
+			"english": "desert"
+		},
+		{
+			"Rank": "1877",
+			"french": "walter",
+			"english": "walter"
+		},
+		{
+			"Rank": "1878",
+			"french": "larry",
+			"english": "larry"
+		},
+		{
+			"Rank": "1879",
+			"french": "coupé",
+			"english": "chopped off"
+		},
+		{
+			"Rank": "1880",
+			"french": "intelligent",
+			"english": "clever"
+		},
+		{
+			"Rank": "1881",
+			"french": "aidé",
+			"english": "help"
+		},
+		{
+			"Rank": "1882",
+			"french": "hum",
+			"english": "hum"
+		},
+		{
+			"Rank": "1883",
+			"french": "saura",
+			"english": "will"
+		},
+		{
+			"Rank": "1884",
+			"french": "dira",
+			"english": "tell"
+		},
+		{
+			"Rank": "1885",
+			"french": "job",
+			"english": "job"
+		},
+		{
+			"Rank": "1886",
+			"french": "passera",
+			"english": "will pass"
+		},
+		{
+			"Rank": "1887",
+			"french": "comptes",
+			"english": "accounts"
+		},
+		{
+			"Rank": "1888",
+			"french": "mode",
+			"english": "fashion"
+		},
+		{
+			"Rank": "1889",
+			"french": "parlais",
+			"english": "speaking"
+		},
+		{
+			"Rank": "1890",
+			"french": "invités",
+			"english": "guests"
+		},
+		{
+			"Rank": "1891",
+			"french": "série",
+			"english": "series"
+		},
+		{
+			"Rank": "1892",
+			"french": "pis",
+			"english": "udder"
+		},
+		{
+			"Rank": "1893",
+			"french": "sage",
+			"english": "wise"
+		},
+		{
+			"Rank": "1894",
+			"french": "rappelles",
+			"english": "remember"
+		},
+		{
+			"Rank": "1895",
+			"french": "concerne",
+			"english": "concerned"
+		},
+		{
+			"Rank": "1896",
+			"french": "mariés",
+			"english": "married"
+		},
+		{
+			"Rank": "1897",
+			"french": "grandi",
+			"english": "grown up"
+		},
+		{
+			"Rank": "1898",
+			"french": "pousse",
+			"english": "shoot"
+		},
+		{
+			"Rank": "1899",
+			"french": "vache",
+			"english": "cow"
+		},
+		{
+			"Rank": "1900",
+			"french": "accepté",
+			"english": "accepted"
+		},
+		{
+			"Rank": "1901",
+			"french": "meme",
+			"english": "even"
+		},
+		{
+			"Rank": "1902",
+			"french": "pensait",
+			"english": "thought"
+		},
+		{
+			"Rank": "1903",
+			"french": "repos",
+			"english": "rest"
+		},
+		{
+			"Rank": "1904",
+			"french": "ordinateur",
+			"english": "computer"
+		},
+		{
+			"Rank": "1905",
+			"french": "rock",
+			"english": "rock"
+		},
+		{
+			"Rank": "1906",
+			"french": "allo",
+			"english": "Hello"
+		},
+		{
+			"Rank": "1907",
+			"french": "smith",
+			"english": "smith"
+		},
+		{
+			"Rank": "1908",
+			"french": "ombre",
+			"english": "shadow"
+		},
+		{
+			"Rank": "1909",
+			"french": "it",
+			"english": "it"
+		},
+		{
+			"Rank": "1910",
+			"french": "russe",
+			"english": "Russian"
+		},
+		{
+			"Rank": "1911",
+			"french": "minuit",
+			"english": "midnight"
+		},
+		{
+			"Rank": "1912",
+			"french": "vole",
+			"english": "stolen"
+		},
+		{
+			"Rank": "1913",
+			"french": "amusant",
+			"english": "amusing"
+		},
+		{
+			"Rank": "1914",
+			"french": "membres",
+			"english": "members"
+		},
+		{
+			"Rank": "1915",
+			"french": "jane",
+			"english": "jane"
+		},
+		{
+			"Rank": "1916",
+			"french": "moyens",
+			"english": "means"
+		},
+		{
+			"Rank": "1917",
+			"french": "surpris",
+			"english": "surprised"
+		},
+		{
+			"Rank": "1918",
+			"french": "ouverte",
+			"english": "opened"
+		},
+		{
+			"Rank": "1919",
+			"french": "nombreux",
+			"english": "numerous"
+		},
+		{
+			"Rank": "1920",
+			"french": "également",
+			"english": "also"
+		},
+		{
+			"Rank": "1921",
+			"french": "imaginer",
+			"english": "imagine"
+		},
+		{
+			"Rank": "1922",
+			"french": "mince",
+			"english": "slim"
+		},
+		{
+			"Rank": "1923",
+			"french": "dormi",
+			"english": "slept"
+		},
+		{
+			"Rank": "1924",
+			"french": "page",
+			"english": "page"
+		},
+		{
+			"Rank": "1925",
+			"french": "essence",
+			"english": "gasoline"
+		},
+		{
+			"Rank": "1926",
+			"french": "maire",
+			"english": "mayor"
+		},
+		{
+			"Rank": "1927",
+			"french": "faisant",
+			"english": "making"
+		},
+		{
+			"Rank": "1928",
+			"french": "lundi",
+			"english": "Monday"
+		},
+		{
+			"Rank": "1929",
+			"french": "entré",
+			"english": "enter"
+		},
+		{
+			"Rank": "1930",
+			"french": "billet",
+			"english": "ticket"
+		},
+		{
+			"Rank": "1931",
+			"french": "moteur",
+			"english": "engine"
+		},
+		{
+			"Rank": "1932",
+			"french": "réparer",
+			"english": "to repair"
+		},
+		{
+			"Rank": "1933",
+			"french": "franchement",
+			"english": "frankly"
+		},
+		{
+			"Rank": "1934",
+			"french": "caché",
+			"english": "hidden"
+		},
+		{
+			"Rank": "1935",
+			"french": "cigarette",
+			"english": "cigarette"
+		},
+		{
+			"Rank": "1936",
+			"french": "al",
+			"english": "al"
+		},
+		{
+			"Rank": "1937",
+			"french": "riches",
+			"english": "rich"
+		},
+		{
+			"Rank": "1938",
+			"french": "partager",
+			"english": "share"
+		},
+		{
+			"Rank": "1939",
+			"french": "puissance",
+			"english": "power"
+		},
+		{
+			"Rank": "1940",
+			"french": "trouvée",
+			"english": "found"
+		},
+		{
+			"Rank": "1941",
+			"french": "parfaite",
+			"english": "perfect"
+		},
+		{
+			"Rank": "1942",
+			"french": "hiver",
+			"english": "winter"
+		},
+		{
+			"Rank": "1943",
+			"french": "épée",
+			"english": "sword"
+		},
+		{
+			"Rank": "1944",
+			"french": "of",
+			"english": "of"
+		},
+		{
+			"Rank": "1945",
+			"french": "reviendra",
+			"english": "will come back"
+		},
+		{
+			"Rank": "1946",
+			"french": "haute",
+			"english": "high"
+		},
+		{
+			"Rank": "1947",
+			"french": "souffle",
+			"english": "breath"
+		},
+		{
+			"Rank": "1948",
+			"french": "tente",
+			"english": "attempted"
+		},
+		{
+			"Rank": "1949",
+			"french": "vingt",
+			"english": "twenty"
+		},
+		{
+			"Rank": "1950",
+			"french": "miracle",
+			"english": "miracle"
+		},
+		{
+			"Rank": "1951",
+			"french": "arbres",
+			"english": "trees"
+		},
+		{
+			"Rank": "1952",
+			"french": "apprécie",
+			"english": "appreciate"
+		},
+		{
+			"Rank": "1953",
+			"french": "senti",
+			"english": "felt"
+		},
+		{
+			"Rank": "1954",
+			"french": "manquer",
+			"english": "miss"
+		},
+		{
+			"Rank": "1955",
+			"french": "artiste",
+			"english": "artist"
+		},
+		{
+			"Rank": "1956",
+			"french": "créer",
+			"english": "create"
+		},
+		{
+			"Rank": "1957",
+			"french": "lac",
+			"english": "lake"
+		},
+		{
+			"Rank": "1958",
+			"french": "jeté",
+			"english": "thrown"
+		},
+		{
+			"Rank": "1959",
+			"french": "souvenirs",
+			"english": "memories"
+		},
+		{
+			"Rank": "1960",
+			"french": "sommeil",
+			"english": "sleep"
+		},
+		{
+			"Rank": "1961",
+			"french": "vrais",
+			"english": "real"
+		},
+		{
+			"Rank": "1962",
+			"french": "réveiller",
+			"english": "wake"
+		},
+		{
+			"Rank": "1963",
+			"french": "leçon",
+			"english": "lesson"
+		},
+		{
+			"Rank": "1964",
+			"french": "casser",
+			"english": "break"
+		},
+		{
+			"Rank": "1965",
+			"french": "courses",
+			"english": "racing"
+		},
+		{
+			"Rank": "1966",
+			"french": "chemise",
+			"english": "shirt"
+		},
+		{
+			"Rank": "1967",
+			"french": "fantôme",
+			"english": "ghost"
+		},
+		{
+			"Rank": "1968",
+			"french": "membre",
+			"english": "member"
+		},
+		{
+			"Rank": "1969",
+			"french": "passez",
+			"english": "skip"
+		},
+		{
+			"Rank": "1970",
+			"french": "acteur",
+			"english": "actor"
+		},
+		{
+			"Rank": "1971",
+			"french": "battu",
+			"english": "beaten"
+		},
+		{
+			"Rank": "1972",
+			"french": "parc",
+			"english": "Park"
+		},
+		{
+			"Rank": "1973",
+			"french": "chair",
+			"english": "flesh"
+		},
+		{
+			"Rank": "1974",
+			"french": "angeles",
+			"english": "angeles"
+		},
+		{
+			"Rank": "1975",
+			"french": "services",
+			"english": "services"
+		},
+		{
+			"Rank": "1976",
+			"french": "rues",
+			"english": "streets"
+		},
+		{
+			"Rank": "1977",
+			"french": "utilisé",
+			"english": "in use"
+		},
+		{
+			"Rank": "1978",
+			"french": "reculez",
+			"english": "step back"
+		},
+		{
+			"Rank": "1979",
+			"french": "japonais",
+			"english": "Japanese"
+		},
+		{
+			"Rank": "1980",
+			"french": "mentir",
+			"english": "lie"
+		},
+		{
+			"Rank": "1981",
+			"french": "rentrez",
+			"english": "come back"
+		},
+		{
+			"Rank": "1982",
+			"french": "plans",
+			"english": "Plans"
+		},
+		{
+			"Rank": "1983",
+			"french": "coûte",
+			"english": "cost"
+		},
+		{
+			"Rank": "1984",
+			"french": "champagne",
+			"english": "Champagne"
+		},
+		{
+			"Rank": "1985",
+			"french": "no",
+			"english": "No."
+		},
+		{
+			"Rank": "1986",
+			"french": "américaine",
+			"english": "American"
+		},
+		{
+			"Rank": "1987",
+			"french": "risques",
+			"english": "risks"
+		},
+		{
+			"Rank": "1988",
+			"french": "pete",
+			"english": "pete"
+		},
+		{
+			"Rank": "1989",
+			"french": "offert",
+			"english": "Free"
+		},
+		{
+			"Rank": "1990",
+			"french": "semblant",
+			"english": "show"
+		},
+		{
+			"Rank": "1991",
+			"french": "annonce",
+			"english": "ad"
+		},
+		{
+			"Rank": "1992",
+			"french": "échange",
+			"english": "exchange"
+		},
+		{
+			"Rank": "1993",
+			"french": "paye",
+			"english": "paid"
+		},
+		{
+			"Rank": "1994",
+			"french": "premiers",
+			"english": "first"
+		},
+		{
+			"Rank": "1995",
+			"french": "débarrasser",
+			"english": "get rid of"
+		},
+		{
+			"Rank": "1996",
+			"french": "fuir",
+			"english": "to run away"
+		},
+		{
+			"Rank": "1997",
+			"french": "louis",
+			"english": "louis"
+		},
+		{
+			"Rank": "1998",
+			"french": "supplie",
+			"english": "beseech"
+		},
+		{
+			"Rank": "1999",
+			"french": "saute",
+			"english": "jumped up"
+		},
+		{
+			"Rank": "2000",
+			"french": "signer",
+			"english": "sign"
+		}
+	];
+
+/***/ },
+/* 238 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"Rank": "1",
+			"german": "ich",
+			"english": "I",
+			"Notes": "1) This list was created using public/free subtitles, particularly from opensubtitles.org."
+		},
+		{
+			"Rank": "2",
+			"german": "sie",
+			"english": "they",
+			"Notes": "The order is based on the number of occurences of each word in the subtitles."
+		},
+		{
+			"Rank": "4",
+			"german": "ist",
+			"english": "is",
+			"Notes": "2) The english translation is by Google and can be un-reliable for some words."
+		},
+		{
+			"Rank": "5",
+			"german": "du",
+			"english": "you"
+		},
+		{
+			"Rank": "6",
+			"german": "nicht",
+			"english": "not",
+			"Notes": "3) You can change the translation from english to another language."
+		},
+		{
+			"Rank": "8",
+			"german": "und",
+			"english": "and",
+			"Notes": "Then replace the \"en\" in the function in the cells in Column C with your desired language code."
+		},
+		{
+			"Rank": "9",
+			"german": "es",
+			"english": "it",
+			"Notes": "e.g. Replace \"en\" with \"sv\" for Swedish."
+		},
+		{
+			"Rank": "10",
+			"german": "der",
+			"english": "of the",
+			"Notes": "List of supported languages:"
+		},
+		{
+			"Rank": "11",
+			"german": "was",
+			"english": "What",
+			"Notes": "https://cloud.google.com/translate/v2/using_rest?hl=en#language-params"
+		},
+		{
+			"Rank": "12",
+			"german": "wir",
+			"english": "we"
+		},
+		{
+			"Rank": "13",
+			"german": "er",
+			"english": "he",
+			"Notes": "4) The original source of this list can be found here:"
+		},
+		{
+			"Rank": "14",
+			"german": "zu",
+			"english": "to",
+			"Notes": "https://invokeit.wordpress.com/frequency-word-lists/"
+		},
+		{
+			"Rank": "15",
+			"german": "ein",
+			"english": "on"
+		},
+		{
+			"Rank": "16",
+			"german": "in",
+			"english": "in",
+			"Notes": "5) It is licensed under the following Creative Commons license:"
+		},
+		{
+			"Rank": "17",
+			"german": "mit",
+			"english": "With",
+			"Notes": "http://creativecommons.org/licenses/by-sa/3.0/"
+		},
+		{
+			"Rank": "18",
+			"german": "mir",
+			"english": "me"
+		},
+		{
+			"Rank": "20",
+			"german": "wie",
+			"english": "as",
+			"Notes": "http://www.101languages.net/common-words/"
+		},
+		{
+			"Rank": "21",
+			"german": "ja",
+			"english": "Yes"
+		},
+		{
+			"Rank": "22",
+			"german": "auf",
+			"english": "on"
+		},
+		{
+			"Rank": "23",
+			"german": "mich",
+			"english": "me"
+		},
+		{
+			"Rank": "24",
+			"german": "so",
+			"english": "so"
+		},
+		{
+			"Rank": "25",
+			"german": "eine",
+			"english": "a"
+		},
+		{
+			"Rank": "26",
+			"german": "aber",
+			"english": "but"
+		},
+		{
+			"Rank": "27",
+			"german": "hier",
+			"english": "here"
+		},
+		{
+			"Rank": "28",
+			"german": "sind",
+			"english": "are"
+		},
+		{
+			"Rank": "29",
+			"german": "für",
+			"english": "For"
+		},
+		{
+			"Rank": "30",
+			"german": "von",
+			"english": "from"
+		},
+		{
+			"Rank": "31",
+			"german": "haben",
+			"english": "have"
+		},
+		{
+			"Rank": "32",
+			"german": "hat",
+			"english": "Has"
+		},
+		{
+			"Rank": "33",
+			"german": "dich",
+			"english": "you"
+		},
+		{
+			"Rank": "34",
+			"german": "war",
+			"english": "was"
+		},
+		{
+			"Rank": "35",
+			"german": "dass",
+			"english": "that"
+		},
+		{
+			"Rank": "36",
+			"german": "wenn",
+			"english": "if"
+		},
+		{
+			"Rank": "37",
+			"german": "an",
+			"english": "at"
+		},
+		{
+			"Rank": "38",
+			"german": "da",
+			"english": "there"
+		},
+		{
+			"Rank": "39",
+			"german": "nein",
+			"english": "No"
+		},
+		{
+			"Rank": "40",
+			"german": "bin",
+			"english": "am"
+		},
+		{
+			"Rank": "41",
+			"german": "noch",
+			"english": "still"
+		},
+		{
+			"Rank": "42",
+			"german": "dir",
+			"english": "you"
+		},
+		{
+			"Rank": "43",
+			"german": "nur",
+			"english": "just"
+		},
+		{
+			"Rank": "44",
+			"german": "habe",
+			"english": "have"
+		},
+		{
+			"Rank": "45",
+			"german": "ihr",
+			"english": "their"
+		},
+		{
+			"Rank": "46",
+			"german": "sich",
+			"english": "themselves"
+		},
+		{
+			"Rank": "47",
+			"german": "einen",
+			"english": "a"
+		},
+		{
+			"Rank": "48",
+			"german": "uns",
+			"english": "us"
+		},
+		{
+			"Rank": "49",
+			"german": "hast",
+			"english": "have"
+		},
+		{
+			"Rank": "51",
+			"german": "ihn",
+			"english": "him"
+		},
+		{
+			"Rank": "52",
+			"german": "aus",
+			"english": "out"
+		},
+		{
+			"Rank": "53",
+			"german": "kann",
+			"english": "can"
+		},
+		{
+			"Rank": "54",
+			"german": "gut",
+			"english": "Good"
+		},
+		{
+			"Rank": "55",
+			"german": "auch",
+			"english": "also"
+		},
+		{
+			"Rank": "56",
+			"german": "schon",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "57",
+			"german": "jetzt",
+			"english": "now"
+		},
+		{
+			"Rank": "58",
+			"german": "im",
+			"english": "in the"
+		},
+		{
+			"Rank": "59",
+			"german": "sein",
+			"english": "be"
+		},
+		{
+			"Rank": "60",
+			"german": "mal",
+			"english": "time"
+		},
+		{
+			"Rank": "61",
+			"german": "dann",
+			"english": "then"
+		},
+		{
+			"Rank": "62",
+			"german": "meine",
+			"english": "my"
+		},
+		{
+			"Rank": "63",
+			"german": "als",
+			"english": "as"
+		},
+		{
+			"Rank": "64",
+			"german": "um",
+			"english": "around"
+		},
+		{
+			"Rank": "65",
+			"german": "mein",
+			"english": "my"
+		},
+		{
+			"Rank": "66",
+			"german": "doch",
+			"english": "but"
+		},
+		{
+			"Rank": "67",
+			"german": "bist",
+			"english": "are"
+		},
+		{
+			"Rank": "68",
+			"german": "wird",
+			"english": "becomes"
+		},
+		{
+			"Rank": "69",
+			"german": "keine",
+			"english": "no"
+		},
+		{
+			"Rank": "70",
+			"german": "nach",
+			"english": "after"
+		},
+		{
+			"Rank": "71",
+			"german": "alles",
+			"english": "everything"
+		},
+		{
+			"Rank": "72",
+			"german": "man",
+			"english": "one"
+		},
+		{
+			"Rank": "73",
+			"german": "lch",
+			"english": "l"
+		},
+		{
+			"Rank": "74",
+			"german": "oder",
+			"english": "or"
+		},
+		{
+			"Rank": "75",
+			"german": "nichts",
+			"english": "nothing"
+		},
+		{
+			"Rank": "76",
+			"german": "wo",
+			"english": "Where"
+		},
+		{
+			"Rank": "77",
+			"german": "werden",
+			"english": "will"
+		},
+		{
+			"Rank": "78",
+			"german": "weiß",
+			"english": "White"
+		},
+		{
+			"Rank": "79",
+			"german": "will",
+			"english": "want"
+		},
+		{
+			"Rank": "80",
+			"german": "geht",
+			"english": "going"
+		},
+		{
+			"Rank": "81",
+			"german": "mehr",
+			"english": "more"
+		},
+		{
+			"Rank": "82",
+			"german": "warum",
+			"english": "Why"
+		},
+		{
+			"Rank": "83",
+			"german": "hab",
+			"english": "hab"
+		},
+		{
+			"Rank": "84",
+			"german": "ihnen",
+			"english": "them"
+		},
+		{
+			"Rank": "85",
+			"german": "bitte",
+			"english": "You're welcome"
+		},
+		{
+			"Rank": "86",
+			"german": "etwas",
+			"english": "something"
+		},
+		{
+			"Rank": "87",
+			"german": "bei",
+			"english": "at"
+		},
+		{
+			"Rank": "88",
+			"german": "muss",
+			"english": "have to be"
+		},
+		{
+			"Rank": "89",
+			"german": "los",
+			"english": "rid of"
+		},
+		{
+			"Rank": "90",
+			"german": "immer",
+			"english": "always"
+		},
+		{
+			"Rank": "91",
+			"german": "oh",
+			"english": "Oh"
+		},
+		{
+			"Rank": "92",
+			"german": "vor",
+			"english": "in front"
+		},
+		{
+			"Rank": "93",
+			"german": "mann",
+			"english": "man"
+		},
+		{
+			"Rank": "94",
+			"german": "zum",
+			"english": "to the"
+		},
+		{
+			"Rank": "95",
+			"german": "wieder",
+			"english": "again"
+		},
+		{
+			"Rank": "96",
+			"german": "sehr",
+			"english": "very"
+		},
+		{
+			"Rank": "97",
+			"german": "sehen",
+			"english": "see"
+		},
+		{
+			"Rank": "98",
+			"german": "sagen",
+			"english": "say"
+		},
+		{
+			"Rank": "99",
+			"german": "also",
+			"english": "so"
+		},
+		{
+			"Rank": "100",
+			"german": "gehen",
+			"english": "go"
+		},
+		{
+			"Rank": "101",
+			"german": "wer",
+			"english": "who"
+		},
+		{
+			"Rank": "102",
+			"german": "alle",
+			"english": "all"
+		},
+		{
+			"Rank": "103",
+			"german": "denn",
+			"english": "because"
+		},
+		{
+			"Rank": "104",
+			"german": "machen",
+			"english": "do"
+		},
+		{
+			"Rank": "105",
+			"german": "ihm",
+			"english": "him"
+		},
+		{
+			"Rank": "106",
+			"german": "können",
+			"english": "can"
+		},
+		{
+			"Rank": "107",
+			"german": "diese",
+			"english": "these"
+		},
+		{
+			"Rank": "108",
+			"german": "komm",
+			"english": "come over"
+		},
+		{
+			"Rank": "109",
+			"german": "danke",
+			"english": "thank"
+		},
+		{
+			"Rank": "110",
+			"german": "euch",
+			"english": "you"
+		},
+		{
+			"Rank": "111",
+			"german": "einem",
+			"english": "a"
+		},
+		{
+			"Rank": "112",
+			"german": "tun",
+			"english": "do"
+		},
+		{
+			"Rank": "113",
+			"german": "einer",
+			"english": "one"
+		},
+		{
+			"Rank": "114",
+			"german": "gibt",
+			"english": "gives"
+		},
+		{
+			"Rank": "115",
+			"german": "nie",
+			"english": "never"
+		},
+		{
+			"Rank": "116",
+			"german": "über",
+			"english": "about"
+		},
+		{
+			"Rank": "117",
+			"german": "des",
+			"english": "of"
+		},
+		{
+			"Rank": "118",
+			"german": "soll",
+			"english": "should"
+		},
+		{
+			"Rank": "119",
+			"german": "kein",
+			"english": "no"
+		},
+		{
+			"Rank": "120",
+			"german": "vielleicht",
+			"english": "maybe"
+		},
+		{
+			"Rank": "121",
+			"german": "weg",
+			"english": "away"
+		},
+		{
+			"Rank": "122",
+			"german": "deine",
+			"english": "yours"
+		},
+		{
+			"Rank": "123",
+			"german": "wissen",
+			"english": "knowledge"
+		},
+		{
+			"Rank": "124",
+			"german": "am",
+			"english": "at the"
+		},
+		{
+			"Rank": "125",
+			"german": "werde",
+			"english": "will"
+		},
+		{
+			"Rank": "126",
+			"german": "leben",
+			"english": "live"
+		},
+		{
+			"Rank": "127",
+			"german": "kommen",
+			"english": "come"
+		},
+		{
+			"Rank": "128",
+			"german": "kommt",
+			"english": "coming"
+		},
+		{
+			"Rank": "129",
+			"german": "müssen",
+			"english": "have to"
+		},
+		{
+			"Rank": "130",
+			"german": "viel",
+			"english": "a lot of"
+		},
+		{
+			"Rank": "131",
+			"german": "wirklich",
+			"english": "for real"
+		},
+		{
+			"Rank": "132",
+			"german": "frau",
+			"english": "Mrs"
+		},
+		{
+			"Rank": "133",
+			"german": "hatte",
+			"english": "would have"
+		},
+		{
+			"Rank": "134",
+			"german": "heute",
+			"english": "today"
+		},
+		{
+			"Rank": "135",
+			"german": "ok",
+			"english": "OK"
+		},
+		{
+			"Rank": "136",
+			"german": "willst",
+			"english": "want"
+		},
+		{
+			"Rank": "137",
+			"german": "dein",
+			"english": "your"
+		},
+		{
+			"Rank": "138",
+			"german": "würde",
+			"english": "would"
+		},
+		{
+			"Rank": "139",
+			"german": "tut",
+			"english": "does"
+		},
+		{
+			"Rank": "140",
+			"german": "ihre",
+			"english": "your"
+		},
+		{
+			"Rank": "141",
+			"german": "ganz",
+			"english": "all"
+		},
+		{
+			"Rank": "142",
+			"german": "zeit",
+			"english": "time"
+		},
+		{
+			"Rank": "143",
+			"german": "bis",
+			"english": "to"
+		},
+		{
+			"Rank": "144",
+			"german": "wollen",
+			"english": "want"
+		},
+		{
+			"Rank": "145",
+			"german": "einfach",
+			"english": "easy"
+		},
+		{
+			"Rank": "146",
+			"german": "macht",
+			"english": "power"
+		},
+		{
+			"Rank": "147",
+			"german": "gott",
+			"english": "God"
+		},
+		{
+			"Rank": "148",
+			"german": "zurück",
+			"english": "back"
+		},
+		{
+			"Rank": "149",
+			"german": "nun",
+			"english": "now"
+		},
+		{
+			"Rank": "150",
+			"german": "weil",
+			"english": "because"
+		},
+		{
+			"Rank": "151",
+			"german": "damit",
+			"english": "in order to"
+		},
+		{
+			"Rank": "152",
+			"german": "dieser",
+			"english": "this"
+		},
+		{
+			"Rank": "153",
+			"german": "kannst",
+			"english": "can"
+		},
+		{
+			"Rank": "154",
+			"german": "wurde",
+			"english": "has been"
+		},
+		{
+			"Rank": "155",
+			"german": "gesagt",
+			"english": "said"
+		},
+		{
+			"Rank": "156",
+			"german": "wäre",
+			"english": "would"
+		},
+		{
+			"Rank": "157",
+			"german": "seine",
+			"english": "his"
+		},
+		{
+			"Rank": "158",
+			"german": "wollte",
+			"english": "wanted"
+		},
+		{
+			"Rank": "159",
+			"german": "na",
+			"english": "n / A"
+		},
+		{
+			"Rank": "160",
+			"german": "zwei",
+			"english": "two"
+		},
+		{
+			"Rank": "161",
+			"german": "hallo",
+			"english": "Hello"
+		},
+		{
+			"Rank": "162",
+			"german": "meinen",
+			"english": "mean"
+		},
+		{
+			"Rank": "163",
+			"german": "sicher",
+			"english": "for sure"
+		},
+		{
+			"Rank": "164",
+			"german": "weißt",
+			"english": "know"
+		},
+		{
+			"Rank": "165",
+			"german": "sir",
+			"english": "sir"
+		},
+		{
+			"Rank": "166",
+			"german": "morgen",
+			"english": "tomorrow"
+		},
+		{
+			"Rank": "167",
+			"german": "ab",
+			"english": "from"
+		},
+		{
+			"Rank": "168",
+			"german": "leid",
+			"english": "sorry"
+		},
+		{
+			"Rank": "169",
+			"german": "lassen",
+			"english": "leave"
+		},
+		{
+			"Rank": "170",
+			"german": "hey",
+			"english": "hey"
+		},
+		{
+			"Rank": "171",
+			"german": "waren",
+			"english": "were"
+		},
+		{
+			"Rank": "172",
+			"german": "zur",
+			"english": "to"
+		},
+		{
+			"Rank": "173",
+			"german": "lass",
+			"english": "let"
+		},
+		{
+			"Rank": "174",
+			"german": "e",
+			"english": "e"
+		},
+		{
+			"Rank": "175",
+			"german": "geld",
+			"english": "money"
+		},
+		{
+			"Rank": "176",
+			"german": "liebe",
+			"english": "love"
+		},
+		{
+			"Rank": "177",
+			"german": "tag",
+			"english": "day"
+		},
+		{
+			"Rank": "178",
+			"german": "leute",
+			"english": "People"
+		},
+		{
+			"Rank": "179",
+			"german": "vater",
+			"english": "father"
+		},
+		{
+			"Rank": "180",
+			"german": "genau",
+			"english": "I agree"
+		},
+		{
+			"Rank": "181",
+			"german": "sagte",
+			"english": "said"
+		},
+		{
+			"Rank": "182",
+			"german": "hätte",
+			"english": "would have"
+		},
+		{
+			"Rank": "183",
+			"german": "mach",
+			"english": "Carry"
+		},
+		{
+			"Rank": "184",
+			"german": "raus",
+			"english": "out"
+		},
+		{
+			"Rank": "185",
+			"german": "durch",
+			"english": "by"
+		},
+		{
+			"Rank": "186",
+			"german": "lhr",
+			"english": "LHR"
+		},
+		{
+			"Rank": "187",
+			"german": "könnte",
+			"english": "could"
+		},
+		{
+			"Rank": "188",
+			"german": "schön",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "189",
+			"german": "wohl",
+			"english": "well"
+		},
+		{
+			"Rank": "190",
+			"german": "gesehen",
+			"english": "seen"
+		},
+		{
+			"Rank": "191",
+			"german": "keinen",
+			"english": "no"
+		},
+		{
+			"Rank": "192",
+			"german": "klar",
+			"english": "clear"
+		},
+		{
+			"Rank": "193",
+			"german": "glaube",
+			"english": "faith"
+		},
+		{
+			"Rank": "194",
+			"german": "her",
+			"english": "here"
+		},
+		{
+			"Rank": "195",
+			"german": "okay",
+			"english": "OK"
+		},
+		{
+			"Rank": "196",
+			"german": "mutter",
+			"english": "mother"
+		},
+		{
+			"Rank": "197",
+			"german": "sag",
+			"english": "say"
+		},
+		{
+			"Rank": "198",
+			"german": "dieses",
+			"english": "this"
+		},
+		{
+			"Rank": "199",
+			"german": "nacht",
+			"english": "night"
+		},
+		{
+			"Rank": "200",
+			"german": "besser",
+			"english": "better"
+		},
+		{
+			"Rank": "201",
+			"german": "ohne",
+			"english": "without"
+		},
+		{
+			"Rank": "202",
+			"german": "unsere",
+			"english": "our"
+		},
+		{
+			"Rank": "203",
+			"german": "jemand",
+			"english": "someone"
+		},
+		{
+			"Rank": "204",
+			"german": "sei",
+			"english": "be"
+		},
+		{
+			"Rank": "205",
+			"german": "reden",
+			"english": "talk"
+		},
+		{
+			"Rank": "206",
+			"german": "gerade",
+			"english": "just"
+		},
+		{
+			"Rank": "207",
+			"german": "ob",
+			"english": "if"
+		},
+		{
+			"Rank": "208",
+			"german": "gehört",
+			"english": "belongs"
+		},
+		{
+			"Rank": "209",
+			"german": "geh",
+			"english": "geh"
+		},
+		{
+			"Rank": "210",
+			"german": "möchte",
+			"english": "would like"
+		},
+		{
+			"Rank": "211",
+			"german": "dort",
+			"english": "there"
+		},
+		{
+			"Rank": "212",
+			"german": "sagt",
+			"english": "says"
+		},
+		{
+			"Rank": "213",
+			"german": "anderen",
+			"english": "other"
+		},
+		{
+			"Rank": "214",
+			"german": "gemacht",
+			"english": "made"
+		},
+		{
+			"Rank": "215",
+			"german": "hör",
+			"english": "listen"
+		},
+		{
+			"Rank": "216",
+			"german": "sollte",
+			"english": "should"
+		},
+		{
+			"Rank": "217",
+			"german": "selbst",
+			"english": "even"
+		},
+		{
+			"Rank": "218",
+			"german": "diesen",
+			"english": "these"
+		},
+		{
+			"Rank": "219",
+			"german": "gute",
+			"english": "quality"
+		},
+		{
+			"Rank": "220",
+			"german": "dachte",
+			"english": "thought"
+		},
+		{
+			"Rank": "221",
+			"german": "paar",
+			"english": "pair"
+		},
+		{
+			"Rank": "222",
+			"german": "weiter",
+			"english": "continue"
+		},
+		{
+			"Rank": "223",
+			"german": "vom",
+			"english": "from"
+		},
+		{
+			"Rank": "224",
+			"german": "ins",
+			"english": "in the"
+		},
+		{
+			"Rank": "225",
+			"german": "herr",
+			"english": "Lord"
+		},
+		{
+			"Rank": "226",
+			"german": "wirst",
+			"english": "will"
+		},
+		{
+			"Rank": "227",
+			"german": "geben",
+			"english": "give"
+		},
+		{
+			"Rank": "228",
+			"german": "ordnung",
+			"english": "order"
+		},
+		{
+			"Rank": "229",
+			"german": "passiert",
+			"english": "happens"
+		},
+		{
+			"Rank": "230",
+			"german": "meiner",
+			"english": "mine"
+		},
+		{
+			"Rank": "231",
+			"german": "lange",
+			"english": "length"
+		},
+		{
+			"Rank": "232",
+			"german": "gar",
+			"english": "at all"
+		},
+		{
+			"Rank": "233",
+			"german": "mädchen",
+			"english": "girl"
+		},
+		{
+			"Rank": "234",
+			"german": "meinem",
+			"english": "my"
+		},
+		{
+			"Rank": "235",
+			"german": "hören",
+			"english": "hear"
+		},
+		{
+			"Rank": "236",
+			"german": "sieht",
+			"english": "looks"
+		},
+		{
+			"Rank": "237",
+			"german": "daß",
+			"english": "that"
+		},
+		{
+			"Rank": "238",
+			"german": "guten",
+			"english": "good"
+		},
+		{
+			"Rank": "239",
+			"german": "hin",
+			"english": "down"
+		},
+		{
+			"Rank": "240",
+			"german": "gleich",
+			"english": "equal"
+		},
+		{
+			"Rank": "241",
+			"german": "ach",
+			"english": "Oh"
+		},
+		{
+			"Rank": "242",
+			"german": "diesem",
+			"english": "this"
+		},
+		{
+			"Rank": "243",
+			"german": "freund",
+			"english": "friend"
+		},
+		{
+			"Rank": "244",
+			"german": "seit",
+			"english": "since"
+		},
+		{
+			"Rank": "245",
+			"german": "welt",
+			"english": "world"
+		},
+		{
+			"Rank": "246",
+			"german": "musst",
+			"english": "must"
+		},
+		{
+			"Rank": "247",
+			"german": "hause",
+			"english": "home"
+		},
+		{
+			"Rank": "248",
+			"german": "natürlich",
+			"english": "Naturally"
+		},
+		{
+			"Rank": "249",
+			"german": "abend",
+			"english": "Eve"
+		},
+		{
+			"Rank": "250",
+			"german": "angst",
+			"english": "anxiety"
+		},
+		{
+			"Rank": "251",
+			"german": "drei",
+			"english": "three"
+		},
+		{
+			"Rank": "252",
+			"german": "recht",
+			"english": "pretty"
+		},
+		{
+			"Rank": "253",
+			"german": "richtig",
+			"english": "correct"
+		},
+		{
+			"Rank": "254",
+			"german": "viele",
+			"english": "lots"
+		},
+		{
+			"Rank": "255",
+			"german": "deinen",
+			"english": "your"
+		},
+		{
+			"Rank": "256",
+			"german": "finden",
+			"english": "find"
+		},
+		{
+			"Rank": "257",
+			"german": "wieso",
+			"english": "how so"
+		},
+		{
+			"Rank": "258",
+			"german": "bleiben",
+			"english": "stay"
+		},
+		{
+			"Rank": "259",
+			"german": "tot",
+			"english": "dead"
+		},
+		{
+			"Rank": "260",
+			"german": "unter",
+			"english": "among"
+		},
+		{
+			"Rank": "261",
+			"german": "junge",
+			"english": "Boy"
+		},
+		{
+			"Rank": "262",
+			"german": "haus",
+			"english": "House"
+		},
+		{
+			"Rank": "263",
+			"german": "rein",
+			"english": "purely"
+		},
+		{
+			"Rank": "264",
+			"german": "essen",
+			"english": "eat"
+		},
+		{
+			"Rank": "265",
+			"german": "davon",
+			"english": "from that"
+		},
+		{
+			"Rank": "266",
+			"german": "nehmen",
+			"english": "to take"
+		},
+		{
+			"Rank": "267",
+			"german": "sollen",
+			"english": "should"
+		},
+		{
+			"Rank": "268",
+			"german": "helfen",
+			"english": "help"
+		},
+		{
+			"Rank": "269",
+			"german": "schnell",
+			"english": "fast"
+		},
+		{
+			"Rank": "270",
+			"german": "machst",
+			"english": "doing"
+		},
+		{
+			"Rank": "271",
+			"german": "eines",
+			"english": "one"
+		},
+		{
+			"Rank": "272",
+			"german": "andere",
+			"english": "other"
+		},
+		{
+			"Rank": "273",
+			"german": "unser",
+			"english": "our"
+		},
+		{
+			"Rank": "274",
+			"german": "warte",
+			"english": "wait"
+		},
+		{
+			"Rank": "275",
+			"german": "wegen",
+			"english": "because of"
+		},
+		{
+			"Rank": "276",
+			"german": "menschen",
+			"english": "People"
+		},
+		{
+			"Rank": "277",
+			"german": "stimmt",
+			"english": "agreed"
+		},
+		{
+			"Rank": "278",
+			"german": "dafür",
+			"english": "for this"
+		},
+		{
+			"Rank": "279",
+			"german": "darf",
+			"english": "allowed"
+		},
+		{
+			"Rank": "280",
+			"german": "kinder",
+			"english": "children"
+		},
+		{
+			"Rank": "281",
+			"german": "genug",
+			"english": "enough"
+		},
+		{
+			"Rank": "282",
+			"german": "sonst",
+			"english": "otherwise"
+		},
+		{
+			"Rank": "283",
+			"german": "ganze",
+			"english": "whole"
+		},
+		{
+			"Rank": "284",
+			"german": "scheiße",
+			"english": "crap"
+		},
+		{
+			"Rank": "285",
+			"german": "he",
+			"english": "hey"
+		},
+		{
+			"Rank": "286",
+			"german": "halt",
+			"english": "stop"
+		},
+		{
+			"Rank": "287",
+			"german": "sollten",
+			"english": "should"
+		},
+		{
+			"Rank": "288",
+			"german": "zusammen",
+			"english": "together"
+		},
+		{
+			"Rank": "289",
+			"german": "gegen",
+			"english": "against"
+		},
+		{
+			"Rank": "290",
+			"german": "jahre",
+			"english": "years"
+		},
+		{
+			"Rank": "291",
+			"german": "erst",
+			"english": "only"
+		},
+		{
+			"Rank": "292",
+			"german": "denke",
+			"english": "think"
+		},
+		{
+			"Rank": "293",
+			"german": "steht",
+			"english": "stands"
+		},
+		{
+			"Rank": "294",
+			"german": "habt",
+			"english": "have"
+		},
+		{
+			"Rank": "295",
+			"german": "verdammt",
+			"english": "damned"
+		},
+		{
+			"Rank": "296",
+			"german": "moment",
+			"english": "moment"
+		},
+		{
+			"Rank": "297",
+			"german": "ihren",
+			"english": "their"
+		},
+		{
+			"Rank": "298",
+			"german": "glauben",
+			"english": "believe"
+		},
+		{
+			"Rank": "299",
+			"german": "bringen",
+			"english": "bring"
+		},
+		{
+			"Rank": "300",
+			"german": "gib",
+			"english": "gib"
+		},
+		{
+			"Rank": "301",
+			"german": "seid",
+			"english": "are"
+		},
+		{
+			"Rank": "302",
+			"german": "niemand",
+			"english": "no one"
+		},
+		{
+			"Rank": "303",
+			"german": "warten",
+			"english": "waiting"
+		},
+		{
+			"Rank": "304",
+			"german": "brauchen",
+			"english": "need"
+		},
+		{
+			"Rank": "305",
+			"german": "lhre",
+			"english": "Their"
+		},
+		{
+			"Rank": "306",
+			"german": "fragen",
+			"english": "ask"
+		},
+		{
+			"Rank": "307",
+			"german": "arbeit",
+			"english": "job"
+		},
+		{
+			"Rank": "308",
+			"german": "wann",
+			"english": "when"
+		},
+		{
+			"Rank": "309",
+			"german": "heißt",
+			"english": "called"
+		},
+		{
+			"Rank": "310",
+			"german": "sprechen",
+			"english": "speak"
+		},
+		{
+			"Rank": "311",
+			"german": "siehst",
+			"english": "look"
+		},
+		{
+			"Rank": "312",
+			"german": "jeder",
+			"english": "each"
+		},
+		{
+			"Rank": "313",
+			"german": "kam",
+			"english": "came"
+		},
+		{
+			"Rank": "314",
+			"german": "sofort",
+			"english": "immediately"
+		},
+		{
+			"Rank": "315",
+			"german": "getan",
+			"english": "done"
+		},
+		{
+			"Rank": "316",
+			"german": "fertig",
+			"english": "done"
+		},
+		{
+			"Rank": "317",
+			"german": "kennen",
+			"english": "know"
+		},
+		{
+			"Rank": "318",
+			"german": "einmal",
+			"english": "once"
+		},
+		{
+			"Rank": "319",
+			"german": "sohn",
+			"english": "son"
+		},
+		{
+			"Rank": "320",
+			"german": "halten",
+			"english": "hold"
+		},
+		{
+			"Rank": "321",
+			"german": "dabei",
+			"english": "there"
+		},
+		{
+			"Rank": "322",
+			"german": "hatten",
+			"english": "had"
+		},
+		{
+			"Rank": "323",
+			"german": "männer",
+			"english": "men"
+		},
+		{
+			"Rank": "324",
+			"german": "kind",
+			"english": "child"
+		},
+		{
+			"Rank": "325",
+			"german": "jahren",
+			"english": "years"
+		},
+		{
+			"Rank": "326",
+			"german": "beim",
+			"english": "at the"
+		},
+		{
+			"Rank": "327",
+			"german": "seinen",
+			"english": "his"
+		},
+		{
+			"Rank": "328",
+			"german": "mag",
+			"english": "like"
+		},
+		{
+			"Rank": "329",
+			"german": "komme",
+			"english": "get"
+		},
+		{
+			"Rank": "330",
+			"german": "allein",
+			"english": "alone"
+		},
+		{
+			"Rank": "331",
+			"german": "bevor",
+			"english": "before"
+		},
+		{
+			"Rank": "332",
+			"german": "bruder",
+			"english": "brothers"
+		},
+		{
+			"Rank": "333",
+			"german": "musik",
+			"english": "music"
+		},
+		{
+			"Rank": "334",
+			"german": "wahr",
+			"english": "true"
+		},
+		{
+			"Rank": "335",
+			"german": "konnte",
+			"english": "could"
+		},
+		{
+			"Rank": "336",
+			"german": "lieber",
+			"english": "Dear"
+		},
+		{
+			"Rank": "337",
+			"german": "uhr",
+			"english": "Clock"
+		},
+		{
+			"Rank": "338",
+			"german": "kopf",
+			"english": "head"
+		},
+		{
+			"Rank": "339",
+			"german": "sache",
+			"english": "Thing"
+		},
+		{
+			"Rank": "340",
+			"german": "gern",
+			"english": "gladly"
+		},
+		{
+			"Rank": "341",
+			"german": "denken",
+			"english": "think"
+		},
+		{
+			"Rank": "342",
+			"german": "brauche",
+			"english": "need"
+		},
+		{
+			"Rank": "343",
+			"german": "ende",
+			"english": "end"
+		},
+		{
+			"Rank": "344",
+			"german": "später",
+			"english": "later"
+		},
+		{
+			"Rank": "345",
+			"german": "gehe",
+			"english": "go"
+		},
+		{
+			"Rank": "346",
+			"german": "vergessen",
+			"english": "to forget"
+		},
+		{
+			"Rank": "347",
+			"german": "runter",
+			"english": "down"
+		},
+		{
+			"Rank": "348",
+			"german": "fahren",
+			"english": "drive"
+		},
+		{
+			"Rank": "349",
+			"german": "sieh",
+			"english": "visit"
+		},
+		{
+			"Rank": "350",
+			"german": "warst",
+			"english": "were"
+		},
+		{
+			"Rank": "351",
+			"german": "stadt",
+			"english": "City"
+		},
+		{
+			"Rank": "352",
+			"german": "namen",
+			"english": "names"
+		},
+		{
+			"Rank": "353",
+			"german": "problem",
+			"english": "problem"
+		},
+		{
+			"Rank": "354",
+			"german": "sehe",
+			"english": "see"
+		},
+		{
+			"Rank": "355",
+			"german": "augen",
+			"english": "eyes"
+		},
+		{
+			"Rank": "356",
+			"german": "gab",
+			"english": "gave"
+		},
+		{
+			"Rank": "357",
+			"german": "dank",
+			"english": "thanks"
+		},
+		{
+			"Rank": "358",
+			"german": "sage",
+			"english": "saw"
+		},
+		{
+			"Rank": "359",
+			"german": "würden",
+			"english": "would"
+		},
+		{
+			"Rank": "360",
+			"german": "eins",
+			"english": "one"
+		},
+		{
+			"Rank": "361",
+			"german": "daran",
+			"english": "it"
+		},
+		{
+			"Rank": "362",
+			"german": "dazu",
+			"english": "to"
+		},
+		{
+			"Rank": "363",
+			"german": "egal",
+			"english": "no matter"
+		},
+		{
+			"Rank": "364",
+			"german": "frage",
+			"english": "question"
+		},
+		{
+			"Rank": "365",
+			"german": "weit",
+			"english": "far"
+		},
+		{
+			"Rank": "366",
+			"german": "familie",
+			"english": "family"
+		},
+		{
+			"Rank": "367",
+			"german": "sterben",
+			"english": "to die"
+		},
+		{
+			"Rank": "368",
+			"german": "könnten",
+			"english": "could"
+		},
+		{
+			"Rank": "369",
+			"german": "jungs",
+			"english": "guys"
+		},
+		{
+			"Rank": "370",
+			"german": "jeden",
+			"english": "each"
+		},
+		{
+			"Rank": "371",
+			"german": "minuten",
+			"english": "minutes"
+		},
+		{
+			"Rank": "372",
+			"german": "verstehe",
+			"english": "understand"
+		},
+		{
+			"Rank": "373",
+			"german": "deiner",
+			"english": "yours"
+		},
+		{
+			"Rank": "374",
+			"german": "hilfe",
+			"english": "Help"
+		},
+		{
+			"Rank": "375",
+			"german": "beide",
+			"english": "both"
+		},
+		{
+			"Rank": "376",
+			"german": "bald",
+			"english": "soon"
+		},
+		{
+			"Rank": "377",
+			"german": "all",
+			"english": "all"
+		},
+		{
+			"Rank": "378",
+			"german": "deinem",
+			"english": "your"
+		},
+		{
+			"Rank": "379",
+			"german": "nimm",
+			"english": "take"
+		},
+		{
+			"Rank": "380",
+			"german": "kleine",
+			"english": "small"
+		},
+		{
+			"Rank": "381",
+			"german": "baby",
+			"english": "infant"
+		},
+		{
+			"Rank": "382",
+			"german": "glück",
+			"english": "happiness"
+		},
+		{
+			"Rank": "383",
+			"german": "freunde",
+			"english": "friends"
+		},
+		{
+			"Rank": "384",
+			"german": "wusste",
+			"english": "knew"
+		},
+		{
+			"Rank": "385",
+			"german": "verrückt",
+			"english": "crazy"
+		},
+		{
+			"Rank": "386",
+			"german": "ruhig",
+			"english": "quiet"
+		},
+		{
+			"Rank": "387",
+			"german": "land",
+			"english": "country"
+		},
+		{
+			"Rank": "388",
+			"german": "darüber",
+			"english": "about that"
+		},
+		{
+			"Rank": "389",
+			"german": "gefunden",
+			"english": "found"
+		},
+		{
+			"Rank": "390",
+			"german": "tür",
+			"english": "door"
+		},
+		{
+			"Rank": "391",
+			"german": "mache",
+			"english": "make"
+		},
+		{
+			"Rank": "392",
+			"german": "seiner",
+			"english": "his"
+		},
+		{
+			"Rank": "393",
+			"german": "wasser",
+			"english": "water"
+		},
+		{
+			"Rank": "394",
+			"german": "auto",
+			"english": "car"
+		},
+		{
+			"Rank": "395",
+			"german": "sah",
+			"english": "saw"
+		},
+		{
+			"Rank": "396",
+			"german": "dies",
+			"english": "this"
+		},
+		{
+			"Rank": "397",
+			"german": "eigentlich",
+			"english": "actually"
+		},
+		{
+			"Rank": "398",
+			"german": "eure",
+			"english": "your"
+		},
+		{
+			"Rank": "399",
+			"german": "ruhe",
+			"english": "Quiet"
+		},
+		{
+			"Rank": "400",
+			"german": "stehen",
+			"english": "to stand"
+		},
+		{
+			"Rank": "401",
+			"german": "hand",
+			"english": "hand"
+		},
+		{
+			"Rank": "402",
+			"german": "ihrer",
+			"english": "of their"
+		},
+		{
+			"Rank": "403",
+			"german": "frauen",
+			"english": "women"
+		},
+		{
+			"Rank": "404",
+			"german": "meinst",
+			"english": "mean"
+		},
+		{
+			"Rank": "405",
+			"german": "töten",
+			"english": "kill"
+		},
+		{
+			"Rank": "406",
+			"german": "fall",
+			"english": "case"
+		},
+		{
+			"Rank": "407",
+			"german": "ging",
+			"english": "went"
+		},
+		{
+			"Rank": "408",
+			"german": "polizei",
+			"english": "police"
+		},
+		{
+			"Rank": "409",
+			"german": "vorbei",
+			"english": "past"
+		},
+		{
+			"Rank": "410",
+			"german": "krieg",
+			"english": "war"
+		},
+		{
+			"Rank": "411",
+			"german": "je",
+			"english": "ever"
+		},
+		{
+			"Rank": "412",
+			"german": "darauf",
+			"english": "thereon"
+		},
+		{
+			"Rank": "413",
+			"german": "vielen",
+			"english": "a lot of"
+		},
+		{
+			"Rank": "414",
+			"german": "letzte",
+			"english": "last"
+		},
+		{
+			"Rank": "415",
+			"german": "lang",
+			"english": "long"
+		},
+		{
+			"Rank": "416",
+			"german": "bisschen",
+			"english": "bit"
+		},
+		{
+			"Rank": "417",
+			"german": "dran",
+			"english": "tuned"
+		},
+		{
+			"Rank": "418",
+			"german": "hoch",
+			"english": "high"
+		},
+		{
+			"Rank": "419",
+			"german": "kenne",
+			"english": "know"
+		},
+		{
+			"Rank": "420",
+			"german": "fast",
+			"english": "almost"
+		},
+		{
+			"Rank": "421",
+			"german": "ganzen",
+			"english": "all"
+		},
+		{
+			"Rank": "422",
+			"german": "schau",
+			"english": "show"
+		},
+		{
+			"Rank": "423",
+			"german": "sogar",
+			"english": "even"
+		},
+		{
+			"Rank": "424",
+			"german": "spielen",
+			"english": "play"
+		},
+		{
+			"Rank": "425",
+			"german": "wurden",
+			"english": "were"
+		},
+		{
+			"Rank": "426",
+			"german": "hinter",
+			"english": "Behind"
+		},
+		{
+			"Rank": "427",
+			"german": "teufel",
+			"english": "devil"
+		},
+		{
+			"Rank": "428",
+			"german": "dinge",
+			"english": "things"
+		},
+		{
+			"Rank": "429",
+			"german": "keiner",
+			"english": "none"
+		},
+		{
+			"Rank": "430",
+			"german": "mama",
+			"english": "mama"
+		},
+		{
+			"Rank": "431",
+			"german": "spät",
+			"english": "late"
+		},
+		{
+			"Rank": "432",
+			"german": "bekommen",
+			"english": "get"
+		},
+		{
+			"Rank": "433",
+			"german": "oben",
+			"english": "above"
+		},
+		{
+			"Rank": "434",
+			"german": "name",
+			"english": "name"
+		},
+		{
+			"Rank": "435",
+			"german": "hört",
+			"english": "hears"
+		},
+		{
+			"Rank": "436",
+			"german": "hätten",
+			"english": "would"
+		},
+		{
+			"Rank": "437",
+			"german": "bereit",
+			"english": "ready"
+		},
+		{
+			"Rank": "438",
+			"german": "drin",
+			"english": "in it"
+		},
+		{
+			"Rank": "439",
+			"german": "neue",
+			"english": "new"
+		},
+		{
+			"Rank": "440",
+			"german": "kommst",
+			"english": "coming"
+		},
+		{
+			"Rank": "441",
+			"german": "woher",
+			"english": "from where"
+		},
+		{
+			"Rank": "442",
+			"german": "ihrem",
+			"english": "their"
+		},
+		{
+			"Rank": "443",
+			"german": "wagen",
+			"english": "dare"
+		},
+		{
+			"Rank": "444",
+			"german": "arbeiten",
+			"english": "work"
+		},
+		{
+			"Rank": "445",
+			"german": "verstehen",
+			"english": "understand"
+		},
+		{
+			"Rank": "446",
+			"german": "jahr",
+			"english": "year"
+		},
+		{
+			"Rank": "447",
+			"german": "tod",
+			"english": "death"
+		},
+		{
+			"Rank": "448",
+			"german": "etwa",
+			"english": "about"
+		},
+		{
+			"Rank": "449",
+			"german": "echt",
+			"english": "real"
+		},
+		{
+			"Rank": "450",
+			"german": "seinem",
+			"english": "his"
+		},
+		{
+			"Rank": "451",
+			"german": "geschichte",
+			"english": "story"
+		},
+		{
+			"Rank": "452",
+			"german": "bringt",
+			"english": "brings"
+		},
+		{
+			"Rank": "453",
+			"german": "braucht",
+			"english": "need"
+		},
+		{
+			"Rank": "454",
+			"german": "treffen",
+			"english": "to meet"
+		},
+		{
+			"Rank": "455",
+			"german": "toll",
+			"english": "Great"
+		},
+		{
+			"Rank": "456",
+			"german": "gerne",
+			"english": "with pleasure"
+		},
+		{
+			"Rank": "457",
+			"german": "draußen",
+			"english": "outside"
+		},
+		{
+			"Rank": "458",
+			"german": "fünf",
+			"english": "five"
+		},
+		{
+			"Rank": "459",
+			"german": "lhnen",
+			"english": "wages sent"
+		},
+		{
+			"Rank": "460",
+			"german": "zimmer",
+			"english": "room"
+		},
+		{
+			"Rank": "461",
+			"german": "job",
+			"english": "job"
+		},
+		{
+			"Rank": "462",
+			"german": "nett",
+			"english": "nice"
+		},
+		{
+			"Rank": "463",
+			"german": "weiss",
+			"english": "knows"
+		},
+		{
+			"Rank": "465",
+			"german": "spiel",
+			"english": "game"
+		},
+		{
+			"Rank": "466",
+			"german": "verstanden",
+			"english": "Roger that"
+		},
+		{
+			"Rank": "467",
+			"german": "miss",
+			"english": "miss"
+		},
+		{
+			"Rank": "468",
+			"german": "große",
+			"english": "size"
+		},
+		{
+			"Rank": "469",
+			"german": "anders",
+			"english": "otherwise"
+		},
+		{
+			"Rank": "470",
+			"german": "sorgen",
+			"english": "to care"
+		},
+		{
+			"Rank": "471",
+			"german": "welche",
+			"english": "Which"
+		},
+		{
+			"Rank": "472",
+			"german": "einzige",
+			"english": "only one"
+		},
+		{
+			"Rank": "473",
+			"german": "art",
+			"english": "kind"
+		},
+		{
+			"Rank": "474",
+			"german": "liegt",
+			"english": "lies"
+		},
+		{
+			"Rank": "475",
+			"german": "verloren",
+			"english": "lost"
+		},
+		{
+			"Rank": "476",
+			"german": "ahnung",
+			"english": "idea"
+		},
+		{
+			"Rank": "477",
+			"german": "vier",
+			"english": "four"
+		},
+		{
+			"Rank": "478",
+			"german": "alter",
+			"english": "older"
+		},
+		{
+			"Rank": "479",
+			"german": "gekommen",
+			"english": "come"
+		},
+		{
+			"Rank": "480",
+			"german": "jemanden",
+			"english": "someone"
+		},
+		{
+			"Rank": "481",
+			"german": "gehst",
+			"english": "going"
+		},
+		{
+			"Rank": "482",
+			"german": "woche",
+			"english": "week"
+		},
+		{
+			"Rank": "483",
+			"german": "kerl",
+			"english": "Guy"
+		},
+		{
+			"Rank": "484",
+			"german": "hi",
+			"english": "Hi"
+		},
+		{
+			"Rank": "485",
+			"german": "john",
+			"english": "John"
+		},
+		{
+			"Rank": "486",
+			"german": "gestern",
+			"english": "yesterday"
+		},
+		{
+			"Rank": "487",
+			"german": "wenig",
+			"english": "little"
+		},
+		{
+			"Rank": "488",
+			"german": "bestimmt",
+			"english": "certainly"
+		},
+		{
+			"Rank": "489",
+			"german": "kurz",
+			"english": "short"
+		},
+		{
+			"Rank": "490",
+			"german": "überhaupt",
+			"english": "at all"
+		},
+		{
+			"Rank": "491",
+			"german": "finde",
+			"english": "find"
+		},
+		{
+			"Rank": "492",
+			"german": "darum",
+			"english": "therefore"
+		},
+		{
+			"Rank": "493",
+			"german": "tage",
+			"english": "days"
+		},
+		{
+			"Rank": "494",
+			"german": "erste",
+			"english": "first"
+		},
+		{
+			"Rank": "495",
+			"german": "schwester",
+			"english": "sister"
+		},
+		{
+			"Rank": "496",
+			"german": "schwer",
+			"english": "heavy"
+		},
+		{
+			"Rank": "497",
+			"german": "suchen",
+			"english": "search"
+		},
+		{
+			"Rank": "498",
+			"german": "bleibt",
+			"english": "remains"
+		},
+		{
+			"Rank": "499",
+			"german": "tochter",
+			"english": "daughter"
+		},
+		{
+			"Rank": "500",
+			"german": "typ",
+			"english": "Type"
+		},
+		{
+			"Rank": "501",
+			"german": "guter",
+			"english": "goods"
+		},
+		{
+			"Rank": "502",
+			"german": "gewesen",
+			"english": "been"
+		},
+		{
+			"Rank": "503",
+			"german": "grund",
+			"english": "reason"
+		},
+		{
+			"Rank": "504",
+			"german": "zeigen",
+			"english": "show"
+		},
+		{
+			"Rank": "505",
+			"german": "film",
+			"english": "Movie"
+		},
+		{
+			"Rank": "506",
+			"german": "schlecht",
+			"english": "badly"
+		},
+		{
+			"Rank": "507",
+			"german": "schatz",
+			"english": "treasure"
+		},
+		{
+			"Rank": "508",
+			"german": "deshalb",
+			"english": "that's why"
+		},
+		{
+			"Rank": "509",
+			"german": "holen",
+			"english": "get"
+		},
+		{
+			"Rank": "510",
+			"german": "hoffe",
+			"english": "hope"
+		},
+		{
+			"Rank": "511",
+			"german": "tu",
+			"english": "tu"
+		},
+		{
+			"Rank": "512",
+			"german": "sagst",
+			"english": "say"
+		},
+		{
+			"Rank": "513",
+			"german": "bett",
+			"english": "bed"
+		},
+		{
+			"Rank": "514",
+			"german": "muß",
+			"english": "have to be"
+		},
+		{
+			"Rank": "515",
+			"german": "seite",
+			"english": "page"
+		},
+		{
+			"Rank": "516",
+			"german": "gefällt",
+			"english": "like"
+		},
+		{
+			"Rank": "517",
+			"german": "eben",
+			"english": "just"
+		},
+		{
+			"Rank": "518",
+			"german": "lasst",
+			"english": "let"
+		},
+		{
+			"Rank": "519",
+			"german": "gefallen",
+			"english": "like"
+		},
+		{
+			"Rank": "520",
+			"german": "stunden",
+			"english": "hours"
+		},
+		{
+			"Rank": "521",
+			"german": "herz",
+			"english": "heart"
+		},
+		{
+			"Rank": "522",
+			"german": "wohin",
+			"english": "where"
+		},
+		{
+			"Rank": "523",
+			"german": "trinken",
+			"english": "drink"
+		},
+		{
+			"Rank": "524",
+			"german": "letzten",
+			"english": "last"
+		},
+		{
+			"Rank": "525",
+			"german": "mensch",
+			"english": "human"
+		},
+		{
+			"Rank": "526",
+			"german": "ersten",
+			"english": "first"
+		},
+		{
+			"Rank": "527",
+			"german": "n",
+			"english": "n"
+		},
+		{
+			"Rank": "528",
+			"german": "unten",
+			"english": "below"
+		},
+		{
+			"Rank": "529",
+			"german": "gesicht",
+			"english": "face"
+		},
+		{
+			"Rank": "530",
+			"german": "versuchen",
+			"english": "to attempt"
+		},
+		{
+			"Rank": "531",
+			"german": "wort",
+			"english": "word"
+		},
+		{
+			"Rank": "532",
+			"german": "denen",
+			"english": "to those"
+		},
+		{
+			"Rank": "533",
+			"german": "verlassen",
+			"english": "leaving"
+		},
+		{
+			"Rank": "534",
+			"german": "endlich",
+			"english": "Finally"
+		},
+		{
+			"Rank": "535",
+			"german": "denkst",
+			"english": "think"
+		},
+		{
+			"Rank": "536",
+			"german": "solltest",
+			"english": "should"
+		},
+		{
+			"Rank": "537",
+			"german": "schlafen",
+			"english": "sleep"
+		},
+		{
+			"Rank": "538",
+			"german": "ziemlich",
+			"english": "quite"
+		},
+		{
+			"Rank": "539",
+			"german": "jack",
+			"english": "Jack"
+		},
+		{
+			"Rank": "540",
+			"german": "dollar",
+			"english": "dollar"
+		},
+		{
+			"Rank": "541",
+			"german": "arsch",
+			"english": "ass"
+		},
+		{
+			"Rank": "542",
+			"german": "manchmal",
+			"english": "sometimes"
+		},
+		{
+			"Rank": "543",
+			"german": "fest",
+			"english": "firmly"
+		},
+		{
+			"Rank": "544",
+			"german": "wiedersehen",
+			"english": "see again"
+		},
+		{
+			"Rank": "545",
+			"german": "beste",
+			"english": "best"
+		},
+		{
+			"Rank": "546",
+			"german": "kleinen",
+			"english": "small"
+		},
+		{
+			"Rank": "547",
+			"german": "kriegen",
+			"english": "get"
+		},
+		{
+			"Rank": "548",
+			"german": "läuft",
+			"english": "Browsing"
+		},
+		{
+			"Rank": "549",
+			"german": "wahrheit",
+			"english": "truth"
+		},
+		{
+			"Rank": "550",
+			"german": "zwischen",
+			"english": "in between"
+		},
+		{
+			"Rank": "551",
+			"german": "niemals",
+			"english": "no way"
+		},
+		{
+			"Rank": "552",
+			"german": "bring",
+			"english": "bring"
+		},
+		{
+			"Rank": "553",
+			"german": "unserer",
+			"english": "our"
+		},
+		{
+			"Rank": "554",
+			"german": "nehme",
+			"english": "take"
+		},
+		{
+			"Rank": "555",
+			"german": "allen",
+			"english": "all"
+		},
+		{
+			"Rank": "556",
+			"german": "während",
+			"english": "while"
+		},
+		{
+			"Rank": "557",
+			"german": "glaubst",
+			"english": "think"
+		},
+		{
+			"Rank": "558",
+			"german": "ding",
+			"english": "thing"
+		},
+		{
+			"Rank": "559",
+			"german": "idee",
+			"english": "idea"
+		},
+		{
+			"Rank": "560",
+			"german": "wollten",
+			"english": "wanted to"
+		},
+		{
+			"Rank": "561",
+			"german": "lässt",
+			"english": "leaves"
+		},
+		{
+			"Rank": "562",
+			"german": "musste",
+			"english": "had to"
+		},
+		{
+			"Rank": "563",
+			"german": "sachen",
+			"english": "stuff"
+		},
+		{
+			"Rank": "564",
+			"german": "ah",
+			"english": "Ah"
+		},
+		{
+			"Rank": "565",
+			"german": "bleib",
+			"english": "permanent"
+		},
+		{
+			"Rank": "566",
+			"german": "kleiner",
+			"english": "smaller"
+		},
+		{
+			"Rank": "567",
+			"german": "euer",
+			"english": "your"
+		},
+		{
+			"Rank": "568",
+			"german": "nummer",
+			"english": "number"
+		},
+		{
+			"Rank": "569",
+			"german": "sondern",
+			"english": "rather"
+		},
+		{
+			"Rank": "570",
+			"german": "frei",
+			"english": "free"
+		},
+		{
+			"Rank": "571",
+			"german": "oft",
+			"english": "often"
+		},
+		{
+			"Rank": "572",
+			"german": "entschuldigung",
+			"english": "Sorry"
+		},
+		{
+			"Rank": "573",
+			"german": "wen",
+			"english": "who"
+		},
+		{
+			"Rank": "574",
+			"german": "ernst",
+			"english": "serious"
+		},
+		{
+			"Rank": "575",
+			"german": "alte",
+			"english": "old"
+		},
+		{
+			"Rank": "576",
+			"german": "schule",
+			"english": "school"
+		},
+		{
+			"Rank": "577",
+			"german": "ort",
+			"english": "place"
+		},
+		{
+			"Rank": "578",
+			"german": "erzählt",
+			"english": "tells"
+		},
+		{
+			"Rank": "579",
+			"german": "anderes",
+			"english": "other"
+		},
+		{
+			"Rank": "580",
+			"german": "new",
+			"english": "new"
+		},
+		{
+			"Rank": "581",
+			"german": "alt",
+			"english": "old"
+		},
+		{
+			"Rank": "582",
+			"german": "chance",
+			"english": "chance"
+		},
+		{
+			"Rank": "583",
+			"german": "einige",
+			"english": "some"
+		},
+		{
+			"Rank": "584",
+			"german": "bloß",
+			"english": "just"
+		},
+		{
+			"Rank": "585",
+			"german": "entschuldigen",
+			"english": "to apologize"
+		},
+		{
+			"Rank": "586",
+			"german": "setzen",
+			"english": "put"
+		},
+		{
+			"Rank": "587",
+			"german": "bedeutet",
+			"english": "means"
+		},
+		{
+			"Rank": "588",
+			"german": "erzählen",
+			"english": "tell"
+		},
+		{
+			"Rank": "589",
+			"german": "feuer",
+			"english": "fire"
+		},
+		{
+			"Rank": "590",
+			"german": "pass",
+			"english": "passport"
+		},
+		{
+			"Rank": "591",
+			"german": "würdest",
+			"english": "would"
+		},
+		{
+			"Rank": "592",
+			"german": "schuld",
+			"english": "fault"
+		},
+		{
+			"Rank": "593",
+			"german": "dad",
+			"english": "dad"
+		},
+		{
+			"Rank": "594",
+			"german": "getötet",
+			"english": "killed"
+		},
+		{
+			"Rank": "595",
+			"german": "jungen",
+			"english": "boys"
+		},
+		{
+			"Rank": "596",
+			"german": "drauf",
+			"english": "it"
+		},
+		{
+			"Rank": "597",
+			"german": "platz",
+			"english": "place"
+		},
+		{
+			"Rank": "598",
+			"german": "wären",
+			"english": "would"
+		},
+		{
+			"Rank": "599",
+			"german": "tust",
+			"english": "do"
+		},
+		{
+			"Rank": "600",
+			"german": "papa",
+			"english": "papa"
+		},
+		{
+			"Rank": "601",
+			"german": "spaß",
+			"english": "fun"
+		},
+		{
+			"Rank": "602",
+			"german": "versucht",
+			"english": "tries"
+		},
+		{
+			"Rank": "603",
+			"german": "wichtig",
+			"english": "important"
+		},
+		{
+			"Rank": "604",
+			"german": "besten",
+			"english": "best"
+		},
+		{
+			"Rank": "605",
+			"german": "sorge",
+			"english": "worry"
+		},
+		{
+			"Rank": "606",
+			"german": "kennst",
+			"english": "know"
+		},
+		{
+			"Rank": "607",
+			"german": "lst",
+			"english": "lst"
+		},
+		{
+			"Rank": "608",
+			"german": "hund",
+			"english": "dog"
+		},
+		{
+			"Rank": "609",
+			"german": "blut",
+			"english": "blood"
+		},
+		{
+			"Rank": "610",
+			"german": "hierher",
+			"english": "here"
+		},
+		{
+			"Rank": "611",
+			"german": "reicht",
+			"english": "enough"
+		},
+		{
+			"Rank": "612",
+			"german": "alten",
+			"english": "old"
+		},
+		{
+			"Rank": "613",
+			"german": "wär",
+			"english": "would"
+		},
+		{
+			"Rank": "614",
+			"german": "glücklich",
+			"english": "happy"
+		},
+		{
+			"Rank": "615",
+			"german": "brauchst",
+			"english": "need"
+		},
+		{
+			"Rank": "616",
+			"german": "hände",
+			"english": "hands"
+		},
+		{
+			"Rank": "617",
+			"german": "unseren",
+			"english": "our"
+		},
+		{
+			"Rank": "618",
+			"german": "hättest",
+			"english": "had"
+		},
+		{
+			"Rank": "619",
+			"german": "kaum",
+			"english": "barely"
+		},
+		{
+			"Rank": "620",
+			"german": "rede",
+			"english": "speech"
+		},
+		{
+			"Rank": "621",
+			"german": "zuerst",
+			"english": "first"
+		},
+		{
+			"Rank": "622",
+			"german": "stellen",
+			"english": "put"
+		},
+		{
+			"Rank": "623",
+			"german": "beiden",
+			"english": "both"
+		},
+		{
+			"Rank": "624",
+			"german": "falls",
+			"english": "if"
+		},
+		{
+			"Rank": "625",
+			"german": "früh",
+			"english": "early"
+		},
+		{
+			"Rank": "626",
+			"german": "wartet",
+			"english": "waiting"
+		},
+		{
+			"Rank": "627",
+			"german": "neuen",
+			"english": "new"
+		},
+		{
+			"Rank": "628",
+			"german": "sechs",
+			"english": "six"
+		},
+		{
+			"Rank": "629",
+			"german": "jede",
+			"english": "each"
+		},
+		{
+			"Rank": "630",
+			"german": "freundin",
+			"english": "friend"
+		},
+		{
+			"Rank": "631",
+			"german": "i",
+			"english": "i"
+		},
+		{
+			"Rank": "632",
+			"german": "lieben",
+			"english": "love"
+		},
+		{
+			"Rank": "633",
+			"german": "teil",
+			"english": "part"
+		},
+		{
+			"Rank": "634",
+			"german": "stunde",
+			"english": "hour"
+		},
+		{
+			"Rank": "635",
+			"german": "langsam",
+			"english": "slowly"
+		},
+		{
+			"Rank": "636",
+			"german": "scheint",
+			"english": "seems"
+		},
+		{
+			"Rank": "637",
+			"german": "früher",
+			"english": "earlier"
+		},
+		{
+			"Rank": "638",
+			"german": "großen",
+			"english": "great"
+		},
+		{
+			"Rank": "639",
+			"german": "waffe",
+			"english": "weapon"
+		},
+		{
+			"Rank": "640",
+			"german": "telefon",
+			"english": "phone"
+		},
+		{
+			"Rank": "641",
+			"german": "himmel",
+			"english": "sky"
+		},
+		{
+			"Rank": "642",
+			"german": "lernen",
+			"english": "to learn"
+		},
+		{
+			"Rank": "643",
+			"german": "you",
+			"english": "you"
+		},
+		{
+			"Rank": "644",
+			"german": "äh",
+			"english": "um"
+		},
+		{
+			"Rank": "645",
+			"german": "zehn",
+			"english": "ten"
+		},
+		{
+			"Rank": "646",
+			"german": "gedacht",
+			"english": "thought"
+		},
+		{
+			"Rank": "647",
+			"german": "willkommen",
+			"english": "welcome"
+		},
+		{
+			"Rank": "648",
+			"german": "frank",
+			"english": "frank"
+		},
+		{
+			"Rank": "649",
+			"german": "luft",
+			"english": "air"
+		},
+		{
+			"Rank": "650",
+			"german": "licht",
+			"english": "light"
+		},
+		{
+			"Rank": "651",
+			"german": "hol",
+			"english": "hol"
+		},
+		{
+			"Rank": "652",
+			"german": "seht",
+			"english": "look"
+		},
+		{
+			"Rank": "653",
+			"german": "menge",
+			"english": "amount"
+		},
+		{
+			"Rank": "654",
+			"german": "voll",
+			"english": "full"
+		},
+		{
+			"Rank": "655",
+			"german": "überall",
+			"english": "all over"
+		},
+		{
+			"Rank": "656",
+			"german": "tat",
+			"english": "did"
+		},
+		{
+			"Rank": "657",
+			"german": "erde",
+			"english": "earth"
+		},
+		{
+			"Rank": "658",
+			"german": "gebe",
+			"english": "give"
+		},
+		{
+			"Rank": "659",
+			"german": "a",
+			"english": "a"
+		},
+		{
+			"Rank": "660",
+			"german": "ruf",
+			"english": "call"
+		},
+		{
+			"Rank": "661",
+			"german": "möglich",
+			"english": "possible"
+		},
+		{
+			"Rank": "662",
+			"german": "spricht",
+			"english": "speaks"
+		},
+		{
+			"Rank": "663",
+			"german": "könig",
+			"english": "king"
+		},
+		{
+			"Rank": "664",
+			"german": "eltern",
+			"english": "parents"
+		},
+		{
+			"Rank": "665",
+			"german": "außer",
+			"english": "except"
+		},
+		{
+			"Rank": "666",
+			"german": "nächsten",
+			"english": "Upcoming"
+		},
+		{
+			"Rank": "667",
+			"german": "ziehen",
+			"english": "pull"
+		},
+		{
+			"Rank": "668",
+			"german": "wahrscheinlich",
+			"english": "probably"
+		},
+		{
+			"Rank": "669",
+			"german": "wollt",
+			"english": "want"
+		},
+		{
+			"Rank": "670",
+			"german": "dürfen",
+			"english": "allowed"
+		},
+		{
+			"Rank": "671",
+			"german": "nennen",
+			"english": "call"
+		},
+		{
+			"Rank": "672",
+			"german": "falsch",
+			"english": "not correct"
+		},
+		{
+			"Rank": "673",
+			"german": "ehrlich",
+			"english": "honest"
+		},
+		{
+			"Rank": "674",
+			"german": "irgendwas",
+			"english": "anything"
+		},
+		{
+			"Rank": "675",
+			"german": "nächste",
+			"english": "next"
+		},
+		{
+			"Rank": "676",
+			"german": "wochen",
+			"english": "weeks"
+		},
+		{
+			"Rank": "677",
+			"german": "meines",
+			"english": "mine"
+		},
+		{
+			"Rank": "678",
+			"german": "herren",
+			"english": "Men's"
+		},
+		{
+			"Rank": "679",
+			"german": "straße",
+			"english": "road"
+		},
+		{
+			"Rank": "680",
+			"german": "hm",
+			"english": "Hm"
+		},
+		{
+			"Rank": "681",
+			"german": "heiraten",
+			"english": "marry"
+		},
+		{
+			"Rank": "682",
+			"german": "stück",
+			"english": "piece"
+		},
+		{
+			"Rank": "683",
+			"german": "sam",
+			"english": "sam"
+		},
+		{
+			"Rank": "684",
+			"german": "doktor",
+			"english": "doctor"
+		},
+		{
+			"Rank": "685",
+			"german": "neues",
+			"english": "new"
+		},
+		{
+			"Rank": "686",
+			"german": "gegeben",
+			"english": "given"
+		},
+		{
+			"Rank": "687",
+			"german": "kaffee",
+			"english": "coffee"
+		},
+		{
+			"Rank": "688",
+			"german": "möchten",
+			"english": "want"
+		},
+		{
+			"Rank": "689",
+			"german": "verstehst",
+			"english": "understand"
+		},
+		{
+			"Rank": "690",
+			"german": "krank",
+			"english": "sick"
+		},
+		{
+			"Rank": "691",
+			"german": "danach",
+			"english": "after that"
+		},
+		{
+			"Rank": "692",
+			"german": "geworden",
+			"english": "become"
+		},
+		{
+			"Rank": "693",
+			"german": "arzt",
+			"english": "doctor"
+		},
+		{
+			"Rank": "694",
+			"german": "schaffen",
+			"english": "create"
+		},
+		{
+			"Rank": "695",
+			"german": "stelle",
+			"english": "office"
+		},
+		{
+			"Rank": "696",
+			"german": "groß",
+			"english": "big"
+		},
+		{
+			"Rank": "697",
+			"german": "wem",
+			"english": "whom"
+		},
+		{
+			"Rank": "698",
+			"german": "hölle",
+			"english": "hell"
+		},
+		{
+			"Rank": "699",
+			"german": "völlig",
+			"english": "completely"
+		},
+		{
+			"Rank": "700",
+			"german": "weh",
+			"english": "sore"
+		},
+		{
+			"Rank": "701",
+			"german": "s",
+			"english": "s"
+		},
+		{
+			"Rank": "702",
+			"german": "fehler",
+			"english": "Error"
+		},
+		{
+			"Rank": "703",
+			"german": "drüben",
+			"english": "over"
+		},
+		{
+			"Rank": "704",
+			"german": "harry",
+			"english": "harry"
+		},
+		{
+			"Rank": "705",
+			"german": "büro",
+			"english": "office"
+		},
+		{
+			"Rank": "706",
+			"german": "captain",
+			"english": "captain"
+		},
+		{
+			"Rank": "707",
+			"german": "rufen",
+			"english": "call"
+		},
+		{
+			"Rank": "708",
+			"german": "irgendwie",
+			"english": "somehow"
+		},
+		{
+			"Rank": "709",
+			"german": "eigenen",
+			"english": "own"
+		},
+		{
+			"Rank": "710",
+			"german": "probleme",
+			"english": "problems"
+		},
+		{
+			"Rank": "711",
+			"german": "allem",
+			"english": "all"
+		},
+		{
+			"Rank": "712",
+			"german": "mr",
+			"english": "mr"
+		},
+		{
+			"Rank": "713",
+			"german": "wert",
+			"english": "value"
+		},
+		{
+			"Rank": "714",
+			"german": "tue",
+			"english": "do"
+		},
+		{
+			"Rank": "715",
+			"german": "buch",
+			"english": "book"
+		},
+		{
+			"Rank": "716",
+			"german": "lebt",
+			"english": "lives"
+		},
+		{
+			"Rank": "717",
+			"german": "scheiß",
+			"english": "shit"
+		},
+		{
+			"Rank": "718",
+			"german": "kaufen",
+			"english": "buy"
+		},
+		{
+			"Rank": "719",
+			"german": "erinnern",
+			"english": "recall"
+		},
+		{
+			"Rank": "720",
+			"german": "direkt",
+			"english": "directly"
+		},
+		{
+			"Rank": "721",
+			"german": "laufen",
+			"english": "to run"
+		},
+		{
+			"Rank": "722",
+			"german": "george",
+			"english": "george"
+		},
+		{
+			"Rank": "723",
+			"german": "trotzdem",
+			"english": "Nevertheless"
+		},
+		{
+			"Rank": "724",
+			"german": "schreiben",
+			"english": "write"
+		},
+		{
+			"Rank": "725",
+			"german": "still",
+			"english": "tranquil"
+		},
+		{
+			"Rank": "726",
+			"german": "kleines",
+			"english": "small"
+		},
+		{
+			"Rank": "727",
+			"german": "körper",
+			"english": "body"
+		},
+		{
+			"Rank": "728",
+			"german": "retten",
+			"english": "rescue"
+		},
+		{
+			"Rank": "729",
+			"german": "fand",
+			"english": "found"
+		},
+		{
+			"Rank": "730",
+			"german": "unserem",
+			"english": "our"
+		},
+		{
+			"Rank": "731",
+			"german": "solche",
+			"english": "such"
+		},
+		{
+			"Rank": "732",
+			"german": "denkt",
+			"english": "thinks"
+		},
+		{
+			"Rank": "733",
+			"german": "könnt",
+			"english": "can"
+		},
+		{
+			"Rank": "734",
+			"german": "ln",
+			"english": "ln"
+		},
+		{
+			"Rank": "735",
+			"german": "alleine",
+			"english": "alone"
+		},
+		{
+			"Rank": "736",
+			"german": "sitzen",
+			"english": "sit"
+		},
+		{
+			"Rank": "737",
+			"german": "höre",
+			"english": "hear"
+		},
+		{
+			"Rank": "738",
+			"german": "millionen",
+			"english": "millions"
+		},
+		{
+			"Rank": "739",
+			"german": "tagen",
+			"english": "meet"
+		},
+		{
+			"Rank": "740",
+			"german": "york",
+			"english": "York"
+		},
+		{
+			"Rank": "741",
+			"german": "suche",
+			"english": "search"
+		},
+		{
+			"Rank": "742",
+			"german": "vergiss",
+			"english": "forget"
+		},
+		{
+			"Rank": "743",
+			"german": "gutes",
+			"english": "good"
+		},
+		{
+			"Rank": "744",
+			"german": "leider",
+			"english": "Unfortunately"
+		},
+		{
+			"Rank": "745",
+			"german": "sagten",
+			"english": "said"
+		},
+		{
+			"Rank": "746",
+			"german": "typen",
+			"english": "types"
+		},
+		{
+			"Rank": "747",
+			"german": "schlüssel",
+			"english": "key"
+		},
+		{
+			"Rank": "748",
+			"german": "tragen",
+			"english": "carry"
+		},
+		{
+			"Rank": "749",
+			"german": "mund",
+			"english": "mouth"
+		},
+		{
+			"Rank": "750",
+			"german": "worden",
+			"english": "been"
+		},
+		{
+			"Rank": "751",
+			"german": "hält",
+			"english": "keeps"
+		},
+		{
+			"Rank": "752",
+			"german": "zwar",
+			"english": "indeed"
+		},
+		{
+			"Rank": "753",
+			"german": "bereits",
+			"english": "already"
+		},
+		{
+			"Rank": "754",
+			"german": "leicht",
+			"english": "light"
+		},
+		{
+			"Rank": "755",
+			"german": "spielt",
+			"english": "plays"
+		},
+		{
+			"Rank": "756",
+			"german": "schiff",
+			"english": "ship"
+		},
+		{
+			"Rank": "757",
+			"german": "hörst",
+			"english": "hear"
+		},
+		{
+			"Rank": "758",
+			"german": "lhren",
+			"english": "lhren"
+		},
+		{
+			"Rank": "759",
+			"german": "onkel",
+			"english": "uncle"
+		},
+		{
+			"Rank": "760",
+			"german": "glaub",
+			"english": "believable"
+		},
+		{
+			"Rank": "761",
+			"german": "verlieren",
+			"english": "to lose"
+		},
+		{
+			"Rank": "762",
+			"german": "großer",
+			"english": "greater"
+		},
+		{
+			"Rank": "763",
+			"german": "klingt",
+			"english": "sounds"
+		},
+		{
+			"Rank": "764",
+			"german": "irgendwo",
+			"english": "somewhere"
+		},
+		{
+			"Rank": "765",
+			"german": "zukunft",
+			"english": "future"
+		},
+		{
+			"Rank": "766",
+			"german": "kennt",
+			"english": "knows"
+		},
+		{
+			"Rank": "767",
+			"german": "plan",
+			"english": "plan"
+		},
+		{
+			"Rank": "768",
+			"german": "schöne",
+			"english": "nice"
+		},
+		{
+			"Rank": "769",
+			"german": "verschwinden",
+			"english": "disappear"
+		},
+		{
+			"Rank": "770",
+			"german": "interessiert",
+			"english": "interested"
+		},
+		{
+			"Rank": "771",
+			"german": "waffen",
+			"english": "weapons"
+		},
+		{
+			"Rank": "772",
+			"german": "kämpfen",
+			"english": "fight"
+		},
+		{
+			"Rank": "773",
+			"german": "party",
+			"english": "party"
+		},
+		{
+			"Rank": "774",
+			"german": "bringe",
+			"english": "bring"
+		},
+		{
+			"Rank": "775",
+			"german": "hinten",
+			"english": "behind"
+		},
+		{
+			"Rank": "776",
+			"german": "setz",
+			"english": "translated"
+		},
+		{
+			"Rank": "777",
+			"german": "kumpel",
+			"english": "pal"
+		},
+		{
+			"Rank": "778",
+			"german": "wolltest",
+			"english": "wanted"
+		},
+		{
+			"Rank": "779",
+			"german": "boden",
+			"english": "ground"
+		},
+		{
+			"Rank": "780",
+			"german": "general",
+			"english": "general"
+		},
+		{
+			"Rank": "781",
+			"german": "zeig",
+			"english": "show"
+		},
+		{
+			"Rank": "782",
+			"german": "böse",
+			"english": "angry"
+		},
+		{
+			"Rank": "783",
+			"german": "halte",
+			"english": "consider"
+		},
+		{
+			"Rank": "784",
+			"german": "gegangen",
+			"english": "went"
+		},
+		{
+			"Rank": "785",
+			"german": "richtige",
+			"english": "right one"
+		},
+		{
+			"Rank": "786",
+			"german": "liebling",
+			"english": "Darling"
+		},
+		{
+			"Rank": "787",
+			"german": "acht",
+			"english": "eight"
+		},
+		{
+			"Rank": "788",
+			"german": "froh",
+			"english": "glad"
+		},
+		{
+			"Rank": "789",
+			"german": "machte",
+			"english": "made"
+		},
+		{
+			"Rank": "790",
+			"german": "jedes",
+			"english": "each"
+		},
+		{
+			"Rank": "791",
+			"german": "hart",
+			"english": "hard"
+		},
+		{
+			"Rank": "792",
+			"german": "vorsichtig",
+			"english": "careful"
+		},
+		{
+			"Rank": "793",
+			"german": "joe",
+			"english": "joe"
+		},
+		{
+			"Rank": "794",
+			"german": "versuch",
+			"english": "try"
+		},
+		{
+			"Rank": "795",
+			"german": "getroffen",
+			"english": "met"
+		},
+		{
+			"Rank": "796",
+			"german": "mögen",
+			"english": "to like"
+		},
+		{
+			"Rank": "797",
+			"german": "zeug",
+			"english": "stuff"
+		},
+		{
+			"Rank": "798",
+			"german": "damals",
+			"english": "at that time"
+		},
+		{
+			"Rank": "799",
+			"german": "stimme",
+			"english": "voice"
+		},
+		{
+			"Rank": "800",
+			"german": "gefühl",
+			"english": "feeling"
+		},
+		{
+			"Rank": "801",
+			"german": "leuten",
+			"english": "people"
+		},
+		{
+			"Rank": "802",
+			"german": "lesen",
+			"english": "read"
+		},
+		{
+			"Rank": "803",
+			"german": "mist",
+			"english": "manure"
+		},
+		{
+			"Rank": "804",
+			"german": "zug",
+			"english": "train"
+		},
+		{
+			"Rank": "805",
+			"german": "hattest",
+			"english": "had"
+		},
+		{
+			"Rank": "806",
+			"german": "verdammte",
+			"english": "damned"
+		},
+		{
+			"Rank": "807",
+			"german": "geschäft",
+			"english": "business"
+		},
+		{
+			"Rank": "808",
+			"german": "arschloch",
+			"english": "asshole"
+		},
+		{
+			"Rank": "809",
+			"german": "rest",
+			"english": "rest"
+		},
+		{
+			"Rank": "810",
+			"german": "mom",
+			"english": "mom"
+		},
+		{
+			"Rank": "811",
+			"german": "de",
+			"english": "de"
+		},
+		{
+			"Rank": "812",
+			"german": "aufhören",
+			"english": "stop"
+		},
+		{
+			"Rank": "813",
+			"german": "könntest",
+			"english": "could"
+		},
+		{
+			"Rank": "814",
+			"german": "klasse",
+			"english": "class"
+		},
+		{
+			"Rank": "815",
+			"german": "lasse",
+			"english": "leave"
+		},
+		{
+			"Rank": "816",
+			"german": "boss",
+			"english": "boss"
+		},
+		{
+			"Rank": "817",
+			"german": "erklären",
+			"english": "to explain"
+		},
+		{
+			"Rank": "818",
+			"german": "fliegen",
+			"english": "fly"
+		},
+		{
+			"Rank": "819",
+			"german": "laden",
+			"english": "load"
+		},
+		{
+			"Rank": "820",
+			"german": "stolz",
+			"english": "proud"
+		},
+		{
+			"Rank": "821",
+			"german": "stark",
+			"english": "strongly"
+		},
+		{
+			"Rank": "822",
+			"german": "hasse",
+			"english": "hate"
+		},
+		{
+			"Rank": "823",
+			"german": "wohnung",
+			"english": "apartment"
+		},
+		{
+			"Rank": "824",
+			"german": "gebracht",
+			"english": "brought"
+		},
+		{
+			"Rank": "825",
+			"german": "fort",
+			"english": "on"
+		},
+		{
+			"Rank": "826",
+			"german": "genauso",
+			"english": "just like that"
+		},
+		{
+			"Rank": "827",
+			"german": "mai",
+			"english": "May"
+		},
+		{
+			"Rank": "828",
+			"german": "entschuldige",
+			"english": "sorry"
+		},
+		{
+			"Rank": "829",
+			"german": "besonders",
+			"english": "especially"
+		},
+		{
+			"Rank": "830",
+			"german": "seien",
+			"english": "are"
+		},
+		{
+			"Rank": "831",
+			"german": "tages",
+			"english": "day"
+		},
+		{
+			"Rank": "832",
+			"german": "weniger",
+			"english": "fewer"
+		},
+		{
+			"Rank": "833",
+			"german": "zieh",
+			"english": "withdrawing"
+		},
+		{
+			"Rank": "834",
+			"german": "ärger",
+			"english": "trouble"
+		},
+		{
+			"Rank": "835",
+			"german": "fühle",
+			"english": "feel"
+		},
+		{
+			"Rank": "836",
+			"german": "schauen",
+			"english": "watch"
+		},
+		{
+			"Rank": "837",
+			"german": "idiot",
+			"english": "idiot"
+		},
+		{
+			"Rank": "838",
+			"german": "o",
+			"english": "O"
+		},
+		{
+			"Rank": "839",
+			"german": "schneller",
+			"english": "more quickly"
+		},
+		{
+			"Rank": "840",
+			"german": "denk",
+			"english": "thinking"
+		},
+		{
+			"Rank": "841",
+			"german": "geschafft",
+			"english": "made"
+		},
+		{
+			"Rank": "842",
+			"german": "verzeihung",
+			"english": "forgiveness"
+		},
+		{
+			"Rank": "843",
+			"german": "daddy",
+			"english": "daddy"
+		},
+		{
+			"Rank": "844",
+			"german": "charlie",
+			"english": "charlie"
+		},
+		{
+			"Rank": "845",
+			"german": "tja",
+			"english": "tja"
+		},
+		{
+			"Rank": "846",
+			"german": "schicken",
+			"english": "send"
+		},
+		{
+			"Rank": "847",
+			"german": "erwartet",
+			"english": "expected"
+		},
+		{
+			"Rank": "848",
+			"german": "nachricht",
+			"english": "message"
+		},
+		{
+			"Rank": "849",
+			"german": "findet",
+			"english": "finds"
+		},
+		{
+			"Rank": "850",
+			"german": "funktioniert",
+			"english": "is working"
+		},
+		{
+			"Rank": "851",
+			"german": "werd",
+			"english": "expectant"
+		},
+		{
+			"Rank": "852",
+			"german": "stand",
+			"english": "was standing"
+		},
+		{
+			"Rank": "853",
+			"german": "traum",
+			"english": "dream"
+		},
+		{
+			"Rank": "854",
+			"german": "sollst",
+			"english": "shalt"
+		},
+		{
+			"Rank": "855",
+			"german": "t",
+			"english": "t"
+		},
+		{
+			"Rank": "856",
+			"german": "fallen",
+			"english": "fall"
+		},
+		{
+			"Rank": "857",
+			"german": "wovon",
+			"english": "from which"
+		},
+		{
+			"Rank": "858",
+			"german": "gefängnis",
+			"english": "prison"
+		},
+		{
+			"Rank": "859",
+			"german": "aufs",
+			"english": "onto"
+		},
+		{
+			"Rank": "860",
+			"german": "hotel",
+			"english": "hotel"
+		},
+		{
+			"Rank": "861",
+			"german": "krankenhaus",
+			"english": "hospital"
+		},
+		{
+			"Rank": "862",
+			"german": "umbringen",
+			"english": "kill"
+		},
+		{
+			"Rank": "863",
+			"german": "fällt",
+			"english": "falls"
+		},
+		{
+			"Rank": "864",
+			"german": "redest",
+			"english": "talking"
+		},
+		{
+			"Rank": "865",
+			"german": "weisst",
+			"english": "know"
+		},
+		{
+			"Rank": "866",
+			"german": "gottes",
+			"english": "god"
+		},
+		{
+			"Rank": "867",
+			"german": "total",
+			"english": "total"
+		},
+		{
+			"Rank": "868",
+			"german": "fenster",
+			"english": "window"
+		},
+		{
+			"Rank": "869",
+			"german": "lebens",
+			"english": "life"
+		},
+		{
+			"Rank": "870",
+			"german": "glaubt",
+			"english": "believes"
+		},
+		{
+			"Rank": "871",
+			"german": "vorstellen",
+			"english": "imagine"
+		},
+		{
+			"Rank": "872",
+			"german": "and",
+			"english": "and"
+		},
+		{
+			"Rank": "873",
+			"german": "sinn",
+			"english": "sense"
+		},
+		{
+			"Rank": "874",
+			"german": "ändern",
+			"english": "change"
+		},
+		{
+			"Rank": "875",
+			"german": "versuche",
+			"english": "try"
+		},
+		{
+			"Rank": "876",
+			"german": "heraus",
+			"english": "out"
+		},
+		{
+			"Rank": "877",
+			"german": "heißen",
+			"english": "be called"
+		},
+		{
+			"Rank": "878",
+			"german": "tanzen",
+			"english": "dance"
+		},
+		{
+			"Rank": "879",
+			"german": "monate",
+			"english": "months"
+		},
+		{
+			"Rank": "880",
+			"german": "lachen",
+			"english": "laugh"
+		},
+		{
+			"Rank": "881",
+			"german": "kampf",
+			"english": "struggle"
+		},
+		{
+			"Rank": "882",
+			"german": "nachdem",
+			"english": "after this"
+		},
+		{
+			"Rank": "883",
+			"german": "arm",
+			"english": "poor"
+		},
+		{
+			"Rank": "884",
+			"german": "wenigstens",
+			"english": "at least"
+		},
+		{
+			"Rank": "885",
+			"german": "geschehen",
+			"english": "happen"
+		},
+		{
+			"Rank": "886",
+			"german": "hörte",
+			"english": "heard"
+		},
+		{
+			"Rank": "887",
+			"german": "kamen",
+			"english": "came"
+		},
+		{
+			"Rank": "888",
+			"german": "passt",
+			"english": "fit"
+		},
+		{
+			"Rank": "889",
+			"german": "liebt",
+			"english": "loves"
+		},
+		{
+			"Rank": "890",
+			"german": "folgen",
+			"english": "consequences"
+		},
+		{
+			"Rank": "891",
+			"german": "eher",
+			"english": "rather"
+		},
+		{
+			"Rank": "892",
+			"german": "gefragt",
+			"english": "asked"
+		},
+		{
+			"Rank": "893",
+			"german": "dumm",
+			"english": "stupid"
+		},
+		{
+			"Rank": "894",
+			"german": "deswegen",
+			"english": "therefore"
+		},
+		{
+			"Rank": "895",
+			"german": "solange",
+			"english": "while"
+		},
+		{
+			"Rank": "896",
+			"german": "lustig",
+			"english": "funny"
+		},
+		{
+			"Rank": "897",
+			"german": "starb",
+			"english": "died"
+		},
+		{
+			"Rank": "898",
+			"german": "unmöglich",
+			"english": "impossible"
+		},
+		{
+			"Rank": "899",
+			"german": "bild",
+			"english": "image"
+		},
+		{
+			"Rank": "900",
+			"german": "boot",
+			"english": "boat"
+		},
+		{
+			"Rank": "901",
+			"german": "genommen",
+			"english": "took"
+		},
+		{
+			"Rank": "902",
+			"german": "dame",
+			"english": "lady"
+		},
+		{
+			"Rank": "903",
+			"german": "führen",
+			"english": "to lead"
+		},
+		{
+			"Rank": "904",
+			"german": "unglaublich",
+			"english": "incredible"
+		},
+		{
+			"Rank": "905",
+			"german": "vertrauen",
+			"english": "trust"
+		},
+		{
+			"Rank": "906",
+			"german": "verletzt",
+			"english": "injured"
+		},
+		{
+			"Rank": "907",
+			"german": "passieren",
+			"english": "happen"
+		},
+		{
+			"Rank": "908",
+			"german": "cool",
+			"english": "cool"
+		},
+		{
+			"Rank": "909",
+			"german": "meisten",
+			"english": "most"
+		},
+		{
+			"Rank": "910",
+			"german": "tom",
+			"english": "tom"
+		},
+		{
+			"Rank": "911",
+			"german": "vorher",
+			"english": "before"
+		},
+		{
+			"Rank": "912",
+			"german": "plötzlich",
+			"english": "suddenly"
+		},
+		{
+			"Rank": "913",
+			"german": "angerufen",
+			"english": "called"
+		},
+		{
+			"Rank": "914",
+			"german": "bewegung",
+			"english": "Move"
+		},
+		{
+			"Rank": "915",
+			"german": "kümmern",
+			"english": "concern"
+		},
+		{
+			"Rank": "916",
+			"german": "rüber",
+			"english": "over"
+		},
+		{
+			"Rank": "917",
+			"german": "komisch",
+			"english": "funny"
+		},
+		{
+			"Rank": "918",
+			"german": "paris",
+			"english": "Paris"
+		},
+		{
+			"Rank": "919",
+			"german": "super",
+			"english": "great"
+		},
+		{
+			"Rank": "920",
+			"german": "sieben",
+			"english": "seven"
+		},
+		{
+			"Rank": "921",
+			"german": "erinnere",
+			"english": "remember"
+		},
+		{
+			"Rank": "922",
+			"german": "lhrer",
+			"english": "lhrer"
+		},
+		{
+			"Rank": "923",
+			"german": "ne",
+			"english": "ne"
+		},
+		{
+			"Rank": "924",
+			"german": "rufe",
+			"english": "call"
+		},
+		{
+			"Rank": "925",
+			"german": "bier",
+			"english": "beer"
+		},
+		{
+			"Rank": "926",
+			"german": "augenblick",
+			"english": "moment"
+		},
+		{
+			"Rank": "927",
+			"german": "herum",
+			"english": "around"
+		},
+		{
+			"Rank": "928",
+			"german": "kalt",
+			"english": "cold"
+		},
+		{
+			"Rank": "929",
+			"german": "wunderbar",
+			"english": "wonderful"
+		},
+		{
+			"Rank": "930",
+			"german": "großartig",
+			"english": "Great"
+		},
+		{
+			"Rank": "931",
+			"german": "wahl",
+			"english": "choice"
+		},
+		{
+			"Rank": "932",
+			"german": "auge",
+			"english": "eye"
+		},
+		{
+			"Rank": "933",
+			"german": "fahr",
+			"english": "traveling"
+		},
+		{
+			"Rank": "934",
+			"german": "konnten",
+			"english": "could"
+		},
+		{
+			"Rank": "935",
+			"german": "länger",
+			"english": "longer"
+		},
+		{
+			"Rank": "936",
+			"german": "m",
+			"english": "m"
+		},
+		{
+			"Rank": "937",
+			"german": "johnny",
+			"english": "johnny"
+		},
+		{
+			"Rank": "938",
+			"german": "tisch",
+			"english": "table"
+		},
+		{
+			"Rank": "939",
+			"german": "rum",
+			"english": "rum"
+		},
+		{
+			"Rank": "940",
+			"german": "antwort",
+			"english": "answer"
+		},
+		{
+			"Rank": "941",
+			"german": "jedem",
+			"english": "every"
+		},
+		{
+			"Rank": "942",
+			"german": "david",
+			"english": "David"
+		},
+		{
+			"Rank": "943",
+			"german": "arme",
+			"english": "poor"
+		},
+		{
+			"Rank": "944",
+			"german": "umgebracht",
+			"english": "killed"
+		},
+		{
+			"Rank": "945",
+			"german": "schlimm",
+			"english": "bad"
+		},
+		{
+			"Rank": "946",
+			"german": "verheiratet",
+			"english": "married"
+		},
+		{
+			"Rank": "947",
+			"german": "steh",
+			"english": "stand"
+		},
+		{
+			"Rank": "948",
+			"german": "anrufen",
+			"english": "call"
+		},
+		{
+			"Rank": "949",
+			"german": "worte",
+			"english": "worte"
+		},
+		{
+			"Rank": "950",
+			"german": "möchtest",
+			"english": "want"
+		},
+		{
+			"Rank": "951",
+			"german": "vorsicht",
+			"english": "caution"
+		},
+		{
+			"Rank": "952",
+			"german": "hilf",
+			"english": "Helpful"
+		},
+		{
+			"Rank": "953",
+			"german": "bezahlt",
+			"english": "paid"
+		},
+		{
+			"Rank": "954",
+			"german": "voller",
+			"english": "full of"
+		},
+		{
+			"Rank": "955",
+			"german": "links",
+			"english": "left"
+		},
+		{
+			"Rank": "956",
+			"german": "sekunden",
+			"english": "seconds"
+		},
+		{
+			"Rank": "957",
+			"german": "werdet",
+			"english": "will"
+		},
+		{
+			"Rank": "958",
+			"german": "wärst",
+			"english": "'d"
+		},
+		{
+			"Rank": "959",
+			"german": "liegen",
+			"english": "lie"
+		},
+		{
+			"Rank": "960",
+			"german": "fühlen",
+			"english": "feel"
+		},
+		{
+			"Rank": "961",
+			"german": "nochmal",
+			"english": "again"
+		},
+		{
+			"Rank": "962",
+			"german": "armee",
+			"english": "army"
+		},
+		{
+			"Rank": "963",
+			"german": "bitten",
+			"english": "asking for"
+		},
+		{
+			"Rank": "964",
+			"german": "gestorben",
+			"english": "died"
+		},
+		{
+			"Rank": "965",
+			"german": "finger",
+			"english": "finger"
+		},
+		{
+			"Rank": "966",
+			"german": "meinung",
+			"english": "opinion"
+		},
+		{
+			"Rank": "967",
+			"german": "nimmt",
+			"english": "accepts"
+		},
+		{
+			"Rank": "968",
+			"german": "zahlen",
+			"english": "numbers"
+		},
+		{
+			"Rank": "969",
+			"german": "sicherheit",
+			"english": "safety"
+		},
+		{
+			"Rank": "970",
+			"german": "verkaufen",
+			"english": "to sell"
+		},
+		{
+			"Rank": "971",
+			"german": "gesprochen",
+			"english": "spoken"
+		},
+		{
+			"Rank": "972",
+			"german": "wozu",
+			"english": "why"
+		},
+		{
+			"Rank": "973",
+			"german": "müde",
+			"english": "tired"
+		},
+		{
+			"Rank": "974",
+			"german": "seele",
+			"english": "soul"
+		},
+		{
+			"Rank": "975",
+			"german": "welcher",
+			"english": "which one"
+		},
+		{
+			"Rank": "976",
+			"german": "schießen",
+			"english": "shoot"
+		},
+		{
+			"Rank": "977",
+			"german": "michael",
+			"english": "michael"
+		},
+		{
+			"Rank": "978",
+			"german": "arbeite",
+			"english": "working"
+		},
+		{
+			"Rank": "979",
+			"german": "sitzt",
+			"english": "sitting"
+		},
+		{
+			"Rank": "980",
+			"german": "to",
+			"english": "to"
+		},
+		{
+			"Rank": "981",
+			"german": "sonne",
+			"english": "Sun"
+		},
+		{
+			"Rank": "982",
+			"german": "damen",
+			"english": "Ladies"
+		},
+		{
+			"Rank": "983",
+			"german": "laß",
+			"english": "let"
+		},
+		{
+			"Rank": "984",
+			"german": "bezahlen",
+			"english": "pay"
+		},
+		{
+			"Rank": "985",
+			"german": "selber",
+			"english": "himself"
+		},
+		{
+			"Rank": "986",
+			"german": "reise",
+			"english": "travel"
+		},
+		{
+			"Rank": "987",
+			"german": "team",
+			"english": "team"
+		},
+		{
+			"Rank": "988",
+			"german": "sobald",
+			"english": "as soon as"
+		},
+		{
+			"Rank": "989",
+			"german": "meister",
+			"english": "Master"
+		},
+		{
+			"Rank": "990",
+			"german": "majestät",
+			"english": "majesty"
+		},
+		{
+			"Rank": "991",
+			"german": "anfang",
+			"english": "Beginning"
+		},
+		{
+			"Rank": "992",
+			"german": "fangen",
+			"english": "to catch"
+		},
+		{
+			"Rank": "993",
+			"german": "außerdem",
+			"english": "also"
+		},
+		{
+			"Rank": "994",
+			"german": "geschrieben",
+			"english": "written"
+		},
+		{
+			"Rank": "995",
+			"german": "sex",
+			"english": "sex"
+		},
+		{
+			"Rank": "996",
+			"german": "hole",
+			"english": "hole"
+		},
+		{
+			"Rank": "997",
+			"german": "kriegt",
+			"english": "gets"
+		},
+		{
+			"Rank": "998",
+			"german": "yeah",
+			"english": "yeah"
+		},
+		{
+			"Rank": "999",
+			"german": "magst",
+			"english": "like"
+		},
+		{
+			"Rank": "1000",
+			"german": "laut",
+			"english": "according to"
+		},
+		{
+			"Rank": "1001",
+			"german": "klappe",
+			"english": "flap"
+		},
+		{
+			"Rank": "1002",
+			"german": "amerika",
+			"english": "America"
+		},
+		{
+			"Rank": "1003",
+			"german": "nahm",
+			"english": "took"
+		},
+		{
+			"Rank": "1004",
+			"german": "niemanden",
+			"english": "anyone"
+		},
+		{
+			"Rank": "1005",
+			"german": "gefährlich",
+			"english": "dangerous"
+		},
+		{
+			"Rank": "1006",
+			"german": "r",
+			"english": "r"
+		},
+		{
+			"Rank": "1007",
+			"german": "mörder",
+			"english": "killer"
+		},
+		{
+			"Rank": "1008",
+			"german": "gewinnen",
+			"english": "to win"
+		},
+		{
+			"Rank": "1009",
+			"german": "gedanken",
+			"english": "thoughts"
+		},
+		{
+			"Rank": "1010",
+			"german": "obwohl",
+			"english": "although"
+		},
+		{
+			"Rank": "1011",
+			"german": "monat",
+			"english": "month"
+		},
+		{
+			"Rank": "1012",
+			"german": "mike",
+			"english": "mike"
+		},
+		{
+			"Rank": "1013",
+			"german": "arbeitet",
+			"english": "is working"
+		},
+		{
+			"Rank": "1014",
+			"german": "herrn",
+			"english": "mr"
+		},
+		{
+			"Rank": "1015",
+			"german": "behalten",
+			"english": "to keep"
+		},
+		{
+			"Rank": "1016",
+			"german": "legen",
+			"english": "lay"
+		},
+		{
+			"Rank": "1017",
+			"german": "bob",
+			"english": "bob"
+		},
+		{
+			"Rank": "1018",
+			"german": "person",
+			"english": "person"
+		},
+		{
+			"Rank": "1019",
+			"german": "herzen",
+			"english": "hearts"
+		},
+		{
+			"Rank": "1020",
+			"german": "brief",
+			"english": "letter"
+		},
+		{
+			"Rank": "1021",
+			"german": "präsident",
+			"english": "president"
+		},
+		{
+			"Rank": "1022",
+			"german": "rechts",
+			"english": "right"
+		},
+		{
+			"Rank": "1023",
+			"german": "anfangen",
+			"english": "start"
+		},
+		{
+			"Rank": "1024",
+			"german": "schluss",
+			"english": "conclusion"
+		},
+		{
+			"Rank": "1025",
+			"german": "hübsch",
+			"english": "pretty"
+		},
+		{
+			"Rank": "1026",
+			"german": "don",
+			"english": "Don"
+		},
+		{
+			"Rank": "1027",
+			"german": "gewonnen",
+			"english": "recovered"
+		},
+		{
+			"Rank": "1028",
+			"german": "wisst",
+			"english": "know"
+		},
+		{
+			"Rank": "1029",
+			"german": "versprochen",
+			"english": "promised"
+		},
+		{
+			"Rank": "1030",
+			"german": "chef",
+			"english": "boss"
+		},
+		{
+			"Rank": "1031",
+			"german": "findest",
+			"english": "find"
+		},
+		{
+			"Rank": "1032",
+			"german": "perfekt",
+			"english": "perfect"
+		},
+		{
+			"Rank": "1033",
+			"german": "schlagen",
+			"english": "beat"
+		},
+		{
+			"Rank": "1034",
+			"german": "tatsächlich",
+			"english": "indeed"
+		},
+		{
+			"Rank": "1035",
+			"german": "pferd",
+			"english": "horse"
+		},
+		{
+			"Rank": "1036",
+			"german": "dagegen",
+			"english": "on the other hand"
+		},
+		{
+			"Rank": "1037",
+			"german": "erfahren",
+			"english": "learn"
+		},
+		{
+			"Rank": "1038",
+			"german": "monsieur",
+			"english": "monsieur"
+		},
+		{
+			"Rank": "1039",
+			"german": "mord",
+			"english": "murder"
+		},
+		{
+			"Rank": "1040",
+			"german": "paul",
+			"english": "paul"
+		},
+		{
+			"Rank": "1041",
+			"german": "nähe",
+			"english": "neighborhood"
+		},
+		{
+			"Rank": "1042",
+			"german": "nötig",
+			"english": "necessary"
+		},
+		{
+			"Rank": "1043",
+			"german": "wow",
+			"english": "Wow"
+		},
+		{
+			"Rank": "1044",
+			"german": "aller",
+			"english": "all"
+		},
+		{
+			"Rank": "1045",
+			"german": "offen",
+			"english": "open"
+		},
+		{
+			"Rank": "1046",
+			"german": "wach",
+			"english": "awake"
+		},
+		{
+			"Rank": "1047",
+			"german": "singen",
+			"english": "to sing"
+		},
+		{
+			"Rank": "1048",
+			"german": "beispiel",
+			"english": "example"
+		},
+		{
+			"Rank": "1049",
+			"german": "ais",
+			"english": "ais"
+		},
+		{
+			"Rank": "1050",
+			"german": "sowieso",
+			"english": "anyway"
+		},
+		{
+			"Rank": "1051",
+			"german": "jedenfalls",
+			"english": "anyway"
+		},
+		{
+			"Rank": "1052",
+			"german": "schwein",
+			"english": "pig"
+		},
+		{
+			"Rank": "1053",
+			"german": "bank",
+			"english": "bank"
+		},
+		{
+			"Rank": "1054",
+			"german": "ziel",
+			"english": "aim"
+		},
+		{
+			"Rank": "1055",
+			"german": "klein",
+			"english": "small"
+		},
+		{
+			"Rank": "1056",
+			"german": "verdient",
+			"english": "deserves"
+		},
+		{
+			"Rank": "1057",
+			"german": "band",
+			"english": "tape"
+		},
+		{
+			"Rank": "1058",
+			"german": "geist",
+			"english": "spirit"
+		},
+		{
+			"Rank": "1059",
+			"german": "ma",
+			"english": "ma"
+		},
+		{
+			"Rank": "1060",
+			"german": "max",
+			"english": "Max"
+		},
+		{
+			"Rank": "1061",
+			"german": "neu",
+			"english": "new"
+		},
+		{
+			"Rank": "1062",
+			"german": "schreit",
+			"english": "cries"
+		},
+		{
+			"Rank": "1063",
+			"german": "anwalt",
+			"english": "lawyer"
+		},
+		{
+			"Rank": "1064",
+			"german": "monaten",
+			"english": "months"
+		},
+		{
+			"Rank": "1065",
+			"german": "show",
+			"english": "show"
+		},
+		{
+			"Rank": "1066",
+			"german": "heim",
+			"english": "home"
+		},
+		{
+			"Rank": "1067",
+			"german": "führt",
+			"english": "leads"
+		},
+		{
+			"Rank": "1068",
+			"german": "lauf",
+			"english": "run"
+		},
+		{
+			"Rank": "1069",
+			"german": "ehre",
+			"english": "honor"
+		},
+		{
+			"Rank": "1070",
+			"german": "unterwegs",
+			"english": "on road"
+		},
+		{
+			"Rank": "1071",
+			"german": "gelernt",
+			"english": "learned"
+		},
+		{
+			"Rank": "1072",
+			"german": "minute",
+			"english": "minute"
+		},
+		{
+			"Rank": "1073",
+			"german": "reich",
+			"english": "rich"
+		},
+		{
+			"Rank": "1074",
+			"german": "wunder",
+			"english": "wonder"
+		},
+		{
+			"Rank": "1075",
+			"german": "opfer",
+			"english": "Victim"
+		},
+		{
+			"Rank": "1076",
+			"german": "erzähl",
+			"english": "tell"
+		},
+		{
+			"Rank": "1077",
+			"german": "bekannt",
+			"english": "known"
+		},
+		{
+			"Rank": "1078",
+			"german": "hau",
+			"english": "hau"
+		},
+		{
+			"Rank": "1079",
+			"german": "haut",
+			"english": "skin"
+		},
+		{
+			"Rank": "1080",
+			"german": "weder",
+			"english": "neither"
+		},
+		{
+			"Rank": "1081",
+			"german": "rücken",
+			"english": "move"
+		},
+		{
+			"Rank": "1082",
+			"german": "bekommt",
+			"english": "gets"
+		},
+		{
+			"Rank": "1083",
+			"german": "peter",
+			"english": "Peter"
+		},
+		{
+			"Rank": "1084",
+			"german": "jemals",
+			"english": "ever"
+		},
+		{
+			"Rank": "1085",
+			"german": "partner",
+			"english": "partner"
+		},
+		{
+			"Rank": "1086",
+			"german": "h",
+			"english": "H"
+		},
+		{
+			"Rank": "1087",
+			"german": "zieht",
+			"english": "attracts"
+		},
+		{
+			"Rank": "1088",
+			"german": "nase",
+			"english": "nose"
+		},
+		{
+			"Rank": "1089",
+			"german": "gefahr",
+			"english": "danger"
+		},
+		{
+			"Rank": "1090",
+			"german": "regeln",
+			"english": "regulate"
+		},
+		{
+			"Rank": "1091",
+			"german": "absolut",
+			"english": "absolute"
+		},
+		{
+			"Rank": "1092",
+			"german": "tief",
+			"english": "deep"
+		},
+		{
+			"Rank": "1093",
+			"german": "flugzeug",
+			"english": "airplane"
+		},
+		{
+			"Rank": "1094",
+			"german": "befehl",
+			"english": "command"
+		},
+		{
+			"Rank": "1095",
+			"german": "geschickt",
+			"english": "cleverly"
+		},
+		{
+			"Rank": "1096",
+			"german": "wette",
+			"english": "bet"
+		},
+		{
+			"Rank": "1097",
+			"german": "nennt",
+			"english": "lists"
+		},
+		{
+			"Rank": "1098",
+			"german": "jung",
+			"english": "young"
+		},
+		{
+			"Rank": "1099",
+			"german": "sucht",
+			"english": "investigated"
+		},
+		{
+			"Rank": "1100",
+			"german": "gehabt",
+			"english": "had"
+		},
+		{
+			"Rank": "1101",
+			"german": "geboren",
+			"english": "born"
+		},
+		{
+			"Rank": "1102",
+			"german": "rolle",
+			"english": "role"
+		},
+		{
+			"Rank": "1103",
+			"german": "l",
+			"english": "l"
+		},
+		{
+			"Rank": "1104",
+			"german": "schönen",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1105",
+			"german": "leg",
+			"english": "leg"
+		},
+		{
+			"Rank": "1106",
+			"german": "holt",
+			"english": "get"
+		},
+		{
+			"Rank": "1107",
+			"german": "erinnerst",
+			"english": "remember"
+		},
+		{
+			"Rank": "1108",
+			"german": "heiße",
+			"english": "name is"
+		},
+		{
+			"Rank": "1109",
+			"german": "kraft",
+			"english": "force"
+		},
+		{
+			"Rank": "1110",
+			"german": "lhrem",
+			"english": "lhrem"
+		},
+		{
+			"Rank": "1111",
+			"german": "lacht",
+			"english": "laughs"
+		},
+		{
+			"Rank": "1112",
+			"german": "bar",
+			"english": "bear"
+		},
+		{
+			"Rank": "1113",
+			"german": "richtung",
+			"english": "direction"
+		},
+		{
+			"Rank": "1114",
+			"german": "tasche",
+			"english": "bag"
+		},
+		{
+			"Rank": "1115",
+			"german": "schlag",
+			"english": "blow"
+		},
+		{
+			"Rank": "1116",
+			"german": "professor",
+			"english": "professor"
+		},
+		{
+			"Rank": "1117",
+			"german": "steckt",
+			"english": "infected"
+		},
+		{
+			"Rank": "1118",
+			"german": "ständig",
+			"english": "constantly"
+		},
+		{
+			"Rank": "1119",
+			"german": "erwischt",
+			"english": "Caught"
+		},
+		{
+			"Rank": "1120",
+			"german": "stell",
+			"english": "alternate"
+		},
+		{
+			"Rank": "1121",
+			"german": "schrecklich",
+			"english": "terrible"
+		},
+		{
+			"Rank": "1122",
+			"german": "verschwinde",
+			"english": "disappear"
+		},
+		{
+			"Rank": "1123",
+			"german": "weise",
+			"english": "wise"
+		},
+		{
+			"Rank": "1124",
+			"german": "schlimmer",
+			"english": "worse"
+		},
+		{
+			"Rank": "1125",
+			"german": "ließ",
+			"english": "let"
+		},
+		{
+			"Rank": "1126",
+			"german": "frieden",
+			"english": "peace"
+		},
+		{
+			"Rank": "1127",
+			"german": "verliebt",
+			"english": "in love"
+		},
+		{
+			"Rank": "1128",
+			"german": "bleibe",
+			"english": "stay"
+		},
+		{
+			"Rank": "1129",
+			"german": "ehe",
+			"english": "marriage"
+		},
+		{
+			"Rank": "1130",
+			"german": "kriege",
+			"english": "wars"
+		},
+		{
+			"Rank": "1131",
+			"german": "näher",
+			"english": "closer"
+		},
+		{
+			"Rank": "1132",
+			"german": "gelesen",
+			"english": "read"
+		},
+		{
+			"Rank": "1133",
+			"german": "dahin",
+			"english": "then"
+		},
+		{
+			"Rank": "1134",
+			"german": "wofür",
+			"english": "for what"
+		},
+		{
+			"Rank": "1135",
+			"german": "dauert",
+			"english": "take"
+		},
+		{
+			"Rank": "1136",
+			"german": "neben",
+			"english": "Next"
+		},
+		{
+			"Rank": "1137",
+			"german": "gold",
+			"english": "gold"
+		},
+		{
+			"Rank": "1138",
+			"german": "raum",
+			"english": "room"
+		},
+		{
+			"Rank": "1139",
+			"german": "benutzt",
+			"english": "used"
+		},
+		{
+			"Rank": "1140",
+			"german": "welches",
+			"english": "which"
+		},
+		{
+			"Rank": "1141",
+			"german": "regierung",
+			"english": "government"
+		},
+		{
+			"Rank": "1142",
+			"german": "fährt",
+			"english": "moves"
+		},
+		{
+			"Rank": "1143",
+			"german": "volk",
+			"english": "people"
+		},
+		{
+			"Rank": "1144",
+			"german": "fernsehen",
+			"english": "watch TV"
+		},
+		{
+			"Rank": "1145",
+			"german": "zeiten",
+			"english": "times"
+		},
+		{
+			"Rank": "1146",
+			"german": "toten",
+			"english": "kill"
+		},
+		{
+			"Rank": "1147",
+			"german": "achtung",
+			"english": "Danger"
+		},
+		{
+			"Rank": "1148",
+			"german": "karte",
+			"english": "map"
+		},
+		{
+			"Rank": "1149",
+			"german": "hunger",
+			"english": "hunger"
+		},
+		{
+			"Rank": "1150",
+			"german": "diesmal",
+			"english": "this time"
+		},
+		{
+			"Rank": "1151",
+			"german": "preis",
+			"english": "price"
+		},
+		{
+			"Rank": "1152",
+			"german": "benutzen",
+			"english": "use"
+		},
+		{
+			"Rank": "1153",
+			"german": "scheisse",
+			"english": "Fuck"
+		},
+		{
+			"Rank": "1154",
+			"german": "hilft",
+			"english": "help"
+		},
+		{
+			"Rank": "1155",
+			"german": "geschenk",
+			"english": "gift"
+		},
+		{
+			"Rank": "1156",
+			"german": "hoffentlich",
+			"english": "hopefully"
+		},
+		{
+			"Rank": "1157",
+			"german": "manche",
+			"english": "some"
+		},
+		{
+			"Rank": "1158",
+			"german": "ansehen",
+			"english": "look at"
+		},
+		{
+			"Rank": "1159",
+			"german": "kriegst",
+			"english": "get"
+		},
+		{
+			"Rank": "1160",
+			"german": "lage",
+			"english": "location"
+		},
+		{
+			"Rank": "1161",
+			"german": "wünschte",
+			"english": "wish"
+		},
+		{
+			"Rank": "1162",
+			"german": "fehlt",
+			"english": "is missing"
+		},
+		{
+			"Rank": "1163",
+			"german": "willen",
+			"english": "sake"
+		},
+		{
+			"Rank": "1164",
+			"german": "bescheid",
+			"english": "decision"
+		},
+		{
+			"Rank": "1165",
+			"german": "heiß",
+			"english": "hot"
+		},
+		{
+			"Rank": "1166",
+			"german": "kamera",
+			"english": "camera"
+		},
+		{
+			"Rank": "1167",
+			"german": "gleiche",
+			"english": "same"
+		},
+		{
+			"Rank": "1168",
+			"german": "ruft",
+			"english": "calls"
+		},
+		{
+			"Rank": "1169",
+			"german": "unfall",
+			"english": "accident"
+		},
+		{
+			"Rank": "1170",
+			"german": "ans",
+			"english": "ans"
+		},
+		{
+			"Rank": "1171",
+			"german": "bullen",
+			"english": "bulls"
+		},
+		{
+			"Rank": "1172",
+			"german": "szene",
+			"english": "scene"
+		},
+		{
+			"Rank": "1173",
+			"german": "gericht",
+			"english": "dish"
+		},
+		{
+			"Rank": "1174",
+			"german": "gerettet",
+			"english": "saved"
+		},
+		{
+			"Rank": "1175",
+			"german": "schlaf",
+			"english": "sleep"
+		},
+		{
+			"Rank": "1176",
+			"german": "schicksal",
+			"english": "fate"
+		},
+		{
+			"Rank": "1177",
+			"german": "gesetz",
+			"english": "law"
+		},
+		{
+			"Rank": "1178",
+			"german": "fürs",
+			"english": "for"
+		},
+		{
+			"Rank": "1179",
+			"german": "d",
+			"english": "d"
+		},
+		{
+			"Rank": "1180",
+			"german": "verkauft",
+			"english": "sold"
+		},
+		{
+			"Rank": "1181",
+			"german": "bewegen",
+			"english": "move"
+		},
+		{
+			"Rank": "1182",
+			"german": "leiche",
+			"english": "corpse"
+		},
+		{
+			"Rank": "1183",
+			"german": "lm",
+			"english": "lm"
+		},
+		{
+			"Rank": "1184",
+			"german": "jesus",
+			"english": "Jesus"
+		},
+		{
+			"Rank": "1185",
+			"german": "soldaten",
+			"english": "soldiers"
+		},
+		{
+			"Rank": "1186",
+			"german": "geburtstag",
+			"english": "birthday"
+		},
+		{
+			"Rank": "1187",
+			"german": "lebe",
+			"english": "live"
+		},
+		{
+			"Rank": "1188",
+			"german": "darfst",
+			"english": "allowed to"
+		},
+		{
+			"Rank": "1189",
+			"german": "ewig",
+			"english": "eternally"
+		},
+		{
+			"Rank": "1190",
+			"german": "ben",
+			"english": "ben"
+		},
+		{
+			"Rank": "1191",
+			"german": "schade",
+			"english": "a pity"
+		},
+		{
+			"Rank": "1192",
+			"german": "seh",
+			"english": "seh"
+		},
+		{
+			"Rank": "1193",
+			"german": "witz",
+			"english": "wit"
+		},
+		{
+			"Rank": "1194",
+			"german": "müsste",
+			"english": "should"
+		},
+		{
+			"Rank": "1195",
+			"german": "it",
+			"english": "it"
+		},
+		{
+			"Rank": "1196",
+			"german": "erwarten",
+			"english": "expect"
+		},
+		{
+			"Rank": "1197",
+			"german": "aiies",
+			"english": "aiies"
+		},
+		{
+			"Rank": "1198",
+			"german": "ihres",
+			"english": "their"
+		},
+		{
+			"Rank": "1199",
+			"german": "fahre",
+			"english": "ferry"
+		},
+		{
+			"Rank": "1200",
+			"german": "ähm",
+			"english": "um"
+		},
+		{
+			"Rank": "1201",
+			"german": "pro",
+			"english": "per"
+		},
+		{
+			"Rank": "1202",
+			"german": "traurig",
+			"english": "sad"
+		},
+		{
+			"Rank": "1203",
+			"german": "hältst",
+			"english": "hold"
+		},
+		{
+			"Rank": "1204",
+			"german": "doc",
+			"english": "doc"
+		},
+		{
+			"Rank": "1205",
+			"german": "jemandem",
+			"english": "somebody"
+		},
+		{
+			"Rank": "1206",
+			"german": "b",
+			"english": "b"
+		},
+		{
+			"Rank": "1207",
+			"german": "setzt",
+			"english": "puts"
+		},
+		{
+			"Rank": "1208",
+			"german": "gesellschaft",
+			"english": "society"
+		},
+		{
+			"Rank": "1209",
+			"german": "punkt",
+			"english": "Point"
+		},
+		{
+			"Rank": "1210",
+			"german": "freiheit",
+			"english": "freedom"
+		},
+		{
+			"Rank": "1211",
+			"german": "jimmy",
+			"english": "Jimmy"
+		},
+		{
+			"Rank": "1212",
+			"german": "darin",
+			"english": "therein"
+		},
+		{
+			"Rank": "1213",
+			"german": "brachte",
+			"english": "brought"
+		},
+		{
+			"Rank": "1214",
+			"german": "weile",
+			"english": "while"
+		},
+		{
+			"Rank": "1215",
+			"german": "jawohl",
+			"english": "Yes"
+		},
+		{
+			"Rank": "1216",
+			"german": "dasselbe",
+			"english": "the same thing"
+		},
+		{
+			"Rank": "1217",
+			"german": "maul",
+			"english": "mouth"
+		},
+		{
+			"Rank": "1218",
+			"german": "zeigt",
+			"english": "shows"
+		},
+		{
+			"Rank": "1219",
+			"german": "taxi",
+			"english": "taxi"
+		},
+		{
+			"Rank": "1220",
+			"german": "erreichen",
+			"english": "to accomplish"
+		},
+		{
+			"Rank": "1221",
+			"german": "redet",
+			"english": "talks"
+		},
+		{
+			"Rank": "1222",
+			"german": "foto",
+			"english": "photo"
+		},
+		{
+			"Rank": "1223",
+			"german": "gekauft",
+			"english": "Bought"
+		},
+		{
+			"Rank": "1224",
+			"german": "meer",
+			"english": "sea"
+		},
+		{
+			"Rank": "1225",
+			"german": "sheriff",
+			"english": "sheriff"
+		},
+		{
+			"Rank": "1226",
+			"german": "liebst",
+			"english": "love"
+		},
+		{
+			"Rank": "1227",
+			"german": "unbedingt",
+			"english": "absolutely"
+		},
+		{
+			"Rank": "1228",
+			"german": "aussehen",
+			"english": "appearance"
+		},
+		{
+			"Rank": "1229",
+			"german": "tante",
+			"english": "aunt"
+		},
+		{
+			"Rank": "1230",
+			"german": "drehen",
+			"english": "turn"
+		},
+		{
+			"Rank": "1231",
+			"german": "stirbt",
+			"english": "dies"
+		},
+		{
+			"Rank": "1232",
+			"german": "bord",
+			"english": "shelf"
+		},
+		{
+			"Rank": "1233",
+			"german": "kirche",
+			"english": "church"
+		},
+		{
+			"Rank": "1234",
+			"german": "tee",
+			"english": "tea"
+		},
+		{
+			"Rank": "1235",
+			"german": "of",
+			"english": "of"
+		},
+		{
+			"Rank": "1236",
+			"german": "erledigt",
+			"english": "done"
+		},
+		{
+			"Rank": "1237",
+			"german": "wein",
+			"english": "Wine"
+		},
+		{
+			"Rank": "1238",
+			"german": "weihnachten",
+			"english": "Christmas"
+		},
+		{
+			"Rank": "1239",
+			"german": "irgendwann",
+			"english": "sometime"
+		},
+		{
+			"Rank": "1240",
+			"german": "billy",
+			"english": "billy"
+		},
+		{
+			"Rank": "1241",
+			"german": "euren",
+			"english": "your"
+		},
+		{
+			"Rank": "1242",
+			"german": "brauch",
+			"english": "custom"
+		},
+		{
+			"Rank": "1243",
+			"german": "hochzeit",
+			"english": "wedding"
+		},
+		{
+			"Rank": "1244",
+			"german": "dorf",
+			"english": "village"
+		},
+		{
+			"Rank": "1245",
+			"german": "sagtest",
+			"english": "told"
+		},
+		{
+			"Rank": "1246",
+			"german": "james",
+			"english": "james"
+		},
+		{
+			"Rank": "1247",
+			"german": "lady",
+			"english": "lady"
+		},
+		{
+			"Rank": "1248",
+			"german": "lust",
+			"english": "lust"
+		},
+		{
+			"Rank": "1249",
+			"german": "kontrolle",
+			"english": "control"
+		},
+		{
+			"Rank": "1250",
+			"german": "tolle",
+			"english": "amazing"
+		},
+		{
+			"Rank": "1251",
+			"german": "beine",
+			"english": "legs"
+		},
+		{
+			"Rank": "1252",
+			"german": "hut",
+			"english": "cap"
+		},
+		{
+			"Rank": "1253",
+			"german": "wiii",
+			"english": "wiii"
+		},
+		{
+			"Rank": "1254",
+			"german": "hoffnung",
+			"english": "hope"
+		},
+		{
+			"Rank": "1255",
+			"german": "firma",
+			"english": "company"
+		},
+		{
+			"Rank": "1256",
+			"german": "me",
+			"english": "me"
+		},
+		{
+			"Rank": "1257",
+			"german": "lügen",
+			"english": "lie"
+		},
+		{
+			"Rank": "1258",
+			"german": "sergeant",
+			"english": "sergeant"
+		},
+		{
+			"Rank": "1259",
+			"german": "fürchte",
+			"english": "fear"
+		},
+		{
+			"Rank": "1260",
+			"german": "kaputt",
+			"english": "broken"
+		},
+		{
+			"Rank": "1261",
+			"german": "bekam",
+			"english": "got"
+		},
+		{
+			"Rank": "1262",
+			"german": "is",
+			"english": "is"
+		},
+		{
+			"Rank": "1263",
+			"german": "nachrichten",
+			"english": "news"
+		},
+		{
+			"Rank": "1264",
+			"german": "ball",
+			"english": "ball"
+		},
+		{
+			"Rank": "1265",
+			"german": "haare",
+			"english": "hair"
+		},
+		{
+			"Rank": "1266",
+			"german": "tschüss",
+			"english": "bye"
+		},
+		{
+			"Rank": "1267",
+			"german": "seltsam",
+			"english": "strange"
+		},
+		{
+			"Rank": "1268",
+			"german": "vergnügen",
+			"english": "pleasure"
+		},
+		{
+			"Rank": "1269",
+			"german": "sauber",
+			"english": "clean"
+		},
+		{
+			"Rank": "1270",
+			"german": "bill",
+			"english": "bill"
+		},
+		{
+			"Rank": "1271",
+			"german": "zuhause",
+			"english": "at home"
+		},
+		{
+			"Rank": "1272",
+			"german": "anderer",
+			"english": "another"
+		},
+		{
+			"Rank": "1273",
+			"german": "zeichen",
+			"english": "character"
+		},
+		{
+			"Rank": "1274",
+			"german": "herein",
+			"english": "in"
+		},
+		{
+			"Rank": "1275",
+			"german": "liste",
+			"english": "list"
+		},
+		{
+			"Rank": "1276",
+			"german": "haltet",
+			"english": "think"
+		},
+		{
+			"Rank": "1277",
+			"german": "normal",
+			"english": "normal"
+		},
+		{
+			"Rank": "1278",
+			"german": "see",
+			"english": "lake"
+		},
+		{
+			"Rank": "1279",
+			"german": "schätze",
+			"english": "wealth"
+		},
+		{
+			"Rank": "1280",
+			"german": "bewegt",
+			"english": "emotional"
+		},
+		{
+			"Rank": "1281",
+			"german": "wussten",
+			"english": "knew"
+		},
+		{
+			"Rank": "1282",
+			"german": "blick",
+			"english": "view"
+		},
+		{
+			"Rank": "1283",
+			"german": "naja",
+			"english": "well"
+		},
+		{
+			"Rank": "1284",
+			"german": "gesucht",
+			"english": "searched"
+		},
+		{
+			"Rank": "1285",
+			"german": "gestohlen",
+			"english": "stolen"
+		},
+		{
+			"Rank": "1286",
+			"german": "vorne",
+			"english": "ahead"
+		},
+		{
+			"Rank": "1287",
+			"german": "jim",
+			"english": "jim"
+		},
+		{
+			"Rank": "1288",
+			"german": "kindern",
+			"english": "children"
+		},
+		{
+			"Rank": "1289",
+			"german": "frag",
+			"english": "question"
+		},
+		{
+			"Rank": "1290",
+			"german": "bleibst",
+			"english": "stay"
+		},
+		{
+			"Rank": "1291",
+			"german": "nachts",
+			"english": "at night"
+		},
+		{
+			"Rank": "1292",
+			"german": "neun",
+			"english": "nine"
+		},
+		{
+			"Rank": "1293",
+			"german": "nämlich",
+			"english": "namely"
+		},
+		{
+			"Rank": "1294",
+			"german": "wunderschön",
+			"english": "very beautiful"
+		},
+		{
+			"Rank": "1295",
+			"german": "stecken",
+			"english": "stick"
+		},
+		{
+			"Rank": "1296",
+			"german": "großes",
+			"english": "great"
+		},
+		{
+			"Rank": "1297",
+			"german": "freut",
+			"english": "is pleased"
+		},
+		{
+			"Rank": "1298",
+			"german": "weitere",
+			"english": "more"
+		},
+		{
+			"Rank": "1299",
+			"german": "gehören",
+			"english": "belong"
+		},
+		{
+			"Rank": "1300",
+			"german": "schwöre",
+			"english": "swear"
+		},
+		{
+			"Rank": "1301",
+			"german": "nervös",
+			"english": "nervous"
+		},
+		{
+			"Rank": "1302",
+			"german": "hals",
+			"english": "neck"
+		},
+		{
+			"Rank": "1303",
+			"german": "henry",
+			"english": "henry"
+		},
+		{
+			"Rank": "1304",
+			"german": "gearbeitet",
+			"english": "worked"
+		},
+		{
+			"Rank": "1305",
+			"german": "eigene",
+			"english": "own"
+		},
+		{
+			"Rank": "1306",
+			"german": "glas",
+			"english": "Glass"
+		},
+		{
+			"Rank": "1307",
+			"german": "versteckt",
+			"english": "hidden"
+		},
+		{
+			"Rank": "1308",
+			"german": "feind",
+			"english": "enemy"
+		},
+		{
+			"Rank": "1309",
+			"german": "schönes",
+			"english": "beautiful"
+		},
+		{
+			"Rank": "1310",
+			"german": "verzeihen",
+			"english": "forgive"
+		},
+		{
+			"Rank": "1311",
+			"german": "öffnen",
+			"english": "open"
+		},
+		{
+			"Rank": "1312",
+			"german": "meter",
+			"english": "meter"
+		},
+		{
+			"Rank": "1313",
+			"german": "drogen",
+			"english": "drugs"
+		},
+		{
+			"Rank": "1314",
+			"german": "schöner",
+			"english": "more beautiful"
+		},
+		{
+			"Rank": "1315",
+			"german": "nehmt",
+			"english": "take"
+		},
+		{
+			"Rank": "1316",
+			"german": "madame",
+			"english": "madame"
+		},
+		{
+			"Rank": "1317",
+			"german": "mary",
+			"english": "mary"
+		},
+		{
+			"Rank": "1318",
+			"german": "süß",
+			"english": "sweet"
+		},
+		{
+			"Rank": "1319",
+			"german": "entscheidung",
+			"english": "decision"
+		},
+		{
+			"Rank": "1320",
+			"german": "erschossen",
+			"english": "shot"
+		},
+		{
+			"Rank": "1321",
+			"german": "verändert",
+			"english": "changed"
+		},
+		{
+			"Rank": "1322",
+			"german": "la",
+			"english": "la"
+		},
+		{
+			"Rank": "1323",
+			"german": "wind",
+			"english": "wind"
+		},
+		{
+			"Rank": "1324",
+			"german": "ray",
+			"english": "ray"
+		},
+		{
+			"Rank": "1325",
+			"german": "wohnen",
+			"english": "live"
+		},
+		{
+			"Rank": "1326",
+			"german": "schuhe",
+			"english": "Shoes"
+		},
+		{
+			"Rank": "1327",
+			"german": "interessant",
+			"english": "interesting"
+		},
+		{
+			"Rank": "1328",
+			"german": "übrigens",
+			"english": "incidentally"
+		},
+		{
+			"Rank": "1329",
+			"german": "letzter",
+			"english": "last"
+		},
+		{
+			"Rank": "1330",
+			"german": "müsst",
+			"english": "must"
+		},
+		{
+			"Rank": "1331",
+			"german": "nächstes",
+			"english": "next"
+		},
+		{
+			"Rank": "1332",
+			"german": "schaut",
+			"english": "looks"
+		},
+		{
+			"Rank": "1333",
+			"german": "armen",
+			"english": "poor"
+		},
+		{
+			"Rank": "1334",
+			"german": "verstand",
+			"english": "mind"
+		},
+		{
+			"Rank": "1335",
+			"german": "verraten",
+			"english": "betray"
+		},
+		{
+			"Rank": "1336",
+			"german": "besuch",
+			"english": "visit"
+		},
+		{
+			"Rank": "1337",
+			"german": "beweise",
+			"english": "proofs"
+		},
+		{
+			"Rank": "1338",
+			"german": "sekunde",
+			"english": "second"
+		},
+		{
+			"Rank": "1339",
+			"german": "polizist",
+			"english": "police officer"
+		},
+		{
+			"Rank": "1340",
+			"german": "meint",
+			"english": "means"
+		},
+		{
+			"Rank": "1341",
+			"german": "fur",
+			"english": "For"
+		},
+		{
+			"Rank": "1342",
+			"german": "insel",
+			"english": "island"
+		},
+		{
+			"Rank": "1343",
+			"german": "beweisen",
+			"english": "to prove"
+		},
+		{
+			"Rank": "1344",
+			"german": "antworten",
+			"english": "reply"
+		},
+		{
+			"Rank": "1345",
+			"german": "fotos",
+			"english": "photos"
+		},
+		{
+			"Rank": "1346",
+			"german": "passen",
+			"english": "fit"
+		},
+		{
+			"Rank": "1347",
+			"german": "werfen",
+			"english": "throw"
+		},
+		{
+			"Rank": "1348",
+			"german": "persönlich",
+			"english": "personally"
+		},
+		{
+			"Rank": "1349",
+			"german": "fragte",
+			"english": "asked"
+		},
+		{
+			"Rank": "1350",
+			"german": "namens",
+			"english": "called"
+		},
+		{
+			"Rank": "1351",
+			"german": "gegenüber",
+			"english": "opposite to"
+		},
+		{
+			"Rank": "1352",
+			"german": "unsinn",
+			"english": "nonsense"
+		},
+		{
+			"Rank": "1353",
+			"german": "drink",
+			"english": "drink"
+		},
+		{
+			"Rank": "1354",
+			"german": "fuß",
+			"english": "foot"
+		},
+		{
+			"Rank": "1355",
+			"german": "besuchen",
+			"english": "visit"
+		},
+		{
+			"Rank": "1356",
+			"german": "güte",
+			"english": "quality"
+		},
+		{
+			"Rank": "1357",
+			"german": "lieb",
+			"english": "dear"
+		},
+		{
+			"Rank": "1358",
+			"german": "guck",
+			"english": "peep"
+		},
+		{
+			"Rank": "1359",
+			"german": "deines",
+			"english": "yours"
+		},
+		{
+			"Rank": "1360",
+			"german": "roger",
+			"english": "roger"
+		},
+		{
+			"Rank": "1361",
+			"german": "richtigen",
+			"english": "right"
+		},
+		{
+			"Rank": "1362",
+			"german": "übrig",
+			"english": "left"
+		},
+		{
+			"Rank": "1363",
+			"german": "major",
+			"english": "major"
+		},
+		{
+			"Rank": "1364",
+			"german": "bein",
+			"english": "leg"
+		},
+		{
+			"Rank": "1365",
+			"german": "messer",
+			"english": "knife"
+		},
+		{
+			"Rank": "1366",
+			"german": "geheimnis",
+			"english": "secret"
+		},
+		{
+			"Rank": "1367",
+			"german": "kannte",
+			"english": "knew"
+		},
+		{
+			"Rank": "1368",
+			"german": "gegessen",
+			"english": "eaten"
+		},
+		{
+			"Rank": "1369",
+			"german": "ungefähr",
+			"english": "about"
+		},
+		{
+			"Rank": "1370",
+			"german": "ran",
+			"english": "ran"
+		},
+		{
+			"Rank": "1371",
+			"german": "maria",
+			"english": "Mary"
+		},
+		{
+			"Rank": "1372",
+			"german": "nahe",
+			"english": "near"
+		},
+		{
+			"Rank": "1373",
+			"german": "meinte",
+			"english": "thought"
+		},
+		{
+			"Rank": "1374",
+			"german": "nimmst",
+			"english": "take"
+		},
+		{
+			"Rank": "1375",
+			"german": "gruppe",
+			"english": "group"
+		},
+		{
+			"Rank": "1376",
+			"german": "bücher",
+			"english": "Books"
+		},
+		{
+			"Rank": "1377",
+			"german": "weib",
+			"english": "woman"
+		},
+		{
+			"Rank": "1378",
+			"german": "geschlafen",
+			"english": "slept"
+		},
+		{
+			"Rank": "1379",
+			"german": "g",
+			"english": "G"
+		},
+		{
+			"Rank": "1380",
+			"german": "london",
+			"english": "London"
+		},
+		{
+			"Rank": "1381",
+			"german": "letztes",
+			"english": "last"
+		},
+		{
+			"Rank": "1382",
+			"german": "zeitung",
+			"english": "newspaper"
+		},
+		{
+			"Rank": "1383",
+			"german": "zufrieden",
+			"english": "satisfied"
+		},
+		{
+			"Rank": "1384",
+			"german": "verdammten",
+			"english": "damned"
+		},
+		{
+			"Rank": "1385",
+			"german": "zweite",
+			"english": "second"
+		},
+		{
+			"Rank": "1386",
+			"german": "geliebt",
+			"english": "loved"
+		},
+		{
+			"Rank": "1387",
+			"german": "freude",
+			"english": "pleasure"
+		},
+		{
+			"Rank": "1388",
+			"german": "loch",
+			"english": "hole"
+		},
+		{
+			"Rank": "1389",
+			"german": "stellt",
+			"english": "provides"
+		},
+		{
+			"Rank": "1390",
+			"german": "statt",
+			"english": "instead of"
+		},
+		{
+			"Rank": "1391",
+			"german": "fleisch",
+			"english": "meat"
+		},
+		{
+			"Rank": "1392",
+			"german": "ganzes",
+			"english": "whole"
+		},
+		{
+			"Rank": "1393",
+			"german": "verschwunden",
+			"english": "missing"
+		},
+		{
+			"Rank": "1394",
+			"german": "ee",
+			"english": "ee"
+		},
+		{
+			"Rank": "1395",
+			"german": "worauf",
+			"english": "whereupon"
+		},
+		{
+			"Rank": "1396",
+			"german": "sauer",
+			"english": "angry"
+		},
+		{
+			"Rank": "1397",
+			"german": "erkennen",
+			"english": "recognize"
+		},
+		{
+			"Rank": "1398",
+			"german": "weißen",
+			"english": "white"
+		},
+		{
+			"Rank": "1399",
+			"german": "entfernt",
+			"english": "away"
+		},
+		{
+			"Rank": "1400",
+			"german": "nick",
+			"english": "nick"
+		},
+		{
+			"Rank": "1401",
+			"german": "mut",
+			"english": "courage"
+		},
+		{
+			"Rank": "1402",
+			"german": "mitnehmen",
+			"english": "take"
+		},
+		{
+			"Rank": "1403",
+			"german": "anruf",
+			"english": "Call"
+		},
+		{
+			"Rank": "1404",
+			"german": "lied",
+			"english": "song"
+		},
+		{
+			"Rank": "1405",
+			"german": "träume",
+			"english": "dreams"
+		},
+		{
+			"Rank": "1406",
+			"german": "for",
+			"english": "for"
+		},
+		{
+			"Rank": "1407",
+			"german": "kostet",
+			"english": "costs"
+		},
+		{
+			"Rank": "1408",
+			"german": "fisch",
+			"english": "fish"
+		},
+		{
+			"Rank": "1409",
+			"german": "amerikaner",
+			"english": "American"
+		},
+		{
+			"Rank": "1410",
+			"german": "schuldig",
+			"english": "guilty"
+		},
+		{
+			"Rank": "1411",
+			"german": "zumindest",
+			"english": "at least"
+		},
+		{
+			"Rank": "1412",
+			"german": "entweder",
+			"english": "either"
+		},
+		{
+			"Rank": "1413",
+			"german": "mark",
+			"english": "mark"
+		},
+		{
+			"Rank": "1414",
+			"german": "sprach",
+			"english": "spoke"
+		},
+		{
+			"Rank": "1415",
+			"german": "informationen",
+			"english": "informations"
+		},
+		{
+			"Rank": "1416",
+			"german": "miteinander",
+			"english": "together"
+		},
+		{
+			"Rank": "1417",
+			"german": "sowas",
+			"english": "like this"
+		},
+		{
+			"Rank": "1418",
+			"german": "gibst",
+			"english": "give"
+		},
+		{
+			"Rank": "1419",
+			"german": "sahen",
+			"english": "saw"
+		},
+		{
+			"Rank": "1420",
+			"german": "schmerz",
+			"english": "pain"
+		},
+		{
+			"Rank": "1421",
+			"german": "furchtbar",
+			"english": "terrible"
+		},
+		{
+			"Rank": "1422",
+			"german": "niemandem",
+			"english": "anyone"
+		},
+		{
+			"Rank": "1423",
+			"german": "vaters",
+			"english": "father"
+		},
+		{
+			"Rank": "1424",
+			"german": "vorwärts",
+			"english": "forward"
+		},
+		{
+			"Rank": "1425",
+			"german": "computer",
+			"english": "computer"
+		},
+		{
+			"Rank": "1426",
+			"german": "teilen",
+			"english": "divide"
+		},
+		{
+			"Rank": "1427",
+			"german": "gefahren",
+			"english": "hazards"
+		},
+		{
+			"Rank": "1428",
+			"german": "erster",
+			"english": "first"
+		},
+		{
+			"Rank": "1429",
+			"german": "eier",
+			"english": "eggs"
+		},
+		{
+			"Rank": "1430",
+			"german": "seines",
+			"english": "his"
+		},
+		{
+			"Rank": "1431",
+			"german": "kontakt",
+			"english": "contact"
+		},
+		{
+			"Rank": "1432",
+			"german": "situation",
+			"english": "situation"
+		},
+		{
+			"Rank": "1433",
+			"german": "bus",
+			"english": "bus"
+		},
+		{
+			"Rank": "1434",
+			"german": "verstecken",
+			"english": "hide"
+		},
+		{
+			"Rank": "1435",
+			"german": "händen",
+			"english": "hands"
+		},
+		{
+			"Rank": "1436",
+			"german": "ehren",
+			"english": "to honor"
+		},
+		{
+			"Rank": "1437",
+			"german": "entlang",
+			"english": "along"
+		},
+		{
+			"Rank": "1438",
+			"german": "küche",
+			"english": "kitchen"
+		},
+		{
+			"Rank": "1439",
+			"german": "wütend",
+			"english": "angry"
+		},
+		{
+			"Rank": "1440",
+			"german": "mami",
+			"english": "mommy"
+		},
+		{
+			"Rank": "1441",
+			"german": "fühlt",
+			"english": "feels"
+		},
+		{
+			"Rank": "1442",
+			"german": "eddie",
+			"english": "eddie"
+		},
+		{
+			"Rank": "1443",
+			"german": "überraschung",
+			"english": "surprise"
+		},
+		{
+			"Rank": "1444",
+			"german": "tony",
+			"english": "tony"
+		},
+		{
+			"Rank": "1445",
+			"german": "haar",
+			"english": "hair"
+		},
+		{
+			"Rank": "1446",
+			"german": "schwert",
+			"english": "sword"
+		},
+		{
+			"Rank": "1447",
+			"german": "schreien",
+			"english": "cry"
+		},
+		{
+			"Rank": "1448",
+			"german": "lag",
+			"english": "was"
+		},
+		{
+			"Rank": "1449",
+			"german": "fräulein",
+			"english": "miss"
+		},
+		{
+			"Rank": "1450",
+			"german": "ha",
+			"english": "Ha"
+		},
+		{
+			"Rank": "1451",
+			"german": "hielt",
+			"english": "held"
+		},
+		{
+			"Rank": "1452",
+			"german": "richter",
+			"english": "judge"
+		},
+		{
+			"Rank": "1453",
+			"german": "gespielt",
+			"english": "played"
+		},
+		{
+			"Rank": "1454",
+			"german": "gegend",
+			"english": "area"
+		},
+		{
+			"Rank": "1455",
+			"german": "red",
+			"english": "red"
+		},
+		{
+			"Rank": "1456",
+			"german": "gebäude",
+			"english": "building"
+		},
+		{
+			"Rank": "1457",
+			"german": "geredet",
+			"english": "spoken"
+		},
+		{
+			"Rank": "1458",
+			"german": "rat",
+			"english": "advice"
+		},
+		{
+			"Rank": "1459",
+			"german": "schlechte",
+			"english": "bad"
+		},
+		{
+			"Rank": "1460",
+			"german": "süße",
+			"english": "sweet"
+		},
+		{
+			"Rank": "1461",
+			"german": "hängt",
+			"english": "hangs"
+		},
+		{
+			"Rank": "1462",
+			"german": "eis",
+			"english": "ice cream"
+		},
+		{
+			"Rank": "1463",
+			"german": "big",
+			"english": "big"
+		},
+		{
+			"Rank": "1464",
+			"german": "zerstört",
+			"english": "destroyed"
+		},
+		{
+			"Rank": "1465",
+			"german": "koffer",
+			"english": "suitcase"
+		},
+		{
+			"Rank": "1466",
+			"german": "wohnt",
+			"english": "lives"
+		},
+		{
+			"Rank": "1467",
+			"german": "schwarze",
+			"english": "black"
+		},
+		{
+			"Rank": "1468",
+			"german": "versteht",
+			"english": "understood"
+		},
+		{
+			"Rank": "1469",
+			"german": "kümmere",
+			"english": "take care"
+		},
+		{
+			"Rank": "1470",
+			"german": "erledigen",
+			"english": "carry out"
+		},
+		{
+			"Rank": "1471",
+			"german": "lieutenant",
+			"english": "lieutenant"
+		},
+		{
+			"Rank": "1472",
+			"german": "alex",
+			"english": "alex"
+		},
+		{
+			"Rank": "1473",
+			"german": "männern",
+			"english": "men"
+		},
+		{
+			"Rank": "1474",
+			"german": "witzig",
+			"english": "funny"
+		},
+		{
+			"Rank": "1475",
+			"german": "schließlich",
+			"english": "after all"
+		},
+		{
+			"Rank": "1476",
+			"german": "position",
+			"english": "position"
+		},
+		{
+			"Rank": "1477",
+			"german": "drinnen",
+			"english": "indoors"
+		},
+		{
+			"Rank": "1478",
+			"german": "fbi",
+			"english": "fbi"
+		},
+		{
+			"Rank": "1479",
+			"german": "soweit",
+			"english": "so far"
+		},
+		{
+			"Rank": "1480",
+			"german": "falsche",
+			"english": "false"
+		},
+		{
+			"Rank": "1481",
+			"german": "entscheiden",
+			"english": "decide"
+		},
+		{
+			"Rank": "1482",
+			"german": "erhalten",
+			"english": "receive"
+		},
+		{
+			"Rank": "1483",
+			"german": "bauen",
+			"english": "to build"
+		},
+		{
+			"Rank": "1484",
+			"german": "kleid",
+			"english": "dress"
+		},
+		{
+			"Rank": "1485",
+			"german": "dachten",
+			"english": "thought"
+		},
+		{
+			"Rank": "1486",
+			"german": "übel",
+			"english": "evil"
+		},
+		{
+			"Rank": "1487",
+			"german": "überleben",
+			"english": "to survive"
+		},
+		{
+			"Rank": "1488",
+			"german": "hinaus",
+			"english": "out"
+		},
+		{
+			"Rank": "1489",
+			"german": "beeil",
+			"english": "hurry"
+		},
+		{
+			"Rank": "1490",
+			"german": "wald",
+			"english": "forest"
+		},
+		{
+			"Rank": "1491",
+			"german": "töte",
+			"english": "kill"
+		},
+		{
+			"Rank": "1492",
+			"german": "beschäftigt",
+			"english": "employed"
+		},
+		{
+			"Rank": "1493",
+			"german": "ring",
+			"english": "ring"
+		},
+		{
+			"Rank": "1494",
+			"german": "verbindung",
+			"english": "connection"
+		},
+		{
+			"Rank": "1495",
+			"german": "königin",
+			"english": "queen"
+		},
+		{
+			"Rank": "1496",
+			"german": "ecke",
+			"english": "corner"
+		},
+		{
+			"Rank": "1497",
+			"german": "halb",
+			"english": "half"
+		},
+		{
+			"Rank": "1498",
+			"german": "bericht",
+			"english": "report"
+		},
+		{
+			"Rank": "1499",
+			"german": "gingen",
+			"english": "went"
+		},
+		{
+			"Rank": "1500",
+			"german": "vergangenheit",
+			"english": "past"
+		},
+		{
+			"Rank": "1501",
+			"german": "spiele",
+			"english": "games"
+		},
+		{
+			"Rank": "1502",
+			"german": "angefangen",
+			"english": "started"
+		},
+		{
+			"Rank": "1503",
+			"german": "weinen",
+			"english": "cry"
+		},
+		{
+			"Rank": "1504",
+			"german": "welchen",
+			"english": "what"
+		},
+		{
+			"Rank": "1505",
+			"german": "radio",
+			"english": "radio"
+		},
+		{
+			"Rank": "1506",
+			"german": "nah",
+			"english": "close"
+		},
+		{
+			"Rank": "1507",
+			"german": "beziehung",
+			"english": "relationship"
+		},
+		{
+			"Rank": "1508",
+			"german": "hängen",
+			"english": "hang"
+		},
+		{
+			"Rank": "1509",
+			"german": "feiern",
+			"english": "celebrate"
+		},
+		{
+			"Rank": "1510",
+			"german": "w",
+			"english": "w"
+		},
+		{
+			"Rank": "1511",
+			"german": "mussten",
+			"english": "had"
+		},
+		{
+			"Rank": "1512",
+			"german": "verhaftet",
+			"english": "arrested"
+		},
+		{
+			"Rank": "1513",
+			"german": "maschine",
+			"english": "machine"
+		},
+		{
+			"Rank": "1514",
+			"german": "ermordet",
+			"english": "murdered"
+		},
+		{
+			"Rank": "1515",
+			"german": "aiie",
+			"english": "aII"
+		},
+		{
+			"Rank": "1516",
+			"german": "richard",
+			"english": "richard"
+		},
+		{
+			"Rank": "1517",
+			"german": "größte",
+			"english": "greatest"
+		},
+		{
+			"Rank": "1518",
+			"german": "betrunken",
+			"english": "drunk"
+		},
+		{
+			"Rank": "1519",
+			"german": "mußt",
+			"english": "must"
+		},
+		{
+			"Rank": "1520",
+			"german": "soldat",
+			"english": "soldier"
+		},
+		{
+			"Rank": "1521",
+			"german": "irgendetwas",
+			"english": "anything"
+		},
+		{
+			"Rank": "1522",
+			"german": "on",
+			"english": "on"
+		},
+		{
+			"Rank": "1523",
+			"german": "gefühle",
+			"english": "emotions"
+		},
+		{
+			"Rank": "1524",
+			"german": "rauf",
+			"english": "up"
+		},
+		{
+			"Rank": "1525",
+			"german": "rief",
+			"english": "cried"
+		},
+		{
+			"Rank": "1526",
+			"german": "beginnt",
+			"english": "starts"
+		},
+		{
+			"Rank": "1527",
+			"german": "anna",
+			"english": "Ann"
+		},
+		{
+			"Rank": "1528",
+			"german": "witze",
+			"english": "joking"
+		},
+		{
+			"Rank": "1529",
+			"german": "engel",
+			"english": "angel"
+		},
+		{
+			"Rank": "1530",
+			"german": "quatsch",
+			"english": "nonsense"
+		},
+		{
+			"Rank": "1531",
+			"german": "hälfte",
+			"english": "half"
+		},
+		{
+			"Rank": "1532",
+			"german": "spreche",
+			"english": "speak"
+		},
+		{
+			"Rank": "1533",
+			"german": "lehrer",
+			"english": "teacher"
+		},
+		{
+			"Rank": "1534",
+			"german": "england",
+			"english": "England"
+		},
+		{
+			"Rank": "1535",
+			"german": "charles",
+			"english": "charles"
+		},
+		{
+			"Rank": "1536",
+			"german": "dessen",
+			"english": "its"
+		},
+		{
+			"Rank": "1537",
+			"german": "schwierig",
+			"english": "difficult"
+		},
+		{
+			"Rank": "1538",
+			"german": "fang",
+			"english": "fishing"
+		},
+		{
+			"Rank": "1539",
+			"german": "gleichen",
+			"english": "equal"
+		},
+		{
+			"Rank": "1540",
+			"german": "respekt",
+			"english": "respect"
+		},
+		{
+			"Rank": "1541",
+			"german": "adresse",
+			"english": "address"
+		},
+		{
+			"Rank": "1542",
+			"german": "brücke",
+			"english": "bridge"
+		},
+		{
+			"Rank": "1543",
+			"german": "falschen",
+			"english": "false"
+		},
+		{
+			"Rank": "1544",
+			"german": "blumen",
+			"english": "flowers"
+		},
+		{
+			"Rank": "1545",
+			"german": "bobby",
+			"english": "Bobby"
+		},
+		{
+			"Rank": "1546",
+			"german": "besorgen",
+			"english": "to get"
+		},
+		{
+			"Rank": "1547",
+			"german": "sommer",
+			"english": "summer"
+		},
+		{
+			"Rank": "1548",
+			"german": "bilder",
+			"english": "Images"
+		},
+		{
+			"Rank": "1549",
+			"german": "park",
+			"english": "park"
+		},
+		{
+			"Rank": "1550",
+			"german": "flug",
+			"english": "flight"
+		},
+		{
+			"Rank": "1551",
+			"german": "agent",
+			"english": "agent"
+		},
+		{
+			"Rank": "1552",
+			"german": "schlampe",
+			"english": "slut"
+		},
+		{
+			"Rank": "1553",
+			"german": "hunde",
+			"english": "dogs"
+		},
+		{
+			"Rank": "1554",
+			"german": "geschlagen",
+			"english": "beaten"
+		},
+		{
+			"Rank": "1555",
+			"german": "beginnen",
+			"english": "begin"
+		},
+		{
+			"Rank": "1556",
+			"german": "danken",
+			"english": "to thank"
+		},
+		{
+			"Rank": "1557",
+			"german": "schritt",
+			"english": "step"
+		},
+		{
+			"Rank": "1558",
+			"german": "zerstören",
+			"english": "to destroy"
+		},
+		{
+			"Rank": "1559",
+			"german": "au",
+			"english": "au"
+		},
+		{
+			"Rank": "1560",
+			"german": "martin",
+			"english": "martin"
+		},
+		{
+			"Rank": "1561",
+			"german": "bombe",
+			"english": "bomb"
+		},
+		{
+			"Rank": "1562",
+			"german": "san",
+			"english": "san"
+		},
+		{
+			"Rank": "1563",
+			"german": "schwarzen",
+			"english": "black"
+		},
+		{
+			"Rank": "1564",
+			"german": "ted",
+			"english": "ted"
+		},
+		{
+			"Rank": "1565",
+			"german": "gelassen",
+			"english": "calmly"
+		},
+		{
+			"Rank": "1566",
+			"german": "aufgabe",
+			"english": "task"
+		},
+		{
+			"Rank": "1567",
+			"german": "jerry",
+			"english": "jerry"
+		},
+		{
+			"Rank": "1568",
+			"german": "allerdings",
+			"english": "though"
+		},
+		{
+			"Rank": "1569",
+			"german": "unseres",
+			"english": "our"
+		},
+		{
+			"Rank": "1570",
+			"german": "washington",
+			"english": "Washington"
+		},
+		{
+			"Rank": "1571",
+			"german": "prinzessin",
+			"english": "princess"
+		},
+		{
+			"Rank": "1572",
+			"german": "colonel",
+			"english": "colonel"
+		},
+		{
+			"Rank": "1573",
+			"german": "kümmert",
+			"english": "cares"
+		},
+		{
+			"Rank": "1574",
+			"german": "treten",
+			"english": "to step"
+		},
+		{
+			"Rank": "1575",
+			"german": "unterschied",
+			"english": "difference"
+		},
+		{
+			"Rank": "1576",
+			"german": "gesund",
+			"english": "healthy"
+		},
+		{
+			"Rank": "1577",
+			"german": "stimmen",
+			"english": "be right"
+		},
+		{
+			"Rank": "1578",
+			"german": "knast",
+			"english": "slammer"
+		},
+		{
+			"Rank": "1579",
+			"german": "fahrt",
+			"english": "drive"
+		},
+		{
+			"Rank": "1580",
+			"german": "heisst",
+			"english": "called"
+		},
+		{
+			"Rank": "1581",
+			"german": "steig",
+			"english": "sidewalk"
+		},
+		{
+			"Rank": "1582",
+			"german": "gehirn",
+			"english": "brain"
+		},
+		{
+			"Rank": "1583",
+			"german": "besorgt",
+			"english": "concerned"
+		},
+		{
+			"Rank": "1584",
+			"german": "fluss",
+			"english": "flow"
+		},
+		{
+			"Rank": "1585",
+			"german": "tiere",
+			"english": "animals"
+		},
+		{
+			"Rank": "1586",
+			"german": "bekomme",
+			"english": "get"
+		},
+		{
+			"Rank": "1587",
+			"german": "brüder",
+			"english": "brothers"
+		},
+		{
+			"Rank": "1588",
+			"german": "indem",
+			"english": "while"
+		},
+		{
+			"Rank": "1589",
+			"german": "trägt",
+			"english": "wearing"
+		},
+		{
+			"Rank": "1590",
+			"german": "gewartet",
+			"english": "waited"
+		},
+		{
+			"Rank": "1591",
+			"german": "bisher",
+			"english": "so far"
+		},
+		{
+			"Rank": "1592",
+			"german": "tor",
+			"english": "gate"
+		},
+		{
+			"Rank": "1593",
+			"german": "glückwunsch",
+			"english": "congratulation"
+		},
+		{
+			"Rank": "1594",
+			"german": "tommy",
+			"english": "tommy"
+		},
+		{
+			"Rank": "1595",
+			"german": "gebt",
+			"english": "give"
+		},
+		{
+			"Rank": "1596",
+			"german": "schafft",
+			"english": "creates"
+		},
+		{
+			"Rank": "1597",
+			"german": "planeten",
+			"english": "planets"
+		},
+		{
+			"Rank": "1598",
+			"german": "wünsche",
+			"english": "Wishes"
+		},
+		{
+			"Rank": "1599",
+			"german": "blöd",
+			"english": "stupid"
+		},
+		{
+			"Rank": "1600",
+			"german": "rom",
+			"english": "Rome"
+		},
+		{
+			"Rank": "1601",
+			"german": "hintern",
+			"english": "butt"
+		},
+		{
+			"Rank": "1602",
+			"german": "falle",
+			"english": "trap"
+		},
+		{
+			"Rank": "1603",
+			"german": "singt",
+			"english": "sings"
+		},
+		{
+			"Rank": "1604",
+			"german": "dach",
+			"english": "roof"
+		},
+		{
+			"Rank": "1605",
+			"german": "tötet",
+			"english": "kill"
+		},
+		{
+			"Rank": "1606",
+			"german": "helfe",
+			"english": "help"
+		},
+		{
+			"Rank": "1607",
+			"german": "pistole",
+			"english": "pistol"
+		},
+		{
+			"Rank": "1608",
+			"german": "freunden",
+			"english": "friends"
+		},
+		{
+			"Rank": "1609",
+			"german": "karten",
+			"english": "cards"
+		},
+		{
+			"Rank": "1610",
+			"german": "leiden",
+			"english": "to suffer"
+		},
+		{
+			"Rank": "1611",
+			"german": "wünschen",
+			"english": "to wish"
+		},
+		{
+			"Rank": "1612",
+			"german": "gewehr",
+			"english": "gun"
+		},
+		{
+			"Rank": "1613",
+			"german": "fühlst",
+			"english": "feel"
+		},
+		{
+			"Rank": "1614",
+			"german": "kapitän",
+			"english": "captain"
+		},
+		{
+			"Rank": "1615",
+			"german": "neuer",
+			"english": "new"
+		},
+		{
+			"Rank": "1616",
+			"german": "reichen",
+			"english": "suffice"
+		},
+		{
+			"Rank": "1617",
+			"german": "system",
+			"english": "system"
+		},
+		{
+			"Rank": "1618",
+			"german": "sprich",
+			"english": "pronounced"
+		},
+		{
+			"Rank": "1619",
+			"german": "schläft",
+			"english": "is sleeping"
+		},
+		{
+			"Rank": "1620",
+			"german": "worüber",
+			"english": "about what"
+		},
+		{
+			"Rank": "1621",
+			"german": "katze",
+			"english": "cat"
+		},
+		{
+			"Rank": "1622",
+			"german": "vogel",
+			"english": "bird"
+		},
+		{
+			"Rank": "1623",
+			"german": "rennen",
+			"english": "run"
+		},
+		{
+			"Rank": "1624",
+			"german": "erinnert",
+			"english": "remind"
+		},
+		{
+			"Rank": "1625",
+			"german": "rechte",
+			"english": "right"
+		},
+		{
+			"Rank": "1626",
+			"german": "bringst",
+			"english": "bring"
+		},
+		{
+			"Rank": "1627",
+			"german": "tier",
+			"english": "animal"
+		},
+		{
+			"Rank": "1628",
+			"german": "steigen",
+			"english": "climb"
+		},
+		{
+			"Rank": "1629",
+			"german": "flasche",
+			"english": "bottle"
+		},
+		{
+			"Rank": "1630",
+			"german": "traf",
+			"english": "hit"
+		},
+		{
+			"Rank": "1631",
+			"german": "k",
+			"english": "k"
+		},
+		{
+			"Rank": "1632",
+			"german": "küssen",
+			"english": "to kiss"
+		},
+		{
+			"Rank": "1633",
+			"german": "deren",
+			"english": "their"
+		},
+		{
+			"Rank": "1634",
+			"german": "leisten",
+			"english": "afford"
+		},
+		{
+			"Rank": "1635",
+			"german": "halbe",
+			"english": "half"
+		},
+		{
+			"Rank": "1636",
+			"german": "eurer",
+			"english": "yours"
+		},
+		{
+			"Rank": "1637",
+			"german": "verspreche",
+			"english": "promise"
+		},
+		{
+			"Rank": "1638",
+			"german": "vermisst",
+			"english": "missing"
+		},
+		{
+			"Rank": "1639",
+			"german": "genannt",
+			"english": "called"
+		},
+		{
+			"Rank": "1640",
+			"german": "fragt",
+			"english": "asks"
+		},
+		{
+			"Rank": "1641",
+			"german": "verbrechen",
+			"english": "crime"
+		},
+		{
+			"Rank": "1642",
+			"german": "aussieht",
+			"english": "looks"
+		},
+		{
+			"Rank": "1643",
+			"german": "melden",
+			"english": "report"
+		},
+		{
+			"Rank": "1644",
+			"german": "stehe",
+			"english": "stand"
+		},
+		{
+			"Rank": "1645",
+			"german": "verantwortlich",
+			"english": "responsible"
+		},
+		{
+			"Rank": "1646",
+			"german": "pferde",
+			"english": "horses"
+		},
+		{
+			"Rank": "1647",
+			"german": "erfolg",
+			"english": "success"
+		},
+		{
+			"Rank": "1648",
+			"german": "lee",
+			"english": "lee"
+		},
+		{
+			"Rank": "1649",
+			"german": "ohren",
+			"english": "ears"
+		},
+		{
+			"Rank": "1650",
+			"german": "bad",
+			"english": "bathroom"
+		},
+		{
+			"Rank": "1651",
+			"german": "keinem",
+			"english": "any"
+		},
+		{
+			"Rank": "1652",
+			"german": "weiße",
+			"english": "white"
+		},
+		{
+			"Rank": "1653",
+			"german": "besonderes",
+			"english": "special"
+		},
+		{
+			"Rank": "1654",
+			"german": "theater",
+			"english": "theater"
+		},
+		{
+			"Rank": "1655",
+			"german": "natur",
+			"english": "nature"
+		},
+		{
+			"Rank": "1656",
+			"german": "lächeln",
+			"english": "smile"
+		},
+		{
+			"Rank": "1657",
+			"german": "club",
+			"english": "club"
+		},
+		{
+			"Rank": "1658",
+			"german": "auftrag",
+			"english": "assignment"
+		},
+		{
+			"Rank": "1659",
+			"german": "wichser",
+			"english": "wanker"
+		},
+		{
+			"Rank": "1660",
+			"german": "aufhalten",
+			"english": "stop"
+		},
+		{
+			"Rank": "1661",
+			"german": "schmerzen",
+			"english": "pain"
+		},
+		{
+			"Rank": "1662",
+			"german": "by",
+			"english": "by"
+		},
+		{
+			"Rank": "1663",
+			"german": "davor",
+			"english": "before"
+		},
+		{
+			"Rank": "1664",
+			"german": "wüsste",
+			"english": "know"
+		},
+		{
+			"Rank": "1665",
+			"german": "abendessen",
+			"english": "Dinner"
+		},
+		{
+			"Rank": "1666",
+			"german": "sarah",
+			"english": "sarah"
+		},
+		{
+			"Rank": "1667",
+			"german": "verdienen",
+			"english": "to earn"
+		},
+		{
+			"Rank": "1668",
+			"german": "trifft",
+			"english": "meets"
+		},
+		{
+			"Rank": "1669",
+			"german": "deutschen",
+			"english": "german"
+		},
+		{
+			"Rank": "1670",
+			"german": "überrascht",
+			"english": "surprised"
+		},
+		{
+			"Rank": "1671",
+			"german": "baum",
+			"english": "tree"
+		},
+		{
+			"Rank": "1672",
+			"german": "kosten",
+			"english": "costs"
+		},
+		{
+			"Rank": "1673",
+			"german": "leer",
+			"english": "empty"
+		},
+		{
+			"Rank": "1674",
+			"german": "morgens",
+			"english": "In the morning"
+		},
+		{
+			"Rank": "1675",
+			"german": "gefangen",
+			"english": "captured"
+		},
+		{
+			"Rank": "1676",
+			"german": "van",
+			"english": "van"
+		},
+		{
+			"Rank": "1677",
+			"german": "wand",
+			"english": "wall"
+		},
+		{
+			"Rank": "1678",
+			"german": "city",
+			"english": "City"
+		},
+		{
+			"Rank": "1679",
+			"german": "haufen",
+			"english": "heap"
+		},
+		{
+			"Rank": "1680",
+			"german": "schließen",
+			"english": "conclude"
+		},
+		{
+			"Rank": "1681",
+			"german": "möglichkeit",
+			"english": "opportunity"
+		},
+		{
+			"Rank": "1682",
+			"german": "schützen",
+			"english": "protect"
+		},
+		{
+			"Rank": "1683",
+			"german": "besteht",
+			"english": "consists"
+		},
+		{
+			"Rank": "1684",
+			"german": "rauchen",
+			"english": "smoke"
+		},
+		{
+			"Rank": "1685",
+			"german": "schwierigkeiten",
+			"english": "difficulties"
+		},
+		{
+			"Rank": "1686",
+			"german": "stein",
+			"english": "stone"
+		},
+		{
+			"Rank": "1687",
+			"german": "mitten",
+			"english": "in the middle"
+		},
+		{
+			"Rank": "1688",
+			"german": "hinein",
+			"english": "into"
+		},
+		{
+			"Rank": "1689",
+			"german": "hose",
+			"english": "trousers"
+		},
+		{
+			"Rank": "1690",
+			"german": "verdammter",
+			"english": "damned"
+		},
+		{
+			"Rank": "1691",
+			"german": "autos",
+			"english": "cars"
+		},
+		{
+			"Rank": "1692",
+			"german": "zuvor",
+			"english": "before"
+		},
+		{
+			"Rank": "1693",
+			"german": "prima",
+			"english": "fine"
+		},
+		{
+			"Rank": "1694",
+			"german": "schwanz",
+			"english": "tail"
+		},
+		{
+			"Rank": "1695",
+			"german": "lächerlich",
+			"english": "ridiculous"
+		},
+		{
+			"Rank": "1696",
+			"german": "schickt",
+			"english": "sends"
+		},
+		{
+			"Rank": "1697",
+			"german": "j",
+			"english": "j"
+		},
+		{
+			"Rank": "1698",
+			"german": "wieviel",
+			"english": "how much"
+		},
+		{
+			"Rank": "1699",
+			"german": "beschützen",
+			"english": "to protect"
+		},
+		{
+			"Rank": "1700",
+			"german": "liebes",
+			"english": "dear"
+		},
+		{
+			"Rank": "1701",
+			"german": "befehle",
+			"english": "commands"
+		},
+		{
+			"Rank": "1702",
+			"german": "echte",
+			"english": "real"
+		},
+		{
+			"Rank": "1703",
+			"german": "vermutlich",
+			"english": "presumably"
+		},
+		{
+			"Rank": "1704",
+			"german": "robert",
+			"english": "Robert"
+		},
+		{
+			"Rank": "1705",
+			"german": "englisch",
+			"english": "english"
+		},
+		{
+			"Rank": "1706",
+			"german": "bedeuten",
+			"english": "mean"
+		},
+		{
+			"Rank": "1707",
+			"german": "junger",
+			"english": "younger"
+		},
+		{
+			"Rank": "1708",
+			"german": "lüge",
+			"english": "lie"
+		},
+		{
+			"Rank": "1709",
+			"german": "uh",
+			"english": "uh"
+		},
+		{
+			"Rank": "1710",
+			"german": "gemeinsam",
+			"english": "together"
+		},
+		{
+			"Rank": "1711",
+			"german": "pause",
+			"english": "pause"
+		},
+		{
+			"Rank": "1712",
+			"german": "versteh",
+			"english": "understand"
+		},
+		{
+			"Rank": "1713",
+			"german": "aufpassen",
+			"english": "watch out"
+		},
+		{
+			"Rank": "1714",
+			"german": "einverstanden",
+			"english": "agreed"
+		},
+		{
+			"Rank": "1715",
+			"german": "brechen",
+			"english": "break"
+		},
+		{
+			"Rank": "1716",
+			"german": "grad",
+			"english": "Degree"
+		},
+		{
+			"Rank": "1717",
+			"german": "prinz",
+			"english": "prince"
+		},
+		{
+			"Rank": "1718",
+			"german": "polizisten",
+			"english": "police officers"
+		},
+		{
+			"Rank": "1719",
+			"german": "lord",
+			"english": "lord"
+		},
+		{
+			"Rank": "1720",
+			"german": "druck",
+			"english": "pressure"
+		},
+		{
+			"Rank": "1721",
+			"german": "heilige",
+			"english": "saint"
+		},
+		{
+			"Rank": "1722",
+			"german": "daher",
+			"english": "therefore"
+		},
+		{
+			"Rank": "1723",
+			"german": "schwarz",
+			"english": "black"
+		},
+		{
+			"Rank": "1724",
+			"german": "solchen",
+			"english": "such"
+		},
+		{
+			"Rank": "1725",
+			"german": "übernehmen",
+			"english": "take"
+		},
+		{
+			"Rank": "1726",
+			"german": "nachmittag",
+			"english": "Afternoon"
+		},
+		{
+			"Rank": "1727",
+			"german": "regen",
+			"english": "rain"
+		},
+		{
+			"Rank": "1728",
+			"german": "schätzchen",
+			"english": "baby"
+		},
+		{
+			"Rank": "1729",
+			"german": "my",
+			"english": "my"
+		},
+		{
+			"Rank": "1730",
+			"german": "zweiten",
+			"english": "second"
+		},
+		{
+			"Rank": "1731",
+			"german": "rock",
+			"english": "skirt"
+		},
+		{
+			"Rank": "1732",
+			"german": "fassen",
+			"english": "take"
+		},
+		{
+			"Rank": "1733",
+			"german": "tote",
+			"english": "dead"
+		},
+		{
+			"Rank": "1734",
+			"german": "fiel",
+			"english": "fell"
+		},
+		{
+			"Rank": "1735",
+			"german": "madam",
+			"english": "madam"
+		},
+		{
+			"Rank": "1736",
+			"german": "mitgebracht",
+			"english": "brought"
+		},
+		{
+			"Rank": "1737",
+			"german": "mannes",
+			"english": "man"
+		},
+		{
+			"Rank": "1738",
+			"german": "mochte",
+			"english": "would like"
+		},
+		{
+			"Rank": "1739",
+			"german": "wart",
+			"english": "serviceable"
+		},
+		{
+			"Rank": "1740",
+			"german": "lief",
+			"english": "ran"
+		},
+		{
+			"Rank": "1741",
+			"german": "dorthin",
+			"english": "there"
+		},
+		{
+			"Rank": "1742",
+			"german": "unterhalten",
+			"english": "to chat"
+		},
+		{
+			"Rank": "1743",
+			"german": "schuss",
+			"english": "shot"
+		},
+		{
+			"Rank": "1744",
+			"german": "angriff",
+			"english": "attack"
+		},
+		{
+			"Rank": "1745",
+			"german": "freue",
+			"english": "look"
+		},
+		{
+			"Rank": "1746",
+			"german": "gebaut",
+			"english": "built"
+		},
+		{
+			"Rank": "1747",
+			"german": "gebrochen",
+			"english": "Broken"
+		},
+		{
+			"Rank": "1748",
+			"german": "fanden",
+			"english": "found"
+		},
+		{
+			"Rank": "1749",
+			"german": "aiso",
+			"english": "aiso"
+		},
+		{
+			"Rank": "1750",
+			"german": "beruhige",
+			"english": "calm down"
+		},
+		{
+			"Rank": "1751",
+			"german": "offensichtlich",
+			"english": "obviously"
+		},
+		{
+			"Rank": "1752",
+			"german": "versprechen",
+			"english": "promise"
+		},
+		{
+			"Rank": "1753",
+			"german": "monster",
+			"english": "monster"
+		},
+		{
+			"Rank": "1754",
+			"german": "fängt",
+			"english": "catches"
+		},
+		{
+			"Rank": "1755",
+			"german": "kapiert",
+			"english": "Got it"
+		},
+		{
+			"Rank": "1756",
+			"german": "ehemann",
+			"english": "husband"
+		},
+		{
+			"Rank": "1757",
+			"german": "geschlossen",
+			"english": "closed"
+		},
+		{
+			"Rank": "1758",
+			"german": "frühstück",
+			"english": "breakfast"
+		},
+		{
+			"Rank": "1759",
+			"german": "gebeten",
+			"english": "asked"
+		},
+		{
+			"Rank": "1760",
+			"german": "stören",
+			"english": "to disturb"
+		},
+		{
+			"Rank": "1761",
+			"german": "irre",
+			"english": "crazy"
+		},
+		{
+			"Rank": "1762",
+			"german": "farbe",
+			"english": "color"
+		},
+		{
+			"Rank": "1763",
+			"german": "chris",
+			"english": "chris"
+		},
+		{
+			"Rank": "1764",
+			"german": "taten",
+			"english": "doings"
+		},
+		{
+			"Rank": "1765",
+			"german": "zufällig",
+			"english": "accidentally"
+		},
+		{
+			"Rank": "1766",
+			"german": "geschieht",
+			"english": "happens"
+		},
+		{
+			"Rank": "1767",
+			"german": "pfund",
+			"english": "lb"
+		},
+		{
+			"Rank": "1768",
+			"german": "mission",
+			"english": "mission"
+		},
+		{
+			"Rank": "1769",
+			"german": "thomas",
+			"english": "thomas"
+		},
+		{
+			"Rank": "1770",
+			"german": "zeige",
+			"english": "show"
+		},
+		{
+			"Rank": "1771",
+			"german": "wochenende",
+			"english": "weekend"
+		},
+		{
+			"Rank": "1772",
+			"german": "unternehmen",
+			"english": "do"
+		},
+		{
+			"Rank": "1773",
+			"german": "fantastisch",
+			"english": "fantastic"
+		},
+		{
+			"Rank": "1774",
+			"german": "kate",
+			"english": "cottage"
+		},
+		{
+			"Rank": "1775",
+			"german": "geb",
+			"english": "give"
+		},
+		{
+			"Rank": "1776",
+			"german": "schlägt",
+			"english": "beats"
+		},
+		{
+			"Rank": "1777",
+			"german": "entschieden",
+			"english": "decided"
+		},
+		{
+			"Rank": "1778",
+			"german": "spur",
+			"english": "track"
+		},
+		{
+			"Rank": "1779",
+			"german": "liebte",
+			"english": "loved"
+		},
+		{
+			"Rank": "1780",
+			"german": "hieß",
+			"english": "was"
+		},
+		{
+			"Rank": "1781",
+			"german": "vertrag",
+			"english": "contract"
+		},
+		{
+			"Rank": "1782",
+			"german": "dienst",
+			"english": "service"
+		},
+		{
+			"Rank": "1783",
+			"german": "held",
+			"english": "hero"
+		},
+		{
+			"Rank": "1784",
+			"german": "verpasst",
+			"english": "missed out"
+		},
+		{
+			"Rank": "1785",
+			"german": "irgendwelche",
+			"english": "any"
+		},
+		{
+			"Rank": "1786",
+			"german": "filme",
+			"english": "movies"
+		},
+		{
+			"Rank": "1787",
+			"german": "stock",
+			"english": "floor"
+		},
+		{
+			"Rank": "1788",
+			"german": "louis",
+			"english": "louis"
+		},
+		{
+			"Rank": "1789",
+			"german": "meilen",
+			"english": "miles"
+		},
+		{
+			"Rank": "1790",
+			"german": "wahnsinn",
+			"english": "madness"
+		},
+		{
+			"Rank": "1791",
+			"german": "erschießen",
+			"english": "shoot dead"
+		},
+		{
+			"Rank": "1792",
+			"german": "nee",
+			"english": "nope"
+		},
+		{
+			"Rank": "1793",
+			"german": "einzigen",
+			"english": "single"
+		},
+		{
+			"Rank": "1794",
+			"german": "mitkommen",
+			"english": "come along"
+		},
+		{
+			"Rank": "1795",
+			"german": "braut",
+			"english": "bride"
+		},
+		{
+			"Rank": "1796",
+			"german": "reisen",
+			"english": "to travel"
+		},
+		{
+			"Rank": "1797",
+			"german": "gewissen",
+			"english": "conscience"
+		},
+		{
+			"Rank": "1798",
+			"german": "schmeckt",
+			"english": "tastes"
+		},
+		{
+			"Rank": "1799",
+			"german": "sprache",
+			"english": "language"
+		},
+		{
+			"Rank": "1800",
+			"german": "begann",
+			"english": "started"
+		},
+		{
+			"Rank": "1801",
+			"german": "eigenes",
+			"english": "own"
+		},
+		{
+			"Rank": "1802",
+			"german": "reihe",
+			"english": "line"
+		},
+		{
+			"Rank": "1803",
+			"german": "fern",
+			"english": "remote"
+		},
+		{
+			"Rank": "1804",
+			"german": "drüber",
+			"english": "over it"
+		},
+		{
+			"Rank": "1805",
+			"german": "mond",
+			"english": "moon"
+		},
+		{
+			"Rank": "1806",
+			"german": "gang",
+			"english": "corridor"
+		},
+		{
+			"Rank": "1807",
+			"german": "schauspieler",
+			"english": "actor"
+		},
+		{
+			"Rank": "1808",
+			"german": "vollkommen",
+			"english": "completely"
+		},
+		{
+			"Rank": "1809",
+			"german": "runde",
+			"english": "round"
+		},
+		{
+			"Rank": "1810",
+			"german": "restaurant",
+			"english": "restaurant"
+		},
+		{
+			"Rank": "1811",
+			"german": "dreck",
+			"english": "dirt"
+		},
+		{
+			"Rank": "1812",
+			"german": "schrieb",
+			"english": "wrote"
+		},
+		{
+			"Rank": "1813",
+			"german": "untertitel",
+			"english": "subtitle"
+		},
+		{
+			"Rank": "1814",
+			"german": "arthur",
+			"english": "arthur"
+		},
+		{
+			"Rank": "1815",
+			"german": "sprichst",
+			"english": "Known"
+		},
+		{
+			"Rank": "1816",
+			"german": "warm",
+			"english": "warm"
+		},
+		{
+			"Rank": "1817",
+			"german": "mistkerl",
+			"english": "dirty swine"
+		},
+		{
+			"Rank": "1818",
+			"german": "nette",
+			"english": "nice"
+		},
+		{
+			"Rank": "1819",
+			"german": "bekommst",
+			"english": "get"
+		},
+		{
+			"Rank": "1820",
+			"german": "lager",
+			"english": "warehouse"
+		},
+		{
+			"Rank": "1821",
+			"german": "atmen",
+			"english": "breathe"
+		},
+		{
+			"Rank": "1822",
+			"german": "legt",
+			"english": "puts"
+		},
+		{
+			"Rank": "1823",
+			"german": "daraus",
+			"english": "from that"
+		},
+		{
+			"Rank": "1824",
+			"german": "schloss",
+			"english": "lock"
+		},
+		{
+			"Rank": "1825",
+			"german": "danny",
+			"english": "danny"
+		},
+		{
+			"Rank": "1826",
+			"german": "geschossen",
+			"english": "shot"
+		},
+		{
+			"Rank": "1827",
+			"german": "gespräch",
+			"english": "talk"
+		},
+		{
+			"Rank": "1828",
+			"german": "usa",
+			"english": "USA"
+		},
+		{
+			"Rank": "1829",
+			"german": "leise",
+			"english": "quiet"
+		},
+		{
+			"Rank": "1830",
+			"german": "flughafen",
+			"english": "Airport"
+		},
+		{
+			"Rank": "1831",
+			"german": "wunsch",
+			"english": "wish"
+		},
+		{
+			"Rank": "1832",
+			"german": "schwanger",
+			"english": "pregnant"
+		},
+		{
+			"Rank": "1833",
+			"german": "operation",
+			"english": "surgery"
+		},
+		{
+			"Rank": "1834",
+			"german": "anzug",
+			"english": "suit"
+		},
+		{
+			"Rank": "1835",
+			"german": "gelegenheit",
+			"english": "occasion"
+		},
+		{
+			"Rank": "1836",
+			"german": "folge",
+			"english": "episode"
+		},
+		{
+			"Rank": "1837",
+			"german": "kunden",
+			"english": "customer"
+		},
+		{
+			"Rank": "1838",
+			"german": "dankbar",
+			"english": "grateful"
+		},
+		{
+			"Rank": "1839",
+			"german": "welchem",
+			"english": "which"
+		},
+		{
+			"Rank": "1840",
+			"german": "gewusst",
+			"english": "known"
+		},
+		{
+			"Rank": "1841",
+			"german": "tanz",
+			"english": "dance"
+		},
+		{
+			"Rank": "1842",
+			"german": "füße",
+			"english": "feet"
+		},
+		{
+			"Rank": "1843",
+			"german": "thema",
+			"english": "theme"
+		},
+		{
+			"Rank": "1844",
+			"german": "v",
+			"english": "v"
+		},
+		{
+			"Rank": "1845",
+			"german": "brauchte",
+			"english": "needed"
+		},
+		{
+			"Rank": "1846",
+			"german": "dreh",
+			"english": "twist"
+		},
+		{
+			"Rank": "1847",
+			"german": "netter",
+			"english": "cute"
+		},
+		{
+			"Rank": "1848",
+			"german": "verantwortung",
+			"english": "responsibility"
+		},
+		{
+			"Rank": "1849",
+			"german": "umsonst",
+			"english": "for nothing"
+		},
+		{
+			"Rank": "1850",
+			"german": "geändert",
+			"english": "changed"
+		},
+		{
+			"Rank": "1851",
+			"german": "subtitles",
+			"english": "subtitles"
+		},
+		{
+			"Rank": "1852",
+			"german": "verboten",
+			"english": "prohibited"
+		},
+		{
+			"Rank": "1853",
+			"german": "schlechter",
+			"english": "worse"
+		},
+		{
+			"Rank": "1854",
+			"german": "million",
+			"english": "million"
+		},
+		{
+			"Rank": "1855",
+			"german": "dick",
+			"english": "thick"
+		},
+		{
+			"Rank": "1856",
+			"german": "größer",
+			"english": "greater"
+		},
+		{
+			"Rank": "1857",
+			"german": "nerven",
+			"english": "annoy"
+		},
+		{
+			"Rank": "1858",
+			"german": "schaden",
+			"english": "damage"
+		},
+		{
+			"Rank": "1859",
+			"german": "erreicht",
+			"english": "reached"
+		},
+		{
+			"Rank": "1860",
+			"german": "jagen",
+			"english": "to hunt"
+		},
+		{
+			"Rank": "1861",
+			"german": "urlaub",
+			"english": "vacation"
+		},
+		{
+			"Rank": "1862",
+			"german": "erlaubt",
+			"english": "allowed"
+		},
+		{
+			"Rank": "1863",
+			"german": "gäste",
+			"english": "Guests"
+		},
+		{
+			"Rank": "1864",
+			"german": "erfahrung",
+			"english": "Experience"
+		},
+		{
+			"Rank": "1865",
+			"german": "viei",
+			"english": "Viei"
+		},
+		{
+			"Rank": "1866",
+			"german": "rot",
+			"english": "red"
+		},
+		{
+			"Rank": "1867",
+			"german": "getrunken",
+			"english": "drunk"
+		},
+		{
+			"Rank": "1868",
+			"german": "freuen",
+			"english": "looking forward"
+		},
+		{
+			"Rank": "1869",
+			"german": "besseres",
+			"english": "better"
+		},
+		{
+			"Rank": "1870",
+			"german": "wache",
+			"english": "guard"
+		},
+		{
+			"Rank": "1871",
+			"german": "gewalt",
+			"english": "violence"
+		},
+		{
+			"Rank": "1872",
+			"german": "entkommen",
+			"english": "escape"
+		},
+		{
+			"Rank": "1873",
+			"german": "wußte",
+			"english": "knew"
+		},
+		{
+			"Rank": "1874",
+			"german": "hasst",
+			"english": "hates"
+		},
+		{
+			"Rank": "1875",
+			"german": "riecht",
+			"english": "smells"
+		},
+		{
+			"Rank": "1876",
+			"german": "strand",
+			"english": "Beach"
+		},
+		{
+			"Rank": "1877",
+			"german": "sterbe",
+			"english": "die"
+		},
+		{
+			"Rank": "1878",
+			"german": "konntest",
+			"english": "could"
+		},
+		{
+			"Rank": "1879",
+			"german": "aufstehen",
+			"english": "get up"
+		},
+		{
+			"Rank": "1880",
+			"german": "wahnsinnig",
+			"english": "mad"
+		},
+		{
+			"Rank": "1881",
+			"german": "nachgedacht",
+			"english": "thought"
+		},
+		{
+			"Rank": "1882",
+			"german": "oberst",
+			"english": "colonel"
+		},
+		{
+			"Rank": "1883",
+			"german": "william",
+			"english": "william"
+		},
+		{
+			"Rank": "1884",
+			"german": "beenden",
+			"english": "break up"
+		},
+		{
+			"Rank": "1885",
+			"german": "kino",
+			"english": "movie theater"
+		},
+		{
+			"Rank": "1886",
+			"german": "lauter",
+			"english": "volume up"
+		},
+		{
+			"Rank": "1887",
+			"german": "folgt",
+			"english": "follows"
+		},
+		{
+			"Rank": "1888",
+			"german": "aha",
+			"english": "Aha"
+		},
+		{
+			"Rank": "1889",
+			"german": "wahre",
+			"english": "real"
+		},
+		{
+			"Rank": "1890",
+			"german": "angebot",
+			"english": "offer"
+		},
+		{
+			"Rank": "1891",
+			"german": "erklärt",
+			"english": "declared"
+		},
+		{
+			"Rank": "1892",
+			"german": "trink",
+			"english": "drinking"
+		},
+		{
+			"Rank": "1893",
+			"german": "soii",
+			"english": "soii"
+		},
+		{
+			"Rank": "1894",
+			"german": "stört",
+			"english": "disturbs"
+		},
+		{
+			"Rank": "1895",
+			"german": "gilt",
+			"english": "applies"
+		},
+		{
+			"Rank": "1896",
+			"german": "keller",
+			"english": "cellar"
+		},
+		{
+			"Rank": "1897",
+			"german": "post",
+			"english": "post"
+		},
+		{
+			"Rank": "1898",
+			"german": "senator",
+			"english": "senator"
+		},
+		{
+			"Rank": "1899",
+			"german": "eurem",
+			"english": "your"
+		},
+		{
+			"Rank": "1900",
+			"german": "isst",
+			"english": "eating"
+		},
+		{
+			"Rank": "1901",
+			"german": "geschichten",
+			"english": "stories"
+		},
+		{
+			"Rank": "1902",
+			"german": "frankreich",
+			"english": "France"
+		},
+		{
+			"Rank": "1903",
+			"german": "no",
+			"english": "no"
+		},
+		{
+			"Rank": "1904",
+			"german": "gentlemen",
+			"english": "gentlemen"
+		},
+		{
+			"Rank": "1905",
+			"german": "kugel",
+			"english": "ball"
+		},
+		{
+			"Rank": "1906",
+			"german": "gemeint",
+			"english": "meant"
+		},
+		{
+			"Rank": "1907",
+			"german": "milch",
+			"english": "milk"
+		},
+		{
+			"Rank": "1908",
+			"german": "machten",
+			"english": "made"
+		},
+		{
+			"Rank": "1909",
+			"german": "kleider",
+			"english": "clothes"
+		},
+		{
+			"Rank": "1910",
+			"german": "herausfinden",
+			"english": "find out"
+		},
+		{
+			"Rank": "1911",
+			"german": "mindestens",
+			"english": "at least"
+		},
+		{
+			"Rank": "1912",
+			"german": "eh",
+			"english": "eh"
+		},
+		{
+			"Rank": "1913",
+			"german": "einigen",
+			"english": "some"
+		},
+		{
+			"Rank": "1914",
+			"german": "trottel",
+			"english": "Fool"
+		},
+		{
+			"Rank": "1915",
+			"german": "schaffst",
+			"english": "writing"
+		},
+		{
+			"Rank": "1916",
+			"german": "kuss",
+			"english": "kiss"
+		},
+		{
+			"Rank": "1917",
+			"german": "geholfen",
+			"english": "helped"
+		},
+		{
+			"Rank": "1918",
+			"german": "knie",
+			"english": "knee"
+		},
+		{
+			"Rank": "1919",
+			"german": "worum",
+			"english": "about what"
+		},
+		{
+			"Rank": "1920",
+			"german": "grab",
+			"english": "dig"
+		},
+		{
+			"Rank": "1921",
+			"german": "voraus",
+			"english": "ahead"
+		},
+		{
+			"Rank": "1922",
+			"german": "robin",
+			"english": "robin"
+		},
+		{
+			"Rank": "1923",
+			"german": "blind",
+			"english": "blind"
+		},
+		{
+			"Rank": "1924",
+			"german": "that",
+			"english": "did"
+		},
+		{
+			"Rank": "1925",
+			"german": "schande",
+			"english": "shame"
+		},
+		{
+			"Rank": "1926",
+			"german": "carl",
+			"english": "carl"
+		},
+		{
+			"Rank": "1927",
+			"german": "schönheit",
+			"english": "beauty"
+		},
+		{
+			"Rank": "1928",
+			"german": "versuchte",
+			"english": "tried"
+		},
+		{
+			"Rank": "1929",
+			"german": "fuhr",
+			"english": "drove"
+		},
+		{
+			"Rank": "1930",
+			"german": "steve",
+			"english": "steve"
+		},
+		{
+			"Rank": "1931",
+			"german": "dave",
+			"english": "dave"
+		},
+		{
+			"Rank": "1932",
+			"german": "schatten",
+			"english": "shadow"
+		},
+		{
+			"Rank": "1933",
+			"german": "schulden",
+			"english": "owe"
+		},
+		{
+			"Rank": "1934",
+			"german": "dauern",
+			"english": "last"
+		},
+		{
+			"Rank": "1935",
+			"german": "mister",
+			"english": "mister"
+		},
+		{
+			"Rank": "1936",
+			"german": "schwimmen",
+			"english": "swimming"
+		},
+		{
+			"Rank": "1937",
+			"german": "such",
+			"english": "examined"
+		},
+		{
+			"Rank": "1938",
+			"german": "beruhigen",
+			"english": "soothe"
+		},
+		{
+			"Rank": "1939",
+			"german": "form",
+			"english": "form"
+		},
+		{
+			"Rank": "1940",
+			"german": "bessere",
+			"english": "better"
+		},
+		{
+			"Rank": "1941",
+			"german": "verschwindet",
+			"english": "disappears"
+		},
+		{
+			"Rank": "1942",
+			"german": "zweimal",
+			"english": "twice"
+		},
+		{
+			"Rank": "1943",
+			"german": "präsidenten",
+			"english": "presidents"
+		},
+		{
+			"Rank": "1944",
+			"german": "wei",
+			"english": "wei"
+		},
+		{
+			"Rank": "1945",
+			"german": "dunkel",
+			"english": "dark"
+		},
+		{
+			"Rank": "1946",
+			"german": "idioten",
+			"english": "idiots"
+		},
+		{
+			"Rank": "1947",
+			"german": "sieg",
+			"english": "victory"
+		},
+		{
+			"Rank": "1948",
+			"german": "riggs",
+			"english": "riggs"
+		},
+		{
+			"Rank": "1949",
+			"german": "pläne",
+			"english": "plans"
+		},
+		{
+			"Rank": "1950",
+			"german": "bat",
+			"english": "asked"
+		},
+		{
+			"Rank": "1951",
+			"german": "zufall",
+			"english": "coincidence"
+		},
+		{
+			"Rank": "1952",
+			"german": "eingeladen",
+			"english": "invited"
+		},
+		{
+			"Rank": "1953",
+			"german": "scherz",
+			"english": "hoax"
+		},
+		{
+			"Rank": "1954",
+			"german": "gezeigt",
+			"english": "shown"
+		},
+		{
+			"Rank": "1955",
+			"german": "geheiratet",
+			"english": "married"
+		},
+		{
+			"Rank": "1956",
+			"german": "ed",
+			"english": "ed"
+		},
+		{
+			"Rank": "1957",
+			"german": "fahrer",
+			"english": "driver"
+		},
+		{
+			"Rank": "1958",
+			"german": "ähnlich",
+			"english": "similar"
+		},
+		{
+			"Rank": "1959",
+			"german": "verhalten",
+			"english": "behavior"
+		},
+		{
+			"Rank": "1960",
+			"german": "staaten",
+			"english": "states"
+		},
+		{
+			"Rank": "1961",
+			"german": "garten",
+			"english": "garden"
+		},
+		{
+			"Rank": "1962",
+			"german": "großvater",
+			"english": "grandfather"
+		},
+		{
+			"Rank": "1963",
+			"german": "schreibt",
+			"english": "writes"
+		},
+		{
+			"Rank": "1964",
+			"german": "pflicht",
+			"english": "duty"
+		},
+		{
+			"Rank": "1965",
+			"german": "spielte",
+			"english": "played"
+		},
+		{
+			"Rank": "1966",
+			"german": "deckung",
+			"english": "cover"
+		},
+		{
+			"Rank": "1967",
+			"german": "energie",
+			"english": "energy"
+		},
+		{
+			"Rank": "1968",
+			"german": "zeugen",
+			"english": "testify"
+		},
+		{
+			"Rank": "1969",
+			"german": "star",
+			"english": "star"
+		},
+		{
+			"Rank": "1970",
+			"german": "fährst",
+			"english": "are going"
+		},
+		{
+			"Rank": "1971",
+			"german": "nachdenken",
+			"english": "think"
+		},
+		{
+			"Rank": "1972",
+			"german": "roy",
+			"english": "roy"
+		},
+		{
+			"Rank": "1973",
+			"german": "risiko",
+			"english": "risk"
+		},
+		{
+			"Rank": "1974",
+			"german": "geschäfte",
+			"english": "businesses"
+		},
+		{
+			"Rank": "1975",
+			"german": "www",
+			"english": "www"
+		},
+		{
+			"Rank": "1976",
+			"german": "z",
+			"english": "z"
+		},
+		{
+			"Rank": "1977",
+			"german": "erstes",
+			"english": "first"
+		},
+		{
+			"Rank": "1978",
+			"german": "kunst",
+			"english": "Art"
+		},
+		{
+			"Rank": "1979",
+			"german": "behandelt",
+			"english": "treated"
+		},
+		{
+			"Rank": "1980",
+			"german": "geschah",
+			"english": "happened"
+		},
+		{
+			"Rank": "1981",
+			"german": "com",
+			"english": "com"
+		},
+		{
+			"Rank": "1982",
+			"german": "helft",
+			"english": "help"
+		},
+		{
+			"Rank": "1983",
+			"german": "dürfte",
+			"english": "might"
+		},
+		{
+			"Rank": "1984",
+			"german": "heiligen",
+			"english": "hallow"
+		},
+		{
+			"Rank": "1985",
+			"german": "mädels",
+			"english": "mädels"
+		},
+		{
+			"Rank": "1986",
+			"german": "beweis",
+			"english": "proof"
+		},
+		{
+			"Rank": "1987",
+			"german": "priester",
+			"english": "priest"
+		},
+		{
+			"Rank": "1988",
+			"german": "wusstest",
+			"english": "knew"
+		},
+		{
+			"Rank": "1989",
+			"german": "stopp",
+			"english": "stop"
+		},
+		{
+			"Rank": "1990",
+			"german": "zustand",
+			"english": "state"
+		},
+		{
+			"Rank": "1991",
+			"german": "direktor",
+			"english": "director"
+		},
+		{
+			"Rank": "1992",
+			"german": "gehalten",
+			"english": "kept"
+		},
+		{
+			"Rank": "1993",
+			"german": "grenze",
+			"english": "border"
+		},
+		{
+			"Rank": "1994",
+			"german": "juden",
+			"english": "Jewry"
+		},
+		{
+			"Rank": "1995",
+			"german": "geblieben",
+			"english": "remained"
+		},
+		{
+			"Rank": "1996",
+			"german": "erzählte",
+			"english": "told"
+		},
+		{
+			"Rank": "1997",
+			"german": "vieiieicht",
+			"english": "vieiieicht"
+		},
+		{
+			"Rank": "1998",
+			"german": "brennt",
+			"english": "burns"
+		},
+		{
+			"Rank": "1999",
+			"german": "interesse",
+			"english": "interest"
+		},
+		{
+			"Rank": "2000",
+			"german": "seiten",
+			"english": "sides"
+		}
+	];
+
+/***/ },
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!***************************************************

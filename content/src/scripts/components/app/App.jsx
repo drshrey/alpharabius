@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import findAndReplaceDOMText from 'findandreplacedomtext';
+import spanisheng from '../../../../../data/spanish.json';
 import porteng from '../../../../../data/portuguese.json';
 import frencheng from '../../../../../data/french.json';
+import germaneng from '../../../../../data/german.json';
+
 var Mark = require('mark.js');
 
 let originalEl = {};
@@ -143,6 +146,14 @@ function changeLang(lang, immersion){
       langDict = frencheng;
       langKey = "french";
       break;
+    case "Spanish":
+      langDict = spanisheng;
+      langKey = "spanish";
+      break;
+    case "German":
+      langDict = germaneng;
+      langKey = "german";
+      break;
     case "English":
       engTrue = true;
     default:
@@ -170,8 +181,45 @@ function changeLang(lang, immersion){
     // modify stylesheets
     let ss = document.styleSheets
     for(var i = 0; i < ss.length; i++){
-      ss[i].insertRule("acronym { background-color: yellow;}", 0);
+      ss[i].insertRule(' \
+        acronym { \
+          background-color: #F0F8FF; \
+          font-size: 108%; \
+        } \
+      ', 0);
+      ss[i].insertRule('\
+        acronym:hover{\
+          color: #ff2283;\
+          position: relative;\
+        }      \
+        ', 0);
+      ss[i].insertRule('\
+        acronym[title]:hover:after { \
+          content: attr(title);\
+          padding: 5px 5px;\
+          color: black;\
+          position: absolute;\
+          left: 0;\
+          top: 100%;\
+          white-space: nowrap;\
+          z-index: 20;\
+          -moz-border-radius: 3px;\
+          -webkit-border-radius: 3px;\
+          border-radius: 3px;\
+          -moz-box-shadow: 0px 0px 2px #c0c1c2;\
+          -webkit-box-shadow: 0px 0px 2px #c0c1c2;\
+          box-shadow: 0px 0px 2px #c0c1c2;\
+          background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
+          background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ffffff),color-stop(1, #eeeeee));\
+          background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);\
+          background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
+          background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);\
+          background-image: -o-linear-gradient(top, #ffffff, #eeeeee);\
+        } \
+      ', 0);
     }
+
+    console.log(spanisheng);
 
     for(var i = 0; i < elements.length; i++){
       for(var j = 0; j < randWords.length; j++){

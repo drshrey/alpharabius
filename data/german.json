@@ -1,0 +1,9990 @@
+[
+    {
+      "Rank": "1",
+      "german": "ich",
+      "english": "I",
+      "Notes": "1) This list was created using public/free subtitles, particularly from opensubtitles.org."
+    },
+    {
+      "Rank": "2",
+      "german": "sie",
+      "english": "they",
+      "Notes": "The order is based on the number of occurences of each word in the subtitles."
+    },
+    {
+      "Rank": "4",
+      "german": "ist",
+      "english": "is",
+      "Notes": "2) The english translation is by Google and can be un-reliable for some words."
+    },
+    {
+      "Rank": "5",
+      "german": "du",
+      "english": "you"
+    },
+    {
+      "Rank": "6",
+      "german": "nicht",
+      "english": "not",
+      "Notes": "3) You can change the translation from english to another language."
+    },
+    {
+      "Rank": "8",
+      "german": "und",
+      "english": "and",
+      "Notes": "Then replace the \"en\" in the function in the cells in Column C with your desired language code."
+    },
+    {
+      "Rank": "9",
+      "german": "es",
+      "english": "it",
+      "Notes": "e.g. Replace \"en\" with \"sv\" for Swedish."
+    },
+    {
+      "Rank": "10",
+      "german": "der",
+      "english": "of the",
+      "Notes": "List of supported languages:"
+    },
+    {
+      "Rank": "11",
+      "german": "was",
+      "english": "What",
+      "Notes": "https://cloud.google.com/translate/v2/using_rest?hl=en#language-params"
+    },
+    {
+      "Rank": "12",
+      "german": "wir",
+      "english": "we"
+    },
+    {
+      "Rank": "13",
+      "german": "er",
+      "english": "he",
+      "Notes": "4) The original source of this list can be found here:"
+    },
+    {
+      "Rank": "14",
+      "german": "zu",
+      "english": "to",
+      "Notes": "https://invokeit.wordpress.com/frequency-word-lists/"
+    },
+    {
+      "Rank": "15",
+      "german": "ein",
+      "english": "on"
+    },
+    {
+      "Rank": "16",
+      "german": "in",
+      "english": "in",
+      "Notes": "5) It is licensed under the following Creative Commons license:"
+    },
+    {
+      "Rank": "17",
+      "german": "mit",
+      "english": "With",
+      "Notes": "http://creativecommons.org/licenses/by-sa/3.0/"
+    },
+    {
+      "Rank": "18",
+      "german": "mir",
+      "english": "me"
+    },
+    {
+      "Rank": "20",
+      "german": "wie",
+      "english": "as",
+      "Notes": "http://www.101languages.net/common-words/"
+    },
+    {
+      "Rank": "21",
+      "german": "ja",
+      "english": "Yes"
+    },
+    {
+      "Rank": "22",
+      "german": "auf",
+      "english": "on"
+    },
+    {
+      "Rank": "23",
+      "german": "mich",
+      "english": "me"
+    },
+    {
+      "Rank": "24",
+      "german": "so",
+      "english": "so"
+    },
+    {
+      "Rank": "25",
+      "german": "eine",
+      "english": "a"
+    },
+    {
+      "Rank": "26",
+      "german": "aber",
+      "english": "but"
+    },
+    {
+      "Rank": "27",
+      "german": "hier",
+      "english": "here"
+    },
+    {
+      "Rank": "28",
+      "german": "sind",
+      "english": "are"
+    },
+    {
+      "Rank": "29",
+      "german": "für",
+      "english": "For"
+    },
+    {
+      "Rank": "30",
+      "german": "von",
+      "english": "from"
+    },
+    {
+      "Rank": "31",
+      "german": "haben",
+      "english": "have"
+    },
+    {
+      "Rank": "32",
+      "german": "hat",
+      "english": "Has"
+    },
+    {
+      "Rank": "33",
+      "german": "dich",
+      "english": "you"
+    },
+    {
+      "Rank": "34",
+      "german": "war",
+      "english": "was"
+    },
+    {
+      "Rank": "35",
+      "german": "dass",
+      "english": "that"
+    },
+    {
+      "Rank": "36",
+      "german": "wenn",
+      "english": "if"
+    },
+    {
+      "Rank": "37",
+      "german": "an",
+      "english": "at"
+    },
+    {
+      "Rank": "38",
+      "german": "da",
+      "english": "there"
+    },
+    {
+      "Rank": "39",
+      "german": "nein",
+      "english": "No"
+    },
+    {
+      "Rank": "40",
+      "german": "bin",
+      "english": "am"
+    },
+    {
+      "Rank": "41",
+      "german": "noch",
+      "english": "still"
+    },
+    {
+      "Rank": "42",
+      "german": "dir",
+      "english": "you"
+    },
+    {
+      "Rank": "43",
+      "german": "nur",
+      "english": "just"
+    },
+    {
+      "Rank": "44",
+      "german": "habe",
+      "english": "have"
+    },
+    {
+      "Rank": "45",
+      "german": "ihr",
+      "english": "their"
+    },
+    {
+      "Rank": "46",
+      "german": "sich",
+      "english": "themselves"
+    },
+    {
+      "Rank": "47",
+      "german": "einen",
+      "english": "a"
+    },
+    {
+      "Rank": "48",
+      "german": "uns",
+      "english": "us"
+    },
+    {
+      "Rank": "49",
+      "german": "hast",
+      "english": "have"
+    },
+    {
+      "Rank": "51",
+      "german": "ihn",
+      "english": "him"
+    },
+    {
+      "Rank": "52",
+      "german": "aus",
+      "english": "out"
+    },
+    {
+      "Rank": "53",
+      "german": "kann",
+      "english": "can"
+    },
+    {
+      "Rank": "54",
+      "german": "gut",
+      "english": "Good"
+    },
+    {
+      "Rank": "55",
+      "german": "auch",
+      "english": "also"
+    },
+    {
+      "Rank": "56",
+      "german": "schon",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "57",
+      "german": "jetzt",
+      "english": "now"
+    },
+    {
+      "Rank": "58",
+      "german": "im",
+      "english": "in the"
+    },
+    {
+      "Rank": "59",
+      "german": "sein",
+      "english": "be"
+    },
+    {
+      "Rank": "60",
+      "german": "mal",
+      "english": "time"
+    },
+    {
+      "Rank": "61",
+      "german": "dann",
+      "english": "then"
+    },
+    {
+      "Rank": "62",
+      "german": "meine",
+      "english": "my"
+    },
+    {
+      "Rank": "63",
+      "german": "als",
+      "english": "as"
+    },
+    {
+      "Rank": "64",
+      "german": "um",
+      "english": "around"
+    },
+    {
+      "Rank": "65",
+      "german": "mein",
+      "english": "my"
+    },
+    {
+      "Rank": "66",
+      "german": "doch",
+      "english": "but"
+    },
+    {
+      "Rank": "67",
+      "german": "bist",
+      "english": "are"
+    },
+    {
+      "Rank": "68",
+      "german": "wird",
+      "english": "becomes"
+    },
+    {
+      "Rank": "69",
+      "german": "keine",
+      "english": "no"
+    },
+    {
+      "Rank": "70",
+      "german": "nach",
+      "english": "after"
+    },
+    {
+      "Rank": "71",
+      "german": "alles",
+      "english": "everything"
+    },
+    {
+      "Rank": "72",
+      "german": "man",
+      "english": "one"
+    },
+    {
+      "Rank": "73",
+      "german": "lch",
+      "english": "l"
+    },
+    {
+      "Rank": "74",
+      "german": "oder",
+      "english": "or"
+    },
+    {
+      "Rank": "75",
+      "german": "nichts",
+      "english": "nothing"
+    },
+    {
+      "Rank": "76",
+      "german": "wo",
+      "english": "Where"
+    },
+    {
+      "Rank": "77",
+      "german": "werden",
+      "english": "will"
+    },
+    {
+      "Rank": "78",
+      "german": "weiß",
+      "english": "White"
+    },
+    {
+      "Rank": "79",
+      "german": "will",
+      "english": "want"
+    },
+    {
+      "Rank": "80",
+      "german": "geht",
+      "english": "going"
+    },
+    {
+      "Rank": "81",
+      "german": "mehr",
+      "english": "more"
+    },
+    {
+      "Rank": "82",
+      "german": "warum",
+      "english": "Why"
+    },
+    {
+      "Rank": "83",
+      "german": "hab",
+      "english": "hab"
+    },
+    {
+      "Rank": "84",
+      "german": "ihnen",
+      "english": "them"
+    },
+    {
+      "Rank": "85",
+      "german": "bitte",
+      "english": "You're welcome"
+    },
+    {
+      "Rank": "86",
+      "german": "etwas",
+      "english": "something"
+    },
+    {
+      "Rank": "87",
+      "german": "bei",
+      "english": "at"
+    },
+    {
+      "Rank": "88",
+      "german": "muss",
+      "english": "have to be"
+    },
+    {
+      "Rank": "89",
+      "german": "los",
+      "english": "rid of"
+    },
+    {
+      "Rank": "90",
+      "german": "immer",
+      "english": "always"
+    },
+    {
+      "Rank": "91",
+      "german": "oh",
+      "english": "Oh"
+    },
+    {
+      "Rank": "92",
+      "german": "vor",
+      "english": "in front"
+    },
+    {
+      "Rank": "93",
+      "german": "mann",
+      "english": "man"
+    },
+    {
+      "Rank": "94",
+      "german": "zum",
+      "english": "to the"
+    },
+    {
+      "Rank": "95",
+      "german": "wieder",
+      "english": "again"
+    },
+    {
+      "Rank": "96",
+      "german": "sehr",
+      "english": "very"
+    },
+    {
+      "Rank": "97",
+      "german": "sehen",
+      "english": "see"
+    },
+    {
+      "Rank": "98",
+      "german": "sagen",
+      "english": "say"
+    },
+    {
+      "Rank": "99",
+      "german": "also",
+      "english": "so"
+    },
+    {
+      "Rank": "100",
+      "german": "gehen",
+      "english": "go"
+    },
+    {
+      "Rank": "101",
+      "german": "wer",
+      "english": "who"
+    },
+    {
+      "Rank": "102",
+      "german": "alle",
+      "english": "all"
+    },
+    {
+      "Rank": "103",
+      "german": "denn",
+      "english": "because"
+    },
+    {
+      "Rank": "104",
+      "german": "machen",
+      "english": "do"
+    },
+    {
+      "Rank": "105",
+      "german": "ihm",
+      "english": "him"
+    },
+    {
+      "Rank": "106",
+      "german": "können",
+      "english": "can"
+    },
+    {
+      "Rank": "107",
+      "german": "diese",
+      "english": "these"
+    },
+    {
+      "Rank": "108",
+      "german": "komm",
+      "english": "come over"
+    },
+    {
+      "Rank": "109",
+      "german": "danke",
+      "english": "thank"
+    },
+    {
+      "Rank": "110",
+      "german": "euch",
+      "english": "you"
+    },
+    {
+      "Rank": "111",
+      "german": "einem",
+      "english": "a"
+    },
+    {
+      "Rank": "112",
+      "german": "tun",
+      "english": "do"
+    },
+    {
+      "Rank": "113",
+      "german": "einer",
+      "english": "one"
+    },
+    {
+      "Rank": "114",
+      "german": "gibt",
+      "english": "gives"
+    },
+    {
+      "Rank": "115",
+      "german": "nie",
+      "english": "never"
+    },
+    {
+      "Rank": "116",
+      "german": "über",
+      "english": "about"
+    },
+    {
+      "Rank": "117",
+      "german": "des",
+      "english": "of"
+    },
+    {
+      "Rank": "118",
+      "german": "soll",
+      "english": "should"
+    },
+    {
+      "Rank": "119",
+      "german": "kein",
+      "english": "no"
+    },
+    {
+      "Rank": "120",
+      "german": "vielleicht",
+      "english": "maybe"
+    },
+    {
+      "Rank": "121",
+      "german": "weg",
+      "english": "away"
+    },
+    {
+      "Rank": "122",
+      "german": "deine",
+      "english": "yours"
+    },
+    {
+      "Rank": "123",
+      "german": "wissen",
+      "english": "knowledge"
+    },
+    {
+      "Rank": "124",
+      "german": "am",
+      "english": "at the"
+    },
+    {
+      "Rank": "125",
+      "german": "werde",
+      "english": "will"
+    },
+    {
+      "Rank": "126",
+      "german": "leben",
+      "english": "live"
+    },
+    {
+      "Rank": "127",
+      "german": "kommen",
+      "english": "come"
+    },
+    {
+      "Rank": "128",
+      "german": "kommt",
+      "english": "coming"
+    },
+    {
+      "Rank": "129",
+      "german": "müssen",
+      "english": "have to"
+    },
+    {
+      "Rank": "130",
+      "german": "viel",
+      "english": "a lot of"
+    },
+    {
+      "Rank": "131",
+      "german": "wirklich",
+      "english": "for real"
+    },
+    {
+      "Rank": "132",
+      "german": "frau",
+      "english": "Mrs"
+    },
+    {
+      "Rank": "133",
+      "german": "hatte",
+      "english": "would have"
+    },
+    {
+      "Rank": "134",
+      "german": "heute",
+      "english": "today"
+    },
+    {
+      "Rank": "135",
+      "german": "ok",
+      "english": "OK"
+    },
+    {
+      "Rank": "136",
+      "german": "willst",
+      "english": "want"
+    },
+    {
+      "Rank": "137",
+      "german": "dein",
+      "english": "your"
+    },
+    {
+      "Rank": "138",
+      "german": "würde",
+      "english": "would"
+    },
+    {
+      "Rank": "139",
+      "german": "tut",
+      "english": "does"
+    },
+    {
+      "Rank": "140",
+      "german": "ihre",
+      "english": "your"
+    },
+    {
+      "Rank": "141",
+      "german": "ganz",
+      "english": "all"
+    },
+    {
+      "Rank": "142",
+      "german": "zeit",
+      "english": "time"
+    },
+    {
+      "Rank": "143",
+      "german": "bis",
+      "english": "to"
+    },
+    {
+      "Rank": "144",
+      "german": "wollen",
+      "english": "want"
+    },
+    {
+      "Rank": "145",
+      "german": "einfach",
+      "english": "easy"
+    },
+    {
+      "Rank": "146",
+      "german": "macht",
+      "english": "power"
+    },
+    {
+      "Rank": "147",
+      "german": "gott",
+      "english": "God"
+    },
+    {
+      "Rank": "148",
+      "german": "zurück",
+      "english": "back"
+    },
+    {
+      "Rank": "149",
+      "german": "nun",
+      "english": "now"
+    },
+    {
+      "Rank": "150",
+      "german": "weil",
+      "english": "because"
+    },
+    {
+      "Rank": "151",
+      "german": "damit",
+      "english": "in order to"
+    },
+    {
+      "Rank": "152",
+      "german": "dieser",
+      "english": "this"
+    },
+    {
+      "Rank": "153",
+      "german": "kannst",
+      "english": "can"
+    },
+    {
+      "Rank": "154",
+      "german": "wurde",
+      "english": "has been"
+    },
+    {
+      "Rank": "155",
+      "german": "gesagt",
+      "english": "said"
+    },
+    {
+      "Rank": "156",
+      "german": "wäre",
+      "english": "would"
+    },
+    {
+      "Rank": "157",
+      "german": "seine",
+      "english": "his"
+    },
+    {
+      "Rank": "158",
+      "german": "wollte",
+      "english": "wanted"
+    },
+    {
+      "Rank": "159",
+      "german": "na",
+      "english": "n / A"
+    },
+    {
+      "Rank": "160",
+      "german": "zwei",
+      "english": "two"
+    },
+    {
+      "Rank": "161",
+      "german": "hallo",
+      "english": "Hello"
+    },
+    {
+      "Rank": "162",
+      "german": "meinen",
+      "english": "mean"
+    },
+    {
+      "Rank": "163",
+      "german": "sicher",
+      "english": "for sure"
+    },
+    {
+      "Rank": "164",
+      "german": "weißt",
+      "english": "know"
+    },
+    {
+      "Rank": "165",
+      "german": "sir",
+      "english": "sir"
+    },
+    {
+      "Rank": "166",
+      "german": "morgen",
+      "english": "tomorrow"
+    },
+    {
+      "Rank": "167",
+      "german": "ab",
+      "english": "from"
+    },
+    {
+      "Rank": "168",
+      "german": "leid",
+      "english": "sorry"
+    },
+    {
+      "Rank": "169",
+      "german": "lassen",
+      "english": "leave"
+    },
+    {
+      "Rank": "170",
+      "german": "hey",
+      "english": "hey"
+    },
+    {
+      "Rank": "171",
+      "german": "waren",
+      "english": "were"
+    },
+    {
+      "Rank": "172",
+      "german": "zur",
+      "english": "to"
+    },
+    {
+      "Rank": "173",
+      "german": "lass",
+      "english": "let"
+    },
+    {
+      "Rank": "174",
+      "german": "e",
+      "english": "e"
+    },
+    {
+      "Rank": "175",
+      "german": "geld",
+      "english": "money"
+    },
+    {
+      "Rank": "176",
+      "german": "liebe",
+      "english": "love"
+    },
+    {
+      "Rank": "177",
+      "german": "tag",
+      "english": "day"
+    },
+    {
+      "Rank": "178",
+      "german": "leute",
+      "english": "People"
+    },
+    {
+      "Rank": "179",
+      "german": "vater",
+      "english": "father"
+    },
+    {
+      "Rank": "180",
+      "german": "genau",
+      "english": "I agree"
+    },
+    {
+      "Rank": "181",
+      "german": "sagte",
+      "english": "said"
+    },
+    {
+      "Rank": "182",
+      "german": "hätte",
+      "english": "would have"
+    },
+    {
+      "Rank": "183",
+      "german": "mach",
+      "english": "Carry"
+    },
+    {
+      "Rank": "184",
+      "german": "raus",
+      "english": "out"
+    },
+    {
+      "Rank": "185",
+      "german": "durch",
+      "english": "by"
+    },
+    {
+      "Rank": "186",
+      "german": "lhr",
+      "english": "LHR"
+    },
+    {
+      "Rank": "187",
+      "german": "könnte",
+      "english": "could"
+    },
+    {
+      "Rank": "188",
+      "german": "schön",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "189",
+      "german": "wohl",
+      "english": "well"
+    },
+    {
+      "Rank": "190",
+      "german": "gesehen",
+      "english": "seen"
+    },
+    {
+      "Rank": "191",
+      "german": "keinen",
+      "english": "no"
+    },
+    {
+      "Rank": "192",
+      "german": "klar",
+      "english": "clear"
+    },
+    {
+      "Rank": "193",
+      "german": "glaube",
+      "english": "faith"
+    },
+    {
+      "Rank": "194",
+      "german": "her",
+      "english": "here"
+    },
+    {
+      "Rank": "195",
+      "german": "okay",
+      "english": "OK"
+    },
+    {
+      "Rank": "196",
+      "german": "mutter",
+      "english": "mother"
+    },
+    {
+      "Rank": "197",
+      "german": "sag",
+      "english": "say"
+    },
+    {
+      "Rank": "198",
+      "german": "dieses",
+      "english": "this"
+    },
+    {
+      "Rank": "199",
+      "german": "nacht",
+      "english": "night"
+    },
+    {
+      "Rank": "200",
+      "german": "besser",
+      "english": "better"
+    },
+    {
+      "Rank": "201",
+      "german": "ohne",
+      "english": "without"
+    },
+    {
+      "Rank": "202",
+      "german": "unsere",
+      "english": "our"
+    },
+    {
+      "Rank": "203",
+      "german": "jemand",
+      "english": "someone"
+    },
+    {
+      "Rank": "204",
+      "german": "sei",
+      "english": "be"
+    },
+    {
+      "Rank": "205",
+      "german": "reden",
+      "english": "talk"
+    },
+    {
+      "Rank": "206",
+      "german": "gerade",
+      "english": "just"
+    },
+    {
+      "Rank": "207",
+      "german": "ob",
+      "english": "if"
+    },
+    {
+      "Rank": "208",
+      "german": "gehört",
+      "english": "belongs"
+    },
+    {
+      "Rank": "209",
+      "german": "geh",
+      "english": "geh"
+    },
+    {
+      "Rank": "210",
+      "german": "möchte",
+      "english": "would like"
+    },
+    {
+      "Rank": "211",
+      "german": "dort",
+      "english": "there"
+    },
+    {
+      "Rank": "212",
+      "german": "sagt",
+      "english": "says"
+    },
+    {
+      "Rank": "213",
+      "german": "anderen",
+      "english": "other"
+    },
+    {
+      "Rank": "214",
+      "german": "gemacht",
+      "english": "made"
+    },
+    {
+      "Rank": "215",
+      "german": "hör",
+      "english": "listen"
+    },
+    {
+      "Rank": "216",
+      "german": "sollte",
+      "english": "should"
+    },
+    {
+      "Rank": "217",
+      "german": "selbst",
+      "english": "even"
+    },
+    {
+      "Rank": "218",
+      "german": "diesen",
+      "english": "these"
+    },
+    {
+      "Rank": "219",
+      "german": "gute",
+      "english": "quality"
+    },
+    {
+      "Rank": "220",
+      "german": "dachte",
+      "english": "thought"
+    },
+    {
+      "Rank": "221",
+      "german": "paar",
+      "english": "pair"
+    },
+    {
+      "Rank": "222",
+      "german": "weiter",
+      "english": "continue"
+    },
+    {
+      "Rank": "223",
+      "german": "vom",
+      "english": "from"
+    },
+    {
+      "Rank": "224",
+      "german": "ins",
+      "english": "in the"
+    },
+    {
+      "Rank": "225",
+      "german": "herr",
+      "english": "Lord"
+    },
+    {
+      "Rank": "226",
+      "german": "wirst",
+      "english": "will"
+    },
+    {
+      "Rank": "227",
+      "german": "geben",
+      "english": "give"
+    },
+    {
+      "Rank": "228",
+      "german": "ordnung",
+      "english": "order"
+    },
+    {
+      "Rank": "229",
+      "german": "passiert",
+      "english": "happens"
+    },
+    {
+      "Rank": "230",
+      "german": "meiner",
+      "english": "mine"
+    },
+    {
+      "Rank": "231",
+      "german": "lange",
+      "english": "length"
+    },
+    {
+      "Rank": "232",
+      "german": "gar",
+      "english": "at all"
+    },
+    {
+      "Rank": "233",
+      "german": "mädchen",
+      "english": "girl"
+    },
+    {
+      "Rank": "234",
+      "german": "meinem",
+      "english": "my"
+    },
+    {
+      "Rank": "235",
+      "german": "hören",
+      "english": "hear"
+    },
+    {
+      "Rank": "236",
+      "german": "sieht",
+      "english": "looks"
+    },
+    {
+      "Rank": "237",
+      "german": "daß",
+      "english": "that"
+    },
+    {
+      "Rank": "238",
+      "german": "guten",
+      "english": "good"
+    },
+    {
+      "Rank": "239",
+      "german": "hin",
+      "english": "down"
+    },
+    {
+      "Rank": "240",
+      "german": "gleich",
+      "english": "equal"
+    },
+    {
+      "Rank": "241",
+      "german": "ach",
+      "english": "Oh"
+    },
+    {
+      "Rank": "242",
+      "german": "diesem",
+      "english": "this"
+    },
+    {
+      "Rank": "243",
+      "german": "freund",
+      "english": "friend"
+    },
+    {
+      "Rank": "244",
+      "german": "seit",
+      "english": "since"
+    },
+    {
+      "Rank": "245",
+      "german": "welt",
+      "english": "world"
+    },
+    {
+      "Rank": "246",
+      "german": "musst",
+      "english": "must"
+    },
+    {
+      "Rank": "247",
+      "german": "hause",
+      "english": "home"
+    },
+    {
+      "Rank": "248",
+      "german": "natürlich",
+      "english": "Naturally"
+    },
+    {
+      "Rank": "249",
+      "german": "abend",
+      "english": "Eve"
+    },
+    {
+      "Rank": "250",
+      "german": "angst",
+      "english": "anxiety"
+    },
+    {
+      "Rank": "251",
+      "german": "drei",
+      "english": "three"
+    },
+    {
+      "Rank": "252",
+      "german": "recht",
+      "english": "pretty"
+    },
+    {
+      "Rank": "253",
+      "german": "richtig",
+      "english": "correct"
+    },
+    {
+      "Rank": "254",
+      "german": "viele",
+      "english": "lots"
+    },
+    {
+      "Rank": "255",
+      "german": "deinen",
+      "english": "your"
+    },
+    {
+      "Rank": "256",
+      "german": "finden",
+      "english": "find"
+    },
+    {
+      "Rank": "257",
+      "german": "wieso",
+      "english": "how so"
+    },
+    {
+      "Rank": "258",
+      "german": "bleiben",
+      "english": "stay"
+    },
+    {
+      "Rank": "259",
+      "german": "tot",
+      "english": "dead"
+    },
+    {
+      "Rank": "260",
+      "german": "unter",
+      "english": "among"
+    },
+    {
+      "Rank": "261",
+      "german": "junge",
+      "english": "Boy"
+    },
+    {
+      "Rank": "262",
+      "german": "haus",
+      "english": "House"
+    },
+    {
+      "Rank": "263",
+      "german": "rein",
+      "english": "purely"
+    },
+    {
+      "Rank": "264",
+      "german": "essen",
+      "english": "eat"
+    },
+    {
+      "Rank": "265",
+      "german": "davon",
+      "english": "from that"
+    },
+    {
+      "Rank": "266",
+      "german": "nehmen",
+      "english": "to take"
+    },
+    {
+      "Rank": "267",
+      "german": "sollen",
+      "english": "should"
+    },
+    {
+      "Rank": "268",
+      "german": "helfen",
+      "english": "help"
+    },
+    {
+      "Rank": "269",
+      "german": "schnell",
+      "english": "fast"
+    },
+    {
+      "Rank": "270",
+      "german": "machst",
+      "english": "doing"
+    },
+    {
+      "Rank": "271",
+      "german": "eines",
+      "english": "one"
+    },
+    {
+      "Rank": "272",
+      "german": "andere",
+      "english": "other"
+    },
+    {
+      "Rank": "273",
+      "german": "unser",
+      "english": "our"
+    },
+    {
+      "Rank": "274",
+      "german": "warte",
+      "english": "wait"
+    },
+    {
+      "Rank": "275",
+      "german": "wegen",
+      "english": "because of"
+    },
+    {
+      "Rank": "276",
+      "german": "menschen",
+      "english": "People"
+    },
+    {
+      "Rank": "277",
+      "german": "stimmt",
+      "english": "agreed"
+    },
+    {
+      "Rank": "278",
+      "german": "dafür",
+      "english": "for this"
+    },
+    {
+      "Rank": "279",
+      "german": "darf",
+      "english": "allowed"
+    },
+    {
+      "Rank": "280",
+      "german": "kinder",
+      "english": "children"
+    },
+    {
+      "Rank": "281",
+      "german": "genug",
+      "english": "enough"
+    },
+    {
+      "Rank": "282",
+      "german": "sonst",
+      "english": "otherwise"
+    },
+    {
+      "Rank": "283",
+      "german": "ganze",
+      "english": "whole"
+    },
+    {
+      "Rank": "284",
+      "german": "scheiße",
+      "english": "crap"
+    },
+    {
+      "Rank": "285",
+      "german": "he",
+      "english": "hey"
+    },
+    {
+      "Rank": "286",
+      "german": "halt",
+      "english": "stop"
+    },
+    {
+      "Rank": "287",
+      "german": "sollten",
+      "english": "should"
+    },
+    {
+      "Rank": "288",
+      "german": "zusammen",
+      "english": "together"
+    },
+    {
+      "Rank": "289",
+      "german": "gegen",
+      "english": "against"
+    },
+    {
+      "Rank": "290",
+      "german": "jahre",
+      "english": "years"
+    },
+    {
+      "Rank": "291",
+      "german": "erst",
+      "english": "only"
+    },
+    {
+      "Rank": "292",
+      "german": "denke",
+      "english": "think"
+    },
+    {
+      "Rank": "293",
+      "german": "steht",
+      "english": "stands"
+    },
+    {
+      "Rank": "294",
+      "german": "habt",
+      "english": "have"
+    },
+    {
+      "Rank": "295",
+      "german": "verdammt",
+      "english": "damned"
+    },
+    {
+      "Rank": "296",
+      "german": "moment",
+      "english": "moment"
+    },
+    {
+      "Rank": "297",
+      "german": "ihren",
+      "english": "their"
+    },
+    {
+      "Rank": "298",
+      "german": "glauben",
+      "english": "believe"
+    },
+    {
+      "Rank": "299",
+      "german": "bringen",
+      "english": "bring"
+    },
+    {
+      "Rank": "300",
+      "german": "gib",
+      "english": "gib"
+    },
+    {
+      "Rank": "301",
+      "german": "seid",
+      "english": "are"
+    },
+    {
+      "Rank": "302",
+      "german": "niemand",
+      "english": "no one"
+    },
+    {
+      "Rank": "303",
+      "german": "warten",
+      "english": "waiting"
+    },
+    {
+      "Rank": "304",
+      "german": "brauchen",
+      "english": "need"
+    },
+    {
+      "Rank": "305",
+      "german": "lhre",
+      "english": "Their"
+    },
+    {
+      "Rank": "306",
+      "german": "fragen",
+      "english": "ask"
+    },
+    {
+      "Rank": "307",
+      "german": "arbeit",
+      "english": "job"
+    },
+    {
+      "Rank": "308",
+      "german": "wann",
+      "english": "when"
+    },
+    {
+      "Rank": "309",
+      "german": "heißt",
+      "english": "called"
+    },
+    {
+      "Rank": "310",
+      "german": "sprechen",
+      "english": "speak"
+    },
+    {
+      "Rank": "311",
+      "german": "siehst",
+      "english": "look"
+    },
+    {
+      "Rank": "312",
+      "german": "jeder",
+      "english": "each"
+    },
+    {
+      "Rank": "313",
+      "german": "kam",
+      "english": "came"
+    },
+    {
+      "Rank": "314",
+      "german": "sofort",
+      "english": "immediately"
+    },
+    {
+      "Rank": "315",
+      "german": "getan",
+      "english": "done"
+    },
+    {
+      "Rank": "316",
+      "german": "fertig",
+      "english": "done"
+    },
+    {
+      "Rank": "317",
+      "german": "kennen",
+      "english": "know"
+    },
+    {
+      "Rank": "318",
+      "german": "einmal",
+      "english": "once"
+    },
+    {
+      "Rank": "319",
+      "german": "sohn",
+      "english": "son"
+    },
+    {
+      "Rank": "320",
+      "german": "halten",
+      "english": "hold"
+    },
+    {
+      "Rank": "321",
+      "german": "dabei",
+      "english": "there"
+    },
+    {
+      "Rank": "322",
+      "german": "hatten",
+      "english": "had"
+    },
+    {
+      "Rank": "323",
+      "german": "männer",
+      "english": "men"
+    },
+    {
+      "Rank": "324",
+      "german": "kind",
+      "english": "child"
+    },
+    {
+      "Rank": "325",
+      "german": "jahren",
+      "english": "years"
+    },
+    {
+      "Rank": "326",
+      "german": "beim",
+      "english": "at the"
+    },
+    {
+      "Rank": "327",
+      "german": "seinen",
+      "english": "his"
+    },
+    {
+      "Rank": "328",
+      "german": "mag",
+      "english": "like"
+    },
+    {
+      "Rank": "329",
+      "german": "komme",
+      "english": "get"
+    },
+    {
+      "Rank": "330",
+      "german": "allein",
+      "english": "alone"
+    },
+    {
+      "Rank": "331",
+      "german": "bevor",
+      "english": "before"
+    },
+    {
+      "Rank": "332",
+      "german": "bruder",
+      "english": "brothers"
+    },
+    {
+      "Rank": "333",
+      "german": "musik",
+      "english": "music"
+    },
+    {
+      "Rank": "334",
+      "german": "wahr",
+      "english": "true"
+    },
+    {
+      "Rank": "335",
+      "german": "konnte",
+      "english": "could"
+    },
+    {
+      "Rank": "336",
+      "german": "lieber",
+      "english": "Dear"
+    },
+    {
+      "Rank": "337",
+      "german": "uhr",
+      "english": "Clock"
+    },
+    {
+      "Rank": "338",
+      "german": "kopf",
+      "english": "head"
+    },
+    {
+      "Rank": "339",
+      "german": "sache",
+      "english": "Thing"
+    },
+    {
+      "Rank": "340",
+      "german": "gern",
+      "english": "gladly"
+    },
+    {
+      "Rank": "341",
+      "german": "denken",
+      "english": "think"
+    },
+    {
+      "Rank": "342",
+      "german": "brauche",
+      "english": "need"
+    },
+    {
+      "Rank": "343",
+      "german": "ende",
+      "english": "end"
+    },
+    {
+      "Rank": "344",
+      "german": "später",
+      "english": "later"
+    },
+    {
+      "Rank": "345",
+      "german": "gehe",
+      "english": "go"
+    },
+    {
+      "Rank": "346",
+      "german": "vergessen",
+      "english": "to forget"
+    },
+    {
+      "Rank": "347",
+      "german": "runter",
+      "english": "down"
+    },
+    {
+      "Rank": "348",
+      "german": "fahren",
+      "english": "drive"
+    },
+    {
+      "Rank": "349",
+      "german": "sieh",
+      "english": "visit"
+    },
+    {
+      "Rank": "350",
+      "german": "warst",
+      "english": "were"
+    },
+    {
+      "Rank": "351",
+      "german": "stadt",
+      "english": "City"
+    },
+    {
+      "Rank": "352",
+      "german": "namen",
+      "english": "names"
+    },
+    {
+      "Rank": "353",
+      "german": "problem",
+      "english": "problem"
+    },
+    {
+      "Rank": "354",
+      "german": "sehe",
+      "english": "see"
+    },
+    {
+      "Rank": "355",
+      "german": "augen",
+      "english": "eyes"
+    },
+    {
+      "Rank": "356",
+      "german": "gab",
+      "english": "gave"
+    },
+    {
+      "Rank": "357",
+      "german": "dank",
+      "english": "thanks"
+    },
+    {
+      "Rank": "358",
+      "german": "sage",
+      "english": "saw"
+    },
+    {
+      "Rank": "359",
+      "german": "würden",
+      "english": "would"
+    },
+    {
+      "Rank": "360",
+      "german": "eins",
+      "english": "one"
+    },
+    {
+      "Rank": "361",
+      "german": "daran",
+      "english": "it"
+    },
+    {
+      "Rank": "362",
+      "german": "dazu",
+      "english": "to"
+    },
+    {
+      "Rank": "363",
+      "german": "egal",
+      "english": "no matter"
+    },
+    {
+      "Rank": "364",
+      "german": "frage",
+      "english": "question"
+    },
+    {
+      "Rank": "365",
+      "german": "weit",
+      "english": "far"
+    },
+    {
+      "Rank": "366",
+      "german": "familie",
+      "english": "family"
+    },
+    {
+      "Rank": "367",
+      "german": "sterben",
+      "english": "to die"
+    },
+    {
+      "Rank": "368",
+      "german": "könnten",
+      "english": "could"
+    },
+    {
+      "Rank": "369",
+      "german": "jungs",
+      "english": "guys"
+    },
+    {
+      "Rank": "370",
+      "german": "jeden",
+      "english": "each"
+    },
+    {
+      "Rank": "371",
+      "german": "minuten",
+      "english": "minutes"
+    },
+    {
+      "Rank": "372",
+      "german": "verstehe",
+      "english": "understand"
+    },
+    {
+      "Rank": "373",
+      "german": "deiner",
+      "english": "yours"
+    },
+    {
+      "Rank": "374",
+      "german": "hilfe",
+      "english": "Help"
+    },
+    {
+      "Rank": "375",
+      "german": "beide",
+      "english": "both"
+    },
+    {
+      "Rank": "376",
+      "german": "bald",
+      "english": "soon"
+    },
+    {
+      "Rank": "377",
+      "german": "all",
+      "english": "all"
+    },
+    {
+      "Rank": "378",
+      "german": "deinem",
+      "english": "your"
+    },
+    {
+      "Rank": "379",
+      "german": "nimm",
+      "english": "take"
+    },
+    {
+      "Rank": "380",
+      "german": "kleine",
+      "english": "small"
+    },
+    {
+      "Rank": "381",
+      "german": "baby",
+      "english": "infant"
+    },
+    {
+      "Rank": "382",
+      "german": "glück",
+      "english": "happiness"
+    },
+    {
+      "Rank": "383",
+      "german": "freunde",
+      "english": "friends"
+    },
+    {
+      "Rank": "384",
+      "german": "wusste",
+      "english": "knew"
+    },
+    {
+      "Rank": "385",
+      "german": "verrückt",
+      "english": "crazy"
+    },
+    {
+      "Rank": "386",
+      "german": "ruhig",
+      "english": "quiet"
+    },
+    {
+      "Rank": "387",
+      "german": "land",
+      "english": "country"
+    },
+    {
+      "Rank": "388",
+      "german": "darüber",
+      "english": "about that"
+    },
+    {
+      "Rank": "389",
+      "german": "gefunden",
+      "english": "found"
+    },
+    {
+      "Rank": "390",
+      "german": "tür",
+      "english": "door"
+    },
+    {
+      "Rank": "391",
+      "german": "mache",
+      "english": "make"
+    },
+    {
+      "Rank": "392",
+      "german": "seiner",
+      "english": "his"
+    },
+    {
+      "Rank": "393",
+      "german": "wasser",
+      "english": "water"
+    },
+    {
+      "Rank": "394",
+      "german": "auto",
+      "english": "car"
+    },
+    {
+      "Rank": "395",
+      "german": "sah",
+      "english": "saw"
+    },
+    {
+      "Rank": "396",
+      "german": "dies",
+      "english": "this"
+    },
+    {
+      "Rank": "397",
+      "german": "eigentlich",
+      "english": "actually"
+    },
+    {
+      "Rank": "398",
+      "german": "eure",
+      "english": "your"
+    },
+    {
+      "Rank": "399",
+      "german": "ruhe",
+      "english": "Quiet"
+    },
+    {
+      "Rank": "400",
+      "german": "stehen",
+      "english": "to stand"
+    },
+    {
+      "Rank": "401",
+      "german": "hand",
+      "english": "hand"
+    },
+    {
+      "Rank": "402",
+      "german": "ihrer",
+      "english": "of their"
+    },
+    {
+      "Rank": "403",
+      "german": "frauen",
+      "english": "women"
+    },
+    {
+      "Rank": "404",
+      "german": "meinst",
+      "english": "mean"
+    },
+    {
+      "Rank": "405",
+      "german": "töten",
+      "english": "kill"
+    },
+    {
+      "Rank": "406",
+      "german": "fall",
+      "english": "case"
+    },
+    {
+      "Rank": "407",
+      "german": "ging",
+      "english": "went"
+    },
+    {
+      "Rank": "408",
+      "german": "polizei",
+      "english": "police"
+    },
+    {
+      "Rank": "409",
+      "german": "vorbei",
+      "english": "past"
+    },
+    {
+      "Rank": "410",
+      "german": "krieg",
+      "english": "war"
+    },
+    {
+      "Rank": "411",
+      "german": "je",
+      "english": "ever"
+    },
+    {
+      "Rank": "412",
+      "german": "darauf",
+      "english": "thereon"
+    },
+    {
+      "Rank": "413",
+      "german": "vielen",
+      "english": "a lot of"
+    },
+    {
+      "Rank": "414",
+      "german": "letzte",
+      "english": "last"
+    },
+    {
+      "Rank": "415",
+      "german": "lang",
+      "english": "long"
+    },
+    {
+      "Rank": "416",
+      "german": "bisschen",
+      "english": "bit"
+    },
+    {
+      "Rank": "417",
+      "german": "dran",
+      "english": "tuned"
+    },
+    {
+      "Rank": "418",
+      "german": "hoch",
+      "english": "high"
+    },
+    {
+      "Rank": "419",
+      "german": "kenne",
+      "english": "know"
+    },
+    {
+      "Rank": "420",
+      "german": "fast",
+      "english": "almost"
+    },
+    {
+      "Rank": "421",
+      "german": "ganzen",
+      "english": "all"
+    },
+    {
+      "Rank": "422",
+      "german": "schau",
+      "english": "show"
+    },
+    {
+      "Rank": "423",
+      "german": "sogar",
+      "english": "even"
+    },
+    {
+      "Rank": "424",
+      "german": "spielen",
+      "english": "play"
+    },
+    {
+      "Rank": "425",
+      "german": "wurden",
+      "english": "were"
+    },
+    {
+      "Rank": "426",
+      "german": "hinter",
+      "english": "Behind"
+    },
+    {
+      "Rank": "427",
+      "german": "teufel",
+      "english": "devil"
+    },
+    {
+      "Rank": "428",
+      "german": "dinge",
+      "english": "things"
+    },
+    {
+      "Rank": "429",
+      "german": "keiner",
+      "english": "none"
+    },
+    {
+      "Rank": "430",
+      "german": "mama",
+      "english": "mama"
+    },
+    {
+      "Rank": "431",
+      "german": "spät",
+      "english": "late"
+    },
+    {
+      "Rank": "432",
+      "german": "bekommen",
+      "english": "get"
+    },
+    {
+      "Rank": "433",
+      "german": "oben",
+      "english": "above"
+    },
+    {
+      "Rank": "434",
+      "german": "name",
+      "english": "name"
+    },
+    {
+      "Rank": "435",
+      "german": "hört",
+      "english": "hears"
+    },
+    {
+      "Rank": "436",
+      "german": "hätten",
+      "english": "would"
+    },
+    {
+      "Rank": "437",
+      "german": "bereit",
+      "english": "ready"
+    },
+    {
+      "Rank": "438",
+      "german": "drin",
+      "english": "in it"
+    },
+    {
+      "Rank": "439",
+      "german": "neue",
+      "english": "new"
+    },
+    {
+      "Rank": "440",
+      "german": "kommst",
+      "english": "coming"
+    },
+    {
+      "Rank": "441",
+      "german": "woher",
+      "english": "from where"
+    },
+    {
+      "Rank": "442",
+      "german": "ihrem",
+      "english": "their"
+    },
+    {
+      "Rank": "443",
+      "german": "wagen",
+      "english": "dare"
+    },
+    {
+      "Rank": "444",
+      "german": "arbeiten",
+      "english": "work"
+    },
+    {
+      "Rank": "445",
+      "german": "verstehen",
+      "english": "understand"
+    },
+    {
+      "Rank": "446",
+      "german": "jahr",
+      "english": "year"
+    },
+    {
+      "Rank": "447",
+      "german": "tod",
+      "english": "death"
+    },
+    {
+      "Rank": "448",
+      "german": "etwa",
+      "english": "about"
+    },
+    {
+      "Rank": "449",
+      "german": "echt",
+      "english": "real"
+    },
+    {
+      "Rank": "450",
+      "german": "seinem",
+      "english": "his"
+    },
+    {
+      "Rank": "451",
+      "german": "geschichte",
+      "english": "story"
+    },
+    {
+      "Rank": "452",
+      "german": "bringt",
+      "english": "brings"
+    },
+    {
+      "Rank": "453",
+      "german": "braucht",
+      "english": "need"
+    },
+    {
+      "Rank": "454",
+      "german": "treffen",
+      "english": "to meet"
+    },
+    {
+      "Rank": "455",
+      "german": "toll",
+      "english": "Great"
+    },
+    {
+      "Rank": "456",
+      "german": "gerne",
+      "english": "with pleasure"
+    },
+    {
+      "Rank": "457",
+      "german": "draußen",
+      "english": "outside"
+    },
+    {
+      "Rank": "458",
+      "german": "fünf",
+      "english": "five"
+    },
+    {
+      "Rank": "459",
+      "german": "lhnen",
+      "english": "wages sent"
+    },
+    {
+      "Rank": "460",
+      "german": "zimmer",
+      "english": "room"
+    },
+    {
+      "Rank": "461",
+      "german": "job",
+      "english": "job"
+    },
+    {
+      "Rank": "462",
+      "german": "nett",
+      "english": "nice"
+    },
+    {
+      "Rank": "463",
+      "german": "weiss",
+      "english": "knows"
+    },
+    {
+      "Rank": "465",
+      "german": "spiel",
+      "english": "game"
+    },
+    {
+      "Rank": "466",
+      "german": "verstanden",
+      "english": "Roger that"
+    },
+    {
+      "Rank": "467",
+      "german": "miss",
+      "english": "miss"
+    },
+    {
+      "Rank": "468",
+      "german": "große",
+      "english": "size"
+    },
+    {
+      "Rank": "469",
+      "german": "anders",
+      "english": "otherwise"
+    },
+    {
+      "Rank": "470",
+      "german": "sorgen",
+      "english": "to care"
+    },
+    {
+      "Rank": "471",
+      "german": "welche",
+      "english": "Which"
+    },
+    {
+      "Rank": "472",
+      "german": "einzige",
+      "english": "only one"
+    },
+    {
+      "Rank": "473",
+      "german": "art",
+      "english": "kind"
+    },
+    {
+      "Rank": "474",
+      "german": "liegt",
+      "english": "lies"
+    },
+    {
+      "Rank": "475",
+      "german": "verloren",
+      "english": "lost"
+    },
+    {
+      "Rank": "476",
+      "german": "ahnung",
+      "english": "idea"
+    },
+    {
+      "Rank": "477",
+      "german": "vier",
+      "english": "four"
+    },
+    {
+      "Rank": "478",
+      "german": "alter",
+      "english": "older"
+    },
+    {
+      "Rank": "479",
+      "german": "gekommen",
+      "english": "come"
+    },
+    {
+      "Rank": "480",
+      "german": "jemanden",
+      "english": "someone"
+    },
+    {
+      "Rank": "481",
+      "german": "gehst",
+      "english": "going"
+    },
+    {
+      "Rank": "482",
+      "german": "woche",
+      "english": "week"
+    },
+    {
+      "Rank": "483",
+      "german": "kerl",
+      "english": "Guy"
+    },
+    {
+      "Rank": "484",
+      "german": "hi",
+      "english": "Hi"
+    },
+    {
+      "Rank": "485",
+      "german": "john",
+      "english": "John"
+    },
+    {
+      "Rank": "486",
+      "german": "gestern",
+      "english": "yesterday"
+    },
+    {
+      "Rank": "487",
+      "german": "wenig",
+      "english": "little"
+    },
+    {
+      "Rank": "488",
+      "german": "bestimmt",
+      "english": "certainly"
+    },
+    {
+      "Rank": "489",
+      "german": "kurz",
+      "english": "short"
+    },
+    {
+      "Rank": "490",
+      "german": "überhaupt",
+      "english": "at all"
+    },
+    {
+      "Rank": "491",
+      "german": "finde",
+      "english": "find"
+    },
+    {
+      "Rank": "492",
+      "german": "darum",
+      "english": "therefore"
+    },
+    {
+      "Rank": "493",
+      "german": "tage",
+      "english": "days"
+    },
+    {
+      "Rank": "494",
+      "german": "erste",
+      "english": "first"
+    },
+    {
+      "Rank": "495",
+      "german": "schwester",
+      "english": "sister"
+    },
+    {
+      "Rank": "496",
+      "german": "schwer",
+      "english": "heavy"
+    },
+    {
+      "Rank": "497",
+      "german": "suchen",
+      "english": "search"
+    },
+    {
+      "Rank": "498",
+      "german": "bleibt",
+      "english": "remains"
+    },
+    {
+      "Rank": "499",
+      "german": "tochter",
+      "english": "daughter"
+    },
+    {
+      "Rank": "500",
+      "german": "typ",
+      "english": "Type"
+    },
+    {
+      "Rank": "501",
+      "german": "guter",
+      "english": "goods"
+    },
+    {
+      "Rank": "502",
+      "german": "gewesen",
+      "english": "been"
+    },
+    {
+      "Rank": "503",
+      "german": "grund",
+      "english": "reason"
+    },
+    {
+      "Rank": "504",
+      "german": "zeigen",
+      "english": "show"
+    },
+    {
+      "Rank": "505",
+      "german": "film",
+      "english": "Movie"
+    },
+    {
+      "Rank": "506",
+      "german": "schlecht",
+      "english": "badly"
+    },
+    {
+      "Rank": "507",
+      "german": "schatz",
+      "english": "treasure"
+    },
+    {
+      "Rank": "508",
+      "german": "deshalb",
+      "english": "that's why"
+    },
+    {
+      "Rank": "509",
+      "german": "holen",
+      "english": "get"
+    },
+    {
+      "Rank": "510",
+      "german": "hoffe",
+      "english": "hope"
+    },
+    {
+      "Rank": "511",
+      "german": "tu",
+      "english": "tu"
+    },
+    {
+      "Rank": "512",
+      "german": "sagst",
+      "english": "say"
+    },
+    {
+      "Rank": "513",
+      "german": "bett",
+      "english": "bed"
+    },
+    {
+      "Rank": "514",
+      "german": "muß",
+      "english": "have to be"
+    },
+    {
+      "Rank": "515",
+      "german": "seite",
+      "english": "page"
+    },
+    {
+      "Rank": "516",
+      "german": "gefällt",
+      "english": "like"
+    },
+    {
+      "Rank": "517",
+      "german": "eben",
+      "english": "just"
+    },
+    {
+      "Rank": "518",
+      "german": "lasst",
+      "english": "let"
+    },
+    {
+      "Rank": "519",
+      "german": "gefallen",
+      "english": "like"
+    },
+    {
+      "Rank": "520",
+      "german": "stunden",
+      "english": "hours"
+    },
+    {
+      "Rank": "521",
+      "german": "herz",
+      "english": "heart"
+    },
+    {
+      "Rank": "522",
+      "german": "wohin",
+      "english": "where"
+    },
+    {
+      "Rank": "523",
+      "german": "trinken",
+      "english": "drink"
+    },
+    {
+      "Rank": "524",
+      "german": "letzten",
+      "english": "last"
+    },
+    {
+      "Rank": "525",
+      "german": "mensch",
+      "english": "human"
+    },
+    {
+      "Rank": "526",
+      "german": "ersten",
+      "english": "first"
+    },
+    {
+      "Rank": "527",
+      "german": "n",
+      "english": "n"
+    },
+    {
+      "Rank": "528",
+      "german": "unten",
+      "english": "below"
+    },
+    {
+      "Rank": "529",
+      "german": "gesicht",
+      "english": "face"
+    },
+    {
+      "Rank": "530",
+      "german": "versuchen",
+      "english": "to attempt"
+    },
+    {
+      "Rank": "531",
+      "german": "wort",
+      "english": "word"
+    },
+    {
+      "Rank": "532",
+      "german": "denen",
+      "english": "to those"
+    },
+    {
+      "Rank": "533",
+      "german": "verlassen",
+      "english": "leaving"
+    },
+    {
+      "Rank": "534",
+      "german": "endlich",
+      "english": "Finally"
+    },
+    {
+      "Rank": "535",
+      "german": "denkst",
+      "english": "think"
+    },
+    {
+      "Rank": "536",
+      "german": "solltest",
+      "english": "should"
+    },
+    {
+      "Rank": "537",
+      "german": "schlafen",
+      "english": "sleep"
+    },
+    {
+      "Rank": "538",
+      "german": "ziemlich",
+      "english": "quite"
+    },
+    {
+      "Rank": "539",
+      "german": "jack",
+      "english": "Jack"
+    },
+    {
+      "Rank": "540",
+      "german": "dollar",
+      "english": "dollar"
+    },
+    {
+      "Rank": "541",
+      "german": "arsch",
+      "english": "ass"
+    },
+    {
+      "Rank": "542",
+      "german": "manchmal",
+      "english": "sometimes"
+    },
+    {
+      "Rank": "543",
+      "german": "fest",
+      "english": "firmly"
+    },
+    {
+      "Rank": "544",
+      "german": "wiedersehen",
+      "english": "see again"
+    },
+    {
+      "Rank": "545",
+      "german": "beste",
+      "english": "best"
+    },
+    {
+      "Rank": "546",
+      "german": "kleinen",
+      "english": "small"
+    },
+    {
+      "Rank": "547",
+      "german": "kriegen",
+      "english": "get"
+    },
+    {
+      "Rank": "548",
+      "german": "läuft",
+      "english": "Browsing"
+    },
+    {
+      "Rank": "549",
+      "german": "wahrheit",
+      "english": "truth"
+    },
+    {
+      "Rank": "550",
+      "german": "zwischen",
+      "english": "in between"
+    },
+    {
+      "Rank": "551",
+      "german": "niemals",
+      "english": "no way"
+    },
+    {
+      "Rank": "552",
+      "german": "bring",
+      "english": "bring"
+    },
+    {
+      "Rank": "553",
+      "german": "unserer",
+      "english": "our"
+    },
+    {
+      "Rank": "554",
+      "german": "nehme",
+      "english": "take"
+    },
+    {
+      "Rank": "555",
+      "german": "allen",
+      "english": "all"
+    },
+    {
+      "Rank": "556",
+      "german": "während",
+      "english": "while"
+    },
+    {
+      "Rank": "557",
+      "german": "glaubst",
+      "english": "think"
+    },
+    {
+      "Rank": "558",
+      "german": "ding",
+      "english": "thing"
+    },
+    {
+      "Rank": "559",
+      "german": "idee",
+      "english": "idea"
+    },
+    {
+      "Rank": "560",
+      "german": "wollten",
+      "english": "wanted to"
+    },
+    {
+      "Rank": "561",
+      "german": "lässt",
+      "english": "leaves"
+    },
+    {
+      "Rank": "562",
+      "german": "musste",
+      "english": "had to"
+    },
+    {
+      "Rank": "563",
+      "german": "sachen",
+      "english": "stuff"
+    },
+    {
+      "Rank": "564",
+      "german": "ah",
+      "english": "Ah"
+    },
+    {
+      "Rank": "565",
+      "german": "bleib",
+      "english": "permanent"
+    },
+    {
+      "Rank": "566",
+      "german": "kleiner",
+      "english": "smaller"
+    },
+    {
+      "Rank": "567",
+      "german": "euer",
+      "english": "your"
+    },
+    {
+      "Rank": "568",
+      "german": "nummer",
+      "english": "number"
+    },
+    {
+      "Rank": "569",
+      "german": "sondern",
+      "english": "rather"
+    },
+    {
+      "Rank": "570",
+      "german": "frei",
+      "english": "free"
+    },
+    {
+      "Rank": "571",
+      "german": "oft",
+      "english": "often"
+    },
+    {
+      "Rank": "572",
+      "german": "entschuldigung",
+      "english": "Sorry"
+    },
+    {
+      "Rank": "573",
+      "german": "wen",
+      "english": "who"
+    },
+    {
+      "Rank": "574",
+      "german": "ernst",
+      "english": "serious"
+    },
+    {
+      "Rank": "575",
+      "german": "alte",
+      "english": "old"
+    },
+    {
+      "Rank": "576",
+      "german": "schule",
+      "english": "school"
+    },
+    {
+      "Rank": "577",
+      "german": "ort",
+      "english": "place"
+    },
+    {
+      "Rank": "578",
+      "german": "erzählt",
+      "english": "tells"
+    },
+    {
+      "Rank": "579",
+      "german": "anderes",
+      "english": "other"
+    },
+    {
+      "Rank": "580",
+      "german": "new",
+      "english": "new"
+    },
+    {
+      "Rank": "581",
+      "german": "alt",
+      "english": "old"
+    },
+    {
+      "Rank": "582",
+      "german": "chance",
+      "english": "chance"
+    },
+    {
+      "Rank": "583",
+      "german": "einige",
+      "english": "some"
+    },
+    {
+      "Rank": "584",
+      "german": "bloß",
+      "english": "just"
+    },
+    {
+      "Rank": "585",
+      "german": "entschuldigen",
+      "english": "to apologize"
+    },
+    {
+      "Rank": "586",
+      "german": "setzen",
+      "english": "put"
+    },
+    {
+      "Rank": "587",
+      "german": "bedeutet",
+      "english": "means"
+    },
+    {
+      "Rank": "588",
+      "german": "erzählen",
+      "english": "tell"
+    },
+    {
+      "Rank": "589",
+      "german": "feuer",
+      "english": "fire"
+    },
+    {
+      "Rank": "590",
+      "german": "pass",
+      "english": "passport"
+    },
+    {
+      "Rank": "591",
+      "german": "würdest",
+      "english": "would"
+    },
+    {
+      "Rank": "592",
+      "german": "schuld",
+      "english": "fault"
+    },
+    {
+      "Rank": "593",
+      "german": "dad",
+      "english": "dad"
+    },
+    {
+      "Rank": "594",
+      "german": "getötet",
+      "english": "killed"
+    },
+    {
+      "Rank": "595",
+      "german": "jungen",
+      "english": "boys"
+    },
+    {
+      "Rank": "596",
+      "german": "drauf",
+      "english": "it"
+    },
+    {
+      "Rank": "597",
+      "german": "platz",
+      "english": "place"
+    },
+    {
+      "Rank": "598",
+      "german": "wären",
+      "english": "would"
+    },
+    {
+      "Rank": "599",
+      "german": "tust",
+      "english": "do"
+    },
+    {
+      "Rank": "600",
+      "german": "papa",
+      "english": "papa"
+    },
+    {
+      "Rank": "601",
+      "german": "spaß",
+      "english": "fun"
+    },
+    {
+      "Rank": "602",
+      "german": "versucht",
+      "english": "tries"
+    },
+    {
+      "Rank": "603",
+      "german": "wichtig",
+      "english": "important"
+    },
+    {
+      "Rank": "604",
+      "german": "besten",
+      "english": "best"
+    },
+    {
+      "Rank": "605",
+      "german": "sorge",
+      "english": "worry"
+    },
+    {
+      "Rank": "606",
+      "german": "kennst",
+      "english": "know"
+    },
+    {
+      "Rank": "607",
+      "german": "lst",
+      "english": "lst"
+    },
+    {
+      "Rank": "608",
+      "german": "hund",
+      "english": "dog"
+    },
+    {
+      "Rank": "609",
+      "german": "blut",
+      "english": "blood"
+    },
+    {
+      "Rank": "610",
+      "german": "hierher",
+      "english": "here"
+    },
+    {
+      "Rank": "611",
+      "german": "reicht",
+      "english": "enough"
+    },
+    {
+      "Rank": "612",
+      "german": "alten",
+      "english": "old"
+    },
+    {
+      "Rank": "613",
+      "german": "wär",
+      "english": "would"
+    },
+    {
+      "Rank": "614",
+      "german": "glücklich",
+      "english": "happy"
+    },
+    {
+      "Rank": "615",
+      "german": "brauchst",
+      "english": "need"
+    },
+    {
+      "Rank": "616",
+      "german": "hände",
+      "english": "hands"
+    },
+    {
+      "Rank": "617",
+      "german": "unseren",
+      "english": "our"
+    },
+    {
+      "Rank": "618",
+      "german": "hättest",
+      "english": "had"
+    },
+    {
+      "Rank": "619",
+      "german": "kaum",
+      "english": "barely"
+    },
+    {
+      "Rank": "620",
+      "german": "rede",
+      "english": "speech"
+    },
+    {
+      "Rank": "621",
+      "german": "zuerst",
+      "english": "first"
+    },
+    {
+      "Rank": "622",
+      "german": "stellen",
+      "english": "put"
+    },
+    {
+      "Rank": "623",
+      "german": "beiden",
+      "english": "both"
+    },
+    {
+      "Rank": "624",
+      "german": "falls",
+      "english": "if"
+    },
+    {
+      "Rank": "625",
+      "german": "früh",
+      "english": "early"
+    },
+    {
+      "Rank": "626",
+      "german": "wartet",
+      "english": "waiting"
+    },
+    {
+      "Rank": "627",
+      "german": "neuen",
+      "english": "new"
+    },
+    {
+      "Rank": "628",
+      "german": "sechs",
+      "english": "six"
+    },
+    {
+      "Rank": "629",
+      "german": "jede",
+      "english": "each"
+    },
+    {
+      "Rank": "630",
+      "german": "freundin",
+      "english": "friend"
+    },
+    {
+      "Rank": "631",
+      "german": "i",
+      "english": "i"
+    },
+    {
+      "Rank": "632",
+      "german": "lieben",
+      "english": "love"
+    },
+    {
+      "Rank": "633",
+      "german": "teil",
+      "english": "part"
+    },
+    {
+      "Rank": "634",
+      "german": "stunde",
+      "english": "hour"
+    },
+    {
+      "Rank": "635",
+      "german": "langsam",
+      "english": "slowly"
+    },
+    {
+      "Rank": "636",
+      "german": "scheint",
+      "english": "seems"
+    },
+    {
+      "Rank": "637",
+      "german": "früher",
+      "english": "earlier"
+    },
+    {
+      "Rank": "638",
+      "german": "großen",
+      "english": "great"
+    },
+    {
+      "Rank": "639",
+      "german": "waffe",
+      "english": "weapon"
+    },
+    {
+      "Rank": "640",
+      "german": "telefon",
+      "english": "phone"
+    },
+    {
+      "Rank": "641",
+      "german": "himmel",
+      "english": "sky"
+    },
+    {
+      "Rank": "642",
+      "german": "lernen",
+      "english": "to learn"
+    },
+    {
+      "Rank": "643",
+      "german": "you",
+      "english": "you"
+    },
+    {
+      "Rank": "644",
+      "german": "äh",
+      "english": "um"
+    },
+    {
+      "Rank": "645",
+      "german": "zehn",
+      "english": "ten"
+    },
+    {
+      "Rank": "646",
+      "german": "gedacht",
+      "english": "thought"
+    },
+    {
+      "Rank": "647",
+      "german": "willkommen",
+      "english": "welcome"
+    },
+    {
+      "Rank": "648",
+      "german": "frank",
+      "english": "frank"
+    },
+    {
+      "Rank": "649",
+      "german": "luft",
+      "english": "air"
+    },
+    {
+      "Rank": "650",
+      "german": "licht",
+      "english": "light"
+    },
+    {
+      "Rank": "651",
+      "german": "hol",
+      "english": "hol"
+    },
+    {
+      "Rank": "652",
+      "german": "seht",
+      "english": "look"
+    },
+    {
+      "Rank": "653",
+      "german": "menge",
+      "english": "amount"
+    },
+    {
+      "Rank": "654",
+      "german": "voll",
+      "english": "full"
+    },
+    {
+      "Rank": "655",
+      "german": "überall",
+      "english": "all over"
+    },
+    {
+      "Rank": "656",
+      "german": "tat",
+      "english": "did"
+    },
+    {
+      "Rank": "657",
+      "german": "erde",
+      "english": "earth"
+    },
+    {
+      "Rank": "658",
+      "german": "gebe",
+      "english": "give"
+    },
+    {
+      "Rank": "659",
+      "german": "a",
+      "english": "a"
+    },
+    {
+      "Rank": "660",
+      "german": "ruf",
+      "english": "call"
+    },
+    {
+      "Rank": "661",
+      "german": "möglich",
+      "english": "possible"
+    },
+    {
+      "Rank": "662",
+      "german": "spricht",
+      "english": "speaks"
+    },
+    {
+      "Rank": "663",
+      "german": "könig",
+      "english": "king"
+    },
+    {
+      "Rank": "664",
+      "german": "eltern",
+      "english": "parents"
+    },
+    {
+      "Rank": "665",
+      "german": "außer",
+      "english": "except"
+    },
+    {
+      "Rank": "666",
+      "german": "nächsten",
+      "english": "Upcoming"
+    },
+    {
+      "Rank": "667",
+      "german": "ziehen",
+      "english": "pull"
+    },
+    {
+      "Rank": "668",
+      "german": "wahrscheinlich",
+      "english": "probably"
+    },
+    {
+      "Rank": "669",
+      "german": "wollt",
+      "english": "want"
+    },
+    {
+      "Rank": "670",
+      "german": "dürfen",
+      "english": "allowed"
+    },
+    {
+      "Rank": "671",
+      "german": "nennen",
+      "english": "call"
+    },
+    {
+      "Rank": "672",
+      "german": "falsch",
+      "english": "not correct"
+    },
+    {
+      "Rank": "673",
+      "german": "ehrlich",
+      "english": "honest"
+    },
+    {
+      "Rank": "674",
+      "german": "irgendwas",
+      "english": "anything"
+    },
+    {
+      "Rank": "675",
+      "german": "nächste",
+      "english": "next"
+    },
+    {
+      "Rank": "676",
+      "german": "wochen",
+      "english": "weeks"
+    },
+    {
+      "Rank": "677",
+      "german": "meines",
+      "english": "mine"
+    },
+    {
+      "Rank": "678",
+      "german": "herren",
+      "english": "Men's"
+    },
+    {
+      "Rank": "679",
+      "german": "straße",
+      "english": "road"
+    },
+    {
+      "Rank": "680",
+      "german": "hm",
+      "english": "Hm"
+    },
+    {
+      "Rank": "681",
+      "german": "heiraten",
+      "english": "marry"
+    },
+    {
+      "Rank": "682",
+      "german": "stück",
+      "english": "piece"
+    },
+    {
+      "Rank": "683",
+      "german": "sam",
+      "english": "sam"
+    },
+    {
+      "Rank": "684",
+      "german": "doktor",
+      "english": "doctor"
+    },
+    {
+      "Rank": "685",
+      "german": "neues",
+      "english": "new"
+    },
+    {
+      "Rank": "686",
+      "german": "gegeben",
+      "english": "given"
+    },
+    {
+      "Rank": "687",
+      "german": "kaffee",
+      "english": "coffee"
+    },
+    {
+      "Rank": "688",
+      "german": "möchten",
+      "english": "want"
+    },
+    {
+      "Rank": "689",
+      "german": "verstehst",
+      "english": "understand"
+    },
+    {
+      "Rank": "690",
+      "german": "krank",
+      "english": "sick"
+    },
+    {
+      "Rank": "691",
+      "german": "danach",
+      "english": "after that"
+    },
+    {
+      "Rank": "692",
+      "german": "geworden",
+      "english": "become"
+    },
+    {
+      "Rank": "693",
+      "german": "arzt",
+      "english": "doctor"
+    },
+    {
+      "Rank": "694",
+      "german": "schaffen",
+      "english": "create"
+    },
+    {
+      "Rank": "695",
+      "german": "stelle",
+      "english": "office"
+    },
+    {
+      "Rank": "696",
+      "german": "groß",
+      "english": "big"
+    },
+    {
+      "Rank": "697",
+      "german": "wem",
+      "english": "whom"
+    },
+    {
+      "Rank": "698",
+      "german": "hölle",
+      "english": "hell"
+    },
+    {
+      "Rank": "699",
+      "german": "völlig",
+      "english": "completely"
+    },
+    {
+      "Rank": "700",
+      "german": "weh",
+      "english": "sore"
+    },
+    {
+      "Rank": "701",
+      "german": "s",
+      "english": "s"
+    },
+    {
+      "Rank": "702",
+      "german": "fehler",
+      "english": "Error"
+    },
+    {
+      "Rank": "703",
+      "german": "drüben",
+      "english": "over"
+    },
+    {
+      "Rank": "704",
+      "german": "harry",
+      "english": "harry"
+    },
+    {
+      "Rank": "705",
+      "german": "büro",
+      "english": "office"
+    },
+    {
+      "Rank": "706",
+      "german": "captain",
+      "english": "captain"
+    },
+    {
+      "Rank": "707",
+      "german": "rufen",
+      "english": "call"
+    },
+    {
+      "Rank": "708",
+      "german": "irgendwie",
+      "english": "somehow"
+    },
+    {
+      "Rank": "709",
+      "german": "eigenen",
+      "english": "own"
+    },
+    {
+      "Rank": "710",
+      "german": "probleme",
+      "english": "problems"
+    },
+    {
+      "Rank": "711",
+      "german": "allem",
+      "english": "all"
+    },
+    {
+      "Rank": "712",
+      "german": "mr",
+      "english": "mr"
+    },
+    {
+      "Rank": "713",
+      "german": "wert",
+      "english": "value"
+    },
+    {
+      "Rank": "714",
+      "german": "tue",
+      "english": "do"
+    },
+    {
+      "Rank": "715",
+      "german": "buch",
+      "english": "book"
+    },
+    {
+      "Rank": "716",
+      "german": "lebt",
+      "english": "lives"
+    },
+    {
+      "Rank": "717",
+      "german": "scheiß",
+      "english": "shit"
+    },
+    {
+      "Rank": "718",
+      "german": "kaufen",
+      "english": "buy"
+    },
+    {
+      "Rank": "719",
+      "german": "erinnern",
+      "english": "recall"
+    },
+    {
+      "Rank": "720",
+      "german": "direkt",
+      "english": "directly"
+    },
+    {
+      "Rank": "721",
+      "german": "laufen",
+      "english": "to run"
+    },
+    {
+      "Rank": "722",
+      "german": "george",
+      "english": "george"
+    },
+    {
+      "Rank": "723",
+      "german": "trotzdem",
+      "english": "Nevertheless"
+    },
+    {
+      "Rank": "724",
+      "german": "schreiben",
+      "english": "write"
+    },
+    {
+      "Rank": "725",
+      "german": "still",
+      "english": "tranquil"
+    },
+    {
+      "Rank": "726",
+      "german": "kleines",
+      "english": "small"
+    },
+    {
+      "Rank": "727",
+      "german": "körper",
+      "english": "body"
+    },
+    {
+      "Rank": "728",
+      "german": "retten",
+      "english": "rescue"
+    },
+    {
+      "Rank": "729",
+      "german": "fand",
+      "english": "found"
+    },
+    {
+      "Rank": "730",
+      "german": "unserem",
+      "english": "our"
+    },
+    {
+      "Rank": "731",
+      "german": "solche",
+      "english": "such"
+    },
+    {
+      "Rank": "732",
+      "german": "denkt",
+      "english": "thinks"
+    },
+    {
+      "Rank": "733",
+      "german": "könnt",
+      "english": "can"
+    },
+    {
+      "Rank": "734",
+      "german": "ln",
+      "english": "ln"
+    },
+    {
+      "Rank": "735",
+      "german": "alleine",
+      "english": "alone"
+    },
+    {
+      "Rank": "736",
+      "german": "sitzen",
+      "english": "sit"
+    },
+    {
+      "Rank": "737",
+      "german": "höre",
+      "english": "hear"
+    },
+    {
+      "Rank": "738",
+      "german": "millionen",
+      "english": "millions"
+    },
+    {
+      "Rank": "739",
+      "german": "tagen",
+      "english": "meet"
+    },
+    {
+      "Rank": "740",
+      "german": "york",
+      "english": "York"
+    },
+    {
+      "Rank": "741",
+      "german": "suche",
+      "english": "search"
+    },
+    {
+      "Rank": "742",
+      "german": "vergiss",
+      "english": "forget"
+    },
+    {
+      "Rank": "743",
+      "german": "gutes",
+      "english": "good"
+    },
+    {
+      "Rank": "744",
+      "german": "leider",
+      "english": "Unfortunately"
+    },
+    {
+      "Rank": "745",
+      "german": "sagten",
+      "english": "said"
+    },
+    {
+      "Rank": "746",
+      "german": "typen",
+      "english": "types"
+    },
+    {
+      "Rank": "747",
+      "german": "schlüssel",
+      "english": "key"
+    },
+    {
+      "Rank": "748",
+      "german": "tragen",
+      "english": "carry"
+    },
+    {
+      "Rank": "749",
+      "german": "mund",
+      "english": "mouth"
+    },
+    {
+      "Rank": "750",
+      "german": "worden",
+      "english": "been"
+    },
+    {
+      "Rank": "751",
+      "german": "hält",
+      "english": "keeps"
+    },
+    {
+      "Rank": "752",
+      "german": "zwar",
+      "english": "indeed"
+    },
+    {
+      "Rank": "753",
+      "german": "bereits",
+      "english": "already"
+    },
+    {
+      "Rank": "754",
+      "german": "leicht",
+      "english": "light"
+    },
+    {
+      "Rank": "755",
+      "german": "spielt",
+      "english": "plays"
+    },
+    {
+      "Rank": "756",
+      "german": "schiff",
+      "english": "ship"
+    },
+    {
+      "Rank": "757",
+      "german": "hörst",
+      "english": "hear"
+    },
+    {
+      "Rank": "758",
+      "german": "lhren",
+      "english": "lhren"
+    },
+    {
+      "Rank": "759",
+      "german": "onkel",
+      "english": "uncle"
+    },
+    {
+      "Rank": "760",
+      "german": "glaub",
+      "english": "believable"
+    },
+    {
+      "Rank": "761",
+      "german": "verlieren",
+      "english": "to lose"
+    },
+    {
+      "Rank": "762",
+      "german": "großer",
+      "english": "greater"
+    },
+    {
+      "Rank": "763",
+      "german": "klingt",
+      "english": "sounds"
+    },
+    {
+      "Rank": "764",
+      "german": "irgendwo",
+      "english": "somewhere"
+    },
+    {
+      "Rank": "765",
+      "german": "zukunft",
+      "english": "future"
+    },
+    {
+      "Rank": "766",
+      "german": "kennt",
+      "english": "knows"
+    },
+    {
+      "Rank": "767",
+      "german": "plan",
+      "english": "plan"
+    },
+    {
+      "Rank": "768",
+      "german": "schöne",
+      "english": "nice"
+    },
+    {
+      "Rank": "769",
+      "german": "verschwinden",
+      "english": "disappear"
+    },
+    {
+      "Rank": "770",
+      "german": "interessiert",
+      "english": "interested"
+    },
+    {
+      "Rank": "771",
+      "german": "waffen",
+      "english": "weapons"
+    },
+    {
+      "Rank": "772",
+      "german": "kämpfen",
+      "english": "fight"
+    },
+    {
+      "Rank": "773",
+      "german": "party",
+      "english": "party"
+    },
+    {
+      "Rank": "774",
+      "german": "bringe",
+      "english": "bring"
+    },
+    {
+      "Rank": "775",
+      "german": "hinten",
+      "english": "behind"
+    },
+    {
+      "Rank": "776",
+      "german": "setz",
+      "english": "translated"
+    },
+    {
+      "Rank": "777",
+      "german": "kumpel",
+      "english": "pal"
+    },
+    {
+      "Rank": "778",
+      "german": "wolltest",
+      "english": "wanted"
+    },
+    {
+      "Rank": "779",
+      "german": "boden",
+      "english": "ground"
+    },
+    {
+      "Rank": "780",
+      "german": "general",
+      "english": "general"
+    },
+    {
+      "Rank": "781",
+      "german": "zeig",
+      "english": "show"
+    },
+    {
+      "Rank": "782",
+      "german": "böse",
+      "english": "angry"
+    },
+    {
+      "Rank": "783",
+      "german": "halte",
+      "english": "consider"
+    },
+    {
+      "Rank": "784",
+      "german": "gegangen",
+      "english": "went"
+    },
+    {
+      "Rank": "785",
+      "german": "richtige",
+      "english": "right one"
+    },
+    {
+      "Rank": "786",
+      "german": "liebling",
+      "english": "Darling"
+    },
+    {
+      "Rank": "787",
+      "german": "acht",
+      "english": "eight"
+    },
+    {
+      "Rank": "788",
+      "german": "froh",
+      "english": "glad"
+    },
+    {
+      "Rank": "789",
+      "german": "machte",
+      "english": "made"
+    },
+    {
+      "Rank": "790",
+      "german": "jedes",
+      "english": "each"
+    },
+    {
+      "Rank": "791",
+      "german": "hart",
+      "english": "hard"
+    },
+    {
+      "Rank": "792",
+      "german": "vorsichtig",
+      "english": "careful"
+    },
+    {
+      "Rank": "793",
+      "german": "joe",
+      "english": "joe"
+    },
+    {
+      "Rank": "794",
+      "german": "versuch",
+      "english": "try"
+    },
+    {
+      "Rank": "795",
+      "german": "getroffen",
+      "english": "met"
+    },
+    {
+      "Rank": "796",
+      "german": "mögen",
+      "english": "to like"
+    },
+    {
+      "Rank": "797",
+      "german": "zeug",
+      "english": "stuff"
+    },
+    {
+      "Rank": "798",
+      "german": "damals",
+      "english": "at that time"
+    },
+    {
+      "Rank": "799",
+      "german": "stimme",
+      "english": "voice"
+    },
+    {
+      "Rank": "800",
+      "german": "gefühl",
+      "english": "feeling"
+    },
+    {
+      "Rank": "801",
+      "german": "leuten",
+      "english": "people"
+    },
+    {
+      "Rank": "802",
+      "german": "lesen",
+      "english": "read"
+    },
+    {
+      "Rank": "803",
+      "german": "mist",
+      "english": "manure"
+    },
+    {
+      "Rank": "804",
+      "german": "zug",
+      "english": "train"
+    },
+    {
+      "Rank": "805",
+      "german": "hattest",
+      "english": "had"
+    },
+    {
+      "Rank": "806",
+      "german": "verdammte",
+      "english": "damned"
+    },
+    {
+      "Rank": "807",
+      "german": "geschäft",
+      "english": "business"
+    },
+    {
+      "Rank": "808",
+      "german": "arschloch",
+      "english": "asshole"
+    },
+    {
+      "Rank": "809",
+      "german": "rest",
+      "english": "rest"
+    },
+    {
+      "Rank": "810",
+      "german": "mom",
+      "english": "mom"
+    },
+    {
+      "Rank": "811",
+      "german": "de",
+      "english": "de"
+    },
+    {
+      "Rank": "812",
+      "german": "aufhören",
+      "english": "stop"
+    },
+    {
+      "Rank": "813",
+      "german": "könntest",
+      "english": "could"
+    },
+    {
+      "Rank": "814",
+      "german": "klasse",
+      "english": "class"
+    },
+    {
+      "Rank": "815",
+      "german": "lasse",
+      "english": "leave"
+    },
+    {
+      "Rank": "816",
+      "german": "boss",
+      "english": "boss"
+    },
+    {
+      "Rank": "817",
+      "german": "erklären",
+      "english": "to explain"
+    },
+    {
+      "Rank": "818",
+      "german": "fliegen",
+      "english": "fly"
+    },
+    {
+      "Rank": "819",
+      "german": "laden",
+      "english": "load"
+    },
+    {
+      "Rank": "820",
+      "german": "stolz",
+      "english": "proud"
+    },
+    {
+      "Rank": "821",
+      "german": "stark",
+      "english": "strongly"
+    },
+    {
+      "Rank": "822",
+      "german": "hasse",
+      "english": "hate"
+    },
+    {
+      "Rank": "823",
+      "german": "wohnung",
+      "english": "apartment"
+    },
+    {
+      "Rank": "824",
+      "german": "gebracht",
+      "english": "brought"
+    },
+    {
+      "Rank": "825",
+      "german": "fort",
+      "english": "on"
+    },
+    {
+      "Rank": "826",
+      "german": "genauso",
+      "english": "just like that"
+    },
+    {
+      "Rank": "827",
+      "german": "mai",
+      "english": "May"
+    },
+    {
+      "Rank": "828",
+      "german": "entschuldige",
+      "english": "sorry"
+    },
+    {
+      "Rank": "829",
+      "german": "besonders",
+      "english": "especially"
+    },
+    {
+      "Rank": "830",
+      "german": "seien",
+      "english": "are"
+    },
+    {
+      "Rank": "831",
+      "german": "tages",
+      "english": "day"
+    },
+    {
+      "Rank": "832",
+      "german": "weniger",
+      "english": "fewer"
+    },
+    {
+      "Rank": "833",
+      "german": "zieh",
+      "english": "withdrawing"
+    },
+    {
+      "Rank": "834",
+      "german": "ärger",
+      "english": "trouble"
+    },
+    {
+      "Rank": "835",
+      "german": "fühle",
+      "english": "feel"
+    },
+    {
+      "Rank": "836",
+      "german": "schauen",
+      "english": "watch"
+    },
+    {
+      "Rank": "837",
+      "german": "idiot",
+      "english": "idiot"
+    },
+    {
+      "Rank": "838",
+      "german": "o",
+      "english": "O"
+    },
+    {
+      "Rank": "839",
+      "german": "schneller",
+      "english": "more quickly"
+    },
+    {
+      "Rank": "840",
+      "german": "denk",
+      "english": "thinking"
+    },
+    {
+      "Rank": "841",
+      "german": "geschafft",
+      "english": "made"
+    },
+    {
+      "Rank": "842",
+      "german": "verzeihung",
+      "english": "forgiveness"
+    },
+    {
+      "Rank": "843",
+      "german": "daddy",
+      "english": "daddy"
+    },
+    {
+      "Rank": "844",
+      "german": "charlie",
+      "english": "charlie"
+    },
+    {
+      "Rank": "845",
+      "german": "tja",
+      "english": "tja"
+    },
+    {
+      "Rank": "846",
+      "german": "schicken",
+      "english": "send"
+    },
+    {
+      "Rank": "847",
+      "german": "erwartet",
+      "english": "expected"
+    },
+    {
+      "Rank": "848",
+      "german": "nachricht",
+      "english": "message"
+    },
+    {
+      "Rank": "849",
+      "german": "findet",
+      "english": "finds"
+    },
+    {
+      "Rank": "850",
+      "german": "funktioniert",
+      "english": "is working"
+    },
+    {
+      "Rank": "851",
+      "german": "werd",
+      "english": "expectant"
+    },
+    {
+      "Rank": "852",
+      "german": "stand",
+      "english": "was standing"
+    },
+    {
+      "Rank": "853",
+      "german": "traum",
+      "english": "dream"
+    },
+    {
+      "Rank": "854",
+      "german": "sollst",
+      "english": "shalt"
+    },
+    {
+      "Rank": "855",
+      "german": "t",
+      "english": "t"
+    },
+    {
+      "Rank": "856",
+      "german": "fallen",
+      "english": "fall"
+    },
+    {
+      "Rank": "857",
+      "german": "wovon",
+      "english": "from which"
+    },
+    {
+      "Rank": "858",
+      "german": "gefängnis",
+      "english": "prison"
+    },
+    {
+      "Rank": "859",
+      "german": "aufs",
+      "english": "onto"
+    },
+    {
+      "Rank": "860",
+      "german": "hotel",
+      "english": "hotel"
+    },
+    {
+      "Rank": "861",
+      "german": "krankenhaus",
+      "english": "hospital"
+    },
+    {
+      "Rank": "862",
+      "german": "umbringen",
+      "english": "kill"
+    },
+    {
+      "Rank": "863",
+      "german": "fällt",
+      "english": "falls"
+    },
+    {
+      "Rank": "864",
+      "german": "redest",
+      "english": "talking"
+    },
+    {
+      "Rank": "865",
+      "german": "weisst",
+      "english": "know"
+    },
+    {
+      "Rank": "866",
+      "german": "gottes",
+      "english": "god"
+    },
+    {
+      "Rank": "867",
+      "german": "total",
+      "english": "total"
+    },
+    {
+      "Rank": "868",
+      "german": "fenster",
+      "english": "window"
+    },
+    {
+      "Rank": "869",
+      "german": "lebens",
+      "english": "life"
+    },
+    {
+      "Rank": "870",
+      "german": "glaubt",
+      "english": "believes"
+    },
+    {
+      "Rank": "871",
+      "german": "vorstellen",
+      "english": "imagine"
+    },
+    {
+      "Rank": "872",
+      "german": "and",
+      "english": "and"
+    },
+    {
+      "Rank": "873",
+      "german": "sinn",
+      "english": "sense"
+    },
+    {
+      "Rank": "874",
+      "german": "ändern",
+      "english": "change"
+    },
+    {
+      "Rank": "875",
+      "german": "versuche",
+      "english": "try"
+    },
+    {
+      "Rank": "876",
+      "german": "heraus",
+      "english": "out"
+    },
+    {
+      "Rank": "877",
+      "german": "heißen",
+      "english": "be called"
+    },
+    {
+      "Rank": "878",
+      "german": "tanzen",
+      "english": "dance"
+    },
+    {
+      "Rank": "879",
+      "german": "monate",
+      "english": "months"
+    },
+    {
+      "Rank": "880",
+      "german": "lachen",
+      "english": "laugh"
+    },
+    {
+      "Rank": "881",
+      "german": "kampf",
+      "english": "struggle"
+    },
+    {
+      "Rank": "882",
+      "german": "nachdem",
+      "english": "after this"
+    },
+    {
+      "Rank": "883",
+      "german": "arm",
+      "english": "poor"
+    },
+    {
+      "Rank": "884",
+      "german": "wenigstens",
+      "english": "at least"
+    },
+    {
+      "Rank": "885",
+      "german": "geschehen",
+      "english": "happen"
+    },
+    {
+      "Rank": "886",
+      "german": "hörte",
+      "english": "heard"
+    },
+    {
+      "Rank": "887",
+      "german": "kamen",
+      "english": "came"
+    },
+    {
+      "Rank": "888",
+      "german": "passt",
+      "english": "fit"
+    },
+    {
+      "Rank": "889",
+      "german": "liebt",
+      "english": "loves"
+    },
+    {
+      "Rank": "890",
+      "german": "folgen",
+      "english": "consequences"
+    },
+    {
+      "Rank": "891",
+      "german": "eher",
+      "english": "rather"
+    },
+    {
+      "Rank": "892",
+      "german": "gefragt",
+      "english": "asked"
+    },
+    {
+      "Rank": "893",
+      "german": "dumm",
+      "english": "stupid"
+    },
+    {
+      "Rank": "894",
+      "german": "deswegen",
+      "english": "therefore"
+    },
+    {
+      "Rank": "895",
+      "german": "solange",
+      "english": "while"
+    },
+    {
+      "Rank": "896",
+      "german": "lustig",
+      "english": "funny"
+    },
+    {
+      "Rank": "897",
+      "german": "starb",
+      "english": "died"
+    },
+    {
+      "Rank": "898",
+      "german": "unmöglich",
+      "english": "impossible"
+    },
+    {
+      "Rank": "899",
+      "german": "bild",
+      "english": "image"
+    },
+    {
+      "Rank": "900",
+      "german": "boot",
+      "english": "boat"
+    },
+    {
+      "Rank": "901",
+      "german": "genommen",
+      "english": "took"
+    },
+    {
+      "Rank": "902",
+      "german": "dame",
+      "english": "lady"
+    },
+    {
+      "Rank": "903",
+      "german": "führen",
+      "english": "to lead"
+    },
+    {
+      "Rank": "904",
+      "german": "unglaublich",
+      "english": "incredible"
+    },
+    {
+      "Rank": "905",
+      "german": "vertrauen",
+      "english": "trust"
+    },
+    {
+      "Rank": "906",
+      "german": "verletzt",
+      "english": "injured"
+    },
+    {
+      "Rank": "907",
+      "german": "passieren",
+      "english": "happen"
+    },
+    {
+      "Rank": "908",
+      "german": "cool",
+      "english": "cool"
+    },
+    {
+      "Rank": "909",
+      "german": "meisten",
+      "english": "most"
+    },
+    {
+      "Rank": "910",
+      "german": "tom",
+      "english": "tom"
+    },
+    {
+      "Rank": "911",
+      "german": "vorher",
+      "english": "before"
+    },
+    {
+      "Rank": "912",
+      "german": "plötzlich",
+      "english": "suddenly"
+    },
+    {
+      "Rank": "913",
+      "german": "angerufen",
+      "english": "called"
+    },
+    {
+      "Rank": "914",
+      "german": "bewegung",
+      "english": "Move"
+    },
+    {
+      "Rank": "915",
+      "german": "kümmern",
+      "english": "concern"
+    },
+    {
+      "Rank": "916",
+      "german": "rüber",
+      "english": "over"
+    },
+    {
+      "Rank": "917",
+      "german": "komisch",
+      "english": "funny"
+    },
+    {
+      "Rank": "918",
+      "german": "paris",
+      "english": "Paris"
+    },
+    {
+      "Rank": "919",
+      "german": "super",
+      "english": "great"
+    },
+    {
+      "Rank": "920",
+      "german": "sieben",
+      "english": "seven"
+    },
+    {
+      "Rank": "921",
+      "german": "erinnere",
+      "english": "remember"
+    },
+    {
+      "Rank": "922",
+      "german": "lhrer",
+      "english": "lhrer"
+    },
+    {
+      "Rank": "923",
+      "german": "ne",
+      "english": "ne"
+    },
+    {
+      "Rank": "924",
+      "german": "rufe",
+      "english": "call"
+    },
+    {
+      "Rank": "925",
+      "german": "bier",
+      "english": "beer"
+    },
+    {
+      "Rank": "926",
+      "german": "augenblick",
+      "english": "moment"
+    },
+    {
+      "Rank": "927",
+      "german": "herum",
+      "english": "around"
+    },
+    {
+      "Rank": "928",
+      "german": "kalt",
+      "english": "cold"
+    },
+    {
+      "Rank": "929",
+      "german": "wunderbar",
+      "english": "wonderful"
+    },
+    {
+      "Rank": "930",
+      "german": "großartig",
+      "english": "Great"
+    },
+    {
+      "Rank": "931",
+      "german": "wahl",
+      "english": "choice"
+    },
+    {
+      "Rank": "932",
+      "german": "auge",
+      "english": "eye"
+    },
+    {
+      "Rank": "933",
+      "german": "fahr",
+      "english": "traveling"
+    },
+    {
+      "Rank": "934",
+      "german": "konnten",
+      "english": "could"
+    },
+    {
+      "Rank": "935",
+      "german": "länger",
+      "english": "longer"
+    },
+    {
+      "Rank": "936",
+      "german": "m",
+      "english": "m"
+    },
+    {
+      "Rank": "937",
+      "german": "johnny",
+      "english": "johnny"
+    },
+    {
+      "Rank": "938",
+      "german": "tisch",
+      "english": "table"
+    },
+    {
+      "Rank": "939",
+      "german": "rum",
+      "english": "rum"
+    },
+    {
+      "Rank": "940",
+      "german": "antwort",
+      "english": "answer"
+    },
+    {
+      "Rank": "941",
+      "german": "jedem",
+      "english": "every"
+    },
+    {
+      "Rank": "942",
+      "german": "david",
+      "english": "David"
+    },
+    {
+      "Rank": "943",
+      "german": "arme",
+      "english": "poor"
+    },
+    {
+      "Rank": "944",
+      "german": "umgebracht",
+      "english": "killed"
+    },
+    {
+      "Rank": "945",
+      "german": "schlimm",
+      "english": "bad"
+    },
+    {
+      "Rank": "946",
+      "german": "verheiratet",
+      "english": "married"
+    },
+    {
+      "Rank": "947",
+      "german": "steh",
+      "english": "stand"
+    },
+    {
+      "Rank": "948",
+      "german": "anrufen",
+      "english": "call"
+    },
+    {
+      "Rank": "949",
+      "german": "worte",
+      "english": "worte"
+    },
+    {
+      "Rank": "950",
+      "german": "möchtest",
+      "english": "want"
+    },
+    {
+      "Rank": "951",
+      "german": "vorsicht",
+      "english": "caution"
+    },
+    {
+      "Rank": "952",
+      "german": "hilf",
+      "english": "Helpful"
+    },
+    {
+      "Rank": "953",
+      "german": "bezahlt",
+      "english": "paid"
+    },
+    {
+      "Rank": "954",
+      "german": "voller",
+      "english": "full of"
+    },
+    {
+      "Rank": "955",
+      "german": "links",
+      "english": "left"
+    },
+    {
+      "Rank": "956",
+      "german": "sekunden",
+      "english": "seconds"
+    },
+    {
+      "Rank": "957",
+      "german": "werdet",
+      "english": "will"
+    },
+    {
+      "Rank": "958",
+      "german": "wärst",
+      "english": "'d"
+    },
+    {
+      "Rank": "959",
+      "german": "liegen",
+      "english": "lie"
+    },
+    {
+      "Rank": "960",
+      "german": "fühlen",
+      "english": "feel"
+    },
+    {
+      "Rank": "961",
+      "german": "nochmal",
+      "english": "again"
+    },
+    {
+      "Rank": "962",
+      "german": "armee",
+      "english": "army"
+    },
+    {
+      "Rank": "963",
+      "german": "bitten",
+      "english": "asking for"
+    },
+    {
+      "Rank": "964",
+      "german": "gestorben",
+      "english": "died"
+    },
+    {
+      "Rank": "965",
+      "german": "finger",
+      "english": "finger"
+    },
+    {
+      "Rank": "966",
+      "german": "meinung",
+      "english": "opinion"
+    },
+    {
+      "Rank": "967",
+      "german": "nimmt",
+      "english": "accepts"
+    },
+    {
+      "Rank": "968",
+      "german": "zahlen",
+      "english": "numbers"
+    },
+    {
+      "Rank": "969",
+      "german": "sicherheit",
+      "english": "safety"
+    },
+    {
+      "Rank": "970",
+      "german": "verkaufen",
+      "english": "to sell"
+    },
+    {
+      "Rank": "971",
+      "german": "gesprochen",
+      "english": "spoken"
+    },
+    {
+      "Rank": "972",
+      "german": "wozu",
+      "english": "why"
+    },
+    {
+      "Rank": "973",
+      "german": "müde",
+      "english": "tired"
+    },
+    {
+      "Rank": "974",
+      "german": "seele",
+      "english": "soul"
+    },
+    {
+      "Rank": "975",
+      "german": "welcher",
+      "english": "which one"
+    },
+    {
+      "Rank": "976",
+      "german": "schießen",
+      "english": "shoot"
+    },
+    {
+      "Rank": "977",
+      "german": "michael",
+      "english": "michael"
+    },
+    {
+      "Rank": "978",
+      "german": "arbeite",
+      "english": "working"
+    },
+    {
+      "Rank": "979",
+      "german": "sitzt",
+      "english": "sitting"
+    },
+    {
+      "Rank": "980",
+      "german": "to",
+      "english": "to"
+    },
+    {
+      "Rank": "981",
+      "german": "sonne",
+      "english": "Sun"
+    },
+    {
+      "Rank": "982",
+      "german": "damen",
+      "english": "Ladies"
+    },
+    {
+      "Rank": "983",
+      "german": "laß",
+      "english": "let"
+    },
+    {
+      "Rank": "984",
+      "german": "bezahlen",
+      "english": "pay"
+    },
+    {
+      "Rank": "985",
+      "german": "selber",
+      "english": "himself"
+    },
+    {
+      "Rank": "986",
+      "german": "reise",
+      "english": "travel"
+    },
+    {
+      "Rank": "987",
+      "german": "team",
+      "english": "team"
+    },
+    {
+      "Rank": "988",
+      "german": "sobald",
+      "english": "as soon as"
+    },
+    {
+      "Rank": "989",
+      "german": "meister",
+      "english": "Master"
+    },
+    {
+      "Rank": "990",
+      "german": "majestät",
+      "english": "majesty"
+    },
+    {
+      "Rank": "991",
+      "german": "anfang",
+      "english": "Beginning"
+    },
+    {
+      "Rank": "992",
+      "german": "fangen",
+      "english": "to catch"
+    },
+    {
+      "Rank": "993",
+      "german": "außerdem",
+      "english": "also"
+    },
+    {
+      "Rank": "994",
+      "german": "geschrieben",
+      "english": "written"
+    },
+    {
+      "Rank": "995",
+      "german": "sex",
+      "english": "sex"
+    },
+    {
+      "Rank": "996",
+      "german": "hole",
+      "english": "hole"
+    },
+    {
+      "Rank": "997",
+      "german": "kriegt",
+      "english": "gets"
+    },
+    {
+      "Rank": "998",
+      "german": "yeah",
+      "english": "yeah"
+    },
+    {
+      "Rank": "999",
+      "german": "magst",
+      "english": "like"
+    },
+    {
+      "Rank": "1000",
+      "german": "laut",
+      "english": "according to"
+    },
+    {
+      "Rank": "1001",
+      "german": "klappe",
+      "english": "flap"
+    },
+    {
+      "Rank": "1002",
+      "german": "amerika",
+      "english": "America"
+    },
+    {
+      "Rank": "1003",
+      "german": "nahm",
+      "english": "took"
+    },
+    {
+      "Rank": "1004",
+      "german": "niemanden",
+      "english": "anyone"
+    },
+    {
+      "Rank": "1005",
+      "german": "gefährlich",
+      "english": "dangerous"
+    },
+    {
+      "Rank": "1006",
+      "german": "r",
+      "english": "r"
+    },
+    {
+      "Rank": "1007",
+      "german": "mörder",
+      "english": "killer"
+    },
+    {
+      "Rank": "1008",
+      "german": "gewinnen",
+      "english": "to win"
+    },
+    {
+      "Rank": "1009",
+      "german": "gedanken",
+      "english": "thoughts"
+    },
+    {
+      "Rank": "1010",
+      "german": "obwohl",
+      "english": "although"
+    },
+    {
+      "Rank": "1011",
+      "german": "monat",
+      "english": "month"
+    },
+    {
+      "Rank": "1012",
+      "german": "mike",
+      "english": "mike"
+    },
+    {
+      "Rank": "1013",
+      "german": "arbeitet",
+      "english": "is working"
+    },
+    {
+      "Rank": "1014",
+      "german": "herrn",
+      "english": "mr"
+    },
+    {
+      "Rank": "1015",
+      "german": "behalten",
+      "english": "to keep"
+    },
+    {
+      "Rank": "1016",
+      "german": "legen",
+      "english": "lay"
+    },
+    {
+      "Rank": "1017",
+      "german": "bob",
+      "english": "bob"
+    },
+    {
+      "Rank": "1018",
+      "german": "person",
+      "english": "person"
+    },
+    {
+      "Rank": "1019",
+      "german": "herzen",
+      "english": "hearts"
+    },
+    {
+      "Rank": "1020",
+      "german": "brief",
+      "english": "letter"
+    },
+    {
+      "Rank": "1021",
+      "german": "präsident",
+      "english": "president"
+    },
+    {
+      "Rank": "1022",
+      "german": "rechts",
+      "english": "right"
+    },
+    {
+      "Rank": "1023",
+      "german": "anfangen",
+      "english": "start"
+    },
+    {
+      "Rank": "1024",
+      "german": "schluss",
+      "english": "conclusion"
+    },
+    {
+      "Rank": "1025",
+      "german": "hübsch",
+      "english": "pretty"
+    },
+    {
+      "Rank": "1026",
+      "german": "don",
+      "english": "Don"
+    },
+    {
+      "Rank": "1027",
+      "german": "gewonnen",
+      "english": "recovered"
+    },
+    {
+      "Rank": "1028",
+      "german": "wisst",
+      "english": "know"
+    },
+    {
+      "Rank": "1029",
+      "german": "versprochen",
+      "english": "promised"
+    },
+    {
+      "Rank": "1030",
+      "german": "chef",
+      "english": "boss"
+    },
+    {
+      "Rank": "1031",
+      "german": "findest",
+      "english": "find"
+    },
+    {
+      "Rank": "1032",
+      "german": "perfekt",
+      "english": "perfect"
+    },
+    {
+      "Rank": "1033",
+      "german": "schlagen",
+      "english": "beat"
+    },
+    {
+      "Rank": "1034",
+      "german": "tatsächlich",
+      "english": "indeed"
+    },
+    {
+      "Rank": "1035",
+      "german": "pferd",
+      "english": "horse"
+    },
+    {
+      "Rank": "1036",
+      "german": "dagegen",
+      "english": "on the other hand"
+    },
+    {
+      "Rank": "1037",
+      "german": "erfahren",
+      "english": "learn"
+    },
+    {
+      "Rank": "1038",
+      "german": "monsieur",
+      "english": "monsieur"
+    },
+    {
+      "Rank": "1039",
+      "german": "mord",
+      "english": "murder"
+    },
+    {
+      "Rank": "1040",
+      "german": "paul",
+      "english": "paul"
+    },
+    {
+      "Rank": "1041",
+      "german": "nähe",
+      "english": "neighborhood"
+    },
+    {
+      "Rank": "1042",
+      "german": "nötig",
+      "english": "necessary"
+    },
+    {
+      "Rank": "1043",
+      "german": "wow",
+      "english": "Wow"
+    },
+    {
+      "Rank": "1044",
+      "german": "aller",
+      "english": "all"
+    },
+    {
+      "Rank": "1045",
+      "german": "offen",
+      "english": "open"
+    },
+    {
+      "Rank": "1046",
+      "german": "wach",
+      "english": "awake"
+    },
+    {
+      "Rank": "1047",
+      "german": "singen",
+      "english": "to sing"
+    },
+    {
+      "Rank": "1048",
+      "german": "beispiel",
+      "english": "example"
+    },
+    {
+      "Rank": "1049",
+      "german": "ais",
+      "english": "ais"
+    },
+    {
+      "Rank": "1050",
+      "german": "sowieso",
+      "english": "anyway"
+    },
+    {
+      "Rank": "1051",
+      "german": "jedenfalls",
+      "english": "anyway"
+    },
+    {
+      "Rank": "1052",
+      "german": "schwein",
+      "english": "pig"
+    },
+    {
+      "Rank": "1053",
+      "german": "bank",
+      "english": "bank"
+    },
+    {
+      "Rank": "1054",
+      "german": "ziel",
+      "english": "aim"
+    },
+    {
+      "Rank": "1055",
+      "german": "klein",
+      "english": "small"
+    },
+    {
+      "Rank": "1056",
+      "german": "verdient",
+      "english": "deserves"
+    },
+    {
+      "Rank": "1057",
+      "german": "band",
+      "english": "tape"
+    },
+    {
+      "Rank": "1058",
+      "german": "geist",
+      "english": "spirit"
+    },
+    {
+      "Rank": "1059",
+      "german": "ma",
+      "english": "ma"
+    },
+    {
+      "Rank": "1060",
+      "german": "max",
+      "english": "Max"
+    },
+    {
+      "Rank": "1061",
+      "german": "neu",
+      "english": "new"
+    },
+    {
+      "Rank": "1062",
+      "german": "schreit",
+      "english": "cries"
+    },
+    {
+      "Rank": "1063",
+      "german": "anwalt",
+      "english": "lawyer"
+    },
+    {
+      "Rank": "1064",
+      "german": "monaten",
+      "english": "months"
+    },
+    {
+      "Rank": "1065",
+      "german": "show",
+      "english": "show"
+    },
+    {
+      "Rank": "1066",
+      "german": "heim",
+      "english": "home"
+    },
+    {
+      "Rank": "1067",
+      "german": "führt",
+      "english": "leads"
+    },
+    {
+      "Rank": "1068",
+      "german": "lauf",
+      "english": "run"
+    },
+    {
+      "Rank": "1069",
+      "german": "ehre",
+      "english": "honor"
+    },
+    {
+      "Rank": "1070",
+      "german": "unterwegs",
+      "english": "on road"
+    },
+    {
+      "Rank": "1071",
+      "german": "gelernt",
+      "english": "learned"
+    },
+    {
+      "Rank": "1072",
+      "german": "minute",
+      "english": "minute"
+    },
+    {
+      "Rank": "1073",
+      "german": "reich",
+      "english": "rich"
+    },
+    {
+      "Rank": "1074",
+      "german": "wunder",
+      "english": "wonder"
+    },
+    {
+      "Rank": "1075",
+      "german": "opfer",
+      "english": "Victim"
+    },
+    {
+      "Rank": "1076",
+      "german": "erzähl",
+      "english": "tell"
+    },
+    {
+      "Rank": "1077",
+      "german": "bekannt",
+      "english": "known"
+    },
+    {
+      "Rank": "1078",
+      "german": "hau",
+      "english": "hau"
+    },
+    {
+      "Rank": "1079",
+      "german": "haut",
+      "english": "skin"
+    },
+    {
+      "Rank": "1080",
+      "german": "weder",
+      "english": "neither"
+    },
+    {
+      "Rank": "1081",
+      "german": "rücken",
+      "english": "move"
+    },
+    {
+      "Rank": "1082",
+      "german": "bekommt",
+      "english": "gets"
+    },
+    {
+      "Rank": "1083",
+      "german": "peter",
+      "english": "Peter"
+    },
+    {
+      "Rank": "1084",
+      "german": "jemals",
+      "english": "ever"
+    },
+    {
+      "Rank": "1085",
+      "german": "partner",
+      "english": "partner"
+    },
+    {
+      "Rank": "1086",
+      "german": "h",
+      "english": "H"
+    },
+    {
+      "Rank": "1087",
+      "german": "zieht",
+      "english": "attracts"
+    },
+    {
+      "Rank": "1088",
+      "german": "nase",
+      "english": "nose"
+    },
+    {
+      "Rank": "1089",
+      "german": "gefahr",
+      "english": "danger"
+    },
+    {
+      "Rank": "1090",
+      "german": "regeln",
+      "english": "regulate"
+    },
+    {
+      "Rank": "1091",
+      "german": "absolut",
+      "english": "absolute"
+    },
+    {
+      "Rank": "1092",
+      "german": "tief",
+      "english": "deep"
+    },
+    {
+      "Rank": "1093",
+      "german": "flugzeug",
+      "english": "airplane"
+    },
+    {
+      "Rank": "1094",
+      "german": "befehl",
+      "english": "command"
+    },
+    {
+      "Rank": "1095",
+      "german": "geschickt",
+      "english": "cleverly"
+    },
+    {
+      "Rank": "1096",
+      "german": "wette",
+      "english": "bet"
+    },
+    {
+      "Rank": "1097",
+      "german": "nennt",
+      "english": "lists"
+    },
+    {
+      "Rank": "1098",
+      "german": "jung",
+      "english": "young"
+    },
+    {
+      "Rank": "1099",
+      "german": "sucht",
+      "english": "investigated"
+    },
+    {
+      "Rank": "1100",
+      "german": "gehabt",
+      "english": "had"
+    },
+    {
+      "Rank": "1101",
+      "german": "geboren",
+      "english": "born"
+    },
+    {
+      "Rank": "1102",
+      "german": "rolle",
+      "english": "role"
+    },
+    {
+      "Rank": "1103",
+      "german": "l",
+      "english": "l"
+    },
+    {
+      "Rank": "1104",
+      "german": "schönen",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "1105",
+      "german": "leg",
+      "english": "leg"
+    },
+    {
+      "Rank": "1106",
+      "german": "holt",
+      "english": "get"
+    },
+    {
+      "Rank": "1107",
+      "german": "erinnerst",
+      "english": "remember"
+    },
+    {
+      "Rank": "1108",
+      "german": "heiße",
+      "english": "name is"
+    },
+    {
+      "Rank": "1109",
+      "german": "kraft",
+      "english": "force"
+    },
+    {
+      "Rank": "1110",
+      "german": "lhrem",
+      "english": "lhrem"
+    },
+    {
+      "Rank": "1111",
+      "german": "lacht",
+      "english": "laughs"
+    },
+    {
+      "Rank": "1112",
+      "german": "bar",
+      "english": "bear"
+    },
+    {
+      "Rank": "1113",
+      "german": "richtung",
+      "english": "direction"
+    },
+    {
+      "Rank": "1114",
+      "german": "tasche",
+      "english": "bag"
+    },
+    {
+      "Rank": "1115",
+      "german": "schlag",
+      "english": "blow"
+    },
+    {
+      "Rank": "1116",
+      "german": "professor",
+      "english": "professor"
+    },
+    {
+      "Rank": "1117",
+      "german": "steckt",
+      "english": "infected"
+    },
+    {
+      "Rank": "1118",
+      "german": "ständig",
+      "english": "constantly"
+    },
+    {
+      "Rank": "1119",
+      "german": "erwischt",
+      "english": "Caught"
+    },
+    {
+      "Rank": "1120",
+      "german": "stell",
+      "english": "alternate"
+    },
+    {
+      "Rank": "1121",
+      "german": "schrecklich",
+      "english": "terrible"
+    },
+    {
+      "Rank": "1122",
+      "german": "verschwinde",
+      "english": "disappear"
+    },
+    {
+      "Rank": "1123",
+      "german": "weise",
+      "english": "wise"
+    },
+    {
+      "Rank": "1124",
+      "german": "schlimmer",
+      "english": "worse"
+    },
+    {
+      "Rank": "1125",
+      "german": "ließ",
+      "english": "let"
+    },
+    {
+      "Rank": "1126",
+      "german": "frieden",
+      "english": "peace"
+    },
+    {
+      "Rank": "1127",
+      "german": "verliebt",
+      "english": "in love"
+    },
+    {
+      "Rank": "1128",
+      "german": "bleibe",
+      "english": "stay"
+    },
+    {
+      "Rank": "1129",
+      "german": "ehe",
+      "english": "marriage"
+    },
+    {
+      "Rank": "1130",
+      "german": "kriege",
+      "english": "wars"
+    },
+    {
+      "Rank": "1131",
+      "german": "näher",
+      "english": "closer"
+    },
+    {
+      "Rank": "1132",
+      "german": "gelesen",
+      "english": "read"
+    },
+    {
+      "Rank": "1133",
+      "german": "dahin",
+      "english": "then"
+    },
+    {
+      "Rank": "1134",
+      "german": "wofür",
+      "english": "for what"
+    },
+    {
+      "Rank": "1135",
+      "german": "dauert",
+      "english": "take"
+    },
+    {
+      "Rank": "1136",
+      "german": "neben",
+      "english": "Next"
+    },
+    {
+      "Rank": "1137",
+      "german": "gold",
+      "english": "gold"
+    },
+    {
+      "Rank": "1138",
+      "german": "raum",
+      "english": "room"
+    },
+    {
+      "Rank": "1139",
+      "german": "benutzt",
+      "english": "used"
+    },
+    {
+      "Rank": "1140",
+      "german": "welches",
+      "english": "which"
+    },
+    {
+      "Rank": "1141",
+      "german": "regierung",
+      "english": "government"
+    },
+    {
+      "Rank": "1142",
+      "german": "fährt",
+      "english": "moves"
+    },
+    {
+      "Rank": "1143",
+      "german": "volk",
+      "english": "people"
+    },
+    {
+      "Rank": "1144",
+      "german": "fernsehen",
+      "english": "watch TV"
+    },
+    {
+      "Rank": "1145",
+      "german": "zeiten",
+      "english": "times"
+    },
+    {
+      "Rank": "1146",
+      "german": "toten",
+      "english": "kill"
+    },
+    {
+      "Rank": "1147",
+      "german": "achtung",
+      "english": "Danger"
+    },
+    {
+      "Rank": "1148",
+      "german": "karte",
+      "english": "map"
+    },
+    {
+      "Rank": "1149",
+      "german": "hunger",
+      "english": "hunger"
+    },
+    {
+      "Rank": "1150",
+      "german": "diesmal",
+      "english": "this time"
+    },
+    {
+      "Rank": "1151",
+      "german": "preis",
+      "english": "price"
+    },
+    {
+      "Rank": "1152",
+      "german": "benutzen",
+      "english": "use"
+    },
+    {
+      "Rank": "1153",
+      "german": "scheisse",
+      "english": "Fuck"
+    },
+    {
+      "Rank": "1154",
+      "german": "hilft",
+      "english": "help"
+    },
+    {
+      "Rank": "1155",
+      "german": "geschenk",
+      "english": "gift"
+    },
+    {
+      "Rank": "1156",
+      "german": "hoffentlich",
+      "english": "hopefully"
+    },
+    {
+      "Rank": "1157",
+      "german": "manche",
+      "english": "some"
+    },
+    {
+      "Rank": "1158",
+      "german": "ansehen",
+      "english": "look at"
+    },
+    {
+      "Rank": "1159",
+      "german": "kriegst",
+      "english": "get"
+    },
+    {
+      "Rank": "1160",
+      "german": "lage",
+      "english": "location"
+    },
+    {
+      "Rank": "1161",
+      "german": "wünschte",
+      "english": "wish"
+    },
+    {
+      "Rank": "1162",
+      "german": "fehlt",
+      "english": "is missing"
+    },
+    {
+      "Rank": "1163",
+      "german": "willen",
+      "english": "sake"
+    },
+    {
+      "Rank": "1164",
+      "german": "bescheid",
+      "english": "decision"
+    },
+    {
+      "Rank": "1165",
+      "german": "heiß",
+      "english": "hot"
+    },
+    {
+      "Rank": "1166",
+      "german": "kamera",
+      "english": "camera"
+    },
+    {
+      "Rank": "1167",
+      "german": "gleiche",
+      "english": "same"
+    },
+    {
+      "Rank": "1168",
+      "german": "ruft",
+      "english": "calls"
+    },
+    {
+      "Rank": "1169",
+      "german": "unfall",
+      "english": "accident"
+    },
+    {
+      "Rank": "1170",
+      "german": "ans",
+      "english": "ans"
+    },
+    {
+      "Rank": "1171",
+      "german": "bullen",
+      "english": "bulls"
+    },
+    {
+      "Rank": "1172",
+      "german": "szene",
+      "english": "scene"
+    },
+    {
+      "Rank": "1173",
+      "german": "gericht",
+      "english": "dish"
+    },
+    {
+      "Rank": "1174",
+      "german": "gerettet",
+      "english": "saved"
+    },
+    {
+      "Rank": "1175",
+      "german": "schlaf",
+      "english": "sleep"
+    },
+    {
+      "Rank": "1176",
+      "german": "schicksal",
+      "english": "fate"
+    },
+    {
+      "Rank": "1177",
+      "german": "gesetz",
+      "english": "law"
+    },
+    {
+      "Rank": "1178",
+      "german": "fürs",
+      "english": "for"
+    },
+    {
+      "Rank": "1179",
+      "german": "d",
+      "english": "d"
+    },
+    {
+      "Rank": "1180",
+      "german": "verkauft",
+      "english": "sold"
+    },
+    {
+      "Rank": "1181",
+      "german": "bewegen",
+      "english": "move"
+    },
+    {
+      "Rank": "1182",
+      "german": "leiche",
+      "english": "corpse"
+    },
+    {
+      "Rank": "1183",
+      "german": "lm",
+      "english": "lm"
+    },
+    {
+      "Rank": "1184",
+      "german": "jesus",
+      "english": "Jesus"
+    },
+    {
+      "Rank": "1185",
+      "german": "soldaten",
+      "english": "soldiers"
+    },
+    {
+      "Rank": "1186",
+      "german": "geburtstag",
+      "english": "birthday"
+    },
+    {
+      "Rank": "1187",
+      "german": "lebe",
+      "english": "live"
+    },
+    {
+      "Rank": "1188",
+      "german": "darfst",
+      "english": "allowed to"
+    },
+    {
+      "Rank": "1189",
+      "german": "ewig",
+      "english": "eternally"
+    },
+    {
+      "Rank": "1190",
+      "german": "ben",
+      "english": "ben"
+    },
+    {
+      "Rank": "1191",
+      "german": "schade",
+      "english": "a pity"
+    },
+    {
+      "Rank": "1192",
+      "german": "seh",
+      "english": "seh"
+    },
+    {
+      "Rank": "1193",
+      "german": "witz",
+      "english": "wit"
+    },
+    {
+      "Rank": "1194",
+      "german": "müsste",
+      "english": "should"
+    },
+    {
+      "Rank": "1195",
+      "german": "it",
+      "english": "it"
+    },
+    {
+      "Rank": "1196",
+      "german": "erwarten",
+      "english": "expect"
+    },
+    {
+      "Rank": "1197",
+      "german": "aiies",
+      "english": "aiies"
+    },
+    {
+      "Rank": "1198",
+      "german": "ihres",
+      "english": "their"
+    },
+    {
+      "Rank": "1199",
+      "german": "fahre",
+      "english": "ferry"
+    },
+    {
+      "Rank": "1200",
+      "german": "ähm",
+      "english": "um"
+    },
+    {
+      "Rank": "1201",
+      "german": "pro",
+      "english": "per"
+    },
+    {
+      "Rank": "1202",
+      "german": "traurig",
+      "english": "sad"
+    },
+    {
+      "Rank": "1203",
+      "german": "hältst",
+      "english": "hold"
+    },
+    {
+      "Rank": "1204",
+      "german": "doc",
+      "english": "doc"
+    },
+    {
+      "Rank": "1205",
+      "german": "jemandem",
+      "english": "somebody"
+    },
+    {
+      "Rank": "1206",
+      "german": "b",
+      "english": "b"
+    },
+    {
+      "Rank": "1207",
+      "german": "setzt",
+      "english": "puts"
+    },
+    {
+      "Rank": "1208",
+      "german": "gesellschaft",
+      "english": "society"
+    },
+    {
+      "Rank": "1209",
+      "german": "punkt",
+      "english": "Point"
+    },
+    {
+      "Rank": "1210",
+      "german": "freiheit",
+      "english": "freedom"
+    },
+    {
+      "Rank": "1211",
+      "german": "jimmy",
+      "english": "Jimmy"
+    },
+    {
+      "Rank": "1212",
+      "german": "darin",
+      "english": "therein"
+    },
+    {
+      "Rank": "1213",
+      "german": "brachte",
+      "english": "brought"
+    },
+    {
+      "Rank": "1214",
+      "german": "weile",
+      "english": "while"
+    },
+    {
+      "Rank": "1215",
+      "german": "jawohl",
+      "english": "Yes"
+    },
+    {
+      "Rank": "1216",
+      "german": "dasselbe",
+      "english": "the same thing"
+    },
+    {
+      "Rank": "1217",
+      "german": "maul",
+      "english": "mouth"
+    },
+    {
+      "Rank": "1218",
+      "german": "zeigt",
+      "english": "shows"
+    },
+    {
+      "Rank": "1219",
+      "german": "taxi",
+      "english": "taxi"
+    },
+    {
+      "Rank": "1220",
+      "german": "erreichen",
+      "english": "to accomplish"
+    },
+    {
+      "Rank": "1221",
+      "german": "redet",
+      "english": "talks"
+    },
+    {
+      "Rank": "1222",
+      "german": "foto",
+      "english": "photo"
+    },
+    {
+      "Rank": "1223",
+      "german": "gekauft",
+      "english": "Bought"
+    },
+    {
+      "Rank": "1224",
+      "german": "meer",
+      "english": "sea"
+    },
+    {
+      "Rank": "1225",
+      "german": "sheriff",
+      "english": "sheriff"
+    },
+    {
+      "Rank": "1226",
+      "german": "liebst",
+      "english": "love"
+    },
+    {
+      "Rank": "1227",
+      "german": "unbedingt",
+      "english": "absolutely"
+    },
+    {
+      "Rank": "1228",
+      "german": "aussehen",
+      "english": "appearance"
+    },
+    {
+      "Rank": "1229",
+      "german": "tante",
+      "english": "aunt"
+    },
+    {
+      "Rank": "1230",
+      "german": "drehen",
+      "english": "turn"
+    },
+    {
+      "Rank": "1231",
+      "german": "stirbt",
+      "english": "dies"
+    },
+    {
+      "Rank": "1232",
+      "german": "bord",
+      "english": "shelf"
+    },
+    {
+      "Rank": "1233",
+      "german": "kirche",
+      "english": "church"
+    },
+    {
+      "Rank": "1234",
+      "german": "tee",
+      "english": "tea"
+    },
+    {
+      "Rank": "1235",
+      "german": "of",
+      "english": "of"
+    },
+    {
+      "Rank": "1236",
+      "german": "erledigt",
+      "english": "done"
+    },
+    {
+      "Rank": "1237",
+      "german": "wein",
+      "english": "Wine"
+    },
+    {
+      "Rank": "1238",
+      "german": "weihnachten",
+      "english": "Christmas"
+    },
+    {
+      "Rank": "1239",
+      "german": "irgendwann",
+      "english": "sometime"
+    },
+    {
+      "Rank": "1240",
+      "german": "billy",
+      "english": "billy"
+    },
+    {
+      "Rank": "1241",
+      "german": "euren",
+      "english": "your"
+    },
+    {
+      "Rank": "1242",
+      "german": "brauch",
+      "english": "custom"
+    },
+    {
+      "Rank": "1243",
+      "german": "hochzeit",
+      "english": "wedding"
+    },
+    {
+      "Rank": "1244",
+      "german": "dorf",
+      "english": "village"
+    },
+    {
+      "Rank": "1245",
+      "german": "sagtest",
+      "english": "told"
+    },
+    {
+      "Rank": "1246",
+      "german": "james",
+      "english": "james"
+    },
+    {
+      "Rank": "1247",
+      "german": "lady",
+      "english": "lady"
+    },
+    {
+      "Rank": "1248",
+      "german": "lust",
+      "english": "lust"
+    },
+    {
+      "Rank": "1249",
+      "german": "kontrolle",
+      "english": "control"
+    },
+    {
+      "Rank": "1250",
+      "german": "tolle",
+      "english": "amazing"
+    },
+    {
+      "Rank": "1251",
+      "german": "beine",
+      "english": "legs"
+    },
+    {
+      "Rank": "1252",
+      "german": "hut",
+      "english": "cap"
+    },
+    {
+      "Rank": "1253",
+      "german": "wiii",
+      "english": "wiii"
+    },
+    {
+      "Rank": "1254",
+      "german": "hoffnung",
+      "english": "hope"
+    },
+    {
+      "Rank": "1255",
+      "german": "firma",
+      "english": "company"
+    },
+    {
+      "Rank": "1256",
+      "german": "me",
+      "english": "me"
+    },
+    {
+      "Rank": "1257",
+      "german": "lügen",
+      "english": "lie"
+    },
+    {
+      "Rank": "1258",
+      "german": "sergeant",
+      "english": "sergeant"
+    },
+    {
+      "Rank": "1259",
+      "german": "fürchte",
+      "english": "fear"
+    },
+    {
+      "Rank": "1260",
+      "german": "kaputt",
+      "english": "broken"
+    },
+    {
+      "Rank": "1261",
+      "german": "bekam",
+      "english": "got"
+    },
+    {
+      "Rank": "1262",
+      "german": "is",
+      "english": "is"
+    },
+    {
+      "Rank": "1263",
+      "german": "nachrichten",
+      "english": "news"
+    },
+    {
+      "Rank": "1264",
+      "german": "ball",
+      "english": "ball"
+    },
+    {
+      "Rank": "1265",
+      "german": "haare",
+      "english": "hair"
+    },
+    {
+      "Rank": "1266",
+      "german": "tschüss",
+      "english": "bye"
+    },
+    {
+      "Rank": "1267",
+      "german": "seltsam",
+      "english": "strange"
+    },
+    {
+      "Rank": "1268",
+      "german": "vergnügen",
+      "english": "pleasure"
+    },
+    {
+      "Rank": "1269",
+      "german": "sauber",
+      "english": "clean"
+    },
+    {
+      "Rank": "1270",
+      "german": "bill",
+      "english": "bill"
+    },
+    {
+      "Rank": "1271",
+      "german": "zuhause",
+      "english": "at home"
+    },
+    {
+      "Rank": "1272",
+      "german": "anderer",
+      "english": "another"
+    },
+    {
+      "Rank": "1273",
+      "german": "zeichen",
+      "english": "character"
+    },
+    {
+      "Rank": "1274",
+      "german": "herein",
+      "english": "in"
+    },
+    {
+      "Rank": "1275",
+      "german": "liste",
+      "english": "list"
+    },
+    {
+      "Rank": "1276",
+      "german": "haltet",
+      "english": "think"
+    },
+    {
+      "Rank": "1277",
+      "german": "normal",
+      "english": "normal"
+    },
+    {
+      "Rank": "1278",
+      "german": "see",
+      "english": "lake"
+    },
+    {
+      "Rank": "1279",
+      "german": "schätze",
+      "english": "wealth"
+    },
+    {
+      "Rank": "1280",
+      "german": "bewegt",
+      "english": "emotional"
+    },
+    {
+      "Rank": "1281",
+      "german": "wussten",
+      "english": "knew"
+    },
+    {
+      "Rank": "1282",
+      "german": "blick",
+      "english": "view"
+    },
+    {
+      "Rank": "1283",
+      "german": "naja",
+      "english": "well"
+    },
+    {
+      "Rank": "1284",
+      "german": "gesucht",
+      "english": "searched"
+    },
+    {
+      "Rank": "1285",
+      "german": "gestohlen",
+      "english": "stolen"
+    },
+    {
+      "Rank": "1286",
+      "german": "vorne",
+      "english": "ahead"
+    },
+    {
+      "Rank": "1287",
+      "german": "jim",
+      "english": "jim"
+    },
+    {
+      "Rank": "1288",
+      "german": "kindern",
+      "english": "children"
+    },
+    {
+      "Rank": "1289",
+      "german": "frag",
+      "english": "question"
+    },
+    {
+      "Rank": "1290",
+      "german": "bleibst",
+      "english": "stay"
+    },
+    {
+      "Rank": "1291",
+      "german": "nachts",
+      "english": "at night"
+    },
+    {
+      "Rank": "1292",
+      "german": "neun",
+      "english": "nine"
+    },
+    {
+      "Rank": "1293",
+      "german": "nämlich",
+      "english": "namely"
+    },
+    {
+      "Rank": "1294",
+      "german": "wunderschön",
+      "english": "very beautiful"
+    },
+    {
+      "Rank": "1295",
+      "german": "stecken",
+      "english": "stick"
+    },
+    {
+      "Rank": "1296",
+      "german": "großes",
+      "english": "great"
+    },
+    {
+      "Rank": "1297",
+      "german": "freut",
+      "english": "is pleased"
+    },
+    {
+      "Rank": "1298",
+      "german": "weitere",
+      "english": "more"
+    },
+    {
+      "Rank": "1299",
+      "german": "gehören",
+      "english": "belong"
+    },
+    {
+      "Rank": "1300",
+      "german": "schwöre",
+      "english": "swear"
+    },
+    {
+      "Rank": "1301",
+      "german": "nervös",
+      "english": "nervous"
+    },
+    {
+      "Rank": "1302",
+      "german": "hals",
+      "english": "neck"
+    },
+    {
+      "Rank": "1303",
+      "german": "henry",
+      "english": "henry"
+    },
+    {
+      "Rank": "1304",
+      "german": "gearbeitet",
+      "english": "worked"
+    },
+    {
+      "Rank": "1305",
+      "german": "eigene",
+      "english": "own"
+    },
+    {
+      "Rank": "1306",
+      "german": "glas",
+      "english": "Glass"
+    },
+    {
+      "Rank": "1307",
+      "german": "versteckt",
+      "english": "hidden"
+    },
+    {
+      "Rank": "1308",
+      "german": "feind",
+      "english": "enemy"
+    },
+    {
+      "Rank": "1309",
+      "german": "schönes",
+      "english": "beautiful"
+    },
+    {
+      "Rank": "1310",
+      "german": "verzeihen",
+      "english": "forgive"
+    },
+    {
+      "Rank": "1311",
+      "german": "öffnen",
+      "english": "open"
+    },
+    {
+      "Rank": "1312",
+      "german": "meter",
+      "english": "meter"
+    },
+    {
+      "Rank": "1313",
+      "german": "drogen",
+      "english": "drugs"
+    },
+    {
+      "Rank": "1314",
+      "german": "schöner",
+      "english": "more beautiful"
+    },
+    {
+      "Rank": "1315",
+      "german": "nehmt",
+      "english": "take"
+    },
+    {
+      "Rank": "1316",
+      "german": "madame",
+      "english": "madame"
+    },
+    {
+      "Rank": "1317",
+      "german": "mary",
+      "english": "mary"
+    },
+    {
+      "Rank": "1318",
+      "german": "süß",
+      "english": "sweet"
+    },
+    {
+      "Rank": "1319",
+      "german": "entscheidung",
+      "english": "decision"
+    },
+    {
+      "Rank": "1320",
+      "german": "erschossen",
+      "english": "shot"
+    },
+    {
+      "Rank": "1321",
+      "german": "verändert",
+      "english": "changed"
+    },
+    {
+      "Rank": "1322",
+      "german": "la",
+      "english": "la"
+    },
+    {
+      "Rank": "1323",
+      "german": "wind",
+      "english": "wind"
+    },
+    {
+      "Rank": "1324",
+      "german": "ray",
+      "english": "ray"
+    },
+    {
+      "Rank": "1325",
+      "german": "wohnen",
+      "english": "live"
+    },
+    {
+      "Rank": "1326",
+      "german": "schuhe",
+      "english": "Shoes"
+    },
+    {
+      "Rank": "1327",
+      "german": "interessant",
+      "english": "interesting"
+    },
+    {
+      "Rank": "1328",
+      "german": "übrigens",
+      "english": "incidentally"
+    },
+    {
+      "Rank": "1329",
+      "german": "letzter",
+      "english": "last"
+    },
+    {
+      "Rank": "1330",
+      "german": "müsst",
+      "english": "must"
+    },
+    {
+      "Rank": "1331",
+      "german": "nächstes",
+      "english": "next"
+    },
+    {
+      "Rank": "1332",
+      "german": "schaut",
+      "english": "looks"
+    },
+    {
+      "Rank": "1333",
+      "german": "armen",
+      "english": "poor"
+    },
+    {
+      "Rank": "1334",
+      "german": "verstand",
+      "english": "mind"
+    },
+    {
+      "Rank": "1335",
+      "german": "verraten",
+      "english": "betray"
+    },
+    {
+      "Rank": "1336",
+      "german": "besuch",
+      "english": "visit"
+    },
+    {
+      "Rank": "1337",
+      "german": "beweise",
+      "english": "proofs"
+    },
+    {
+      "Rank": "1338",
+      "german": "sekunde",
+      "english": "second"
+    },
+    {
+      "Rank": "1339",
+      "german": "polizist",
+      "english": "police officer"
+    },
+    {
+      "Rank": "1340",
+      "german": "meint",
+      "english": "means"
+    },
+    {
+      "Rank": "1341",
+      "german": "fur",
+      "english": "For"
+    },
+    {
+      "Rank": "1342",
+      "german": "insel",
+      "english": "island"
+    },
+    {
+      "Rank": "1343",
+      "german": "beweisen",
+      "english": "to prove"
+    },
+    {
+      "Rank": "1344",
+      "german": "antworten",
+      "english": "reply"
+    },
+    {
+      "Rank": "1345",
+      "german": "fotos",
+      "english": "photos"
+    },
+    {
+      "Rank": "1346",
+      "german": "passen",
+      "english": "fit"
+    },
+    {
+      "Rank": "1347",
+      "german": "werfen",
+      "english": "throw"
+    },
+    {
+      "Rank": "1348",
+      "german": "persönlich",
+      "english": "personally"
+    },
+    {
+      "Rank": "1349",
+      "german": "fragte",
+      "english": "asked"
+    },
+    {
+      "Rank": "1350",
+      "german": "namens",
+      "english": "called"
+    },
+    {
+      "Rank": "1351",
+      "german": "gegenüber",
+      "english": "opposite to"
+    },
+    {
+      "Rank": "1352",
+      "german": "unsinn",
+      "english": "nonsense"
+    },
+    {
+      "Rank": "1353",
+      "german": "drink",
+      "english": "drink"
+    },
+    {
+      "Rank": "1354",
+      "german": "fuß",
+      "english": "foot"
+    },
+    {
+      "Rank": "1355",
+      "german": "besuchen",
+      "english": "visit"
+    },
+    {
+      "Rank": "1356",
+      "german": "güte",
+      "english": "quality"
+    },
+    {
+      "Rank": "1357",
+      "german": "lieb",
+      "english": "dear"
+    },
+    {
+      "Rank": "1358",
+      "german": "guck",
+      "english": "peep"
+    },
+    {
+      "Rank": "1359",
+      "german": "deines",
+      "english": "yours"
+    },
+    {
+      "Rank": "1360",
+      "german": "roger",
+      "english": "roger"
+    },
+    {
+      "Rank": "1361",
+      "german": "richtigen",
+      "english": "right"
+    },
+    {
+      "Rank": "1362",
+      "german": "übrig",
+      "english": "left"
+    },
+    {
+      "Rank": "1363",
+      "german": "major",
+      "english": "major"
+    },
+    {
+      "Rank": "1364",
+      "german": "bein",
+      "english": "leg"
+    },
+    {
+      "Rank": "1365",
+      "german": "messer",
+      "english": "knife"
+    },
+    {
+      "Rank": "1366",
+      "german": "geheimnis",
+      "english": "secret"
+    },
+    {
+      "Rank": "1367",
+      "german": "kannte",
+      "english": "knew"
+    },
+    {
+      "Rank": "1368",
+      "german": "gegessen",
+      "english": "eaten"
+    },
+    {
+      "Rank": "1369",
+      "german": "ungefähr",
+      "english": "about"
+    },
+    {
+      "Rank": "1370",
+      "german": "ran",
+      "english": "ran"
+    },
+    {
+      "Rank": "1371",
+      "german": "maria",
+      "english": "Mary"
+    },
+    {
+      "Rank": "1372",
+      "german": "nahe",
+      "english": "near"
+    },
+    {
+      "Rank": "1373",
+      "german": "meinte",
+      "english": "thought"
+    },
+    {
+      "Rank": "1374",
+      "german": "nimmst",
+      "english": "take"
+    },
+    {
+      "Rank": "1375",
+      "german": "gruppe",
+      "english": "group"
+    },
+    {
+      "Rank": "1376",
+      "german": "bücher",
+      "english": "Books"
+    },
+    {
+      "Rank": "1377",
+      "german": "weib",
+      "english": "woman"
+    },
+    {
+      "Rank": "1378",
+      "german": "geschlafen",
+      "english": "slept"
+    },
+    {
+      "Rank": "1379",
+      "german": "g",
+      "english": "G"
+    },
+    {
+      "Rank": "1380",
+      "german": "london",
+      "english": "London"
+    },
+    {
+      "Rank": "1381",
+      "german": "letztes",
+      "english": "last"
+    },
+    {
+      "Rank": "1382",
+      "german": "zeitung",
+      "english": "newspaper"
+    },
+    {
+      "Rank": "1383",
+      "german": "zufrieden",
+      "english": "satisfied"
+    },
+    {
+      "Rank": "1384",
+      "german": "verdammten",
+      "english": "damned"
+    },
+    {
+      "Rank": "1385",
+      "german": "zweite",
+      "english": "second"
+    },
+    {
+      "Rank": "1386",
+      "german": "geliebt",
+      "english": "loved"
+    },
+    {
+      "Rank": "1387",
+      "german": "freude",
+      "english": "pleasure"
+    },
+    {
+      "Rank": "1388",
+      "german": "loch",
+      "english": "hole"
+    },
+    {
+      "Rank": "1389",
+      "german": "stellt",
+      "english": "provides"
+    },
+    {
+      "Rank": "1390",
+      "german": "statt",
+      "english": "instead of"
+    },
+    {
+      "Rank": "1391",
+      "german": "fleisch",
+      "english": "meat"
+    },
+    {
+      "Rank": "1392",
+      "german": "ganzes",
+      "english": "whole"
+    },
+    {
+      "Rank": "1393",
+      "german": "verschwunden",
+      "english": "missing"
+    },
+    {
+      "Rank": "1394",
+      "german": "ee",
+      "english": "ee"
+    },
+    {
+      "Rank": "1395",
+      "german": "worauf",
+      "english": "whereupon"
+    },
+    {
+      "Rank": "1396",
+      "german": "sauer",
+      "english": "angry"
+    },
+    {
+      "Rank": "1397",
+      "german": "erkennen",
+      "english": "recognize"
+    },
+    {
+      "Rank": "1398",
+      "german": "weißen",
+      "english": "white"
+    },
+    {
+      "Rank": "1399",
+      "german": "entfernt",
+      "english": "away"
+    },
+    {
+      "Rank": "1400",
+      "german": "nick",
+      "english": "nick"
+    },
+    {
+      "Rank": "1401",
+      "german": "mut",
+      "english": "courage"
+    },
+    {
+      "Rank": "1402",
+      "german": "mitnehmen",
+      "english": "take"
+    },
+    {
+      "Rank": "1403",
+      "german": "anruf",
+      "english": "Call"
+    },
+    {
+      "Rank": "1404",
+      "german": "lied",
+      "english": "song"
+    },
+    {
+      "Rank": "1405",
+      "german": "träume",
+      "english": "dreams"
+    },
+    {
+      "Rank": "1406",
+      "german": "for",
+      "english": "for"
+    },
+    {
+      "Rank": "1407",
+      "german": "kostet",
+      "english": "costs"
+    },
+    {
+      "Rank": "1408",
+      "german": "fisch",
+      "english": "fish"
+    },
+    {
+      "Rank": "1409",
+      "german": "amerikaner",
+      "english": "American"
+    },
+    {
+      "Rank": "1410",
+      "german": "schuldig",
+      "english": "guilty"
+    },
+    {
+      "Rank": "1411",
+      "german": "zumindest",
+      "english": "at least"
+    },
+    {
+      "Rank": "1412",
+      "german": "entweder",
+      "english": "either"
+    },
+    {
+      "Rank": "1413",
+      "german": "mark",
+      "english": "mark"
+    },
+    {
+      "Rank": "1414",
+      "german": "sprach",
+      "english": "spoke"
+    },
+    {
+      "Rank": "1415",
+      "german": "informationen",
+      "english": "informations"
+    },
+    {
+      "Rank": "1416",
+      "german": "miteinander",
+      "english": "together"
+    },
+    {
+      "Rank": "1417",
+      "german": "sowas",
+      "english": "like this"
+    },
+    {
+      "Rank": "1418",
+      "german": "gibst",
+      "english": "give"
+    },
+    {
+      "Rank": "1419",
+      "german": "sahen",
+      "english": "saw"
+    },
+    {
+      "Rank": "1420",
+      "german": "schmerz",
+      "english": "pain"
+    },
+    {
+      "Rank": "1421",
+      "german": "furchtbar",
+      "english": "terrible"
+    },
+    {
+      "Rank": "1422",
+      "german": "niemandem",
+      "english": "anyone"
+    },
+    {
+      "Rank": "1423",
+      "german": "vaters",
+      "english": "father"
+    },
+    {
+      "Rank": "1424",
+      "german": "vorwärts",
+      "english": "forward"
+    },
+    {
+      "Rank": "1425",
+      "german": "computer",
+      "english": "computer"
+    },
+    {
+      "Rank": "1426",
+      "german": "teilen",
+      "english": "divide"
+    },
+    {
+      "Rank": "1427",
+      "german": "gefahren",
+      "english": "hazards"
+    },
+    {
+      "Rank": "1428",
+      "german": "erster",
+      "english": "first"
+    },
+    {
+      "Rank": "1429",
+      "german": "eier",
+      "english": "eggs"
+    },
+    {
+      "Rank": "1430",
+      "german": "seines",
+      "english": "his"
+    },
+    {
+      "Rank": "1431",
+      "german": "kontakt",
+      "english": "contact"
+    },
+    {
+      "Rank": "1432",
+      "german": "situation",
+      "english": "situation"
+    },
+    {
+      "Rank": "1433",
+      "german": "bus",
+      "english": "bus"
+    },
+    {
+      "Rank": "1434",
+      "german": "verstecken",
+      "english": "hide"
+    },
+    {
+      "Rank": "1435",
+      "german": "händen",
+      "english": "hands"
+    },
+    {
+      "Rank": "1436",
+      "german": "ehren",
+      "english": "to honor"
+    },
+    {
+      "Rank": "1437",
+      "german": "entlang",
+      "english": "along"
+    },
+    {
+      "Rank": "1438",
+      "german": "küche",
+      "english": "kitchen"
+    },
+    {
+      "Rank": "1439",
+      "german": "wütend",
+      "english": "angry"
+    },
+    {
+      "Rank": "1440",
+      "german": "mami",
+      "english": "mommy"
+    },
+    {
+      "Rank": "1441",
+      "german": "fühlt",
+      "english": "feels"
+    },
+    {
+      "Rank": "1442",
+      "german": "eddie",
+      "english": "eddie"
+    },
+    {
+      "Rank": "1443",
+      "german": "überraschung",
+      "english": "surprise"
+    },
+    {
+      "Rank": "1444",
+      "german": "tony",
+      "english": "tony"
+    },
+    {
+      "Rank": "1445",
+      "german": "haar",
+      "english": "hair"
+    },
+    {
+      "Rank": "1446",
+      "german": "schwert",
+      "english": "sword"
+    },
+    {
+      "Rank": "1447",
+      "german": "schreien",
+      "english": "cry"
+    },
+    {
+      "Rank": "1448",
+      "german": "lag",
+      "english": "was"
+    },
+    {
+      "Rank": "1449",
+      "german": "fräulein",
+      "english": "miss"
+    },
+    {
+      "Rank": "1450",
+      "german": "ha",
+      "english": "Ha"
+    },
+    {
+      "Rank": "1451",
+      "german": "hielt",
+      "english": "held"
+    },
+    {
+      "Rank": "1452",
+      "german": "richter",
+      "english": "judge"
+    },
+    {
+      "Rank": "1453",
+      "german": "gespielt",
+      "english": "played"
+    },
+    {
+      "Rank": "1454",
+      "german": "gegend",
+      "english": "area"
+    },
+    {
+      "Rank": "1455",
+      "german": "red",
+      "english": "red"
+    },
+    {
+      "Rank": "1456",
+      "german": "gebäude",
+      "english": "building"
+    },
+    {
+      "Rank": "1457",
+      "german": "geredet",
+      "english": "spoken"
+    },
+    {
+      "Rank": "1458",
+      "german": "rat",
+      "english": "advice"
+    },
+    {
+      "Rank": "1459",
+      "german": "schlechte",
+      "english": "bad"
+    },
+    {
+      "Rank": "1460",
+      "german": "süße",
+      "english": "sweet"
+    },
+    {
+      "Rank": "1461",
+      "german": "hängt",
+      "english": "hangs"
+    },
+    {
+      "Rank": "1462",
+      "german": "eis",
+      "english": "ice cream"
+    },
+    {
+      "Rank": "1463",
+      "german": "big",
+      "english": "big"
+    },
+    {
+      "Rank": "1464",
+      "german": "zerstört",
+      "english": "destroyed"
+    },
+    {
+      "Rank": "1465",
+      "german": "koffer",
+      "english": "suitcase"
+    },
+    {
+      "Rank": "1466",
+      "german": "wohnt",
+      "english": "lives"
+    },
+    {
+      "Rank": "1467",
+      "german": "schwarze",
+      "english": "black"
+    },
+    {
+      "Rank": "1468",
+      "german": "versteht",
+      "english": "understood"
+    },
+    {
+      "Rank": "1469",
+      "german": "kümmere",
+      "english": "take care"
+    },
+    {
+      "Rank": "1470",
+      "german": "erledigen",
+      "english": "carry out"
+    },
+    {
+      "Rank": "1471",
+      "german": "lieutenant",
+      "english": "lieutenant"
+    },
+    {
+      "Rank": "1472",
+      "german": "alex",
+      "english": "alex"
+    },
+    {
+      "Rank": "1473",
+      "german": "männern",
+      "english": "men"
+    },
+    {
+      "Rank": "1474",
+      "german": "witzig",
+      "english": "funny"
+    },
+    {
+      "Rank": "1475",
+      "german": "schließlich",
+      "english": "after all"
+    },
+    {
+      "Rank": "1476",
+      "german": "position",
+      "english": "position"
+    },
+    {
+      "Rank": "1477",
+      "german": "drinnen",
+      "english": "indoors"
+    },
+    {
+      "Rank": "1478",
+      "german": "fbi",
+      "english": "fbi"
+    },
+    {
+      "Rank": "1479",
+      "german": "soweit",
+      "english": "so far"
+    },
+    {
+      "Rank": "1480",
+      "german": "falsche",
+      "english": "false"
+    },
+    {
+      "Rank": "1481",
+      "german": "entscheiden",
+      "english": "decide"
+    },
+    {
+      "Rank": "1482",
+      "german": "erhalten",
+      "english": "receive"
+    },
+    {
+      "Rank": "1483",
+      "german": "bauen",
+      "english": "to build"
+    },
+    {
+      "Rank": "1484",
+      "german": "kleid",
+      "english": "dress"
+    },
+    {
+      "Rank": "1485",
+      "german": "dachten",
+      "english": "thought"
+    },
+    {
+      "Rank": "1486",
+      "german": "übel",
+      "english": "evil"
+    },
+    {
+      "Rank": "1487",
+      "german": "überleben",
+      "english": "to survive"
+    },
+    {
+      "Rank": "1488",
+      "german": "hinaus",
+      "english": "out"
+    },
+    {
+      "Rank": "1489",
+      "german": "beeil",
+      "english": "hurry"
+    },
+    {
+      "Rank": "1490",
+      "german": "wald",
+      "english": "forest"
+    },
+    {
+      "Rank": "1491",
+      "german": "töte",
+      "english": "kill"
+    },
+    {
+      "Rank": "1492",
+      "german": "beschäftigt",
+      "english": "employed"
+    },
+    {
+      "Rank": "1493",
+      "german": "ring",
+      "english": "ring"
+    },
+    {
+      "Rank": "1494",
+      "german": "verbindung",
+      "english": "connection"
+    },
+    {
+      "Rank": "1495",
+      "german": "königin",
+      "english": "queen"
+    },
+    {
+      "Rank": "1496",
+      "german": "ecke",
+      "english": "corner"
+    },
+    {
+      "Rank": "1497",
+      "german": "halb",
+      "english": "half"
+    },
+    {
+      "Rank": "1498",
+      "german": "bericht",
+      "english": "report"
+    },
+    {
+      "Rank": "1499",
+      "german": "gingen",
+      "english": "went"
+    },
+    {
+      "Rank": "1500",
+      "german": "vergangenheit",
+      "english": "past"
+    },
+    {
+      "Rank": "1501",
+      "german": "spiele",
+      "english": "games"
+    },
+    {
+      "Rank": "1502",
+      "german": "angefangen",
+      "english": "started"
+    },
+    {
+      "Rank": "1503",
+      "german": "weinen",
+      "english": "cry"
+    },
+    {
+      "Rank": "1504",
+      "german": "welchen",
+      "english": "what"
+    },
+    {
+      "Rank": "1505",
+      "german": "radio",
+      "english": "radio"
+    },
+    {
+      "Rank": "1506",
+      "german": "nah",
+      "english": "close"
+    },
+    {
+      "Rank": "1507",
+      "german": "beziehung",
+      "english": "relationship"
+    },
+    {
+      "Rank": "1508",
+      "german": "hängen",
+      "english": "hang"
+    },
+    {
+      "Rank": "1509",
+      "german": "feiern",
+      "english": "celebrate"
+    },
+    {
+      "Rank": "1510",
+      "german": "w",
+      "english": "w"
+    },
+    {
+      "Rank": "1511",
+      "german": "mussten",
+      "english": "had"
+    },
+    {
+      "Rank": "1512",
+      "german": "verhaftet",
+      "english": "arrested"
+    },
+    {
+      "Rank": "1513",
+      "german": "maschine",
+      "english": "machine"
+    },
+    {
+      "Rank": "1514",
+      "german": "ermordet",
+      "english": "murdered"
+    },
+    {
+      "Rank": "1515",
+      "german": "aiie",
+      "english": "aII"
+    },
+    {
+      "Rank": "1516",
+      "german": "richard",
+      "english": "richard"
+    },
+    {
+      "Rank": "1517",
+      "german": "größte",
+      "english": "greatest"
+    },
+    {
+      "Rank": "1518",
+      "german": "betrunken",
+      "english": "drunk"
+    },
+    {
+      "Rank": "1519",
+      "german": "mußt",
+      "english": "must"
+    },
+    {
+      "Rank": "1520",
+      "german": "soldat",
+      "english": "soldier"
+    },
+    {
+      "Rank": "1521",
+      "german": "irgendetwas",
+      "english": "anything"
+    },
+    {
+      "Rank": "1522",
+      "german": "on",
+      "english": "on"
+    },
+    {
+      "Rank": "1523",
+      "german": "gefühle",
+      "english": "emotions"
+    },
+    {
+      "Rank": "1524",
+      "german": "rauf",
+      "english": "up"
+    },
+    {
+      "Rank": "1525",
+      "german": "rief",
+      "english": "cried"
+    },
+    {
+      "Rank": "1526",
+      "german": "beginnt",
+      "english": "starts"
+    },
+    {
+      "Rank": "1527",
+      "german": "anna",
+      "english": "Ann"
+    },
+    {
+      "Rank": "1528",
+      "german": "witze",
+      "english": "joking"
+    },
+    {
+      "Rank": "1529",
+      "german": "engel",
+      "english": "angel"
+    },
+    {
+      "Rank": "1530",
+      "german": "quatsch",
+      "english": "nonsense"
+    },
+    {
+      "Rank": "1531",
+      "german": "hälfte",
+      "english": "half"
+    },
+    {
+      "Rank": "1532",
+      "german": "spreche",
+      "english": "speak"
+    },
+    {
+      "Rank": "1533",
+      "german": "lehrer",
+      "english": "teacher"
+    },
+    {
+      "Rank": "1534",
+      "german": "england",
+      "english": "England"
+    },
+    {
+      "Rank": "1535",
+      "german": "charles",
+      "english": "charles"
+    },
+    {
+      "Rank": "1536",
+      "german": "dessen",
+      "english": "its"
+    },
+    {
+      "Rank": "1537",
+      "german": "schwierig",
+      "english": "difficult"
+    },
+    {
+      "Rank": "1538",
+      "german": "fang",
+      "english": "fishing"
+    },
+    {
+      "Rank": "1539",
+      "german": "gleichen",
+      "english": "equal"
+    },
+    {
+      "Rank": "1540",
+      "german": "respekt",
+      "english": "respect"
+    },
+    {
+      "Rank": "1541",
+      "german": "adresse",
+      "english": "address"
+    },
+    {
+      "Rank": "1542",
+      "german": "brücke",
+      "english": "bridge"
+    },
+    {
+      "Rank": "1543",
+      "german": "falschen",
+      "english": "false"
+    },
+    {
+      "Rank": "1544",
+      "german": "blumen",
+      "english": "flowers"
+    },
+    {
+      "Rank": "1545",
+      "german": "bobby",
+      "english": "Bobby"
+    },
+    {
+      "Rank": "1546",
+      "german": "besorgen",
+      "english": "to get"
+    },
+    {
+      "Rank": "1547",
+      "german": "sommer",
+      "english": "summer"
+    },
+    {
+      "Rank": "1548",
+      "german": "bilder",
+      "english": "Images"
+    },
+    {
+      "Rank": "1549",
+      "german": "park",
+      "english": "park"
+    },
+    {
+      "Rank": "1550",
+      "german": "flug",
+      "english": "flight"
+    },
+    {
+      "Rank": "1551",
+      "german": "agent",
+      "english": "agent"
+    },
+    {
+      "Rank": "1552",
+      "german": "schlampe",
+      "english": "slut"
+    },
+    {
+      "Rank": "1553",
+      "german": "hunde",
+      "english": "dogs"
+    },
+    {
+      "Rank": "1554",
+      "german": "geschlagen",
+      "english": "beaten"
+    },
+    {
+      "Rank": "1555",
+      "german": "beginnen",
+      "english": "begin"
+    },
+    {
+      "Rank": "1556",
+      "german": "danken",
+      "english": "to thank"
+    },
+    {
+      "Rank": "1557",
+      "german": "schritt",
+      "english": "step"
+    },
+    {
+      "Rank": "1558",
+      "german": "zerstören",
+      "english": "to destroy"
+    },
+    {
+      "Rank": "1559",
+      "german": "au",
+      "english": "au"
+    },
+    {
+      "Rank": "1560",
+      "german": "martin",
+      "english": "martin"
+    },
+    {
+      "Rank": "1561",
+      "german": "bombe",
+      "english": "bomb"
+    },
+    {
+      "Rank": "1562",
+      "german": "san",
+      "english": "san"
+    },
+    {
+      "Rank": "1563",
+      "german": "schwarzen",
+      "english": "black"
+    },
+    {
+      "Rank": "1564",
+      "german": "ted",
+      "english": "ted"
+    },
+    {
+      "Rank": "1565",
+      "german": "gelassen",
+      "english": "calmly"
+    },
+    {
+      "Rank": "1566",
+      "german": "aufgabe",
+      "english": "task"
+    },
+    {
+      "Rank": "1567",
+      "german": "jerry",
+      "english": "jerry"
+    },
+    {
+      "Rank": "1568",
+      "german": "allerdings",
+      "english": "though"
+    },
+    {
+      "Rank": "1569",
+      "german": "unseres",
+      "english": "our"
+    },
+    {
+      "Rank": "1570",
+      "german": "washington",
+      "english": "Washington"
+    },
+    {
+      "Rank": "1571",
+      "german": "prinzessin",
+      "english": "princess"
+    },
+    {
+      "Rank": "1572",
+      "german": "colonel",
+      "english": "colonel"
+    },
+    {
+      "Rank": "1573",
+      "german": "kümmert",
+      "english": "cares"
+    },
+    {
+      "Rank": "1574",
+      "german": "treten",
+      "english": "to step"
+    },
+    {
+      "Rank": "1575",
+      "german": "unterschied",
+      "english": "difference"
+    },
+    {
+      "Rank": "1576",
+      "german": "gesund",
+      "english": "healthy"
+    },
+    {
+      "Rank": "1577",
+      "german": "stimmen",
+      "english": "be right"
+    },
+    {
+      "Rank": "1578",
+      "german": "knast",
+      "english": "slammer"
+    },
+    {
+      "Rank": "1579",
+      "german": "fahrt",
+      "english": "drive"
+    },
+    {
+      "Rank": "1580",
+      "german": "heisst",
+      "english": "called"
+    },
+    {
+      "Rank": "1581",
+      "german": "steig",
+      "english": "sidewalk"
+    },
+    {
+      "Rank": "1582",
+      "german": "gehirn",
+      "english": "brain"
+    },
+    {
+      "Rank": "1583",
+      "german": "besorgt",
+      "english": "concerned"
+    },
+    {
+      "Rank": "1584",
+      "german": "fluss",
+      "english": "flow"
+    },
+    {
+      "Rank": "1585",
+      "german": "tiere",
+      "english": "animals"
+    },
+    {
+      "Rank": "1586",
+      "german": "bekomme",
+      "english": "get"
+    },
+    {
+      "Rank": "1587",
+      "german": "brüder",
+      "english": "brothers"
+    },
+    {
+      "Rank": "1588",
+      "german": "indem",
+      "english": "while"
+    },
+    {
+      "Rank": "1589",
+      "german": "trägt",
+      "english": "wearing"
+    },
+    {
+      "Rank": "1590",
+      "german": "gewartet",
+      "english": "waited"
+    },
+    {
+      "Rank": "1591",
+      "german": "bisher",
+      "english": "so far"
+    },
+    {
+      "Rank": "1592",
+      "german": "tor",
+      "english": "gate"
+    },
+    {
+      "Rank": "1593",
+      "german": "glückwunsch",
+      "english": "congratulation"
+    },
+    {
+      "Rank": "1594",
+      "german": "tommy",
+      "english": "tommy"
+    },
+    {
+      "Rank": "1595",
+      "german": "gebt",
+      "english": "give"
+    },
+    {
+      "Rank": "1596",
+      "german": "schafft",
+      "english": "creates"
+    },
+    {
+      "Rank": "1597",
+      "german": "planeten",
+      "english": "planets"
+    },
+    {
+      "Rank": "1598",
+      "german": "wünsche",
+      "english": "Wishes"
+    },
+    {
+      "Rank": "1599",
+      "german": "blöd",
+      "english": "stupid"
+    },
+    {
+      "Rank": "1600",
+      "german": "rom",
+      "english": "Rome"
+    },
+    {
+      "Rank": "1601",
+      "german": "hintern",
+      "english": "butt"
+    },
+    {
+      "Rank": "1602",
+      "german": "falle",
+      "english": "trap"
+    },
+    {
+      "Rank": "1603",
+      "german": "singt",
+      "english": "sings"
+    },
+    {
+      "Rank": "1604",
+      "german": "dach",
+      "english": "roof"
+    },
+    {
+      "Rank": "1605",
+      "german": "tötet",
+      "english": "kill"
+    },
+    {
+      "Rank": "1606",
+      "german": "helfe",
+      "english": "help"
+    },
+    {
+      "Rank": "1607",
+      "german": "pistole",
+      "english": "pistol"
+    },
+    {
+      "Rank": "1608",
+      "german": "freunden",
+      "english": "friends"
+    },
+    {
+      "Rank": "1609",
+      "german": "karten",
+      "english": "cards"
+    },
+    {
+      "Rank": "1610",
+      "german": "leiden",
+      "english": "to suffer"
+    },
+    {
+      "Rank": "1611",
+      "german": "wünschen",
+      "english": "to wish"
+    },
+    {
+      "Rank": "1612",
+      "german": "gewehr",
+      "english": "gun"
+    },
+    {
+      "Rank": "1613",
+      "german": "fühlst",
+      "english": "feel"
+    },
+    {
+      "Rank": "1614",
+      "german": "kapitän",
+      "english": "captain"
+    },
+    {
+      "Rank": "1615",
+      "german": "neuer",
+      "english": "new"
+    },
+    {
+      "Rank": "1616",
+      "german": "reichen",
+      "english": "suffice"
+    },
+    {
+      "Rank": "1617",
+      "german": "system",
+      "english": "system"
+    },
+    {
+      "Rank": "1618",
+      "german": "sprich",
+      "english": "pronounced"
+    },
+    {
+      "Rank": "1619",
+      "german": "schläft",
+      "english": "is sleeping"
+    },
+    {
+      "Rank": "1620",
+      "german": "worüber",
+      "english": "about what"
+    },
+    {
+      "Rank": "1621",
+      "german": "katze",
+      "english": "cat"
+    },
+    {
+      "Rank": "1622",
+      "german": "vogel",
+      "english": "bird"
+    },
+    {
+      "Rank": "1623",
+      "german": "rennen",
+      "english": "run"
+    },
+    {
+      "Rank": "1624",
+      "german": "erinnert",
+      "english": "remind"
+    },
+    {
+      "Rank": "1625",
+      "german": "rechte",
+      "english": "right"
+    },
+    {
+      "Rank": "1626",
+      "german": "bringst",
+      "english": "bring"
+    },
+    {
+      "Rank": "1627",
+      "german": "tier",
+      "english": "animal"
+    },
+    {
+      "Rank": "1628",
+      "german": "steigen",
+      "english": "climb"
+    },
+    {
+      "Rank": "1629",
+      "german": "flasche",
+      "english": "bottle"
+    },
+    {
+      "Rank": "1630",
+      "german": "traf",
+      "english": "hit"
+    },
+    {
+      "Rank": "1631",
+      "german": "k",
+      "english": "k"
+    },
+    {
+      "Rank": "1632",
+      "german": "küssen",
+      "english": "to kiss"
+    },
+    {
+      "Rank": "1633",
+      "german": "deren",
+      "english": "their"
+    },
+    {
+      "Rank": "1634",
+      "german": "leisten",
+      "english": "afford"
+    },
+    {
+      "Rank": "1635",
+      "german": "halbe",
+      "english": "half"
+    },
+    {
+      "Rank": "1636",
+      "german": "eurer",
+      "english": "yours"
+    },
+    {
+      "Rank": "1637",
+      "german": "verspreche",
+      "english": "promise"
+    },
+    {
+      "Rank": "1638",
+      "german": "vermisst",
+      "english": "missing"
+    },
+    {
+      "Rank": "1639",
+      "german": "genannt",
+      "english": "called"
+    },
+    {
+      "Rank": "1640",
+      "german": "fragt",
+      "english": "asks"
+    },
+    {
+      "Rank": "1641",
+      "german": "verbrechen",
+      "english": "crime"
+    },
+    {
+      "Rank": "1642",
+      "german": "aussieht",
+      "english": "looks"
+    },
+    {
+      "Rank": "1643",
+      "german": "melden",
+      "english": "report"
+    },
+    {
+      "Rank": "1644",
+      "german": "stehe",
+      "english": "stand"
+    },
+    {
+      "Rank": "1645",
+      "german": "verantwortlich",
+      "english": "responsible"
+    },
+    {
+      "Rank": "1646",
+      "german": "pferde",
+      "english": "horses"
+    },
+    {
+      "Rank": "1647",
+      "german": "erfolg",
+      "english": "success"
+    },
+    {
+      "Rank": "1648",
+      "german": "lee",
+      "english": "lee"
+    },
+    {
+      "Rank": "1649",
+      "german": "ohren",
+      "english": "ears"
+    },
+    {
+      "Rank": "1650",
+      "german": "bad",
+      "english": "bathroom"
+    },
+    {
+      "Rank": "1651",
+      "german": "keinem",
+      "english": "any"
+    },
+    {
+      "Rank": "1652",
+      "german": "weiße",
+      "english": "white"
+    },
+    {
+      "Rank": "1653",
+      "german": "besonderes",
+      "english": "special"
+    },
+    {
+      "Rank": "1654",
+      "german": "theater",
+      "english": "theater"
+    },
+    {
+      "Rank": "1655",
+      "german": "natur",
+      "english": "nature"
+    },
+    {
+      "Rank": "1656",
+      "german": "lächeln",
+      "english": "smile"
+    },
+    {
+      "Rank": "1657",
+      "german": "club",
+      "english": "club"
+    },
+    {
+      "Rank": "1658",
+      "german": "auftrag",
+      "english": "assignment"
+    },
+    {
+      "Rank": "1659",
+      "german": "wichser",
+      "english": "wanker"
+    },
+    {
+      "Rank": "1660",
+      "german": "aufhalten",
+      "english": "stop"
+    },
+    {
+      "Rank": "1661",
+      "german": "schmerzen",
+      "english": "pain"
+    },
+    {
+      "Rank": "1662",
+      "german": "by",
+      "english": "by"
+    },
+    {
+      "Rank": "1663",
+      "german": "davor",
+      "english": "before"
+    },
+    {
+      "Rank": "1664",
+      "german": "wüsste",
+      "english": "know"
+    },
+    {
+      "Rank": "1665",
+      "german": "abendessen",
+      "english": "Dinner"
+    },
+    {
+      "Rank": "1666",
+      "german": "sarah",
+      "english": "sarah"
+    },
+    {
+      "Rank": "1667",
+      "german": "verdienen",
+      "english": "to earn"
+    },
+    {
+      "Rank": "1668",
+      "german": "trifft",
+      "english": "meets"
+    },
+    {
+      "Rank": "1669",
+      "german": "deutschen",
+      "english": "german"
+    },
+    {
+      "Rank": "1670",
+      "german": "überrascht",
+      "english": "surprised"
+    },
+    {
+      "Rank": "1671",
+      "german": "baum",
+      "english": "tree"
+    },
+    {
+      "Rank": "1672",
+      "german": "kosten",
+      "english": "costs"
+    },
+    {
+      "Rank": "1673",
+      "german": "leer",
+      "english": "empty"
+    },
+    {
+      "Rank": "1674",
+      "german": "morgens",
+      "english": "In the morning"
+    },
+    {
+      "Rank": "1675",
+      "german": "gefangen",
+      "english": "captured"
+    },
+    {
+      "Rank": "1676",
+      "german": "van",
+      "english": "van"
+    },
+    {
+      "Rank": "1677",
+      "german": "wand",
+      "english": "wall"
+    },
+    {
+      "Rank": "1678",
+      "german": "city",
+      "english": "City"
+    },
+    {
+      "Rank": "1679",
+      "german": "haufen",
+      "english": "heap"
+    },
+    {
+      "Rank": "1680",
+      "german": "schließen",
+      "english": "conclude"
+    },
+    {
+      "Rank": "1681",
+      "german": "möglichkeit",
+      "english": "opportunity"
+    },
+    {
+      "Rank": "1682",
+      "german": "schützen",
+      "english": "protect"
+    },
+    {
+      "Rank": "1683",
+      "german": "besteht",
+      "english": "consists"
+    },
+    {
+      "Rank": "1684",
+      "german": "rauchen",
+      "english": "smoke"
+    },
+    {
+      "Rank": "1685",
+      "german": "schwierigkeiten",
+      "english": "difficulties"
+    },
+    {
+      "Rank": "1686",
+      "german": "stein",
+      "english": "stone"
+    },
+    {
+      "Rank": "1687",
+      "german": "mitten",
+      "english": "in the middle"
+    },
+    {
+      "Rank": "1688",
+      "german": "hinein",
+      "english": "into"
+    },
+    {
+      "Rank": "1689",
+      "german": "hose",
+      "english": "trousers"
+    },
+    {
+      "Rank": "1690",
+      "german": "verdammter",
+      "english": "damned"
+    },
+    {
+      "Rank": "1691",
+      "german": "autos",
+      "english": "cars"
+    },
+    {
+      "Rank": "1692",
+      "german": "zuvor",
+      "english": "before"
+    },
+    {
+      "Rank": "1693",
+      "german": "prima",
+      "english": "fine"
+    },
+    {
+      "Rank": "1694",
+      "german": "schwanz",
+      "english": "tail"
+    },
+    {
+      "Rank": "1695",
+      "german": "lächerlich",
+      "english": "ridiculous"
+    },
+    {
+      "Rank": "1696",
+      "german": "schickt",
+      "english": "sends"
+    },
+    {
+      "Rank": "1697",
+      "german": "j",
+      "english": "j"
+    },
+    {
+      "Rank": "1698",
+      "german": "wieviel",
+      "english": "how much"
+    },
+    {
+      "Rank": "1699",
+      "german": "beschützen",
+      "english": "to protect"
+    },
+    {
+      "Rank": "1700",
+      "german": "liebes",
+      "english": "dear"
+    },
+    {
+      "Rank": "1701",
+      "german": "befehle",
+      "english": "commands"
+    },
+    {
+      "Rank": "1702",
+      "german": "echte",
+      "english": "real"
+    },
+    {
+      "Rank": "1703",
+      "german": "vermutlich",
+      "english": "presumably"
+    },
+    {
+      "Rank": "1704",
+      "german": "robert",
+      "english": "Robert"
+    },
+    {
+      "Rank": "1705",
+      "german": "englisch",
+      "english": "english"
+    },
+    {
+      "Rank": "1706",
+      "german": "bedeuten",
+      "english": "mean"
+    },
+    {
+      "Rank": "1707",
+      "german": "junger",
+      "english": "younger"
+    },
+    {
+      "Rank": "1708",
+      "german": "lüge",
+      "english": "lie"
+    },
+    {
+      "Rank": "1709",
+      "german": "uh",
+      "english": "uh"
+    },
+    {
+      "Rank": "1710",
+      "german": "gemeinsam",
+      "english": "together"
+    },
+    {
+      "Rank": "1711",
+      "german": "pause",
+      "english": "pause"
+    },
+    {
+      "Rank": "1712",
+      "german": "versteh",
+      "english": "understand"
+    },
+    {
+      "Rank": "1713",
+      "german": "aufpassen",
+      "english": "watch out"
+    },
+    {
+      "Rank": "1714",
+      "german": "einverstanden",
+      "english": "agreed"
+    },
+    {
+      "Rank": "1715",
+      "german": "brechen",
+      "english": "break"
+    },
+    {
+      "Rank": "1716",
+      "german": "grad",
+      "english": "Degree"
+    },
+    {
+      "Rank": "1717",
+      "german": "prinz",
+      "english": "prince"
+    },
+    {
+      "Rank": "1718",
+      "german": "polizisten",
+      "english": "police officers"
+    },
+    {
+      "Rank": "1719",
+      "german": "lord",
+      "english": "lord"
+    },
+    {
+      "Rank": "1720",
+      "german": "druck",
+      "english": "pressure"
+    },
+    {
+      "Rank": "1721",
+      "german": "heilige",
+      "english": "saint"
+    },
+    {
+      "Rank": "1722",
+      "german": "daher",
+      "english": "therefore"
+    },
+    {
+      "Rank": "1723",
+      "german": "schwarz",
+      "english": "black"
+    },
+    {
+      "Rank": "1724",
+      "german": "solchen",
+      "english": "such"
+    },
+    {
+      "Rank": "1725",
+      "german": "übernehmen",
+      "english": "take"
+    },
+    {
+      "Rank": "1726",
+      "german": "nachmittag",
+      "english": "Afternoon"
+    },
+    {
+      "Rank": "1727",
+      "german": "regen",
+      "english": "rain"
+    },
+    {
+      "Rank": "1728",
+      "german": "schätzchen",
+      "english": "baby"
+    },
+    {
+      "Rank": "1729",
+      "german": "my",
+      "english": "my"
+    },
+    {
+      "Rank": "1730",
+      "german": "zweiten",
+      "english": "second"
+    },
+    {
+      "Rank": "1731",
+      "german": "rock",
+      "english": "skirt"
+    },
+    {
+      "Rank": "1732",
+      "german": "fassen",
+      "english": "take"
+    },
+    {
+      "Rank": "1733",
+      "german": "tote",
+      "english": "dead"
+    },
+    {
+      "Rank": "1734",
+      "german": "fiel",
+      "english": "fell"
+    },
+    {
+      "Rank": "1735",
+      "german": "madam",
+      "english": "madam"
+    },
+    {
+      "Rank": "1736",
+      "german": "mitgebracht",
+      "english": "brought"
+    },
+    {
+      "Rank": "1737",
+      "german": "mannes",
+      "english": "man"
+    },
+    {
+      "Rank": "1738",
+      "german": "mochte",
+      "english": "would like"
+    },
+    {
+      "Rank": "1739",
+      "german": "wart",
+      "english": "serviceable"
+    },
+    {
+      "Rank": "1740",
+      "german": "lief",
+      "english": "ran"
+    },
+    {
+      "Rank": "1741",
+      "german": "dorthin",
+      "english": "there"
+    },
+    {
+      "Rank": "1742",
+      "german": "unterhalten",
+      "english": "to chat"
+    },
+    {
+      "Rank": "1743",
+      "german": "schuss",
+      "english": "shot"
+    },
+    {
+      "Rank": "1744",
+      "german": "angriff",
+      "english": "attack"
+    },
+    {
+      "Rank": "1745",
+      "german": "freue",
+      "english": "look"
+    },
+    {
+      "Rank": "1746",
+      "german": "gebaut",
+      "english": "built"
+    },
+    {
+      "Rank": "1747",
+      "german": "gebrochen",
+      "english": "Broken"
+    },
+    {
+      "Rank": "1748",
+      "german": "fanden",
+      "english": "found"
+    },
+    {
+      "Rank": "1749",
+      "german": "aiso",
+      "english": "aiso"
+    },
+    {
+      "Rank": "1750",
+      "german": "beruhige",
+      "english": "calm down"
+    },
+    {
+      "Rank": "1751",
+      "german": "offensichtlich",
+      "english": "obviously"
+    },
+    {
+      "Rank": "1752",
+      "german": "versprechen",
+      "english": "promise"
+    },
+    {
+      "Rank": "1753",
+      "german": "monster",
+      "english": "monster"
+    },
+    {
+      "Rank": "1754",
+      "german": "fängt",
+      "english": "catches"
+    },
+    {
+      "Rank": "1755",
+      "german": "kapiert",
+      "english": "Got it"
+    },
+    {
+      "Rank": "1756",
+      "german": "ehemann",
+      "english": "husband"
+    },
+    {
+      "Rank": "1757",
+      "german": "geschlossen",
+      "english": "closed"
+    },
+    {
+      "Rank": "1758",
+      "german": "frühstück",
+      "english": "breakfast"
+    },
+    {
+      "Rank": "1759",
+      "german": "gebeten",
+      "english": "asked"
+    },
+    {
+      "Rank": "1760",
+      "german": "stören",
+      "english": "to disturb"
+    },
+    {
+      "Rank": "1761",
+      "german": "irre",
+      "english": "crazy"
+    },
+    {
+      "Rank": "1762",
+      "german": "farbe",
+      "english": "color"
+    },
+    {
+      "Rank": "1763",
+      "german": "chris",
+      "english": "chris"
+    },
+    {
+      "Rank": "1764",
+      "german": "taten",
+      "english": "doings"
+    },
+    {
+      "Rank": "1765",
+      "german": "zufällig",
+      "english": "accidentally"
+    },
+    {
+      "Rank": "1766",
+      "german": "geschieht",
+      "english": "happens"
+    },
+    {
+      "Rank": "1767",
+      "german": "pfund",
+      "english": "lb"
+    },
+    {
+      "Rank": "1768",
+      "german": "mission",
+      "english": "mission"
+    },
+    {
+      "Rank": "1769",
+      "german": "thomas",
+      "english": "thomas"
+    },
+    {
+      "Rank": "1770",
+      "german": "zeige",
+      "english": "show"
+    },
+    {
+      "Rank": "1771",
+      "german": "wochenende",
+      "english": "weekend"
+    },
+    {
+      "Rank": "1772",
+      "german": "unternehmen",
+      "english": "do"
+    },
+    {
+      "Rank": "1773",
+      "german": "fantastisch",
+      "english": "fantastic"
+    },
+    {
+      "Rank": "1774",
+      "german": "kate",
+      "english": "cottage"
+    },
+    {
+      "Rank": "1775",
+      "german": "geb",
+      "english": "give"
+    },
+    {
+      "Rank": "1776",
+      "german": "schlägt",
+      "english": "beats"
+    },
+    {
+      "Rank": "1777",
+      "german": "entschieden",
+      "english": "decided"
+    },
+    {
+      "Rank": "1778",
+      "german": "spur",
+      "english": "track"
+    },
+    {
+      "Rank": "1779",
+      "german": "liebte",
+      "english": "loved"
+    },
+    {
+      "Rank": "1780",
+      "german": "hieß",
+      "english": "was"
+    },
+    {
+      "Rank": "1781",
+      "german": "vertrag",
+      "english": "contract"
+    },
+    {
+      "Rank": "1782",
+      "german": "dienst",
+      "english": "service"
+    },
+    {
+      "Rank": "1783",
+      "german": "held",
+      "english": "hero"
+    },
+    {
+      "Rank": "1784",
+      "german": "verpasst",
+      "english": "missed out"
+    },
+    {
+      "Rank": "1785",
+      "german": "irgendwelche",
+      "english": "any"
+    },
+    {
+      "Rank": "1786",
+      "german": "filme",
+      "english": "movies"
+    },
+    {
+      "Rank": "1787",
+      "german": "stock",
+      "english": "floor"
+    },
+    {
+      "Rank": "1788",
+      "german": "louis",
+      "english": "louis"
+    },
+    {
+      "Rank": "1789",
+      "german": "meilen",
+      "english": "miles"
+    },
+    {
+      "Rank": "1790",
+      "german": "wahnsinn",
+      "english": "madness"
+    },
+    {
+      "Rank": "1791",
+      "german": "erschießen",
+      "english": "shoot dead"
+    },
+    {
+      "Rank": "1792",
+      "german": "nee",
+      "english": "nope"
+    },
+    {
+      "Rank": "1793",
+      "german": "einzigen",
+      "english": "single"
+    },
+    {
+      "Rank": "1794",
+      "german": "mitkommen",
+      "english": "come along"
+    },
+    {
+      "Rank": "1795",
+      "german": "braut",
+      "english": "bride"
+    },
+    {
+      "Rank": "1796",
+      "german": "reisen",
+      "english": "to travel"
+    },
+    {
+      "Rank": "1797",
+      "german": "gewissen",
+      "english": "conscience"
+    },
+    {
+      "Rank": "1798",
+      "german": "schmeckt",
+      "english": "tastes"
+    },
+    {
+      "Rank": "1799",
+      "german": "sprache",
+      "english": "language"
+    },
+    {
+      "Rank": "1800",
+      "german": "begann",
+      "english": "started"
+    },
+    {
+      "Rank": "1801",
+      "german": "eigenes",
+      "english": "own"
+    },
+    {
+      "Rank": "1802",
+      "german": "reihe",
+      "english": "line"
+    },
+    {
+      "Rank": "1803",
+      "german": "fern",
+      "english": "remote"
+    },
+    {
+      "Rank": "1804",
+      "german": "drüber",
+      "english": "over it"
+    },
+    {
+      "Rank": "1805",
+      "german": "mond",
+      "english": "moon"
+    },
+    {
+      "Rank": "1806",
+      "german": "gang",
+      "english": "corridor"
+    },
+    {
+      "Rank": "1807",
+      "german": "schauspieler",
+      "english": "actor"
+    },
+    {
+      "Rank": "1808",
+      "german": "vollkommen",
+      "english": "completely"
+    },
+    {
+      "Rank": "1809",
+      "german": "runde",
+      "english": "round"
+    },
+    {
+      "Rank": "1810",
+      "german": "restaurant",
+      "english": "restaurant"
+    },
+    {
+      "Rank": "1811",
+      "german": "dreck",
+      "english": "dirt"
+    },
+    {
+      "Rank": "1812",
+      "german": "schrieb",
+      "english": "wrote"
+    },
+    {
+      "Rank": "1813",
+      "german": "untertitel",
+      "english": "subtitle"
+    },
+    {
+      "Rank": "1814",
+      "german": "arthur",
+      "english": "arthur"
+    },
+    {
+      "Rank": "1815",
+      "german": "sprichst",
+      "english": "Known"
+    },
+    {
+      "Rank": "1816",
+      "german": "warm",
+      "english": "warm"
+    },
+    {
+      "Rank": "1817",
+      "german": "mistkerl",
+      "english": "dirty swine"
+    },
+    {
+      "Rank": "1818",
+      "german": "nette",
+      "english": "nice"
+    },
+    {
+      "Rank": "1819",
+      "german": "bekommst",
+      "english": "get"
+    },
+    {
+      "Rank": "1820",
+      "german": "lager",
+      "english": "warehouse"
+    },
+    {
+      "Rank": "1821",
+      "german": "atmen",
+      "english": "breathe"
+    },
+    {
+      "Rank": "1822",
+      "german": "legt",
+      "english": "puts"
+    },
+    {
+      "Rank": "1823",
+      "german": "daraus",
+      "english": "from that"
+    },
+    {
+      "Rank": "1824",
+      "german": "schloss",
+      "english": "lock"
+    },
+    {
+      "Rank": "1825",
+      "german": "danny",
+      "english": "danny"
+    },
+    {
+      "Rank": "1826",
+      "german": "geschossen",
+      "english": "shot"
+    },
+    {
+      "Rank": "1827",
+      "german": "gespräch",
+      "english": "talk"
+    },
+    {
+      "Rank": "1828",
+      "german": "usa",
+      "english": "USA"
+    },
+    {
+      "Rank": "1829",
+      "german": "leise",
+      "english": "quiet"
+    },
+    {
+      "Rank": "1830",
+      "german": "flughafen",
+      "english": "Airport"
+    },
+    {
+      "Rank": "1831",
+      "german": "wunsch",
+      "english": "wish"
+    },
+    {
+      "Rank": "1832",
+      "german": "schwanger",
+      "english": "pregnant"
+    },
+    {
+      "Rank": "1833",
+      "german": "operation",
+      "english": "surgery"
+    },
+    {
+      "Rank": "1834",
+      "german": "anzug",
+      "english": "suit"
+    },
+    {
+      "Rank": "1835",
+      "german": "gelegenheit",
+      "english": "occasion"
+    },
+    {
+      "Rank": "1836",
+      "german": "folge",
+      "english": "episode"
+    },
+    {
+      "Rank": "1837",
+      "german": "kunden",
+      "english": "customer"
+    },
+    {
+      "Rank": "1838",
+      "german": "dankbar",
+      "english": "grateful"
+    },
+    {
+      "Rank": "1839",
+      "german": "welchem",
+      "english": "which"
+    },
+    {
+      "Rank": "1840",
+      "german": "gewusst",
+      "english": "known"
+    },
+    {
+      "Rank": "1841",
+      "german": "tanz",
+      "english": "dance"
+    },
+    {
+      "Rank": "1842",
+      "german": "füße",
+      "english": "feet"
+    },
+    {
+      "Rank": "1843",
+      "german": "thema",
+      "english": "theme"
+    },
+    {
+      "Rank": "1844",
+      "german": "v",
+      "english": "v"
+    },
+    {
+      "Rank": "1845",
+      "german": "brauchte",
+      "english": "needed"
+    },
+    {
+      "Rank": "1846",
+      "german": "dreh",
+      "english": "twist"
+    },
+    {
+      "Rank": "1847",
+      "german": "netter",
+      "english": "cute"
+    },
+    {
+      "Rank": "1848",
+      "german": "verantwortung",
+      "english": "responsibility"
+    },
+    {
+      "Rank": "1849",
+      "german": "umsonst",
+      "english": "for nothing"
+    },
+    {
+      "Rank": "1850",
+      "german": "geändert",
+      "english": "changed"
+    },
+    {
+      "Rank": "1851",
+      "german": "subtitles",
+      "english": "subtitles"
+    },
+    {
+      "Rank": "1852",
+      "german": "verboten",
+      "english": "prohibited"
+    },
+    {
+      "Rank": "1853",
+      "german": "schlechter",
+      "english": "worse"
+    },
+    {
+      "Rank": "1854",
+      "german": "million",
+      "english": "million"
+    },
+    {
+      "Rank": "1855",
+      "german": "dick",
+      "english": "thick"
+    },
+    {
+      "Rank": "1856",
+      "german": "größer",
+      "english": "greater"
+    },
+    {
+      "Rank": "1857",
+      "german": "nerven",
+      "english": "annoy"
+    },
+    {
+      "Rank": "1858",
+      "german": "schaden",
+      "english": "damage"
+    },
+    {
+      "Rank": "1859",
+      "german": "erreicht",
+      "english": "reached"
+    },
+    {
+      "Rank": "1860",
+      "german": "jagen",
+      "english": "to hunt"
+    },
+    {
+      "Rank": "1861",
+      "german": "urlaub",
+      "english": "vacation"
+    },
+    {
+      "Rank": "1862",
+      "german": "erlaubt",
+      "english": "allowed"
+    },
+    {
+      "Rank": "1863",
+      "german": "gäste",
+      "english": "Guests"
+    },
+    {
+      "Rank": "1864",
+      "german": "erfahrung",
+      "english": "Experience"
+    },
+    {
+      "Rank": "1865",
+      "german": "viei",
+      "english": "Viei"
+    },
+    {
+      "Rank": "1866",
+      "german": "rot",
+      "english": "red"
+    },
+    {
+      "Rank": "1867",
+      "german": "getrunken",
+      "english": "drunk"
+    },
+    {
+      "Rank": "1868",
+      "german": "freuen",
+      "english": "looking forward"
+    },
+    {
+      "Rank": "1869",
+      "german": "besseres",
+      "english": "better"
+    },
+    {
+      "Rank": "1870",
+      "german": "wache",
+      "english": "guard"
+    },
+    {
+      "Rank": "1871",
+      "german": "gewalt",
+      "english": "violence"
+    },
+    {
+      "Rank": "1872",
+      "german": "entkommen",
+      "english": "escape"
+    },
+    {
+      "Rank": "1873",
+      "german": "wußte",
+      "english": "knew"
+    },
+    {
+      "Rank": "1874",
+      "german": "hasst",
+      "english": "hates"
+    },
+    {
+      "Rank": "1875",
+      "german": "riecht",
+      "english": "smells"
+    },
+    {
+      "Rank": "1876",
+      "german": "strand",
+      "english": "Beach"
+    },
+    {
+      "Rank": "1877",
+      "german": "sterbe",
+      "english": "die"
+    },
+    {
+      "Rank": "1878",
+      "german": "konntest",
+      "english": "could"
+    },
+    {
+      "Rank": "1879",
+      "german": "aufstehen",
+      "english": "get up"
+    },
+    {
+      "Rank": "1880",
+      "german": "wahnsinnig",
+      "english": "mad"
+    },
+    {
+      "Rank": "1881",
+      "german": "nachgedacht",
+      "english": "thought"
+    },
+    {
+      "Rank": "1882",
+      "german": "oberst",
+      "english": "colonel"
+    },
+    {
+      "Rank": "1883",
+      "german": "william",
+      "english": "william"
+    },
+    {
+      "Rank": "1884",
+      "german": "beenden",
+      "english": "break up"
+    },
+    {
+      "Rank": "1885",
+      "german": "kino",
+      "english": "movie theater"
+    },
+    {
+      "Rank": "1886",
+      "german": "lauter",
+      "english": "volume up"
+    },
+    {
+      "Rank": "1887",
+      "german": "folgt",
+      "english": "follows"
+    },
+    {
+      "Rank": "1888",
+      "german": "aha",
+      "english": "Aha"
+    },
+    {
+      "Rank": "1889",
+      "german": "wahre",
+      "english": "real"
+    },
+    {
+      "Rank": "1890",
+      "german": "angebot",
+      "english": "offer"
+    },
+    {
+      "Rank": "1891",
+      "german": "erklärt",
+      "english": "declared"
+    },
+    {
+      "Rank": "1892",
+      "german": "trink",
+      "english": "drinking"
+    },
+    {
+      "Rank": "1893",
+      "german": "soii",
+      "english": "soii"
+    },
+    {
+      "Rank": "1894",
+      "german": "stört",
+      "english": "disturbs"
+    },
+    {
+      "Rank": "1895",
+      "german": "gilt",
+      "english": "applies"
+    },
+    {
+      "Rank": "1896",
+      "german": "keller",
+      "english": "cellar"
+    },
+    {
+      "Rank": "1897",
+      "german": "post",
+      "english": "post"
+    },
+    {
+      "Rank": "1898",
+      "german": "senator",
+      "english": "senator"
+    },
+    {
+      "Rank": "1899",
+      "german": "eurem",
+      "english": "your"
+    },
+    {
+      "Rank": "1900",
+      "german": "isst",
+      "english": "eating"
+    },
+    {
+      "Rank": "1901",
+      "german": "geschichten",
+      "english": "stories"
+    },
+    {
+      "Rank": "1902",
+      "german": "frankreich",
+      "english": "France"
+    },
+    {
+      "Rank": "1903",
+      "german": "no",
+      "english": "no"
+    },
+    {
+      "Rank": "1904",
+      "german": "gentlemen",
+      "english": "gentlemen"
+    },
+    {
+      "Rank": "1905",
+      "german": "kugel",
+      "english": "ball"
+    },
+    {
+      "Rank": "1906",
+      "german": "gemeint",
+      "english": "meant"
+    },
+    {
+      "Rank": "1907",
+      "german": "milch",
+      "english": "milk"
+    },
+    {
+      "Rank": "1908",
+      "german": "machten",
+      "english": "made"
+    },
+    {
+      "Rank": "1909",
+      "german": "kleider",
+      "english": "clothes"
+    },
+    {
+      "Rank": "1910",
+      "german": "herausfinden",
+      "english": "find out"
+    },
+    {
+      "Rank": "1911",
+      "german": "mindestens",
+      "english": "at least"
+    },
+    {
+      "Rank": "1912",
+      "german": "eh",
+      "english": "eh"
+    },
+    {
+      "Rank": "1913",
+      "german": "einigen",
+      "english": "some"
+    },
+    {
+      "Rank": "1914",
+      "german": "trottel",
+      "english": "Fool"
+    },
+    {
+      "Rank": "1915",
+      "german": "schaffst",
+      "english": "writing"
+    },
+    {
+      "Rank": "1916",
+      "german": "kuss",
+      "english": "kiss"
+    },
+    {
+      "Rank": "1917",
+      "german": "geholfen",
+      "english": "helped"
+    },
+    {
+      "Rank": "1918",
+      "german": "knie",
+      "english": "knee"
+    },
+    {
+      "Rank": "1919",
+      "german": "worum",
+      "english": "about what"
+    },
+    {
+      "Rank": "1920",
+      "german": "grab",
+      "english": "dig"
+    },
+    {
+      "Rank": "1921",
+      "german": "voraus",
+      "english": "ahead"
+    },
+    {
+      "Rank": "1922",
+      "german": "robin",
+      "english": "robin"
+    },
+    {
+      "Rank": "1923",
+      "german": "blind",
+      "english": "blind"
+    },
+    {
+      "Rank": "1924",
+      "german": "that",
+      "english": "did"
+    },
+    {
+      "Rank": "1925",
+      "german": "schande",
+      "english": "shame"
+    },
+    {
+      "Rank": "1926",
+      "german": "carl",
+      "english": "carl"
+    },
+    {
+      "Rank": "1927",
+      "german": "schönheit",
+      "english": "beauty"
+    },
+    {
+      "Rank": "1928",
+      "german": "versuchte",
+      "english": "tried"
+    },
+    {
+      "Rank": "1929",
+      "german": "fuhr",
+      "english": "drove"
+    },
+    {
+      "Rank": "1930",
+      "german": "steve",
+      "english": "steve"
+    },
+    {
+      "Rank": "1931",
+      "german": "dave",
+      "english": "dave"
+    },
+    {
+      "Rank": "1932",
+      "german": "schatten",
+      "english": "shadow"
+    },
+    {
+      "Rank": "1933",
+      "german": "schulden",
+      "english": "owe"
+    },
+    {
+      "Rank": "1934",
+      "german": "dauern",
+      "english": "last"
+    },
+    {
+      "Rank": "1935",
+      "german": "mister",
+      "english": "mister"
+    },
+    {
+      "Rank": "1936",
+      "german": "schwimmen",
+      "english": "swimming"
+    },
+    {
+      "Rank": "1937",
+      "german": "such",
+      "english": "examined"
+    },
+    {
+      "Rank": "1938",
+      "german": "beruhigen",
+      "english": "soothe"
+    },
+    {
+      "Rank": "1939",
+      "german": "form",
+      "english": "form"
+    },
+    {
+      "Rank": "1940",
+      "german": "bessere",
+      "english": "better"
+    },
+    {
+      "Rank": "1941",
+      "german": "verschwindet",
+      "english": "disappears"
+    },
+    {
+      "Rank": "1942",
+      "german": "zweimal",
+      "english": "twice"
+    },
+    {
+      "Rank": "1943",
+      "german": "präsidenten",
+      "english": "presidents"
+    },
+    {
+      "Rank": "1944",
+      "german": "wei",
+      "english": "wei"
+    },
+    {
+      "Rank": "1945",
+      "german": "dunkel",
+      "english": "dark"
+    },
+    {
+      "Rank": "1946",
+      "german": "idioten",
+      "english": "idiots"
+    },
+    {
+      "Rank": "1947",
+      "german": "sieg",
+      "english": "victory"
+    },
+    {
+      "Rank": "1948",
+      "german": "riggs",
+      "english": "riggs"
+    },
+    {
+      "Rank": "1949",
+      "german": "pläne",
+      "english": "plans"
+    },
+    {
+      "Rank": "1950",
+      "german": "bat",
+      "english": "asked"
+    },
+    {
+      "Rank": "1951",
+      "german": "zufall",
+      "english": "coincidence"
+    },
+    {
+      "Rank": "1952",
+      "german": "eingeladen",
+      "english": "invited"
+    },
+    {
+      "Rank": "1953",
+      "german": "scherz",
+      "english": "hoax"
+    },
+    {
+      "Rank": "1954",
+      "german": "gezeigt",
+      "english": "shown"
+    },
+    {
+      "Rank": "1955",
+      "german": "geheiratet",
+      "english": "married"
+    },
+    {
+      "Rank": "1956",
+      "german": "ed",
+      "english": "ed"
+    },
+    {
+      "Rank": "1957",
+      "german": "fahrer",
+      "english": "driver"
+    },
+    {
+      "Rank": "1958",
+      "german": "ähnlich",
+      "english": "similar"
+    },
+    {
+      "Rank": "1959",
+      "german": "verhalten",
+      "english": "behavior"
+    },
+    {
+      "Rank": "1960",
+      "german": "staaten",
+      "english": "states"
+    },
+    {
+      "Rank": "1961",
+      "german": "garten",
+      "english": "garden"
+    },
+    {
+      "Rank": "1962",
+      "german": "großvater",
+      "english": "grandfather"
+    },
+    {
+      "Rank": "1963",
+      "german": "schreibt",
+      "english": "writes"
+    },
+    {
+      "Rank": "1964",
+      "german": "pflicht",
+      "english": "duty"
+    },
+    {
+      "Rank": "1965",
+      "german": "spielte",
+      "english": "played"
+    },
+    {
+      "Rank": "1966",
+      "german": "deckung",
+      "english": "cover"
+    },
+    {
+      "Rank": "1967",
+      "german": "energie",
+      "english": "energy"
+    },
+    {
+      "Rank": "1968",
+      "german": "zeugen",
+      "english": "testify"
+    },
+    {
+      "Rank": "1969",
+      "german": "star",
+      "english": "star"
+    },
+    {
+      "Rank": "1970",
+      "german": "fährst",
+      "english": "are going"
+    },
+    {
+      "Rank": "1971",
+      "german": "nachdenken",
+      "english": "think"
+    },
+    {
+      "Rank": "1972",
+      "german": "roy",
+      "english": "roy"
+    },
+    {
+      "Rank": "1973",
+      "german": "risiko",
+      "english": "risk"
+    },
+    {
+      "Rank": "1974",
+      "german": "geschäfte",
+      "english": "businesses"
+    },
+    {
+      "Rank": "1975",
+      "german": "www",
+      "english": "www"
+    },
+    {
+      "Rank": "1976",
+      "german": "z",
+      "english": "z"
+    },
+    {
+      "Rank": "1977",
+      "german": "erstes",
+      "english": "first"
+    },
+    {
+      "Rank": "1978",
+      "german": "kunst",
+      "english": "Art"
+    },
+    {
+      "Rank": "1979",
+      "german": "behandelt",
+      "english": "treated"
+    },
+    {
+      "Rank": "1980",
+      "german": "geschah",
+      "english": "happened"
+    },
+    {
+      "Rank": "1981",
+      "german": "com",
+      "english": "com"
+    },
+    {
+      "Rank": "1982",
+      "german": "helft",
+      "english": "help"
+    },
+    {
+      "Rank": "1983",
+      "german": "dürfte",
+      "english": "might"
+    },
+    {
+      "Rank": "1984",
+      "german": "heiligen",
+      "english": "hallow"
+    },
+    {
+      "Rank": "1985",
+      "german": "mädels",
+      "english": "mädels"
+    },
+    {
+      "Rank": "1986",
+      "german": "beweis",
+      "english": "proof"
+    },
+    {
+      "Rank": "1987",
+      "german": "priester",
+      "english": "priest"
+    },
+    {
+      "Rank": "1988",
+      "german": "wusstest",
+      "english": "knew"
+    },
+    {
+      "Rank": "1989",
+      "german": "stopp",
+      "english": "stop"
+    },
+    {
+      "Rank": "1990",
+      "german": "zustand",
+      "english": "state"
+    },
+    {
+      "Rank": "1991",
+      "german": "direktor",
+      "english": "director"
+    },
+    {
+      "Rank": "1992",
+      "german": "gehalten",
+      "english": "kept"
+    },
+    {
+      "Rank": "1993",
+      "german": "grenze",
+      "english": "border"
+    },
+    {
+      "Rank": "1994",
+      "german": "juden",
+      "english": "Jewry"
+    },
+    {
+      "Rank": "1995",
+      "german": "geblieben",
+      "english": "remained"
+    },
+    {
+      "Rank": "1996",
+      "german": "erzählte",
+      "english": "told"
+    },
+    {
+      "Rank": "1997",
+      "german": "vieiieicht",
+      "english": "vieiieicht"
+    },
+    {
+      "Rank": "1998",
+      "german": "brennt",
+      "english": "burns"
+    },
+    {
+      "Rank": "1999",
+      "german": "interesse",
+      "english": "interest"
+    },
+    {
+      "Rank": "2000",
+      "german": "seiten",
+      "english": "sides"
+    }
+]
