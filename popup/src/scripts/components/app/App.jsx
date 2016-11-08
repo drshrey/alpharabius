@@ -33,8 +33,12 @@ class App extends Component {
   handleButtonChange(){
     var x = this.props.language;
     var immersion = this.props.immersion;
-    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
-      chrome.tabs.sendMessage(tabs[0].id, {"language": x, "immersion": immersion});
+    chrome.windows.getAll({populate:true},function(windows){
+      windows.forEach(function(window){
+        window.tabs.forEach(function(tab){
+          chrome.tabs.sendMessage(tab.id, {"language": x, "immersion": immersion});
+        });
+      });
     });
   }
 
@@ -45,8 +49,12 @@ class App extends Component {
     });
     var language = e.target.value;
     var immersion = this.props.immersion;
-    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
-      chrome.tabs.sendMessage(tabs[0].id, {"language": language, "immersion": immersion});
+    chrome.windows.getAll({populate:true},function(windows){
+      windows.forEach(function(window){
+        window.tabs.forEach(function(tab){
+          chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion});
+        });
+      });
     });
   }
 
@@ -59,8 +67,12 @@ class App extends Component {
       power: !this.props.power
     });
     this.setState({ power: !this.props.power });
-    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
-      chrome.tabs.sendMessage(tabs[0].id, {"language": language, "immersion": immersion, "power": power});
+    chrome.windows.getAll({populate:true},function(windows){
+      windows.forEach(function(window){
+        window.tabs.forEach(function(tab){
+          chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion, "power": power});
+        });
+      });
     });
   }
 
@@ -72,9 +84,13 @@ class App extends Component {
     this.setState({immersion: e.target.value});
     var language = this.props.language;
     var immersion = e.target.value;
-    chrome.tabs.query({currentWindow: true, active: true}, function (tabs){
-      chrome.tabs.sendMessage(tabs[0].id, {"language": language, "immersion": immersion});
-    });
+    chrome.windows.getAll({populate:true},function(windows){
+      windows.forEach(function(window){
+        window.tabs.forEach(function(tab){
+          chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion});
+        });
+      });
+    });    
   }
 
   render() {

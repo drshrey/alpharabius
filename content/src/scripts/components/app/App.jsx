@@ -295,15 +295,15 @@ class App extends Component {
     if(startupLang && startupPower && startupImmersion){
       set = true;
       switchPower(startupLang, startupPower, startupImmersion);
+      return;
     }
-
     // check if lang, immersion, power already set
     if(! set){
       chrome.storage.local.get(["language", "power", "immersion"], function(items){
         startupLang = items["language"];
         startupPower = items["power"];
         startupImmersion = items["immersion"];
-        if(startupLang && startupPower && startupImmersion){
+        if(startupLang && (startupPower != null || startupPower != undefined) && startupImmersion){
           set = true;
         }
         if(! set){
@@ -312,14 +312,17 @@ class App extends Component {
             startupPower = items["power"];
             startupImmersion = items["immersion"];
 
-            if(startupLang && startupPower && startupImmersion){
+            if(startupLang && (startupPower != null || startupPower != undefined) && startupImmersion){
               switchPower(startupLang, startupImmersion, startupPower);
+              return
             } else {
-              switchPower("English", -1, false);
+              switchPower("French", 3, true);
+              return
             }
           });
         } else {
             switchPower(startupLang, startupImmersion, startupPower);
+            return
         }
       })
     }
