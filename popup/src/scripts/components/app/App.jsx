@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 var logo = require("../../../Logo.png");
 var icon = require("../../../128.png");
+var background = require("../../../bgd.png");
 
 
 const mapStateToProps = (state) => {
@@ -90,19 +91,15 @@ class App extends Component {
           chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion});
         });
       });
-    });    
+    });
   }
 
   render() {
     return (
-      <div>
-        <img height="70%" width="70%" src={logo}></img>
+      <div className="popup">
         <span>
-          <button
-            onClick={this.handleButtonChange}
-            disabled={! this.props.power}
-            > translate
-          </button>
+          <div id="off"> <i> off </i></div>
+          <div id="on"> <i> on </i></div>
           <label style={{ position:"absolute", right:"20px", top:"15px" }} className="switch">
             <input
               checked={this.props.power}
@@ -114,31 +111,30 @@ class App extends Component {
         </span>
 
         <br/><br/>
-        { this.props.language } <br/><br/>
-        <span>immersion</span>:
-        { this.props.immersion }
-        <div className="immersion">
-            <input id="test" disabled={! this.props.power} value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
-        </div>
-        <div className="language">
-            <span>language</span>
+          <div className="language">
+              <span> language </span>
+                <span className="language-input">
+                      <select className="language-input-in">
+                              <option value="english">english</option>
+                      </select>
+                </span>
+
+              <span>to</span>
 
               <span className="language-input">
-                    <select className="language-input-in">
-                            <option value="english">english</option>
-                    </select>
-              </span>
-
-            <span>to</span>
-
-            <span className="language-input">
-                    <select disabled={! this.props.power} value={this.props.language} onChange={this.handleChange} className="language-input-out">
-                            <option value="French">french</option>
-                            <option value="Spanish">spanish</option>
-                            <option value="German">german</option>
-                            <option value="Portuguese">portuguese</option>
-                    </select>
-              </span>
+                      <select disabled={! this.props.power} value={this.props.language} onChange={this.handleChange} className="language-input-out">
+                              <option value="French">french</option>
+                              <option value="Spanish">spanish</option>
+                              <option value="German">german</option>
+                              <option value="Portuguese">portuguese</option>
+                      </select>
+                </span>
+          </div>
+        <div className="immersion">
+            immersion <input id="test" disabled={! this.props.power} value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
+        </div>
+        <div className="footer">
+          alpharabi.us
         </div>
       </div>
     );

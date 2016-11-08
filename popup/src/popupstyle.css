@@ -1,7 +1,10 @@
 body{
-    background: #D46A6A;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #ffcccc;
+}
+
+.popup {
+  box-shadow: 0px 0px 0px #000000;
+  border-radius: 0px;
+  border: 1px solid #FCA5A5;
 }
 
 .logo{
