@@ -110,7 +110,7 @@ class App extends Component {
           </label>
         </span>
 
-        <br/><br/>
+        <br/>
           <div className="language">
               <span> language </span>
                 <span className="language-input">
@@ -130,6 +130,7 @@ class App extends Component {
                       </select>
                 </span>
           </div>
+          <br/>
         <div className="immersion">
             immersion <input id="test" disabled={! this.props.power} value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
         </div>

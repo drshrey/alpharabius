@@ -23302,45 +23302,42 @@
 	    // modify stylesheets
 	    var ss = document.styleSheets;
 	    for (var i = 0; i < ss.length; i++) {
-	      if (ss[i].cssRules != null || ss[i].cssRules != undefined) {
-	        console.log("HELLO");
-	        ss[i].insertRule(' \
-	          acronym { \
-	            background-color: #F0F8FF; \
-	            font-size: 108%; \
-	          } \
+	      ss[i].insertRule(' \
+	        acronym { \
+	          background-color: #F0F8FF; \
+	          font-size: 108%; \
+	        } \
+	      ', 0);
+	      ss[i].insertRule('\
+	        acronym:hover{\
+	          color: #ff2283;\
+	          position: relative;\
+	        }      \
 	        ', 0);
-	        ss[i].insertRule('\
-	          acronym:hover{\
-	            color: #ff2283;\
-	            position: relative;\
-	          }      \
-	          ', 0);
-	        ss[i].insertRule('\
-	          acronym[title]:hover:after { \
-	            content: attr(title);\
-	            padding: 5px 5px;\
-	            color: black;\
-	            position: absolute;\
-	            left: 0;\
-	            top: 100%;\
-	            white-space: nowrap;\
-	            z-index: 20;\
-	            -moz-border-radius: 3px;\
-	            -webkit-border-radius: 3px;\
-	            border-radius: 3px;\
-	            -moz-box-shadow: 0px 0px 2px #c0c1c2;\
-	            -webkit-box-shadow: 0px 0px 2px #c0c1c2;\
-	            box-shadow: 0px 0px 2px #c0c1c2;\
-	            background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
-	            background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ffffff),color-stop(1, #eeeeee));\
-	            background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);\
-	            background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
-	            background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);\
-	            background-image: -o-linear-gradient(top, #ffffff, #eeeeee);\
-	          } \
-	        ', 0);
-	      }
+	      ss[i].insertRule('\
+	        acronym[title]:hover:after { \
+	          content: attr(title);\
+	          padding: 5px 5px;\
+	          color: black;\
+	          position: absolute;\
+	          left: 0;\
+	          top: 100%;\
+	          white-space: nowrap;\
+	          z-index: 20;\
+	          -moz-border-radius: 3px;\
+	          -webkit-border-radius: 3px;\
+	          border-radius: 3px;\
+	          -moz-box-shadow: 0px 0px 2px #c0c1c2;\
+	          -webkit-box-shadow: 0px 0px 2px #c0c1c2;\
+	          box-shadow: 0px 0px 2px #c0c1c2;\
+	          background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #ffffff),color-stop(1, #eeeeee));\
+	          background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);\
+	          background-image: -o-linear-gradient(top, #ffffff, #eeeeee);\
+	        } \
+	      ', 0);
 	    }
 
 	    console.log(_spanish2.default);
