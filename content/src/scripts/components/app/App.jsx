@@ -1,5 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import RaisedButton from 'material-ui/RaisedButton';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import TextField from 'material-ui/TextField';
+import Paper from 'material-ui/Paper';
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
+import {green100, green500, green700} from 'material-ui/styles/colors';
+
 import findAndReplaceDOMText from 'findandreplacedomtext';
 import spanisheng from '../../../../../data/spanish.json';
 import porteng from '../../../../../data/portuguese.json';
@@ -7,7 +19,28 @@ import frencheng from '../../../../../data/french.json';
 import germaneng from '../../../../../data/german.json';
 
 var Mark = require('mark.js');
+injectTapEventPlugin();
 
+const style = {
+  height: 250,
+  maxHeight: 400,
+  padding: '15px',
+  width: 500,
+  margin: 25,
+  fontFamily: 'Avenir Next',
+  backgroundColor: 'yellow',
+  textAlign: 'center',
+  display: 'inline-block',
+};
+
+
+const muiTheme = getMuiTheme({
+  palette: {
+    accent1Color: green500,
+  },
+});
+
+let selectedWord = null;
 let originalEl = {};
 const SITES = {
   AEON: 'https://aeon.co/',
@@ -15,7 +48,8 @@ const SITES = {
   WIRED: 'https://www.wired.com/',
   WSJ: 'http://www.wsj.com/',
   QZ: 'http://qz.com/',
-  MEDIUM: 'https://medium.com/'
+  MEDIUM: 'https://medium.com/',
+  REDDIT: 'https://www.reddit.com/'
 }
 
 const mapStateToProps = (state) => {
@@ -50,8 +84,13 @@ function handleNYT(uri){
   return document.getElementsByClassName('story-body-text story-content');
 }
 
+function handleReddit(uri){
+  // Main Page
+  return document.querySelectorAll('*[id^="thing"]');
+}
+
 function handleWired(uri){
-  console.log('WIRED');
+  // console.log('WIRED');
   // Main Page
   if(uri == SITES.WIRED){
     return document.getElementsByTagName('section');
@@ -71,13 +110,11 @@ function handleWsj(uri){
   }
   if(uri.startsWith(SITES.WSJ + "articles/")){
     let elements = [].slice.call(document.getElementsByClassName('article-wrap'));
-    console.log(elements);
     let moreEl = [].slice.call(document.getElementsByClassName('wsj-article-headline'));
     elements.push(moreEl);
     return elements;
   }
   // TODO News section
-    return elements;
   return null;
 }
 
@@ -93,37 +130,41 @@ function getElements(){
   let baseUri = document.baseURI;
 
   // DONT use
-  if(baseUri.startsWith(SITES.MEDIUM)){
-    return null;
+  // if(baseUri.startsWith(SITES.MEDIUM)){
+  //   return null;
+  // }
+
+  if(baseUri.startsWith(SITES.REDDIT)){
+    return handleReddit(baseUri);
   }
 
   // Aeon
   if(baseUri.startsWith(SITES.AEON)){
-    console.log("AEON");
+    // console.log("AEON");
     return handleAeon(baseUri);
   }
 
   // NYT Mobile
   if(baseUri.startsWith(SITES.NYTIMES)){
-    console.log("NYTIMES");
+    // console.log("NYTIMES");
     return handleNYT(baseUri);
   }
 
   // WIRED
   if(baseUri.startsWith(SITES.WIRED)){
-    console.log("WIRED");
+    // console.log("WIRED");
     return handleWired(baseUri);
   }
 
   // WSJ
   if(baseUri.startsWith(SITES.WSJ)){
-    console.log("WSJ");
+    // console.log("WSJ");
     return handleWsj(baseUri);
   }
 
   // QZ
   if(baseUri.startsWith(SITES.QZ)){
-    console.log("QZ");
+    // console.log("QZ");
     return handleQz(baseUri);
   }
   // WORST CASE PLEASE GOD WORK
@@ -166,7 +207,7 @@ function changeLang(lang, immersion){
     if(engTrue){
       return;
     }
-    // get immersion * 200 random words
+
     let randWords = [];
     let visited = {};
     for(var i = 0;i < (immersion * 0.01) * langDict.length; i++){
@@ -182,7 +223,6 @@ function changeLang(lang, immersion){
     let ss = document.styleSheets
     for(var i = 0; i < ss.length; i++){
       if(ss[i].cssRules != null || ss[i].cssRules != undefined){
-        console.log("HELLO");
         ss[i].insertRule(' \
           acronym { \
             background-color: #F0F8FF; \
@@ -221,9 +261,6 @@ function changeLang(lang, immersion){
         ', 0);
       }
     }
-
-    console.log(spanisheng);
-
     for(var i = 0; i < elements.length; i++){
       for(var j = 0; j < randWords.length; j++){
         let eng = new RegExp("\\b" + randWords[j]["english"] + "\\b");
@@ -242,19 +279,81 @@ function changeLang(lang, immersion){
 
 function switchPower(language, immersion, power){
   if(power == false){
-    changeLang("English", -1);
+    return changeLang("English", -1);
   }
   if(power == true){
-    changeLang(language, immersion);
+    return changeLang(language, immersion);
   }
 }
 
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      language: 'French',
+      open: false,
+      selectedWord: "",
+      correctOption: "",
+      checkedOption:'',
+      options: ['', '', '', ''],
+      hints: ['', '', '', ''],
+      correct: '',
+      hintText: '',
+      quizMeText: 'Quiz Me',
+      quizButtonPressed: false,
+    };
+    this.handleCheck = this.handleCheck.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleHint = this.handleHint.bind(this);
+  }
+
+  // TODO
+  handleHint(){
+    return;
+  }
+
+  handleCheck(e, v){
+    console.log(v);
+    this.setState({ checkedOption: v });
+  }
+
+  handleSubmit() {
+    if(this.state.checkedOption == this.state.correctOption){
+      this.setState({ correct: "Good Job! That's the the correct answer."});
+    } else {
+      this.setState({ correct: "That's incorrect"});
+    }
+  }
+
+  handleClick(){
+    // dict to use with three choices
+    let choices = ['activity', 'story', 'industry', 'language', 'management', 'movie', 'organization', 'physics', 'door', 'mouse', 'dog', 'phone', 'light', 'equipment'];    
+    choices.sort( function() { return 0.5 - Math.random() });
+    let threeChoices = [choices[0], choices[1], choices[2]];
+    let visited = {};    
+    let langDict = {};
+    let langKey = null;
+    let engTrue = false;  
+
+    // get all elements
+    let words = document.getElementsByTagName('acronym');
+    let randomWord = words[Math.floor(Math.random() * words.length)];
+    console.log(randomWord)
+    threeChoices.push(randomWord.title);
+    threeChoices.sort( function() { return 0.5 - Math.random() });
+    this.setState({
+      quizButtonPressed: true,
+      correct: '',
+      correctOption: randomWord.title, 
+      selectedWord: randomWord.innerText,
+      quizMeText: 'Give me another one!',
+      options: [threeChoices[0], threeChoices[1], threeChoices[2], threeChoices[3]],
+    });
   }
 
   componentDidMount() {
+    let selectedWord = "";
     if(this.props.power == false){
       return;
     }
@@ -262,6 +361,7 @@ class App extends Component {
     for(var i = 0; i < el.length; i++){
       originalEl[i] = el[i].innerHTML;
     }
+
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
         if(request.language && request.immersion){
@@ -271,7 +371,7 @@ class App extends Component {
           chrome.storage.local.set({"language": request.language}, function(){});
           chrome.storage.sync.set({"language": request.language}, function(){});
 
-          changeLang(request.language, request.immersion);
+          changeLang(request.language, request.immersion)
         }
       }
     );
@@ -287,7 +387,7 @@ class App extends Component {
           chrome.storage.local.set({"power": request.power}, function(){});
           chrome.storage.sync.set({"power": request.power}, function(){});
 
-          switchPower(request.language, request.immersion, request.power);
+          switchPower(request.language, request.immersion, request.power)
         }
       }
     );
@@ -297,7 +397,6 @@ class App extends Component {
     let set = false;
     if(startupLang && startupPower && startupImmersion){
       set = true;
-      switchPower(startupLang, startupPower, startupImmersion);
       return;
     }
     // check if lang, immersion, power already set
@@ -332,9 +431,43 @@ class App extends Component {
   }
 
   render() {
+    let QuizQuestion = '';
+    let QuizOptions = '';
+    let ActionButtons = '';
+    let QuizMeButton = '';
+
+    if(this.state.quizButtonPressed == true){
+      QuizOptions = ( <RadioButtonGroup name="status" onChange={this.handleCheck}>
+            <RadioButton style={{ display: 'inline-block', width: '150px' }} label={this.state.options[0]} value={this.state.options[0]} />
+            <RadioButton style={{ display: 'inline-block', width: '150px' }} label={this.state.options[1]} value={this.state.options[1]} />
+            <RadioButton style={{ display: 'inline-block', width: '150px' }} label={this.state.options[2]} value={this.state.options[2]} />
+            <RadioButton style={{ display: 'inline-block', width: '150px' }} label={this.state.options[3]} value={this.state.options[3]} />
+        </RadioButtonGroup> );
+      QuizQuestion = (<p>What does <b> {this.state.selectedWord} </b> mean ?</p>);
+
+      ActionButtons = (<CardActions>
+                        <RaisedButton onClick={this.handleSubmit} label="Submit" />
+                      </CardActions>);
+    }
+    if(this.state.quizButtonPressed == false){
+      QuizMeButton = (<p><br/><br/> <RaisedButton onClick={this.handleClick} label={this.state.quizMeText} primary={true} /> </p>);
+    }
     return (
-      <div>
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div>
+          <Card style={style}>
+            <h2> { this.state.correct} </h2>
+            <CardText>
+              {QuizQuestion}
+            </CardText>
+            <center>
+            {QuizMeButton}
+            {QuizOptions}
+            </center>
+            {ActionButtons}
+          </Card>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
