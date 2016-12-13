@@ -17,6 +17,19 @@ import spanisheng from '../../../../../data/spanish.json';
 import porteng from '../../../../../data/portuguese.json';
 import frencheng from '../../../../../data/french.json';
 import germaneng from '../../../../../data/german.json';
+import firebase from 'firebase';
+import Chance from 'chance';
+
+var config = {
+  apiKey: "AIzaSyD46Cqzsv2UTog0cmVyrom0jAyh9FGIiMA",
+  authDomain: "alpharabius2-70521.firebaseapp.com",
+  databaseURL: "https://alpharabius2-70521.firebaseio.com",
+  storageBucket: "alpharabius2-70521.appspot.com",
+  messagingSenderId: "530210488055"
+};
+firebase.initializeApp(config);
+var savedFb = false;
+var CURRENT_LANGUAGE = ''
 
 var Mark = require('mark.js');
 injectTapEventPlugin();
@@ -55,7 +68,6 @@ const SITES = {
 const mapStateToProps = (state) => {
   return {
     language: state.language,
-    immersion: state.immersion,
     power: state.power,
   };
 };
@@ -172,7 +184,9 @@ function getElements(){
   return elements;
 }
 
-function changeLang(lang, immersion){
+function changeLang(lang){
+  CURRENT_LANGUAGE = lang
+  console.log(CURRENT_LANGUAGE)
   let elements = getElements();
   let langDict = null;
   let langKey = null;
@@ -210,8 +224,8 @@ function changeLang(lang, immersion){
 
     let randWords = [];
     let visited = {};
-    for(var i = 0;i < (immersion * 0.01) * langDict.length; i++){
-      let randIndex = Math.floor(Math.random() * (immersion * 0.1) * langDict.length);
+    for(var i = 0;i < (langDict.length * 0.2); i++){
+      let randIndex = Math.floor(Math.random() * langDict.length);
       let randWord = langDict[randIndex];
       if(!visited[randWord["english"]]){
         visited[randWord["english"]] = randWord[langKey];
@@ -262,7 +276,7 @@ function changeLang(lang, immersion){
       }
     }
     for(var i = 0; i < elements.length; i++){
-      for(var j = 0; j < randWords.length; j++){
+      for(var j = 0; j < randWords.length * .2; j++){
         let eng = new RegExp("\\b" + randWords[j]["english"] + "\\b");
         let newWord = randWords[j][langKey];
         var new_row = document.createElement('acronym');
@@ -277,12 +291,12 @@ function changeLang(lang, immersion){
   }
 }
 
-function switchPower(language, immersion, power){
+function switchPower(language, power){
   if(power == false){
     return changeLang("English", -1);
   }
   if(power == true){
-    return changeLang(language, immersion);
+    return changeLang(language);
   }
 }
 
@@ -296,7 +310,6 @@ class App extends Component {
       correctOption: "",
       checkedOption:'',
       options: ['', '', '', ''],
-      hints: ['', '', '', ''],
       correct: '',
       hintText: '',
       quizMeText: 'Quiz Me',
@@ -306,6 +319,7 @@ class App extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleHint = this.handleHint.bind(this);
+    this.handleSubmit2 = this.handleSubmit2.bind(this);
   }
 
   // TODO
@@ -318,12 +332,59 @@ class App extends Component {
     this.setState({ checkedOption: v });
   }
 
-  handleSubmit() {
-    if(this.state.checkedOption == this.state.correctOption){
-      this.setState({ correct: "Good Job! That's the the correct answer."});
-    } else {
-      this.setState({ correct: "That's incorrect"});
+  handleSubmit2(items){
+      let myUserId = items['user'];
+      var checkedOption = this.state.checkedOption;
+      var selectedWord = this.state.selectedWord;
+      var correctOption = this.state.correctOption;
+      var options = this.state.options;
+      var correct = "";
+      var language = this.state.language;      
+
+      if(checkedOption == correctOption){
+        if(!savedFb){
+          var postData = {
+            uid: myUserId,
+            selectedWord: selectedWord,
+            correctOption: correctOption,
+            options: options,
+            numRight: 1,
+            numWrong: 0,
+            created: Date(),
+          }
+          var updates = {};
+          var newPostKey = firebase.database().ref().child('questions').push().key;
+          updates['/questions/' + CURRENT_LANGUAGE + '/' + newPostKey] = postData;
+          updates['/user-questions/' + myUserId + '/' + CURRENT_LANGUAGE + '/' +newPostKey] = postData;
+          firebase.database().ref().update(updates);        
+          savedFb = true;
+        }
+        correct = "Good Job! That's the the correct answer."
+      } else {
+        if(!savedFb){
+          var postData = {
+            uid: myUserId,
+            selectedWord: selectedWord,
+            correctOption: correctOption,
+            options: options,
+            numRight: 0,
+            numWrong: 1,
+            created: Date(),
+          }
+          var updates = {};
+          var newPostKey = firebase.database().ref().child('questions').push().key;
+          updates['/questions/' + language + '/' + newPostKey] = postData;
+          updates['/user-questions/' + myUserId + '/' + language + '/' + newPostKey] = postData;
+          firebase.database().ref().update(updates);        
+          savedFb = true;
+        }
+        correct = "That's incorrect"
+      }
+      this.setState({correct: correct})                 
     }
+
+  handleSubmit() {
+    chrome.storage.local.get(["user"], this.handleSubmit2)
   }
 
   handleClick(){
@@ -342,6 +403,7 @@ class App extends Component {
     console.log(randomWord)
     threeChoices.push(randomWord.title);
     threeChoices.sort( function() { return 0.5 - Math.random() });
+
     this.setState({
       quizButtonPressed: true,
       correct: '',
@@ -353,7 +415,51 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let selectedWord = "";
+    console.log("HELLO BEGIN")            
+    savedFb = false
+    if(document.baseURI == "http://localhost:5000/dashboard"){
+      let uid = document.getElementById("firebase-id").value;
+      chrome.storage.local.set({"user": uid}, function(){});
+      chrome.storage.sync.set({"user": uid}, function(){});
+      alert('alpharabi.us user changed. login to switch users.');      
+    }                                   
+    chrome.storage.local.get(["user"], function(items){
+      let currentUser = items['user'];
+      console.log("CURRENT USER " + currentUser);
+      if(!currentUser){
+        firebase.auth().signInAnonymously().catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+
+          console.log("ERRORS");
+          console.log(errorCode);
+          console.log(errorMessage);
+        });
+
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (user) {
+            // User is signed in.
+            var uid = user.uid;
+            firebase.database().ref('users/' + uid).set({
+              signedUp: Date()
+            });
+            chrome.storage.local.set({"user": uid}, function(){});
+            chrome.storage.sync.set({"user": uid}, function(){});
+            if(document.baseURI == "http://localhost:5000/signup"){
+              console.log("HELLO");
+              document.getElementById("firebase-id").value = uid;
+            }                             
+          }          
+        });
+      } else {
+        if(document.baseURI == "http://localhost:5000/signup"){
+          console.log("HELLO");
+          document.getElementById("firebase-id").value = currentUser;
+        } 
+      }     
+    });
+    let selectedWord = '';
     if(this.props.power == false){
       return;
     }
@@ -364,58 +470,53 @@ class App extends Component {
 
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
-        if(request.language && request.immersion){
+        if(request.language){
           chrome.storage.local.set({"language": request.language}, function(){});
           chrome.storage.sync.set({"language": request.language}, function(){});
 
           chrome.storage.local.set({"language": request.language}, function(){});
           chrome.storage.sync.set({"language": request.language}, function(){});
 
-          changeLang(request.language, request.immersion)
+          changeLang(request.language)
         }
       }
     );
     chrome.runtime.onMessage.addListener(
       function(request, sender, sendResponse) {
-        if((request.power != null) && request.language && request.immersion){
+        if((request.power != null) && request.language){
           chrome.storage.local.set({"language": request.language}, function(){});
           chrome.storage.sync.set({"language": request.language}, function(){});
 
-          chrome.storage.local.set({"immersion": request.immersion}, function(){});
-          chrome.storage.sync.set({"immersion": request.immersion}, function(){});
 
           chrome.storage.local.set({"power": request.power}, function(){});
           chrome.storage.sync.set({"power": request.power}, function(){});
 
-          switchPower(request.language, request.immersion, request.power)
+          switchPower(request.language, request.power)
         }
       }
     );
     let startupLang = this.props.language;
     let startupPower = this.props.power;
-    let startupImmersion = this.props.immersion;
     let set = false;
-    if(startupLang && startupPower && startupImmersion){
+    if(startupLang && startupPower){
       set = true;
       return;
     }
     // check if lang, immersion, power already set
     if(! set){
-      chrome.storage.local.get(["language", "power", "immersion"], function(items){
+      chrome.storage.local.get(["language", "power"], function(items){
         startupLang = items["language"];
         startupPower = items["power"];
-        startupImmersion = items["immersion"];
-        if(startupLang && (startupPower != null || startupPower != undefined) && startupImmersion){
+        if(startupLang && (startupPower != null || startupPower != undefined)){
           set = true;
         }
         if(! set){
-          chrome.storage.sync.get(["language", "power", "immersion"], function(items){
+          chrome.storage.sync.get(["language", "power"], function(items){
             startupLang = items["language"];
             startupPower = items["power"];
-            startupImmersion = items["immersion"];
 
-            if(startupLang && (startupPower != null || startupPower != undefined) && startupImmersion){
-              switchPower(startupLang, startupImmersion, startupPower);
+            if(startupLang && (startupPower != null || startupPower != undefined)){
+              switchPower(startupLang, startupPower);
               return
             } else {
               switchPower("French", 3, true);
@@ -423,7 +524,7 @@ class App extends Component {
             }
           });
         } else {
-            switchPower(startupLang, startupImmersion, startupPower);
+            switchPower(startupLang, startupPower);
             return
         }
       })

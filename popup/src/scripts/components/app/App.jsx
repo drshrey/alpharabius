@@ -8,7 +8,6 @@ var background = require("../../../bgd.png");
 const mapStateToProps = (state) => {
   return {
     language: state.language,
-    immersion: state.immersion,
     power: state.power,
   };
 };
@@ -23,7 +22,6 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       language: this.props.language,
-      immersion: this.props.immersion,
       power: this.props.power,
     }
   }
@@ -33,11 +31,10 @@ class App extends Component {
 
   handleButtonChange(){
     var x = this.props.language;
-    var immersion = this.props.immersion;
     chrome.windows.getAll({populate:true},function(windows){
       windows.forEach(function(window){
         window.tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, {"language": x, "immersion": immersion});
+          chrome.tabs.sendMessage(tab.id, {"language": x});
         });
       });
     });
@@ -49,11 +46,10 @@ class App extends Component {
       language: e.target.value
     });
     var language = e.target.value;
-    var immersion = this.props.immersion;
     chrome.windows.getAll({populate:true},function(windows){
       windows.forEach(function(window){
         window.tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion});
+          chrome.tabs.sendMessage(tab.id, {"language": language});
         });
       });
     });
@@ -62,7 +58,7 @@ class App extends Component {
   handlePowerChange(e){
     var power = !this.props.power;
     var language = this.props.language;
-    var immersion = this.props.immersion;
+
     this.props.dispatch({
       type: 'TOGGLE_POWER',
       power: !this.props.power
@@ -71,7 +67,7 @@ class App extends Component {
     chrome.windows.getAll({populate:true},function(windows){
       windows.forEach(function(window){
         window.tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion, "power": power});
+          chrome.tabs.sendMessage(tab.id, {"language": language, "power": power});
         });
       });
     });
@@ -84,11 +80,10 @@ class App extends Component {
     });
     this.setState({immersion: e.target.value});
     var language = this.props.language;
-    var immersion = e.target.value;
     chrome.windows.getAll({populate:true},function(windows){
       windows.forEach(function(window){
         window.tabs.forEach(function(tab){
-          chrome.tabs.sendMessage(tab.id, {"language": language, "immersion": immersion});
+          chrome.tabs.sendMessage(tab.id, {"language": language});
         });
       });
     });
@@ -115,7 +110,7 @@ class App extends Component {
               <span> language </span>
                 <span className="language-input">
                       <select className="language-input-in">
-                              <option value="english">english</option>
+                              <option value=  "english">english</option>
                       </select>
                 </span>
 
@@ -131,11 +126,8 @@ class App extends Component {
                 </span>
           </div>
           <br/>
-        <div className="immersion">
-            immersion <input id="test" disabled={! this.props.power} value={this.props.immersion} onChange={this.handleSliderChange} min="1" max="10" type="range"/>
-        </div>
         <div className="footer">
-          alpharabi.us
+          <a target="_blank" href={'http://localhost:5000/login'}>alpharabi.us</a>
         </div>
       </div>
     );

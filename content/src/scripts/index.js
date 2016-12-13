@@ -17,13 +17,16 @@ if(document.baseURI.startsWith('http://www.nytimes.com')){
   if(content != null){
     content.parentNode.insertBefore(anchor, content.nextSibling);
   }
-}
-
-if(document.baseURI.startsWith('https://aeon.co/essays')){
+} else if(document.baseURI.startsWith('https://aeon.co/essays')){
   let content = document.getElementsByClassName('follow-topics-banner')[0];
   if(content != null){
     content.parentNode.insertBefore(anchor, content);
   }
+} else {
+  anchor.style.visibility = 'hidden';
+  anchor.style.opacity = '0';
+  anchor.style.display = 'none';
+  document.body.insertBefore(anchor, document.body.childNodes[0]);  
 }
 
 // window.onscroll = function(ev) {
