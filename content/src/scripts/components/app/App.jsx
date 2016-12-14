@@ -130,12 +130,6 @@ function handleWsj(uri){
   return null;
 }
 
-function handleQz(uri){
-  if(uri == SITES.QZ){
-    return document.getElementsByTagName('article');
-  }
-  return document.getElementsByTagName('article');
-}
 
 function getElements(){
   let elements = null;
@@ -174,11 +168,6 @@ function getElements(){
     return handleWsj(baseUri);
   }
 
-  // QZ
-  if(baseUri.startsWith(SITES.QZ)){
-    // console.log("QZ");
-    return handleQz(baseUri);
-  }
   // WORST CASE PLEASE GOD WORK
   elements = document.getElementsByTagName('article');
   return elements;
@@ -292,6 +281,9 @@ function changeLang(lang){
 }
 
 function switchPower(language, power){
+  console.log("HELLO")
+  console.log(language)
+  console.log(power)
   if(power == false){
     return changeLang("English", -1);
   }
@@ -314,6 +306,8 @@ class App extends Component {
       hintText: '',
       quizMeText: 'Quiz Me',
       quizButtonPressed: false,
+      finished: false,
+      url: 'localhost:5000'
     };
     this.handleCheck = this.handleCheck.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -380,7 +374,7 @@ class App extends Component {
         }
         correct = "That's incorrect"
       }
-      this.setState({correct: correct})                 
+      this.setState({correct: correct, finished: true});                 
     }
 
   handleSubmit() {
@@ -414,18 +408,16 @@ class App extends Component {
     });
   }
 
-  componentDidMount() {
-    console.log("HELLO BEGIN")            
+  componentDidMount() {            
     savedFb = false
-    if(document.baseURI == "http://localhost:5000/dashboard"){
+    if(document.baseURI == "http://" + this.state.url + "/dashboard"){
+      alert("This user is now integrated with the chrome extension. Sign in to a different user to switch.")
       let uid = document.getElementById("firebase-id").value;
       chrome.storage.local.set({"user": uid}, function(){});
-      chrome.storage.sync.set({"user": uid}, function(){});
-      alert('alpharabi.us user changed. login to switch users.');      
+      chrome.storage.sync.set({"user": uid}, function(){});      
     }                                   
     chrome.storage.local.get(["user"], function(items){
       let currentUser = items['user'];
-      console.log("CURRENT USER " + currentUser);
       if(!currentUser){
         firebase.auth().signInAnonymously().catch(function(error) {
           // Handle Errors here.
@@ -446,15 +438,13 @@ class App extends Component {
             });
             chrome.storage.local.set({"user": uid}, function(){});
             chrome.storage.sync.set({"user": uid}, function(){});
-            if(document.baseURI == "http://localhost:5000/signup"){
-              console.log("HELLO");
+            if(document.baseURI == "http://" + this.state.url + "/signup"){
               document.getElementById("firebase-id").value = uid;
             }                             
           }          
         });
       } else {
-        if(document.baseURI == "http://localhost:5000/signup"){
-          console.log("HELLO");
+        if(document.baseURI == "http://" + this.state.url + "/signup"){
           document.getElementById("firebase-id").value = currentUser;
         } 
       }     
@@ -519,7 +509,7 @@ class App extends Component {
               switchPower(startupLang, startupPower);
               return
             } else {
-              switchPower("French", 3, true);
+              switchPower("French", true);
               return
             }
           });
@@ -546,9 +536,13 @@ class App extends Component {
         </RadioButtonGroup> );
       QuizQuestion = (<p>What does <b> {this.state.selectedWord} </b> mean ?</p>);
 
-      ActionButtons = (<CardActions>
-                        <RaisedButton onClick={this.handleSubmit} label="Submit" />
-                      </CardActions>);
+      if(!this.state.finished){
+        ActionButtons = (<CardActions>
+                          <RaisedButton onClick={this.handleSubmit} label="Submit" />
+                        </CardActions>);
+      } else {
+        ActionButtons = '';
+      }
     }
     if(this.state.quizButtonPressed == false){
       QuizMeButton = (<p><br/><br/> <RaisedButton onClick={this.handleClick} label={this.state.quizMeText} primary={true} /> </p>);

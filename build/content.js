@@ -25243,6 +25243,9 @@
 	}
 
 	function switchPower(language, power) {
+	  console.log("HELLO");
+	  console.log(language);
+	  console.log(power);
 	  if (power == false) {
 	    return changeLang("English", -1);
 	  }
@@ -25269,7 +25272,8 @@
 	      correct: '',
 	      hintText: '',
 	      quizMeText: 'Quiz Me',
-	      quizButtonPressed: false
+	      quizButtonPressed: false,
+	      finished: false
 	    };
 	    _this.handleCheck = _this.handleCheck.bind(_this);
 	    _this.handleClick = _this.handleClick.bind(_this);
@@ -25343,7 +25347,7 @@
 	        }
 	        correct = "That's incorrect";
 	      }
-	      this.setState({ correct: correct });
+	      this.setState({ correct: correct, finished: true });
 	    }
 	  }, {
 	    key: 'handleSubmit',
@@ -25385,13 +25389,11 @@
 	  }, {
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      console.log("HELLO BEGIN");
 	      savedFb = false;
 	      if (document.baseURI == "http://localhost:5000/dashboard") {
 	        var uid = document.getElementById("firebase-id").value;
 	        chrome.storage.local.set({ "user": uid }, function () {});
 	        chrome.storage.sync.set({ "user": uid }, function () {});
-	        alert('alpharabi.us user changed. login to switch users.');
 	      }
 	      chrome.storage.local.get(["user"], function (items) {
 	        var currentUser = items['user'];
@@ -25417,14 +25419,12 @@
 	              chrome.storage.local.set({ "user": uid }, function () {});
 	              chrome.storage.sync.set({ "user": uid }, function () {});
 	              if (document.baseURI == "http://localhost:5000/signup") {
-	                console.log("HELLO");
 	                document.getElementById("firebase-id").value = uid;
 	              }
 	            }
 	          });
 	        } else {
 	          if (document.baseURI == "http://localhost:5000/signup") {
-	            console.log("HELLO");
 	            document.getElementById("firebase-id").value = currentUser;
 	          }
 	        }
@@ -25484,7 +25484,7 @@
 	                switchPower(startupLang, startupPower);
 	                return;
 	              } else {
-	                switchPower("French", 3, true);
+	                switchPower("French", true);
 	                return;
 	              }
 	            });
@@ -25526,11 +25526,15 @@
 	          ' mean ?'
 	        );
 
-	        ActionButtons = _react2.default.createElement(
-	          _Card.CardActions,
-	          null,
-	          _react2.default.createElement(_RaisedButton2.default, { onClick: this.handleSubmit, label: 'Submit' })
-	        );
+	        if (!this.state.finished) {
+	          ActionButtons = _react2.default.createElement(
+	            _Card.CardActions,
+	            null,
+	            _react2.default.createElement(_RaisedButton2.default, { onClick: this.handleSubmit, label: 'Submit' })
+	          );
+	        } else {
+	          ActionButtons = '';
+	        }
 	      }
 	      if (this.state.quizButtonPressed == false) {
 	        QuizMeButton = _react2.default.createElement(
