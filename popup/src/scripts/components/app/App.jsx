@@ -127,7 +127,7 @@ class App extends Component {
           </div>
           <br/>
         <div className="footer">
-          <a target="_blank" href={'http://localhost:5000/login'}>alpharabi.us</a>
+          <a target="_blank" href={'http://alpharabi.us/login'}>alpharabi.us</a>
         </div>
       </div>
     );

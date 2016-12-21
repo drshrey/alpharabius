@@ -307,7 +307,7 @@ class App extends Component {
       quizMeText: 'Quiz Me',
       quizButtonPressed: false,
       finished: false,
-      url: 'localhost:5000'
+      url: 'alpharabi.us'
     };
     this.handleCheck = this.handleCheck.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -428,7 +428,6 @@ class App extends Component {
           console.log(errorCode);
           console.log(errorMessage);
         });
-
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
             // User is signed in.
@@ -438,13 +437,13 @@ class App extends Component {
             });
             chrome.storage.local.set({"user": uid}, function(){});
             chrome.storage.sync.set({"user": uid}, function(){});
-            if(document.baseURI == "http://" + this.state.url + "/signup"){
+            if(document.baseURI == "http://alpharabi.us/signup"){
               document.getElementById("firebase-id").value = uid;
             }                             
           }          
         });
       } else {
-        if(document.baseURI == "http://" + this.state.url + "/signup"){
+        if(document.baseURI == "http://alpharabi.us/signup"){
           document.getElementById("firebase-id").value = currentUser;
         } 
       }     
