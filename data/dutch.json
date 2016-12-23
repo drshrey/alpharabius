@@ -1,0 +1,2185 @@
+[{
+	"dutch": "mensen",
+	"english": "people"
+}, {
+	"dutch": "geschiedenis",
+	"english": "history"
+}, {
+	"dutch": "manier",
+	"english": "way"
+}, {
+	"dutch": "kunst",
+	"english": "art"
+}, {
+	"dutch": "wereld-",
+	"english": "world"
+}, {
+	"dutch": "informatie",
+	"english": "information"
+}, {
+	"dutch": "kaart",
+	"english": "map"
+}, {
+	"dutch": "twee",
+	"english": "two"
+}, {
+	"dutch": "familie",
+	"english": "family"
+}, {
+	"dutch": "regering",
+	"english": "government"
+}, {
+	"dutch": "gezondheid",
+	"english": "health"
+}, {
+	"dutch": "systeem",
+	"english": "system"
+}, {
+	"dutch": "computer",
+	"english": "computer"
+}, {
+	"dutch": "vlees",
+	"english": "meat"
+}, {
+	"dutch": "jaar",
+	"english": "year"
+}, {
+	"dutch": "bedankt",
+	"english": "thanks"
+}, {
+	"dutch": "muziek-",
+	"english": "music"
+}, {
+	"dutch": "persoon",
+	"english": "person"
+}, {
+	"dutch": "lezing",
+	"english": "reading"
+}, {
+	"dutch": "methode",
+	"english": "method"
+}, {
+	"dutch": "gegevens",
+	"english": "data"
+}, {
+	"dutch": "eten",
+	"english": "food"
+}, {
+	"dutch": "begrip",
+	"english": "understanding"
+}, {
+	"dutch": "theorie",
+	"english": "theory"
+}, {
+	"dutch": "wet",
+	"english": "law"
+}, {
+	"dutch": "vogel",
+	"english": "bird"
+}, {
+	"dutch": "literatuur",
+	"english": "literature"
+}, {
+	"dutch": "probleem",
+	"english": "problem"
+}, {
+	"dutch": "software",
+	"english": "software"
+}, {
+	"dutch": "controle",
+	"english": "control"
+}, {
+	"dutch": "kennis",
+	"english": "knowledge"
+}, {
+	"dutch": "macht",
+	"english": "power"
+}, {
+	"dutch": "vermogen",
+	"english": "ability"
+}, {
+	"dutch": "economie",
+	"english": "economics"
+}, {
+	"dutch": "liefde",
+	"english": "love"
+}, {
+	"dutch": "internet",
+	"english": "internet"
+}, {
+	"dutch": "televisie",
+	"english": "television"
+}, {
+	"dutch": "wetenschap",
+	"english": "science"
+}, {
+	"dutch": "bibliotheek",
+	"english": "library"
+}, {
+	"dutch": "natuur",
+	"english": "nature"
+}, {
+	"dutch": "feit",
+	"english": "fact"
+}, {
+	"dutch": "artikel",
+	"english": "product"
+}, {
+	"dutch": "idee",
+	"english": "idea"
+}, {
+	"dutch": "temperatuur-",
+	"english": "temperature"
+}, {
+	"dutch": "investering",
+	"english": "investment"
+}, {
+	"dutch": "gebied",
+	"english": "area"
+}, {
+	"dutch": "maatschappij",
+	"english": "society"
+}, {
+	"dutch": "activiteit",
+	"english": "activity"
+}, {
+	"dutch": "verhaal",
+	"english": "story"
+}, {
+	"dutch": "industrie",
+	"english": "industry"
+}, {
+	"dutch": "media",
+	"english": "media"
+}, {
+	"dutch": "ding",
+	"english": "thing"
+}, {
+	"dutch": "oven",
+	"english": "oven"
+}, {
+	"dutch": "gemeenschap",
+	"english": "community"
+}, {
+	"dutch": "definitie",
+	"english": "definition"
+}, {
+	"dutch": "veiligheid",
+	"english": "safety"
+}, {
+	"dutch": "kwaliteit",
+	"english": "quality"
+}, {
+	"dutch": "ontwikkeling",
+	"english": "development"
+}, {
+	"dutch": "taal",
+	"english": "language"
+}, {
+	"dutch": "beheer",
+	"english": "management"
+}, {
+	"dutch": "speler",
+	"english": "player"
+}, {
+	"dutch": "verscheidenheid",
+	"english": "variety"
+}, {
+	"dutch": "video-",
+	"english": "video"
+}, {
+	"dutch": "week",
+	"english": "week"
+}, {
+	"dutch": "veiligheid",
+	"english": "security"
+}, {
+	"dutch": "land",
+	"english": "country"
+}, {
+	"dutch": "tentamen",
+	"english": "exam"
+}, {
+	"dutch": "film",
+	"english": "movie"
+}, {
+	"dutch": "organisatie",
+	"english": "organization"
+}, {
+	"dutch": "uitrusting",
+	"english": "equipment"
+}, {
+	"dutch": "fysica",
+	"english": "physics"
+}, {
+	"dutch": "analyse",
+	"english": "analysis"
+}, {
+	"dutch": "beleid",
+	"english": "policy"
+}, {
+	"dutch": "serie",
+	"english": "series"
+}, {
+	"dutch": "gedachte",
+	"english": "thought"
+}, {
+	"dutch": "basis",
+	"english": "basis"
+}, {
+	"dutch": "vriendje",
+	"english": "boyfriend"
+}, {
+	"dutch": "richting",
+	"english": "direction"
+}, {
+	"dutch": "strategie",
+	"english": "strategy"
+}, {
+	"dutch": "technologie",
+	"english": "technology"
+}, {
+	"dutch": "leger",
+	"english": "army"
+}, {
+	"dutch": "camera",
+	"english": "camera"
+}, {
+	"dutch": "vrijheid",
+	"english": "freedom"
+}, {
+	"dutch": "papier",
+	"english": "paper"
+}, {
+	"dutch": "milieu",
+	"english": "environment"
+}, {
+	"dutch": "kind",
+	"english": "child"
+}, {
+	"dutch": "aanleg",
+	"english": "instance"
+}, {
+	"dutch": "maand",
+	"english": "month"
+}, {
+	"dutch": "waarheid",
+	"english": "truth"
+}, {
+	"dutch": "afzet",
+	"english": "marketing"
+}, {
+	"dutch": "Universiteit",
+	"english": "university"
+}, {
+	"dutch": "schrijf-",
+	"english": "writing"
+}, {
+	"dutch": "artikel",
+	"english": "article"
+}, {
+	"dutch": "afdeling",
+	"english": "department"
+}, {
+	"dutch": "verschil",
+	"english": "difference"
+}, {
+	"dutch": "doel",
+	"english": "goal"
+}, {
+	"dutch": "nieuws",
+	"english": "news"
+}, {
+	"dutch": "publiek",
+	"english": "audience"
+}, {
+	"dutch": "visvangst",
+	"english": "fishing"
+}, {
+	"dutch": "groei",
+	"english": "growth"
+}, {
+	"dutch": "inkomen",
+	"english": "income"
+}, {
+	"dutch": "huwelijk",
+	"english": "marriage"
+}, {
+	"dutch": "gebruiker",
+	"english": "user"
+}, {
+	"dutch": "combinatie",
+	"english": "combination"
+}, {
+	"dutch": "mislukking",
+	"english": "failure"
+}, {
+	"dutch": "betekenis",
+	"english": "meaning"
+}, {
+	"dutch": "geneeskunde",
+	"english": "medicine"
+}, {
+	"dutch": "filosofie",
+	"english": "philosophy"
+}, {
+	"dutch": "leraar",
+	"english": "teacher"
+}, {
+	"dutch": "communicatie",
+	"english": "communication"
+}, {
+	"dutch": "nacht",
+	"english": "night"
+}, {
+	"dutch": "chemie",
+	"english": "chemistry"
+}, {
+	"dutch": "ziekte",
+	"english": "disease"
+}, {
+	"dutch": "schijf",
+	"english": "disk"
+}, {
+	"dutch": "energie",
+	"english": "energy"
+}, {
+	"dutch": "natie",
+	"english": "nation"
+}, {
+	"dutch": "weg",
+	"english": "road"
+}, {
+	"dutch": "rol",
+	"english": "role"
+}, {
+	"dutch": "soep",
+	"english": "soup"
+}, {
+	"dutch": "reclame",
+	"english": "advertising"
+}, {
+	"dutch": "plaats",
+	"english": "location"
+}, {
+	"dutch": "succes",
+	"english": "success"
+}, {
+	"dutch": "toevoeging",
+	"english": "addition"
+}, {
+	"dutch": "appartement",
+	"english": "apartment"
+}, {
+	"dutch": "onderwijs",
+	"english": "education"
+}, {
+	"dutch": "wiskunde",
+	"english": "math"
+}, {
+	"dutch": "moment",
+	"english": "moment"
+}, {
+	"dutch": "schilderij",
+	"english": "painting"
+}, {
+	"dutch": "politiek",
+	"english": "politics"
+}, {
+	"dutch": "aandacht",
+	"english": "attention"
+}, {
+	"dutch": "besluit",
+	"english": "decision"
+}, {
+	"dutch": "evenement",
+	"english": "event"
+}, {
+	"dutch": "eigendom",
+	"english": "property"
+}, {
+	"dutch": "het winkelen",
+	"english": "shopping"
+}, {
+	"dutch": "student",
+	"english": "student"
+}, {
+	"dutch": "hout",
+	"english": "wood"
+}, {
+	"dutch": "wedstrijd",
+	"english": "competition"
+}, {
+	"dutch": "distributie",
+	"english": "distribution"
+}, {
+	"dutch": "vermaak",
+	"english": "entertainment"
+}, {
+	"dutch": "kantoor",
+	"english": "office"
+}, {
+	"dutch": "bevolking",
+	"english": "population"
+}, {
+	"dutch": "president",
+	"english": "president"
+}, {
+	"dutch": "eenheid",
+	"english": "unit"
+}, {
+	"dutch": "categorie",
+	"english": "category"
+}, {
+	"dutch": "sigaret",
+	"english": "cigarette"
+}, {
+	"dutch": "context",
+	"english": "context"
+}, {
+	"dutch": "invoering",
+	"english": "introduction"
+}, {
+	"dutch": "kans",
+	"english": "opportunity"
+}, {
+	"dutch": "prestatie",
+	"english": "performance"
+}, {
+	"dutch": "bestuurder",
+	"english": "driver"
+}, {
+	"dutch": "vlucht",
+	"english": "flight"
+}, {
+	"dutch": "lengte",
+	"english": "length"
+}, {
+	"dutch": "tijdschrift",
+	"english": "magazine"
+}, {
+	"dutch": "krant-",
+	"english": "newspaper"
+}, {
+	"dutch": "verwantschap",
+	"english": "relationship"
+}, {
+	"dutch": "onderwijs",
+	"english": "teaching"
+}, {
+	"dutch": "cel",
+	"english": "cell"
+}, {
+	"dutch": "handelaar",
+	"english": "dealer"
+}, {
+	"dutch": "bevinding",
+	"english": "finding"
+}, {
+	"dutch": "meer",
+	"english": "lake"
+}, {
+	"dutch": "lid",
+	"english": "member"
+}, {
+	"dutch": "bericht",
+	"english": "message"
+}, {
+	"dutch": "telefoon",
+	"english": "phone"
+}, {
+	"dutch": "tafereel",
+	"english": "scene"
+}, {
+	"dutch": "uiterlijk",
+	"english": "appearance"
+}, {
+	"dutch": "vereniging",
+	"english": "association"
+}, {
+	"dutch": "concept",
+	"english": "concept"
+}, {
+	"dutch": "klant",
+	"english": "customer"
+}, {
+	"dutch": "dood",
+	"english": "death"
+}, {
+	"dutch": "discussie",
+	"english": "discussion"
+}, {
+	"dutch": "behuizing",
+	"english": "housing"
+}, {
+	"dutch": "inflatie",
+	"english": "inflation"
+}, {
+	"dutch": "verzekering",
+	"english": "insurance"
+}, {
+	"dutch": "humeur",
+	"english": "mood"
+}, {
+	"dutch": "vrouw",
+	"english": "woman"
+}, {
+	"dutch": "advies",
+	"english": "advice"
+}, {
+	"dutch": "bloed",
+	"english": "blood"
+}, {
+	"dutch": "inspanning",
+	"english": "effort"
+}, {
+	"dutch": "uitdrukking",
+	"english": "expression"
+}, {
+	"dutch": "belang",
+	"english": "importance"
+}, {
+	"dutch": "mening",
+	"english": "opinion"
+}, {
+	"dutch": "betaling",
+	"english": "payment"
+}, {
+	"dutch": "realiteit",
+	"english": "reality"
+}, {
+	"dutch": "verantwoordelijkheid",
+	"english": "responsibility"
+}, {
+	"dutch": "situatie",
+	"english": "situation"
+}, {
+	"dutch": "bekwaamheid",
+	"english": "skill"
+}, {
+	"dutch": "verklaring",
+	"english": "statement"
+}, {
+	"dutch": "rijkdom",
+	"english": "wealth"
+}, {
+	"dutch": "toepassing",
+	"english": "application"
+}, {
+	"dutch": "stad",
+	"english": "city"
+}, {
+	"dutch": "provincie",
+	"english": "county"
+}, {
+	"dutch": "diepte",
+	"english": "depth"
+}, {
+	"dutch": "landgoed",
+	"english": "estate"
+}, {
+	"dutch": "fundament",
+	"english": "foundation"
+}, {
+	"dutch": "grootmoeder",
+	"english": "grandmother"
+}, {
+	"dutch": "hart-",
+	"english": "heart"
+}, {
+	"dutch": "perspectief",
+	"english": "perspective"
+}, {
+	"dutch": "foto",
+	"english": "photo"
+}, {
+	"dutch": "recept",
+	"english": "recipe"
+}, {
+	"dutch": "studio",
+	"english": "studio"
+}, {
+	"dutch": "onderwerp",
+	"english": "topic"
+}, {
+	"dutch": "verzameling",
+	"english": "collection"
+}, {
+	"dutch": "depressie",
+	"english": "depression"
+}, {
+	"dutch": "verbeelding",
+	"english": "imagination"
+}, {
+	"dutch": "passie",
+	"english": "passion"
+}, {
+	"dutch": "percentage",
+	"english": "percentage"
+}, {
+	"dutch": "hulpbron",
+	"english": "resource"
+}, {
+	"dutch": "omgeving",
+	"english": "setting"
+}, {
+	"dutch": "advertentie",
+	"english": "ad"
+}, {
+	"dutch": "agentschap",
+	"english": "agency"
+}, {
+	"dutch": "college",
+	"english": "college"
+}, {
+	"dutch": "verbinding",
+	"english": "connection"
+}, {
+	"dutch": "kritiek",
+	"english": "criticism"
+}, {
+	"dutch": "schuld",
+	"english": "debt"
+}, {
+	"dutch": "beschrijving",
+	"english": "description"
+}, {
+	"dutch": "geheugen",
+	"english": "memory"
+}, {
+	"dutch": "geduld",
+	"english": "patience"
+}, {
+	"dutch": "secretaris",
+	"english": "secretary"
+}, {
+	"dutch": "oplossing",
+	"english": "solution"
+}, {
+	"dutch": "administratie",
+	"english": "administration"
+}, {
+	"dutch": "aspect",
+	"english": "aspect"
+}, {
+	"dutch": "houding",
+	"english": "attitude"
+}, {
+	"dutch": "directeur",
+	"english": "director"
+}, {
+	"dutch": "persoonlijkheid",
+	"english": "personality"
+}, {
+	"dutch": "psychologie",
+	"english": "psychology"
+}, {
+	"dutch": "aanbeveling",
+	"english": "recommendation"
+}, {
+	"dutch": "antwoord",
+	"english": "response"
+}, {
+	"dutch": "selectie",
+	"english": "selection"
+}, {
+	"dutch": "opslagruimte",
+	"english": "storage"
+}, {
+	"dutch": "versie",
+	"english": "version"
+}, {
+	"dutch": "alcohol",
+	"english": "alcohol"
+}, {
+	"dutch": "argument",
+	"english": "argument"
+}, {
+	"dutch": "klacht",
+	"english": "complaint"
+}, {
+	"dutch": "contract",
+	"english": "contract"
+}, {
+	"dutch": "nadruk",
+	"english": "emphasis"
+}, {
+	"dutch": "snelweg",
+	"english": "highway"
+}, {
+	"dutch": "verlies",
+	"english": "loss"
+}, {
+	"dutch": "lidmaatschap",
+	"english": "membership"
+}, {
+	"dutch": "bezit",
+	"english": "possession"
+}, {
+	"dutch": "voorbereiding",
+	"english": "preparation"
+}, {
+	"dutch": "biefstuk",
+	"english": "steak"
+}, {
+	"dutch": "unie",
+	"english": "union"
+}, {
+	"dutch": "overeenkomst",
+	"english": "agreement"
+}, {
+	"dutch": "kanker",
+	"english": "cancer"
+}, {
+	"dutch": "valuta",
+	"english": "currency"
+}, {
+	"dutch": "werk",
+	"english": "employment"
+}, {
+	"dutch": "bouwkunde",
+	"english": "engineering"
+}, {
+	"dutch": "binnenkomst",
+	"english": "entry"
+}, {
+	"dutch": "wisselwerking",
+	"english": "interaction"
+}, {
+	"dutch": "mengsel",
+	"english": "mixture"
+}, {
+	"dutch": "voorkeur",
+	"english": "preference"
+}, {
+	"dutch": "regio",
+	"english": "region"
+}, {
+	"dutch": "republiek",
+	"english": "republic"
+}, {
+	"dutch": "traditie",
+	"english": "tradition"
+}, {
+	"dutch": "virus",
+	"english": "virus"
+}, {
+	"dutch": "acteur",
+	"english": "actor"
+}, {
+	"dutch": "klas",
+	"english": "classroom"
+}, {
+	"dutch": "levering",
+	"english": "delivery"
+}, {
+	"dutch": "apparaat",
+	"english": "device"
+}, {
+	"dutch": "moeilijkheid",
+	"english": "difficulty"
+}, {
+	"dutch": "drama",
+	"english": "drama"
+}, {
+	"dutch": "verkiezing",
+	"english": "election"
+}, {
+	"dutch": "motor",
+	"english": "engine"
+}, {
+	"dutch": "voetbal",
+	"english": "football"
+}, {
+	"dutch": "leiding",
+	"english": "guidance"
+}, {
+	"dutch": "hotel",
+	"english": "hotel"
+}, {
+	"dutch": "bezitter",
+	"english": "owner"
+}, {
+	"dutch": "prioriteit",
+	"english": "priority"
+}, {
+	"dutch": "bescherming",
+	"english": "protection"
+}, {
+	"dutch": "suggestie",
+	"english": "suggestion"
+}, {
+	"dutch": "spanning",
+	"english": "tension"
+}, {
+	"dutch": "variatie",
+	"english": "variation"
+}, {
+	"dutch": "angst",
+	"english": "anxiety"
+}, {
+	"dutch": "atmosfeer",
+	"english": "atmosphere"
+}, {
+	"dutch": "bewustzijn",
+	"english": "awareness"
+}, {
+	"dutch": "bad",
+	"english": "bath"
+}, {
+	"dutch": "brood",
+	"english": "bread"
+}, {
+	"dutch": "kandidaat",
+	"english": "candidate"
+}, {
+	"dutch": "klimaat",
+	"english": "climate"
+}, {
+	"dutch": "vergelijking",
+	"english": "comparison"
+}, {
+	"dutch": "verwarring",
+	"english": "confusion"
+}, {
+	"dutch": "bouw",
+	"english": "construction"
+}, {
+	"dutch": "lift",
+	"english": "elevator"
+}, {
+	"dutch": "emotie",
+	"english": "emotion"
+}, {
+	"dutch": "werknemer",
+	"english": "employee"
+}, {
+	"dutch": "werkgever",
+	"english": "employer"
+}, {
+	"dutch": "gast",
+	"english": "guest"
+}, {
+	"dutch": "hoogte",
+	"english": "height"
+}, {
+	"dutch": "leiderschap",
+	"english": "leadership"
+}, {
+	"dutch": "winkelcentrum",
+	"english": "mall"
+}, {
+	"dutch": "manager",
+	"english": "manager"
+}, {
+	"dutch": "operatie",
+	"english": "operation"
+}, {
+	"dutch": "opname",
+	"english": "recording"
+}, {
+	"dutch": "monster",
+	"english": "sample"
+}, {
+	"dutch": "vervoer",
+	"english": "transportation"
+}, {
+	"dutch": "liefdadigheid",
+	"english": "charity"
+}, {
+	"dutch": "neef",
+	"english": "cousin"
+}, {
+	"dutch": "ramp",
+	"english": "disaster"
+}, {
+	"dutch": "editor",
+	"english": "editor"
+}, {
+	"dutch": "doeltreffendheid",
+	"english": "efficiency"
+}, {
+	"dutch": "opwinding",
+	"english": "excitement"
+}, {
+	"dutch": "omvang",
+	"english": "extent"
+}, {
+	"dutch": "terugkoppeling",
+	"english": "feedback"
+}, {
+	"dutch": "gitaar",
+	"english": "guitar"
+}, {
+	"dutch": "huiswerk",
+	"english": "homework"
+}, {
+	"dutch": "leider",
+	"english": "leader"
+}, {
+	"dutch": "mam",
+	"english": "mom"
+}, {
+	"dutch": "resultaat",
+	"english": "outcome"
+}, {
+	"dutch": "toestemming",
+	"english": "permission"
+}, {
+	"dutch": "presentatie",
+	"english": "presentation"
+}, {
+	"dutch": "bevordering",
+	"english": "promotion"
+}, {
+	"dutch": "reflectie",
+	"english": "reflection"
+}, {
+	"dutch": "koelkast",
+	"english": "refrigerator"
+}, {
+	"dutch": "resolutie",
+	"english": "resolution"
+}, {
+	"dutch": "inkomsten",
+	"english": "revenue"
+}, {
+	"dutch": "sessie",
+	"english": "session"
+}, {
+	"dutch": "zanger",
+	"english": "singer"
+}, {
+	"dutch": "tennis",
+	"english": "tennis"
+}, {
+	"dutch": "mand",
+	"english": "basket"
+}, {
+	"dutch": "bonus",
+	"english": "bonus"
+}, {
+	"dutch": "kabinet",
+	"english": "cabinet"
+}, {
+	"dutch": "kindertijd",
+	"english": "childhood"
+}, {
+	"dutch": "kerk",
+	"english": "church"
+}, {
+	"dutch": "kleren",
+	"english": "clothes"
+}, {
+	"dutch": "koffie",
+	"english": "coffee"
+}, {
+	"dutch": "avondeten",
+	"english": "dinner"
+}, {
+	"dutch": "tekening",
+	"english": "drawing"
+}, {
+	"dutch": "haar-",
+	"english": "hair"
+}, {
+	"dutch": "gehoor",
+	"english": "hearing"
+}, {
+	"dutch": "initiatief",
+	"english": "initiative"
+}, {
+	"dutch": "oordeel",
+	"english": "judgment"
+}, {
+	"dutch": "laboratorium",
+	"english": "lab"
+}, {
+	"dutch": "maat",
+	"english": "measurement"
+}, {
+	"dutch": "mode",
+	"english": "mode"
+}, {
+	"dutch": "modder",
+	"english": "mud"
+}, {
+	"dutch": "oranje",
+	"english": "orange"
+}, {
+	"dutch": "poëzie",
+	"english": "poetry"
+}, {
+	"dutch": "Politie",
+	"english": "police"
+}, {
+	"dutch": "mogelijkheid",
+	"english": "possibility"
+}, {
+	"dutch": "procedure",
+	"english": "procedure"
+}, {
+	"dutch": "koningin",
+	"english": "queen"
+}, {
+	"dutch": "verhouding",
+	"english": "ratio"
+}, {
+	"dutch": "relatie",
+	"english": "relation"
+}, {
+	"dutch": "restaurant",
+	"english": "restaurant"
+}, {
+	"dutch": "tevredenheid",
+	"english": "satisfaction"
+}, {
+	"dutch": "sector",
+	"english": "sector"
+}, {
+	"dutch": "handtekening",
+	"english": "signature"
+}, {
+	"dutch": "betekenis",
+	"english": "significance"
+}, {
+	"dutch": "lied",
+	"english": "song"
+}, {
+	"dutch": "tand",
+	"english": "tooth"
+}, {
+	"dutch": "stad-",
+	"english": "town"
+}, {
+	"dutch": "voertuig",
+	"english": "vehicle"
+}, {
+	"dutch": "volume",
+	"english": "volume"
+}, {
+	"dutch": "vrouw",
+	"english": "wife"
+}, {
+	"dutch": "ongeval",
+	"english": "accident"
+}, {
+	"dutch": "luchthaven",
+	"english": "airport"
+}, {
+	"dutch": "afspraak",
+	"english": "appointment"
+}, {
+	"dutch": "aankomst",
+	"english": "arrival"
+}, {
+	"dutch": "veronderstelling",
+	"english": "assumption"
+}, {
+	"dutch": "basketbal",
+	"english": "baseball"
+}, {
+	"dutch": "hoofdstuk",
+	"english": "chapter"
+}, {
+	"dutch": "commissie",
+	"english": "committee"
+}, {
+	"dutch": "gesprek",
+	"english": "conversation"
+}, {
+	"dutch": "databank",
+	"english": "database"
+}, {
+	"dutch": "enthousiasme",
+	"english": "enthusiasm"
+}, {
+	"dutch": "fout",
+	"english": "error"
+}, {
+	"dutch": "uitleg",
+	"english": "explanation"
+}, {
+	"dutch": "boer",
+	"english": "farmer"
+}, {
+	"dutch": "poort",
+	"english": "gate"
+}, {
+	"dutch": "meisje",
+	"english": "girl"
+}, {
+	"dutch": "hal",
+	"english": "hall"
+}, {
+	"dutch": "geschiedschrijver",
+	"english": "historian"
+}, {
+	"dutch": "ziekenhuis",
+	"english": "hospital"
+}, {
+	"dutch": "letsel",
+	"english": "injury"
+}, {
+	"dutch": "instructie",
+	"english": "instruction"
+}, {
+	"dutch": "onderhoud",
+	"english": "maintenance"
+}, {
+	"dutch": "fabrikant",
+	"english": "manufacturer"
+}, {
+	"dutch": "maaltijd",
+	"english": "meal"
+}, {
+	"dutch": "perceptie",
+	"english": "perception"
+}, {
+	"dutch": "taart",
+	"english": "pie"
+}, {
+	"dutch": "gedicht",
+	"english": "poem"
+}, {
+	"dutch": "aanwezigheid",
+	"english": "presence"
+}, {
+	"dutch": "voorstel",
+	"english": "proposal"
+}, {
+	"dutch": "receptie",
+	"english": "reception"
+}, {
+	"dutch": "vervanging",
+	"english": "replacement"
+}, {
+	"dutch": "revolutie",
+	"english": "revolution"
+}, {
+	"dutch": "rivier-",
+	"english": "river"
+}, {
+	"dutch": "zoon",
+	"english": "son"
+}, {
+	"dutch": "toespraak",
+	"english": "speech"
+}, {
+	"dutch": "thee",
+	"english": "tea"
+}, {
+	"dutch": "dorp",
+	"english": "village"
+}, {
+	"dutch": "waarschuwing",
+	"english": "warning"
+}, {
+	"dutch": "winnaar",
+	"english": "winner"
+}, {
+	"dutch": "arbeider",
+	"english": "worker"
+}, {
+	"dutch": "auteur",
+	"english": "writer"
+}, {
+	"dutch": "bijstand",
+	"english": "assistance"
+}, {
+	"dutch": "adem",
+	"english": "breath"
+}, {
+	"dutch": "koper",
+	"english": "buyer"
+}, {
+	"dutch": "borst",
+	"english": "chest"
+}, {
+	"dutch": "chocola",
+	"english": "chocolate"
+}, {
+	"dutch": "conclusie",
+	"english": "conclusion"
+}, {
+	"dutch": "bijdrage",
+	"english": "contribution"
+}, {
+	"dutch": "koekje",
+	"english": "cookie"
+}, {
+	"dutch": "moed",
+	"english": "courage"
+}, {
+	"dutch": "pa",
+	"english": "dad"
+}, {
+	"dutch": "bureau",
+	"english": "desk"
+}, {
+	"dutch": "lade",
+	"english": "drawer"
+}, {
+	"dutch": "etablissement",
+	"english": "establishment"
+}, {
+	"dutch": "examen",
+	"english": "examination"
+}, {
+	"dutch": "vuilnis",
+	"english": "garbage"
+}, {
+	"dutch": "kruidenierswinkel",
+	"english": "grocery"
+}, {
+	"dutch": "honing",
+	"english": "honey"
+}, {
+	"dutch": "indruk",
+	"english": "impression"
+}, {
+	"dutch": "verbetering",
+	"english": "improvement"
+}, {
+	"dutch": "onafhankelijkheid",
+	"english": "independence"
+}, {
+	"dutch": "insect",
+	"english": "insect"
+}, {
+	"dutch": "inspectie",
+	"english": "inspection"
+}, {
+	"dutch": "inspecteur",
+	"english": "inspector"
+}, {
+	"dutch": "koning",
+	"english": "king"
+}, {
+	"dutch": "ladder",
+	"english": "ladder"
+}, {
+	"dutch": "menu",
+	"english": "menu"
+}, {
+	"dutch": "straf",
+	"english": "penalty"
+}, {
+	"dutch": "piano",
+	"english": "piano"
+}, {
+	"dutch": "aardappel",
+	"english": "potato"
+}, {
+	"dutch": "beroep",
+	"english": "profession"
+}, {
+	"dutch": "professor",
+	"english": "professor"
+}, {
+	"dutch": "hoeveelheid",
+	"english": "quantity"
+}, {
+	"dutch": "reactie",
+	"english": "reaction"
+}, {
+	"dutch": "eis",
+	"english": "requirement"
+}, {
+	"dutch": "salade",
+	"english": "salad"
+}, {
+	"dutch": "zus",
+	"english": "sister"
+}, {
+	"dutch": "supermarkt",
+	"english": "supermarket"
+}, {
+	"dutch": "tong",
+	"english": "tongue"
+}, {
+	"dutch": "zwakheid",
+	"english": "weakness"
+}, {
+	"dutch": "huwelijk",
+	"english": "wedding"
+}, {
+	"dutch": "affaire",
+	"english": "affair"
+}, {
+	"dutch": "ambitie",
+	"english": "ambition"
+}, {
+	"dutch": "analyst",
+	"english": "analyst"
+}, {
+	"dutch": "appel",
+	"english": "apple"
+}, {
+	"dutch": "toewijzing",
+	"english": "assignment"
+}, {
+	"dutch": "assistent",
+	"english": "assistant"
+}, {
+	"dutch": "badkamer",
+	"english": "bathroom"
+}, {
+	"dutch": "slaapkamer",
+	"english": "bedroom"
+}, {
+	"dutch": "bier",
+	"english": "beer"
+}, {
+	"dutch": "verjaardag",
+	"english": "birthday"
+}, {
+	"dutch": "viering",
+	"english": "celebration"
+}, {
+	"dutch": "kampioenschap",
+	"english": "championship"
+}, {
+	"dutch": "wang",
+	"english": "cheek"
+}, {
+	"dutch": "cliënt",
+	"english": "client"
+}, {
+	"dutch": "gevolg",
+	"english": "consequence"
+}, {
+	"dutch": "vertrek",
+	"english": "departure"
+}, {
+	"dutch": "diamant",
+	"english": "diamond"
+}, {
+	"dutch": "vuil",
+	"english": "dirt"
+}, {
+	"dutch": "oor",
+	"english": "ear"
+}, {
+	"dutch": "fortuin",
+	"english": "fortune"
+}, {
+	"dutch": "vriendschap",
+	"english": "friendship"
+}, {
+	"dutch": "begrafenis",
+	"english": "funeral"
+}, {
+	"dutch": "gen",
+	"english": "gene"
+}, {
+	"dutch": "vriendin",
+	"english": "girlfriend"
+}, {
+	"dutch": "hoed",
+	"english": "hat"
+}, {
+	"dutch": "aanwijzing",
+	"english": "indication"
+}, {
+	"dutch": "intentie",
+	"english": "intention"
+}, {
+	"dutch": "dame",
+	"english": "lady"
+}, {
+	"dutch": "middernacht",
+	"english": "midnight"
+}, {
+	"dutch": "onderhandeling",
+	"english": "negotiation"
+}, {
+	"dutch": "verplichting",
+	"english": "obligation"
+}, {
+	"dutch": "passagier",
+	"english": "passenger"
+}, {
+	"dutch": "pizza",
+	"english": "pizza"
+}, {
+	"dutch": "platform",
+	"english": "platform"
+}, {
+	"dutch": "dichter",
+	"english": "poet"
+}, {
+	"dutch": "verontreiniging",
+	"english": "pollution"
+}, {
+	"dutch": "erkenning",
+	"english": "recognition"
+}, {
+	"dutch": "reputatie",
+	"english": "reputation"
+}, {
+	"dutch": "overhemd",
+	"english": "shirt"
+}, {
+	"dutch": "mijnheer",
+	"english": "sir"
+}, {
+	"dutch": "spreker",
+	"english": "speaker"
+}, {
+	"dutch": "vreemdeling",
+	"english": "stranger"
+}, {
+	"dutch": "chirurgie",
+	"english": "surgery"
+}, {
+	"dutch": "sympathie",
+	"english": "sympathy"
+}, {
+	"dutch": "verhaal",
+	"english": "tale"
+}, {
+	"dutch": "keel",
+	"english": "throat"
+}, {
+	"dutch": "trainer",
+	"english": "trainer"
+}, {
+	"dutch": "oom",
+	"english": "uncle"
+}, {
+	"dutch": "jeugd",
+	"english": "youth"
+}, {
+	"dutch": "geld",
+	"english": "money"
+}, {
+	"dutch": "terwijl",
+	"english": "while"
+}, {
+	"dutch": "bedrijf",
+	"english": "business"
+}, {
+	"dutch": "leven",
+	"english": "life"
+}, {
+	"dutch": "dag",
+	"english": "day"
+}, {
+	"dutch": "huis-",
+	"english": "home"
+}, {
+	"dutch": "economie",
+	"english": "economy"
+}, {
+	"dutch": "opleiding",
+	"english": "training"
+}, {
+	"dutch": "soort",
+	"english": "kind"
+}, {
+	"dutch": "toekomst",
+	"english": "future"
+}, {
+	"dutch": "actie",
+	"english": "action"
+}, {
+	"dutch": "slecht",
+	"english": "bad"
+}, {
+	"dutch": "niks",
+	"english": "nothing"
+}, {
+	"dutch": "periode",
+	"english": "period"
+}, {
+	"dutch": "onderwerpen",
+	"english": "subject"
+}, {
+	"dutch": "kip",
+	"english": "chicken"
+}, {
+	"dutch": "materiaal",
+	"english": "material"
+}, {
+	"dutch": "auto",
+	"english": "car"
+}, {
+	"dutch": "helft",
+	"english": "half"
+}, {
+	"dutch": "binnen",
+	"english": "inside"
+}, {
+	"dutch": "buiten",
+	"english": "outside"
+}, {
+	"dutch": "standaard-",
+	"english": "standard"
+}, {
+	"dutch": "item",
+	"english": "item"
+}, {
+	"dutch": "medium",
+	"english": "medium"
+}, {
+	"dutch": "keuze",
+	"english": "choice"
+}, {
+	"dutch": "ochtend-",
+	"english": "morning"
+}, {
+	"dutch": "noorden",
+	"english": "north"
+}, {
+	"dutch": "plein",
+	"english": "square"
+}, {
+	"dutch": "hoofdstad",
+	"english": "capital"
+}, {
+	"dutch": "zelf",
+	"english": "self"
+}, {
+	"dutch": "schot",
+	"english": "shot"
+}, {
+	"dutch": "leven",
+	"english": "living"
+}, {
+	"dutch": "plastic",
+	"english": "plastic"
+}, {
+	"dutch": "gevoel",
+	"english": "feeling"
+}, {
+	"dutch": "spaargeld",
+	"english": "savings"
+}, {
+	"dutch": "dier",
+	"english": "animal"
+}, {
+	"dutch": "maximum",
+	"english": "maximum"
+}, {
+	"dutch": "roman",
+	"english": "novel"
+}, {
+	"dutch": "overvloed",
+	"english": "plenty"
+}, {
+	"dutch": "achtergrond",
+	"english": "background"
+}, {
+	"dutch": "rood",
+	"english": "red"
+}, {
+	"dutch": "kracht",
+	"english": "strength"
+}, {
+	"dutch": "groente",
+	"english": "vegetable"
+}, {
+	"dutch": "ideaal",
+	"english": "ideal"
+}, {
+	"dutch": "keuken-",
+	"english": "kitchen"
+}, {
+	"dutch": "beginsel",
+	"english": "principle"
+}, {
+	"dutch": "familielid",
+	"english": "relative"
+}, {
+	"dutch": "verkoop",
+	"english": "sale"
+}, {
+	"dutch": "straat",
+	"english": "street"
+}, {
+	"dutch": "minimum",
+	"english": "minimum"
+}, {
+	"dutch": "pad",
+	"english": "path"
+}, {
+	"dutch": "zee",
+	"english": "sea"
+}, {
+	"dutch": "zuiden",
+	"english": "south"
+}, {
+	"dutch": "toestand",
+	"english": "status"
+}, {
+	"dutch": "vertrouwen",
+	"english": "confidence"
+}, {
+	"dutch": "dochter",
+	"english": "daughter"
+}, {
+	"dutch": "mate",
+	"english": "degree"
+}, {
+	"dutch": "plicht",
+	"english": "duty"
+}, {
+	"dutch": "uur",
+	"english": "hour"
+}, {
+	"dutch": "stof",
+	"english": "substance"
+}, {
+	"dutch": "middag",
+	"english": "afternoon"
+}, {
+	"dutch": "overweging",
+	"english": "consideration"
+}, {
+	"dutch": "goud",
+	"english": "gold"
+}, {
+	"dutch": "missie",
+	"english": "mission"
+}, {
+	"dutch": "deur-",
+	"english": "door"
+}, {
+	"dutch": "oosten-",
+	"english": "east"
+}, {
+	"dutch": "manier",
+	"english": "manner"
+}, {
+	"dutch": "vergadering",
+	"english": "meeting"
+}, {
+	"dutch": "parkeren",
+	"english": "parking"
+}, {
+	"dutch": "routine-",
+	"english": "routine"
+}, {
+	"dutch": "zwemmen",
+	"english": "swimming"
+}, {
+	"dutch": "vliegmaatschappij",
+	"english": "airline"
+}, {
+	"dutch": "ontwerper",
+	"english": "designer"
+}, {
+	"dutch": "noodgeval",
+	"english": "emergency"
+}, {
+	"dutch": "avond",
+	"english": "evening"
+}, {
+	"dutch": "uitbreiding",
+	"english": "extension"
+}, {
+	"dutch": "verschrikking",
+	"english": "horror"
+}, {
+	"dutch": "berg-",
+	"english": "mountain"
+}, {
+	"dutch": "geduldig",
+	"english": "patient"
+}, {
+	"dutch": "reliëf",
+	"english": "relief"
+}, {
+	"dutch": "toerist",
+	"english": "tourist"
+}, {
+	"dutch": "westen",
+	"english": "west"
+}, {
+	"dutch": "terzijde",
+	"english": "aside"
+}, {
+	"dutch": "broer",
+	"english": "brother"
+}, {
+	"dutch": "deskundige",
+	"english": "expert"
+}, {
+	"dutch": "god",
+	"english": "god"
+}, {
+	"dutch": "inheems",
+	"english": "native"
+}, {
+	"dutch": "opening",
+	"english": "opening"
+}, {
+	"dutch": "jongen",
+	"english": "boy"
+}, {
+	"dutch": "specialist",
+	"english": "specialist"
+}, {
+	"dutch": "bitter",
+	"english": "bitter"
+}, {
+	"dutch": "hel",
+	"english": "hell"
+}, {
+	"dutch": "incident",
+	"english": "incident"
+}, {
+	"dutch": "inwoner",
+	"english": "resident"
+}, {
+	"dutch": "een",
+	"english": "a"
+}, {
+	"dutch": "u",
+	"english": "you"
+}, {
+	"dutch": "het",
+	"english": "it"
+}, {
+	"dutch": "kan",
+	"english": "can"
+}, {
+	"dutch": "wil",
+	"english": "will"
+}, {
+	"dutch": "als",
+	"english": "if"
+}, {
+	"dutch": "een",
+	"english": "one"
+}, {
+	"dutch": "veel",
+	"english": "many"
+}, {
+	"dutch": "meest",
+	"english": "most"
+}, {
+	"dutch": "anders",
+	"english": "other"
+}, {
+	"dutch": "goed",
+	"english": "good"
+}, {
+	"dutch": "groot",
+	"english": "great"
+}, {
+	"dutch": "weinig",
+	"english": "few"
+}, {
+	"dutch": "macht",
+	"english": "might"
+}, {
+	"dutch": "nog",
+	"english": "still"
+}, {
+	"dutch": "openbaar",
+	"english": "public"
+}, {
+	"dutch": "menselijk",
+	"english": "human"
+}, {
+	"dutch": "lokaal",
+	"english": "local"
+}, {
+	"dutch": "algemeen",
+	"english": "general"
+}, {
+	"dutch": "ze",
+	"english": "she"
+}, {
+	"dutch": "specifiek",
+	"english": "specific"
+}, {
+	"dutch": "lang",
+	"english": "long"
+}, {
+	"dutch": "hoog",
+	"english": "high"
+}, {
+	"dutch": "vanavond",
+	"english": "tonight"
+}, {
+	"dutch": "gemeenschappelijk",
+	"english": "common"
+}, {
+	"dutch": "eenvoudig",
+	"english": "simple"
+}, {
+	"dutch": "verleden",
+	"english": "past"
+}, {
+	"dutch": "groot",
+	"english": "big"
+}, {
+	"dutch": "mogelijk",
+	"english": "possible"
+}, {
+	"dutch": "bijzonder",
+	"english": "particular"
+}, {
+	"dutch": "vandaag",
+	"english": "today"
+}, {
+	"dutch": "persoonlijk",
+	"english": "personal"
+}, {
+	"dutch": "actueel",
+	"english": "current"
+}, {
+	"dutch": "nationaal",
+	"english": "national"
+}, {
+	"dutch": "natuurlijk",
+	"english": "natural"
+}, {
+	"dutch": "fysiek",
+	"english": "physical"
+}, {
+	"dutch": "tweede",
+	"english": "second"
+}, {
+	"dutch": "individu",
+	"english": "individual"
+}, {
+	"dutch": "hoofd",
+	"english": "main"
+}, {
+	"dutch": "potentieel",
+	"english": "potential"
+}, {
+	"dutch": "professioneel",
+	"english": "professional"
+}, {
+	"dutch": "Internationale",
+	"english": "international"
+}, {
+	"dutch": "alternatief",
+	"english": "alternative"
+}, {
+	"dutch": "volgend",
+	"english": "following"
+}, {
+	"dutch": "speciaal",
+	"english": "special"
+}, {
+	"dutch": "werkend",
+	"english": "working"
+}, {
+	"dutch": "geheel",
+	"english": "whole"
+}, {
+	"dutch": "koude",
+	"english": "cold"
+}, {
+	"dutch": "commercieel",
+	"english": "commercial"
+}, {
+	"dutch": "laag",
+	"english": "low"
+}, {
+	"dutch": "primair",
+	"english": "primary"
+}, {
+	"dutch": "waard",
+	"english": "worth"
+}, {
+	"dutch": "noodzakelijk",
+	"english": "necessary"
+}, {
+	"dutch": "positief",
+	"english": "positive"
+}, {
+	"dutch": "creatief",
+	"english": "creative"
+}, {
+	"dutch": "blij",
+	"english": "glad"
+}, {
+	"dutch": "verschuldigd",
+	"english": "due"
+}, {
+	"dutch": "effectief",
+	"english": "effective"
+}, {
+	"dutch": "midden-",
+	"english": "middle"
+}, {
+	"dutch": "regelmatig",
+	"english": "regular"
+}, {
+	"dutch": "onafhankelijk",
+	"english": "independent"
+}, {
+	"dutch": "origineel",
+	"english": "original"
+}, {
+	"dutch": "mooi",
+	"english": "beautiful"
+}, {
+	"dutch": "actief",
+	"english": "active"
+}, {
+	"dutch": "negatief",
+	"english": "negative"
+}, {
+	"dutch": "veilig",
+	"english": "safe"
+}, {
+	"dutch": "zichtbaar",
+	"english": "visual"
+}, {
+	"dutch": "voorbij",
+	"english": "beyond"
+}, {
+	"dutch": "junior",
+	"english": "junior"
+}, {
+	"dutch": "uniek",
+	"english": "unique"
+}, {
+	"dutch": "iets",
+	"english": "anything"
+}, {
+	"dutch": "klassiek",
+	"english": "classic"
+}, {
+	"dutch": "laatste",
+	"english": "final"
+}, {
+	"dutch": "privaat",
+	"english": "private"
+}, {
+	"dutch": "westelijk",
+	"english": "western"
+}, {
+	"dutch": "vertrouwd",
+	"english": "familiar"
+}, {
+	"dutch": "officieel",
+	"english": "official"
+}, {
+	"dutch": "breed",
+	"english": "broad"
+}, {
+	"dutch": "comfortabel",
+	"english": "comfortable"
+}, {
+	"dutch": "kan zijn",
+	"english": "maybe"
+}, {
+	"dutch": "rijk",
+	"english": "rich"
+}, {
+	"dutch": "jong",
+	"english": "young"
+}, {
+	"dutch": "zwaar",
+	"english": "heavy"
+}, {
+	"dutch": "Hallo",
+	"english": "hello"
+}, {
+	"dutch": "waardevol",
+	"english": "valuable"
+}, {
+	"dutch": "leidend",
+	"english": "leading"
+}, {
+	"dutch": "normaal",
+	"english": "normal"
+}, {
+	"dutch": "geheim",
+	"english": "secret"
+}, {
+	"dutch": "taai",
+	"english": "tough"
+}, {
+	"dutch": "diep",
+	"english": "deep"
+}, {
+	"dutch": "doelstelling",
+	"english": "objective"
+}, {
+	"dutch": "chemisch",
+	"english": "chemical"
+}, {
+	"dutch": "extreem",
+	"english": "extreme"
+}, {
+	"dutch": "formeel",
+	"english": "formal"
+}, {
+	"dutch": "tegenover",
+	"english": "opposite"
+}, {
+	"dutch": "afgelegen",
+	"english": "remote"
+}, {
+	"dutch": "groot",
+	"english": "vast"
+}, {
+	"dutch": "ergens",
+	"english": "somewhere"
+}, {
+	"dutch": "overal",
+	"english": "anywhere"
+}, {
+	"dutch": "donker",
+	"english": "dark"
+}, {
+	"dutch": "intern",
+	"english": "internal"
+}, {
+	"dutch": "gevoelig",
+	"english": "sensitive"
+}, {
+	"dutch": "constante",
+	"english": "constant"
+}, {
+	"dutch": "rauw",
+	"english": "raw"
+}, {
+	"dutch": "zacht",
+	"english": "soft"
+}, {
+	"dutch": "solide",
+	"english": "solid"
+}, {
+	"dutch": "bizar",
+	"english": "weird"
+}, {
+	"dutch": "jaar-",
+	"english": "annual"
+}, {
+	"dutch": "dood",
+	"english": "dead"
+}, {
+	"dutch": "voor altijd",
+	"english": "forever"
+}, {
+	"dutch": "niemand",
+	"english": "nobody"
+}, {
+	"dutch": "ronde",
+	"english": "round"
+}, {
+	"dutch": "terwijl",
+	"english": "whereas"
+}, {
+	"dutch": "gelijkwaardig",
+	"english": "equivalent"
+}, {
+	"dutch": "geestelijk",
+	"english": "spiritual"
+}, {
+	"dutch": "volwassen",
+	"english": "adult"
+}, {
+	"dutch": "gek",
+	"english": "crazy"
+}, {
+	"dutch": "voorafgaand",
+	"english": "prior"
+}, {
+	"dutch": "ruw",
+	"english": "rough"
+}, {
+	"dutch": "triest",
+	"english": "sad"
+}, {
+	"dutch": "ziek",
+	"english": "sick"
+}, {
+	"dutch": "extern",
+	"english": "external"
+}, {
+	"dutch": "onwettig",
+	"english": "illegal"
+}, {
+	"dutch": "mobiel",
+	"english": "mobile"
+}, {
+	"dutch": "smerig",
+	"english": "nasty"
+}, {
+	"dutch": "gewoon",
+	"english": "ordinary"
+}, {
+	"dutch": "koninklijk",
+	"english": "royal"
+}, {
+	"dutch": "senior",
+	"english": "senior"
+}, {
+	"dutch": "bovenste",
+	"english": "upper"
+}, {
+	"dutch": "afhankelijk",
+	"english": "dependent"
+}, {
+	"dutch": "grappig",
+	"english": "funny"
+}, {
+	"dutch": "zoet",
+	"english": "sweet"
+}, {
+	"dutch": "boven",
+	"english": "upstairs"
+}, {
+	"dutch": "gebruikelijk",
+	"english": "usual"
+}, {
+	"dutch": "in het buitenland",
+	"english": "abroad"
+}, {
+	"dutch": "groots",
+	"english": "grand"
+}, {
+	"dutch": "mannetje",
+	"english": "male"
+}, {
+	"dutch": "iemand",
+	"english": "anybody"
+}, {
+	"dutch": "briljant",
+	"english": "brilliant"
+}, {
+	"dutch": "Geachte",
+	"english": "dear"
+}, {
+	"dutch": "dronken",
+	"english": "drunk"
+}, {
+	"dutch": "vrouw",
+	"english": "female"
+}, {
+	"dutch": "onvermijdelijk",
+	"english": "inevitable"
+}, {
+	"dutch": "netjes",
+	"english": "neat"
+}, {
+	"dutch": "vertegenwoordiger",
+	"english": "representative"
+}, {
+	"dutch": "dwaas",
+	"english": "silly"
+}, {
+	"dutch": "dom",
+	"english": "stupid"
+}, {
+	"dutch": "tijdelijk",
+	"english": "temporary"
+}, {
+	"dutch": "morgen",
+	"english": "tomorrow"
+}, {
+	"dutch": "gisteren",
+	"english": "yesterday"
+}]

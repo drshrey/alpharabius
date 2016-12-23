@@ -1,0 +1,2185 @@
+[{
+	"danish": "mennesker",
+	"english": "people"
+}, {
+	"danish": "historie",
+	"english": "history"
+}, {
+	"danish": "vej",
+	"english": "way"
+}, {
+	"danish": "kunst",
+	"english": "art"
+}, {
+	"danish": "verden",
+	"english": "world"
+}, {
+	"danish": "information",
+	"english": "information"
+}, {
+	"danish": "kort",
+	"english": "map"
+}, {
+	"danish": "to",
+	"english": "two"
+}, {
+	"danish": "familie",
+	"english": "family"
+}, {
+	"danish": "regering",
+	"english": "government"
+}, {
+	"danish": "sundhed",
+	"english": "health"
+}, {
+	"danish": "system",
+	"english": "system"
+}, {
+	"danish": "computer",
+	"english": "computer"
+}, {
+	"danish": "kød",
+	"english": "meat"
+}, {
+	"danish": "år",
+	"english": "year"
+}, {
+	"danish": "tak",
+	"english": "thanks"
+}, {
+	"danish": "musik",
+	"english": "music"
+}, {
+	"danish": "person",
+	"english": "person"
+}, {
+	"danish": "læsning",
+	"english": "reading"
+}, {
+	"danish": "metode",
+	"english": "method"
+}, {
+	"danish": "data",
+	"english": "data"
+}, {
+	"danish": "mad",
+	"english": "food"
+}, {
+	"danish": "forstående",
+	"english": "understanding"
+}, {
+	"danish": "teori",
+	"english": "theory"
+}, {
+	"danish": "lov",
+	"english": "law"
+}, {
+	"danish": "fugl",
+	"english": "bird"
+}, {
+	"danish": "litteratur",
+	"english": "literature"
+}, {
+	"danish": "problem",
+	"english": "problem"
+}, {
+	"danish": "software",
+	"english": "software"
+}, {
+	"danish": "kontrol",
+	"english": "control"
+}, {
+	"danish": "viden",
+	"english": "knowledge"
+}, {
+	"danish": "magt",
+	"english": "power"
+}, {
+	"danish": "evne",
+	"english": "ability"
+}, {
+	"danish": "økonomi",
+	"english": "economics"
+}, {
+	"danish": "elsker",
+	"english": "love"
+}, {
+	"danish": "internet",
+	"english": "internet"
+}, {
+	"danish": "television",
+	"english": "television"
+}, {
+	"danish": "videnskab",
+	"english": "science"
+}, {
+	"danish": "bibliotek",
+	"english": "library"
+}, {
+	"danish": "natur",
+	"english": "nature"
+}, {
+	"danish": "faktum",
+	"english": "fact"
+}, {
+	"danish": "produkt",
+	"english": "product"
+}, {
+	"danish": "ide",
+	"english": "idea"
+}, {
+	"danish": "temperatur",
+	"english": "temperature"
+}, {
+	"danish": "investering",
+	"english": "investment"
+}, {
+	"danish": "areal",
+	"english": "area"
+}, {
+	"danish": "samfund",
+	"english": "society"
+}, {
+	"danish": "aktivitet",
+	"english": "activity"
+}, {
+	"danish": "historie",
+	"english": "story"
+}, {
+	"danish": "industri",
+	"english": "industry"
+}, {
+	"danish": "medier",
+	"english": "media"
+}, {
+	"danish": "ting",
+	"english": "thing"
+}, {
+	"danish": "ovn",
+	"english": "oven"
+}, {
+	"danish": "fællesskab",
+	"english": "community"
+}, {
+	"danish": "definition",
+	"english": "definition"
+}, {
+	"danish": "sikkerhed",
+	"english": "safety"
+}, {
+	"danish": "kvalitet",
+	"english": "quality"
+}, {
+	"danish": "udvikling",
+	"english": "development"
+}, {
+	"danish": "sprog",
+	"english": "language"
+}, {
+	"danish": "ledelse",
+	"english": "management"
+}, {
+	"danish": "spiller",
+	"english": "player"
+}, {
+	"danish": "bred vifte",
+	"english": "variety"
+}, {
+	"danish": "video",
+	"english": "video"
+}, {
+	"danish": "uge",
+	"english": "week"
+}, {
+	"danish": "sikkerhed",
+	"english": "security"
+}, {
+	"danish": "land",
+	"english": "country"
+}, {
+	"danish": "eksamen",
+	"english": "exam"
+}, {
+	"danish": "film",
+	"english": "movie"
+}, {
+	"danish": "organisation",
+	"english": "organization"
+}, {
+	"danish": "udstyr",
+	"english": "equipment"
+}, {
+	"danish": "fysik",
+	"english": "physics"
+}, {
+	"danish": "analyse",
+	"english": "analysis"
+}, {
+	"danish": "politik",
+	"english": "policy"
+}, {
+	"danish": "serie",
+	"english": "series"
+}, {
+	"danish": "tanke",
+	"english": "thought"
+}, {
+	"danish": "basis",
+	"english": "basis"
+}, {
+	"danish": "kæreste",
+	"english": "boyfriend"
+}, {
+	"danish": "retning",
+	"english": "direction"
+}, {
+	"danish": "strategi",
+	"english": "strategy"
+}, {
+	"danish": "teknologi",
+	"english": "technology"
+}, {
+	"danish": "hær",
+	"english": "army"
+}, {
+	"danish": "kamera",
+	"english": "camera"
+}, {
+	"danish": "frihed",
+	"english": "freedom"
+}, {
+	"danish": "papir",
+	"english": "paper"
+}, {
+	"danish": "miljø",
+	"english": "environment"
+}, {
+	"danish": "barn",
+	"english": "child"
+}, {
+	"danish": "eksempel",
+	"english": "instance"
+}, {
+	"danish": "måned",
+	"english": "month"
+}, {
+	"danish": "sandhed",
+	"english": "truth"
+}, {
+	"danish": "markedsføring",
+	"english": "marketing"
+}, {
+	"danish": "Universitet",
+	"english": "university"
+}, {
+	"danish": "skrivning",
+	"english": "writing"
+}, {
+	"danish": "artiklen",
+	"english": "article"
+}, {
+	"danish": "afdeling",
+	"english": "department"
+}, {
+	"danish": "forskel",
+	"english": "difference"
+}, {
+	"danish": "mål",
+	"english": "goal"
+}, {
+	"danish": "nyheder",
+	"english": "news"
+}, {
+	"danish": "publikum",
+	"english": "audience"
+}, {
+	"danish": "fiskeri",
+	"english": "fishing"
+}, {
+	"danish": "vækst",
+	"english": "growth"
+}, {
+	"danish": "indkomst",
+	"english": "income"
+}, {
+	"danish": "ægteskab",
+	"english": "marriage"
+}, {
+	"danish": "bruger",
+	"english": "user"
+}, {
+	"danish": "kombination",
+	"english": "combination"
+}, {
+	"danish": "fiasko",
+	"english": "failure"
+}, {
+	"danish": "betyder",
+	"english": "meaning"
+}, {
+	"danish": "medicin",
+	"english": "medicine"
+}, {
+	"danish": "filosofi",
+	"english": "philosophy"
+}, {
+	"danish": "lærer",
+	"english": "teacher"
+}, {
+	"danish": "meddelelse",
+	"english": "communication"
+}, {
+	"danish": "nat",
+	"english": "night"
+}, {
+	"danish": "kemi",
+	"english": "chemistry"
+}, {
+	"danish": "sygdom",
+	"english": "disease"
+}, {
+	"danish": "disk",
+	"english": "disk"
+}, {
+	"danish": "energi",
+	"english": "energy"
+}, {
+	"danish": "nation",
+	"english": "nation"
+}, {
+	"danish": "vej",
+	"english": "road"
+}, {
+	"danish": "rolle",
+	"english": "role"
+}, {
+	"danish": "suppe",
+	"english": "soup"
+}, {
+	"danish": "reklame",
+	"english": "advertising"
+}, {
+	"danish": "beliggenhed",
+	"english": "location"
+}, {
+	"danish": "succes",
+	"english": "success"
+}, {
+	"danish": "Derudover",
+	"english": "addition"
+}, {
+	"danish": "lejlighed",
+	"english": "apartment"
+}, {
+	"danish": "uddannelse",
+	"english": "education"
+}, {
+	"danish": "matematik",
+	"english": "math"
+}, {
+	"danish": "øjeblik",
+	"english": "moment"
+}, {
+	"danish": "maleri",
+	"english": "painting"
+}, {
+	"danish": "politik",
+	"english": "politics"
+}, {
+	"danish": "opmærksomhed",
+	"english": "attention"
+}, {
+	"danish": "afgørelse",
+	"english": "decision"
+}, {
+	"danish": "tilfælde",
+	"english": "event"
+}, {
+	"danish": "ejendom",
+	"english": "property"
+}, {
+	"danish": "shopping",
+	"english": "shopping"
+}, {
+	"danish": "studerende",
+	"english": "student"
+}, {
+	"danish": "træ",
+	"english": "wood"
+}, {
+	"danish": "konkurrence",
+	"english": "competition"
+}, {
+	"danish": "fordeling",
+	"english": "distribution"
+}, {
+	"danish": "underholdning",
+	"english": "entertainment"
+}, {
+	"danish": "kontor",
+	"english": "office"
+}, {
+	"danish": "befolkning",
+	"english": "population"
+}, {
+	"danish": "formand",
+	"english": "president"
+}, {
+	"danish": "enhed",
+	"english": "unit"
+}, {
+	"danish": "kategori",
+	"english": "category"
+}, {
+	"danish": "cigaret",
+	"english": "cigarette"
+}, {
+	"danish": "sammenhæng",
+	"english": "context"
+}, {
+	"danish": "introduktion",
+	"english": "introduction"
+}, {
+	"danish": "lejlighed",
+	"english": "opportunity"
+}, {
+	"danish": "ydeevne",
+	"english": "performance"
+}, {
+	"danish": "chauffør",
+	"english": "driver"
+}, {
+	"danish": "flyvningen",
+	"english": "flight"
+}, {
+	"danish": "længde",
+	"english": "length"
+}, {
+	"danish": "magasin",
+	"english": "magazine"
+}, {
+	"danish": "avis",
+	"english": "newspaper"
+}, {
+	"danish": "forhold",
+	"english": "relationship"
+}, {
+	"danish": "undervisning",
+	"english": "teaching"
+}, {
+	"danish": "celle",
+	"english": "cell"
+}, {
+	"danish": "forhandler",
+	"english": "dealer"
+}, {
+	"danish": "fund",
+	"english": "finding"
+}, {
+	"danish": "sø",
+	"english": "lake"
+}, {
+	"danish": "medlem",
+	"english": "member"
+}, {
+	"danish": "besked",
+	"english": "message"
+}, {
+	"danish": "telefon",
+	"english": "phone"
+}, {
+	"danish": "scene",
+	"english": "scene"
+}, {
+	"danish": "udseende",
+	"english": "appearance"
+}, {
+	"danish": "forening",
+	"english": "association"
+}, {
+	"danish": "koncept",
+	"english": "concept"
+}, {
+	"danish": "kunde",
+	"english": "customer"
+}, {
+	"danish": "død",
+	"english": "death"
+}, {
+	"danish": "diskussion",
+	"english": "discussion"
+}, {
+	"danish": "boliger",
+	"english": "housing"
+}, {
+	"danish": "inflation",
+	"english": "inflation"
+}, {
+	"danish": "forsikring",
+	"english": "insurance"
+}, {
+	"danish": "humør",
+	"english": "mood"
+}, {
+	"danish": "kvinde",
+	"english": "woman"
+}, {
+	"danish": "råd",
+	"english": "advice"
+}, {
+	"danish": "blod",
+	"english": "blood"
+}, {
+	"danish": "forsøg",
+	"english": "effort"
+}, {
+	"danish": "udtryk",
+	"english": "expression"
+}, {
+	"danish": "betydning",
+	"english": "importance"
+}, {
+	"danish": "mening",
+	"english": "opinion"
+}, {
+	"danish": "betaling",
+	"english": "payment"
+}, {
+	"danish": "virkelighed",
+	"english": "reality"
+}, {
+	"danish": "ansvar",
+	"english": "responsibility"
+}, {
+	"danish": "situation",
+	"english": "situation"
+}, {
+	"danish": "dygtighed",
+	"english": "skill"
+}, {
+	"danish": "erklæring",
+	"english": "statement"
+}, {
+	"danish": "rigdom",
+	"english": "wealth"
+}, {
+	"danish": "anvendelse",
+	"english": "application"
+}, {
+	"danish": "by",
+	"english": "city"
+}, {
+	"danish": "Region",
+	"english": "county"
+}, {
+	"danish": "dybde",
+	"english": "depth"
+}, {
+	"danish": "ejendom",
+	"english": "estate"
+}, {
+	"danish": "fundament",
+	"english": "foundation"
+}, {
+	"danish": "bedstemor",
+	"english": "grandmother"
+}, {
+	"danish": "hjerte",
+	"english": "heart"
+}, {
+	"danish": "perspektiv",
+	"english": "perspective"
+}, {
+	"danish": "foto",
+	"english": "photo"
+}, {
+	"danish": "opskrift",
+	"english": "recipe"
+}, {
+	"danish": "studie",
+	"english": "studio"
+}, {
+	"danish": "emne",
+	"english": "topic"
+}, {
+	"danish": "samling",
+	"english": "collection"
+}, {
+	"danish": "depression",
+	"english": "depression"
+}, {
+	"danish": "fantasi",
+	"english": "imagination"
+}, {
+	"danish": "passion",
+	"english": "passion"
+}, {
+	"danish": "procent",
+	"english": "percentage"
+}, {
+	"danish": "ressource",
+	"english": "resource"
+}, {
+	"danish": "indstilling",
+	"english": "setting"
+}, {
+	"danish": "annonce",
+	"english": "ad"
+}, {
+	"danish": "bureau",
+	"english": "agency"
+}, {
+	"danish": "kollegium",
+	"english": "college"
+}, {
+	"danish": "forbindelse",
+	"english": "connection"
+}, {
+	"danish": "kritik",
+	"english": "criticism"
+}, {
+	"danish": "gæld",
+	"english": "debt"
+}, {
+	"danish": "beskrivelse",
+	"english": "description"
+}, {
+	"danish": "minde",
+	"english": "memory"
+}, {
+	"danish": "tålmodighed",
+	"english": "patience"
+}, {
+	"danish": "sekretær",
+	"english": "secretary"
+}, {
+	"danish": "løsning",
+	"english": "solution"
+}, {
+	"danish": "administration",
+	"english": "administration"
+}, {
+	"danish": "aspekt",
+	"english": "aspect"
+}, {
+	"danish": "holdning",
+	"english": "attitude"
+}, {
+	"danish": "direktør",
+	"english": "director"
+}, {
+	"danish": "personlighed",
+	"english": "personality"
+}, {
+	"danish": "psykologi",
+	"english": "psychology"
+}, {
+	"danish": "henstilling",
+	"english": "recommendation"
+}, {
+	"danish": "respons",
+	"english": "response"
+}, {
+	"danish": "udvælgelse",
+	"english": "selection"
+}, {
+	"danish": "opbevaring",
+	"english": "storage"
+}, {
+	"danish": "version",
+	"english": "version"
+}, {
+	"danish": "alkohol",
+	"english": "alcohol"
+}, {
+	"danish": "argument",
+	"english": "argument"
+}, {
+	"danish": "klage",
+	"english": "complaint"
+}, {
+	"danish": "kontrakt",
+	"english": "contract"
+}, {
+	"danish": "vægt",
+	"english": "emphasis"
+}, {
+	"danish": "hovedvej",
+	"english": "highway"
+}, {
+	"danish": "tab",
+	"english": "loss"
+}, {
+	"danish": "medlemskab",
+	"english": "membership"
+}, {
+	"danish": "besiddelse",
+	"english": "possession"
+}, {
+	"danish": "forberedelse",
+	"english": "preparation"
+}, {
+	"danish": "bøf",
+	"english": "steak"
+}, {
+	"danish": "Union",
+	"english": "union"
+}, {
+	"danish": "aftale",
+	"english": "agreement"
+}, {
+	"danish": "kræft",
+	"english": "cancer"
+}, {
+	"danish": "valuta",
+	"english": "currency"
+}, {
+	"danish": "beskæftigelse",
+	"english": "employment"
+}, {
+	"danish": "engineering",
+	"english": "engineering"
+}, {
+	"danish": "indgang",
+	"english": "entry"
+}, {
+	"danish": "vekselvirkning",
+	"english": "interaction"
+}, {
+	"danish": "blanding",
+	"english": "mixture"
+}, {
+	"danish": "præference",
+	"english": "preference"
+}, {
+	"danish": "område",
+	"english": "region"
+}, {
+	"danish": "republik",
+	"english": "republic"
+}, {
+	"danish": "tradition",
+	"english": "tradition"
+}, {
+	"danish": "virus",
+	"english": "virus"
+}, {
+	"danish": "skuespiller",
+	"english": "actor"
+}, {
+	"danish": "klasseværelse",
+	"english": "classroom"
+}, {
+	"danish": "levering",
+	"english": "delivery"
+}, {
+	"danish": "enhed",
+	"english": "device"
+}, {
+	"danish": "vanskelighed",
+	"english": "difficulty"
+}, {
+	"danish": "drama",
+	"english": "drama"
+}, {
+	"danish": "valg",
+	"english": "election"
+}, {
+	"danish": "motor",
+	"english": "engine"
+}, {
+	"danish": "fodbold",
+	"english": "football"
+}, {
+	"danish": "vejledning",
+	"english": "guidance"
+}, {
+	"danish": "Hotel",
+	"english": "hotel"
+}, {
+	"danish": "ejer",
+	"english": "owner"
+}, {
+	"danish": "prioritet",
+	"english": "priority"
+}, {
+	"danish": "beskyttelse",
+	"english": "protection"
+}, {
+	"danish": "forslag",
+	"english": "suggestion"
+}, {
+	"danish": "spænding",
+	"english": "tension"
+}, {
+	"danish": "variation",
+	"english": "variation"
+}, {
+	"danish": "angst",
+	"english": "anxiety"
+}, {
+	"danish": "atmosfære",
+	"english": "atmosphere"
+}, {
+	"danish": "opmærksomhed",
+	"english": "awareness"
+}, {
+	"danish": "bad",
+	"english": "bath"
+}, {
+	"danish": "brød",
+	"english": "bread"
+}, {
+	"danish": "kandidat",
+	"english": "candidate"
+}, {
+	"danish": "klima",
+	"english": "climate"
+}, {
+	"danish": "sammenligning",
+	"english": "comparison"
+}, {
+	"danish": "forvirring",
+	"english": "confusion"
+}, {
+	"danish": "konstruktion",
+	"english": "construction"
+}, {
+	"danish": "elevator",
+	"english": "elevator"
+}, {
+	"danish": "emotion",
+	"english": "emotion"
+}, {
+	"danish": "medarbejder",
+	"english": "employee"
+}, {
+	"danish": "arbejdsgiver",
+	"english": "employer"
+}, {
+	"danish": "gæst",
+	"english": "guest"
+}, {
+	"danish": "højde",
+	"english": "height"
+}, {
+	"danish": "ledelse",
+	"english": "leadership"
+}, {
+	"danish": "indkøbscenter",
+	"english": "mall"
+}, {
+	"danish": "Manager",
+	"english": "manager"
+}, {
+	"danish": "operation",
+	"english": "operation"
+}, {
+	"danish": "indspilning",
+	"english": "recording"
+}, {
+	"danish": "prøve",
+	"english": "sample"
+}, {
+	"danish": "transport",
+	"english": "transportation"
+}, {
+	"danish": "næstekærlighed",
+	"english": "charity"
+}, {
+	"danish": "fætter",
+	"english": "cousin"
+}, {
+	"danish": "katastrofe",
+	"english": "disaster"
+}, {
+	"danish": "editor",
+	"english": "editor"
+}, {
+	"danish": "effektivitet",
+	"english": "efficiency"
+}, {
+	"danish": "spænding",
+	"english": "excitement"
+}, {
+	"danish": "grad",
+	"english": "extent"
+}, {
+	"danish": "tilbagemeldinger",
+	"english": "feedback"
+}, {
+	"danish": "guitar",
+	"english": "guitar"
+}, {
+	"danish": "lektier",
+	"english": "homework"
+}, {
+	"danish": "leder",
+	"english": "leader"
+}, {
+	"danish": "mor",
+	"english": "mom"
+}, {
+	"danish": "resultat",
+	"english": "outcome"
+}, {
+	"danish": "tilladelse",
+	"english": "permission"
+}, {
+	"danish": "præsentation",
+	"english": "presentation"
+}, {
+	"danish": "forfremmelse",
+	"english": "promotion"
+}, {
+	"danish": "afspejling",
+	"english": "reflection"
+}, {
+	"danish": "køleskab",
+	"english": "refrigerator"
+}, {
+	"danish": "løsning",
+	"english": "resolution"
+}, {
+	"danish": "indtægter",
+	"english": "revenue"
+}, {
+	"danish": "session",
+	"english": "session"
+}, {
+	"danish": "sanger",
+	"english": "singer"
+}, {
+	"danish": "tennis",
+	"english": "tennis"
+}, {
+	"danish": "kurv",
+	"english": "basket"
+}, {
+	"danish": "bonus",
+	"english": "bonus"
+}, {
+	"danish": "kabinet",
+	"english": "cabinet"
+}, {
+	"danish": "barndom",
+	"english": "childhood"
+}, {
+	"danish": "kirke",
+	"english": "church"
+}, {
+	"danish": "tøj",
+	"english": "clothes"
+}, {
+	"danish": "kaffe",
+	"english": "coffee"
+}, {
+	"danish": "middag",
+	"english": "dinner"
+}, {
+	"danish": "tegning",
+	"english": "drawing"
+}, {
+	"danish": "hår",
+	"english": "hair"
+}, {
+	"danish": "høring",
+	"english": "hearing"
+}, {
+	"danish": "initiativ",
+	"english": "initiative"
+}, {
+	"danish": "dom",
+	"english": "judgment"
+}, {
+	"danish": "lab",
+	"english": "lab"
+}, {
+	"danish": "måling",
+	"english": "measurement"
+}, {
+	"danish": "mode",
+	"english": "mode"
+}, {
+	"danish": "mudder",
+	"english": "mud"
+}, {
+	"danish": "orange",
+	"english": "orange"
+}, {
+	"danish": "poesi",
+	"english": "poetry"
+}, {
+	"danish": "politi",
+	"english": "police"
+}, {
+	"danish": "mulighed",
+	"english": "possibility"
+}, {
+	"danish": "procedure",
+	"english": "procedure"
+}, {
+	"danish": "dronning",
+	"english": "queen"
+}, {
+	"danish": "forhold",
+	"english": "ratio"
+}, {
+	"danish": "relation",
+	"english": "relation"
+}, {
+	"danish": "restaurant",
+	"english": "restaurant"
+}, {
+	"danish": "tilfredshed",
+	"english": "satisfaction"
+}, {
+	"danish": "sektor",
+	"english": "sector"
+}, {
+	"danish": "underskrift",
+	"english": "signature"
+}, {
+	"danish": "betydning",
+	"english": "significance"
+}, {
+	"danish": "sang",
+	"english": "song"
+}, {
+	"danish": "tand",
+	"english": "tooth"
+}, {
+	"danish": "by",
+	"english": "town"
+}, {
+	"danish": "køretøj",
+	"english": "vehicle"
+}, {
+	"danish": "bind",
+	"english": "volume"
+}, {
+	"danish": "kone",
+	"english": "wife"
+}, {
+	"danish": "ulykke",
+	"english": "accident"
+}, {
+	"danish": "lufthavn",
+	"english": "airport"
+}, {
+	"danish": "udnævnelse",
+	"english": "appointment"
+}, {
+	"danish": "ankomst",
+	"english": "arrival"
+}, {
+	"danish": "antagelse",
+	"english": "assumption"
+}, {
+	"danish": "baseball",
+	"english": "baseball"
+}, {
+	"danish": "kapitel",
+	"english": "chapter"
+}, {
+	"danish": "udvalg",
+	"english": "committee"
+}, {
+	"danish": "samtale",
+	"english": "conversation"
+}, {
+	"danish": "database",
+	"english": "database"
+}, {
+	"danish": "entusiasme",
+	"english": "enthusiasm"
+}, {
+	"danish": "fejl",
+	"english": "error"
+}, {
+	"danish": "forklaring",
+	"english": "explanation"
+}, {
+	"danish": "landmand",
+	"english": "farmer"
+}, {
+	"danish": "Port",
+	"english": "gate"
+}, {
+	"danish": "pige",
+	"english": "girl"
+}, {
+	"danish": "hal",
+	"english": "hall"
+}, {
+	"danish": "historiker",
+	"english": "historian"
+}, {
+	"danish": "hospital",
+	"english": "hospital"
+}, {
+	"danish": "skade",
+	"english": "injury"
+}, {
+	"danish": "instruktion",
+	"english": "instruction"
+}, {
+	"danish": "vedligeholdelse",
+	"english": "maintenance"
+}, {
+	"danish": "fabrikant",
+	"english": "manufacturer"
+}, {
+	"danish": "måltid",
+	"english": "meal"
+}, {
+	"danish": "opfattelse",
+	"english": "perception"
+}, {
+	"danish": "pie",
+	"english": "pie"
+}, {
+	"danish": "digt",
+	"english": "poem"
+}, {
+	"danish": "tilstedeværelse",
+	"english": "presence"
+}, {
+	"danish": "forslag",
+	"english": "proposal"
+}, {
+	"danish": "reception",
+	"english": "reception"
+}, {
+	"danish": "udskiftning",
+	"english": "replacement"
+}, {
+	"danish": "revolution",
+	"english": "revolution"
+}, {
+	"danish": "flod",
+	"english": "river"
+}, {
+	"danish": "søn",
+	"english": "son"
+}, {
+	"danish": "tale",
+	"english": "speech"
+}, {
+	"danish": "te",
+	"english": "tea"
+}, {
+	"danish": "landsby",
+	"english": "village"
+}, {
+	"danish": "advarsel",
+	"english": "warning"
+}, {
+	"danish": "vinder",
+	"english": "winner"
+}, {
+	"danish": "arbejder",
+	"english": "worker"
+}, {
+	"danish": "forfatter",
+	"english": "writer"
+}, {
+	"danish": "hjælp",
+	"english": "assistance"
+}, {
+	"danish": "åndedrag",
+	"english": "breath"
+}, {
+	"danish": "køber",
+	"english": "buyer"
+}, {
+	"danish": "bryst",
+	"english": "chest"
+}, {
+	"danish": "chokolade",
+	"english": "chocolate"
+}, {
+	"danish": "konklusion",
+	"english": "conclusion"
+}, {
+	"danish": "bidrag",
+	"english": "contribution"
+}, {
+	"danish": "småkage",
+	"english": "cookie"
+}, {
+	"danish": "mod",
+	"english": "courage"
+}, {
+	"danish": "far",
+	"english": "dad"
+}, {
+	"danish": "skrivebord",
+	"english": "desk"
+}, {
+	"danish": "skuffe",
+	"english": "drawer"
+}, {
+	"danish": "etablering",
+	"english": "establishment"
+}, {
+	"danish": "undersøgelse",
+	"english": "examination"
+}, {
+	"danish": "affald",
+	"english": "garbage"
+}, {
+	"danish": "købmand",
+	"english": "grocery"
+}, {
+	"danish": "honning",
+	"english": "honey"
+}, {
+	"danish": "indtryk",
+	"english": "impression"
+}, {
+	"danish": "forbedring",
+	"english": "improvement"
+}, {
+	"danish": "uafhængighed",
+	"english": "independence"
+}, {
+	"danish": "insekt",
+	"english": "insect"
+}, {
+	"danish": "inspektion",
+	"english": "inspection"
+}, {
+	"danish": "inspektør",
+	"english": "inspector"
+}, {
+	"danish": "konge",
+	"english": "king"
+}, {
+	"danish": "stige",
+	"english": "ladder"
+}, {
+	"danish": "menu",
+	"english": "menu"
+}, {
+	"danish": "straf",
+	"english": "penalty"
+}, {
+	"danish": "klaver",
+	"english": "piano"
+}, {
+	"danish": "kartoffel",
+	"english": "potato"
+}, {
+	"danish": "erhverv",
+	"english": "profession"
+}, {
+	"danish": "professor",
+	"english": "professor"
+}, {
+	"danish": "mængde",
+	"english": "quantity"
+}, {
+	"danish": "reaktion",
+	"english": "reaction"
+}, {
+	"danish": "krav",
+	"english": "requirement"
+}, {
+	"danish": "salat",
+	"english": "salad"
+}, {
+	"danish": "søster",
+	"english": "sister"
+}, {
+	"danish": "supermarked",
+	"english": "supermarket"
+}, {
+	"danish": "tunge",
+	"english": "tongue"
+}, {
+	"danish": "svaghed",
+	"english": "weakness"
+}, {
+	"danish": "bryllup",
+	"english": "wedding"
+}, {
+	"danish": "affære",
+	"english": "affair"
+}, {
+	"danish": "ambition",
+	"english": "ambition"
+}, {
+	"danish": "analytiker",
+	"english": "analyst"
+}, {
+	"danish": "æble",
+	"english": "apple"
+}, {
+	"danish": "opgave",
+	"english": "assignment"
+}, {
+	"danish": "assistent",
+	"english": "assistant"
+}, {
+	"danish": "badeværelse",
+	"english": "bathroom"
+}, {
+	"danish": "soveværelse",
+	"english": "bedroom"
+}, {
+	"danish": "øl",
+	"english": "beer"
+}, {
+	"danish": "fødselsdag",
+	"english": "birthday"
+}, {
+	"danish": "fest",
+	"english": "celebration"
+}, {
+	"danish": "mesterskab",
+	"english": "championship"
+}, {
+	"danish": "kind",
+	"english": "cheek"
+}, {
+	"danish": "klient",
+	"english": "client"
+}, {
+	"danish": "følge",
+	"english": "consequence"
+}, {
+	"danish": "afgang",
+	"english": "departure"
+}, {
+	"danish": "diamant",
+	"english": "diamond"
+}, {
+	"danish": "smuds",
+	"english": "dirt"
+}, {
+	"danish": "øre",
+	"english": "ear"
+}, {
+	"danish": "formue",
+	"english": "fortune"
+}, {
+	"danish": "venskab",
+	"english": "friendship"
+}, {
+	"danish": "begravelse",
+	"english": "funeral"
+}, {
+	"danish": "gen",
+	"english": "gene"
+}, {
+	"danish": "kæreste",
+	"english": "girlfriend"
+}, {
+	"danish": "hat",
+	"english": "hat"
+}, {
+	"danish": "tegn",
+	"english": "indication"
+}, {
+	"danish": "hensigt",
+	"english": "intention"
+}, {
+	"danish": "dame",
+	"english": "lady"
+}, {
+	"danish": "midnat",
+	"english": "midnight"
+}, {
+	"danish": "forhandling",
+	"english": "negotiation"
+}, {
+	"danish": "forpligtelse",
+	"english": "obligation"
+}, {
+	"danish": "passager",
+	"english": "passenger"
+}, {
+	"danish": "pizza",
+	"english": "pizza"
+}, {
+	"danish": "perron",
+	"english": "platform"
+}, {
+	"danish": "digter",
+	"english": "poet"
+}, {
+	"danish": "forurening",
+	"english": "pollution"
+}, {
+	"danish": "anerkendelse",
+	"english": "recognition"
+}, {
+	"danish": "omdømme",
+	"english": "reputation"
+}, {
+	"danish": "skjorte",
+	"english": "shirt"
+}, {
+	"danish": "hr",
+	"english": "sir"
+}, {
+	"danish": "højttaler",
+	"english": "speaker"
+}, {
+	"danish": "fremmed",
+	"english": "stranger"
+}, {
+	"danish": "kirurgi",
+	"english": "surgery"
+}, {
+	"danish": "sympati",
+	"english": "sympathy"
+}, {
+	"danish": "fortælling",
+	"english": "tale"
+}, {
+	"danish": "hals",
+	"english": "throat"
+}, {
+	"danish": "træner",
+	"english": "trainer"
+}, {
+	"danish": "onkel",
+	"english": "uncle"
+}, {
+	"danish": "ungdom",
+	"english": "youth"
+}, {
+	"danish": "penge",
+	"english": "money"
+}, {
+	"danish": "mens",
+	"english": "while"
+}, {
+	"danish": "forretning",
+	"english": "business"
+}, {
+	"danish": "liv",
+	"english": "life"
+}, {
+	"danish": "dag",
+	"english": "day"
+}, {
+	"danish": "hjem",
+	"english": "home"
+}, {
+	"danish": "økonomi",
+	"english": "economy"
+}, {
+	"danish": "uddannelse",
+	"english": "training"
+}, {
+	"danish": "venlig",
+	"english": "kind"
+}, {
+	"danish": "fremtid",
+	"english": "future"
+}, {
+	"danish": "handling",
+	"english": "action"
+}, {
+	"danish": "dårlig",
+	"english": "bad"
+}, {
+	"danish": "intet",
+	"english": "nothing"
+}, {
+	"danish": "periode",
+	"english": "period"
+}, {
+	"danish": "emne",
+	"english": "subject"
+}, {
+	"danish": "kylling",
+	"english": "chicken"
+}, {
+	"danish": "materiale",
+	"english": "material"
+}, {
+	"danish": "bil",
+	"english": "car"
+}, {
+	"danish": "halv",
+	"english": "half"
+}, {
+	"danish": "inde",
+	"english": "inside"
+}, {
+	"danish": "uden for",
+	"english": "outside"
+}, {
+	"danish": "standard",
+	"english": "standard"
+}, {
+	"danish": "vare",
+	"english": "item"
+}, {
+	"danish": "medium",
+	"english": "medium"
+}, {
+	"danish": "valg",
+	"english": "choice"
+}, {
+	"danish": "morgen",
+	"english": "morning"
+}, {
+	"danish": "nord",
+	"english": "north"
+}, {
+	"danish": "firkant",
+	"english": "square"
+}, {
+	"danish": "kapital",
+	"english": "capital"
+}, {
+	"danish": "selv",
+	"english": "self"
+}, {
+	"danish": "skud",
+	"english": "shot"
+}, {
+	"danish": "levende",
+	"english": "living"
+}, {
+	"danish": "plast",
+	"english": "plastic"
+}, {
+	"danish": "følelse",
+	"english": "feeling"
+}, {
+	"danish": "opsparing",
+	"english": "savings"
+}, {
+	"danish": "dyr",
+	"english": "animal"
+}, {
+	"danish": "maksimum",
+	"english": "maximum"
+}, {
+	"danish": "roman",
+	"english": "novel"
+}, {
+	"danish": "masser",
+	"english": "plenty"
+}, {
+	"danish": "baggrund",
+	"english": "background"
+}, {
+	"danish": "rød",
+	"english": "red"
+}, {
+	"danish": "styrke",
+	"english": "strength"
+}, {
+	"danish": "grøntsag",
+	"english": "vegetable"
+}, {
+	"danish": "ideal",
+	"english": "ideal"
+}, {
+	"danish": "køkken",
+	"english": "kitchen"
+}, {
+	"danish": "princip",
+	"english": "principle"
+}, {
+	"danish": "i forhold",
+	"english": "relative"
+}, {
+	"danish": "salg",
+	"english": "sale"
+}, {
+	"danish": "gade",
+	"english": "street"
+}, {
+	"danish": "minimum",
+	"english": "minimum"
+}, {
+	"danish": "sti",
+	"english": "path"
+}, {
+	"danish": "hav",
+	"english": "sea"
+}, {
+	"danish": "syd",
+	"english": "south"
+}, {
+	"danish": "status",
+	"english": "status"
+}, {
+	"danish": "selvtillid",
+	"english": "confidence"
+}, {
+	"danish": "datter",
+	"english": "daughter"
+}, {
+	"danish": "grad",
+	"english": "degree"
+}, {
+	"danish": "pligt",
+	"english": "duty"
+}, {
+	"danish": "time",
+	"english": "hour"
+}, {
+	"danish": "stof",
+	"english": "substance"
+}, {
+	"danish": "eftermiddag",
+	"english": "afternoon"
+}, {
+	"danish": "betragtning",
+	"english": "consideration"
+}, {
+	"danish": "guld",
+	"english": "gold"
+}, {
+	"danish": "mission",
+	"english": "mission"
+}, {
+	"danish": "dør",
+	"english": "door"
+}, {
+	"danish": "øst",
+	"english": "east"
+}, {
+	"danish": "måde",
+	"english": "manner"
+}, {
+	"danish": "møde",
+	"english": "meeting"
+}, {
+	"danish": "parkering",
+	"english": "parking"
+}, {
+	"danish": "rutine",
+	"english": "routine"
+}, {
+	"danish": "svømning",
+	"english": "swimming"
+}, {
+	"danish": "flyselskab",
+	"english": "airline"
+}, {
+	"danish": "designer",
+	"english": "designer"
+}, {
+	"danish": "nødsituation",
+	"english": "emergency"
+}, {
+	"danish": "aften",
+	"english": "evening"
+}, {
+	"danish": "udvidelse",
+	"english": "extension"
+}, {
+	"danish": "skræk",
+	"english": "horror"
+}, {
+	"danish": "bjerg",
+	"english": "mountain"
+}, {
+	"danish": "patient",
+	"english": "patient"
+}, {
+	"danish": "lettelse",
+	"english": "relief"
+}, {
+	"danish": "turist",
+	"english": "tourist"
+}, {
+	"danish": "vest",
+	"english": "west"
+}, {
+	"danish": "til side",
+	"english": "aside"
+}, {
+	"danish": "bror",
+	"english": "brother"
+}, {
+	"danish": "ekspert",
+	"english": "expert"
+}, {
+	"danish": "Gud",
+	"english": "god"
+}, {
+	"danish": "hjemmehørende",
+	"english": "native"
+}, {
+	"danish": "åbning",
+	"english": "opening"
+}, {
+	"danish": "dreng",
+	"english": "boy"
+}, {
+	"danish": "specialist",
+	"english": "specialist"
+}, {
+	"danish": "bitter",
+	"english": "bitter"
+}, {
+	"danish": "helvede",
+	"english": "hell"
+}, {
+	"danish": "hændelse",
+	"english": "incident"
+}, {
+	"danish": "resident",
+	"english": "resident"
+}, {
+	"danish": "-en",
+	"english": "a"
+}, {
+	"danish": "du",
+	"english": "you"
+}, {
+	"danish": "det",
+	"english": "it"
+}, {
+	"danish": "kan",
+	"english": "can"
+}, {
+	"danish": "vilje",
+	"english": "will"
+}, {
+	"danish": "hvis",
+	"english": "if"
+}, {
+	"danish": "en",
+	"english": "one"
+}, {
+	"danish": "mange",
+	"english": "many"
+}, {
+	"danish": "mest",
+	"english": "most"
+}, {
+	"danish": "andre",
+	"english": "other"
+}, {
+	"danish": "god",
+	"english": "good"
+}, {
+	"danish": "alle tiders",
+	"english": "great"
+}, {
+	"danish": "få",
+	"english": "few"
+}, {
+	"danish": "magt",
+	"english": "might"
+}, {
+	"danish": "stadig",
+	"english": "still"
+}, {
+	"danish": "offentlig",
+	"english": "public"
+}, {
+	"danish": "human",
+	"english": "human"
+}, {
+	"danish": "lokal",
+	"english": "local"
+}, {
+	"danish": "generel",
+	"english": "general"
+}, {
+	"danish": "hun",
+	"english": "she"
+}, {
+	"danish": "bestemt",
+	"english": "specific"
+}, {
+	"danish": "lang",
+	"english": "long"
+}, {
+	"danish": "høj",
+	"english": "high"
+}, {
+	"danish": "i aften",
+	"english": "tonight"
+}, {
+	"danish": "fælles",
+	"english": "common"
+}, {
+	"danish": "enkel",
+	"english": "simple"
+}, {
+	"danish": "forbi",
+	"english": "past"
+}, {
+	"danish": "stor",
+	"english": "big"
+}, {
+	"danish": "mulig",
+	"english": "possible"
+}, {
+	"danish": "særlig",
+	"english": "particular"
+}, {
+	"danish": "i dag",
+	"english": "today"
+}, {
+	"danish": "personlig",
+	"english": "personal"
+}, {
+	"danish": "strøm",
+	"english": "current"
+}, {
+	"danish": "national",
+	"english": "national"
+}, {
+	"danish": "naturlig",
+	"english": "natural"
+}, {
+	"danish": "fysisk",
+	"english": "physical"
+}, {
+	"danish": "anden",
+	"english": "second"
+}, {
+	"danish": "individuel",
+	"english": "individual"
+}, {
+	"danish": "vigtigste",
+	"english": "main"
+}, {
+	"danish": "potentiel",
+	"english": "potential"
+}, {
+	"danish": "professionel",
+	"english": "professional"
+}, {
+	"danish": "international",
+	"english": "international"
+}, {
+	"danish": "alternativ",
+	"english": "alternative"
+}, {
+	"danish": "Følgende",
+	"english": "following"
+}, {
+	"danish": "særlig",
+	"english": "special"
+}, {
+	"danish": "arbejder",
+	"english": "working"
+}, {
+	"danish": "hel",
+	"english": "whole"
+}, {
+	"danish": "kold",
+	"english": "cold"
+}, {
+	"danish": "kommerciel",
+	"english": "commercial"
+}, {
+	"danish": "lav",
+	"english": "low"
+}, {
+	"danish": "primær",
+	"english": "primary"
+}, {
+	"danish": "værdi",
+	"english": "worth"
+}, {
+	"danish": "nødvendig",
+	"english": "necessary"
+}, {
+	"danish": "positiv",
+	"english": "positive"
+}, {
+	"danish": "kreativ",
+	"english": "creative"
+}, {
+	"danish": "glad",
+	"english": "glad"
+}, {
+	"danish": "grund",
+	"english": "due"
+}, {
+	"danish": "effektiv",
+	"english": "effective"
+}, {
+	"danish": "midten",
+	"english": "middle"
+}, {
+	"danish": "fast",
+	"english": "regular"
+}, {
+	"danish": "uafhængig",
+	"english": "independent"
+}, {
+	"danish": "original",
+	"english": "original"
+}, {
+	"danish": "smuk",
+	"english": "beautiful"
+}, {
+	"danish": "aktiv",
+	"english": "active"
+}, {
+	"danish": "negativ",
+	"english": "negative"
+}, {
+	"danish": "sikker",
+	"english": "safe"
+}, {
+	"danish": "visuel",
+	"english": "visual"
+}, {
+	"danish": "ud over",
+	"english": "beyond"
+}, {
+	"danish": "junior-",
+	"english": "junior"
+}, {
+	"danish": "enestående",
+	"english": "unique"
+}, {
+	"danish": "noget",
+	"english": "anything"
+}, {
+	"danish": "klassisk",
+	"english": "classic"
+}, {
+	"danish": "endelige",
+	"english": "final"
+}, {
+	"danish": "privat",
+	"english": "private"
+}, {
+	"danish": "vestlig",
+	"english": "western"
+}, {
+	"danish": "velkendt",
+	"english": "familiar"
+}, {
+	"danish": "officiel",
+	"english": "official"
+}, {
+	"danish": "bred",
+	"english": "broad"
+}, {
+	"danish": "komfortabel",
+	"english": "comfortable"
+}, {
+	"danish": "kan være",
+	"english": "maybe"
+}, {
+	"danish": "rig",
+	"english": "rich"
+}, {
+	"danish": "ung",
+	"english": "young"
+}, {
+	"danish": "tung",
+	"english": "heavy"
+}, {
+	"danish": "hej",
+	"english": "hello"
+}, {
+	"danish": "værdifuld",
+	"english": "valuable"
+}, {
+	"danish": "førende",
+	"english": "leading"
+}, {
+	"danish": "normal",
+	"english": "normal"
+}, {
+	"danish": "hemmelighed",
+	"english": "secret"
+}, {
+	"danish": "sej",
+	"english": "tough"
+}, {
+	"danish": "dyb",
+	"english": "deep"
+}, {
+	"danish": "objektiv",
+	"english": "objective"
+}, {
+	"danish": "kemisk",
+	"english": "chemical"
+}, {
+	"danish": "ekstrem",
+	"english": "extreme"
+}, {
+	"danish": "formel",
+	"english": "formal"
+}, {
+	"danish": "modsat",
+	"english": "opposite"
+}, {
+	"danish": "fjern",
+	"english": "remote"
+}, {
+	"danish": "langt",
+	"english": "vast"
+}, {
+	"danish": "et eller andet sted",
+	"english": "somewhere"
+}, {
+	"danish": "overalt",
+	"english": "anywhere"
+}, {
+	"danish": "mørk",
+	"english": "dark"
+}, {
+	"danish": "indre",
+	"english": "internal"
+}, {
+	"danish": "følsom",
+	"english": "sensitive"
+}, {
+	"danish": "konstant",
+	"english": "constant"
+}, {
+	"danish": "rå",
+	"english": "raw"
+}, {
+	"danish": "blød",
+	"english": "soft"
+}, {
+	"danish": "solid",
+	"english": "solid"
+}, {
+	"danish": "mærkelig",
+	"english": "weird"
+}, {
+	"danish": "årligt",
+	"english": "annual"
+}, {
+	"danish": "død",
+	"english": "dead"
+}, {
+	"danish": "for evigt",
+	"english": "forever"
+}, {
+	"danish": "ingen",
+	"english": "nobody"
+}, {
+	"danish": "rund",
+	"english": "round"
+}, {
+	"danish": "hvorimod",
+	"english": "whereas"
+}, {
+	"danish": "tilsvarende",
+	"english": "equivalent"
+}, {
+	"danish": "åndelig",
+	"english": "spiritual"
+}, {
+	"danish": "voksen",
+	"english": "adult"
+}, {
+	"danish": "skør",
+	"english": "crazy"
+}, {
+	"danish": "forudgående",
+	"english": "prior"
+}, {
+	"danish": "ru",
+	"english": "rough"
+}, {
+	"danish": "trist",
+	"english": "sad"
+}, {
+	"danish": "syg",
+	"english": "sick"
+}, {
+	"danish": "ekstern",
+	"english": "external"
+}, {
+	"danish": "ulovlig",
+	"english": "illegal"
+}, {
+	"danish": "mobil",
+	"english": "mobile"
+}, {
+	"danish": "grim",
+	"english": "nasty"
+}, {
+	"danish": "almindelig",
+	"english": "ordinary"
+}, {
+	"danish": "Royal",
+	"english": "royal"
+}, {
+	"danish": "senior-",
+	"english": "senior"
+}, {
+	"danish": "øverst",
+	"english": "upper"
+}, {
+	"danish": "afhængig",
+	"english": "dependent"
+}, {
+	"danish": "sjovt",
+	"english": "funny"
+}, {
+	"danish": "sød",
+	"english": "sweet"
+}, {
+	"danish": "ovenpå",
+	"english": "upstairs"
+}, {
+	"danish": "sædvanlig",
+	"english": "usual"
+}, {
+	"danish": "i udlandet",
+	"english": "abroad"
+}, {
+	"danish": "Grand",
+	"english": "grand"
+}, {
+	"danish": "han-",
+	"english": "male"
+}, {
+	"danish": "nogen",
+	"english": "anybody"
+}, {
+	"danish": "strålende",
+	"english": "brilliant"
+}, {
+	"danish": "Kære",
+	"english": "dear"
+}, {
+	"danish": "beruset",
+	"english": "drunk"
+}, {
+	"danish": "kvinde",
+	"english": "female"
+}, {
+	"danish": "uundgåelige",
+	"english": "inevitable"
+}, {
+	"danish": "pæn",
+	"english": "neat"
+}, {
+	"danish": "repræsentant",
+	"english": "representative"
+}, {
+	"danish": "fjollet",
+	"english": "silly"
+}, {
+	"danish": "dum",
+	"english": "stupid"
+}, {
+	"danish": "midlertidig",
+	"english": "temporary"
+}, {
+	"danish": "i morgen",
+	"english": "tomorrow"
+}, {
+	"danish": "i går",
+	"english": "yesterday"
+}]

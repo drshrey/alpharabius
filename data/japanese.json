@@ -1,0 +1,2185 @@
+[{
+	"japanese": "人",
+	"english": "people"
+}, {
+	"japanese": "歴史",
+	"english": "history"
+}, {
+	"japanese": "方法",
+	"english": "way"
+}, {
+	"japanese": "アート",
+	"english": "art"
+}, {
+	"japanese": "世界",
+	"english": "world"
+}, {
+	"japanese": "情報",
+	"english": "information"
+}, {
+	"japanese": "地図",
+	"english": "map"
+}, {
+	"japanese": "二",
+	"english": "two"
+}, {
+	"japanese": "家族",
+	"english": "family"
+}, {
+	"japanese": "政府",
+	"english": "government"
+}, {
+	"japanese": "健康",
+	"english": "health"
+}, {
+	"japanese": "システム",
+	"english": "system"
+}, {
+	"japanese": "コンピューター",
+	"english": "computer"
+}, {
+	"japanese": "お肉",
+	"english": "meat"
+}, {
+	"japanese": "年",
+	"english": "year"
+}, {
+	"japanese": "感謝",
+	"english": "thanks"
+}, {
+	"japanese": "音楽",
+	"english": "music"
+}, {
+	"japanese": "人",
+	"english": "person"
+}, {
+	"japanese": "読書",
+	"english": "reading"
+}, {
+	"japanese": "方法",
+	"english": "method"
+}, {
+	"japanese": "データ",
+	"english": "data"
+}, {
+	"japanese": "フード",
+	"english": "food"
+}, {
+	"japanese": "理解",
+	"english": "understanding"
+}, {
+	"japanese": "理論",
+	"english": "theory"
+}, {
+	"japanese": "法律",
+	"english": "law"
+}, {
+	"japanese": "鳥",
+	"english": "bird"
+}, {
+	"japanese": "文献",
+	"english": "literature"
+}, {
+	"japanese": "問題",
+	"english": "problem"
+}, {
+	"japanese": "ソフトウェア",
+	"english": "software"
+}, {
+	"japanese": "コントロール",
+	"english": "control"
+}, {
+	"japanese": "知識",
+	"english": "knowledge"
+}, {
+	"japanese": "パワー",
+	"english": "power"
+}, {
+	"japanese": "能力",
+	"english": "ability"
+}, {
+	"japanese": "経済",
+	"english": "economics"
+}, {
+	"japanese": "愛",
+	"english": "love"
+}, {
+	"japanese": "インターネット",
+	"english": "internet"
+}, {
+	"japanese": "テレビ",
+	"english": "television"
+}, {
+	"japanese": "科学",
+	"english": "science"
+}, {
+	"japanese": "ライブラリ",
+	"english": "library"
+}, {
+	"japanese": "自然",
+	"english": "nature"
+}, {
+	"japanese": "事実",
+	"english": "fact"
+}, {
+	"japanese": "製品",
+	"english": "product"
+}, {
+	"japanese": "アイディア",
+	"english": "idea"
+}, {
+	"japanese": "温度",
+	"english": "temperature"
+}, {
+	"japanese": "投資",
+	"english": "investment"
+}, {
+	"japanese": "エリア",
+	"english": "area"
+}, {
+	"japanese": "社会",
+	"english": "society"
+}, {
+	"japanese": "アクティビティ",
+	"english": "activity"
+}, {
+	"japanese": "ストーリー",
+	"english": "story"
+}, {
+	"japanese": "産業",
+	"english": "industry"
+}, {
+	"japanese": "メディア",
+	"english": "media"
+}, {
+	"japanese": "事",
+	"english": "thing"
+}, {
+	"japanese": "オーブン",
+	"english": "oven"
+}, {
+	"japanese": "コミュニティ",
+	"english": "community"
+}, {
+	"japanese": "定義",
+	"english": "definition"
+}, {
+	"japanese": "安全性",
+	"english": "safety"
+}, {
+	"japanese": "品質",
+	"english": "quality"
+}, {
+	"japanese": "開発",
+	"english": "development"
+}, {
+	"japanese": "言語",
+	"english": "language"
+}, {
+	"japanese": "管理",
+	"english": "management"
+}, {
+	"japanese": "プレーヤー",
+	"english": "player"
+}, {
+	"japanese": "多様",
+	"english": "variety"
+}, {
+	"japanese": "ビデオ",
+	"english": "video"
+}, {
+	"japanese": "週間",
+	"english": "week"
+}, {
+	"japanese": "セキュリティ",
+	"english": "security"
+}, {
+	"japanese": "国",
+	"english": "country"
+}, {
+	"japanese": "試験",
+	"english": "exam"
+}, {
+	"japanese": "映画",
+	"english": "movie"
+}, {
+	"japanese": "組織",
+	"english": "organization"
+}, {
+	"japanese": "装置",
+	"english": "equipment"
+}, {
+	"japanese": "物理",
+	"english": "physics"
+}, {
+	"japanese": "分析",
+	"english": "analysis"
+}, {
+	"japanese": "ポリシー",
+	"english": "policy"
+}, {
+	"japanese": "シリーズ",
+	"english": "series"
+}, {
+	"japanese": "思想",
+	"english": "thought"
+}, {
+	"japanese": "基本",
+	"english": "basis"
+}, {
+	"japanese": "彼氏",
+	"english": "boyfriend"
+}, {
+	"japanese": "方向",
+	"english": "direction"
+}, {
+	"japanese": "戦略",
+	"english": "strategy"
+}, {
+	"japanese": "技術",
+	"english": "technology"
+}, {
+	"japanese": "軍",
+	"english": "army"
+}, {
+	"japanese": "カメラ",
+	"english": "camera"
+}, {
+	"japanese": "自由",
+	"english": "freedom"
+}, {
+	"japanese": "紙",
+	"english": "paper"
+}, {
+	"japanese": "環境",
+	"english": "environment"
+}, {
+	"japanese": "子",
+	"english": "child"
+}, {
+	"japanese": "インスタンス",
+	"english": "instance"
+}, {
+	"japanese": "月",
+	"english": "month"
+}, {
+	"japanese": "真実",
+	"english": "truth"
+}, {
+	"japanese": "マーケティング",
+	"english": "marketing"
+}, {
+	"japanese": "大学",
+	"english": "university"
+}, {
+	"japanese": "書き込み",
+	"english": "writing"
+}, {
+	"japanese": "記事",
+	"english": "article"
+}, {
+	"japanese": "部門",
+	"english": "department"
+}, {
+	"japanese": "差",
+	"english": "difference"
+}, {
+	"japanese": "ゴール",
+	"english": "goal"
+}, {
+	"japanese": "ニュース",
+	"english": "news"
+}, {
+	"japanese": "聴衆",
+	"english": "audience"
+}, {
+	"japanese": "釣り",
+	"english": "fishing"
+}, {
+	"japanese": "成長",
+	"english": "growth"
+}, {
+	"japanese": "所得",
+	"english": "income"
+}, {
+	"japanese": "結婚",
+	"english": "marriage"
+}, {
+	"japanese": "ユーザー",
+	"english": "user"
+}, {
+	"japanese": "組み合わせ",
+	"english": "combination"
+}, {
+	"japanese": "失敗",
+	"english": "failure"
+}, {
+	"japanese": "意味",
+	"english": "meaning"
+}, {
+	"japanese": "医学",
+	"english": "medicine"
+}, {
+	"japanese": "哲学",
+	"english": "philosophy"
+}, {
+	"japanese": "先生",
+	"english": "teacher"
+}, {
+	"japanese": "コミュニケーション",
+	"english": "communication"
+}, {
+	"japanese": "夜",
+	"english": "night"
+}, {
+	"japanese": "化学",
+	"english": "chemistry"
+}, {
+	"japanese": "疾患",
+	"english": "disease"
+}, {
+	"japanese": "ディスク",
+	"english": "disk"
+}, {
+	"japanese": "エネルギー",
+	"english": "energy"
+}, {
+	"japanese": "国家",
+	"english": "nation"
+}, {
+	"japanese": "道路",
+	"english": "road"
+}, {
+	"japanese": "役割",
+	"english": "role"
+}, {
+	"japanese": "スープ",
+	"english": "soup"
+}, {
+	"japanese": "広告",
+	"english": "advertising"
+}, {
+	"japanese": "ロケーション",
+	"english": "location"
+}, {
+	"japanese": "成功",
+	"english": "success"
+}, {
+	"japanese": "添加",
+	"english": "addition"
+}, {
+	"japanese": "アパート",
+	"english": "apartment"
+}, {
+	"japanese": "教育",
+	"english": "education"
+}, {
+	"japanese": "数学",
+	"english": "math"
+}, {
+	"japanese": "瞬間",
+	"english": "moment"
+}, {
+	"japanese": "ペインティング",
+	"english": "painting"
+}, {
+	"japanese": "政治",
+	"english": "politics"
+}, {
+	"japanese": "注意",
+	"english": "attention"
+}, {
+	"japanese": "決定",
+	"english": "decision"
+}, {
+	"japanese": "イベント",
+	"english": "event"
+}, {
+	"japanese": "プロパティ",
+	"english": "property"
+}, {
+	"japanese": "ショッピング",
+	"english": "shopping"
+}, {
+	"japanese": "学生",
+	"english": "student"
+}, {
+	"japanese": "木材",
+	"english": "wood"
+}, {
+	"japanese": "コンペ",
+	"english": "competition"
+}, {
+	"japanese": "分布",
+	"english": "distribution"
+}, {
+	"japanese": "エンターテインメント",
+	"english": "entertainment"
+}, {
+	"japanese": "オフィス",
+	"english": "office"
+}, {
+	"japanese": "人口",
+	"english": "population"
+}, {
+	"japanese": "大統領",
+	"english": "president"
+}, {
+	"japanese": "単位",
+	"english": "unit"
+}, {
+	"japanese": "カテゴリー",
+	"english": "category"
+}, {
+	"japanese": "シガレット",
+	"english": "cigarette"
+}, {
+	"japanese": "コンテキスト",
+	"english": "context"
+}, {
+	"japanese": "導入",
+	"english": "introduction"
+}, {
+	"japanese": "機会",
+	"english": "opportunity"
+}, {
+	"japanese": "パフォーマンス",
+	"english": "performance"
+}, {
+	"japanese": "ドライバ",
+	"english": "driver"
+}, {
+	"japanese": "フライト",
+	"english": "flight"
+}, {
+	"japanese": "長さ",
+	"english": "length"
+}, {
+	"japanese": "マガジン",
+	"english": "magazine"
+}, {
+	"japanese": "新聞",
+	"english": "newspaper"
+}, {
+	"japanese": "関係",
+	"english": "relationship"
+}, {
+	"japanese": "教え",
+	"english": "teaching"
+}, {
+	"japanese": "細胞",
+	"english": "cell"
+}, {
+	"japanese": "ディーラー",
+	"english": "dealer"
+}, {
+	"japanese": "認定",
+	"english": "finding"
+}, {
+	"japanese": "湖",
+	"english": "lake"
+}, {
+	"japanese": "メンバー",
+	"english": "member"
+}, {
+	"japanese": "メッセージ",
+	"english": "message"
+}, {
+	"japanese": "電話",
+	"english": "phone"
+}, {
+	"japanese": "シーン",
+	"english": "scene"
+}, {
+	"japanese": "外観",
+	"english": "appearance"
+}, {
+	"japanese": "協会",
+	"english": "association"
+}, {
+	"japanese": "概念",
+	"english": "concept"
+}, {
+	"japanese": "顧客",
+	"english": "customer"
+}, {
+	"japanese": "死",
+	"english": "death"
+}, {
+	"japanese": "討論",
+	"english": "discussion"
+}, {
+	"japanese": "ハウジング",
+	"english": "housing"
+}, {
+	"japanese": "インフレーション",
+	"english": "inflation"
+}, {
+	"japanese": "保険",
+	"english": "insurance"
+}, {
+	"japanese": "気分",
+	"english": "mood"
+}, {
+	"japanese": "女性",
+	"english": "woman"
+}, {
+	"japanese": "助言",
+	"english": "advice"
+}, {
+	"japanese": "血液",
+	"english": "blood"
+}, {
+	"japanese": "努力",
+	"english": "effort"
+}, {
+	"japanese": "表現",
+	"english": "expression"
+}, {
+	"japanese": "重要性",
+	"english": "importance"
+}, {
+	"japanese": "意見",
+	"english": "opinion"
+}, {
+	"japanese": "支払い",
+	"english": "payment"
+}, {
+	"japanese": "現実",
+	"english": "reality"
+}, {
+	"japanese": "責任",
+	"english": "responsibility"
+}, {
+	"japanese": "状況",
+	"english": "situation"
+}, {
+	"japanese": "技能",
+	"english": "skill"
+}, {
+	"japanese": "ステートメント",
+	"english": "statement"
+}, {
+	"japanese": "富",
+	"english": "wealth"
+}, {
+	"japanese": "応用",
+	"english": "application"
+}, {
+	"japanese": "シティ",
+	"english": "city"
+}, {
+	"japanese": "郡",
+	"english": "county"
+}, {
+	"japanese": "深さ",
+	"english": "depth"
+}, {
+	"japanese": "エステート",
+	"english": "estate"
+}, {
+	"japanese": "財団",
+	"english": "foundation"
+}, {
+	"japanese": "祖母",
+	"english": "grandmother"
+}, {
+	"japanese": "ハート",
+	"english": "heart"
+}, {
+	"japanese": "視点",
+	"english": "perspective"
+}, {
+	"japanese": "写真",
+	"english": "photo"
+}, {
+	"japanese": "レシピ",
+	"english": "recipe"
+}, {
+	"japanese": "スタジオ",
+	"english": "studio"
+}, {
+	"japanese": "トピック",
+	"english": "topic"
+}, {
+	"japanese": "コレクション",
+	"english": "collection"
+}, {
+	"japanese": "うつ病",
+	"english": "depression"
+}, {
+	"japanese": "想像力",
+	"english": "imagination"
+}, {
+	"japanese": "情熱",
+	"english": "passion"
+}, {
+	"japanese": "パーセンテージ",
+	"english": "percentage"
+}, {
+	"japanese": "リソース",
+	"english": "resource"
+}, {
+	"japanese": "設定",
+	"english": "setting"
+}, {
+	"japanese": "広告",
+	"english": "ad"
+}, {
+	"japanese": "代理店",
+	"english": "agency"
+}, {
+	"japanese": "カレッジ",
+	"english": "college"
+}, {
+	"japanese": "接続",
+	"english": "connection"
+}, {
+	"japanese": "批判",
+	"english": "criticism"
+}, {
+	"japanese": "債務",
+	"english": "debt"
+}, {
+	"japanese": "説明",
+	"english": "description"
+}, {
+	"japanese": "メモリ",
+	"english": "memory"
+}, {
+	"japanese": "忍耐",
+	"english": "patience"
+}, {
+	"japanese": "秘書",
+	"english": "secretary"
+}, {
+	"japanese": "溶液",
+	"english": "solution"
+}, {
+	"japanese": "管理",
+	"english": "administration"
+}, {
+	"japanese": "アスペクト",
+	"english": "aspect"
+}, {
+	"japanese": "姿勢",
+	"english": "attitude"
+}, {
+	"japanese": "ディレクター",
+	"english": "director"
+}, {
+	"japanese": "人",
+	"english": "personality"
+}, {
+	"japanese": "心理学",
+	"english": "psychology"
+}, {
+	"japanese": "勧告",
+	"english": "recommendation"
+}, {
+	"japanese": "応答",
+	"english": "response"
+}, {
+	"japanese": "選択",
+	"english": "selection"
+}, {
+	"japanese": "ストレージ",
+	"english": "storage"
+}, {
+	"japanese": "バージョン",
+	"english": "version"
+}, {
+	"japanese": "アルコール",
+	"english": "alcohol"
+}, {
+	"japanese": "引数",
+	"english": "argument"
+}, {
+	"japanese": "苦情",
+	"english": "complaint"
+}, {
+	"japanese": "契約する",
+	"english": "contract"
+}, {
+	"japanese": "強調",
+	"english": "emphasis"
+}, {
+	"japanese": "高速道路",
+	"english": "highway"
+}, {
+	"japanese": "損失",
+	"english": "loss"
+}, {
+	"japanese": "メンバーシップ",
+	"english": "membership"
+}, {
+	"japanese": "所持",
+	"english": "possession"
+}, {
+	"japanese": "準備",
+	"english": "preparation"
+}, {
+	"japanese": "ステーキ",
+	"english": "steak"
+}, {
+	"japanese": "連合",
+	"english": "union"
+}, {
+	"japanese": "契約",
+	"english": "agreement"
+}, {
+	"japanese": "癌",
+	"english": "cancer"
+}, {
+	"japanese": "通貨",
+	"english": "currency"
+}, {
+	"japanese": "雇用",
+	"english": "employment"
+}, {
+	"japanese": "エンジニアリング",
+	"english": "engineering"
+}, {
+	"japanese": "エントリ",
+	"english": "entry"
+}, {
+	"japanese": "インタラクション",
+	"english": "interaction"
+}, {
+	"japanese": "混合",
+	"english": "mixture"
+}, {
+	"japanese": "好み",
+	"english": "preference"
+}, {
+	"japanese": "領域",
+	"english": "region"
+}, {
+	"japanese": "共和国",
+	"english": "republic"
+}, {
+	"japanese": "伝統",
+	"english": "tradition"
+}, {
+	"japanese": "ウイルス",
+	"english": "virus"
+}, {
+	"japanese": "俳優",
+	"english": "actor"
+}, {
+	"japanese": "教室",
+	"english": "classroom"
+}, {
+	"japanese": "配信",
+	"english": "delivery"
+}, {
+	"japanese": "デバイス",
+	"english": "device"
+}, {
+	"japanese": "困難",
+	"english": "difficulty"
+}, {
+	"japanese": "ドラマ",
+	"english": "drama"
+}, {
+	"japanese": "選挙",
+	"english": "election"
+}, {
+	"japanese": "エンジン",
+	"english": "engine"
+}, {
+	"japanese": "フットボール",
+	"english": "football"
+}, {
+	"japanese": "ガイダンス",
+	"english": "guidance"
+}, {
+	"japanese": "ホテル",
+	"english": "hotel"
+}, {
+	"japanese": "オーナー",
+	"english": "owner"
+}, {
+	"japanese": "優先",
+	"english": "priority"
+}, {
+	"japanese": "保護",
+	"english": "protection"
+}, {
+	"japanese": "提案",
+	"english": "suggestion"
+}, {
+	"japanese": "テンション",
+	"english": "tension"
+}, {
+	"japanese": "変化",
+	"english": "variation"
+}, {
+	"japanese": "不安",
+	"english": "anxiety"
+}, {
+	"japanese": "雰囲気",
+	"english": "atmosphere"
+}, {
+	"japanese": "認知度",
+	"english": "awareness"
+}, {
+	"japanese": "浴",
+	"english": "bath"
+}, {
+	"japanese": "パン",
+	"english": "bread"
+}, {
+	"japanese": "候補者",
+	"english": "candidate"
+}, {
+	"japanese": "気候",
+	"english": "climate"
+}, {
+	"japanese": "比較",
+	"english": "comparison"
+}, {
+	"japanese": "混乱",
+	"english": "confusion"
+}, {
+	"japanese": "建設",
+	"english": "construction"
+}, {
+	"japanese": "エレベーター",
+	"english": "elevator"
+}, {
+	"japanese": "感情",
+	"english": "emotion"
+}, {
+	"japanese": "従業員",
+	"english": "employee"
+}, {
+	"japanese": "雇用者",
+	"english": "employer"
+}, {
+	"japanese": "ゲスト",
+	"english": "guest"
+}, {
+	"japanese": "高さ",
+	"english": "height"
+}, {
+	"japanese": "リーダーシップ",
+	"english": "leadership"
+}, {
+	"japanese": "モール",
+	"english": "mall"
+}, {
+	"japanese": "マネージャー",
+	"english": "manager"
+}, {
+	"japanese": "操作",
+	"english": "operation"
+}, {
+	"japanese": "録音",
+	"english": "recording"
+}, {
+	"japanese": "サンプル",
+	"english": "sample"
+}, {
+	"japanese": "交通",
+	"english": "transportation"
+}, {
+	"japanese": "慈善",
+	"english": "charity"
+}, {
+	"japanese": "いとこ",
+	"english": "cousin"
+}, {
+	"japanese": "災害",
+	"english": "disaster"
+}, {
+	"japanese": "編集者",
+	"english": "editor"
+}, {
+	"japanese": "効率",
+	"english": "efficiency"
+}, {
+	"japanese": "興奮",
+	"english": "excitement"
+}, {
+	"japanese": "エクステント",
+	"english": "extent"
+}, {
+	"japanese": "フィードバック",
+	"english": "feedback"
+}, {
+	"japanese": "ギター",
+	"english": "guitar"
+}, {
+	"japanese": "宿題",
+	"english": "homework"
+}, {
+	"japanese": "リーダー",
+	"english": "leader"
+}, {
+	"japanese": "ママ",
+	"english": "mom"
+}, {
+	"japanese": "結果",
+	"english": "outcome"
+}, {
+	"japanese": "許可",
+	"english": "permission"
+}, {
+	"japanese": "プレゼン",
+	"english": "presentation"
+}, {
+	"japanese": "プロモーション",
+	"english": "promotion"
+}, {
+	"japanese": "反射",
+	"english": "reflection"
+}, {
+	"japanese": "冷蔵庫",
+	"english": "refrigerator"
+}, {
+	"japanese": "解決",
+	"english": "resolution"
+}, {
+	"japanese": "収入",
+	"english": "revenue"
+}, {
+	"japanese": "セッション",
+	"english": "session"
+}, {
+	"japanese": "歌手",
+	"english": "singer"
+}, {
+	"japanese": "テニス",
+	"english": "tennis"
+}, {
+	"japanese": "バスケット",
+	"english": "basket"
+}, {
+	"japanese": "ボーナス",
+	"english": "bonus"
+}, {
+	"japanese": "キャビネット",
+	"english": "cabinet"
+}, {
+	"japanese": "幼年時代",
+	"english": "childhood"
+}, {
+	"japanese": "教会",
+	"english": "church"
+}, {
+	"japanese": "服",
+	"english": "clothes"
+}, {
+	"japanese": "コー​​ヒー",
+	"english": "coffee"
+}, {
+	"japanese": "ディナー",
+	"english": "dinner"
+}, {
+	"japanese": "お絵かき",
+	"english": "drawing"
+}, {
+	"japanese": "ヘア",
+	"english": "hair"
+}, {
+	"japanese": "聴覚",
+	"english": "hearing"
+}, {
+	"japanese": "イニシアチブ",
+	"english": "initiative"
+}, {
+	"japanese": "判定",
+	"english": "judgment"
+}, {
+	"japanese": "ラボ",
+	"english": "lab"
+}, {
+	"japanese": "測定",
+	"english": "measurement"
+}, {
+	"japanese": "モード",
+	"english": "mode"
+}, {
+	"japanese": "泥",
+	"english": "mud"
+}, {
+	"japanese": "オレンジ",
+	"english": "orange"
+}, {
+	"japanese": "詩",
+	"english": "poetry"
+}, {
+	"japanese": "警察",
+	"english": "police"
+}, {
+	"japanese": "可能性",
+	"english": "possibility"
+}, {
+	"japanese": "手順",
+	"english": "procedure"
+}, {
+	"japanese": "女王",
+	"english": "queen"
+}, {
+	"japanese": "比",
+	"english": "ratio"
+}, {
+	"japanese": "関係",
+	"english": "relation"
+}, {
+	"japanese": "レストラン",
+	"english": "restaurant"
+}, {
+	"japanese": "満足",
+	"english": "satisfaction"
+}, {
+	"japanese": "セクタ",
+	"english": "sector"
+}, {
+	"japanese": "署名",
+	"english": "signature"
+}, {
+	"japanese": "意義",
+	"english": "significance"
+}, {
+	"japanese": "歌",
+	"english": "song"
+}, {
+	"japanese": "歯",
+	"english": "tooth"
+}, {
+	"japanese": "タウン",
+	"english": "town"
+}, {
+	"japanese": "車両",
+	"english": "vehicle"
+}, {
+	"japanese": "ボリューム",
+	"english": "volume"
+}, {
+	"japanese": "妻",
+	"english": "wife"
+}, {
+	"japanese": "事故",
+	"english": "accident"
+}, {
+	"japanese": "空港",
+	"english": "airport"
+}, {
+	"japanese": "任命",
+	"english": "appointment"
+}, {
+	"japanese": "到着",
+	"english": "arrival"
+}, {
+	"japanese": "仮定",
+	"english": "assumption"
+}, {
+	"japanese": "野球",
+	"english": "baseball"
+}, {
+	"japanese": "章",
+	"english": "chapter"
+}, {
+	"japanese": "委員会",
+	"english": "committee"
+}, {
+	"japanese": "会話",
+	"english": "conversation"
+}, {
+	"japanese": "データベース",
+	"english": "database"
+}, {
+	"japanese": "熱意",
+	"english": "enthusiasm"
+}, {
+	"japanese": "エラー",
+	"english": "error"
+}, {
+	"japanese": "説明",
+	"english": "explanation"
+}, {
+	"japanese": "農家",
+	"english": "farmer"
+}, {
+	"japanese": "ゲート",
+	"english": "gate"
+}, {
+	"japanese": "女の子",
+	"english": "girl"
+}, {
+	"japanese": "ホール",
+	"english": "hall"
+}, {
+	"japanese": "歴史家",
+	"english": "historian"
+}, {
+	"japanese": "病院",
+	"english": "hospital"
+}, {
+	"japanese": "損傷",
+	"english": "injury"
+}, {
+	"japanese": "命令",
+	"english": "instruction"
+}, {
+	"japanese": "メンテナンス",
+	"english": "maintenance"
+}, {
+	"japanese": "メーカー",
+	"english": "manufacturer"
+}, {
+	"japanese": "お食事",
+	"english": "meal"
+}, {
+	"japanese": "知覚",
+	"english": "perception"
+}, {
+	"japanese": "パイ",
+	"english": "pie"
+}, {
+	"japanese": "詩",
+	"english": "poem"
+}, {
+	"japanese": "プレゼンス",
+	"english": "presence"
+}, {
+	"japanese": "提案",
+	"english": "proposal"
+}, {
+	"japanese": "受付",
+	"english": "reception"
+}, {
+	"japanese": "置換",
+	"english": "replacement"
+}, {
+	"japanese": "革命",
+	"english": "revolution"
+}, {
+	"japanese": "川",
+	"english": "river"
+}, {
+	"japanese": "息子",
+	"english": "son"
+}, {
+	"japanese": "スピーチ",
+	"english": "speech"
+}, {
+	"japanese": "お茶",
+	"english": "tea"
+}, {
+	"japanese": "村",
+	"english": "village"
+}, {
+	"japanese": "警告",
+	"english": "warning"
+}, {
+	"japanese": "勝者",
+	"english": "winner"
+}, {
+	"japanese": "ワーカー",
+	"english": "worker"
+}, {
+	"japanese": "ライター",
+	"english": "writer"
+}, {
+	"japanese": "支援",
+	"english": "assistance"
+}, {
+	"japanese": "息",
+	"english": "breath"
+}, {
+	"japanese": "買い手",
+	"english": "buyer"
+}, {
+	"japanese": "胸",
+	"english": "chest"
+}, {
+	"japanese": "チョコレート",
+	"english": "chocolate"
+}, {
+	"japanese": "結論",
+	"english": "conclusion"
+}, {
+	"japanese": "貢献",
+	"english": "contribution"
+}, {
+	"japanese": "クッキー",
+	"english": "cookie"
+}, {
+	"japanese": "勇気",
+	"english": "courage"
+}, {
+	"japanese": "パパ",
+	"english": "dad"
+}, {
+	"japanese": "机",
+	"english": "desk"
+}, {
+	"japanese": "引き出し",
+	"english": "drawer"
+}, {
+	"japanese": "確立",
+	"english": "establishment"
+}, {
+	"japanese": "検査",
+	"english": "examination"
+}, {
+	"japanese": "ごみ",
+	"english": "garbage"
+}, {
+	"japanese": "食料品",
+	"english": "grocery"
+}, {
+	"japanese": "蜂蜜",
+	"english": "honey"
+}, {
+	"japanese": "印象",
+	"english": "impression"
+}, {
+	"japanese": "改善",
+	"english": "improvement"
+}, {
+	"japanese": "独立",
+	"english": "independence"
+}, {
+	"japanese": "昆虫",
+	"english": "insect"
+}, {
+	"japanese": "検査",
+	"english": "inspection"
+}, {
+	"japanese": "検査官",
+	"english": "inspector"
+}, {
+	"japanese": "キング",
+	"english": "king"
+}, {
+	"japanese": "はしご",
+	"english": "ladder"
+}, {
+	"japanese": "メニュー",
+	"english": "menu"
+}, {
+	"japanese": "ペナルティ",
+	"english": "penalty"
+}, {
+	"japanese": "ピアノ",
+	"english": "piano"
+}, {
+	"japanese": "ポテト",
+	"english": "potato"
+}, {
+	"japanese": "職業",
+	"english": "profession"
+}, {
+	"japanese": "教授",
+	"english": "professor"
+}, {
+	"japanese": "量",
+	"english": "quantity"
+}, {
+	"japanese": "反応",
+	"english": "reaction"
+}, {
+	"japanese": "要件",
+	"english": "requirement"
+}, {
+	"japanese": "サラダ",
+	"english": "salad"
+}, {
+	"japanese": "シスター",
+	"english": "sister"
+}, {
+	"japanese": "スーパーマーケット",
+	"english": "supermarket"
+}, {
+	"japanese": "舌",
+	"english": "tongue"
+}, {
+	"japanese": "弱点",
+	"english": "weakness"
+}, {
+	"japanese": "結婚式",
+	"english": "wedding"
+}, {
+	"japanese": "事件",
+	"english": "affair"
+}, {
+	"japanese": "野心",
+	"english": "ambition"
+}, {
+	"japanese": "アナリスト",
+	"english": "analyst"
+}, {
+	"japanese": "林檎",
+	"english": "apple"
+}, {
+	"japanese": "割り当て",
+	"english": "assignment"
+}, {
+	"japanese": "アシスタント",
+	"english": "assistant"
+}, {
+	"japanese": "バスルーム",
+	"english": "bathroom"
+}, {
+	"japanese": "ベッドルーム",
+	"english": "bedroom"
+}, {
+	"japanese": "ビール",
+	"english": "beer"
+}, {
+	"japanese": "お誕生日",
+	"english": "birthday"
+}, {
+	"japanese": "お祝い",
+	"english": "celebration"
+}, {
+	"japanese": "チャンピオンシップ",
+	"english": "championship"
+}, {
+	"japanese": "頬",
+	"english": "cheek"
+}, {
+	"japanese": "クライアント",
+	"english": "client"
+}, {
+	"japanese": "結果",
+	"english": "consequence"
+}, {
+	"japanese": "出発",
+	"english": "departure"
+}, {
+	"japanese": "ダイヤモンド",
+	"english": "diamond"
+}, {
+	"japanese": "泥",
+	"english": "dirt"
+}, {
+	"japanese": "耳",
+	"english": "ear"
+}, {
+	"japanese": "幸運",
+	"english": "fortune"
+}, {
+	"japanese": "友情",
+	"english": "friendship"
+}, {
+	"japanese": "葬儀",
+	"english": "funeral"
+}, {
+	"japanese": "遺伝子",
+	"english": "gene"
+}, {
+	"japanese": "ガールフレンド",
+	"english": "girlfriend"
+}, {
+	"japanese": "帽子",
+	"english": "hat"
+}, {
+	"japanese": "表示",
+	"english": "indication"
+}, {
+	"japanese": "意図",
+	"english": "intention"
+}, {
+	"japanese": "レディ",
+	"english": "lady"
+}, {
+	"japanese": "真夜中",
+	"english": "midnight"
+}, {
+	"japanese": "ネゴシエーション",
+	"english": "negotiation"
+}, {
+	"japanese": "義務",
+	"english": "obligation"
+}, {
+	"japanese": "旅客",
+	"english": "passenger"
+}, {
+	"japanese": "ピザ",
+	"english": "pizza"
+}, {
+	"japanese": "プラットフォーム",
+	"english": "platform"
+}, {
+	"japanese": "詩人",
+	"english": "poet"
+}, {
+	"japanese": "汚染",
+	"english": "pollution"
+}, {
+	"japanese": "認識",
+	"english": "recognition"
+}, {
+	"japanese": "評判",
+	"english": "reputation"
+}, {
+	"japanese": "シャツ",
+	"english": "shirt"
+}, {
+	"japanese": "サー",
+	"english": "sir"
+}, {
+	"japanese": "スピーカー",
+	"english": "speaker"
+}, {
+	"japanese": "ストレンジャー",
+	"english": "stranger"
+}, {
+	"japanese": "手術",
+	"english": "surgery"
+}, {
+	"japanese": "同情",
+	"english": "sympathy"
+}, {
+	"japanese": "物語",
+	"english": "tale"
+}, {
+	"japanese": "喉",
+	"english": "throat"
+}, {
+	"japanese": "トレーナー",
+	"english": "trainer"
+}, {
+	"japanese": "叔父",
+	"english": "uncle"
+}, {
+	"japanese": "若者",
+	"english": "youth"
+}, {
+	"japanese": "お金",
+	"english": "money"
+}, {
+	"japanese": "同時に",
+	"english": "while"
+}, {
+	"japanese": "ビジネス",
+	"english": "business"
+}, {
+	"japanese": "生活",
+	"english": "life"
+}, {
+	"japanese": "日",
+	"english": "day"
+}, {
+	"japanese": "ホーム",
+	"english": "home"
+}, {
+	"japanese": "経済",
+	"english": "economy"
+}, {
+	"japanese": "トレーニング",
+	"english": "training"
+}, {
+	"japanese": "種類",
+	"english": "kind"
+}, {
+	"japanese": "未来",
+	"english": "future"
+}, {
+	"japanese": "アクション",
+	"english": "action"
+}, {
+	"japanese": "悪い",
+	"english": "bad"
+}, {
+	"japanese": "何も",
+	"english": "nothing"
+}, {
+	"japanese": "期間",
+	"english": "period"
+}, {
+	"japanese": "テーマ",
+	"english": "subject"
+}, {
+	"japanese": "チキン",
+	"english": "chicken"
+}, {
+	"japanese": "材料",
+	"english": "material"
+}, {
+	"japanese": "車",
+	"english": "car"
+}, {
+	"japanese": "ハーフ",
+	"english": "half"
+}, {
+	"japanese": "内部",
+	"english": "inside"
+}, {
+	"japanese": "外側",
+	"english": "outside"
+}, {
+	"japanese": "標準",
+	"english": "standard"
+}, {
+	"japanese": "項目",
+	"english": "item"
+}, {
+	"japanese": "ミディアム",
+	"english": "medium"
+}, {
+	"japanese": "選択",
+	"english": "choice"
+}, {
+	"japanese": "朝",
+	"english": "morning"
+}, {
+	"japanese": "北",
+	"english": "north"
+}, {
+	"japanese": "平方",
+	"english": "square"
+}, {
+	"japanese": "資本",
+	"english": "capital"
+}, {
+	"japanese": "自己",
+	"english": "self"
+}, {
+	"japanese": "ショット",
+	"english": "shot"
+}, {
+	"japanese": "生活",
+	"english": "living"
+}, {
+	"japanese": "プラスチック",
+	"english": "plastic"
+}, {
+	"japanese": "感じ",
+	"english": "feeling"
+}, {
+	"japanese": "貯蓄",
+	"english": "savings"
+}, {
+	"japanese": "動物",
+	"english": "animal"
+}, {
+	"japanese": "最大",
+	"english": "maximum"
+}, {
+	"japanese": "小説",
+	"english": "novel"
+}, {
+	"japanese": "たくさん",
+	"english": "plenty"
+}, {
+	"japanese": "バックグラウンド",
+	"english": "background"
+}, {
+	"japanese": "赤",
+	"english": "red"
+}, {
+	"japanese": "力",
+	"english": "strength"
+}, {
+	"japanese": "野菜",
+	"english": "vegetable"
+}, {
+	"japanese": "理想的",
+	"english": "ideal"
+}, {
+	"japanese": "キッチン",
+	"english": "kitchen"
+}, {
+	"japanese": "原理",
+	"english": "principle"
+}, {
+	"japanese": "相対",
+	"english": "relative"
+}, {
+	"japanese": "販売",
+	"english": "sale"
+}, {
+	"japanese": "通り",
+	"english": "street"
+}, {
+	"japanese": "最小",
+	"english": "minimum"
+}, {
+	"japanese": "パス",
+	"english": "path"
+}, {
+	"japanese": "海",
+	"english": "sea"
+}, {
+	"japanese": "南",
+	"english": "south"
+}, {
+	"japanese": "状態",
+	"english": "status"
+}, {
+	"japanese": "信頼",
+	"english": "confidence"
+}, {
+	"japanese": "娘",
+	"english": "daughter"
+}, {
+	"japanese": "度",
+	"english": "degree"
+}, {
+	"japanese": "義務",
+	"english": "duty"
+}, {
+	"japanese": "時間",
+	"english": "hour"
+}, {
+	"japanese": "物質",
+	"english": "substance"
+}, {
+	"japanese": "午後",
+	"english": "afternoon"
+}, {
+	"japanese": "考慮",
+	"english": "consideration"
+}, {
+	"japanese": "ゴールド",
+	"english": "gold"
+}, {
+	"japanese": "ミッション",
+	"english": "mission"
+}, {
+	"japanese": "ドア",
+	"english": "door"
+}, {
+	"japanese": "東",
+	"english": "east"
+}, {
+	"japanese": "やり方",
+	"english": "manner"
+}, {
+	"japanese": "会議",
+	"english": "meeting"
+}, {
+	"japanese": "パーキング",
+	"english": "parking"
+}, {
+	"japanese": "ルーチン",
+	"english": "routine"
+}, {
+	"japanese": "水泳",
+	"english": "swimming"
+}, {
+	"japanese": "航空会社",
+	"english": "airline"
+}, {
+	"japanese": "デザイナー",
+	"english": "designer"
+}, {
+	"japanese": "緊急",
+	"english": "emergency"
+}, {
+	"japanese": "イブニング",
+	"english": "evening"
+}, {
+	"japanese": "拡張",
+	"english": "extension"
+}, {
+	"japanese": "ホラー",
+	"english": "horror"
+}, {
+	"japanese": "山",
+	"english": "mountain"
+}, {
+	"japanese": "患者",
+	"english": "patient"
+}, {
+	"japanese": "救済",
+	"english": "relief"
+}, {
+	"japanese": "ツーリスト",
+	"english": "tourist"
+}, {
+	"japanese": "西",
+	"english": "west"
+}, {
+	"japanese": "余談",
+	"english": "aside"
+}, {
+	"japanese": "兄",
+	"english": "brother"
+}, {
+	"japanese": "専門家",
+	"english": "expert"
+}, {
+	"japanese": "神",
+	"english": "god"
+}, {
+	"japanese": "ネイティブ",
+	"english": "native"
+}, {
+	"japanese": "オープニング",
+	"english": "opening"
+}, {
+	"japanese": "男の子",
+	"english": "boy"
+}, {
+	"japanese": "スペシャリスト",
+	"english": "specialist"
+}, {
+	"japanese": "苦い",
+	"english": "bitter"
+}, {
+	"japanese": "地獄",
+	"english": "hell"
+}, {
+	"japanese": "入射",
+	"english": "incident"
+}, {
+	"japanese": "居住者",
+	"english": "resident"
+}, {
+	"japanese": "A",
+	"english": "a"
+}, {
+	"japanese": "君は",
+	"english": "you"
+}, {
+	"japanese": "それ",
+	"english": "it"
+}, {
+	"japanese": "できる",
+	"english": "can"
+}, {
+	"japanese": "意志",
+	"english": "will"
+}, {
+	"japanese": "もし",
+	"english": "if"
+}, {
+	"japanese": 1,
+	"english": "one"
+}, {
+	"japanese": "たくさんの",
+	"english": "many"
+}, {
+	"japanese": "最も",
+	"english": "most"
+}, {
+	"japanese": "他の",
+	"english": "other"
+}, {
+	"japanese": "良い",
+	"english": "good"
+}, {
+	"japanese": "すばらしいです",
+	"english": "great"
+}, {
+	"japanese": "少数",
+	"english": "few"
+}, {
+	"japanese": "可能性があります",
+	"english": "might"
+}, {
+	"japanese": "まだ",
+	"english": "still"
+}, {
+	"japanese": "パブリック",
+	"english": "public"
+}, {
+	"japanese": "人間",
+	"english": "human"
+}, {
+	"japanese": "地元",
+	"english": "local"
+}, {
+	"japanese": "一般的な",
+	"english": "general"
+}, {
+	"japanese": "彼女",
+	"english": "she"
+}, {
+	"japanese": "特定",
+	"english": "specific"
+}, {
+	"japanese": "長いです",
+	"english": "long"
+}, {
+	"japanese": "高い",
+	"english": "high"
+}, {
+	"japanese": "今晩",
+	"english": "tonight"
+}, {
+	"japanese": "一般",
+	"english": "common"
+}, {
+	"japanese": "シンプル",
+	"english": "simple"
+}, {
+	"japanese": "過去",
+	"english": "past"
+}, {
+	"japanese": "大きい",
+	"english": "big"
+}, {
+	"japanese": "可能",
+	"english": "possible"
+}, {
+	"japanese": "特定の",
+	"english": "particular"
+}, {
+	"japanese": "今日",
+	"english": "today"
+}, {
+	"japanese": "個人的な",
+	"english": "personal"
+}, {
+	"japanese": "現在",
+	"english": "current"
+}, {
+	"japanese": "国民",
+	"english": "national"
+}, {
+	"japanese": "ナチュラル",
+	"english": "natural"
+}, {
+	"japanese": "物理的",
+	"english": "physical"
+}, {
+	"japanese": "二番",
+	"english": "second"
+}, {
+	"japanese": "個人",
+	"english": "individual"
+}, {
+	"japanese": "メイン",
+	"english": "main"
+}, {
+	"japanese": "潜在的な",
+	"english": "potential"
+}, {
+	"japanese": "プロ",
+	"english": "professional"
+}, {
+	"japanese": "国際",
+	"english": "international"
+}, {
+	"japanese": "代替案",
+	"english": "alternative"
+}, {
+	"japanese": "以下",
+	"english": "following"
+}, {
+	"japanese": "特別",
+	"english": "special"
+}, {
+	"japanese": "ワーキング",
+	"english": "working"
+}, {
+	"japanese": "全体",
+	"english": "whole"
+}, {
+	"japanese": "コールド",
+	"english": "cold"
+}, {
+	"japanese": "商業の",
+	"english": "commercial"
+}, {
+	"japanese": "低いです",
+	"english": "low"
+}, {
+	"japanese": "プライマリー",
+	"english": "primary"
+}, {
+	"japanese": "価値",
+	"english": "worth"
+}, {
+	"japanese": "必要",
+	"english": "necessary"
+}, {
+	"japanese": "ポジティブ",
+	"english": "positive"
+}, {
+	"japanese": "クリエイティブ",
+	"english": "creative"
+}, {
+	"japanese": "嬉しいです",
+	"english": "glad"
+}, {
+	"japanese": "原因",
+	"english": "due"
+}, {
+	"japanese": "効果的な",
+	"english": "effective"
+}, {
+	"japanese": "中間",
+	"english": "middle"
+}, {
+	"japanese": "レギュラー",
+	"english": "regular"
+}, {
+	"japanese": "独立しました",
+	"english": "independent"
+}, {
+	"japanese": "元の",
+	"english": "original"
+}, {
+	"japanese": "綺麗な",
+	"english": "beautiful"
+}, {
+	"japanese": "アクティブ",
+	"english": "active"
+}, {
+	"japanese": "負",
+	"english": "negative"
+}, {
+	"japanese": "安全",
+	"english": "safe"
+}, {
+	"japanese": "ビジュアル",
+	"english": "visual"
+}, {
+	"japanese": "超えて",
+	"english": "beyond"
+}, {
+	"japanese": "ジュニア",
+	"english": "junior"
+}, {
+	"japanese": "ユニーク",
+	"english": "unique"
+}, {
+	"japanese": "何でも",
+	"english": "anything"
+}, {
+	"japanese": "クラシック",
+	"english": "classic"
+}, {
+	"japanese": "最後の",
+	"english": "final"
+}, {
+	"japanese": "プライベート",
+	"english": "private"
+}, {
+	"japanese": "西部の",
+	"english": "western"
+}, {
+	"japanese": "おなじみの",
+	"english": "familiar"
+}, {
+	"japanese": "公式",
+	"english": "official"
+}, {
+	"japanese": "広いです",
+	"english": "broad"
+}, {
+	"japanese": "快適",
+	"english": "comfortable"
+}, {
+	"japanese": "多分",
+	"english": "maybe"
+}, {
+	"japanese": "リッチ",
+	"english": "rich"
+}, {
+	"japanese": "若い",
+	"english": "young"
+}, {
+	"japanese": "ヘビー",
+	"english": "heavy"
+}, {
+	"japanese": "こんにちは",
+	"english": "hello"
+}, {
+	"japanese": "貴重な",
+	"english": "valuable"
+}, {
+	"japanese": "リーディング",
+	"english": "leading"
+}, {
+	"japanese": "ノーマル",
+	"english": "normal"
+}, {
+	"japanese": "秘密",
+	"english": "secret"
+}, {
+	"japanese": "タフ",
+	"english": "tough"
+}, {
+	"japanese": "深い",
+	"english": "deep"
+}, {
+	"japanese": "目的",
+	"english": "objective"
+}, {
+	"japanese": "化学物質",
+	"english": "chemical"
+}, {
+	"japanese": "極端な",
+	"english": "extreme"
+}, {
+	"japanese": "フォーマル",
+	"english": "formal"
+}, {
+	"japanese": "反対",
+	"english": "opposite"
+}, {
+	"japanese": "リモート",
+	"english": "remote"
+}, {
+	"japanese": "広大な",
+	"english": "vast"
+}, {
+	"japanese": "どこか",
+	"english": "somewhere"
+}, {
+	"japanese": "どこでも",
+	"english": "anywhere"
+}, {
+	"japanese": "ダーク",
+	"english": "dark"
+}, {
+	"japanese": "内部",
+	"english": "internal"
+}, {
+	"japanese": "敏感",
+	"english": "sensitive"
+}, {
+	"japanese": "定数",
+	"english": "constant"
+}, {
+	"japanese": "生",
+	"english": "raw"
+}, {
+	"japanese": "柔らかい",
+	"english": "soft"
+}, {
+	"japanese": "固体",
+	"english": "solid"
+}, {
+	"japanese": "奇妙な",
+	"english": "weird"
+}, {
+	"japanese": "年次",
+	"english": "annual"
+}, {
+	"japanese": "デッド",
+	"english": "dead"
+}, {
+	"japanese": "永遠に",
+	"english": "forever"
+}, {
+	"japanese": "誰も",
+	"english": "nobody"
+}, {
+	"japanese": "円形",
+	"english": "round"
+}, {
+	"japanese": "一方、",
+	"english": "whereas"
+}, {
+	"japanese": "同等の",
+	"english": "equivalent"
+}, {
+	"japanese": "スピリチュアル",
+	"english": "spiritual"
+}, {
+	"japanese": "大人",
+	"english": "adult"
+}, {
+	"japanese": "クレイジー",
+	"english": "crazy"
+}, {
+	"japanese": "前の",
+	"english": "prior"
+}, {
+	"japanese": "ラフ",
+	"english": "rough"
+}, {
+	"japanese": "悲しい",
+	"english": "sad"
+}, {
+	"japanese": "病気",
+	"english": "sick"
+}, {
+	"japanese": "外部",
+	"english": "external"
+}, {
+	"japanese": "違法",
+	"english": "illegal"
+}, {
+	"japanese": "モバイル",
+	"english": "mobile"
+}, {
+	"japanese": "不快な",
+	"english": "nasty"
+}, {
+	"japanese": "一般",
+	"english": "ordinary"
+}, {
+	"japanese": "ロイヤル",
+	"english": "royal"
+}, {
+	"japanese": "上級",
+	"english": "senior"
+}, {
+	"japanese": "アッパー",
+	"english": "upper"
+}, {
+	"japanese": "依存",
+	"english": "dependent"
+}, {
+	"japanese": "おかしいです",
+	"english": "funny"
+}, {
+	"japanese": "甘い",
+	"english": "sweet"
+}, {
+	"japanese": "2階",
+	"english": "upstairs"
+}, {
+	"japanese": "いつもの",
+	"english": "usual"
+}, {
+	"japanese": "海外で",
+	"english": "abroad"
+}, {
+	"japanese": "壮大な",
+	"english": "grand"
+}, {
+	"japanese": "男性",
+	"english": "male"
+}, {
+	"japanese": "誰でも",
+	"english": "anybody"
+}, {
+	"japanese": "ブリリアント",
+	"english": "brilliant"
+}, {
+	"japanese": "親愛な",
+	"english": "dear"
+}, {
+	"japanese": "酔っぱらい",
+	"english": "drunk"
+}, {
+	"japanese": "女性",
+	"english": "female"
+}, {
+	"japanese": "避けられません",
+	"english": "inevitable"
+}, {
+	"japanese": "ニート",
+	"english": "neat"
+}, {
+	"japanese": "代表",
+	"english": "representative"
+}, {
+	"japanese": "愚かな",
+	"english": "silly"
+}, {
+	"japanese": "愚か",
+	"english": "stupid"
+}, {
+	"japanese": "一時的",
+	"english": "temporary"
+}, {
+	"japanese": "明日",
+	"english": "tomorrow"
+}, {
+	"japanese": "昨日",
+	"english": "yesterday"
+}]

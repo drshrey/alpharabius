@@ -1,0 +1,2185 @@
+[{
+	"italian": "persone",
+	"english": "people"
+}, {
+	"italian": "storia",
+	"english": "history"
+}, {
+	"italian": "modo",
+	"english": "way"
+}, {
+	"italian": "arte",
+	"english": "art"
+}, {
+	"italian": "mondo",
+	"english": "world"
+}, {
+	"italian": "informazioni",
+	"english": "information"
+}, {
+	"italian": "carta geografica",
+	"english": "map"
+}, {
+	"italian": "Due",
+	"english": "two"
+}, {
+	"italian": "famiglia",
+	"english": "family"
+}, {
+	"italian": "governo",
+	"english": "government"
+}, {
+	"italian": "Salute",
+	"english": "health"
+}, {
+	"italian": "sistema",
+	"english": "system"
+}, {
+	"italian": "Computer",
+	"english": "computer"
+}, {
+	"italian": "la carne",
+	"english": "meat"
+}, {
+	"italian": "anno",
+	"english": "year"
+}, {
+	"italian": "Grazie",
+	"english": "thanks"
+}, {
+	"italian": "musica",
+	"english": "music"
+}, {
+	"italian": "persona",
+	"english": "person"
+}, {
+	"italian": "lettura",
+	"english": "reading"
+}, {
+	"italian": "metodo",
+	"english": "method"
+}, {
+	"italian": "dati",
+	"english": "data"
+}, {
+	"italian": "cibo",
+	"english": "food"
+}, {
+	"italian": "comprensione",
+	"english": "understanding"
+}, {
+	"italian": "teoria",
+	"english": "theory"
+}, {
+	"italian": "legge",
+	"english": "law"
+}, {
+	"italian": "uccello",
+	"english": "bird"
+}, {
+	"italian": "letteratura",
+	"english": "literature"
+}, {
+	"italian": "problema",
+	"english": "problem"
+}, {
+	"italian": "Software",
+	"english": "software"
+}, {
+	"italian": "controllo",
+	"english": "control"
+}, {
+	"italian": "conoscenza",
+	"english": "knowledge"
+}, {
+	"italian": "energia",
+	"english": "power"
+}, {
+	"italian": "capacità",
+	"english": "ability"
+}, {
+	"italian": "economia",
+	"english": "economics"
+}, {
+	"italian": "amore",
+	"english": "love"
+}, {
+	"italian": "Internet",
+	"english": "internet"
+}, {
+	"italian": "televisione",
+	"english": "television"
+}, {
+	"italian": "scienza",
+	"english": "science"
+}, {
+	"italian": "biblioteca",
+	"english": "library"
+}, {
+	"italian": "natura",
+	"english": "nature"
+}, {
+	"italian": "fatto",
+	"english": "fact"
+}, {
+	"italian": "prodotto",
+	"english": "product"
+}, {
+	"italian": "idea",
+	"english": "idea"
+}, {
+	"italian": "temperatura",
+	"english": "temperature"
+}, {
+	"italian": "investimento",
+	"english": "investment"
+}, {
+	"italian": "la zona",
+	"english": "area"
+}, {
+	"italian": "società",
+	"english": "society"
+}, {
+	"italian": "attività",
+	"english": "activity"
+}, {
+	"italian": "storia",
+	"english": "story"
+}, {
+	"italian": "industria",
+	"english": "industry"
+}, {
+	"italian": "media",
+	"english": "media"
+}, {
+	"italian": "cosa",
+	"english": "thing"
+}, {
+	"italian": "forno",
+	"english": "oven"
+}, {
+	"italian": "comunità",
+	"english": "community"
+}, {
+	"italian": "definizione",
+	"english": "definition"
+}, {
+	"italian": "sicurezza",
+	"english": "safety"
+}, {
+	"italian": "qualità",
+	"english": "quality"
+}, {
+	"italian": "sviluppo",
+	"english": "development"
+}, {
+	"italian": "Lingua",
+	"english": "language"
+}, {
+	"italian": "gestione",
+	"english": "management"
+}, {
+	"italian": "giocatore",
+	"english": "player"
+}, {
+	"italian": "varietà",
+	"english": "variety"
+}, {
+	"italian": "video",
+	"english": "video"
+}, {
+	"italian": "settimana",
+	"english": "week"
+}, {
+	"italian": "sicurezza",
+	"english": "security"
+}, {
+	"italian": "nazione",
+	"english": "country"
+}, {
+	"italian": "esame",
+	"english": "exam"
+}, {
+	"italian": "film",
+	"english": "movie"
+}, {
+	"italian": "organizzazione",
+	"english": "organization"
+}, {
+	"italian": "attrezzatura",
+	"english": "equipment"
+}, {
+	"italian": "fisica",
+	"english": "physics"
+}, {
+	"italian": "analisi",
+	"english": "analysis"
+}, {
+	"italian": "politica",
+	"english": "policy"
+}, {
+	"italian": "serie",
+	"english": "series"
+}, {
+	"italian": "pensato",
+	"english": "thought"
+}, {
+	"italian": "base",
+	"english": "basis"
+}, {
+	"italian": "fidanzato",
+	"english": "boyfriend"
+}, {
+	"italian": "direzione",
+	"english": "direction"
+}, {
+	"italian": "strategia",
+	"english": "strategy"
+}, {
+	"italian": "tecnologia",
+	"english": "technology"
+}, {
+	"italian": "esercito",
+	"english": "army"
+}, {
+	"italian": "macchina fotografica",
+	"english": "camera"
+}, {
+	"italian": "la libertà",
+	"english": "freedom"
+}, {
+	"italian": "carta",
+	"english": "paper"
+}, {
+	"italian": "ambiente",
+	"english": "environment"
+}, {
+	"italian": "bambino",
+	"english": "child"
+}, {
+	"italian": "istanza",
+	"english": "instance"
+}, {
+	"italian": "mese",
+	"english": "month"
+}, {
+	"italian": "verità",
+	"english": "truth"
+}, {
+	"italian": "marketing",
+	"english": "marketing"
+}, {
+	"italian": "Università",
+	"english": "university"
+}, {
+	"italian": "scrittura",
+	"english": "writing"
+}, {
+	"italian": "articolo",
+	"english": "article"
+}, {
+	"italian": "dipartimento",
+	"english": "department"
+}, {
+	"italian": "differenza",
+	"english": "difference"
+}, {
+	"italian": "goal",
+	"english": "goal"
+}, {
+	"italian": "notizia",
+	"english": "news"
+}, {
+	"italian": "pubblico",
+	"english": "audience"
+}, {
+	"italian": "pesca",
+	"english": "fishing"
+}, {
+	"italian": "crescita",
+	"english": "growth"
+}, {
+	"italian": "reddito",
+	"english": "income"
+}, {
+	"italian": "matrimonio",
+	"english": "marriage"
+}, {
+	"italian": "utente",
+	"english": "user"
+}, {
+	"italian": "combinazione",
+	"english": "combination"
+}, {
+	"italian": "fallimento",
+	"english": "failure"
+}, {
+	"italian": "senso",
+	"english": "meaning"
+}, {
+	"italian": "medicina",
+	"english": "medicine"
+}, {
+	"italian": "filosofia",
+	"english": "philosophy"
+}, {
+	"italian": "insegnante",
+	"english": "teacher"
+}, {
+	"italian": "comunicazione",
+	"english": "communication"
+}, {
+	"italian": "notte",
+	"english": "night"
+}, {
+	"italian": "chimica",
+	"english": "chemistry"
+}, {
+	"italian": "malattia",
+	"english": "disease"
+}, {
+	"italian": "disco",
+	"english": "disk"
+}, {
+	"italian": "energia",
+	"english": "energy"
+}, {
+	"italian": "nazione",
+	"english": "nation"
+}, {
+	"italian": "strada",
+	"english": "road"
+}, {
+	"italian": "ruolo",
+	"english": "role"
+}, {
+	"italian": "la minestra",
+	"english": "soup"
+}, {
+	"italian": "pubblicità",
+	"english": "advertising"
+}, {
+	"italian": "luogo",
+	"english": "location"
+}, {
+	"italian": "successo",
+	"english": "success"
+}, {
+	"italian": "aggiunta",
+	"english": "addition"
+}, {
+	"italian": "appartamento",
+	"english": "apartment"
+}, {
+	"italian": "educazione",
+	"english": "education"
+}, {
+	"italian": "matematica",
+	"english": "math"
+}, {
+	"italian": "momento",
+	"english": "moment"
+}, {
+	"italian": "la pittura",
+	"english": "painting"
+}, {
+	"italian": "politica",
+	"english": "politics"
+}, {
+	"italian": "Attenzione",
+	"english": "attention"
+}, {
+	"italian": "decisione",
+	"english": "decision"
+}, {
+	"italian": "evento",
+	"english": "event"
+}, {
+	"italian": "proprietà",
+	"english": "property"
+}, {
+	"italian": "shopping",
+	"english": "shopping"
+}, {
+	"italian": "alunno",
+	"english": "student"
+}, {
+	"italian": "legna",
+	"english": "wood"
+}, {
+	"italian": "concorrenza",
+	"english": "competition"
+}, {
+	"italian": "distribuzione",
+	"english": "distribution"
+}, {
+	"italian": "divertimento",
+	"english": "entertainment"
+}, {
+	"italian": "ufficio",
+	"english": "office"
+}, {
+	"italian": "popolazione",
+	"english": "population"
+}, {
+	"italian": "Presidente",
+	"english": "president"
+}, {
+	"italian": "unità",
+	"english": "unit"
+}, {
+	"italian": "categoria",
+	"english": "category"
+}, {
+	"italian": "sigaretta",
+	"english": "cigarette"
+}, {
+	"italian": "contesto",
+	"english": "context"
+}, {
+	"italian": "introduzione",
+	"english": "introduction"
+}, {
+	"italian": "opportunità",
+	"english": "opportunity"
+}, {
+	"italian": "prestazione",
+	"english": "performance"
+}, {
+	"italian": "autista",
+	"english": "driver"
+}, {
+	"italian": "volo",
+	"english": "flight"
+}, {
+	"italian": "lunghezza",
+	"english": "length"
+}, {
+	"italian": "rivista",
+	"english": "magazine"
+}, {
+	"italian": "giornale",
+	"english": "newspaper"
+}, {
+	"italian": "relazione",
+	"english": "relationship"
+}, {
+	"italian": "insegnamento",
+	"english": "teaching"
+}, {
+	"italian": "cella",
+	"english": "cell"
+}, {
+	"italian": "commerciante",
+	"english": "dealer"
+}, {
+	"italian": "scoperta",
+	"english": "finding"
+}, {
+	"italian": "lago",
+	"english": "lake"
+}, {
+	"italian": "membro",
+	"english": "member"
+}, {
+	"italian": "messaggio",
+	"english": "message"
+}, {
+	"italian": "telefono",
+	"english": "phone"
+}, {
+	"italian": "scena",
+	"english": "scene"
+}, {
+	"italian": "aspetto",
+	"english": "appearance"
+}, {
+	"italian": "associazione",
+	"english": "association"
+}, {
+	"italian": "concetto",
+	"english": "concept"
+}, {
+	"italian": "cliente",
+	"english": "customer"
+}, {
+	"italian": "morte",
+	"english": "death"
+}, {
+	"italian": "discussione",
+	"english": "discussion"
+}, {
+	"italian": "alloggiamento",
+	"english": "housing"
+}, {
+	"italian": "inflazione",
+	"english": "inflation"
+}, {
+	"italian": "assicurazione",
+	"english": "insurance"
+}, {
+	"italian": "umore",
+	"english": "mood"
+}, {
+	"italian": "donna",
+	"english": "woman"
+}, {
+	"italian": "consigli",
+	"english": "advice"
+}, {
+	"italian": "sangue",
+	"english": "blood"
+}, {
+	"italian": "sforzo",
+	"english": "effort"
+}, {
+	"italian": "espressione",
+	"english": "expression"
+}, {
+	"italian": "importanza",
+	"english": "importance"
+}, {
+	"italian": "opinione",
+	"english": "opinion"
+}, {
+	"italian": "Pagamento",
+	"english": "payment"
+}, {
+	"italian": "la realtà",
+	"english": "reality"
+}, {
+	"italian": "responsabilità",
+	"english": "responsibility"
+}, {
+	"italian": "situazione",
+	"english": "situation"
+}, {
+	"italian": "abilità",
+	"english": "skill"
+}, {
+	"italian": "dichiarazione",
+	"english": "statement"
+}, {
+	"italian": "ricchezza",
+	"english": "wealth"
+}, {
+	"italian": "applicazione",
+	"english": "application"
+}, {
+	"italian": "città",
+	"english": "city"
+}, {
+	"italian": "contea",
+	"english": "county"
+}, {
+	"italian": "profondità",
+	"english": "depth"
+}, {
+	"italian": "tenuta",
+	"english": "estate"
+}, {
+	"italian": "fondazione",
+	"english": "foundation"
+}, {
+	"italian": "nonna",
+	"english": "grandmother"
+}, {
+	"italian": "cuore",
+	"english": "heart"
+}, {
+	"italian": "prospettiva",
+	"english": "perspective"
+}, {
+	"italian": "foto",
+	"english": "photo"
+}, {
+	"italian": "ricetta",
+	"english": "recipe"
+}, {
+	"italian": "studio",
+	"english": "studio"
+}, {
+	"italian": "argomento",
+	"english": "topic"
+}, {
+	"italian": "collezione",
+	"english": "collection"
+}, {
+	"italian": "depressione",
+	"english": "depression"
+}, {
+	"italian": "immaginazione",
+	"english": "imagination"
+}, {
+	"italian": "passione",
+	"english": "passion"
+}, {
+	"italian": "percentuale",
+	"english": "percentage"
+}, {
+	"italian": "risorsa",
+	"english": "resource"
+}, {
+	"italian": "ambiente",
+	"english": "setting"
+}, {
+	"italian": "anno Domini",
+	"english": "ad"
+}, {
+	"italian": "agenzia",
+	"english": "agency"
+}, {
+	"italian": "college",
+	"english": "college"
+}, {
+	"italian": "connessione",
+	"english": "connection"
+}, {
+	"italian": "critica",
+	"english": "criticism"
+}, {
+	"italian": "debito",
+	"english": "debt"
+}, {
+	"italian": "descrizione",
+	"english": "description"
+}, {
+	"italian": "memoria",
+	"english": "memory"
+}, {
+	"italian": "pazienza",
+	"english": "patience"
+}, {
+	"italian": "segretario",
+	"english": "secretary"
+}, {
+	"italian": "soluzione",
+	"english": "solution"
+}, {
+	"italian": "amministrazione",
+	"english": "administration"
+}, {
+	"italian": "aspetto",
+	"english": "aspect"
+}, {
+	"italian": "atteggiamento",
+	"english": "attitude"
+}, {
+	"italian": "direttore",
+	"english": "director"
+}, {
+	"italian": "personalità",
+	"english": "personality"
+}, {
+	"italian": "psicologia",
+	"english": "psychology"
+}, {
+	"italian": "raccomandazione",
+	"english": "recommendation"
+}, {
+	"italian": "risposta",
+	"english": "response"
+}, {
+	"italian": "selezione",
+	"english": "selection"
+}, {
+	"italian": "Conservazione",
+	"english": "storage"
+}, {
+	"italian": "versione",
+	"english": "version"
+}, {
+	"italian": "alcol",
+	"english": "alcohol"
+}, {
+	"italian": "discussione",
+	"english": "argument"
+}, {
+	"italian": "denuncia",
+	"english": "complaint"
+}, {
+	"italian": "contrarre",
+	"english": "contract"
+}, {
+	"italian": "enfasi",
+	"english": "emphasis"
+}, {
+	"italian": "autostrada",
+	"english": "highway"
+}, {
+	"italian": "perdita",
+	"english": "loss"
+}, {
+	"italian": "membri",
+	"english": "membership"
+}, {
+	"italian": "possesso",
+	"english": "possession"
+}, {
+	"italian": "preparazione",
+	"english": "preparation"
+}, {
+	"italian": "bistecca",
+	"english": "steak"
+}, {
+	"italian": "unione",
+	"english": "union"
+}, {
+	"italian": "accordo",
+	"english": "agreement"
+}, {
+	"italian": "cancro",
+	"english": "cancer"
+}, {
+	"italian": "moneta",
+	"english": "currency"
+}, {
+	"italian": "occupazione",
+	"english": "employment"
+}, {
+	"italian": "ingegneria",
+	"english": "engineering"
+}, {
+	"italian": "iscrizione",
+	"english": "entry"
+}, {
+	"italian": "interazione",
+	"english": "interaction"
+}, {
+	"italian": "miscela",
+	"english": "mixture"
+}, {
+	"italian": "preferenza",
+	"english": "preference"
+}, {
+	"italian": "regione",
+	"english": "region"
+}, {
+	"italian": "repubblica",
+	"english": "republic"
+}, {
+	"italian": "tradizione",
+	"english": "tradition"
+}, {
+	"italian": "virus",
+	"english": "virus"
+}, {
+	"italian": "attore",
+	"english": "actor"
+}, {
+	"italian": "aula",
+	"english": "classroom"
+}, {
+	"italian": "consegna",
+	"english": "delivery"
+}, {
+	"italian": "dispositivo",
+	"english": "device"
+}, {
+	"italian": "difficoltà",
+	"english": "difficulty"
+}, {
+	"italian": "dramma",
+	"english": "drama"
+}, {
+	"italian": "elezione",
+	"english": "election"
+}, {
+	"italian": "motore",
+	"english": "engine"
+}, {
+	"italian": "calcio",
+	"english": "football"
+}, {
+	"italian": "guida",
+	"english": "guidance"
+}, {
+	"italian": "Hotel",
+	"english": "hotel"
+}, {
+	"italian": "proprietario",
+	"english": "owner"
+}, {
+	"italian": "priorità",
+	"english": "priority"
+}, {
+	"italian": "protezione",
+	"english": "protection"
+}, {
+	"italian": "suggerimento",
+	"english": "suggestion"
+}, {
+	"italian": "tensione",
+	"english": "tension"
+}, {
+	"italian": "variazione",
+	"english": "variation"
+}, {
+	"italian": "ansia",
+	"english": "anxiety"
+}, {
+	"italian": "atmosfera",
+	"english": "atmosphere"
+}, {
+	"italian": "consapevolezza",
+	"english": "awareness"
+}, {
+	"italian": "bagno",
+	"english": "bath"
+}, {
+	"italian": "pane",
+	"english": "bread"
+}, {
+	"italian": "candidato",
+	"english": "candidate"
+}, {
+	"italian": "clima",
+	"english": "climate"
+}, {
+	"italian": "confronto",
+	"english": "comparison"
+}, {
+	"italian": "confusione",
+	"english": "confusion"
+}, {
+	"italian": "costruzione",
+	"english": "construction"
+}, {
+	"italian": "ascensore",
+	"english": "elevator"
+}, {
+	"italian": "emozione",
+	"english": "emotion"
+}, {
+	"italian": "dipendente",
+	"english": "employee"
+}, {
+	"italian": "datore di lavoro",
+	"english": "employer"
+}, {
+	"italian": "ospite",
+	"english": "guest"
+}, {
+	"italian": "altezza",
+	"english": "height"
+}, {
+	"italian": "comando",
+	"english": "leadership"
+}, {
+	"italian": "centro commerciale",
+	"english": "mall"
+}, {
+	"italian": "manager",
+	"english": "manager"
+}, {
+	"italian": "operazione",
+	"english": "operation"
+}, {
+	"italian": "registrazione",
+	"english": "recording"
+}, {
+	"italian": "campione",
+	"english": "sample"
+}, {
+	"italian": "mezzi di trasporto",
+	"english": "transportation"
+}, {
+	"italian": "carità",
+	"english": "charity"
+}, {
+	"italian": "cugino",
+	"english": "cousin"
+}, {
+	"italian": "disastro",
+	"english": "disaster"
+}, {
+	"italian": "editore",
+	"english": "editor"
+}, {
+	"italian": "efficienza",
+	"english": "efficiency"
+}, {
+	"italian": "eccitazione",
+	"english": "excitement"
+}, {
+	"italian": "estensione",
+	"english": "extent"
+}, {
+	"italian": "risposta",
+	"english": "feedback"
+}, {
+	"italian": "chitarra",
+	"english": "guitar"
+}, {
+	"italian": "compiti a casa",
+	"english": "homework"
+}, {
+	"italian": "capo",
+	"english": "leader"
+}, {
+	"italian": "mamma",
+	"english": "mom"
+}, {
+	"italian": "risultato",
+	"english": "outcome"
+}, {
+	"italian": "autorizzazione",
+	"english": "permission"
+}, {
+	"italian": "presentazione",
+	"english": "presentation"
+}, {
+	"italian": "promozione",
+	"english": "promotion"
+}, {
+	"italian": "riflessione",
+	"english": "reflection"
+}, {
+	"italian": "frigorifero",
+	"english": "refrigerator"
+}, {
+	"italian": "risoluzione",
+	"english": "resolution"
+}, {
+	"italian": "reddito",
+	"english": "revenue"
+}, {
+	"italian": "sessione",
+	"english": "session"
+}, {
+	"italian": "cantante",
+	"english": "singer"
+}, {
+	"italian": "tennis",
+	"english": "tennis"
+}, {
+	"italian": "cestino",
+	"english": "basket"
+}, {
+	"italian": "premio",
+	"english": "bonus"
+}, {
+	"italian": "Consiglio dei ministri",
+	"english": "cabinet"
+}, {
+	"italian": "infanzia",
+	"english": "childhood"
+}, {
+	"italian": "Chiesa",
+	"english": "church"
+}, {
+	"italian": "Abiti",
+	"english": "clothes"
+}, {
+	"italian": "Caffè",
+	"english": "coffee"
+}, {
+	"italian": "cena",
+	"english": "dinner"
+}, {
+	"italian": "disegno",
+	"english": "drawing"
+}, {
+	"italian": "capelli",
+	"english": "hair"
+}, {
+	"italian": "udito",
+	"english": "hearing"
+}, {
+	"italian": "iniziativa",
+	"english": "initiative"
+}, {
+	"italian": "giudizio",
+	"english": "judgment"
+}, {
+	"italian": "laboratorio",
+	"english": "lab"
+}, {
+	"italian": "misurazione",
+	"english": "measurement"
+}, {
+	"italian": "modalità",
+	"english": "mode"
+}, {
+	"italian": "fango",
+	"english": "mud"
+}, {
+	"italian": "arancia",
+	"english": "orange"
+}, {
+	"italian": "poesia",
+	"english": "poetry"
+}, {
+	"italian": "polizia",
+	"english": "police"
+}, {
+	"italian": "possibilità",
+	"english": "possibility"
+}, {
+	"italian": "procedura",
+	"english": "procedure"
+}, {
+	"italian": "Regina",
+	"english": "queen"
+}, {
+	"italian": "rapporto",
+	"english": "ratio"
+}, {
+	"italian": "relazione",
+	"english": "relation"
+}, {
+	"italian": "ristorante",
+	"english": "restaurant"
+}, {
+	"italian": "soddisfazione",
+	"english": "satisfaction"
+}, {
+	"italian": "settore",
+	"english": "sector"
+}, {
+	"italian": "firma",
+	"english": "signature"
+}, {
+	"italian": "importanza",
+	"english": "significance"
+}, {
+	"italian": "canzone",
+	"english": "song"
+}, {
+	"italian": "dente",
+	"english": "tooth"
+}, {
+	"italian": "cittadina",
+	"english": "town"
+}, {
+	"italian": "veicolo",
+	"english": "vehicle"
+}, {
+	"italian": "volume",
+	"english": "volume"
+}, {
+	"italian": "moglie",
+	"english": "wife"
+}, {
+	"italian": "incidente",
+	"english": "accident"
+}, {
+	"italian": "aeroporto",
+	"english": "airport"
+}, {
+	"italian": "appuntamento",
+	"english": "appointment"
+}, {
+	"italian": "arrivo",
+	"english": "arrival"
+}, {
+	"italian": "assunzione",
+	"english": "assumption"
+}, {
+	"italian": "baseball",
+	"english": "baseball"
+}, {
+	"italian": "capitolo",
+	"english": "chapter"
+}, {
+	"italian": "Comitato",
+	"english": "committee"
+}, {
+	"italian": "conversazione",
+	"english": "conversation"
+}, {
+	"italian": "Banca dati",
+	"english": "database"
+}, {
+	"italian": "entusiasmo",
+	"english": "enthusiasm"
+}, {
+	"italian": "errore",
+	"english": "error"
+}, {
+	"italian": "spiegazione",
+	"english": "explanation"
+}, {
+	"italian": "contadino",
+	"english": "farmer"
+}, {
+	"italian": "cancello",
+	"english": "gate"
+}, {
+	"italian": "ragazza",
+	"english": "girl"
+}, {
+	"italian": "sala",
+	"english": "hall"
+}, {
+	"italian": "storico",
+	"english": "historian"
+}, {
+	"italian": "ospedale",
+	"english": "hospital"
+}, {
+	"italian": "ferita",
+	"english": "injury"
+}, {
+	"italian": "istruzione",
+	"english": "instruction"
+}, {
+	"italian": "Manutenzione",
+	"english": "maintenance"
+}, {
+	"italian": "fabbricante",
+	"english": "manufacturer"
+}, {
+	"italian": "pasto",
+	"english": "meal"
+}, {
+	"italian": "percezione",
+	"english": "perception"
+}, {
+	"italian": "torta",
+	"english": "pie"
+}, {
+	"italian": "poesia",
+	"english": "poem"
+}, {
+	"italian": "presenza",
+	"english": "presence"
+}, {
+	"italian": "proposta",
+	"english": "proposal"
+}, {
+	"italian": "ricezione",
+	"english": "reception"
+}, {
+	"italian": "sostituzione",
+	"english": "replacement"
+}, {
+	"italian": "rivoluzione",
+	"english": "revolution"
+}, {
+	"italian": "fiume",
+	"english": "river"
+}, {
+	"italian": "figlio",
+	"english": "son"
+}, {
+	"italian": "discorso",
+	"english": "speech"
+}, {
+	"italian": "tè",
+	"english": "tea"
+}, {
+	"italian": "villaggio",
+	"english": "village"
+}, {
+	"italian": "avvertimento",
+	"english": "warning"
+}, {
+	"italian": "vincitore",
+	"english": "winner"
+}, {
+	"italian": "lavoratore",
+	"english": "worker"
+}, {
+	"italian": "scrittore",
+	"english": "writer"
+}, {
+	"italian": "assistenza",
+	"english": "assistance"
+}, {
+	"italian": "respiro",
+	"english": "breath"
+}, {
+	"italian": "acquirente",
+	"english": "buyer"
+}, {
+	"italian": "petto",
+	"english": "chest"
+}, {
+	"italian": "cioccolato",
+	"english": "chocolate"
+}, {
+	"italian": "conclusione",
+	"english": "conclusion"
+}, {
+	"italian": "contributo",
+	"english": "contribution"
+}, {
+	"italian": "biscotto",
+	"english": "cookie"
+}, {
+	"italian": "coraggio",
+	"english": "courage"
+}, {
+	"italian": "papà",
+	"english": "dad"
+}, {
+	"italian": "scrivania",
+	"english": "desk"
+}, {
+	"italian": "cassetto",
+	"english": "drawer"
+}, {
+	"italian": "istituzione",
+	"english": "establishment"
+}, {
+	"italian": "visita medica",
+	"english": "examination"
+}, {
+	"italian": "spazzatura",
+	"english": "garbage"
+}, {
+	"italian": "drogheria",
+	"english": "grocery"
+}, {
+	"italian": "miele",
+	"english": "honey"
+}, {
+	"italian": "impressione",
+	"english": "impression"
+}, {
+	"italian": "miglioramento",
+	"english": "improvement"
+}, {
+	"italian": "indipendenza",
+	"english": "independence"
+}, {
+	"italian": "insetto",
+	"english": "insect"
+}, {
+	"italian": "ispezione",
+	"english": "inspection"
+}, {
+	"italian": "ispettore",
+	"english": "inspector"
+}, {
+	"italian": "re",
+	"english": "king"
+}, {
+	"italian": "scala",
+	"english": "ladder"
+}, {
+	"italian": "Menu",
+	"english": "menu"
+}, {
+	"italian": "pena",
+	"english": "penalty"
+}, {
+	"italian": "pianoforte",
+	"english": "piano"
+}, {
+	"italian": "Patata",
+	"english": "potato"
+}, {
+	"italian": "professione",
+	"english": "profession"
+}, {
+	"italian": "Professore",
+	"english": "professor"
+}, {
+	"italian": "quantità",
+	"english": "quantity"
+}, {
+	"italian": "reazione",
+	"english": "reaction"
+}, {
+	"italian": "requisito",
+	"english": "requirement"
+}, {
+	"italian": "insalata",
+	"english": "salad"
+}, {
+	"italian": "sorella",
+	"english": "sister"
+}, {
+	"italian": "supermercato",
+	"english": "supermarket"
+}, {
+	"italian": "lingua",
+	"english": "tongue"
+}, {
+	"italian": "debolezza",
+	"english": "weakness"
+}, {
+	"italian": "matrimonio",
+	"english": "wedding"
+}, {
+	"italian": "affare",
+	"english": "affair"
+}, {
+	"italian": "ambizione",
+	"english": "ambition"
+}, {
+	"italian": "analista",
+	"english": "analyst"
+}, {
+	"italian": "Mela",
+	"english": "apple"
+}, {
+	"italian": "assegnazione",
+	"english": "assignment"
+}, {
+	"italian": "assistente",
+	"english": "assistant"
+}, {
+	"italian": "bagno",
+	"english": "bathroom"
+}, {
+	"italian": "Camera da letto",
+	"english": "bedroom"
+}, {
+	"italian": "birra",
+	"english": "beer"
+}, {
+	"italian": "compleanno",
+	"english": "birthday"
+}, {
+	"italian": "celebrazione",
+	"english": "celebration"
+}, {
+	"italian": "campionato",
+	"english": "championship"
+}, {
+	"italian": "guancia",
+	"english": "cheek"
+}, {
+	"italian": "cliente",
+	"english": "client"
+}, {
+	"italian": "conseguenza",
+	"english": "consequence"
+}, {
+	"italian": "partenza",
+	"english": "departure"
+}, {
+	"italian": "diamante",
+	"english": "diamond"
+}, {
+	"italian": "lo sporco",
+	"english": "dirt"
+}, {
+	"italian": "orecchio",
+	"english": "ear"
+}, {
+	"italian": "fortuna",
+	"english": "fortune"
+}, {
+	"italian": "amicizia",
+	"english": "friendship"
+}, {
+	"italian": "funerale",
+	"english": "funeral"
+}, {
+	"italian": "gene",
+	"english": "gene"
+}, {
+	"italian": "fidanzata",
+	"english": "girlfriend"
+}, {
+	"italian": "cappello",
+	"english": "hat"
+}, {
+	"italian": "indicazione",
+	"english": "indication"
+}, {
+	"italian": "Intenzione",
+	"english": "intention"
+}, {
+	"italian": "signora",
+	"english": "lady"
+}, {
+	"italian": "mezzanotte",
+	"english": "midnight"
+}, {
+	"italian": "trattativa",
+	"english": "negotiation"
+}, {
+	"italian": "obbligo",
+	"english": "obligation"
+}, {
+	"italian": "passeggeri",
+	"english": "passenger"
+}, {
+	"italian": "Pizza",
+	"english": "pizza"
+}, {
+	"italian": "piattaforma",
+	"english": "platform"
+}, {
+	"italian": "poeta",
+	"english": "poet"
+}, {
+	"italian": "inquinamento",
+	"english": "pollution"
+}, {
+	"italian": "riconoscimento",
+	"english": "recognition"
+}, {
+	"italian": "reputazione",
+	"english": "reputation"
+}, {
+	"italian": "camicia",
+	"english": "shirt"
+}, {
+	"italian": "Signore",
+	"english": "sir"
+}, {
+	"italian": "altoparlante",
+	"english": "speaker"
+}, {
+	"italian": "sconosciuto",
+	"english": "stranger"
+}, {
+	"italian": "chirurgia",
+	"english": "surgery"
+}, {
+	"italian": "simpatia",
+	"english": "sympathy"
+}, {
+	"italian": "racconto",
+	"english": "tale"
+}, {
+	"italian": "gola",
+	"english": "throat"
+}, {
+	"italian": "allenatore",
+	"english": "trainer"
+}, {
+	"italian": "zio",
+	"english": "uncle"
+}, {
+	"italian": "gioventù",
+	"english": "youth"
+}, {
+	"italian": "i soldi",
+	"english": "money"
+}, {
+	"italian": "mentre",
+	"english": "while"
+}, {
+	"italian": "attività commerciale",
+	"english": "business"
+}, {
+	"italian": "vita",
+	"english": "life"
+}, {
+	"italian": "giorno",
+	"english": "day"
+}, {
+	"italian": "casa",
+	"english": "home"
+}, {
+	"italian": "economia",
+	"english": "economy"
+}, {
+	"italian": "formazione",
+	"english": "training"
+}, {
+	"italian": "genere",
+	"english": "kind"
+}, {
+	"italian": "futuro",
+	"english": "future"
+}, {
+	"italian": "azione",
+	"english": "action"
+}, {
+	"italian": "cattivo",
+	"english": "bad"
+}, {
+	"italian": "Niente",
+	"english": "nothing"
+}, {
+	"italian": "periodo",
+	"english": "period"
+}, {
+	"italian": "soggetto",
+	"english": "subject"
+}, {
+	"italian": "pollo",
+	"english": "chicken"
+}, {
+	"italian": "materiale",
+	"english": "material"
+}, {
+	"italian": "auto",
+	"english": "car"
+}, {
+	"italian": "metà",
+	"english": "half"
+}, {
+	"italian": "dentro",
+	"english": "inside"
+}, {
+	"italian": "al di fuori",
+	"english": "outside"
+}, {
+	"italian": "Standard",
+	"english": "standard"
+}, {
+	"italian": "articolo",
+	"english": "item"
+}, {
+	"italian": "medio",
+	"english": "medium"
+}, {
+	"italian": "scelta",
+	"english": "choice"
+}, {
+	"italian": "mattina",
+	"english": "morning"
+}, {
+	"italian": "nord",
+	"english": "north"
+}, {
+	"italian": "piazza",
+	"english": "square"
+}, {
+	"italian": "capitale",
+	"english": "capital"
+}, {
+	"italian": "se stesso",
+	"english": "self"
+}, {
+	"italian": "tiro",
+	"english": "shot"
+}, {
+	"italian": "vita",
+	"english": "living"
+}, {
+	"italian": "plastica",
+	"english": "plastic"
+}, {
+	"italian": "sensazione",
+	"english": "feeling"
+}, {
+	"italian": "risparmi",
+	"english": "savings"
+}, {
+	"italian": "animale",
+	"english": "animal"
+}, {
+	"italian": "massimo",
+	"english": "maximum"
+}, {
+	"italian": "romanzo",
+	"english": "novel"
+}, {
+	"italian": "abbondanza",
+	"english": "plenty"
+}, {
+	"italian": "sfondo",
+	"english": "background"
+}, {
+	"italian": "rosso",
+	"english": "red"
+}, {
+	"italian": "forza",
+	"english": "strength"
+}, {
+	"italian": "verdura",
+	"english": "vegetable"
+}, {
+	"italian": "ideale",
+	"english": "ideal"
+}, {
+	"italian": "cucina",
+	"english": "kitchen"
+}, {
+	"italian": "principio",
+	"english": "principle"
+}, {
+	"italian": "parente",
+	"english": "relative"
+}, {
+	"italian": "vendita",
+	"english": "sale"
+}, {
+	"italian": "strada",
+	"english": "street"
+}, {
+	"italian": "minimo",
+	"english": "minimum"
+}, {
+	"italian": "il percorso",
+	"english": "path"
+}, {
+	"italian": "mare",
+	"english": "sea"
+}, {
+	"italian": "Sud",
+	"english": "south"
+}, {
+	"italian": "stato",
+	"english": "status"
+}, {
+	"italian": "fiducia",
+	"english": "confidence"
+}, {
+	"italian": "figlia",
+	"english": "daughter"
+}, {
+	"italian": "grado",
+	"english": "degree"
+}, {
+	"italian": "dovere",
+	"english": "duty"
+}, {
+	"italian": "ora",
+	"english": "hour"
+}, {
+	"italian": "sostanza",
+	"english": "substance"
+}, {
+	"italian": "pomeriggio",
+	"english": "afternoon"
+}, {
+	"italian": "considerazione",
+	"english": "consideration"
+}, {
+	"italian": "oro",
+	"english": "gold"
+}, {
+	"italian": "missione",
+	"english": "mission"
+}, {
+	"italian": "porta",
+	"english": "door"
+}, {
+	"italian": "est",
+	"english": "east"
+}, {
+	"italian": "maniera",
+	"english": "manner"
+}, {
+	"italian": "incontro",
+	"english": "meeting"
+}, {
+	"italian": "parcheggio",
+	"english": "parking"
+}, {
+	"italian": "routine",
+	"english": "routine"
+}, {
+	"italian": "nuoto",
+	"english": "swimming"
+}, {
+	"italian": "linea aerea",
+	"english": "airline"
+}, {
+	"italian": "progettista",
+	"english": "designer"
+}, {
+	"italian": "Emergenza",
+	"english": "emergency"
+}, {
+	"italian": "sera",
+	"english": "evening"
+}, {
+	"italian": "estensione",
+	"english": "extension"
+}, {
+	"italian": "orrore",
+	"english": "horror"
+}, {
+	"italian": "montagna",
+	"english": "mountain"
+}, {
+	"italian": "paziente",
+	"english": "patient"
+}, {
+	"italian": "sollievo",
+	"english": "relief"
+}, {
+	"italian": "turista",
+	"english": "tourist"
+}, {
+	"italian": "ovest",
+	"english": "west"
+}, {
+	"italian": "a parte",
+	"english": "aside"
+}, {
+	"italian": "fratello",
+	"english": "brother"
+}, {
+	"italian": "esperto",
+	"english": "expert"
+}, {
+	"italian": "Dio",
+	"english": "god"
+}, {
+	"italian": "nativo",
+	"english": "native"
+}, {
+	"italian": "apertura",
+	"english": "opening"
+}, {
+	"italian": "ragazzo",
+	"english": "boy"
+}, {
+	"italian": "specialista",
+	"english": "specialist"
+}, {
+	"italian": "amaro",
+	"english": "bitter"
+}, {
+	"italian": "inferno",
+	"english": "hell"
+}, {
+	"italian": "incidente",
+	"english": "incident"
+}, {
+	"italian": "residente",
+	"english": "resident"
+}, {
+	"italian": "un",
+	"english": "a"
+}, {
+	"italian": "tu",
+	"english": "you"
+}, {
+	"italian": "esso",
+	"english": "it"
+}, {
+	"italian": "può",
+	"english": "can"
+}, {
+	"italian": "volere",
+	"english": "will"
+}, {
+	"italian": "Se",
+	"english": "if"
+}, {
+	"italian": "uno",
+	"english": "one"
+}, {
+	"italian": "molti",
+	"english": "many"
+}, {
+	"italian": "maggior parte",
+	"english": "most"
+}, {
+	"italian": "altro",
+	"english": "other"
+}, {
+	"italian": "bene",
+	"english": "good"
+}, {
+	"italian": "grande",
+	"english": "great"
+}, {
+	"italian": "pochi",
+	"english": "few"
+}, {
+	"italian": "potrebbe",
+	"english": "might"
+}, {
+	"italian": "ancora",
+	"english": "still"
+}, {
+	"italian": "pubblico",
+	"english": "public"
+}, {
+	"italian": "umano",
+	"english": "human"
+}, {
+	"italian": "del posto",
+	"english": "local"
+}, {
+	"italian": "generale",
+	"english": "general"
+}, {
+	"italian": "lei",
+	"english": "she"
+}, {
+	"italian": "specifica",
+	"english": "specific"
+}, {
+	"italian": "lungo",
+	"english": "long"
+}, {
+	"italian": "alto",
+	"english": "high"
+}, {
+	"italian": "stasera",
+	"english": "tonight"
+}, {
+	"italian": "Comune",
+	"english": "common"
+}, {
+	"italian": "semplice",
+	"english": "simple"
+}, {
+	"italian": "passato",
+	"english": "past"
+}, {
+	"italian": "grande",
+	"english": "big"
+}, {
+	"italian": "possibile",
+	"english": "possible"
+}, {
+	"italian": "particolare",
+	"english": "particular"
+}, {
+	"italian": "oggi",
+	"english": "today"
+}, {
+	"italian": "personale",
+	"english": "personal"
+}, {
+	"italian": "attuale",
+	"english": "current"
+}, {
+	"italian": "nazionale",
+	"english": "national"
+}, {
+	"italian": "naturale",
+	"english": "natural"
+}, {
+	"italian": "fisico",
+	"english": "physical"
+}, {
+	"italian": "secondo",
+	"english": "second"
+}, {
+	"italian": "individuale",
+	"english": "individual"
+}, {
+	"italian": "principale",
+	"english": "main"
+}, {
+	"italian": "potenziale",
+	"english": "potential"
+}, {
+	"italian": "professionale",
+	"english": "professional"
+}, {
+	"italian": "internazionale",
+	"english": "international"
+}, {
+	"italian": "alternativa",
+	"english": "alternative"
+}, {
+	"italian": "a seguire",
+	"english": "following"
+}, {
+	"italian": "speciale",
+	"english": "special"
+}, {
+	"italian": "lavoro",
+	"english": "working"
+}, {
+	"italian": "intero",
+	"english": "whole"
+}, {
+	"italian": "freddo",
+	"english": "cold"
+}, {
+	"italian": "commerciale",
+	"english": "commercial"
+}, {
+	"italian": "Basso",
+	"english": "low"
+}, {
+	"italian": "primario",
+	"english": "primary"
+}, {
+	"italian": "di valore",
+	"english": "worth"
+}, {
+	"italian": "necessario",
+	"english": "necessary"
+}, {
+	"italian": "positivo",
+	"english": "positive"
+}, {
+	"italian": "creativo",
+	"english": "creative"
+}, {
+	"italian": "lieto",
+	"english": "glad"
+}, {
+	"italian": "dovuto",
+	"english": "due"
+}, {
+	"italian": "efficace",
+	"english": "effective"
+}, {
+	"italian": "in mezzo",
+	"english": "middle"
+}, {
+	"italian": "regolare",
+	"english": "regular"
+}, {
+	"italian": "indipendente",
+	"english": "independent"
+}, {
+	"italian": "originale",
+	"english": "original"
+}, {
+	"italian": "bellissimo",
+	"english": "beautiful"
+}, {
+	"italian": "attivo",
+	"english": "active"
+}, {
+	"italian": "negativo",
+	"english": "negative"
+}, {
+	"italian": "sicuro",
+	"english": "safe"
+}, {
+	"italian": "visivo",
+	"english": "visual"
+}, {
+	"italian": "al di là",
+	"english": "beyond"
+}, {
+	"italian": "junior",
+	"english": "junior"
+}, {
+	"italian": "unico",
+	"english": "unique"
+}, {
+	"italian": "qualsiasi cosa",
+	"english": "anything"
+}, {
+	"italian": "classico",
+	"english": "classic"
+}, {
+	"italian": "finale",
+	"english": "final"
+}, {
+	"italian": "privato",
+	"english": "private"
+}, {
+	"italian": "occidentale",
+	"english": "western"
+}, {
+	"italian": "familiare",
+	"english": "familiar"
+}, {
+	"italian": "ufficiale",
+	"english": "official"
+}, {
+	"italian": "ampio",
+	"english": "broad"
+}, {
+	"italian": "confortevole",
+	"english": "comfortable"
+}, {
+	"italian": "può essere",
+	"english": "maybe"
+}, {
+	"italian": "ricco",
+	"english": "rich"
+}, {
+	"italian": "giovane",
+	"english": "young"
+}, {
+	"italian": "pesante",
+	"english": "heavy"
+}, {
+	"italian": "Ciao",
+	"english": "hello"
+}, {
+	"italian": "prezioso",
+	"english": "valuable"
+}, {
+	"italian": "principale",
+	"english": "leading"
+}, {
+	"italian": "normale",
+	"english": "normal"
+}, {
+	"italian": "segreto",
+	"english": "secret"
+}, {
+	"italian": "difficile",
+	"english": "tough"
+}, {
+	"italian": "in profondità",
+	"english": "deep"
+}, {
+	"italian": "obbiettivo",
+	"english": "objective"
+}, {
+	"italian": "chimico",
+	"english": "chemical"
+}, {
+	"italian": "estremo",
+	"english": "extreme"
+}, {
+	"italian": "formale",
+	"english": "formal"
+}, {
+	"italian": "di fronte",
+	"english": "opposite"
+}, {
+	"italian": "a distanza",
+	"english": "remote"
+}, {
+	"italian": "vasto",
+	"english": "vast"
+}, {
+	"italian": "da qualche parte",
+	"english": "somewhere"
+}, {
+	"italian": "dovunque",
+	"english": "anywhere"
+}, {
+	"italian": "buio",
+	"english": "dark"
+}, {
+	"italian": "interno",
+	"english": "internal"
+}, {
+	"italian": "sensibile",
+	"english": "sensitive"
+}, {
+	"italian": "costante",
+	"english": "constant"
+}, {
+	"italian": "crudo",
+	"english": "raw"
+}, {
+	"italian": "morbido",
+	"english": "soft"
+}, {
+	"italian": "solido",
+	"english": "solid"
+}, {
+	"italian": "strano",
+	"english": "weird"
+}, {
+	"italian": "annuale",
+	"english": "annual"
+}, {
+	"italian": "defunto",
+	"english": "dead"
+}, {
+	"italian": "per sempre",
+	"english": "forever"
+}, {
+	"italian": "nessuno",
+	"english": "nobody"
+}, {
+	"italian": "tondo",
+	"english": "round"
+}, {
+	"italian": "mentre",
+	"english": "whereas"
+}, {
+	"italian": "equivalente",
+	"english": "equivalent"
+}, {
+	"italian": "spirituale",
+	"english": "spiritual"
+}, {
+	"italian": "adulto",
+	"english": "adult"
+}, {
+	"italian": "pazzo",
+	"english": "crazy"
+}, {
+	"italian": "precedente",
+	"english": "prior"
+}, {
+	"italian": "ruvido",
+	"english": "rough"
+}, {
+	"italian": "triste",
+	"english": "sad"
+}, {
+	"italian": "malato",
+	"english": "sick"
+}, {
+	"italian": "esterno",
+	"english": "external"
+}, {
+	"italian": "illegale",
+	"english": "illegal"
+}, {
+	"italian": "mobile",
+	"english": "mobile"
+}, {
+	"italian": "cattiva",
+	"english": "nasty"
+}, {
+	"italian": "ordinario",
+	"english": "ordinary"
+}, {
+	"italian": "reale",
+	"english": "royal"
+}, {
+	"italian": "anziano",
+	"english": "senior"
+}, {
+	"italian": "superiore",
+	"english": "upper"
+}, {
+	"italian": "dipendente",
+	"english": "dependent"
+}, {
+	"italian": "divertente",
+	"english": "funny"
+}, {
+	"italian": "dolce",
+	"english": "sweet"
+}, {
+	"italian": "di sopra",
+	"english": "upstairs"
+}, {
+	"italian": "solito",
+	"english": "usual"
+}, {
+	"italian": "all'estero",
+	"english": "abroad"
+}, {
+	"italian": "grande",
+	"english": "grand"
+}, {
+	"italian": "maschio",
+	"english": "male"
+}, {
+	"italian": "nessuno",
+	"english": "anybody"
+}, {
+	"italian": "brillante",
+	"english": "brilliant"
+}, {
+	"italian": "caro",
+	"english": "dear"
+}, {
+	"italian": "ubriaco",
+	"english": "drunk"
+}, {
+	"italian": "femmina",
+	"english": "female"
+}, {
+	"italian": "inevitabile",
+	"english": "inevitable"
+}, {
+	"italian": "pulito",
+	"english": "neat"
+}, {
+	"italian": "rappresentante",
+	"english": "representative"
+}, {
+	"italian": "sciocco",
+	"english": "silly"
+}, {
+	"italian": "stupido",
+	"english": "stupid"
+}, {
+	"italian": "temporaneo",
+	"english": "temporary"
+}, {
+	"italian": "Domani",
+	"english": "tomorrow"
+}, {
+	"italian": "ieri",
+	"english": "yesterday"
+}]

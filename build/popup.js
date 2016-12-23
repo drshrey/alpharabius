@@ -21708,8 +21708,63 @@
 	              ),
 	              _react2.default.createElement(
 	                'option',
-	                { value: 'Portuguese' },
-	                'portuguese'
+	                { value: 'Arabic' },
+	                'arabic'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Catalan' },
+	                'catalan'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Chinese' },
+	                'chinese'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Danish' },
+	                'danish'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Dutch' },
+	                'dutch'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Hebrew' },
+	                'hebrew'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Italian' },
+	                'italian'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Japanese' },
+	                'japanese'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Kannada' },
+	                'kannada'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Korean' },
+	                'korean'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Latin' },
+	                'latin'
+	              ),
+	              _react2.default.createElement(
+	                'option',
+	                { value: 'Romanian' },
+	                'romanian'
 	              )
 	            )
 	          )

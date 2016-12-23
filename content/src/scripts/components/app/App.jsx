@@ -17,6 +17,20 @@ import spanisheng from '../../../../../data/spanish.json';
 import porteng from '../../../../../data/portuguese.json';
 import frencheng from '../../../../../data/french.json';
 import germaneng from '../../../../../data/german.json';
+import arabicEng from '../../../../../data/arabic.json';
+import catalanEng from '../../../../../data/catalan.json';
+import chineseEng from '../../../../../data/chinese.json';
+import danishEng from '../../../../../data/danish.json';
+import dutchEng from '../../../../../data/dutch.json';
+import hebrewEng from '../../../../../data/hebrew.json';
+import italianEng from '../../../../../data/italian.json';
+import japaneseEng from '../../../../../data/japanese.json';
+import kannadaEng from '../../../../../data/kannada.json';
+import koreanEng from '../../../../../data/korean.json';
+import latinEng from '../../../../../data/latin.json';
+import romanianEng from '../../../../../data/romanian.json';
+
+
 import firebase from 'firebase';
 import Chance from 'chance';
 
@@ -152,7 +166,7 @@ function getElements(){
 
   // NYT Mobile
   if(baseUri.startsWith(SITES.NYTIMES)){
-    // console.log("NYTIMES");
+    console.log("NYTIMES");
     return handleNYT(baseUri);
   }
 
@@ -198,9 +212,56 @@ function changeLang(lang){
       langDict = germaneng;
       langKey = "german";
       break;
+    case "Arabic":
+      langDict = arabicEng;
+      langKey = "arabic";
+      break;
+    case "Catalan":
+      langDict = catalanEng;
+      langKey = "catalan";
+      break;
+    case "Chinese":
+      langDict = chineseEng;
+      langKey = "chinese";
+      break;
+    case "Danish":
+      langDict = danishEng;
+      langKey = "danish";
+      break;
+    case "Dutch":
+      langDict = dutchEng;
+      langKey = "dutch";
+      break;
+    case "Hebrew":
+      langDict = hebrewEng;
+      langKey = "hebrew";
+    case "Italian":
+      langDict = italianEng;
+      langKey = "italian";
+      break;
+    case "Japanese":
+      langDict = japaneseEng;
+      langKey = "japanese";
+      break;
+    case "Kannada":
+      langDict = kannadaEng;
+      langKey = "kannada";
+      break;
+    case "Korean":
+      langDict = koreanEng;
+      langKey = "korean";
+      break;
+    case "Latin":
+      langDict = latinEng;
+      langKey = "latin";
+      break;
+    case "Romanian":
+      langDict = romanianEng;
+      langKey = "romanian";
+      break;
     case "English":
-      engTrue = true;
-    default:
+      engTrue = true;    
+    default:   
       break;
   }
   if(elements && (langDict && langKey) || (engTrue)){
@@ -213,7 +274,11 @@ function changeLang(lang){
 
     let randWords = [];
     let visited = {};
-    for(var i = 0;i < (langDict.length * 0.2); i++){
+    let modifier = 1;
+    if(langKey == "french" || langKey == "german" || langKey == "portuguese" || langKey == "spanish"){
+      modifier = 0.3;
+    }
+    for(var i = 0;i < (langDict.length * modifier); i++){
       let randIndex = Math.floor(Math.random() * langDict.length);
       let randWord = langDict[randIndex];
       if(!visited[randWord["english"]]){

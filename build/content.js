@@ -25007,11 +25007,59 @@
 
 	var _german2 = _interopRequireDefault(_german);
 
-	var _firebase = __webpack_require__(518);
+	var _arabic = __webpack_require__(518);
+
+	var _arabic2 = _interopRequireDefault(_arabic);
+
+	var _catalan = __webpack_require__(519);
+
+	var _catalan2 = _interopRequireDefault(_catalan);
+
+	var _chinese = __webpack_require__(520);
+
+	var _chinese2 = _interopRequireDefault(_chinese);
+
+	var _danish = __webpack_require__(521);
+
+	var _danish2 = _interopRequireDefault(_danish);
+
+	var _dutch = __webpack_require__(522);
+
+	var _dutch2 = _interopRequireDefault(_dutch);
+
+	var _hebrew = __webpack_require__(523);
+
+	var _hebrew2 = _interopRequireDefault(_hebrew);
+
+	var _italian = __webpack_require__(524);
+
+	var _italian2 = _interopRequireDefault(_italian);
+
+	var _japanese = __webpack_require__(525);
+
+	var _japanese2 = _interopRequireDefault(_japanese);
+
+	var _kannada = __webpack_require__(526);
+
+	var _kannada2 = _interopRequireDefault(_kannada);
+
+	var _korean = __webpack_require__(527);
+
+	var _korean2 = _interopRequireDefault(_korean);
+
+	var _latin = __webpack_require__(528);
+
+	var _latin2 = _interopRequireDefault(_latin);
+
+	var _romanian = __webpack_require__(529);
+
+	var _romanian2 = _interopRequireDefault(_romanian);
+
+	var _firebase = __webpack_require__(530);
 
 	var _firebase2 = _interopRequireDefault(_firebase);
 
-	var _chance = __webpack_require__(524);
+	var _chance = __webpack_require__(536);
 
 	var _chance2 = _interopRequireDefault(_chance);
 
@@ -25034,7 +25082,7 @@
 	var savedFb = false;
 	var CURRENT_LANGUAGE = '';
 
-	var Mark = __webpack_require__(529);
+	var Mark = __webpack_require__(541);
 	(0, _reactTapEventPlugin2.default)();
 
 	var style = {
@@ -25153,7 +25201,7 @@
 
 	  // NYT Mobile
 	  if (baseUri.startsWith(SITES.NYTIMES)) {
-	    // console.log("NYTIMES");
+	    console.log("NYTIMES");
 	    return handleNYT(baseUri);
 	  }
 
@@ -25199,6 +25247,53 @@
 	      langDict = _german2.default;
 	      langKey = "german";
 	      break;
+	    case "Arabic":
+	      langDict = _arabic2.default;
+	      langKey = "arabic";
+	      break;
+	    case "Catalan":
+	      langDict = _catalan2.default;
+	      langKey = "catalan";
+	      break;
+	    case "Chinese":
+	      langDict = _chinese2.default;
+	      langKey = "chinese";
+	      break;
+	    case "Danish":
+	      langDict = _danish2.default;
+	      langKey = "danish";
+	      break;
+	    case "Dutch":
+	      langDict = _dutch2.default;
+	      langKey = "dutch";
+	      break;
+	    case "Hebrew":
+	      langDict = _hebrew2.default;
+	      langKey = "hebrew";
+	    case "Italian":
+	      langDict = _italian2.default;
+	      langKey = "italian";
+	      break;
+	    case "Japanese":
+	      langDict = _japanese2.default;
+	      langKey = "japanese";
+	      break;
+	    case "Kannada":
+	      langDict = _kannada2.default;
+	      langKey = "kannada";
+	      break;
+	    case "Korean":
+	      langDict = _korean2.default;
+	      langKey = "korean";
+	      break;
+	    case "Latin":
+	      langDict = _latin2.default;
+	      langKey = "latin";
+	      break;
+	    case "Romanian":
+	      langDict = _romanian2.default;
+	      langKey = "romanian";
+	      break;
 	    case "English":
 	      engTrue = true;
 	    default:
@@ -25214,7 +25309,11 @@
 
 	    var randWords = [];
 	    var visited = {};
-	    for (var i = 0; i < langDict.length * 0.2; i++) {
+	    var modifier = 1;
+	    if (langKey == "french" || langKey == "german" || langKey == "portuguese" || langKey == "spanish") {
+	      modifier = 0.3;
+	    }
+	    for (var i = 0; i < langDict.length * modifier; i++) {
 	      var randIndex = Math.floor(Math.random() * langDict.length);
 	      var randWord = langDict[randIndex];
 	      if (!visited[randWord["english"]]) {
@@ -88108,6 +88207,35034 @@
 
 /***/ },
 /* 518 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"arabic": "الناس",
+			"english": "people"
+		},
+		{
+			"arabic": "التاريخ",
+			"english": "history"
+		},
+		{
+			"arabic": "طريق",
+			"english": "way"
+		},
+		{
+			"arabic": "فن",
+			"english": "art"
+		},
+		{
+			"arabic": "العالم",
+			"english": "world"
+		},
+		{
+			"arabic": "معلومات",
+			"english": "information"
+		},
+		{
+			"arabic": "رسم خريطة",
+			"english": "map"
+		},
+		{
+			"arabic": "اثنان",
+			"english": "two"
+		},
+		{
+			"arabic": "أسرة",
+			"english": "family"
+		},
+		{
+			"arabic": "حكومة",
+			"english": "government"
+		},
+		{
+			"arabic": "الصحة",
+			"english": "health"
+		},
+		{
+			"arabic": "نظام",
+			"english": "system"
+		},
+		{
+			"arabic": "الحاسوب",
+			"english": "computer"
+		},
+		{
+			"arabic": "لحم",
+			"english": "meat"
+		},
+		{
+			"arabic": "عام",
+			"english": "year"
+		},
+		{
+			"arabic": "شكر",
+			"english": "thanks"
+		},
+		{
+			"arabic": "موسيقى",
+			"english": "music"
+		},
+		{
+			"arabic": "شخص",
+			"english": "person"
+		},
+		{
+			"arabic": "قراءة",
+			"english": "reading"
+		},
+		{
+			"arabic": "طريقة",
+			"english": "method"
+		},
+		{
+			"arabic": "البيانات",
+			"english": "data"
+		},
+		{
+			"arabic": "طعام",
+			"english": "food"
+		},
+		{
+			"arabic": "فهم",
+			"english": "understanding"
+		},
+		{
+			"arabic": "نظرية",
+			"english": "theory"
+		},
+		{
+			"arabic": "القانون",
+			"english": "law"
+		},
+		{
+			"arabic": "طائر",
+			"english": "bird"
+		},
+		{
+			"arabic": "الأدب",
+			"english": "literature"
+		},
+		{
+			"arabic": "مشكلة",
+			"english": "problem"
+		},
+		{
+			"arabic": "البرمجيات",
+			"english": "software"
+		},
+		{
+			"arabic": "مراقبة",
+			"english": "control"
+		},
+		{
+			"arabic": "معرفة",
+			"english": "knowledge"
+		},
+		{
+			"arabic": "قوة",
+			"english": "power"
+		},
+		{
+			"arabic": "القدرة",
+			"english": "ability"
+		},
+		{
+			"arabic": "علم الاقتصاد",
+			"english": "economics"
+		},
+		{
+			"arabic": "حب",
+			"english": "love"
+		},
+		{
+			"arabic": "الإنترنت",
+			"english": "internet"
+		},
+		{
+			"arabic": "تلفزيون",
+			"english": "television"
+		},
+		{
+			"arabic": "علم",
+			"english": "science"
+		},
+		{
+			"arabic": "مكتبة",
+			"english": "library"
+		},
+		{
+			"arabic": "طبيعة",
+			"english": "nature"
+		},
+		{
+			"arabic": "حقيقة",
+			"english": "fact"
+		},
+		{
+			"arabic": "المنتج",
+			"english": "product"
+		},
+		{
+			"arabic": "فكرة",
+			"english": "idea"
+		},
+		{
+			"arabic": "درجة الحرارة",
+			"english": "temperature"
+		},
+		{
+			"arabic": "استثمار",
+			"english": "investment"
+		},
+		{
+			"arabic": "منطقة",
+			"english": "area"
+		},
+		{
+			"arabic": "المجتمع",
+			"english": "society"
+		},
+		{
+			"arabic": "نشاط",
+			"english": "activity"
+		},
+		{
+			"arabic": "قصة",
+			"english": "story"
+		},
+		{
+			"arabic": "صناعة",
+			"english": "industry"
+		},
+		{
+			"arabic": "وسائل الإعلام",
+			"english": "media"
+		},
+		{
+			"arabic": "شيء",
+			"english": "thing"
+		},
+		{
+			"arabic": "فرن",
+			"english": "oven"
+		},
+		{
+			"arabic": "مجتمع",
+			"english": "community"
+		},
+		{
+			"arabic": "تعريف",
+			"english": "definition"
+		},
+		{
+			"arabic": "سلامة",
+			"english": "safety"
+		},
+		{
+			"arabic": "جودة",
+			"english": "quality"
+		},
+		{
+			"arabic": "تطوير",
+			"english": "development"
+		},
+		{
+			"arabic": "لغة",
+			"english": "language"
+		},
+		{
+			"arabic": "إدارة",
+			"english": "management"
+		},
+		{
+			"arabic": "لاعب",
+			"english": "player"
+		},
+		{
+			"arabic": "تشكيلة",
+			"english": "variety"
+		},
+		{
+			"arabic": "فيديو",
+			"english": "video"
+		},
+		{
+			"arabic": "أسبوع",
+			"english": "week"
+		},
+		{
+			"arabic": "أمن",
+			"english": "security"
+		},
+		{
+			"arabic": "بلد",
+			"english": "country"
+		},
+		{
+			"arabic": "امتحان",
+			"english": "exam"
+		},
+		{
+			"arabic": "فيلم",
+			"english": "movie"
+		},
+		{
+			"arabic": "منظمة",
+			"english": "organization"
+		},
+		{
+			"arabic": "معدات",
+			"english": "equipment"
+		},
+		{
+			"arabic": "علوم فيزيائية",
+			"english": "physics"
+		},
+		{
+			"arabic": "تحليل",
+			"english": "analysis"
+		},
+		{
+			"arabic": "سياسة",
+			"english": "policy"
+		},
+		{
+			"arabic": "سلسلة",
+			"english": "series"
+		},
+		{
+			"arabic": "فكر",
+			"english": "thought"
+		},
+		{
+			"arabic": "أساس",
+			"english": "basis"
+		},
+		{
+			"arabic": "خليل",
+			"english": "boyfriend"
+		},
+		{
+			"arabic": "اتجاه",
+			"english": "direction"
+		},
+		{
+			"arabic": "إستراتيجية",
+			"english": "strategy"
+		},
+		{
+			"arabic": "تكنولوجيا",
+			"english": "technology"
+		},
+		{
+			"arabic": "جيش",
+			"english": "army"
+		},
+		{
+			"arabic": "الة تصوير",
+			"english": "camera"
+		},
+		{
+			"arabic": "حرية",
+			"english": "freedom"
+		},
+		{
+			"arabic": "ورقة",
+			"english": "paper"
+		},
+		{
+			"arabic": "بيئة",
+			"english": "environment"
+		},
+		{
+			"arabic": "طفل",
+			"english": "child"
+		},
+		{
+			"arabic": "مثل",
+			"english": "instance"
+		},
+		{
+			"arabic": "شهر",
+			"english": "month"
+		},
+		{
+			"arabic": "حقيقة",
+			"english": "truth"
+		},
+		{
+			"arabic": "تسويق",
+			"english": "marketing"
+		},
+		{
+			"arabic": "جامعة",
+			"english": "university"
+		},
+		{
+			"arabic": "جاري الكتابة",
+			"english": "writing"
+		},
+		{
+			"arabic": "مقالة",
+			"english": "article"
+		},
+		{
+			"arabic": "قسم",
+			"english": "department"
+		},
+		{
+			"arabic": "فرق",
+			"english": "difference"
+		},
+		{
+			"arabic": "هدف",
+			"english": "goal"
+		},
+		{
+			"arabic": "أخبار",
+			"english": "news"
+		},
+		{
+			"arabic": "جمهور",
+			"english": "audience"
+		},
+		{
+			"arabic": "صيد السمك",
+			"english": "fishing"
+		},
+		{
+			"arabic": "نمو",
+			"english": "growth"
+		},
+		{
+			"arabic": "دخل",
+			"english": "income"
+		},
+		{
+			"arabic": "زواج",
+			"english": "marriage"
+		},
+		{
+			"arabic": "مستخدم",
+			"english": "user"
+		},
+		{
+			"arabic": "مجموعة",
+			"english": "combination"
+		},
+		{
+			"arabic": "إخفاق",
+			"english": "failure"
+		},
+		{
+			"arabic": "معنى",
+			"english": "meaning"
+		},
+		{
+			"arabic": "دواء",
+			"english": "medicine"
+		},
+		{
+			"arabic": "فلسفة",
+			"english": "philosophy"
+		},
+		{
+			"arabic": "مدرس",
+			"english": "teacher"
+		},
+		{
+			"arabic": "الاتصالات",
+			"english": "communication"
+		},
+		{
+			"arabic": "ليل",
+			"english": "night"
+		},
+		{
+			"arabic": "كيمياء",
+			"english": "chemistry"
+		},
+		{
+			"arabic": "مرض",
+			"english": "disease"
+		},
+		{
+			"arabic": "أسطوانة",
+			"english": "disk"
+		},
+		{
+			"arabic": "طاقة",
+			"english": "energy"
+		},
+		{
+			"arabic": "دولة",
+			"english": "nation"
+		},
+		{
+			"arabic": "طريق",
+			"english": "road"
+		},
+		{
+			"arabic": "دور",
+			"english": "role"
+		},
+		{
+			"arabic": "حساء",
+			"english": "soup"
+		},
+		{
+			"arabic": "إعلان",
+			"english": "advertising"
+		},
+		{
+			"arabic": "موقع",
+			"english": "location"
+		},
+		{
+			"arabic": "نجاح",
+			"english": "success"
+		},
+		{
+			"arabic": "إضافة",
+			"english": "addition"
+		},
+		{
+			"arabic": "شقة",
+			"english": "apartment"
+		},
+		{
+			"arabic": "التعليم",
+			"english": "education"
+		},
+		{
+			"arabic": "الرياضيات",
+			"english": "math"
+		},
+		{
+			"arabic": "لحظة",
+			"english": "moment"
+		},
+		{
+			"arabic": "لوحة",
+			"english": "painting"
+		},
+		{
+			"arabic": "سياسة",
+			"english": "politics"
+		},
+		{
+			"arabic": "انتباه",
+			"english": "attention"
+		},
+		{
+			"arabic": "قرار",
+			"english": "decision"
+		},
+		{
+			"arabic": "حدث",
+			"english": "event"
+		},
+		{
+			"arabic": "الملكية",
+			"english": "property"
+		},
+		{
+			"arabic": "التسوق",
+			"english": "shopping"
+		},
+		{
+			"arabic": "طالب علم",
+			"english": "student"
+		},
+		{
+			"arabic": "خشب",
+			"english": "wood"
+		},
+		{
+			"arabic": "منافسة",
+			"english": "competition"
+		},
+		{
+			"arabic": "توزيع",
+			"english": "distribution"
+		},
+		{
+			"arabic": "تسلية",
+			"english": "entertainment"
+		},
+		{
+			"arabic": "مكتب",
+			"english": "office"
+		},
+		{
+			"arabic": "عدد السكان",
+			"english": "population"
+		},
+		{
+			"arabic": "رئيس",
+			"english": "president"
+		},
+		{
+			"arabic": "وحدة",
+			"english": "unit"
+		},
+		{
+			"arabic": "فئة",
+			"english": "category"
+		},
+		{
+			"arabic": "سيجارة",
+			"english": "cigarette"
+		},
+		{
+			"arabic": "سياق الكلام",
+			"english": "context"
+		},
+		{
+			"arabic": "المقدمة",
+			"english": "introduction"
+		},
+		{
+			"arabic": "فرصة",
+			"english": "opportunity"
+		},
+		{
+			"arabic": "أداء",
+			"english": "performance"
+		},
+		{
+			"arabic": "سائق",
+			"english": "driver"
+		},
+		{
+			"arabic": "طيران",
+			"english": "flight"
+		},
+		{
+			"arabic": "الطول",
+			"english": "length"
+		},
+		{
+			"arabic": "مجلة",
+			"english": "magazine"
+		},
+		{
+			"arabic": "جريدة",
+			"english": "newspaper"
+		},
+		{
+			"arabic": "صلة",
+			"english": "relationship"
+		},
+		{
+			"arabic": "تعليم",
+			"english": "teaching"
+		},
+		{
+			"arabic": "زنزانة",
+			"english": "cell"
+		},
+		{
+			"arabic": "تاجر",
+			"english": "dealer"
+		},
+		{
+			"arabic": "العثور على",
+			"english": "finding"
+		},
+		{
+			"arabic": "بحيرة",
+			"english": "lake"
+		},
+		{
+			"arabic": "عضو",
+			"english": "member"
+		},
+		{
+			"arabic": "الرسالة",
+			"english": "message"
+		},
+		{
+			"arabic": "هاتف",
+			"english": "phone"
+		},
+		{
+			"arabic": "مشهد",
+			"english": "scene"
+		},
+		{
+			"arabic": "مظهر",
+			"english": "appearance"
+		},
+		{
+			"arabic": "جمعية",
+			"english": "association"
+		},
+		{
+			"arabic": "مفهوم",
+			"english": "concept"
+		},
+		{
+			"arabic": "زبون",
+			"english": "customer"
+		},
+		{
+			"arabic": "الموت",
+			"english": "death"
+		},
+		{
+			"arabic": "نقاش",
+			"english": "discussion"
+		},
+		{
+			"arabic": "إسكان",
+			"english": "housing"
+		},
+		{
+			"arabic": "تضخم مالي",
+			"english": "inflation"
+		},
+		{
+			"arabic": "تأمين",
+			"english": "insurance"
+		},
+		{
+			"arabic": "مزاج",
+			"english": "mood"
+		},
+		{
+			"arabic": "امرأة",
+			"english": "woman"
+		},
+		{
+			"arabic": "النصيحة",
+			"english": "advice"
+		},
+		{
+			"arabic": "دم",
+			"english": "blood"
+		},
+		{
+			"arabic": "مجهود",
+			"english": "effort"
+		},
+		{
+			"arabic": "التعبير",
+			"english": "expression"
+		},
+		{
+			"arabic": "أهمية",
+			"english": "importance"
+		},
+		{
+			"arabic": "رأي",
+			"english": "opinion"
+		},
+		{
+			"arabic": "دفع",
+			"english": "payment"
+		},
+		{
+			"arabic": "واقع",
+			"english": "reality"
+		},
+		{
+			"arabic": "مسؤولية",
+			"english": "responsibility"
+		},
+		{
+			"arabic": "حالة",
+			"english": "situation"
+		},
+		{
+			"arabic": "مهارة",
+			"english": "skill"
+		},
+		{
+			"arabic": "بيان",
+			"english": "statement"
+		},
+		{
+			"arabic": "ثروة",
+			"english": "wealth"
+		},
+		{
+			"arabic": "تطبيق",
+			"english": "application"
+		},
+		{
+			"arabic": "مدينة",
+			"english": "city"
+		},
+		{
+			"arabic": "مقاطعة",
+			"english": "county"
+		},
+		{
+			"arabic": "عمق",
+			"english": "depth"
+		},
+		{
+			"arabic": "عزبة",
+			"english": "estate"
+		},
+		{
+			"arabic": "أساس",
+			"english": "foundation"
+		},
+		{
+			"arabic": "جدة",
+			"english": "grandmother"
+		},
+		{
+			"arabic": "قلب",
+			"english": "heart"
+		},
+		{
+			"arabic": "منظور",
+			"english": "perspective"
+		},
+		{
+			"arabic": "صورة فوتوغرافية",
+			"english": "photo"
+		},
+		{
+			"arabic": "وصفة",
+			"english": "recipe"
+		},
+		{
+			"arabic": "ستوديو",
+			"english": "studio"
+		},
+		{
+			"arabic": "موضوع",
+			"english": "topic"
+		},
+		{
+			"arabic": "مجموعة",
+			"english": "collection"
+		},
+		{
+			"arabic": "كآبة",
+			"english": "depression"
+		},
+		{
+			"arabic": "خيال",
+			"english": "imagination"
+		},
+		{
+			"arabic": "شغف",
+			"english": "passion"
+		},
+		{
+			"arabic": "النسبة المئوية",
+			"english": "percentage"
+		},
+		{
+			"arabic": "مورد",
+			"english": "resource"
+		},
+		{
+			"arabic": "ضبط",
+			"english": "setting"
+		},
+		{
+			"arabic": "ميلادي",
+			"english": "ad"
+		},
+		{
+			"arabic": "وكالة",
+			"english": "agency"
+		},
+		{
+			"arabic": "كلية",
+			"english": "college"
+		},
+		{
+			"arabic": "صلة",
+			"english": "connection"
+		},
+		{
+			"arabic": "نقد",
+			"english": "criticism"
+		},
+		{
+			"arabic": "دين",
+			"english": "debt"
+		},
+		{
+			"arabic": "وصف",
+			"english": "description"
+		},
+		{
+			"arabic": "ذاكرة",
+			"english": "memory"
+		},
+		{
+			"arabic": "صبر",
+			"english": "patience"
+		},
+		{
+			"arabic": "سكرتير",
+			"english": "secretary"
+		},
+		{
+			"arabic": "حل",
+			"english": "solution"
+		},
+		{
+			"arabic": "إدارة",
+			"english": "administration"
+		},
+		{
+			"arabic": "جانب",
+			"english": "aspect"
+		},
+		{
+			"arabic": "موقف",
+			"english": "attitude"
+		},
+		{
+			"arabic": "مدير",
+			"english": "director"
+		},
+		{
+			"arabic": "شخصية",
+			"english": "personality"
+		},
+		{
+			"arabic": "علم النفس",
+			"english": "psychology"
+		},
+		{
+			"arabic": "توصية",
+			"english": "recommendation"
+		},
+		{
+			"arabic": "استجابة",
+			"english": "response"
+		},
+		{
+			"arabic": "اختيار",
+			"english": "selection"
+		},
+		{
+			"arabic": "تخزين",
+			"english": "storage"
+		},
+		{
+			"arabic": "الإصدار",
+			"english": "version"
+		},
+		{
+			"arabic": "كحول",
+			"english": "alcohol"
+		},
+		{
+			"arabic": "جدال",
+			"english": "argument"
+		},
+		{
+			"arabic": "شكوى",
+			"english": "complaint"
+		},
+		{
+			"arabic": "عقد",
+			"english": "contract"
+		},
+		{
+			"arabic": "تشديد",
+			"english": "emphasis"
+		},
+		{
+			"arabic": "الطريق السريع",
+			"english": "highway"
+		},
+		{
+			"arabic": "خسارة",
+			"english": "loss"
+		},
+		{
+			"arabic": "عضوية",
+			"english": "membership"
+		},
+		{
+			"arabic": "ملكية",
+			"english": "possession"
+		},
+		{
+			"arabic": "تجهيز",
+			"english": "preparation"
+		},
+		{
+			"arabic": "شريحة لحم",
+			"english": "steak"
+		},
+		{
+			"arabic": "الاتحاد",
+			"english": "union"
+		},
+		{
+			"arabic": "الاتفاقية",
+			"english": "agreement"
+		},
+		{
+			"arabic": "سرطان",
+			"english": "cancer"
+		},
+		{
+			"arabic": "عملة",
+			"english": "currency"
+		},
+		{
+			"arabic": "توظيف",
+			"english": "employment"
+		},
+		{
+			"arabic": "هندسة",
+			"english": "engineering"
+		},
+		{
+			"arabic": "دخول",
+			"english": "entry"
+		},
+		{
+			"arabic": "تفاعل",
+			"english": "interaction"
+		},
+		{
+			"arabic": "خليط",
+			"english": "mixture"
+		},
+		{
+			"arabic": "تفضيل",
+			"english": "preference"
+		},
+		{
+			"arabic": "منطقة",
+			"english": "region"
+		},
+		{
+			"arabic": "جمهورية",
+			"english": "republic"
+		},
+		{
+			"arabic": "التقليد",
+			"english": "tradition"
+		},
+		{
+			"arabic": "فيروس",
+			"english": "virus"
+		},
+		{
+			"arabic": "الممثل",
+			"english": "actor"
+		},
+		{
+			"arabic": "قاعة الدراسة",
+			"english": "classroom"
+		},
+		{
+			"arabic": "خدمه توصيل",
+			"english": "delivery"
+		},
+		{
+			"arabic": "جهاز",
+			"english": "device"
+		},
+		{
+			"arabic": "صعوبة",
+			"english": "difficulty"
+		},
+		{
+			"arabic": "دراما",
+			"english": "drama"
+		},
+		{
+			"arabic": "انتخاب",
+			"english": "election"
+		},
+		{
+			"arabic": "محرك",
+			"english": "engine"
+		},
+		{
+			"arabic": "كرة القدم",
+			"english": "football"
+		},
+		{
+			"arabic": "توجيه",
+			"english": "guidance"
+		},
+		{
+			"arabic": "الفندق",
+			"english": "hotel"
+		},
+		{
+			"arabic": "مالك",
+			"english": "owner"
+		},
+		{
+			"arabic": "أفضلية",
+			"english": "priority"
+		},
+		{
+			"arabic": "حماية",
+			"english": "protection"
+		},
+		{
+			"arabic": "اقتراح",
+			"english": "suggestion"
+		},
+		{
+			"arabic": "توتر",
+			"english": "tension"
+		},
+		{
+			"arabic": "اختلاف",
+			"english": "variation"
+		},
+		{
+			"arabic": "قلق",
+			"english": "anxiety"
+		},
+		{
+			"arabic": "الغلاف الجوي",
+			"english": "atmosphere"
+		},
+		{
+			"arabic": "وعي",
+			"english": "awareness"
+		},
+		{
+			"arabic": "حمام",
+			"english": "bath"
+		},
+		{
+			"arabic": "خبز",
+			"english": "bread"
+		},
+		{
+			"arabic": "مرشح",
+			"english": "candidate"
+		},
+		{
+			"arabic": "مناخ",
+			"english": "climate"
+		},
+		{
+			"arabic": "مقارنة",
+			"english": "comparison"
+		},
+		{
+			"arabic": "ارتباك",
+			"english": "confusion"
+		},
+		{
+			"arabic": "إنشاءات",
+			"english": "construction"
+		},
+		{
+			"arabic": "مصعد",
+			"english": "elevator"
+		},
+		{
+			"arabic": "عاطفة",
+			"english": "emotion"
+		},
+		{
+			"arabic": "موظف",
+			"english": "employee"
+		},
+		{
+			"arabic": "صاحب العمل",
+			"english": "employer"
+		},
+		{
+			"arabic": "ضيف",
+			"english": "guest"
+		},
+		{
+			"arabic": "ارتفاع",
+			"english": "height"
+		},
+		{
+			"arabic": "قيادة",
+			"english": "leadership"
+		},
+		{
+			"arabic": "مجمع تجاري",
+			"english": "mall"
+		},
+		{
+			"arabic": "مدير",
+			"english": "manager"
+		},
+		{
+			"arabic": "عملية",
+			"english": "operation"
+		},
+		{
+			"arabic": "تسجيل",
+			"english": "recording"
+		},
+		{
+			"arabic": "عينة",
+			"english": "sample"
+		},
+		{
+			"arabic": "وسائل النقل",
+			"english": "transportation"
+		},
+		{
+			"arabic": "مؤسسة خيرية",
+			"english": "charity"
+		},
+		{
+			"arabic": "ابنه العم",
+			"english": "cousin"
+		},
+		{
+			"arabic": "كارثة",
+			"english": "disaster"
+		},
+		{
+			"arabic": "محرر",
+			"english": "editor"
+		},
+		{
+			"arabic": "كفاءة",
+			"english": "efficiency"
+		},
+		{
+			"arabic": "إثارة",
+			"english": "excitement"
+		},
+		{
+			"arabic": "مدى",
+			"english": "extent"
+		},
+		{
+			"arabic": "ردود الفعل",
+			"english": "feedback"
+		},
+		{
+			"arabic": "غيتار",
+			"english": "guitar"
+		},
+		{
+			"arabic": "واجب منزلي",
+			"english": "homework"
+		},
+		{
+			"arabic": "زعيم",
+			"english": "leader"
+		},
+		{
+			"arabic": "أمي",
+			"english": "mom"
+		},
+		{
+			"arabic": "نتيجة",
+			"english": "outcome"
+		},
+		{
+			"arabic": "إذن",
+			"english": "permission"
+		},
+		{
+			"arabic": "عرض",
+			"english": "presentation"
+		},
+		{
+			"arabic": "ترويج",
+			"english": "promotion"
+		},
+		{
+			"arabic": "انعكاس",
+			"english": "reflection"
+		},
+		{
+			"arabic": "ثلاجة",
+			"english": "refrigerator"
+		},
+		{
+			"arabic": "قرار",
+			"english": "resolution"
+		},
+		{
+			"arabic": "إيرادات",
+			"english": "revenue"
+		},
+		{
+			"arabic": "جلسة",
+			"english": "session"
+		},
+		{
+			"arabic": "مطرب",
+			"english": "singer"
+		},
+		{
+			"arabic": "تنس",
+			"english": "tennis"
+		},
+		{
+			"arabic": "سلة",
+			"english": "basket"
+		},
+		{
+			"arabic": "علاوة",
+			"english": "bonus"
+		},
+		{
+			"arabic": "خزانة",
+			"english": "cabinet"
+		},
+		{
+			"arabic": "مرحلة الطفولة",
+			"english": "childhood"
+		},
+		{
+			"arabic": "كنيسة",
+			"english": "church"
+		},
+		{
+			"arabic": "ملابس",
+			"english": "clothes"
+		},
+		{
+			"arabic": "قهوة",
+			"english": "coffee"
+		},
+		{
+			"arabic": "عشاء",
+			"english": "dinner"
+		},
+		{
+			"arabic": "رسم",
+			"english": "drawing"
+		},
+		{
+			"arabic": "شعر",
+			"english": "hair"
+		},
+		{
+			"arabic": "سمع",
+			"english": "hearing"
+		},
+		{
+			"arabic": "مبادرة",
+			"english": "initiative"
+		},
+		{
+			"arabic": "حكم",
+			"english": "judgment"
+		},
+		{
+			"arabic": "مختبر",
+			"english": "lab"
+		},
+		{
+			"arabic": "قياس",
+			"english": "measurement"
+		},
+		{
+			"arabic": "طريقة",
+			"english": "mode"
+		},
+		{
+			"arabic": "طين",
+			"english": "mud"
+		},
+		{
+			"arabic": "البرتقالي",
+			"english": "orange"
+		},
+		{
+			"arabic": "الشعر",
+			"english": "poetry"
+		},
+		{
+			"arabic": "شرطة",
+			"english": "police"
+		},
+		{
+			"arabic": "إمكانية",
+			"english": "possibility"
+		},
+		{
+			"arabic": "إجراء",
+			"english": "procedure"
+		},
+		{
+			"arabic": "ملكة",
+			"english": "queen"
+		},
+		{
+			"arabic": "نسبة",
+			"english": "ratio"
+		},
+		{
+			"arabic": "علاقة",
+			"english": "relation"
+		},
+		{
+			"arabic": "مطعم",
+			"english": "restaurant"
+		},
+		{
+			"arabic": "رضا",
+			"english": "satisfaction"
+		},
+		{
+			"arabic": "قطاع",
+			"english": "sector"
+		},
+		{
+			"arabic": "التوقيع",
+			"english": "signature"
+		},
+		{
+			"arabic": "أهمية",
+			"english": "significance"
+		},
+		{
+			"arabic": "أغنية",
+			"english": "song"
+		},
+		{
+			"arabic": "سن",
+			"english": "tooth"
+		},
+		{
+			"arabic": "بلدة",
+			"english": "town"
+		},
+		{
+			"arabic": "مركبة",
+			"english": "vehicle"
+		},
+		{
+			"arabic": "الصوت",
+			"english": "volume"
+		},
+		{
+			"arabic": "زوجة",
+			"english": "wife"
+		},
+		{
+			"arabic": "حادث",
+			"english": "accident"
+		},
+		{
+			"arabic": "مطار",
+			"english": "airport"
+		},
+		{
+			"arabic": "موعد",
+			"english": "appointment"
+		},
+		{
+			"arabic": "وصول",
+			"english": "arrival"
+		},
+		{
+			"arabic": "افتراض",
+			"english": "assumption"
+		},
+		{
+			"arabic": "البيسبول",
+			"english": "baseball"
+		},
+		{
+			"arabic": "باب",
+			"english": "chapter"
+		},
+		{
+			"arabic": "لجنة",
+			"english": "committee"
+		},
+		{
+			"arabic": "محادثة",
+			"english": "conversation"
+		},
+		{
+			"arabic": "قاعدة البيانات",
+			"english": "database"
+		},
+		{
+			"arabic": "حماس",
+			"english": "enthusiasm"
+		},
+		{
+			"arabic": "خطأ",
+			"english": "error"
+		},
+		{
+			"arabic": "شرح",
+			"english": "explanation"
+		},
+		{
+			"arabic": "مزارع",
+			"english": "farmer"
+		},
+		{
+			"arabic": "بوابة",
+			"english": "gate"
+		},
+		{
+			"arabic": "فتاة",
+			"english": "girl"
+		},
+		{
+			"arabic": "قاعة",
+			"english": "hall"
+		},
+		{
+			"arabic": "مؤرخ",
+			"english": "historian"
+		},
+		{
+			"arabic": "مستشفى",
+			"english": "hospital"
+		},
+		{
+			"arabic": "جرح",
+			"english": "injury"
+		},
+		{
+			"arabic": "تعليمات",
+			"english": "instruction"
+		},
+		{
+			"arabic": "صيانة",
+			"english": "maintenance"
+		},
+		{
+			"arabic": "الشركة المصنعة",
+			"english": "manufacturer"
+		},
+		{
+			"arabic": "وجبة",
+			"english": "meal"
+		},
+		{
+			"arabic": "الإدراك",
+			"english": "perception"
+		},
+		{
+			"arabic": "فطيرة",
+			"english": "pie"
+		},
+		{
+			"arabic": "قصيدة",
+			"english": "poem"
+		},
+		{
+			"arabic": "وجود",
+			"english": "presence"
+		},
+		{
+			"arabic": "مقترح",
+			"english": "proposal"
+		},
+		{
+			"arabic": "استقبال",
+			"english": "reception"
+		},
+		{
+			"arabic": "بديل",
+			"english": "replacement"
+		},
+		{
+			"arabic": "ثورة",
+			"english": "revolution"
+		},
+		{
+			"arabic": "نهر",
+			"english": "river"
+		},
+		{
+			"arabic": "ابن",
+			"english": "son"
+		},
+		{
+			"arabic": "خطاب",
+			"english": "speech"
+		},
+		{
+			"arabic": "شاي",
+			"english": "tea"
+		},
+		{
+			"arabic": "قرية",
+			"english": "village"
+		},
+		{
+			"arabic": "تحذير",
+			"english": "warning"
+		},
+		{
+			"arabic": "الفائز",
+			"english": "winner"
+		},
+		{
+			"arabic": "عامل",
+			"english": "worker"
+		},
+		{
+			"arabic": "كاتب",
+			"english": "writer"
+		},
+		{
+			"arabic": "مساعدة",
+			"english": "assistance"
+		},
+		{
+			"arabic": "تنفس",
+			"english": "breath"
+		},
+		{
+			"arabic": "مشتر",
+			"english": "buyer"
+		},
+		{
+			"arabic": "صدر",
+			"english": "chest"
+		},
+		{
+			"arabic": "شوكولاتة",
+			"english": "chocolate"
+		},
+		{
+			"arabic": "استنتاج",
+			"english": "conclusion"
+		},
+		{
+			"arabic": "إسهام",
+			"english": "contribution"
+		},
+		{
+			"arabic": "كوكي",
+			"english": "cookie"
+		},
+		{
+			"arabic": "شجاعة",
+			"english": "courage"
+		},
+		{
+			"arabic": "أب",
+			"english": "dad"
+		},
+		{
+			"arabic": "طاولة مكتب",
+			"english": "desk"
+		},
+		{
+			"arabic": "درج",
+			"english": "drawer"
+		},
+		{
+			"arabic": "مؤسسة",
+			"english": "establishment"
+		},
+		{
+			"arabic": "فحص",
+			"english": "examination"
+		},
+		{
+			"arabic": "قمامة",
+			"english": "garbage"
+		},
+		{
+			"arabic": "بقالة",
+			"english": "grocery"
+		},
+		{
+			"arabic": "عسل",
+			"english": "honey"
+		},
+		{
+			"arabic": "الانطباع",
+			"english": "impression"
+		},
+		{
+			"arabic": "تحسين",
+			"english": "improvement"
+		},
+		{
+			"arabic": "استقلال",
+			"english": "independence"
+		},
+		{
+			"arabic": "حشرة",
+			"english": "insect"
+		},
+		{
+			"arabic": "تفتيش",
+			"english": "inspection"
+		},
+		{
+			"arabic": "مفتش",
+			"english": "inspector"
+		},
+		{
+			"arabic": "ملك",
+			"english": "king"
+		},
+		{
+			"arabic": "سلم",
+			"english": "ladder"
+		},
+		{
+			"arabic": "قائمة طعام",
+			"english": "menu"
+		},
+		{
+			"arabic": "ركلة جزاء",
+			"english": "penalty"
+		},
+		{
+			"arabic": "بيانو",
+			"english": "piano"
+		},
+		{
+			"arabic": "البطاطس",
+			"english": "potato"
+		},
+		{
+			"arabic": "مهنة",
+			"english": "profession"
+		},
+		{
+			"arabic": "دكتور جامعى",
+			"english": "professor"
+		},
+		{
+			"arabic": "كمية",
+			"english": "quantity"
+		},
+		{
+			"arabic": "رد فعل",
+			"english": "reaction"
+		},
+		{
+			"arabic": "المتطلبات",
+			"english": "requirement"
+		},
+		{
+			"arabic": "سلطة",
+			"english": "salad"
+		},
+		{
+			"arabic": "أخت",
+			"english": "sister"
+		},
+		{
+			"arabic": "سوبر ماركت",
+			"english": "supermarket"
+		},
+		{
+			"arabic": "لسان",
+			"english": "tongue"
+		},
+		{
+			"arabic": "ضعف",
+			"english": "weakness"
+		},
+		{
+			"arabic": "زفاف",
+			"english": "wedding"
+		},
+		{
+			"arabic": "قضية",
+			"english": "affair"
+		},
+		{
+			"arabic": "طموح",
+			"english": "ambition"
+		},
+		{
+			"arabic": "المحلل",
+			"english": "analyst"
+		},
+		{
+			"arabic": "تفاحة",
+			"english": "apple"
+		},
+		{
+			"arabic": "مهمة",
+			"english": "assignment"
+		},
+		{
+			"arabic": "مساعد",
+			"english": "assistant"
+		},
+		{
+			"arabic": "حمام",
+			"english": "bathroom"
+		},
+		{
+			"arabic": "غرفة نوم",
+			"english": "bedroom"
+		},
+		{
+			"arabic": "بيرة",
+			"english": "beer"
+		},
+		{
+			"arabic": "تاريخ الميلاد",
+			"english": "birthday"
+		},
+		{
+			"arabic": "احتفال",
+			"english": "celebration"
+		},
+		{
+			"arabic": "بطولة",
+			"english": "championship"
+		},
+		{
+			"arabic": "الخد",
+			"english": "cheek"
+		},
+		{
+			"arabic": "زبون",
+			"english": "client"
+		},
+		{
+			"arabic": "نتيجة",
+			"english": "consequence"
+		},
+		{
+			"arabic": "مغادرة",
+			"english": "departure"
+		},
+		{
+			"arabic": "الماس",
+			"english": "diamond"
+		},
+		{
+			"arabic": "قذارة",
+			"english": "dirt"
+		},
+		{
+			"arabic": "إذن",
+			"english": "ear"
+		},
+		{
+			"arabic": "ثروة",
+			"english": "fortune"
+		},
+		{
+			"arabic": "صداقة",
+			"english": "friendship"
+		},
+		{
+			"arabic": "جنازة",
+			"english": "funeral"
+		},
+		{
+			"arabic": "جينة",
+			"english": "gene"
+		},
+		{
+			"arabic": "صديقة",
+			"english": "girlfriend"
+		},
+		{
+			"arabic": "قبعة",
+			"english": "hat"
+		},
+		{
+			"arabic": "إشارة",
+			"english": "indication"
+		},
+		{
+			"arabic": "نية",
+			"english": "intention"
+		},
+		{
+			"arabic": "سيدة",
+			"english": "lady"
+		},
+		{
+			"arabic": "منتصف الليل",
+			"english": "midnight"
+		},
+		{
+			"arabic": "تفاوض",
+			"english": "negotiation"
+		},
+		{
+			"arabic": "التزام",
+			"english": "obligation"
+		},
+		{
+			"arabic": "راكب",
+			"english": "passenger"
+		},
+		{
+			"arabic": "بيتزا",
+			"english": "pizza"
+		},
+		{
+			"arabic": "منصة",
+			"english": "platform"
+		},
+		{
+			"arabic": "شاعر",
+			"english": "poet"
+		},
+		{
+			"arabic": "تلوث",
+			"english": "pollution"
+		},
+		{
+			"arabic": "اعتراف",
+			"english": "recognition"
+		},
+		{
+			"arabic": "سمعة",
+			"english": "reputation"
+		},
+		{
+			"arabic": "قميص",
+			"english": "shirt"
+		},
+		{
+			"arabic": "سيدي المحترم",
+			"english": "sir"
+		},
+		{
+			"arabic": "المتحدث",
+			"english": "speaker"
+		},
+		{
+			"arabic": "غريب",
+			"english": "stranger"
+		},
+		{
+			"arabic": "العملية الجراحية",
+			"english": "surgery"
+		},
+		{
+			"arabic": "تعاطف",
+			"english": "sympathy"
+		},
+		{
+			"arabic": "حكاية",
+			"english": "tale"
+		},
+		{
+			"arabic": "حلق",
+			"english": "throat"
+		},
+		{
+			"arabic": "مدرب",
+			"english": "trainer"
+		},
+		{
+			"arabic": "عم",
+			"english": "uncle"
+		},
+		{
+			"arabic": "شباب",
+			"english": "youth"
+		},
+		{
+			"arabic": "مال",
+			"english": "money"
+		},
+		{
+			"arabic": "في حين",
+			"english": "while"
+		},
+		{
+			"arabic": "عمل",
+			"english": "business"
+		},
+		{
+			"arabic": "حياة",
+			"english": "life"
+		},
+		{
+			"arabic": "يوم",
+			"english": "day"
+		},
+		{
+			"arabic": "الصفحة الرئيسية",
+			"english": "home"
+		},
+		{
+			"arabic": "اقتصاد",
+			"english": "economy"
+		},
+		{
+			"arabic": "تدريب",
+			"english": "training"
+		},
+		{
+			"arabic": "نوع",
+			"english": "kind"
+		},
+		{
+			"arabic": "مستقبل",
+			"english": "future"
+		},
+		{
+			"arabic": "عمل",
+			"english": "action"
+		},
+		{
+			"arabic": "سيئة",
+			"english": "bad"
+		},
+		{
+			"arabic": "لا شى",
+			"english": "nothing"
+		},
+		{
+			"arabic": "فترة",
+			"english": "period"
+		},
+		{
+			"arabic": "موضوع",
+			"english": "subject"
+		},
+		{
+			"arabic": "دجاج",
+			"english": "chicken"
+		},
+		{
+			"arabic": "مادة",
+			"english": "material"
+		},
+		{
+			"arabic": "سيارة",
+			"english": "car"
+		},
+		{
+			"arabic": "نصف",
+			"english": "half"
+		},
+		{
+			"arabic": "في داخل",
+			"english": "inside"
+		},
+		{
+			"arabic": "في الخارج",
+			"english": "outside"
+		},
+		{
+			"arabic": "معيار",
+			"english": "standard"
+		},
+		{
+			"arabic": "بند",
+			"english": "item"
+		},
+		{
+			"arabic": "متوسط",
+			"english": "medium"
+		},
+		{
+			"arabic": "خيار",
+			"english": "choice"
+		},
+		{
+			"arabic": "صباح",
+			"english": "morning"
+		},
+		{
+			"arabic": "شمال",
+			"english": "north"
+		},
+		{
+			"arabic": "مربع",
+			"english": "square"
+		},
+		{
+			"arabic": "رأس المال",
+			"english": "capital"
+		},
+		{
+			"arabic": "الذات",
+			"english": "self"
+		},
+		{
+			"arabic": "اطلاق النار",
+			"english": "shot"
+		},
+		{
+			"arabic": "المعيشة",
+			"english": "living"
+		},
+		{
+			"arabic": "البلاستيك",
+			"english": "plastic"
+		},
+		{
+			"arabic": "شعور",
+			"english": "feeling"
+		},
+		{
+			"arabic": "مدخرات",
+			"english": "savings"
+		},
+		{
+			"arabic": "حيوان",
+			"english": "animal"
+		},
+		{
+			"arabic": "أقصى",
+			"english": "maximum"
+		},
+		{
+			"arabic": "رواية",
+			"english": "novel"
+		},
+		{
+			"arabic": "وفرة",
+			"english": "plenty"
+		},
+		{
+			"arabic": "خلفية",
+			"english": "background"
+		},
+		{
+			"arabic": "أحمر",
+			"english": "red"
+		},
+		{
+			"arabic": "قوة",
+			"english": "strength"
+		},
+		{
+			"arabic": "الخضروات",
+			"english": "vegetable"
+		},
+		{
+			"arabic": "المثالي",
+			"english": "ideal"
+		},
+		{
+			"arabic": "مطبخ",
+			"english": "kitchen"
+		},
+		{
+			"arabic": "مبدأ",
+			"english": "principle"
+		},
+		{
+			"arabic": "قريب",
+			"english": "relative"
+		},
+		{
+			"arabic": "تخفيض السعر",
+			"english": "sale"
+		},
+		{
+			"arabic": "شارع",
+			"english": "street"
+		},
+		{
+			"arabic": "الحد الأدنى",
+			"english": "minimum"
+		},
+		{
+			"arabic": "مسار",
+			"english": "path"
+		},
+		{
+			"arabic": "بحر",
+			"english": "sea"
+		},
+		{
+			"arabic": "جنوب",
+			"english": "south"
+		},
+		{
+			"arabic": "الحالة",
+			"english": "status"
+		},
+		{
+			"arabic": "الثقة بالنفس",
+			"english": "confidence"
+		},
+		{
+			"arabic": "ابنة",
+			"english": "daughter"
+		},
+		{
+			"arabic": "الدرجة العلمية",
+			"english": "degree"
+		},
+		{
+			"arabic": "واجب",
+			"english": "duty"
+		},
+		{
+			"arabic": "ساعة",
+			"english": "hour"
+		},
+		{
+			"arabic": "مادة",
+			"english": "substance"
+		},
+		{
+			"arabic": "بعد الظهر",
+			"english": "afternoon"
+		},
+		{
+			"arabic": "الاعتبار",
+			"english": "consideration"
+		},
+		{
+			"arabic": "ذهب",
+			"english": "gold"
+		},
+		{
+			"arabic": "مهمة",
+			"english": "mission"
+		},
+		{
+			"arabic": "باب",
+			"english": "door"
+		},
+		{
+			"arabic": "الشرق",
+			"english": "east"
+		},
+		{
+			"arabic": "أسلوب",
+			"english": "manner"
+		},
+		{
+			"arabic": "لقاء",
+			"english": "meeting"
+		},
+		{
+			"arabic": "موقف سيارات",
+			"english": "parking"
+		},
+		{
+			"arabic": "روتين",
+			"english": "routine"
+		},
+		{
+			"arabic": "سباحة",
+			"english": "swimming"
+		},
+		{
+			"arabic": "شركة طيران",
+			"english": "airline"
+		},
+		{
+			"arabic": "مصمم",
+			"english": "designer"
+		},
+		{
+			"arabic": "حالة طوارئ",
+			"english": "emergency"
+		},
+		{
+			"arabic": "مساء",
+			"english": "evening"
+		},
+		{
+			"arabic": "تمديد",
+			"english": "extension"
+		},
+		{
+			"arabic": "رعب",
+			"english": "horror"
+		},
+		{
+			"arabic": "جبل",
+			"english": "mountain"
+		},
+		{
+			"arabic": "المريض",
+			"english": "patient"
+		},
+		{
+			"arabic": "راحة",
+			"english": "relief"
+		},
+		{
+			"arabic": "سياحي",
+			"english": "tourist"
+		},
+		{
+			"arabic": "غرب",
+			"english": "west"
+		},
+		{
+			"arabic": "جانبا",
+			"english": "aside"
+		},
+		{
+			"arabic": "شقيق",
+			"english": "brother"
+		},
+		{
+			"arabic": "خبير",
+			"english": "expert"
+		},
+		{
+			"arabic": "الله",
+			"english": "god"
+		},
+		{
+			"arabic": "محلي",
+			"english": "native"
+		},
+		{
+			"arabic": "افتتاح",
+			"english": "opening"
+		},
+		{
+			"arabic": "صبي",
+			"english": "boy"
+		},
+		{
+			"arabic": "متخصص",
+			"english": "specialist"
+		},
+		{
+			"arabic": "مرارة",
+			"english": "bitter"
+		},
+		{
+			"arabic": "الجحيم",
+			"english": "hell"
+		},
+		{
+			"arabic": "حادثة",
+			"english": "incident"
+		},
+		{
+			"arabic": "مقيم",
+			"english": "resident"
+		},
+		{
+			"arabic": "ا",
+			"english": "a"
+		},
+		{
+			"arabic": "أنت",
+			"english": "you"
+		},
+		{
+			"arabic": "هذا",
+			"english": "it"
+		},
+		{
+			"arabic": "يستطيع",
+			"english": "can"
+		},
+		{
+			"arabic": "سوف",
+			"english": "will"
+		},
+		{
+			"arabic": "إذا",
+			"english": "if"
+		},
+		{
+			"arabic": "واحد",
+			"english": "one"
+		},
+		{
+			"arabic": "كثير",
+			"english": "many"
+		},
+		{
+			"arabic": "معظم",
+			"english": "most"
+		},
+		{
+			"arabic": "آخر",
+			"english": "other"
+		},
+		{
+			"arabic": "جيد",
+			"english": "good"
+		},
+		{
+			"arabic": "عظيم",
+			"english": "great"
+		},
+		{
+			"arabic": "قليل",
+			"english": "few"
+		},
+		{
+			"arabic": "ربما",
+			"english": "might"
+		},
+		{
+			"arabic": "لا يزال",
+			"english": "still"
+		},
+		{
+			"arabic": "عامة",
+			"english": "public"
+		},
+		{
+			"arabic": "الانسان",
+			"english": "human"
+		},
+		{
+			"arabic": "محلي",
+			"english": "local"
+		},
+		{
+			"arabic": "جنرال لواء",
+			"english": "general"
+		},
+		{
+			"arabic": "هي",
+			"english": "she"
+		},
+		{
+			"arabic": "محددة",
+			"english": "specific"
+		},
+		{
+			"arabic": "طويل",
+			"english": "long"
+		},
+		{
+			"arabic": "عالي",
+			"english": "high"
+		},
+		{
+			"arabic": "هذا المساء",
+			"english": "tonight"
+		},
+		{
+			"arabic": "مشترك",
+			"english": "common"
+		},
+		{
+			"arabic": "بسيط",
+			"english": "simple"
+		},
+		{
+			"arabic": "الماضي",
+			"english": "past"
+		},
+		{
+			"arabic": "كبير",
+			"english": "big"
+		},
+		{
+			"arabic": "ممكن",
+			"english": "possible"
+		},
+		{
+			"arabic": "مخصص، معين",
+			"english": "particular"
+		},
+		{
+			"arabic": "اليوم",
+			"english": "today"
+		},
+		{
+			"arabic": "الشخصية",
+			"english": "personal"
+		},
+		{
+			"arabic": "تيار",
+			"english": "current"
+		},
+		{
+			"arabic": "الوطني",
+			"english": "national"
+		},
+		{
+			"arabic": "طبيعي",
+			"english": "natural"
+		},
+		{
+			"arabic": "جسدي",
+			"english": "physical"
+		},
+		{
+			"arabic": "ثانيا",
+			"english": "second"
+		},
+		{
+			"arabic": "فرد",
+			"english": "individual"
+		},
+		{
+			"arabic": "رئيسي",
+			"english": "main"
+		},
+		{
+			"arabic": "محتمل",
+			"english": "potential"
+		},
+		{
+			"arabic": "محترف",
+			"english": "professional"
+		},
+		{
+			"arabic": "دولي",
+			"english": "international"
+		},
+		{
+			"arabic": "البديل",
+			"english": "alternative"
+		},
+		{
+			"arabic": "التالي",
+			"english": "following"
+		},
+		{
+			"arabic": "خاص",
+			"english": "special"
+		},
+		{
+			"arabic": "عامل",
+			"english": "working"
+		},
+		{
+			"arabic": "كامل",
+			"english": "whole"
+		},
+		{
+			"arabic": "برد",
+			"english": "cold"
+		},
+		{
+			"arabic": "تجاري",
+			"english": "commercial"
+		},
+		{
+			"arabic": "منخفض",
+			"english": "low"
+		},
+		{
+			"arabic": "ابتدائي",
+			"english": "primary"
+		},
+		{
+			"arabic": "يستحق",
+			"english": "worth"
+		},
+		{
+			"arabic": "ضروري",
+			"english": "necessary"
+		},
+		{
+			"arabic": "إيجابي",
+			"english": "positive"
+		},
+		{
+			"arabic": "خلاق",
+			"english": "creative"
+		},
+		{
+			"arabic": "سعيد",
+			"english": "glad"
+		},
+		{
+			"arabic": "بسبب",
+			"english": "due"
+		},
+		{
+			"arabic": "فعال",
+			"english": "effective"
+		},
+		{
+			"arabic": "وسط",
+			"english": "middle"
+		},
+		{
+			"arabic": "منتظم",
+			"english": "regular"
+		},
+		{
+			"arabic": "مستقل",
+			"english": "independent"
+		},
+		{
+			"arabic": "أصلي",
+			"english": "original"
+		},
+		{
+			"arabic": "جميلة",
+			"english": "beautiful"
+		},
+		{
+			"arabic": "نشط",
+			"english": "active"
+		},
+		{
+			"arabic": "سلبي",
+			"english": "negative"
+		},
+		{
+			"arabic": "آمن",
+			"english": "safe"
+		},
+		{
+			"arabic": "بصري",
+			"english": "visual"
+		},
+		{
+			"arabic": "وراء",
+			"english": "beyond"
+		},
+		{
+			"arabic": "مبتدئ",
+			"english": "junior"
+		},
+		{
+			"arabic": "فريدة من نوعها",
+			"english": "unique"
+		},
+		{
+			"arabic": "اى شى",
+			"english": "anything"
+		},
+		{
+			"arabic": "كلاسيكي",
+			"english": "classic"
+		},
+		{
+			"arabic": "نهائي",
+			"english": "final"
+		},
+		{
+			"arabic": "خاص",
+			"english": "private"
+		},
+		{
+			"arabic": "الغربي",
+			"english": "western"
+		},
+		{
+			"arabic": "مألوف",
+			"english": "familiar"
+		},
+		{
+			"arabic": "رسمي",
+			"english": "official"
+		},
+		{
+			"arabic": "واسع",
+			"english": "broad"
+		},
+		{
+			"arabic": "مريح",
+			"english": "comfortable"
+		},
+		{
+			"arabic": "يمكن",
+			"english": "maybe"
+		},
+		{
+			"arabic": "غني",
+			"english": "rich"
+		},
+		{
+			"arabic": "شاب",
+			"english": "young"
+		},
+		{
+			"arabic": "ثقيل",
+			"english": "heavy"
+		},
+		{
+			"arabic": "مرحبا",
+			"english": "hello"
+		},
+		{
+			"arabic": "ذو قيمة",
+			"english": "valuable"
+		},
+		{
+			"arabic": "قيادة",
+			"english": "leading"
+		},
+		{
+			"arabic": "عادي",
+			"english": "normal"
+		},
+		{
+			"arabic": "سر",
+			"english": "secret"
+		},
+		{
+			"arabic": "قاسي",
+			"english": "tough"
+		},
+		{
+			"arabic": "عميق",
+			"english": "deep"
+		},
+		{
+			"arabic": "موضوعي",
+			"english": "objective"
+		},
+		{
+			"arabic": "مادة كيميائية",
+			"english": "chemical"
+		},
+		{
+			"arabic": "أقصى",
+			"english": "extreme"
+		},
+		{
+			"arabic": "رسمي",
+			"english": "formal"
+		},
+		{
+			"arabic": "مقابل",
+			"english": "opposite"
+		},
+		{
+			"arabic": "عن بعد",
+			"english": "remote"
+		},
+		{
+			"arabic": "اتساع",
+			"english": "vast"
+		},
+		{
+			"arabic": "مكان ما",
+			"english": "somewhere"
+		},
+		{
+			"arabic": "في أى مكان",
+			"english": "anywhere"
+		},
+		{
+			"arabic": "ظلام",
+			"english": "dark"
+		},
+		{
+			"arabic": "داخلي",
+			"english": "internal"
+		},
+		{
+			"arabic": "حساس",
+			"english": "sensitive"
+		},
+		{
+			"arabic": "ثابت",
+			"english": "constant"
+		},
+		{
+			"arabic": "الخام",
+			"english": "raw"
+		},
+		{
+			"arabic": "ناعم",
+			"english": "soft"
+		},
+		{
+			"arabic": "صلب",
+			"english": "solid"
+		},
+		{
+			"arabic": "عجيب",
+			"english": "weird"
+		},
+		{
+			"arabic": "سنوي",
+			"english": "annual"
+		},
+		{
+			"arabic": "في ذمة الله تعالى",
+			"english": "dead"
+		},
+		{
+			"arabic": "إلى الأبد",
+			"english": "forever"
+		},
+		{
+			"arabic": "لا أحد",
+			"english": "nobody"
+		},
+		{
+			"arabic": "الجولة",
+			"english": "round"
+		},
+		{
+			"arabic": "بينما",
+			"english": "whereas"
+		},
+		{
+			"arabic": "ما يعادل",
+			"english": "equivalent"
+		},
+		{
+			"arabic": "روحي",
+			"english": "spiritual"
+		},
+		{
+			"arabic": "بالغ",
+			"english": "adult"
+		},
+		{
+			"arabic": "مجنون",
+			"english": "crazy"
+		},
+		{
+			"arabic": "قبل",
+			"english": "prior"
+		},
+		{
+			"arabic": "هائج",
+			"english": "rough"
+		},
+		{
+			"arabic": "حزين",
+			"english": "sad"
+		},
+		{
+			"arabic": "مريض",
+			"english": "sick"
+		},
+		{
+			"arabic": "خارجي",
+			"english": "external"
+		},
+		{
+			"arabic": "غير شرعي",
+			"english": "illegal"
+		},
+		{
+			"arabic": "التليفون المحمول",
+			"english": "mobile"
+		},
+		{
+			"arabic": "شرير",
+			"english": "nasty"
+		},
+		{
+			"arabic": "عادي",
+			"english": "ordinary"
+		},
+		{
+			"arabic": "ملكي",
+			"english": "royal"
+		},
+		{
+			"arabic": "كبير",
+			"english": "senior"
+		},
+		{
+			"arabic": "أعلى",
+			"english": "upper"
+		},
+		{
+			"arabic": "تابع",
+			"english": "dependent"
+		},
+		{
+			"arabic": "مضحك",
+			"english": "funny"
+		},
+		{
+			"arabic": "حلو",
+			"english": "sweet"
+		},
+		{
+			"arabic": "الطابق العلوي",
+			"english": "upstairs"
+		},
+		{
+			"arabic": "معتاد",
+			"english": "usual"
+		},
+		{
+			"arabic": "خارج البلاد",
+			"english": "abroad"
+		},
+		{
+			"arabic": "كبير",
+			"english": "grand"
+		},
+		{
+			"arabic": "ذكر",
+			"english": "male"
+		},
+		{
+			"arabic": "اي شخص",
+			"english": "anybody"
+		},
+		{
+			"arabic": "متألق",
+			"english": "brilliant"
+		},
+		{
+			"arabic": "العزيز",
+			"english": "dear"
+		},
+		{
+			"arabic": "سكران",
+			"english": "drunk"
+		},
+		{
+			"arabic": "أنثى",
+			"english": "female"
+		},
+		{
+			"arabic": "لا مفر منه",
+			"english": "inevitable"
+		},
+		{
+			"arabic": "أنيق",
+			"english": "neat"
+		},
+		{
+			"arabic": "ممثل",
+			"english": "representative"
+		},
+		{
+			"arabic": "سخيف",
+			"english": "silly"
+		},
+		{
+			"arabic": "غبي",
+			"english": "stupid"
+		},
+		{
+			"arabic": "مؤقت",
+			"english": "temporary"
+		},
+		{
+			"arabic": "يوم غد",
+			"english": "tomorrow"
+		},
+		{
+			"arabic": "اليوم السابق",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 519 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"catalan": "gent",
+			"english": "people"
+		},
+		{
+			"catalan": "història",
+			"english": "history"
+		},
+		{
+			"catalan": "camí",
+			"english": "way"
+		},
+		{
+			"catalan": "art",
+			"english": "art"
+		},
+		{
+			"catalan": "món",
+			"english": "world"
+		},
+		{
+			"catalan": "informació",
+			"english": "information"
+		},
+		{
+			"catalan": "mapa",
+			"english": "map"
+		},
+		{
+			"catalan": "dos",
+			"english": "two"
+		},
+		{
+			"catalan": "família",
+			"english": "family"
+		},
+		{
+			"catalan": "govern",
+			"english": "government"
+		},
+		{
+			"catalan": "salut",
+			"english": "health"
+		},
+		{
+			"catalan": "sistema",
+			"english": "system"
+		},
+		{
+			"catalan": "ordinador",
+			"english": "computer"
+		},
+		{
+			"catalan": "carn",
+			"english": "meat"
+		},
+		{
+			"catalan": "curs",
+			"english": "year"
+		},
+		{
+			"catalan": "gràcies",
+			"english": "thanks"
+		},
+		{
+			"catalan": "música",
+			"english": "music"
+		},
+		{
+			"catalan": "persona",
+			"english": "person"
+		},
+		{
+			"catalan": "lectura",
+			"english": "reading"
+		},
+		{
+			"catalan": "mètode",
+			"english": "method"
+		},
+		{
+			"catalan": "dades",
+			"english": "data"
+		},
+		{
+			"catalan": "menjar",
+			"english": "food"
+		},
+		{
+			"catalan": "comprensió",
+			"english": "understanding"
+		},
+		{
+			"catalan": "teoria",
+			"english": "theory"
+		},
+		{
+			"catalan": "Llei",
+			"english": "law"
+		},
+		{
+			"catalan": "ocell",
+			"english": "bird"
+		},
+		{
+			"catalan": "literatura",
+			"english": "literature"
+		},
+		{
+			"catalan": "problema",
+			"english": "problem"
+		},
+		{
+			"catalan": "programari",
+			"english": "software"
+		},
+		{
+			"catalan": "control",
+			"english": "control"
+		},
+		{
+			"catalan": "coneixement",
+			"english": "knowledge"
+		},
+		{
+			"catalan": "poder",
+			"english": "power"
+		},
+		{
+			"catalan": "capacitat",
+			"english": "ability"
+		},
+		{
+			"catalan": "ciències econòmiques",
+			"english": "economics"
+		},
+		{
+			"catalan": "amor",
+			"english": "love"
+		},
+		{
+			"catalan": "Internet",
+			"english": "internet"
+		},
+		{
+			"catalan": "televisió",
+			"english": "television"
+		},
+		{
+			"catalan": "ciència",
+			"english": "science"
+		},
+		{
+			"catalan": "biblioteca",
+			"english": "library"
+		},
+		{
+			"catalan": "naturalesa",
+			"english": "nature"
+		},
+		{
+			"catalan": "fet",
+			"english": "fact"
+		},
+		{
+			"catalan": "producte",
+			"english": "product"
+		},
+		{
+			"catalan": "idea",
+			"english": "idea"
+		},
+		{
+			"catalan": "temperatura",
+			"english": "temperature"
+		},
+		{
+			"catalan": "inversió",
+			"english": "investment"
+		},
+		{
+			"catalan": "àrea",
+			"english": "area"
+		},
+		{
+			"catalan": "societat",
+			"english": "society"
+		},
+		{
+			"catalan": "activitat",
+			"english": "activity"
+		},
+		{
+			"catalan": "història",
+			"english": "story"
+		},
+		{
+			"catalan": "indústria",
+			"english": "industry"
+		},
+		{
+			"catalan": "mitjans de comunicació",
+			"english": "media"
+		},
+		{
+			"catalan": "cosa",
+			"english": "thing"
+		},
+		{
+			"catalan": "forn",
+			"english": "oven"
+		},
+		{
+			"catalan": "comunitat",
+			"english": "community"
+		},
+		{
+			"catalan": "definició",
+			"english": "definition"
+		},
+		{
+			"catalan": "seguretat",
+			"english": "safety"
+		},
+		{
+			"catalan": "qualitat",
+			"english": "quality"
+		},
+		{
+			"catalan": "desenvolupament",
+			"english": "development"
+		},
+		{
+			"catalan": "llenguatge",
+			"english": "language"
+		},
+		{
+			"catalan": "administració",
+			"english": "management"
+		},
+		{
+			"catalan": "jugador",
+			"english": "player"
+		},
+		{
+			"catalan": "varietat",
+			"english": "variety"
+		},
+		{
+			"catalan": "vídeo",
+			"english": "video"
+		},
+		{
+			"catalan": "setmana",
+			"english": "week"
+		},
+		{
+			"catalan": "seguretat",
+			"english": "security"
+		},
+		{
+			"catalan": "país",
+			"english": "country"
+		},
+		{
+			"catalan": "examen",
+			"english": "exam"
+		},
+		{
+			"catalan": "pel·lícula",
+			"english": "movie"
+		},
+		{
+			"catalan": "organització",
+			"english": "organization"
+		},
+		{
+			"catalan": "equip",
+			"english": "equipment"
+		},
+		{
+			"catalan": "física",
+			"english": "physics"
+		},
+		{
+			"catalan": "anàlisi",
+			"english": "analysis"
+		},
+		{
+			"catalan": "política",
+			"english": "policy"
+		},
+		{
+			"catalan": "sèrie",
+			"english": "series"
+		},
+		{
+			"catalan": "pensament",
+			"english": "thought"
+		},
+		{
+			"catalan": "base",
+			"english": "basis"
+		},
+		{
+			"catalan": "amic",
+			"english": "boyfriend"
+		},
+		{
+			"catalan": "direcció",
+			"english": "direction"
+		},
+		{
+			"catalan": "estratègia",
+			"english": "strategy"
+		},
+		{
+			"catalan": "tecnologia",
+			"english": "technology"
+		},
+		{
+			"catalan": "exèrcit",
+			"english": "army"
+		},
+		{
+			"catalan": "càmera",
+			"english": "camera"
+		},
+		{
+			"catalan": "llibertat",
+			"english": "freedom"
+		},
+		{
+			"catalan": "paper",
+			"english": "paper"
+		},
+		{
+			"catalan": "medi ambient",
+			"english": "environment"
+		},
+		{
+			"catalan": "nen",
+			"english": "child"
+		},
+		{
+			"catalan": "instància",
+			"english": "instance"
+		},
+		{
+			"catalan": "mes",
+			"english": "month"
+		},
+		{
+			"catalan": "veritat",
+			"english": "truth"
+		},
+		{
+			"catalan": "mercadeig",
+			"english": "marketing"
+		},
+		{
+			"catalan": "universitat",
+			"english": "university"
+		},
+		{
+			"catalan": "escriptura",
+			"english": "writing"
+		},
+		{
+			"catalan": "article",
+			"english": "article"
+		},
+		{
+			"catalan": "departament",
+			"english": "department"
+		},
+		{
+			"catalan": "diferència",
+			"english": "difference"
+		},
+		{
+			"catalan": "meta",
+			"english": "goal"
+		},
+		{
+			"catalan": "notícies",
+			"english": "news"
+		},
+		{
+			"catalan": "audiència",
+			"english": "audience"
+		},
+		{
+			"catalan": "pescar",
+			"english": "fishing"
+		},
+		{
+			"catalan": "creixement",
+			"english": "growth"
+		},
+		{
+			"catalan": "ingressos",
+			"english": "income"
+		},
+		{
+			"catalan": "matrimoni",
+			"english": "marriage"
+		},
+		{
+			"catalan": "usuari",
+			"english": "user"
+		},
+		{
+			"catalan": "combinació",
+			"english": "combination"
+		},
+		{
+			"catalan": "fracàs",
+			"english": "failure"
+		},
+		{
+			"catalan": "significat",
+			"english": "meaning"
+		},
+		{
+			"catalan": "medicina",
+			"english": "medicine"
+		},
+		{
+			"catalan": "filosofia",
+			"english": "philosophy"
+		},
+		{
+			"catalan": "mestre",
+			"english": "teacher"
+		},
+		{
+			"catalan": "comunicació",
+			"english": "communication"
+		},
+		{
+			"catalan": "nit",
+			"english": "night"
+		},
+		{
+			"catalan": "química",
+			"english": "chemistry"
+		},
+		{
+			"catalan": "malaltia",
+			"english": "disease"
+		},
+		{
+			"catalan": "disc",
+			"english": "disk"
+		},
+		{
+			"catalan": "energia",
+			"english": "energy"
+		},
+		{
+			"catalan": "nació",
+			"english": "nation"
+		},
+		{
+			"catalan": "carretera",
+			"english": "road"
+		},
+		{
+			"catalan": "paper",
+			"english": "role"
+		},
+		{
+			"catalan": "sopa",
+			"english": "soup"
+		},
+		{
+			"catalan": "publicitat",
+			"english": "advertising"
+		},
+		{
+			"catalan": "ubicació",
+			"english": "location"
+		},
+		{
+			"catalan": "èxit",
+			"english": "success"
+		},
+		{
+			"catalan": "addició",
+			"english": "addition"
+		},
+		{
+			"catalan": "apartament",
+			"english": "apartment"
+		},
+		{
+			"catalan": "educació",
+			"english": "education"
+		},
+		{
+			"catalan": "matemàtiques",
+			"english": "math"
+		},
+		{
+			"catalan": "moment",
+			"english": "moment"
+		},
+		{
+			"catalan": "pintura",
+			"english": "painting"
+		},
+		{
+			"catalan": "política",
+			"english": "politics"
+		},
+		{
+			"catalan": "atenció",
+			"english": "attention"
+		},
+		{
+			"catalan": "decisió",
+			"english": "decision"
+		},
+		{
+			"catalan": "esdeveniment",
+			"english": "event"
+		},
+		{
+			"catalan": "propietat",
+			"english": "property"
+		},
+		{
+			"catalan": "compres",
+			"english": "shopping"
+		},
+		{
+			"catalan": "estudiant",
+			"english": "student"
+		},
+		{
+			"catalan": "fusta",
+			"english": "wood"
+		},
+		{
+			"catalan": "competició",
+			"english": "competition"
+		},
+		{
+			"catalan": "distribució",
+			"english": "distribution"
+		},
+		{
+			"catalan": "entreteniment",
+			"english": "entertainment"
+		},
+		{
+			"catalan": "oficina",
+			"english": "office"
+		},
+		{
+			"catalan": "població",
+			"english": "population"
+		},
+		{
+			"catalan": "president",
+			"english": "president"
+		},
+		{
+			"catalan": "unitat",
+			"english": "unit"
+		},
+		{
+			"catalan": "categoria",
+			"english": "category"
+		},
+		{
+			"catalan": "cigarret",
+			"english": "cigarette"
+		},
+		{
+			"catalan": "context",
+			"english": "context"
+		},
+		{
+			"catalan": "introducció",
+			"english": "introduction"
+		},
+		{
+			"catalan": "oportunitat",
+			"english": "opportunity"
+		},
+		{
+			"catalan": "rendiment",
+			"english": "performance"
+		},
+		{
+			"catalan": "conductor",
+			"english": "driver"
+		},
+		{
+			"catalan": "vol",
+			"english": "flight"
+		},
+		{
+			"catalan": "llargada",
+			"english": "length"
+		},
+		{
+			"catalan": "revista",
+			"english": "magazine"
+		},
+		{
+			"catalan": "diari",
+			"english": "newspaper"
+		},
+		{
+			"catalan": "relació",
+			"english": "relationship"
+		},
+		{
+			"catalan": "ensenyament",
+			"english": "teaching"
+		},
+		{
+			"catalan": "cèl·lula",
+			"english": "cell"
+		},
+		{
+			"catalan": "comerciant",
+			"english": "dealer"
+		},
+		{
+			"catalan": "descobriment",
+			"english": "finding"
+		},
+		{
+			"catalan": "llac",
+			"english": "lake"
+		},
+		{
+			"catalan": "membre",
+			"english": "member"
+		},
+		{
+			"catalan": "missatge",
+			"english": "message"
+		},
+		{
+			"catalan": "telèfon",
+			"english": "phone"
+		},
+		{
+			"catalan": "escena",
+			"english": "scene"
+		},
+		{
+			"catalan": "aparença",
+			"english": "appearance"
+		},
+		{
+			"catalan": "Associació",
+			"english": "association"
+		},
+		{
+			"catalan": "concepte",
+			"english": "concept"
+		},
+		{
+			"catalan": "client",
+			"english": "customer"
+		},
+		{
+			"catalan": "mort",
+			"english": "death"
+		},
+		{
+			"catalan": "discussió",
+			"english": "discussion"
+		},
+		{
+			"catalan": "habitatges",
+			"english": "housing"
+		},
+		{
+			"catalan": "inflació",
+			"english": "inflation"
+		},
+		{
+			"catalan": "segur",
+			"english": "insurance"
+		},
+		{
+			"catalan": "humor",
+			"english": "mood"
+		},
+		{
+			"catalan": "dona",
+			"english": "woman"
+		},
+		{
+			"catalan": "assessorament",
+			"english": "advice"
+		},
+		{
+			"catalan": "sang",
+			"english": "blood"
+		},
+		{
+			"catalan": "esforç",
+			"english": "effort"
+		},
+		{
+			"catalan": "expressió",
+			"english": "expression"
+		},
+		{
+			"catalan": "importància",
+			"english": "importance"
+		},
+		{
+			"catalan": "opinió",
+			"english": "opinion"
+		},
+		{
+			"catalan": "pagament",
+			"english": "payment"
+		},
+		{
+			"catalan": "realitat",
+			"english": "reality"
+		},
+		{
+			"catalan": "responsabilitat",
+			"english": "responsibility"
+		},
+		{
+			"catalan": "situació",
+			"english": "situation"
+		},
+		{
+			"catalan": "habilitat",
+			"english": "skill"
+		},
+		{
+			"catalan": "declaració",
+			"english": "statement"
+		},
+		{
+			"catalan": "riquesa",
+			"english": "wealth"
+		},
+		{
+			"catalan": "sol·licitud",
+			"english": "application"
+		},
+		{
+			"catalan": "ciutat",
+			"english": "city"
+		},
+		{
+			"catalan": "comtat",
+			"english": "county"
+		},
+		{
+			"catalan": "profunditat",
+			"english": "depth"
+		},
+		{
+			"catalan": "finca",
+			"english": "estate"
+		},
+		{
+			"catalan": "fundació",
+			"english": "foundation"
+		},
+		{
+			"catalan": "àvia",
+			"english": "grandmother"
+		},
+		{
+			"catalan": "cor",
+			"english": "heart"
+		},
+		{
+			"catalan": "perspectiva",
+			"english": "perspective"
+		},
+		{
+			"catalan": "Foto",
+			"english": "photo"
+		},
+		{
+			"catalan": "recepta",
+			"english": "recipe"
+		},
+		{
+			"catalan": "estudi",
+			"english": "studio"
+		},
+		{
+			"catalan": "tema",
+			"english": "topic"
+		},
+		{
+			"catalan": "col · lecció",
+			"english": "collection"
+		},
+		{
+			"catalan": "depressió",
+			"english": "depression"
+		},
+		{
+			"catalan": "imaginació",
+			"english": "imagination"
+		},
+		{
+			"catalan": "passió",
+			"english": "passion"
+		},
+		{
+			"catalan": "percentatge",
+			"english": "percentage"
+		},
+		{
+			"catalan": "recurs",
+			"english": "resource"
+		},
+		{
+			"catalan": "ajust",
+			"english": "setting"
+		},
+		{
+			"catalan": "anunci",
+			"english": "ad"
+		},
+		{
+			"catalan": "agència",
+			"english": "agency"
+		},
+		{
+			"catalan": "col·legi",
+			"english": "college"
+		},
+		{
+			"catalan": "connexió",
+			"english": "connection"
+		},
+		{
+			"catalan": "crítica",
+			"english": "criticism"
+		},
+		{
+			"catalan": "deute",
+			"english": "debt"
+		},
+		{
+			"catalan": "descripció",
+			"english": "description"
+		},
+		{
+			"catalan": "memòria",
+			"english": "memory"
+		},
+		{
+			"catalan": "paciència",
+			"english": "patience"
+		},
+		{
+			"catalan": "secretari",
+			"english": "secretary"
+		},
+		{
+			"catalan": "solució",
+			"english": "solution"
+		},
+		{
+			"catalan": "Administració",
+			"english": "administration"
+		},
+		{
+			"catalan": "aspecte",
+			"english": "aspect"
+		},
+		{
+			"catalan": "actitud",
+			"english": "attitude"
+		},
+		{
+			"catalan": "director",
+			"english": "director"
+		},
+		{
+			"catalan": "personalitat",
+			"english": "personality"
+		},
+		{
+			"catalan": "Psicologia",
+			"english": "psychology"
+		},
+		{
+			"catalan": "recomanació",
+			"english": "recommendation"
+		},
+		{
+			"catalan": "resposta",
+			"english": "response"
+		},
+		{
+			"catalan": "selecció",
+			"english": "selection"
+		},
+		{
+			"catalan": "emmagatzematge",
+			"english": "storage"
+		},
+		{
+			"catalan": "versió",
+			"english": "version"
+		},
+		{
+			"catalan": "alcohol",
+			"english": "alcohol"
+		},
+		{
+			"catalan": "argument",
+			"english": "argument"
+		},
+		{
+			"catalan": "queixa",
+			"english": "complaint"
+		},
+		{
+			"catalan": "contracte",
+			"english": "contract"
+		},
+		{
+			"catalan": "èmfasi",
+			"english": "emphasis"
+		},
+		{
+			"catalan": "carretera",
+			"english": "highway"
+		},
+		{
+			"catalan": "pèrdua",
+			"english": "loss"
+		},
+		{
+			"catalan": "afiliació",
+			"english": "membership"
+		},
+		{
+			"catalan": "possessió",
+			"english": "possession"
+		},
+		{
+			"catalan": "preparació",
+			"english": "preparation"
+		},
+		{
+			"catalan": "filet",
+			"english": "steak"
+		},
+		{
+			"catalan": "Unió",
+			"english": "union"
+		},
+		{
+			"catalan": "acord",
+			"english": "agreement"
+		},
+		{
+			"catalan": "càncer",
+			"english": "cancer"
+		},
+		{
+			"catalan": "moneda",
+			"english": "currency"
+		},
+		{
+			"catalan": "ocupació",
+			"english": "employment"
+		},
+		{
+			"catalan": "enginyeria",
+			"english": "engineering"
+		},
+		{
+			"catalan": "entrada",
+			"english": "entry"
+		},
+		{
+			"catalan": "interacció",
+			"english": "interaction"
+		},
+		{
+			"catalan": "barreja",
+			"english": "mixture"
+		},
+		{
+			"catalan": "preferència",
+			"english": "preference"
+		},
+		{
+			"catalan": "regió",
+			"english": "region"
+		},
+		{
+			"catalan": "República",
+			"english": "republic"
+		},
+		{
+			"catalan": "tradició",
+			"english": "tradition"
+		},
+		{
+			"catalan": "virus",
+			"english": "virus"
+		},
+		{
+			"catalan": "actor",
+			"english": "actor"
+		},
+		{
+			"catalan": "aula",
+			"english": "classroom"
+		},
+		{
+			"catalan": "lliurament",
+			"english": "delivery"
+		},
+		{
+			"catalan": "dispositiu",
+			"english": "device"
+		},
+		{
+			"catalan": "dificultat",
+			"english": "difficulty"
+		},
+		{
+			"catalan": "drama",
+			"english": "drama"
+		},
+		{
+			"catalan": "elecció",
+			"english": "election"
+		},
+		{
+			"catalan": "motor",
+			"english": "engine"
+		},
+		{
+			"catalan": "futbol",
+			"english": "football"
+		},
+		{
+			"catalan": "direcció",
+			"english": "guidance"
+		},
+		{
+			"catalan": "hotel",
+			"english": "hotel"
+		},
+		{
+			"catalan": "propietari",
+			"english": "owner"
+		},
+		{
+			"catalan": "prioritat",
+			"english": "priority"
+		},
+		{
+			"catalan": "protecció",
+			"english": "protection"
+		},
+		{
+			"catalan": "suggeriment",
+			"english": "suggestion"
+		},
+		{
+			"catalan": "tensió",
+			"english": "tension"
+		},
+		{
+			"catalan": "variació",
+			"english": "variation"
+		},
+		{
+			"catalan": "ansietat",
+			"english": "anxiety"
+		},
+		{
+			"catalan": "atmosfera",
+			"english": "atmosphere"
+		},
+		{
+			"catalan": "consciència",
+			"english": "awareness"
+		},
+		{
+			"catalan": "bany",
+			"english": "bath"
+		},
+		{
+			"catalan": "pa",
+			"english": "bread"
+		},
+		{
+			"catalan": "candidat",
+			"english": "candidate"
+		},
+		{
+			"catalan": "clima",
+			"english": "climate"
+		},
+		{
+			"catalan": "comparació",
+			"english": "comparison"
+		},
+		{
+			"catalan": "confusió",
+			"english": "confusion"
+		},
+		{
+			"catalan": "construcció",
+			"english": "construction"
+		},
+		{
+			"catalan": "ascensor",
+			"english": "elevator"
+		},
+		{
+			"catalan": "emoció",
+			"english": "emotion"
+		},
+		{
+			"catalan": "empleat",
+			"english": "employee"
+		},
+		{
+			"catalan": "ocupador",
+			"english": "employer"
+		},
+		{
+			"catalan": "convidat",
+			"english": "guest"
+		},
+		{
+			"catalan": "alçada",
+			"english": "height"
+		},
+		{
+			"catalan": "lideratge",
+			"english": "leadership"
+		},
+		{
+			"catalan": "centre comercial",
+			"english": "mall"
+		},
+		{
+			"catalan": "gerent",
+			"english": "manager"
+		},
+		{
+			"catalan": "operació",
+			"english": "operation"
+		},
+		{
+			"catalan": "gravació",
+			"english": "recording"
+		},
+		{
+			"catalan": "mostra",
+			"english": "sample"
+		},
+		{
+			"catalan": "transport",
+			"english": "transportation"
+		},
+		{
+			"catalan": "caritat",
+			"english": "charity"
+		},
+		{
+			"catalan": "cosí",
+			"english": "cousin"
+		},
+		{
+			"catalan": "desastre",
+			"english": "disaster"
+		},
+		{
+			"catalan": "editor",
+			"english": "editor"
+		},
+		{
+			"catalan": "eficiència",
+			"english": "efficiency"
+		},
+		{
+			"catalan": "emoció",
+			"english": "excitement"
+		},
+		{
+			"catalan": "grau",
+			"english": "extent"
+		},
+		{
+			"catalan": "realimentació",
+			"english": "feedback"
+		},
+		{
+			"catalan": "guitarra",
+			"english": "guitar"
+		},
+		{
+			"catalan": "deures",
+			"english": "homework"
+		},
+		{
+			"catalan": "líder",
+			"english": "leader"
+		},
+		{
+			"catalan": "mare",
+			"english": "mom"
+		},
+		{
+			"catalan": "resultat",
+			"english": "outcome"
+		},
+		{
+			"catalan": "permís",
+			"english": "permission"
+		},
+		{
+			"catalan": "presentació",
+			"english": "presentation"
+		},
+		{
+			"catalan": "promoció",
+			"english": "promotion"
+		},
+		{
+			"catalan": "reflexió",
+			"english": "reflection"
+		},
+		{
+			"catalan": "nevera",
+			"english": "refrigerator"
+		},
+		{
+			"catalan": "resolució",
+			"english": "resolution"
+		},
+		{
+			"catalan": "ingressos",
+			"english": "revenue"
+		},
+		{
+			"catalan": "sessió",
+			"english": "session"
+		},
+		{
+			"catalan": "cantant",
+			"english": "singer"
+		},
+		{
+			"catalan": "tennis",
+			"english": "tennis"
+		},
+		{
+			"catalan": "cistella",
+			"english": "basket"
+		},
+		{
+			"catalan": "prima",
+			"english": "bonus"
+		},
+		{
+			"catalan": "gabinet",
+			"english": "cabinet"
+		},
+		{
+			"catalan": "infància",
+			"english": "childhood"
+		},
+		{
+			"catalan": "Església",
+			"english": "church"
+		},
+		{
+			"catalan": "roba",
+			"english": "clothes"
+		},
+		{
+			"catalan": "cafè",
+			"english": "coffee"
+		},
+		{
+			"catalan": "sopar",
+			"english": "dinner"
+		},
+		{
+			"catalan": "dibuix",
+			"english": "drawing"
+		},
+		{
+			"catalan": "cabell",
+			"english": "hair"
+		},
+		{
+			"catalan": "audició",
+			"english": "hearing"
+		},
+		{
+			"catalan": "iniciativa",
+			"english": "initiative"
+		},
+		{
+			"catalan": "judici",
+			"english": "judgment"
+		},
+		{
+			"catalan": "laboratori",
+			"english": "lab"
+		},
+		{
+			"catalan": "mesurament",
+			"english": "measurement"
+		},
+		{
+			"catalan": "manera",
+			"english": "mode"
+		},
+		{
+			"catalan": "fang",
+			"english": "mud"
+		},
+		{
+			"catalan": "taronja",
+			"english": "orange"
+		},
+		{
+			"catalan": "poesia",
+			"english": "poetry"
+		},
+		{
+			"catalan": "policia",
+			"english": "police"
+		},
+		{
+			"catalan": "possibilitat",
+			"english": "possibility"
+		},
+		{
+			"catalan": "procediment",
+			"english": "procedure"
+		},
+		{
+			"catalan": "reina",
+			"english": "queen"
+		},
+		{
+			"catalan": "proporció",
+			"english": "ratio"
+		},
+		{
+			"catalan": "relació",
+			"english": "relation"
+		},
+		{
+			"catalan": "restaurant",
+			"english": "restaurant"
+		},
+		{
+			"catalan": "satisfacció",
+			"english": "satisfaction"
+		},
+		{
+			"catalan": "sector",
+			"english": "sector"
+		},
+		{
+			"catalan": "signatura",
+			"english": "signature"
+		},
+		{
+			"catalan": "significació",
+			"english": "significance"
+		},
+		{
+			"catalan": "cançó",
+			"english": "song"
+		},
+		{
+			"catalan": "dent",
+			"english": "tooth"
+		},
+		{
+			"catalan": "ciutat",
+			"english": "town"
+		},
+		{
+			"catalan": "vehicle",
+			"english": "vehicle"
+		},
+		{
+			"catalan": "volum",
+			"english": "volume"
+		},
+		{
+			"catalan": "dona",
+			"english": "wife"
+		},
+		{
+			"catalan": "accident",
+			"english": "accident"
+		},
+		{
+			"catalan": "aeroport",
+			"english": "airport"
+		},
+		{
+			"catalan": "cita",
+			"english": "appointment"
+		},
+		{
+			"catalan": "arribada",
+			"english": "arrival"
+		},
+		{
+			"catalan": "suposició",
+			"english": "assumption"
+		},
+		{
+			"catalan": "beisbol",
+			"english": "baseball"
+		},
+		{
+			"catalan": "capítol",
+			"english": "chapter"
+		},
+		{
+			"catalan": "comitè",
+			"english": "committee"
+		},
+		{
+			"catalan": "conversa",
+			"english": "conversation"
+		},
+		{
+			"catalan": "base de dades",
+			"english": "database"
+		},
+		{
+			"catalan": "entusiasme",
+			"english": "enthusiasm"
+		},
+		{
+			"catalan": "error",
+			"english": "error"
+		},
+		{
+			"catalan": "explicació",
+			"english": "explanation"
+		},
+		{
+			"catalan": "granger",
+			"english": "farmer"
+		},
+		{
+			"catalan": "porta",
+			"english": "gate"
+		},
+		{
+			"catalan": "noia",
+			"english": "girl"
+		},
+		{
+			"catalan": "sala",
+			"english": "hall"
+		},
+		{
+			"catalan": "historiador",
+			"english": "historian"
+		},
+		{
+			"catalan": "hospital",
+			"english": "hospital"
+		},
+		{
+			"catalan": "ferida",
+			"english": "injury"
+		},
+		{
+			"catalan": "instrucció",
+			"english": "instruction"
+		},
+		{
+			"catalan": "manteniment",
+			"english": "maintenance"
+		},
+		{
+			"catalan": "fabricant",
+			"english": "manufacturer"
+		},
+		{
+			"catalan": "menjar",
+			"english": "meal"
+		},
+		{
+			"catalan": "percepció",
+			"english": "perception"
+		},
+		{
+			"catalan": "pastís",
+			"english": "pie"
+		},
+		{
+			"catalan": "poema",
+			"english": "poem"
+		},
+		{
+			"catalan": "presència",
+			"english": "presence"
+		},
+		{
+			"catalan": "proposta",
+			"english": "proposal"
+		},
+		{
+			"catalan": "recepció",
+			"english": "reception"
+		},
+		{
+			"catalan": "reemplaçament",
+			"english": "replacement"
+		},
+		{
+			"catalan": "revolució",
+			"english": "revolution"
+		},
+		{
+			"catalan": "riu",
+			"english": "river"
+		},
+		{
+			"catalan": "fill",
+			"english": "son"
+		},
+		{
+			"catalan": "discurs",
+			"english": "speech"
+		},
+		{
+			"catalan": "te",
+			"english": "tea"
+		},
+		{
+			"catalan": "poble",
+			"english": "village"
+		},
+		{
+			"catalan": "advertència",
+			"english": "warning"
+		},
+		{
+			"catalan": "guanyador",
+			"english": "winner"
+		},
+		{
+			"catalan": "treballador",
+			"english": "worker"
+		},
+		{
+			"catalan": "escriptor",
+			"english": "writer"
+		},
+		{
+			"catalan": "assistència",
+			"english": "assistance"
+		},
+		{
+			"catalan": "alè",
+			"english": "breath"
+		},
+		{
+			"catalan": "comprador",
+			"english": "buyer"
+		},
+		{
+			"catalan": "pit",
+			"english": "chest"
+		},
+		{
+			"catalan": "xocolata",
+			"english": "chocolate"
+		},
+		{
+			"catalan": "conclusió",
+			"english": "conclusion"
+		},
+		{
+			"catalan": "contribució",
+			"english": "contribution"
+		},
+		{
+			"catalan": "galeta",
+			"english": "cookie"
+		},
+		{
+			"catalan": "coratge",
+			"english": "courage"
+		},
+		{
+			"catalan": "pare",
+			"english": "dad"
+		},
+		{
+			"catalan": "escriptori",
+			"english": "desk"
+		},
+		{
+			"catalan": "calaix",
+			"english": "drawer"
+		},
+		{
+			"catalan": "establiment",
+			"english": "establishment"
+		},
+		{
+			"catalan": "examen",
+			"english": "examination"
+		},
+		{
+			"catalan": "escombraries",
+			"english": "garbage"
+		},
+		{
+			"catalan": "botiga de queviures",
+			"english": "grocery"
+		},
+		{
+			"catalan": "mel",
+			"english": "honey"
+		},
+		{
+			"catalan": "impressió",
+			"english": "impression"
+		},
+		{
+			"catalan": "millora",
+			"english": "improvement"
+		},
+		{
+			"catalan": "independència",
+			"english": "independence"
+		},
+		{
+			"catalan": "insecte",
+			"english": "insect"
+		},
+		{
+			"catalan": "inspecció",
+			"english": "inspection"
+		},
+		{
+			"catalan": "inspector",
+			"english": "inspector"
+		},
+		{
+			"catalan": "rei",
+			"english": "king"
+		},
+		{
+			"catalan": "escala",
+			"english": "ladder"
+		},
+		{
+			"catalan": "menú",
+			"english": "menu"
+		},
+		{
+			"catalan": "pena",
+			"english": "penalty"
+		},
+		{
+			"catalan": "piano",
+			"english": "piano"
+		},
+		{
+			"catalan": "patata",
+			"english": "potato"
+		},
+		{
+			"catalan": "professió",
+			"english": "profession"
+		},
+		{
+			"catalan": "professor",
+			"english": "professor"
+		},
+		{
+			"catalan": "quantitat",
+			"english": "quantity"
+		},
+		{
+			"catalan": "reacció",
+			"english": "reaction"
+		},
+		{
+			"catalan": "requisit",
+			"english": "requirement"
+		},
+		{
+			"catalan": "amanida",
+			"english": "salad"
+		},
+		{
+			"catalan": "germana",
+			"english": "sister"
+		},
+		{
+			"catalan": "supermercat",
+			"english": "supermarket"
+		},
+		{
+			"catalan": "llengua",
+			"english": "tongue"
+		},
+		{
+			"catalan": "debilitat",
+			"english": "weakness"
+		},
+		{
+			"catalan": "casament",
+			"english": "wedding"
+		},
+		{
+			"catalan": "assumpte",
+			"english": "affair"
+		},
+		{
+			"catalan": "ambició",
+			"english": "ambition"
+		},
+		{
+			"catalan": "analista",
+			"english": "analyst"
+		},
+		{
+			"catalan": "poma",
+			"english": "apple"
+		},
+		{
+			"catalan": "assignació",
+			"english": "assignment"
+		},
+		{
+			"catalan": "assistent",
+			"english": "assistant"
+		},
+		{
+			"catalan": "bany",
+			"english": "bathroom"
+		},
+		{
+			"catalan": "dormitori",
+			"english": "bedroom"
+		},
+		{
+			"catalan": "cervesa",
+			"english": "beer"
+		},
+		{
+			"catalan": "aniversari",
+			"english": "birthday"
+		},
+		{
+			"catalan": "celebració",
+			"english": "celebration"
+		},
+		{
+			"catalan": "campionat",
+			"english": "championship"
+		},
+		{
+			"catalan": "galta",
+			"english": "cheek"
+		},
+		{
+			"catalan": "client",
+			"english": "client"
+		},
+		{
+			"catalan": "conseqüència",
+			"english": "consequence"
+		},
+		{
+			"catalan": "sortida",
+			"english": "departure"
+		},
+		{
+			"catalan": "diamant",
+			"english": "diamond"
+		},
+		{
+			"catalan": "brutícia",
+			"english": "dirt"
+		},
+		{
+			"catalan": "orella",
+			"english": "ear"
+		},
+		{
+			"catalan": "fortuna",
+			"english": "fortune"
+		},
+		{
+			"catalan": "amistat",
+			"english": "friendship"
+		},
+		{
+			"catalan": "funeral",
+			"english": "funeral"
+		},
+		{
+			"catalan": "gene",
+			"english": "gene"
+		},
+		{
+			"catalan": "companya",
+			"english": "girlfriend"
+		},
+		{
+			"catalan": "barret",
+			"english": "hat"
+		},
+		{
+			"catalan": "indicació",
+			"english": "indication"
+		},
+		{
+			"catalan": "intenció",
+			"english": "intention"
+		},
+		{
+			"catalan": "dama",
+			"english": "lady"
+		},
+		{
+			"catalan": "mitjanit",
+			"english": "midnight"
+		},
+		{
+			"catalan": "negociació",
+			"english": "negotiation"
+		},
+		{
+			"catalan": "obligació",
+			"english": "obligation"
+		},
+		{
+			"catalan": "passatger",
+			"english": "passenger"
+		},
+		{
+			"catalan": "pizza",
+			"english": "pizza"
+		},
+		{
+			"catalan": "plataforma",
+			"english": "platform"
+		},
+		{
+			"catalan": "poeta",
+			"english": "poet"
+		},
+		{
+			"catalan": "pol·lució",
+			"english": "pollution"
+		},
+		{
+			"catalan": "reconeixement",
+			"english": "recognition"
+		},
+		{
+			"catalan": "reputació",
+			"english": "reputation"
+		},
+		{
+			"catalan": "camisa",
+			"english": "shirt"
+		},
+		{
+			"catalan": "senyor",
+			"english": "sir"
+		},
+		{
+			"catalan": "altaveu",
+			"english": "speaker"
+		},
+		{
+			"catalan": "desconegut",
+			"english": "stranger"
+		},
+		{
+			"catalan": "cirurgia",
+			"english": "surgery"
+		},
+		{
+			"catalan": "simpatia",
+			"english": "sympathy"
+		},
+		{
+			"catalan": "conte",
+			"english": "tale"
+		},
+		{
+			"catalan": "gola",
+			"english": "throat"
+		},
+		{
+			"catalan": "entrenador",
+			"english": "trainer"
+		},
+		{
+			"catalan": "oncle",
+			"english": "uncle"
+		},
+		{
+			"catalan": "joventut",
+			"english": "youth"
+		},
+		{
+			"catalan": "diners",
+			"english": "money"
+		},
+		{
+			"catalan": "mentre",
+			"english": "while"
+		},
+		{
+			"catalan": "negocis",
+			"english": "business"
+		},
+		{
+			"catalan": "vida",
+			"english": "life"
+		},
+		{
+			"catalan": "dia",
+			"english": "day"
+		},
+		{
+			"catalan": "casa",
+			"english": "home"
+		},
+		{
+			"catalan": "economia",
+			"english": "economy"
+		},
+		{
+			"catalan": "formació",
+			"english": "training"
+		},
+		{
+			"catalan": "espècie",
+			"english": "kind"
+		},
+		{
+			"catalan": "futur",
+			"english": "future"
+		},
+		{
+			"catalan": "acció",
+			"english": "action"
+		},
+		{
+			"catalan": "dolent",
+			"english": "bad"
+		},
+		{
+			"catalan": "res",
+			"english": "nothing"
+		},
+		{
+			"catalan": "període",
+			"english": "period"
+		},
+		{
+			"catalan": "assignatura",
+			"english": "subject"
+		},
+		{
+			"catalan": "pollastre",
+			"english": "chicken"
+		},
+		{
+			"catalan": "material",
+			"english": "material"
+		},
+		{
+			"catalan": "cotxe",
+			"english": "car"
+		},
+		{
+			"catalan": "meitat",
+			"english": "half"
+		},
+		{
+			"catalan": "dins",
+			"english": "inside"
+		},
+		{
+			"catalan": "fora",
+			"english": "outside"
+		},
+		{
+			"catalan": "estàndard",
+			"english": "standard"
+		},
+		{
+			"catalan": "article",
+			"english": "item"
+		},
+		{
+			"catalan": "mitjà",
+			"english": "medium"
+		},
+		{
+			"catalan": "elecció",
+			"english": "choice"
+		},
+		{
+			"catalan": "matí",
+			"english": "morning"
+		},
+		{
+			"catalan": "nord",
+			"english": "north"
+		},
+		{
+			"catalan": "quadrat",
+			"english": "square"
+		},
+		{
+			"catalan": "capital",
+			"english": "capital"
+		},
+		{
+			"catalan": "jo",
+			"english": "self"
+		},
+		{
+			"catalan": "tir",
+			"english": "shot"
+		},
+		{
+			"catalan": "vivent",
+			"english": "living"
+		},
+		{
+			"catalan": "plàstic",
+			"english": "plastic"
+		},
+		{
+			"catalan": "sensació",
+			"english": "feeling"
+		},
+		{
+			"catalan": "estalvis",
+			"english": "savings"
+		},
+		{
+			"catalan": "animal",
+			"english": "animal"
+		},
+		{
+			"catalan": "màxim",
+			"english": "maximum"
+		},
+		{
+			"catalan": "novel·la",
+			"english": "novel"
+		},
+		{
+			"catalan": "molt",
+			"english": "plenty"
+		},
+		{
+			"catalan": "fons",
+			"english": "background"
+		},
+		{
+			"catalan": "vermell",
+			"english": "red"
+		},
+		{
+			"catalan": "força",
+			"english": "strength"
+		},
+		{
+			"catalan": "vegetal",
+			"english": "vegetable"
+		},
+		{
+			"catalan": "ideal",
+			"english": "ideal"
+		},
+		{
+			"catalan": "cuina",
+			"english": "kitchen"
+		},
+		{
+			"catalan": "principi",
+			"english": "principle"
+		},
+		{
+			"catalan": "relatiu",
+			"english": "relative"
+		},
+		{
+			"catalan": "venda",
+			"english": "sale"
+		},
+		{
+			"catalan": "carrer",
+			"english": "street"
+		},
+		{
+			"catalan": "mínim",
+			"english": "minimum"
+		},
+		{
+			"catalan": "camí",
+			"english": "path"
+		},
+		{
+			"catalan": "mar",
+			"english": "sea"
+		},
+		{
+			"catalan": "sud",
+			"english": "south"
+		},
+		{
+			"catalan": "estat",
+			"english": "status"
+		},
+		{
+			"catalan": "confiança",
+			"english": "confidence"
+		},
+		{
+			"catalan": "filla",
+			"english": "daughter"
+		},
+		{
+			"catalan": "grau",
+			"english": "degree"
+		},
+		{
+			"catalan": "deure",
+			"english": "duty"
+		},
+		{
+			"catalan": "hores",
+			"english": "hour"
+		},
+		{
+			"catalan": "substància",
+			"english": "substance"
+		},
+		{
+			"catalan": "tard",
+			"english": "afternoon"
+		},
+		{
+			"catalan": "consideració",
+			"english": "consideration"
+		},
+		{
+			"catalan": "or",
+			"english": "gold"
+		},
+		{
+			"catalan": "missió",
+			"english": "mission"
+		},
+		{
+			"catalan": "porta",
+			"english": "door"
+		},
+		{
+			"catalan": "aquest",
+			"english": "east"
+		},
+		{
+			"catalan": "manera",
+			"english": "manner"
+		},
+		{
+			"catalan": "reunió",
+			"english": "meeting"
+		},
+		{
+			"catalan": "aparcament",
+			"english": "parking"
+		},
+		{
+			"catalan": "rutina",
+			"english": "routine"
+		},
+		{
+			"catalan": "natació",
+			"english": "swimming"
+		},
+		{
+			"catalan": "aerolínia",
+			"english": "airline"
+		},
+		{
+			"catalan": "dissenyador",
+			"english": "designer"
+		},
+		{
+			"catalan": "emergència",
+			"english": "emergency"
+		},
+		{
+			"catalan": "nit",
+			"english": "evening"
+		},
+		{
+			"catalan": "extensió",
+			"english": "extension"
+		},
+		{
+			"catalan": "horror",
+			"english": "horror"
+		},
+		{
+			"catalan": "muntanya",
+			"english": "mountain"
+		},
+		{
+			"catalan": "pacient",
+			"english": "patient"
+		},
+		{
+			"catalan": "alleujament",
+			"english": "relief"
+		},
+		{
+			"catalan": "turístic",
+			"english": "tourist"
+		},
+		{
+			"catalan": "oest",
+			"english": "west"
+		},
+		{
+			"catalan": "a part",
+			"english": "aside"
+		},
+		{
+			"catalan": "germà",
+			"english": "brother"
+		},
+		{
+			"catalan": "expert",
+			"english": "expert"
+		},
+		{
+			"catalan": "Déu",
+			"english": "god"
+		},
+		{
+			"catalan": "natiu",
+			"english": "native"
+		},
+		{
+			"catalan": "obertura",
+			"english": "opening"
+		},
+		{
+			"catalan": "noi",
+			"english": "boy"
+		},
+		{
+			"catalan": "especialista",
+			"english": "specialist"
+		},
+		{
+			"catalan": "amarg",
+			"english": "bitter"
+		},
+		{
+			"catalan": "infern",
+			"english": "hell"
+		},
+		{
+			"catalan": "incident",
+			"english": "incident"
+		},
+		{
+			"catalan": "resident",
+			"english": "resident"
+		},
+		{
+			"catalan": 1,
+			"english": "a"
+		},
+		{
+			"catalan": "vostè",
+			"english": "you"
+		},
+		{
+			"catalan": "el",
+			"english": "it"
+		},
+		{
+			"catalan": "llauna",
+			"english": "can"
+		},
+		{
+			"catalan": "voluntat",
+			"english": "will"
+		},
+		{
+			"catalan": "si",
+			"english": "if"
+		},
+		{
+			"catalan": 1,
+			"english": "one"
+		},
+		{
+			"catalan": "molts",
+			"english": "many"
+		},
+		{
+			"catalan": "més",
+			"english": "most"
+		},
+		{
+			"catalan": "un altre",
+			"english": "other"
+		},
+		{
+			"catalan": "bo",
+			"english": "good"
+		},
+		{
+			"catalan": "gran",
+			"english": "great"
+		},
+		{
+			"catalan": "pocs",
+			"english": "few"
+		},
+		{
+			"catalan": "força",
+			"english": "might"
+		},
+		{
+			"catalan": "encara",
+			"english": "still"
+		},
+		{
+			"catalan": "públic",
+			"english": "public"
+		},
+		{
+			"catalan": "humà",
+			"english": "human"
+		},
+		{
+			"catalan": "local",
+			"english": "local"
+		},
+		{
+			"catalan": "general",
+			"english": "general"
+		},
+		{
+			"catalan": "ella",
+			"english": "she"
+		},
+		{
+			"catalan": "específic",
+			"english": "specific"
+		},
+		{
+			"catalan": "llarg",
+			"english": "long"
+		},
+		{
+			"catalan": "alt",
+			"english": "high"
+		},
+		{
+			"catalan": "aquesta nit",
+			"english": "tonight"
+		},
+		{
+			"catalan": "comuna",
+			"english": "common"
+		},
+		{
+			"catalan": "senzill",
+			"english": "simple"
+		},
+		{
+			"catalan": "passat",
+			"english": "past"
+		},
+		{
+			"catalan": "gran",
+			"english": "big"
+		},
+		{
+			"catalan": "possible",
+			"english": "possible"
+		},
+		{
+			"catalan": "particular",
+			"english": "particular"
+		},
+		{
+			"catalan": "avui",
+			"english": "today"
+		},
+		{
+			"catalan": "personal",
+			"english": "personal"
+		},
+		{
+			"catalan": "actual",
+			"english": "current"
+		},
+		{
+			"catalan": "nacional",
+			"english": "national"
+		},
+		{
+			"catalan": "natural",
+			"english": "natural"
+		},
+		{
+			"catalan": "físic",
+			"english": "physical"
+		},
+		{
+			"catalan": "segon",
+			"english": "second"
+		},
+		{
+			"catalan": "individual",
+			"english": "individual"
+		},
+		{
+			"catalan": "principal",
+			"english": "main"
+		},
+		{
+			"catalan": "potencial",
+			"english": "potential"
+		},
+		{
+			"catalan": "professional",
+			"english": "professional"
+		},
+		{
+			"catalan": "internacional",
+			"english": "international"
+		},
+		{
+			"catalan": "alternativa",
+			"english": "alternative"
+		},
+		{
+			"catalan": "següent",
+			"english": "following"
+		},
+		{
+			"catalan": "especial",
+			"english": "special"
+		},
+		{
+			"catalan": "treball",
+			"english": "working"
+		},
+		{
+			"catalan": "tot",
+			"english": "whole"
+		},
+		{
+			"catalan": "fred",
+			"english": "cold"
+		},
+		{
+			"catalan": "comercial",
+			"english": "commercial"
+		},
+		{
+			"catalan": "sota",
+			"english": "low"
+		},
+		{
+			"catalan": "primari",
+			"english": "primary"
+		},
+		{
+			"catalan": "valor",
+			"english": "worth"
+		},
+		{
+			"catalan": "necessari",
+			"english": "necessary"
+		},
+		{
+			"catalan": "positiu",
+			"english": "positive"
+		},
+		{
+			"catalan": "creatiu",
+			"english": "creative"
+		},
+		{
+			"catalan": "content",
+			"english": "glad"
+		},
+		{
+			"catalan": "a causa",
+			"english": "due"
+		},
+		{
+			"catalan": "efectiu",
+			"english": "effective"
+		},
+		{
+			"catalan": "mig",
+			"english": "middle"
+		},
+		{
+			"catalan": "regular",
+			"english": "regular"
+		},
+		{
+			"catalan": "independent",
+			"english": "independent"
+		},
+		{
+			"catalan": "original",
+			"english": "original"
+		},
+		{
+			"catalan": "bonica",
+			"english": "beautiful"
+		},
+		{
+			"catalan": "actiu",
+			"english": "active"
+		},
+		{
+			"catalan": "negatiu",
+			"english": "negative"
+		},
+		{
+			"catalan": "segur",
+			"english": "safe"
+		},
+		{
+			"catalan": "visual",
+			"english": "visual"
+		},
+		{
+			"catalan": "més enllà",
+			"english": "beyond"
+		},
+		{
+			"catalan": "menor",
+			"english": "junior"
+		},
+		{
+			"catalan": "únic",
+			"english": "unique"
+		},
+		{
+			"catalan": "qualsevol cosa",
+			"english": "anything"
+		},
+		{
+			"catalan": "clàssic",
+			"english": "classic"
+		},
+		{
+			"catalan": "final",
+			"english": "final"
+		},
+		{
+			"catalan": "privat",
+			"english": "private"
+		},
+		{
+			"catalan": "Occidental",
+			"english": "western"
+		},
+		{
+			"catalan": "familiar",
+			"english": "familiar"
+		},
+		{
+			"catalan": "oficial",
+			"english": "official"
+		},
+		{
+			"catalan": "ample",
+			"english": "broad"
+		},
+		{
+			"catalan": "còmode",
+			"english": "comfortable"
+		},
+		{
+			"catalan": "pot ser",
+			"english": "maybe"
+		},
+		{
+			"catalan": "ric",
+			"english": "rich"
+		},
+		{
+			"catalan": "jove",
+			"english": "young"
+		},
+		{
+			"catalan": "pesat",
+			"english": "heavy"
+		},
+		{
+			"catalan": "Hola",
+			"english": "hello"
+		},
+		{
+			"catalan": "valuós",
+			"english": "valuable"
+		},
+		{
+			"catalan": "líder",
+			"english": "leading"
+		},
+		{
+			"catalan": "normal",
+			"english": "normal"
+		},
+		{
+			"catalan": "secret",
+			"english": "secret"
+		},
+		{
+			"catalan": "dur",
+			"english": "tough"
+		},
+		{
+			"catalan": "profund",
+			"english": "deep"
+		},
+		{
+			"catalan": "objectiu",
+			"english": "objective"
+		},
+		{
+			"catalan": "químic",
+			"english": "chemical"
+		},
+		{
+			"catalan": "extrem",
+			"english": "extreme"
+		},
+		{
+			"catalan": "formal",
+			"english": "formal"
+		},
+		{
+			"catalan": "oposat",
+			"english": "opposite"
+		},
+		{
+			"catalan": "remot",
+			"english": "remote"
+		},
+		{
+			"catalan": "vast",
+			"english": "vast"
+		},
+		{
+			"catalan": "en algun lloc",
+			"english": "somewhere"
+		},
+		{
+			"catalan": "on sigui",
+			"english": "anywhere"
+		},
+		{
+			"catalan": "fosc",
+			"english": "dark"
+		},
+		{
+			"catalan": "interna",
+			"english": "internal"
+		},
+		{
+			"catalan": "sensible",
+			"english": "sensitive"
+		},
+		{
+			"catalan": "constant",
+			"english": "constant"
+		},
+		{
+			"catalan": "cru",
+			"english": "raw"
+		},
+		{
+			"catalan": "suau",
+			"english": "soft"
+		},
+		{
+			"catalan": "sòlid",
+			"english": "solid"
+		},
+		{
+			"catalan": "estrany",
+			"english": "weird"
+		},
+		{
+			"catalan": "anual",
+			"english": "annual"
+		},
+		{
+			"catalan": "mort",
+			"english": "dead"
+		},
+		{
+			"catalan": "sempre",
+			"english": "forever"
+		},
+		{
+			"catalan": "ningú",
+			"english": "nobody"
+		},
+		{
+			"catalan": "ronda",
+			"english": "round"
+		},
+		{
+			"catalan": "mentre",
+			"english": "whereas"
+		},
+		{
+			"catalan": "equivalent",
+			"english": "equivalent"
+		},
+		{
+			"catalan": "espiritual",
+			"english": "spiritual"
+		},
+		{
+			"catalan": "adult",
+			"english": "adult"
+		},
+		{
+			"catalan": "boig",
+			"english": "crazy"
+		},
+		{
+			"catalan": "anterior",
+			"english": "prior"
+		},
+		{
+			"catalan": "aspre",
+			"english": "rough"
+		},
+		{
+			"catalan": "trist",
+			"english": "sad"
+		},
+		{
+			"catalan": "malalt",
+			"english": "sick"
+		},
+		{
+			"catalan": "extern",
+			"english": "external"
+		},
+		{
+			"catalan": "il·legal",
+			"english": "illegal"
+		},
+		{
+			"catalan": "mòbil",
+			"english": "mobile"
+		},
+		{
+			"catalan": "repugnant",
+			"english": "nasty"
+		},
+		{
+			"catalan": "ordinari",
+			"english": "ordinary"
+		},
+		{
+			"catalan": "Reial",
+			"english": "royal"
+		},
+		{
+			"catalan": "major",
+			"english": "senior"
+		},
+		{
+			"catalan": "superior",
+			"english": "upper"
+		},
+		{
+			"catalan": "dependent",
+			"english": "dependent"
+		},
+		{
+			"catalan": "divertida",
+			"english": "funny"
+		},
+		{
+			"catalan": "dolça",
+			"english": "sweet"
+		},
+		{
+			"catalan": "dalt",
+			"english": "upstairs"
+		},
+		{
+			"catalan": "habitual",
+			"english": "usual"
+		},
+		{
+			"catalan": "a l'estranger",
+			"english": "abroad"
+		},
+		{
+			"catalan": "magnífic",
+			"english": "grand"
+		},
+		{
+			"catalan": "masculí",
+			"english": "male"
+		},
+		{
+			"catalan": "ningú",
+			"english": "anybody"
+		},
+		{
+			"catalan": "brillant",
+			"english": "brilliant"
+		},
+		{
+			"catalan": "volgut",
+			"english": "dear"
+		},
+		{
+			"catalan": "borratxo",
+			"english": "drunk"
+		},
+		{
+			"catalan": "femení",
+			"english": "female"
+		},
+		{
+			"catalan": "inevitable",
+			"english": "inevitable"
+		},
+		{
+			"catalan": "ordenat",
+			"english": "neat"
+		},
+		{
+			"catalan": "representant",
+			"english": "representative"
+		},
+		{
+			"catalan": "ximple",
+			"english": "silly"
+		},
+		{
+			"catalan": "estúpid",
+			"english": "stupid"
+		},
+		{
+			"catalan": "temporal",
+			"english": "temporary"
+		},
+		{
+			"catalan": "matí",
+			"english": "tomorrow"
+		},
+		{
+			"catalan": "ahir",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 520 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"chinese": "人",
+			"english": "people"
+		},
+		{
+			"chinese": "历史",
+			"english": "history"
+		},
+		{
+			"chinese": "办法",
+			"english": "way"
+		},
+		{
+			"chinese": "艺术",
+			"english": "art"
+		},
+		{
+			"chinese": "世界",
+			"english": "world"
+		},
+		{
+			"chinese": "信息",
+			"english": "information"
+		},
+		{
+			"chinese": "地图",
+			"english": "map"
+		},
+		{
+			"chinese": "二",
+			"english": "two"
+		},
+		{
+			"chinese": "家庭",
+			"english": "family"
+		},
+		{
+			"chinese": "政府",
+			"english": "government"
+		},
+		{
+			"chinese": "健康",
+			"english": "health"
+		},
+		{
+			"chinese": "系统",
+			"english": "system"
+		},
+		{
+			"chinese": "电脑",
+			"english": "computer"
+		},
+		{
+			"chinese": "肉",
+			"english": "meat"
+		},
+		{
+			"chinese": "年",
+			"english": "year"
+		},
+		{
+			"chinese": "谢谢",
+			"english": "thanks"
+		},
+		{
+			"chinese": "音乐",
+			"english": "music"
+		},
+		{
+			"chinese": "人",
+			"english": "person"
+		},
+		{
+			"chinese": "读",
+			"english": "reading"
+		},
+		{
+			"chinese": "方法",
+			"english": "method"
+		},
+		{
+			"chinese": "数据",
+			"english": "data"
+		},
+		{
+			"chinese": "餐饮",
+			"english": "food"
+		},
+		{
+			"chinese": "理解",
+			"english": "understanding"
+		},
+		{
+			"chinese": "理论",
+			"english": "theory"
+		},
+		{
+			"chinese": "法",
+			"english": "law"
+		},
+		{
+			"chinese": "鸟",
+			"english": "bird"
+		},
+		{
+			"chinese": "文学",
+			"english": "literature"
+		},
+		{
+			"chinese": "问题",
+			"english": "problem"
+		},
+		{
+			"chinese": "软件",
+			"english": "software"
+		},
+		{
+			"chinese": "控制",
+			"english": "control"
+		},
+		{
+			"chinese": "知识",
+			"english": "knowledge"
+		},
+		{
+			"chinese": "功率",
+			"english": "power"
+		},
+		{
+			"chinese": "能力",
+			"english": "ability"
+		},
+		{
+			"chinese": "经济学",
+			"english": "economics"
+		},
+		{
+			"chinese": "爱",
+			"english": "love"
+		},
+		{
+			"chinese": "互联网",
+			"english": "internet"
+		},
+		{
+			"chinese": "电视",
+			"english": "television"
+		},
+		{
+			"chinese": "科学",
+			"english": "science"
+		},
+		{
+			"chinese": "图书馆",
+			"english": "library"
+		},
+		{
+			"chinese": "性质",
+			"english": "nature"
+		},
+		{
+			"chinese": "事实",
+			"english": "fact"
+		},
+		{
+			"chinese": "产品",
+			"english": "product"
+		},
+		{
+			"chinese": "理念",
+			"english": "idea"
+		},
+		{
+			"chinese": "温度",
+			"english": "temperature"
+		},
+		{
+			"chinese": "投资",
+			"english": "investment"
+		},
+		{
+			"chinese": "区",
+			"english": "area"
+		},
+		{
+			"chinese": "社会",
+			"english": "society"
+		},
+		{
+			"chinese": "活动",
+			"english": "activity"
+		},
+		{
+			"chinese": "故事",
+			"english": "story"
+		},
+		{
+			"chinese": "行业",
+			"english": "industry"
+		},
+		{
+			"chinese": "媒体",
+			"english": "media"
+		},
+		{
+			"chinese": "事情",
+			"english": "thing"
+		},
+		{
+			"chinese": "烤箱",
+			"english": "oven"
+		},
+		{
+			"chinese": "社区",
+			"english": "community"
+		},
+		{
+			"chinese": "定义",
+			"english": "definition"
+		},
+		{
+			"chinese": "安全",
+			"english": "safety"
+		},
+		{
+			"chinese": "质量",
+			"english": "quality"
+		},
+		{
+			"chinese": "发展",
+			"english": "development"
+		},
+		{
+			"chinese": "语言",
+			"english": "language"
+		},
+		{
+			"chinese": "管理",
+			"english": "management"
+		},
+		{
+			"chinese": "播放机",
+			"english": "player"
+		},
+		{
+			"chinese": "品种",
+			"english": "variety"
+		},
+		{
+			"chinese": "视频",
+			"english": "video"
+		},
+		{
+			"chinese": "周",
+			"english": "week"
+		},
+		{
+			"chinese": "安全",
+			"english": "security"
+		},
+		{
+			"chinese": "国家",
+			"english": "country"
+		},
+		{
+			"chinese": "考试",
+			"english": "exam"
+		},
+		{
+			"chinese": "电影",
+			"english": "movie"
+		},
+		{
+			"chinese": "组织",
+			"english": "organization"
+		},
+		{
+			"chinese": "设备",
+			"english": "equipment"
+		},
+		{
+			"chinese": "物理",
+			"english": "physics"
+		},
+		{
+			"chinese": "分析",
+			"english": "analysis"
+		},
+		{
+			"chinese": "政策",
+			"english": "policy"
+		},
+		{
+			"chinese": "系列",
+			"english": "series"
+		},
+		{
+			"chinese": "思想",
+			"english": "thought"
+		},
+		{
+			"chinese": "基础",
+			"english": "basis"
+		},
+		{
+			"chinese": "男朋友",
+			"english": "boyfriend"
+		},
+		{
+			"chinese": "方向",
+			"english": "direction"
+		},
+		{
+			"chinese": "战略",
+			"english": "strategy"
+		},
+		{
+			"chinese": "技术",
+			"english": "technology"
+		},
+		{
+			"chinese": "军队",
+			"english": "army"
+		},
+		{
+			"chinese": "相机",
+			"english": "camera"
+		},
+		{
+			"chinese": "自由",
+			"english": "freedom"
+		},
+		{
+			"chinese": "纸",
+			"english": "paper"
+		},
+		{
+			"chinese": "环境",
+			"english": "environment"
+		},
+		{
+			"chinese": "儿童",
+			"english": "child"
+		},
+		{
+			"chinese": "例",
+			"english": "instance"
+		},
+		{
+			"chinese": "月",
+			"english": "month"
+		},
+		{
+			"chinese": "真相",
+			"english": "truth"
+		},
+		{
+			"chinese": "营销",
+			"english": "marketing"
+		},
+		{
+			"chinese": "大学",
+			"english": "university"
+		},
+		{
+			"chinese": "写作",
+			"english": "writing"
+		},
+		{
+			"chinese": "文章",
+			"english": "article"
+		},
+		{
+			"chinese": "部",
+			"english": "department"
+		},
+		{
+			"chinese": "区别",
+			"english": "difference"
+		},
+		{
+			"chinese": "目标",
+			"english": "goal"
+		},
+		{
+			"chinese": "新闻",
+			"english": "news"
+		},
+		{
+			"chinese": "听众",
+			"english": "audience"
+		},
+		{
+			"chinese": "钓鱼",
+			"english": "fishing"
+		},
+		{
+			"chinese": "发展",
+			"english": "growth"
+		},
+		{
+			"chinese": "收入",
+			"english": "income"
+		},
+		{
+			"chinese": "婚姻",
+			"english": "marriage"
+		},
+		{
+			"chinese": "用户",
+			"english": "user"
+		},
+		{
+			"chinese": "组合",
+			"english": "combination"
+		},
+		{
+			"chinese": "失败",
+			"english": "failure"
+		},
+		{
+			"chinese": "含义",
+			"english": "meaning"
+		},
+		{
+			"chinese": "医学",
+			"english": "medicine"
+		},
+		{
+			"chinese": "哲学",
+			"english": "philosophy"
+		},
+		{
+			"chinese": "老师",
+			"english": "teacher"
+		},
+		{
+			"chinese": "通讯",
+			"english": "communication"
+		},
+		{
+			"chinese": "晚",
+			"english": "night"
+		},
+		{
+			"chinese": "化学",
+			"english": "chemistry"
+		},
+		{
+			"chinese": "疾病",
+			"english": "disease"
+		},
+		{
+			"chinese": "磁盘",
+			"english": "disk"
+		},
+		{
+			"chinese": "能源",
+			"english": "energy"
+		},
+		{
+			"chinese": "国家",
+			"english": "nation"
+		},
+		{
+			"chinese": "路",
+			"english": "road"
+		},
+		{
+			"chinese": "角色",
+			"english": "role"
+		},
+		{
+			"chinese": "汤",
+			"english": "soup"
+		},
+		{
+			"chinese": "广告",
+			"english": "advertising"
+		},
+		{
+			"chinese": "位置",
+			"english": "location"
+		},
+		{
+			"chinese": "成功",
+			"english": "success"
+		},
+		{
+			"chinese": "加成",
+			"english": "addition"
+		},
+		{
+			"chinese": "公寓",
+			"english": "apartment"
+		},
+		{
+			"chinese": "教育",
+			"english": "education"
+		},
+		{
+			"chinese": "数学",
+			"english": "math"
+		},
+		{
+			"chinese": "时刻",
+			"english": "moment"
+		},
+		{
+			"chinese": "绘画",
+			"english": "painting"
+		},
+		{
+			"chinese": "政治",
+			"english": "politics"
+		},
+		{
+			"chinese": "注意",
+			"english": "attention"
+		},
+		{
+			"chinese": "决定",
+			"english": "decision"
+		},
+		{
+			"chinese": "事件",
+			"english": "event"
+		},
+		{
+			"chinese": "属性",
+			"english": "property"
+		},
+		{
+			"chinese": "购物",
+			"english": "shopping"
+		},
+		{
+			"chinese": "学生",
+			"english": "student"
+		},
+		{
+			"chinese": "木",
+			"english": "wood"
+		},
+		{
+			"chinese": "竞争",
+			"english": "competition"
+		},
+		{
+			"chinese": "分配",
+			"english": "distribution"
+		},
+		{
+			"chinese": "娱乐",
+			"english": "entertainment"
+		},
+		{
+			"chinese": "办公室",
+			"english": "office"
+		},
+		{
+			"chinese": "人口",
+			"english": "population"
+		},
+		{
+			"chinese": "主席",
+			"english": "president"
+		},
+		{
+			"chinese": "单元",
+			"english": "unit"
+		},
+		{
+			"chinese": "类别",
+			"english": "category"
+		},
+		{
+			"chinese": "香烟",
+			"english": "cigarette"
+		},
+		{
+			"chinese": "背景",
+			"english": "context"
+		},
+		{
+			"chinese": "介绍",
+			"english": "introduction"
+		},
+		{
+			"chinese": "机会",
+			"english": "opportunity"
+		},
+		{
+			"chinese": "性能",
+			"english": "performance"
+		},
+		{
+			"chinese": "司机",
+			"english": "driver"
+		},
+		{
+			"chinese": "飞行",
+			"english": "flight"
+		},
+		{
+			"chinese": "长度",
+			"english": "length"
+		},
+		{
+			"chinese": "杂志",
+			"english": "magazine"
+		},
+		{
+			"chinese": "报纸",
+			"english": "newspaper"
+		},
+		{
+			"chinese": "关系",
+			"english": "relationship"
+		},
+		{
+			"chinese": "教学",
+			"english": "teaching"
+		},
+		{
+			"chinese": "细胞",
+			"english": "cell"
+		},
+		{
+			"chinese": "零售商",
+			"english": "dealer"
+		},
+		{
+			"chinese": "发现",
+			"english": "finding"
+		},
+		{
+			"chinese": "湖",
+			"english": "lake"
+		},
+		{
+			"chinese": "会员",
+			"english": "member"
+		},
+		{
+			"chinese": "信息",
+			"english": "message"
+		},
+		{
+			"chinese": "电话",
+			"english": "phone"
+		},
+		{
+			"chinese": "现场",
+			"english": "scene"
+		},
+		{
+			"chinese": "出现",
+			"english": "appearance"
+		},
+		{
+			"chinese": "协会",
+			"english": "association"
+		},
+		{
+			"chinese": "概念",
+			"english": "concept"
+		},
+		{
+			"chinese": "顾客",
+			"english": "customer"
+		},
+		{
+			"chinese": "死亡",
+			"english": "death"
+		},
+		{
+			"chinese": "讨论",
+			"english": "discussion"
+		},
+		{
+			"chinese": "住房",
+			"english": "housing"
+		},
+		{
+			"chinese": "通货膨胀",
+			"english": "inflation"
+		},
+		{
+			"chinese": "保险",
+			"english": "insurance"
+		},
+		{
+			"chinese": "心情",
+			"english": "mood"
+		},
+		{
+			"chinese": "女人",
+			"english": "woman"
+		},
+		{
+			"chinese": "忠告",
+			"english": "advice"
+		},
+		{
+			"chinese": "血液",
+			"english": "blood"
+		},
+		{
+			"chinese": "功夫",
+			"english": "effort"
+		},
+		{
+			"chinese": "表达",
+			"english": "expression"
+		},
+		{
+			"chinese": "重要性",
+			"english": "importance"
+		},
+		{
+			"chinese": "意见",
+			"english": "opinion"
+		},
+		{
+			"chinese": "付款",
+			"english": "payment"
+		},
+		{
+			"chinese": "现实",
+			"english": "reality"
+		},
+		{
+			"chinese": "责任",
+			"english": "responsibility"
+		},
+		{
+			"chinese": "情况",
+			"english": "situation"
+		},
+		{
+			"chinese": "技能",
+			"english": "skill"
+		},
+		{
+			"chinese": "声明",
+			"english": "statement"
+		},
+		{
+			"chinese": "财富",
+			"english": "wealth"
+		},
+		{
+			"chinese": "应用",
+			"english": "application"
+		},
+		{
+			"chinese": "市",
+			"english": "city"
+		},
+		{
+			"chinese": "县",
+			"english": "county"
+		},
+		{
+			"chinese": "深度",
+			"english": "depth"
+		},
+		{
+			"chinese": "房地产",
+			"english": "estate"
+		},
+		{
+			"chinese": "基础",
+			"english": "foundation"
+		},
+		{
+			"chinese": "祖母",
+			"english": "grandmother"
+		},
+		{
+			"chinese": "心",
+			"english": "heart"
+		},
+		{
+			"chinese": "透视",
+			"english": "perspective"
+		},
+		{
+			"chinese": "照片",
+			"english": "photo"
+		},
+		{
+			"chinese": "食谱",
+			"english": "recipe"
+		},
+		{
+			"chinese": "工作室",
+			"english": "studio"
+		},
+		{
+			"chinese": "话题",
+			"english": "topic"
+		},
+		{
+			"chinese": "采集",
+			"english": "collection"
+		},
+		{
+			"chinese": "萧条",
+			"english": "depression"
+		},
+		{
+			"chinese": "想像力",
+			"english": "imagination"
+		},
+		{
+			"chinese": "情",
+			"english": "passion"
+		},
+		{
+			"chinese": "百分比",
+			"english": "percentage"
+		},
+		{
+			"chinese": "资源",
+			"english": "resource"
+		},
+		{
+			"chinese": "设置",
+			"english": "setting"
+		},
+		{
+			"chinese": "广告",
+			"english": "ad"
+		},
+		{
+			"chinese": "机构",
+			"english": "agency"
+		},
+		{
+			"chinese": "学院",
+			"english": "college"
+		},
+		{
+			"chinese": "连接",
+			"english": "connection"
+		},
+		{
+			"chinese": "批评",
+			"english": "criticism"
+		},
+		{
+			"chinese": "债务",
+			"english": "debt"
+		},
+		{
+			"chinese": "描述",
+			"english": "description"
+		},
+		{
+			"chinese": "记忆",
+			"english": "memory"
+		},
+		{
+			"chinese": "忍耐",
+			"english": "patience"
+		},
+		{
+			"chinese": "秘书",
+			"english": "secretary"
+		},
+		{
+			"chinese": "解",
+			"english": "solution"
+		},
+		{
+			"chinese": "行政",
+			"english": "administration"
+		},
+		{
+			"chinese": "方面",
+			"english": "aspect"
+		},
+		{
+			"chinese": "态度",
+			"english": "attitude"
+		},
+		{
+			"chinese": "导向器",
+			"english": "director"
+		},
+		{
+			"chinese": "个性",
+			"english": "personality"
+		},
+		{
+			"chinese": "心理学",
+			"english": "psychology"
+		},
+		{
+			"chinese": "建议",
+			"english": "recommendation"
+		},
+		{
+			"chinese": "响应",
+			"english": "response"
+		},
+		{
+			"chinese": "选择",
+			"english": "selection"
+		},
+		{
+			"chinese": "存储",
+			"english": "storage"
+		},
+		{
+			"chinese": "版",
+			"english": "version"
+		},
+		{
+			"chinese": "醇",
+			"english": "alcohol"
+		},
+		{
+			"chinese": "论据",
+			"english": "argument"
+		},
+		{
+			"chinese": "抱怨",
+			"english": "complaint"
+		},
+		{
+			"chinese": "合同",
+			"english": "contract"
+		},
+		{
+			"chinese": "重点",
+			"english": "emphasis"
+		},
+		{
+			"chinese": "高速公路",
+			"english": "highway"
+		},
+		{
+			"chinese": "失利",
+			"english": "loss"
+		},
+		{
+			"chinese": "籍",
+			"english": "membership"
+		},
+		{
+			"chinese": "所有权",
+			"english": "possession"
+		},
+		{
+			"chinese": "制备",
+			"english": "preparation"
+		},
+		{
+			"chinese": "牛扒",
+			"english": "steak"
+		},
+		{
+			"chinese": "联盟",
+			"english": "union"
+		},
+		{
+			"chinese": "协议",
+			"english": "agreement"
+		},
+		{
+			"chinese": "癌症",
+			"english": "cancer"
+		},
+		{
+			"chinese": "货币",
+			"english": "currency"
+		},
+		{
+			"chinese": "雇用",
+			"english": "employment"
+		},
+		{
+			"chinese": "工程",
+			"english": "engineering"
+		},
+		{
+			"chinese": "条目",
+			"english": "entry"
+		},
+		{
+			"chinese": "相互作用",
+			"english": "interaction"
+		},
+		{
+			"chinese": "混合物",
+			"english": "mixture"
+		},
+		{
+			"chinese": "偏爱",
+			"english": "preference"
+		},
+		{
+			"chinese": "地区",
+			"english": "region"
+		},
+		{
+			"chinese": "共和国",
+			"english": "republic"
+		},
+		{
+			"chinese": "传统",
+			"english": "tradition"
+		},
+		{
+			"chinese": "病毒",
+			"english": "virus"
+		},
+		{
+			"chinese": "演员",
+			"english": "actor"
+		},
+		{
+			"chinese": "课堂",
+			"english": "classroom"
+		},
+		{
+			"chinese": "交货",
+			"english": "delivery"
+		},
+		{
+			"chinese": "设备",
+			"english": "device"
+		},
+		{
+			"chinese": "困难",
+			"english": "difficulty"
+		},
+		{
+			"chinese": "戏剧",
+			"english": "drama"
+		},
+		{
+			"chinese": "选举",
+			"english": "election"
+		},
+		{
+			"chinese": "发动机",
+			"english": "engine"
+		},
+		{
+			"chinese": "足球",
+			"english": "football"
+		},
+		{
+			"chinese": "指导",
+			"english": "guidance"
+		},
+		{
+			"chinese": "饭店",
+			"english": "hotel"
+		},
+		{
+			"chinese": "所有者",
+			"english": "owner"
+		},
+		{
+			"chinese": "优先",
+			"english": "priority"
+		},
+		{
+			"chinese": "保护",
+			"english": "protection"
+		},
+		{
+			"chinese": "建议",
+			"english": "suggestion"
+		},
+		{
+			"chinese": "张力",
+			"english": "tension"
+		},
+		{
+			"chinese": "变异",
+			"english": "variation"
+		},
+		{
+			"chinese": "焦虑",
+			"english": "anxiety"
+		},
+		{
+			"chinese": "大气层",
+			"english": "atmosphere"
+		},
+		{
+			"chinese": "意识",
+			"english": "awareness"
+		},
+		{
+			"chinese": "浴",
+			"english": "bath"
+		},
+		{
+			"chinese": "面包",
+			"english": "bread"
+		},
+		{
+			"chinese": "候选人",
+			"english": "candidate"
+		},
+		{
+			"chinese": "气候",
+			"english": "climate"
+		},
+		{
+			"chinese": "对照",
+			"english": "comparison"
+		},
+		{
+			"chinese": "混乱",
+			"english": "confusion"
+		},
+		{
+			"chinese": "施工",
+			"english": "construction"
+		},
+		{
+			"chinese": "电梯",
+			"english": "elevator"
+		},
+		{
+			"chinese": "情感",
+			"english": "emotion"
+		},
+		{
+			"chinese": "雇员",
+			"english": "employee"
+		},
+		{
+			"chinese": "雇主",
+			"english": "employer"
+		},
+		{
+			"chinese": "客人",
+			"english": "guest"
+		},
+		{
+			"chinese": "高度",
+			"english": "height"
+		},
+		{
+			"chinese": "领导",
+			"english": "leadership"
+		},
+		{
+			"chinese": "购物中心",
+			"english": "mall"
+		},
+		{
+			"chinese": "经理",
+			"english": "manager"
+		},
+		{
+			"chinese": "手术",
+			"english": "operation"
+		},
+		{
+			"chinese": "记录",
+			"english": "recording"
+		},
+		{
+			"chinese": "样品",
+			"english": "sample"
+		},
+		{
+			"chinese": "运输",
+			"english": "transportation"
+		},
+		{
+			"chinese": "慈善机构",
+			"english": "charity"
+		},
+		{
+			"chinese": "表姐",
+			"english": "cousin"
+		},
+		{
+			"chinese": "灾害",
+			"english": "disaster"
+		},
+		{
+			"chinese": "编辑",
+			"english": "editor"
+		},
+		{
+			"chinese": "效率",
+			"english": "efficiency"
+		},
+		{
+			"chinese": "激动",
+			"english": "excitement"
+		},
+		{
+			"chinese": "程度",
+			"english": "extent"
+		},
+		{
+			"chinese": "反馈",
+			"english": "feedback"
+		},
+		{
+			"chinese": "吉他",
+			"english": "guitar"
+		},
+		{
+			"chinese": "家庭作业",
+			"english": "homework"
+		},
+		{
+			"chinese": "领导",
+			"english": "leader"
+		},
+		{
+			"chinese": "妈妈",
+			"english": "mom"
+		},
+		{
+			"chinese": "结果",
+			"english": "outcome"
+		},
+		{
+			"chinese": "允许",
+			"english": "permission"
+		},
+		{
+			"chinese": "介绍",
+			"english": "presentation"
+		},
+		{
+			"chinese": "提升",
+			"english": "promotion"
+		},
+		{
+			"chinese": "反射",
+			"english": "reflection"
+		},
+		{
+			"chinese": "冰箱",
+			"english": "refrigerator"
+		},
+		{
+			"chinese": "解析度",
+			"english": "resolution"
+		},
+		{
+			"chinese": "收入",
+			"english": "revenue"
+		},
+		{
+			"chinese": "会议",
+			"english": "session"
+		},
+		{
+			"chinese": "歌手",
+			"english": "singer"
+		},
+		{
+			"chinese": "网球",
+			"english": "tennis"
+		},
+		{
+			"chinese": "篮",
+			"english": "basket"
+		},
+		{
+			"chinese": "奖金",
+			"english": "bonus"
+		},
+		{
+			"chinese": "内阁",
+			"english": "cabinet"
+		},
+		{
+			"chinese": "童年",
+			"english": "childhood"
+		},
+		{
+			"chinese": "教会",
+			"english": "church"
+		},
+		{
+			"chinese": "衣服",
+			"english": "clothes"
+		},
+		{
+			"chinese": "咖啡",
+			"english": "coffee"
+		},
+		{
+			"chinese": "晚餐",
+			"english": "dinner"
+		},
+		{
+			"chinese": "画画",
+			"english": "drawing"
+		},
+		{
+			"chinese": "头发",
+			"english": "hair"
+		},
+		{
+			"chinese": "听力",
+			"english": "hearing"
+		},
+		{
+			"chinese": "倡议",
+			"english": "initiative"
+		},
+		{
+			"chinese": "判断",
+			"english": "judgment"
+		},
+		{
+			"chinese": "实验室",
+			"english": "lab"
+		},
+		{
+			"chinese": "测量",
+			"english": "measurement"
+		},
+		{
+			"chinese": "模式",
+			"english": "mode"
+		},
+		{
+			"chinese": "泥",
+			"english": "mud"
+		},
+		{
+			"chinese": "橙子",
+			"english": "orange"
+		},
+		{
+			"chinese": "诗歌",
+			"english": "poetry"
+		},
+		{
+			"chinese": "警察",
+			"english": "police"
+		},
+		{
+			"chinese": "可能性",
+			"english": "possibility"
+		},
+		{
+			"chinese": "程序",
+			"english": "procedure"
+		},
+		{
+			"chinese": "女王",
+			"english": "queen"
+		},
+		{
+			"chinese": "比",
+			"english": "ratio"
+		},
+		{
+			"chinese": "关系",
+			"english": "relation"
+		},
+		{
+			"chinese": "餐厅",
+			"english": "restaurant"
+		},
+		{
+			"chinese": "满意",
+			"english": "satisfaction"
+		},
+		{
+			"chinese": "扇形",
+			"english": "sector"
+		},
+		{
+			"chinese": "签名",
+			"english": "signature"
+		},
+		{
+			"chinese": "意义",
+			"english": "significance"
+		},
+		{
+			"chinese": "歌曲",
+			"english": "song"
+		},
+		{
+			"chinese": "齿",
+			"english": "tooth"
+		},
+		{
+			"chinese": "镇",
+			"english": "town"
+		},
+		{
+			"chinese": "车辆",
+			"english": "vehicle"
+		},
+		{
+			"chinese": "卷",
+			"english": "volume"
+		},
+		{
+			"chinese": "妻子",
+			"english": "wife"
+		},
+		{
+			"chinese": "事故",
+			"english": "accident"
+		},
+		{
+			"chinese": "飞机场",
+			"english": "airport"
+		},
+		{
+			"chinese": "约定",
+			"english": "appointment"
+		},
+		{
+			"chinese": "到达",
+			"english": "arrival"
+		},
+		{
+			"chinese": "假设",
+			"english": "assumption"
+		},
+		{
+			"chinese": "棒球",
+			"english": "baseball"
+		},
+		{
+			"chinese": "章节",
+			"english": "chapter"
+		},
+		{
+			"chinese": "委员会",
+			"english": "committee"
+		},
+		{
+			"chinese": "会话",
+			"english": "conversation"
+		},
+		{
+			"chinese": "数据库",
+			"english": "database"
+		},
+		{
+			"chinese": "热情",
+			"english": "enthusiasm"
+		},
+		{
+			"chinese": "错误",
+			"english": "error"
+		},
+		{
+			"chinese": "说明",
+			"english": "explanation"
+		},
+		{
+			"chinese": "农民",
+			"english": "farmer"
+		},
+		{
+			"chinese": "门",
+			"english": "gate"
+		},
+		{
+			"chinese": "女孩",
+			"english": "girl"
+		},
+		{
+			"chinese": "大厅",
+			"english": "hall"
+		},
+		{
+			"chinese": "历史学家",
+			"english": "historian"
+		},
+		{
+			"chinese": "醫院",
+			"english": "hospital"
+		},
+		{
+			"chinese": "伤",
+			"english": "injury"
+		},
+		{
+			"chinese": "指令",
+			"english": "instruction"
+		},
+		{
+			"chinese": "保养",
+			"english": "maintenance"
+		},
+		{
+			"chinese": "生产厂家",
+			"english": "manufacturer"
+		},
+		{
+			"chinese": "膳食",
+			"english": "meal"
+		},
+		{
+			"chinese": "知觉",
+			"english": "perception"
+		},
+		{
+			"chinese": "馅饼",
+			"english": "pie"
+		},
+		{
+			"chinese": "诗",
+			"english": "poem"
+		},
+		{
+			"chinese": "存在",
+			"english": "presence"
+		},
+		{
+			"chinese": "提案",
+			"english": "proposal"
+		},
+		{
+			"chinese": "招待会",
+			"english": "reception"
+		},
+		{
+			"chinese": "替代",
+			"english": "replacement"
+		},
+		{
+			"chinese": "革命",
+			"english": "revolution"
+		},
+		{
+			"chinese": "河",
+			"english": "river"
+		},
+		{
+			"chinese": "儿子",
+			"english": "son"
+		},
+		{
+			"chinese": "言语",
+			"english": "speech"
+		},
+		{
+			"chinese": "茶",
+			"english": "tea"
+		},
+		{
+			"chinese": "村",
+			"english": "village"
+		},
+		{
+			"chinese": "警告",
+			"english": "warning"
+		},
+		{
+			"chinese": "优胜者",
+			"english": "winner"
+		},
+		{
+			"chinese": "工人",
+			"english": "worker"
+		},
+		{
+			"chinese": "作家",
+			"english": "writer"
+		},
+		{
+			"chinese": "帮助",
+			"english": "assistance"
+		},
+		{
+			"chinese": "呼吸",
+			"english": "breath"
+		},
+		{
+			"chinese": "买方",
+			"english": "buyer"
+		},
+		{
+			"chinese": "胸部",
+			"english": "chest"
+		},
+		{
+			"chinese": "巧克力",
+			"english": "chocolate"
+		},
+		{
+			"chinese": "结论",
+			"english": "conclusion"
+		},
+		{
+			"chinese": "贡献",
+			"english": "contribution"
+		},
+		{
+			"chinese": "曲奇饼",
+			"english": "cookie"
+		},
+		{
+			"chinese": "勇气",
+			"english": "courage"
+		},
+		{
+			"chinese": "爸",
+			"english": "dad"
+		},
+		{
+			"chinese": "台",
+			"english": "desk"
+		},
+		{
+			"chinese": "抽屉",
+			"english": "drawer"
+		},
+		{
+			"chinese": "编制",
+			"english": "establishment"
+		},
+		{
+			"chinese": "检查",
+			"english": "examination"
+		},
+		{
+			"chinese": "垃圾",
+			"english": "garbage"
+		},
+		{
+			"chinese": "杂货",
+			"english": "grocery"
+		},
+		{
+			"chinese": "蜜糖",
+			"english": "honey"
+		},
+		{
+			"chinese": "印象",
+			"english": "impression"
+		},
+		{
+			"chinese": "起色",
+			"english": "improvement"
+		},
+		{
+			"chinese": "独立",
+			"english": "independence"
+		},
+		{
+			"chinese": "昆虫",
+			"english": "insect"
+		},
+		{
+			"chinese": "检查",
+			"english": "inspection"
+		},
+		{
+			"chinese": "检查员",
+			"english": "inspector"
+		},
+		{
+			"chinese": "国王",
+			"english": "king"
+		},
+		{
+			"chinese": "阶梯",
+			"english": "ladder"
+		},
+		{
+			"chinese": "菜单",
+			"english": "menu"
+		},
+		{
+			"chinese": "罚款",
+			"english": "penalty"
+		},
+		{
+			"chinese": "钢琴",
+			"english": "piano"
+		},
+		{
+			"chinese": "土豆",
+			"english": "potato"
+		},
+		{
+			"chinese": "职业",
+			"english": "profession"
+		},
+		{
+			"chinese": "教授",
+			"english": "professor"
+		},
+		{
+			"chinese": "数量",
+			"english": "quantity"
+		},
+		{
+			"chinese": "反应",
+			"english": "reaction"
+		},
+		{
+			"chinese": "需求",
+			"english": "requirement"
+		},
+		{
+			"chinese": "沙拉",
+			"english": "salad"
+		},
+		{
+			"chinese": "妹妹",
+			"english": "sister"
+		},
+		{
+			"chinese": "超级市场",
+			"english": "supermarket"
+		},
+		{
+			"chinese": "舌",
+			"english": "tongue"
+		},
+		{
+			"chinese": "弱点",
+			"english": "weakness"
+		},
+		{
+			"chinese": "婚礼",
+			"english": "wedding"
+		},
+		{
+			"chinese": "事务",
+			"english": "affair"
+		},
+		{
+			"chinese": "志向",
+			"english": "ambition"
+		},
+		{
+			"chinese": "分析人士",
+			"english": "analyst"
+		},
+		{
+			"chinese": "苹果",
+			"english": "apple"
+		},
+		{
+			"chinese": "分配",
+			"english": "assignment"
+		},
+		{
+			"chinese": "助理",
+			"english": "assistant"
+		},
+		{
+			"chinese": "浴室",
+			"english": "bathroom"
+		},
+		{
+			"chinese": "卧室",
+			"english": "bedroom"
+		},
+		{
+			"chinese": "啤酒",
+			"english": "beer"
+		},
+		{
+			"chinese": "生日",
+			"english": "birthday"
+		},
+		{
+			"chinese": "庆典",
+			"english": "celebration"
+		},
+		{
+			"chinese": "锦标赛",
+			"english": "championship"
+		},
+		{
+			"chinese": "脸颊",
+			"english": "cheek"
+		},
+		{
+			"chinese": "客户",
+			"english": "client"
+		},
+		{
+			"chinese": "后果",
+			"english": "consequence"
+		},
+		{
+			"chinese": "离开",
+			"english": "departure"
+		},
+		{
+			"chinese": "钻石",
+			"english": "diamond"
+		},
+		{
+			"chinese": "污垢",
+			"english": "dirt"
+		},
+		{
+			"chinese": "耳",
+			"english": "ear"
+		},
+		{
+			"chinese": "幸运",
+			"english": "fortune"
+		},
+		{
+			"chinese": "友谊",
+			"english": "friendship"
+		},
+		{
+			"chinese": "葬礼",
+			"english": "funeral"
+		},
+		{
+			"chinese": "基因",
+			"english": "gene"
+		},
+		{
+			"chinese": "女朋友",
+			"english": "girlfriend"
+		},
+		{
+			"chinese": "帽子",
+			"english": "hat"
+		},
+		{
+			"chinese": "迹象",
+			"english": "indication"
+		},
+		{
+			"chinese": "意向",
+			"english": "intention"
+		},
+		{
+			"chinese": "淑女",
+			"english": "lady"
+		},
+		{
+			"chinese": "午夜",
+			"english": "midnight"
+		},
+		{
+			"chinese": "谈判",
+			"english": "negotiation"
+		},
+		{
+			"chinese": "义务",
+			"english": "obligation"
+		},
+		{
+			"chinese": "乘客",
+			"english": "passenger"
+		},
+		{
+			"chinese": "比萨",
+			"english": "pizza"
+		},
+		{
+			"chinese": "平台",
+			"english": "platform"
+		},
+		{
+			"chinese": "诗人",
+			"english": "poet"
+		},
+		{
+			"chinese": "污染",
+			"english": "pollution"
+		},
+		{
+			"chinese": "承认",
+			"english": "recognition"
+		},
+		{
+			"chinese": "声誉",
+			"english": "reputation"
+		},
+		{
+			"chinese": "衬衫",
+			"english": "shirt"
+		},
+		{
+			"chinese": "先生",
+			"english": "sir"
+		},
+		{
+			"chinese": "扬声器",
+			"english": "speaker"
+		},
+		{
+			"chinese": "陌生人",
+			"english": "stranger"
+		},
+		{
+			"chinese": "手术",
+			"english": "surgery"
+		},
+		{
+			"chinese": "同情",
+			"english": "sympathy"
+		},
+		{
+			"chinese": "故事",
+			"english": "tale"
+		},
+		{
+			"chinese": "喉",
+			"english": "throat"
+		},
+		{
+			"chinese": "训练者",
+			"english": "trainer"
+		},
+		{
+			"chinese": "叔叔",
+			"english": "uncle"
+		},
+		{
+			"chinese": "青年",
+			"english": "youth"
+		},
+		{
+			"chinese": "钱",
+			"english": "money"
+		},
+		{
+			"chinese": "而",
+			"english": "while"
+		},
+		{
+			"chinese": "商业",
+			"english": "business"
+		},
+		{
+			"chinese": "生活",
+			"english": "life"
+		},
+		{
+			"chinese": "天",
+			"english": "day"
+		},
+		{
+			"chinese": "家",
+			"english": "home"
+		},
+		{
+			"chinese": "经济",
+			"english": "economy"
+		},
+		{
+			"chinese": "训练",
+			"english": "training"
+		},
+		{
+			"chinese": "类",
+			"english": "kind"
+		},
+		{
+			"chinese": "未来",
+			"english": "future"
+		},
+		{
+			"chinese": "行动",
+			"english": "action"
+		},
+		{
+			"chinese": "坏",
+			"english": "bad"
+		},
+		{
+			"chinese": "没有",
+			"english": "nothing"
+		},
+		{
+			"chinese": "期",
+			"english": "period"
+		},
+		{
+			"chinese": "学科",
+			"english": "subject"
+		},
+		{
+			"chinese": "鸡",
+			"english": "chicken"
+		},
+		{
+			"chinese": "材料",
+			"english": "material"
+		},
+		{
+			"chinese": "汽车",
+			"english": "car"
+		},
+		{
+			"chinese": "半",
+			"english": "half"
+		},
+		{
+			"chinese": "内",
+			"english": "inside"
+		},
+		{
+			"chinese": "外",
+			"english": "outside"
+		},
+		{
+			"chinese": "标准",
+			"english": "standard"
+		},
+		{
+			"chinese": "项目",
+			"english": "item"
+		},
+		{
+			"chinese": "中",
+			"english": "medium"
+		},
+		{
+			"chinese": "选择",
+			"english": "choice"
+		},
+		{
+			"chinese": "早上",
+			"english": "morning"
+		},
+		{
+			"chinese": "北",
+			"english": "north"
+		},
+		{
+			"chinese": "广场",
+			"english": "square"
+		},
+		{
+			"chinese": "首都",
+			"english": "capital"
+		},
+		{
+			"chinese": "自",
+			"english": "self"
+		},
+		{
+			"chinese": "射击",
+			"english": "shot"
+		},
+		{
+			"chinese": "活的",
+			"english": "living"
+		},
+		{
+			"chinese": "塑料",
+			"english": "plastic"
+		},
+		{
+			"chinese": "感觉",
+			"english": "feeling"
+		},
+		{
+			"chinese": "储",
+			"english": "savings"
+		},
+		{
+			"chinese": "动物",
+			"english": "animal"
+		},
+		{
+			"chinese": "最大值",
+			"english": "maximum"
+		},
+		{
+			"chinese": "小说",
+			"english": "novel"
+		},
+		{
+			"chinese": "丰富",
+			"english": "plenty"
+		},
+		{
+			"chinese": "背景",
+			"english": "background"
+		},
+		{
+			"chinese": "红",
+			"english": "red"
+		},
+		{
+			"chinese": "强度",
+			"english": "strength"
+		},
+		{
+			"chinese": "蔬菜",
+			"english": "vegetable"
+		},
+		{
+			"chinese": "理想",
+			"english": "ideal"
+		},
+		{
+			"chinese": "厨房",
+			"english": "kitchen"
+		},
+		{
+			"chinese": "原理",
+			"english": "principle"
+		},
+		{
+			"chinese": "相对的",
+			"english": "relative"
+		},
+		{
+			"chinese": "拍卖",
+			"english": "sale"
+		},
+		{
+			"chinese": "街",
+			"english": "street"
+		},
+		{
+			"chinese": "最低限度",
+			"english": "minimum"
+		},
+		{
+			"chinese": "路径",
+			"english": "path"
+		},
+		{
+			"chinese": "海",
+			"english": "sea"
+		},
+		{
+			"chinese": "南",
+			"english": "south"
+		},
+		{
+			"chinese": "状态",
+			"english": "status"
+		},
+		{
+			"chinese": "置信度",
+			"english": "confidence"
+		},
+		{
+			"chinese": "女儿",
+			"english": "daughter"
+		},
+		{
+			"chinese": "度",
+			"english": "degree"
+		},
+		{
+			"chinese": "义务",
+			"english": "duty"
+		},
+		{
+			"chinese": "小时",
+			"english": "hour"
+		},
+		{
+			"chinese": "物质",
+			"english": "substance"
+		},
+		{
+			"chinese": "下午",
+			"english": "afternoon"
+		},
+		{
+			"chinese": "考虑",
+			"english": "consideration"
+		},
+		{
+			"chinese": "金",
+			"english": "gold"
+		},
+		{
+			"chinese": "任务",
+			"english": "mission"
+		},
+		{
+			"chinese": "门",
+			"english": "door"
+		},
+		{
+			"chinese": "东",
+			"english": "east"
+		},
+		{
+			"chinese": "方式",
+			"english": "manner"
+		},
+		{
+			"chinese": "会议",
+			"english": "meeting"
+		},
+		{
+			"chinese": "停車處",
+			"english": "parking"
+		},
+		{
+			"chinese": "常规",
+			"english": "routine"
+		},
+		{
+			"chinese": "游泳的",
+			"english": "swimming"
+		},
+		{
+			"chinese": "航空公司",
+			"english": "airline"
+		},
+		{
+			"chinese": "设计师",
+			"english": "designer"
+		},
+		{
+			"chinese": "急",
+			"english": "emergency"
+		},
+		{
+			"chinese": "晚间",
+			"english": "evening"
+		},
+		{
+			"chinese": "延期",
+			"english": "extension"
+		},
+		{
+			"chinese": "恐怖",
+			"english": "horror"
+		},
+		{
+			"chinese": "山",
+			"english": "mountain"
+		},
+		{
+			"chinese": "患者",
+			"english": "patient"
+		},
+		{
+			"chinese": "浮雕",
+			"english": "relief"
+		},
+		{
+			"chinese": "游客",
+			"english": "tourist"
+		},
+		{
+			"chinese": "西",
+			"english": "west"
+		},
+		{
+			"chinese": "在旁边",
+			"english": "aside"
+		},
+		{
+			"chinese": "哥哥",
+			"english": "brother"
+		},
+		{
+			"chinese": "专家",
+			"english": "expert"
+		},
+		{
+			"chinese": "神",
+			"english": "god"
+		},
+		{
+			"chinese": "本地人",
+			"english": "native"
+		},
+		{
+			"chinese": "开盘",
+			"english": "opening"
+		},
+		{
+			"chinese": "男孩",
+			"english": "boy"
+		},
+		{
+			"chinese": "专家",
+			"english": "specialist"
+		},
+		{
+			"chinese": "苦",
+			"english": "bitter"
+		},
+		{
+			"chinese": "地狱",
+			"english": "hell"
+		},
+		{
+			"chinese": "事件",
+			"english": "incident"
+		},
+		{
+			"chinese": "居民",
+			"english": "resident"
+		},
+		{
+			"chinese": "一个",
+			"english": "a"
+		},
+		{
+			"chinese": "您",
+			"english": "you"
+		},
+		{
+			"chinese": "它",
+			"english": "it"
+		},
+		{
+			"chinese": "能够",
+			"english": "can"
+		},
+		{
+			"chinese": "将",
+			"english": "will"
+		},
+		{
+			"chinese": "如果",
+			"english": "if"
+		},
+		{
+			"chinese": "一",
+			"english": "one"
+		},
+		{
+			"chinese": "许多",
+			"english": "many"
+		},
+		{
+			"chinese": "最",
+			"english": "most"
+		},
+		{
+			"chinese": "其他",
+			"english": "other"
+		},
+		{
+			"chinese": "好",
+			"english": "good"
+		},
+		{
+			"chinese": "大",
+			"english": "great"
+		},
+		{
+			"chinese": "少数",
+			"english": "few"
+		},
+		{
+			"chinese": "威力",
+			"english": "might"
+		},
+		{
+			"chinese": "仍然",
+			"english": "still"
+		},
+		{
+			"chinese": "上市",
+			"english": "public"
+		},
+		{
+			"chinese": "人的",
+			"english": "human"
+		},
+		{
+			"chinese": "本地",
+			"english": "local"
+		},
+		{
+			"chinese": "一般",
+			"english": "general"
+		},
+		{
+			"chinese": "她",
+			"english": "she"
+		},
+		{
+			"chinese": "具体",
+			"english": "specific"
+		},
+		{
+			"chinese": "长",
+			"english": "long"
+		},
+		{
+			"chinese": "高",
+			"english": "high"
+		},
+		{
+			"chinese": "今晚",
+			"english": "tonight"
+		},
+		{
+			"chinese": "共同",
+			"english": "common"
+		},
+		{
+			"chinese": "简单",
+			"english": "simple"
+		},
+		{
+			"chinese": "过去",
+			"english": "past"
+		},
+		{
+			"chinese": "大",
+			"english": "big"
+		},
+		{
+			"chinese": "可能",
+			"english": "possible"
+		},
+		{
+			"chinese": "特定",
+			"english": "particular"
+		},
+		{
+			"chinese": "今天",
+			"english": "today"
+		},
+		{
+			"chinese": "个人",
+			"english": "personal"
+		},
+		{
+			"chinese": "当前",
+			"english": "current"
+		},
+		{
+			"chinese": "国民",
+			"english": "national"
+		},
+		{
+			"chinese": "自然",
+			"english": "natural"
+		},
+		{
+			"chinese": "物理",
+			"english": "physical"
+		},
+		{
+			"chinese": "第二",
+			"english": "second"
+		},
+		{
+			"chinese": "个人",
+			"english": "individual"
+		},
+		{
+			"chinese": "主要",
+			"english": "main"
+		},
+		{
+			"chinese": "潜在",
+			"english": "potential"
+		},
+		{
+			"chinese": "专业的",
+			"english": "professional"
+		},
+		{
+			"chinese": "国际",
+			"english": "international"
+		},
+		{
+			"chinese": "替代",
+			"english": "alternative"
+		},
+		{
+			"chinese": "以下",
+			"english": "following"
+		},
+		{
+			"chinese": "特别",
+			"english": "special"
+		},
+		{
+			"chinese": "加工",
+			"english": "working"
+		},
+		{
+			"chinese": "整个",
+			"english": "whole"
+		},
+		{
+			"chinese": "冷",
+			"english": "cold"
+		},
+		{
+			"chinese": "商业的",
+			"english": "commercial"
+		},
+		{
+			"chinese": "低",
+			"english": "low"
+		},
+		{
+			"chinese": "主",
+			"english": "primary"
+		},
+		{
+			"chinese": "价值",
+			"english": "worth"
+		},
+		{
+			"chinese": "必要",
+			"english": "necessary"
+		},
+		{
+			"chinese": "正面的",
+			"english": "positive"
+		},
+		{
+			"chinese": "创作的",
+			"english": "creative"
+		},
+		{
+			"chinese": "高兴",
+			"english": "glad"
+		},
+		{
+			"chinese": "应有",
+			"english": "due"
+		},
+		{
+			"chinese": "有效",
+			"english": "effective"
+		},
+		{
+			"chinese": "中间",
+			"english": "middle"
+		},
+		{
+			"chinese": "定期",
+			"english": "regular"
+		},
+		{
+			"chinese": "独立",
+			"english": "independent"
+		},
+		{
+			"chinese": "原版的",
+			"english": "original"
+		},
+		{
+			"chinese": "美丽",
+			"english": "beautiful"
+		},
+		{
+			"chinese": "活性",
+			"english": "active"
+		},
+		{
+			"chinese": "负",
+			"english": "negative"
+		},
+		{
+			"chinese": "安全",
+			"english": "safe"
+		},
+		{
+			"chinese": "视觉",
+			"english": "visual"
+		},
+		{
+			"chinese": "以外",
+			"english": "beyond"
+		},
+		{
+			"chinese": "初级",
+			"english": "junior"
+		},
+		{
+			"chinese": "独特",
+			"english": "unique"
+		},
+		{
+			"chinese": "什么",
+			"english": "anything"
+		},
+		{
+			"chinese": "经典",
+			"english": "classic"
+		},
+		{
+			"chinese": "最后",
+			"english": "final"
+		},
+		{
+			"chinese": "私人的",
+			"english": "private"
+		},
+		{
+			"chinese": "西",
+			"english": "western"
+		},
+		{
+			"chinese": "熟",
+			"english": "familiar"
+		},
+		{
+			"chinese": "官方",
+			"english": "official"
+		},
+		{
+			"chinese": "广阔",
+			"english": "broad"
+		},
+		{
+			"chinese": "自在",
+			"english": "comfortable"
+		},
+		{
+			"chinese": "也许",
+			"english": "maybe"
+		},
+		{
+			"chinese": "丰富",
+			"english": "rich"
+		},
+		{
+			"chinese": "年轻",
+			"english": "young"
+		},
+		{
+			"chinese": "重",
+			"english": "heavy"
+		},
+		{
+			"chinese": "你好",
+			"english": "hello"
+		},
+		{
+			"chinese": "有价值",
+			"english": "valuable"
+		},
+		{
+			"chinese": "领导",
+			"english": "leading"
+		},
+		{
+			"chinese": "正常",
+			"english": "normal"
+		},
+		{
+			"chinese": "秘密",
+			"english": "secret"
+		},
+		{
+			"chinese": "强硬",
+			"english": "tough"
+		},
+		{
+			"chinese": "深",
+			"english": "deep"
+		},
+		{
+			"chinese": "目的",
+			"english": "objective"
+		},
+		{
+			"chinese": "化学",
+			"english": "chemical"
+		},
+		{
+			"chinese": "极端",
+			"english": "extreme"
+		},
+		{
+			"chinese": "正式",
+			"english": "formal"
+		},
+		{
+			"chinese": "对面",
+			"english": "opposite"
+		},
+		{
+			"chinese": "远程",
+			"english": "remote"
+		},
+		{
+			"chinese": "广大",
+			"english": "vast"
+		},
+		{
+			"chinese": "某处",
+			"english": "somewhere"
+		},
+		{
+			"chinese": "随地",
+			"english": "anywhere"
+		},
+		{
+			"chinese": "黑暗",
+			"english": "dark"
+		},
+		{
+			"chinese": "内部",
+			"english": "internal"
+		},
+		{
+			"chinese": "敏感",
+			"english": "sensitive"
+		},
+		{
+			"chinese": "不变",
+			"english": "constant"
+		},
+		{
+			"chinese": "生的",
+			"english": "raw"
+		},
+		{
+			"chinese": "柔软的",
+			"english": "soft"
+		},
+		{
+			"chinese": "固体",
+			"english": "solid"
+		},
+		{
+			"chinese": "奇怪的",
+			"english": "weird"
+		},
+		{
+			"chinese": "全年",
+			"english": "annual"
+		},
+		{
+			"chinese": "死",
+			"english": "dead"
+		},
+		{
+			"chinese": "永远",
+			"english": "forever"
+		},
+		{
+			"chinese": "没有人",
+			"english": "nobody"
+		},
+		{
+			"chinese": "回合",
+			"english": "round"
+		},
+		{
+			"chinese": "而",
+			"english": "whereas"
+		},
+		{
+			"chinese": "当量",
+			"english": "equivalent"
+		},
+		{
+			"chinese": "精神",
+			"english": "spiritual"
+		},
+		{
+			"chinese": "成人",
+			"english": "adult"
+		},
+		{
+			"chinese": "疯",
+			"english": "crazy"
+		},
+		{
+			"chinese": "先",
+			"english": "prior"
+		},
+		{
+			"chinese": "粗",
+			"english": "rough"
+		},
+		{
+			"chinese": "伤心",
+			"english": "sad"
+		},
+		{
+			"chinese": "生病",
+			"english": "sick"
+		},
+		{
+			"chinese": "外部",
+			"english": "external"
+		},
+		{
+			"chinese": "非法",
+			"english": "illegal"
+		},
+		{
+			"chinese": "移动",
+			"english": "mobile"
+		},
+		{
+			"chinese": "讨厌",
+			"english": "nasty"
+		},
+		{
+			"chinese": "普通",
+			"english": "ordinary"
+		},
+		{
+			"chinese": "王室的",
+			"english": "royal"
+		},
+		{
+			"chinese": "前辈",
+			"english": "senior"
+		},
+		{
+			"chinese": "上",
+			"english": "upper"
+		},
+		{
+			"chinese": "依赖的",
+			"english": "dependent"
+		},
+		{
+			"chinese": "滑稽",
+			"english": "funny"
+		},
+		{
+			"chinese": "甜",
+			"english": "sweet"
+		},
+		{
+			"chinese": "楼上",
+			"english": "upstairs"
+		},
+		{
+			"chinese": "通常",
+			"english": "usual"
+		},
+		{
+			"chinese": "国外",
+			"english": "abroad"
+		},
+		{
+			"chinese": "盛大",
+			"english": "grand"
+		},
+		{
+			"chinese": "男",
+			"english": "male"
+		},
+		{
+			"chinese": "任何人",
+			"english": "anybody"
+		},
+		{
+			"chinese": "辉煌",
+			"english": "brilliant"
+		},
+		{
+			"chinese": "亲",
+			"english": "dear"
+		},
+		{
+			"chinese": "醉",
+			"english": "drunk"
+		},
+		{
+			"chinese": "女",
+			"english": "female"
+		},
+		{
+			"chinese": "必然",
+			"english": "inevitable"
+		},
+		{
+			"chinese": "整齐",
+			"english": "neat"
+		},
+		{
+			"chinese": "代表",
+			"english": "representative"
+		},
+		{
+			"chinese": "愚蠢",
+			"english": "silly"
+		},
+		{
+			"chinese": "笨",
+			"english": "stupid"
+		},
+		{
+			"chinese": "临时",
+			"english": "temporary"
+		},
+		{
+			"chinese": "明天",
+			"english": "tomorrow"
+		},
+		{
+			"chinese": "昨天",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 521 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"danish": "mennesker",
+			"english": "people"
+		},
+		{
+			"danish": "historie",
+			"english": "history"
+		},
+		{
+			"danish": "vej",
+			"english": "way"
+		},
+		{
+			"danish": "kunst",
+			"english": "art"
+		},
+		{
+			"danish": "verden",
+			"english": "world"
+		},
+		{
+			"danish": "information",
+			"english": "information"
+		},
+		{
+			"danish": "kort",
+			"english": "map"
+		},
+		{
+			"danish": "to",
+			"english": "two"
+		},
+		{
+			"danish": "familie",
+			"english": "family"
+		},
+		{
+			"danish": "regering",
+			"english": "government"
+		},
+		{
+			"danish": "sundhed",
+			"english": "health"
+		},
+		{
+			"danish": "system",
+			"english": "system"
+		},
+		{
+			"danish": "computer",
+			"english": "computer"
+		},
+		{
+			"danish": "kød",
+			"english": "meat"
+		},
+		{
+			"danish": "år",
+			"english": "year"
+		},
+		{
+			"danish": "tak",
+			"english": "thanks"
+		},
+		{
+			"danish": "musik",
+			"english": "music"
+		},
+		{
+			"danish": "person",
+			"english": "person"
+		},
+		{
+			"danish": "læsning",
+			"english": "reading"
+		},
+		{
+			"danish": "metode",
+			"english": "method"
+		},
+		{
+			"danish": "data",
+			"english": "data"
+		},
+		{
+			"danish": "mad",
+			"english": "food"
+		},
+		{
+			"danish": "forstående",
+			"english": "understanding"
+		},
+		{
+			"danish": "teori",
+			"english": "theory"
+		},
+		{
+			"danish": "lov",
+			"english": "law"
+		},
+		{
+			"danish": "fugl",
+			"english": "bird"
+		},
+		{
+			"danish": "litteratur",
+			"english": "literature"
+		},
+		{
+			"danish": "problem",
+			"english": "problem"
+		},
+		{
+			"danish": "software",
+			"english": "software"
+		},
+		{
+			"danish": "kontrol",
+			"english": "control"
+		},
+		{
+			"danish": "viden",
+			"english": "knowledge"
+		},
+		{
+			"danish": "magt",
+			"english": "power"
+		},
+		{
+			"danish": "evne",
+			"english": "ability"
+		},
+		{
+			"danish": "økonomi",
+			"english": "economics"
+		},
+		{
+			"danish": "elsker",
+			"english": "love"
+		},
+		{
+			"danish": "internet",
+			"english": "internet"
+		},
+		{
+			"danish": "television",
+			"english": "television"
+		},
+		{
+			"danish": "videnskab",
+			"english": "science"
+		},
+		{
+			"danish": "bibliotek",
+			"english": "library"
+		},
+		{
+			"danish": "natur",
+			"english": "nature"
+		},
+		{
+			"danish": "faktum",
+			"english": "fact"
+		},
+		{
+			"danish": "produkt",
+			"english": "product"
+		},
+		{
+			"danish": "ide",
+			"english": "idea"
+		},
+		{
+			"danish": "temperatur",
+			"english": "temperature"
+		},
+		{
+			"danish": "investering",
+			"english": "investment"
+		},
+		{
+			"danish": "areal",
+			"english": "area"
+		},
+		{
+			"danish": "samfund",
+			"english": "society"
+		},
+		{
+			"danish": "aktivitet",
+			"english": "activity"
+		},
+		{
+			"danish": "historie",
+			"english": "story"
+		},
+		{
+			"danish": "industri",
+			"english": "industry"
+		},
+		{
+			"danish": "medier",
+			"english": "media"
+		},
+		{
+			"danish": "ting",
+			"english": "thing"
+		},
+		{
+			"danish": "ovn",
+			"english": "oven"
+		},
+		{
+			"danish": "fællesskab",
+			"english": "community"
+		},
+		{
+			"danish": "definition",
+			"english": "definition"
+		},
+		{
+			"danish": "sikkerhed",
+			"english": "safety"
+		},
+		{
+			"danish": "kvalitet",
+			"english": "quality"
+		},
+		{
+			"danish": "udvikling",
+			"english": "development"
+		},
+		{
+			"danish": "sprog",
+			"english": "language"
+		},
+		{
+			"danish": "ledelse",
+			"english": "management"
+		},
+		{
+			"danish": "spiller",
+			"english": "player"
+		},
+		{
+			"danish": "bred vifte",
+			"english": "variety"
+		},
+		{
+			"danish": "video",
+			"english": "video"
+		},
+		{
+			"danish": "uge",
+			"english": "week"
+		},
+		{
+			"danish": "sikkerhed",
+			"english": "security"
+		},
+		{
+			"danish": "land",
+			"english": "country"
+		},
+		{
+			"danish": "eksamen",
+			"english": "exam"
+		},
+		{
+			"danish": "film",
+			"english": "movie"
+		},
+		{
+			"danish": "organisation",
+			"english": "organization"
+		},
+		{
+			"danish": "udstyr",
+			"english": "equipment"
+		},
+		{
+			"danish": "fysik",
+			"english": "physics"
+		},
+		{
+			"danish": "analyse",
+			"english": "analysis"
+		},
+		{
+			"danish": "politik",
+			"english": "policy"
+		},
+		{
+			"danish": "serie",
+			"english": "series"
+		},
+		{
+			"danish": "tanke",
+			"english": "thought"
+		},
+		{
+			"danish": "basis",
+			"english": "basis"
+		},
+		{
+			"danish": "kæreste",
+			"english": "boyfriend"
+		},
+		{
+			"danish": "retning",
+			"english": "direction"
+		},
+		{
+			"danish": "strategi",
+			"english": "strategy"
+		},
+		{
+			"danish": "teknologi",
+			"english": "technology"
+		},
+		{
+			"danish": "hær",
+			"english": "army"
+		},
+		{
+			"danish": "kamera",
+			"english": "camera"
+		},
+		{
+			"danish": "frihed",
+			"english": "freedom"
+		},
+		{
+			"danish": "papir",
+			"english": "paper"
+		},
+		{
+			"danish": "miljø",
+			"english": "environment"
+		},
+		{
+			"danish": "barn",
+			"english": "child"
+		},
+		{
+			"danish": "eksempel",
+			"english": "instance"
+		},
+		{
+			"danish": "måned",
+			"english": "month"
+		},
+		{
+			"danish": "sandhed",
+			"english": "truth"
+		},
+		{
+			"danish": "markedsføring",
+			"english": "marketing"
+		},
+		{
+			"danish": "Universitet",
+			"english": "university"
+		},
+		{
+			"danish": "skrivning",
+			"english": "writing"
+		},
+		{
+			"danish": "artiklen",
+			"english": "article"
+		},
+		{
+			"danish": "afdeling",
+			"english": "department"
+		},
+		{
+			"danish": "forskel",
+			"english": "difference"
+		},
+		{
+			"danish": "mål",
+			"english": "goal"
+		},
+		{
+			"danish": "nyheder",
+			"english": "news"
+		},
+		{
+			"danish": "publikum",
+			"english": "audience"
+		},
+		{
+			"danish": "fiskeri",
+			"english": "fishing"
+		},
+		{
+			"danish": "vækst",
+			"english": "growth"
+		},
+		{
+			"danish": "indkomst",
+			"english": "income"
+		},
+		{
+			"danish": "ægteskab",
+			"english": "marriage"
+		},
+		{
+			"danish": "bruger",
+			"english": "user"
+		},
+		{
+			"danish": "kombination",
+			"english": "combination"
+		},
+		{
+			"danish": "fiasko",
+			"english": "failure"
+		},
+		{
+			"danish": "betyder",
+			"english": "meaning"
+		},
+		{
+			"danish": "medicin",
+			"english": "medicine"
+		},
+		{
+			"danish": "filosofi",
+			"english": "philosophy"
+		},
+		{
+			"danish": "lærer",
+			"english": "teacher"
+		},
+		{
+			"danish": "meddelelse",
+			"english": "communication"
+		},
+		{
+			"danish": "nat",
+			"english": "night"
+		},
+		{
+			"danish": "kemi",
+			"english": "chemistry"
+		},
+		{
+			"danish": "sygdom",
+			"english": "disease"
+		},
+		{
+			"danish": "disk",
+			"english": "disk"
+		},
+		{
+			"danish": "energi",
+			"english": "energy"
+		},
+		{
+			"danish": "nation",
+			"english": "nation"
+		},
+		{
+			"danish": "vej",
+			"english": "road"
+		},
+		{
+			"danish": "rolle",
+			"english": "role"
+		},
+		{
+			"danish": "suppe",
+			"english": "soup"
+		},
+		{
+			"danish": "reklame",
+			"english": "advertising"
+		},
+		{
+			"danish": "beliggenhed",
+			"english": "location"
+		},
+		{
+			"danish": "succes",
+			"english": "success"
+		},
+		{
+			"danish": "Derudover",
+			"english": "addition"
+		},
+		{
+			"danish": "lejlighed",
+			"english": "apartment"
+		},
+		{
+			"danish": "uddannelse",
+			"english": "education"
+		},
+		{
+			"danish": "matematik",
+			"english": "math"
+		},
+		{
+			"danish": "øjeblik",
+			"english": "moment"
+		},
+		{
+			"danish": "maleri",
+			"english": "painting"
+		},
+		{
+			"danish": "politik",
+			"english": "politics"
+		},
+		{
+			"danish": "opmærksomhed",
+			"english": "attention"
+		},
+		{
+			"danish": "afgørelse",
+			"english": "decision"
+		},
+		{
+			"danish": "tilfælde",
+			"english": "event"
+		},
+		{
+			"danish": "ejendom",
+			"english": "property"
+		},
+		{
+			"danish": "shopping",
+			"english": "shopping"
+		},
+		{
+			"danish": "studerende",
+			"english": "student"
+		},
+		{
+			"danish": "træ",
+			"english": "wood"
+		},
+		{
+			"danish": "konkurrence",
+			"english": "competition"
+		},
+		{
+			"danish": "fordeling",
+			"english": "distribution"
+		},
+		{
+			"danish": "underholdning",
+			"english": "entertainment"
+		},
+		{
+			"danish": "kontor",
+			"english": "office"
+		},
+		{
+			"danish": "befolkning",
+			"english": "population"
+		},
+		{
+			"danish": "formand",
+			"english": "president"
+		},
+		{
+			"danish": "enhed",
+			"english": "unit"
+		},
+		{
+			"danish": "kategori",
+			"english": "category"
+		},
+		{
+			"danish": "cigaret",
+			"english": "cigarette"
+		},
+		{
+			"danish": "sammenhæng",
+			"english": "context"
+		},
+		{
+			"danish": "introduktion",
+			"english": "introduction"
+		},
+		{
+			"danish": "lejlighed",
+			"english": "opportunity"
+		},
+		{
+			"danish": "ydeevne",
+			"english": "performance"
+		},
+		{
+			"danish": "chauffør",
+			"english": "driver"
+		},
+		{
+			"danish": "flyvningen",
+			"english": "flight"
+		},
+		{
+			"danish": "længde",
+			"english": "length"
+		},
+		{
+			"danish": "magasin",
+			"english": "magazine"
+		},
+		{
+			"danish": "avis",
+			"english": "newspaper"
+		},
+		{
+			"danish": "forhold",
+			"english": "relationship"
+		},
+		{
+			"danish": "undervisning",
+			"english": "teaching"
+		},
+		{
+			"danish": "celle",
+			"english": "cell"
+		},
+		{
+			"danish": "forhandler",
+			"english": "dealer"
+		},
+		{
+			"danish": "fund",
+			"english": "finding"
+		},
+		{
+			"danish": "sø",
+			"english": "lake"
+		},
+		{
+			"danish": "medlem",
+			"english": "member"
+		},
+		{
+			"danish": "besked",
+			"english": "message"
+		},
+		{
+			"danish": "telefon",
+			"english": "phone"
+		},
+		{
+			"danish": "scene",
+			"english": "scene"
+		},
+		{
+			"danish": "udseende",
+			"english": "appearance"
+		},
+		{
+			"danish": "forening",
+			"english": "association"
+		},
+		{
+			"danish": "koncept",
+			"english": "concept"
+		},
+		{
+			"danish": "kunde",
+			"english": "customer"
+		},
+		{
+			"danish": "død",
+			"english": "death"
+		},
+		{
+			"danish": "diskussion",
+			"english": "discussion"
+		},
+		{
+			"danish": "boliger",
+			"english": "housing"
+		},
+		{
+			"danish": "inflation",
+			"english": "inflation"
+		},
+		{
+			"danish": "forsikring",
+			"english": "insurance"
+		},
+		{
+			"danish": "humør",
+			"english": "mood"
+		},
+		{
+			"danish": "kvinde",
+			"english": "woman"
+		},
+		{
+			"danish": "råd",
+			"english": "advice"
+		},
+		{
+			"danish": "blod",
+			"english": "blood"
+		},
+		{
+			"danish": "forsøg",
+			"english": "effort"
+		},
+		{
+			"danish": "udtryk",
+			"english": "expression"
+		},
+		{
+			"danish": "betydning",
+			"english": "importance"
+		},
+		{
+			"danish": "mening",
+			"english": "opinion"
+		},
+		{
+			"danish": "betaling",
+			"english": "payment"
+		},
+		{
+			"danish": "virkelighed",
+			"english": "reality"
+		},
+		{
+			"danish": "ansvar",
+			"english": "responsibility"
+		},
+		{
+			"danish": "situation",
+			"english": "situation"
+		},
+		{
+			"danish": "dygtighed",
+			"english": "skill"
+		},
+		{
+			"danish": "erklæring",
+			"english": "statement"
+		},
+		{
+			"danish": "rigdom",
+			"english": "wealth"
+		},
+		{
+			"danish": "anvendelse",
+			"english": "application"
+		},
+		{
+			"danish": "by",
+			"english": "city"
+		},
+		{
+			"danish": "Region",
+			"english": "county"
+		},
+		{
+			"danish": "dybde",
+			"english": "depth"
+		},
+		{
+			"danish": "ejendom",
+			"english": "estate"
+		},
+		{
+			"danish": "fundament",
+			"english": "foundation"
+		},
+		{
+			"danish": "bedstemor",
+			"english": "grandmother"
+		},
+		{
+			"danish": "hjerte",
+			"english": "heart"
+		},
+		{
+			"danish": "perspektiv",
+			"english": "perspective"
+		},
+		{
+			"danish": "foto",
+			"english": "photo"
+		},
+		{
+			"danish": "opskrift",
+			"english": "recipe"
+		},
+		{
+			"danish": "studie",
+			"english": "studio"
+		},
+		{
+			"danish": "emne",
+			"english": "topic"
+		},
+		{
+			"danish": "samling",
+			"english": "collection"
+		},
+		{
+			"danish": "depression",
+			"english": "depression"
+		},
+		{
+			"danish": "fantasi",
+			"english": "imagination"
+		},
+		{
+			"danish": "passion",
+			"english": "passion"
+		},
+		{
+			"danish": "procent",
+			"english": "percentage"
+		},
+		{
+			"danish": "ressource",
+			"english": "resource"
+		},
+		{
+			"danish": "indstilling",
+			"english": "setting"
+		},
+		{
+			"danish": "annonce",
+			"english": "ad"
+		},
+		{
+			"danish": "bureau",
+			"english": "agency"
+		},
+		{
+			"danish": "kollegium",
+			"english": "college"
+		},
+		{
+			"danish": "forbindelse",
+			"english": "connection"
+		},
+		{
+			"danish": "kritik",
+			"english": "criticism"
+		},
+		{
+			"danish": "gæld",
+			"english": "debt"
+		},
+		{
+			"danish": "beskrivelse",
+			"english": "description"
+		},
+		{
+			"danish": "minde",
+			"english": "memory"
+		},
+		{
+			"danish": "tålmodighed",
+			"english": "patience"
+		},
+		{
+			"danish": "sekretær",
+			"english": "secretary"
+		},
+		{
+			"danish": "løsning",
+			"english": "solution"
+		},
+		{
+			"danish": "administration",
+			"english": "administration"
+		},
+		{
+			"danish": "aspekt",
+			"english": "aspect"
+		},
+		{
+			"danish": "holdning",
+			"english": "attitude"
+		},
+		{
+			"danish": "direktør",
+			"english": "director"
+		},
+		{
+			"danish": "personlighed",
+			"english": "personality"
+		},
+		{
+			"danish": "psykologi",
+			"english": "psychology"
+		},
+		{
+			"danish": "henstilling",
+			"english": "recommendation"
+		},
+		{
+			"danish": "respons",
+			"english": "response"
+		},
+		{
+			"danish": "udvælgelse",
+			"english": "selection"
+		},
+		{
+			"danish": "opbevaring",
+			"english": "storage"
+		},
+		{
+			"danish": "version",
+			"english": "version"
+		},
+		{
+			"danish": "alkohol",
+			"english": "alcohol"
+		},
+		{
+			"danish": "argument",
+			"english": "argument"
+		},
+		{
+			"danish": "klage",
+			"english": "complaint"
+		},
+		{
+			"danish": "kontrakt",
+			"english": "contract"
+		},
+		{
+			"danish": "vægt",
+			"english": "emphasis"
+		},
+		{
+			"danish": "hovedvej",
+			"english": "highway"
+		},
+		{
+			"danish": "tab",
+			"english": "loss"
+		},
+		{
+			"danish": "medlemskab",
+			"english": "membership"
+		},
+		{
+			"danish": "besiddelse",
+			"english": "possession"
+		},
+		{
+			"danish": "forberedelse",
+			"english": "preparation"
+		},
+		{
+			"danish": "bøf",
+			"english": "steak"
+		},
+		{
+			"danish": "Union",
+			"english": "union"
+		},
+		{
+			"danish": "aftale",
+			"english": "agreement"
+		},
+		{
+			"danish": "kræft",
+			"english": "cancer"
+		},
+		{
+			"danish": "valuta",
+			"english": "currency"
+		},
+		{
+			"danish": "beskæftigelse",
+			"english": "employment"
+		},
+		{
+			"danish": "engineering",
+			"english": "engineering"
+		},
+		{
+			"danish": "indgang",
+			"english": "entry"
+		},
+		{
+			"danish": "vekselvirkning",
+			"english": "interaction"
+		},
+		{
+			"danish": "blanding",
+			"english": "mixture"
+		},
+		{
+			"danish": "præference",
+			"english": "preference"
+		},
+		{
+			"danish": "område",
+			"english": "region"
+		},
+		{
+			"danish": "republik",
+			"english": "republic"
+		},
+		{
+			"danish": "tradition",
+			"english": "tradition"
+		},
+		{
+			"danish": "virus",
+			"english": "virus"
+		},
+		{
+			"danish": "skuespiller",
+			"english": "actor"
+		},
+		{
+			"danish": "klasseværelse",
+			"english": "classroom"
+		},
+		{
+			"danish": "levering",
+			"english": "delivery"
+		},
+		{
+			"danish": "enhed",
+			"english": "device"
+		},
+		{
+			"danish": "vanskelighed",
+			"english": "difficulty"
+		},
+		{
+			"danish": "drama",
+			"english": "drama"
+		},
+		{
+			"danish": "valg",
+			"english": "election"
+		},
+		{
+			"danish": "motor",
+			"english": "engine"
+		},
+		{
+			"danish": "fodbold",
+			"english": "football"
+		},
+		{
+			"danish": "vejledning",
+			"english": "guidance"
+		},
+		{
+			"danish": "Hotel",
+			"english": "hotel"
+		},
+		{
+			"danish": "ejer",
+			"english": "owner"
+		},
+		{
+			"danish": "prioritet",
+			"english": "priority"
+		},
+		{
+			"danish": "beskyttelse",
+			"english": "protection"
+		},
+		{
+			"danish": "forslag",
+			"english": "suggestion"
+		},
+		{
+			"danish": "spænding",
+			"english": "tension"
+		},
+		{
+			"danish": "variation",
+			"english": "variation"
+		},
+		{
+			"danish": "angst",
+			"english": "anxiety"
+		},
+		{
+			"danish": "atmosfære",
+			"english": "atmosphere"
+		},
+		{
+			"danish": "opmærksomhed",
+			"english": "awareness"
+		},
+		{
+			"danish": "bad",
+			"english": "bath"
+		},
+		{
+			"danish": "brød",
+			"english": "bread"
+		},
+		{
+			"danish": "kandidat",
+			"english": "candidate"
+		},
+		{
+			"danish": "klima",
+			"english": "climate"
+		},
+		{
+			"danish": "sammenligning",
+			"english": "comparison"
+		},
+		{
+			"danish": "forvirring",
+			"english": "confusion"
+		},
+		{
+			"danish": "konstruktion",
+			"english": "construction"
+		},
+		{
+			"danish": "elevator",
+			"english": "elevator"
+		},
+		{
+			"danish": "emotion",
+			"english": "emotion"
+		},
+		{
+			"danish": "medarbejder",
+			"english": "employee"
+		},
+		{
+			"danish": "arbejdsgiver",
+			"english": "employer"
+		},
+		{
+			"danish": "gæst",
+			"english": "guest"
+		},
+		{
+			"danish": "højde",
+			"english": "height"
+		},
+		{
+			"danish": "ledelse",
+			"english": "leadership"
+		},
+		{
+			"danish": "indkøbscenter",
+			"english": "mall"
+		},
+		{
+			"danish": "Manager",
+			"english": "manager"
+		},
+		{
+			"danish": "operation",
+			"english": "operation"
+		},
+		{
+			"danish": "indspilning",
+			"english": "recording"
+		},
+		{
+			"danish": "prøve",
+			"english": "sample"
+		},
+		{
+			"danish": "transport",
+			"english": "transportation"
+		},
+		{
+			"danish": "næstekærlighed",
+			"english": "charity"
+		},
+		{
+			"danish": "fætter",
+			"english": "cousin"
+		},
+		{
+			"danish": "katastrofe",
+			"english": "disaster"
+		},
+		{
+			"danish": "editor",
+			"english": "editor"
+		},
+		{
+			"danish": "effektivitet",
+			"english": "efficiency"
+		},
+		{
+			"danish": "spænding",
+			"english": "excitement"
+		},
+		{
+			"danish": "grad",
+			"english": "extent"
+		},
+		{
+			"danish": "tilbagemeldinger",
+			"english": "feedback"
+		},
+		{
+			"danish": "guitar",
+			"english": "guitar"
+		},
+		{
+			"danish": "lektier",
+			"english": "homework"
+		},
+		{
+			"danish": "leder",
+			"english": "leader"
+		},
+		{
+			"danish": "mor",
+			"english": "mom"
+		},
+		{
+			"danish": "resultat",
+			"english": "outcome"
+		},
+		{
+			"danish": "tilladelse",
+			"english": "permission"
+		},
+		{
+			"danish": "præsentation",
+			"english": "presentation"
+		},
+		{
+			"danish": "forfremmelse",
+			"english": "promotion"
+		},
+		{
+			"danish": "afspejling",
+			"english": "reflection"
+		},
+		{
+			"danish": "køleskab",
+			"english": "refrigerator"
+		},
+		{
+			"danish": "løsning",
+			"english": "resolution"
+		},
+		{
+			"danish": "indtægter",
+			"english": "revenue"
+		},
+		{
+			"danish": "session",
+			"english": "session"
+		},
+		{
+			"danish": "sanger",
+			"english": "singer"
+		},
+		{
+			"danish": "tennis",
+			"english": "tennis"
+		},
+		{
+			"danish": "kurv",
+			"english": "basket"
+		},
+		{
+			"danish": "bonus",
+			"english": "bonus"
+		},
+		{
+			"danish": "kabinet",
+			"english": "cabinet"
+		},
+		{
+			"danish": "barndom",
+			"english": "childhood"
+		},
+		{
+			"danish": "kirke",
+			"english": "church"
+		},
+		{
+			"danish": "tøj",
+			"english": "clothes"
+		},
+		{
+			"danish": "kaffe",
+			"english": "coffee"
+		},
+		{
+			"danish": "middag",
+			"english": "dinner"
+		},
+		{
+			"danish": "tegning",
+			"english": "drawing"
+		},
+		{
+			"danish": "hår",
+			"english": "hair"
+		},
+		{
+			"danish": "høring",
+			"english": "hearing"
+		},
+		{
+			"danish": "initiativ",
+			"english": "initiative"
+		},
+		{
+			"danish": "dom",
+			"english": "judgment"
+		},
+		{
+			"danish": "lab",
+			"english": "lab"
+		},
+		{
+			"danish": "måling",
+			"english": "measurement"
+		},
+		{
+			"danish": "mode",
+			"english": "mode"
+		},
+		{
+			"danish": "mudder",
+			"english": "mud"
+		},
+		{
+			"danish": "orange",
+			"english": "orange"
+		},
+		{
+			"danish": "poesi",
+			"english": "poetry"
+		},
+		{
+			"danish": "politi",
+			"english": "police"
+		},
+		{
+			"danish": "mulighed",
+			"english": "possibility"
+		},
+		{
+			"danish": "procedure",
+			"english": "procedure"
+		},
+		{
+			"danish": "dronning",
+			"english": "queen"
+		},
+		{
+			"danish": "forhold",
+			"english": "ratio"
+		},
+		{
+			"danish": "relation",
+			"english": "relation"
+		},
+		{
+			"danish": "restaurant",
+			"english": "restaurant"
+		},
+		{
+			"danish": "tilfredshed",
+			"english": "satisfaction"
+		},
+		{
+			"danish": "sektor",
+			"english": "sector"
+		},
+		{
+			"danish": "underskrift",
+			"english": "signature"
+		},
+		{
+			"danish": "betydning",
+			"english": "significance"
+		},
+		{
+			"danish": "sang",
+			"english": "song"
+		},
+		{
+			"danish": "tand",
+			"english": "tooth"
+		},
+		{
+			"danish": "by",
+			"english": "town"
+		},
+		{
+			"danish": "køretøj",
+			"english": "vehicle"
+		},
+		{
+			"danish": "bind",
+			"english": "volume"
+		},
+		{
+			"danish": "kone",
+			"english": "wife"
+		},
+		{
+			"danish": "ulykke",
+			"english": "accident"
+		},
+		{
+			"danish": "lufthavn",
+			"english": "airport"
+		},
+		{
+			"danish": "udnævnelse",
+			"english": "appointment"
+		},
+		{
+			"danish": "ankomst",
+			"english": "arrival"
+		},
+		{
+			"danish": "antagelse",
+			"english": "assumption"
+		},
+		{
+			"danish": "baseball",
+			"english": "baseball"
+		},
+		{
+			"danish": "kapitel",
+			"english": "chapter"
+		},
+		{
+			"danish": "udvalg",
+			"english": "committee"
+		},
+		{
+			"danish": "samtale",
+			"english": "conversation"
+		},
+		{
+			"danish": "database",
+			"english": "database"
+		},
+		{
+			"danish": "entusiasme",
+			"english": "enthusiasm"
+		},
+		{
+			"danish": "fejl",
+			"english": "error"
+		},
+		{
+			"danish": "forklaring",
+			"english": "explanation"
+		},
+		{
+			"danish": "landmand",
+			"english": "farmer"
+		},
+		{
+			"danish": "Port",
+			"english": "gate"
+		},
+		{
+			"danish": "pige",
+			"english": "girl"
+		},
+		{
+			"danish": "hal",
+			"english": "hall"
+		},
+		{
+			"danish": "historiker",
+			"english": "historian"
+		},
+		{
+			"danish": "hospital",
+			"english": "hospital"
+		},
+		{
+			"danish": "skade",
+			"english": "injury"
+		},
+		{
+			"danish": "instruktion",
+			"english": "instruction"
+		},
+		{
+			"danish": "vedligeholdelse",
+			"english": "maintenance"
+		},
+		{
+			"danish": "fabrikant",
+			"english": "manufacturer"
+		},
+		{
+			"danish": "måltid",
+			"english": "meal"
+		},
+		{
+			"danish": "opfattelse",
+			"english": "perception"
+		},
+		{
+			"danish": "pie",
+			"english": "pie"
+		},
+		{
+			"danish": "digt",
+			"english": "poem"
+		},
+		{
+			"danish": "tilstedeværelse",
+			"english": "presence"
+		},
+		{
+			"danish": "forslag",
+			"english": "proposal"
+		},
+		{
+			"danish": "reception",
+			"english": "reception"
+		},
+		{
+			"danish": "udskiftning",
+			"english": "replacement"
+		},
+		{
+			"danish": "revolution",
+			"english": "revolution"
+		},
+		{
+			"danish": "flod",
+			"english": "river"
+		},
+		{
+			"danish": "søn",
+			"english": "son"
+		},
+		{
+			"danish": "tale",
+			"english": "speech"
+		},
+		{
+			"danish": "te",
+			"english": "tea"
+		},
+		{
+			"danish": "landsby",
+			"english": "village"
+		},
+		{
+			"danish": "advarsel",
+			"english": "warning"
+		},
+		{
+			"danish": "vinder",
+			"english": "winner"
+		},
+		{
+			"danish": "arbejder",
+			"english": "worker"
+		},
+		{
+			"danish": "forfatter",
+			"english": "writer"
+		},
+		{
+			"danish": "hjælp",
+			"english": "assistance"
+		},
+		{
+			"danish": "åndedrag",
+			"english": "breath"
+		},
+		{
+			"danish": "køber",
+			"english": "buyer"
+		},
+		{
+			"danish": "bryst",
+			"english": "chest"
+		},
+		{
+			"danish": "chokolade",
+			"english": "chocolate"
+		},
+		{
+			"danish": "konklusion",
+			"english": "conclusion"
+		},
+		{
+			"danish": "bidrag",
+			"english": "contribution"
+		},
+		{
+			"danish": "småkage",
+			"english": "cookie"
+		},
+		{
+			"danish": "mod",
+			"english": "courage"
+		},
+		{
+			"danish": "far",
+			"english": "dad"
+		},
+		{
+			"danish": "skrivebord",
+			"english": "desk"
+		},
+		{
+			"danish": "skuffe",
+			"english": "drawer"
+		},
+		{
+			"danish": "etablering",
+			"english": "establishment"
+		},
+		{
+			"danish": "undersøgelse",
+			"english": "examination"
+		},
+		{
+			"danish": "affald",
+			"english": "garbage"
+		},
+		{
+			"danish": "købmand",
+			"english": "grocery"
+		},
+		{
+			"danish": "honning",
+			"english": "honey"
+		},
+		{
+			"danish": "indtryk",
+			"english": "impression"
+		},
+		{
+			"danish": "forbedring",
+			"english": "improvement"
+		},
+		{
+			"danish": "uafhængighed",
+			"english": "independence"
+		},
+		{
+			"danish": "insekt",
+			"english": "insect"
+		},
+		{
+			"danish": "inspektion",
+			"english": "inspection"
+		},
+		{
+			"danish": "inspektør",
+			"english": "inspector"
+		},
+		{
+			"danish": "konge",
+			"english": "king"
+		},
+		{
+			"danish": "stige",
+			"english": "ladder"
+		},
+		{
+			"danish": "menu",
+			"english": "menu"
+		},
+		{
+			"danish": "straf",
+			"english": "penalty"
+		},
+		{
+			"danish": "klaver",
+			"english": "piano"
+		},
+		{
+			"danish": "kartoffel",
+			"english": "potato"
+		},
+		{
+			"danish": "erhverv",
+			"english": "profession"
+		},
+		{
+			"danish": "professor",
+			"english": "professor"
+		},
+		{
+			"danish": "mængde",
+			"english": "quantity"
+		},
+		{
+			"danish": "reaktion",
+			"english": "reaction"
+		},
+		{
+			"danish": "krav",
+			"english": "requirement"
+		},
+		{
+			"danish": "salat",
+			"english": "salad"
+		},
+		{
+			"danish": "søster",
+			"english": "sister"
+		},
+		{
+			"danish": "supermarked",
+			"english": "supermarket"
+		},
+		{
+			"danish": "tunge",
+			"english": "tongue"
+		},
+		{
+			"danish": "svaghed",
+			"english": "weakness"
+		},
+		{
+			"danish": "bryllup",
+			"english": "wedding"
+		},
+		{
+			"danish": "affære",
+			"english": "affair"
+		},
+		{
+			"danish": "ambition",
+			"english": "ambition"
+		},
+		{
+			"danish": "analytiker",
+			"english": "analyst"
+		},
+		{
+			"danish": "æble",
+			"english": "apple"
+		},
+		{
+			"danish": "opgave",
+			"english": "assignment"
+		},
+		{
+			"danish": "assistent",
+			"english": "assistant"
+		},
+		{
+			"danish": "badeværelse",
+			"english": "bathroom"
+		},
+		{
+			"danish": "soveværelse",
+			"english": "bedroom"
+		},
+		{
+			"danish": "øl",
+			"english": "beer"
+		},
+		{
+			"danish": "fødselsdag",
+			"english": "birthday"
+		},
+		{
+			"danish": "fest",
+			"english": "celebration"
+		},
+		{
+			"danish": "mesterskab",
+			"english": "championship"
+		},
+		{
+			"danish": "kind",
+			"english": "cheek"
+		},
+		{
+			"danish": "klient",
+			"english": "client"
+		},
+		{
+			"danish": "følge",
+			"english": "consequence"
+		},
+		{
+			"danish": "afgang",
+			"english": "departure"
+		},
+		{
+			"danish": "diamant",
+			"english": "diamond"
+		},
+		{
+			"danish": "smuds",
+			"english": "dirt"
+		},
+		{
+			"danish": "øre",
+			"english": "ear"
+		},
+		{
+			"danish": "formue",
+			"english": "fortune"
+		},
+		{
+			"danish": "venskab",
+			"english": "friendship"
+		},
+		{
+			"danish": "begravelse",
+			"english": "funeral"
+		},
+		{
+			"danish": "gen",
+			"english": "gene"
+		},
+		{
+			"danish": "kæreste",
+			"english": "girlfriend"
+		},
+		{
+			"danish": "hat",
+			"english": "hat"
+		},
+		{
+			"danish": "tegn",
+			"english": "indication"
+		},
+		{
+			"danish": "hensigt",
+			"english": "intention"
+		},
+		{
+			"danish": "dame",
+			"english": "lady"
+		},
+		{
+			"danish": "midnat",
+			"english": "midnight"
+		},
+		{
+			"danish": "forhandling",
+			"english": "negotiation"
+		},
+		{
+			"danish": "forpligtelse",
+			"english": "obligation"
+		},
+		{
+			"danish": "passager",
+			"english": "passenger"
+		},
+		{
+			"danish": "pizza",
+			"english": "pizza"
+		},
+		{
+			"danish": "perron",
+			"english": "platform"
+		},
+		{
+			"danish": "digter",
+			"english": "poet"
+		},
+		{
+			"danish": "forurening",
+			"english": "pollution"
+		},
+		{
+			"danish": "anerkendelse",
+			"english": "recognition"
+		},
+		{
+			"danish": "omdømme",
+			"english": "reputation"
+		},
+		{
+			"danish": "skjorte",
+			"english": "shirt"
+		},
+		{
+			"danish": "hr",
+			"english": "sir"
+		},
+		{
+			"danish": "højttaler",
+			"english": "speaker"
+		},
+		{
+			"danish": "fremmed",
+			"english": "stranger"
+		},
+		{
+			"danish": "kirurgi",
+			"english": "surgery"
+		},
+		{
+			"danish": "sympati",
+			"english": "sympathy"
+		},
+		{
+			"danish": "fortælling",
+			"english": "tale"
+		},
+		{
+			"danish": "hals",
+			"english": "throat"
+		},
+		{
+			"danish": "træner",
+			"english": "trainer"
+		},
+		{
+			"danish": "onkel",
+			"english": "uncle"
+		},
+		{
+			"danish": "ungdom",
+			"english": "youth"
+		},
+		{
+			"danish": "penge",
+			"english": "money"
+		},
+		{
+			"danish": "mens",
+			"english": "while"
+		},
+		{
+			"danish": "forretning",
+			"english": "business"
+		},
+		{
+			"danish": "liv",
+			"english": "life"
+		},
+		{
+			"danish": "dag",
+			"english": "day"
+		},
+		{
+			"danish": "hjem",
+			"english": "home"
+		},
+		{
+			"danish": "økonomi",
+			"english": "economy"
+		},
+		{
+			"danish": "uddannelse",
+			"english": "training"
+		},
+		{
+			"danish": "venlig",
+			"english": "kind"
+		},
+		{
+			"danish": "fremtid",
+			"english": "future"
+		},
+		{
+			"danish": "handling",
+			"english": "action"
+		},
+		{
+			"danish": "dårlig",
+			"english": "bad"
+		},
+		{
+			"danish": "intet",
+			"english": "nothing"
+		},
+		{
+			"danish": "periode",
+			"english": "period"
+		},
+		{
+			"danish": "emne",
+			"english": "subject"
+		},
+		{
+			"danish": "kylling",
+			"english": "chicken"
+		},
+		{
+			"danish": "materiale",
+			"english": "material"
+		},
+		{
+			"danish": "bil",
+			"english": "car"
+		},
+		{
+			"danish": "halv",
+			"english": "half"
+		},
+		{
+			"danish": "inde",
+			"english": "inside"
+		},
+		{
+			"danish": "uden for",
+			"english": "outside"
+		},
+		{
+			"danish": "standard",
+			"english": "standard"
+		},
+		{
+			"danish": "vare",
+			"english": "item"
+		},
+		{
+			"danish": "medium",
+			"english": "medium"
+		},
+		{
+			"danish": "valg",
+			"english": "choice"
+		},
+		{
+			"danish": "morgen",
+			"english": "morning"
+		},
+		{
+			"danish": "nord",
+			"english": "north"
+		},
+		{
+			"danish": "firkant",
+			"english": "square"
+		},
+		{
+			"danish": "kapital",
+			"english": "capital"
+		},
+		{
+			"danish": "selv",
+			"english": "self"
+		},
+		{
+			"danish": "skud",
+			"english": "shot"
+		},
+		{
+			"danish": "levende",
+			"english": "living"
+		},
+		{
+			"danish": "plast",
+			"english": "plastic"
+		},
+		{
+			"danish": "følelse",
+			"english": "feeling"
+		},
+		{
+			"danish": "opsparing",
+			"english": "savings"
+		},
+		{
+			"danish": "dyr",
+			"english": "animal"
+		},
+		{
+			"danish": "maksimum",
+			"english": "maximum"
+		},
+		{
+			"danish": "roman",
+			"english": "novel"
+		},
+		{
+			"danish": "masser",
+			"english": "plenty"
+		},
+		{
+			"danish": "baggrund",
+			"english": "background"
+		},
+		{
+			"danish": "rød",
+			"english": "red"
+		},
+		{
+			"danish": "styrke",
+			"english": "strength"
+		},
+		{
+			"danish": "grøntsag",
+			"english": "vegetable"
+		},
+		{
+			"danish": "ideal",
+			"english": "ideal"
+		},
+		{
+			"danish": "køkken",
+			"english": "kitchen"
+		},
+		{
+			"danish": "princip",
+			"english": "principle"
+		},
+		{
+			"danish": "i forhold",
+			"english": "relative"
+		},
+		{
+			"danish": "salg",
+			"english": "sale"
+		},
+		{
+			"danish": "gade",
+			"english": "street"
+		},
+		{
+			"danish": "minimum",
+			"english": "minimum"
+		},
+		{
+			"danish": "sti",
+			"english": "path"
+		},
+		{
+			"danish": "hav",
+			"english": "sea"
+		},
+		{
+			"danish": "syd",
+			"english": "south"
+		},
+		{
+			"danish": "status",
+			"english": "status"
+		},
+		{
+			"danish": "selvtillid",
+			"english": "confidence"
+		},
+		{
+			"danish": "datter",
+			"english": "daughter"
+		},
+		{
+			"danish": "grad",
+			"english": "degree"
+		},
+		{
+			"danish": "pligt",
+			"english": "duty"
+		},
+		{
+			"danish": "time",
+			"english": "hour"
+		},
+		{
+			"danish": "stof",
+			"english": "substance"
+		},
+		{
+			"danish": "eftermiddag",
+			"english": "afternoon"
+		},
+		{
+			"danish": "betragtning",
+			"english": "consideration"
+		},
+		{
+			"danish": "guld",
+			"english": "gold"
+		},
+		{
+			"danish": "mission",
+			"english": "mission"
+		},
+		{
+			"danish": "dør",
+			"english": "door"
+		},
+		{
+			"danish": "øst",
+			"english": "east"
+		},
+		{
+			"danish": "måde",
+			"english": "manner"
+		},
+		{
+			"danish": "møde",
+			"english": "meeting"
+		},
+		{
+			"danish": "parkering",
+			"english": "parking"
+		},
+		{
+			"danish": "rutine",
+			"english": "routine"
+		},
+		{
+			"danish": "svømning",
+			"english": "swimming"
+		},
+		{
+			"danish": "flyselskab",
+			"english": "airline"
+		},
+		{
+			"danish": "designer",
+			"english": "designer"
+		},
+		{
+			"danish": "nødsituation",
+			"english": "emergency"
+		},
+		{
+			"danish": "aften",
+			"english": "evening"
+		},
+		{
+			"danish": "udvidelse",
+			"english": "extension"
+		},
+		{
+			"danish": "skræk",
+			"english": "horror"
+		},
+		{
+			"danish": "bjerg",
+			"english": "mountain"
+		},
+		{
+			"danish": "patient",
+			"english": "patient"
+		},
+		{
+			"danish": "lettelse",
+			"english": "relief"
+		},
+		{
+			"danish": "turist",
+			"english": "tourist"
+		},
+		{
+			"danish": "vest",
+			"english": "west"
+		},
+		{
+			"danish": "til side",
+			"english": "aside"
+		},
+		{
+			"danish": "bror",
+			"english": "brother"
+		},
+		{
+			"danish": "ekspert",
+			"english": "expert"
+		},
+		{
+			"danish": "Gud",
+			"english": "god"
+		},
+		{
+			"danish": "hjemmehørende",
+			"english": "native"
+		},
+		{
+			"danish": "åbning",
+			"english": "opening"
+		},
+		{
+			"danish": "dreng",
+			"english": "boy"
+		},
+		{
+			"danish": "specialist",
+			"english": "specialist"
+		},
+		{
+			"danish": "bitter",
+			"english": "bitter"
+		},
+		{
+			"danish": "helvede",
+			"english": "hell"
+		},
+		{
+			"danish": "hændelse",
+			"english": "incident"
+		},
+		{
+			"danish": "resident",
+			"english": "resident"
+		},
+		{
+			"danish": "-en",
+			"english": "a"
+		},
+		{
+			"danish": "du",
+			"english": "you"
+		},
+		{
+			"danish": "det",
+			"english": "it"
+		},
+		{
+			"danish": "kan",
+			"english": "can"
+		},
+		{
+			"danish": "vilje",
+			"english": "will"
+		},
+		{
+			"danish": "hvis",
+			"english": "if"
+		},
+		{
+			"danish": "en",
+			"english": "one"
+		},
+		{
+			"danish": "mange",
+			"english": "many"
+		},
+		{
+			"danish": "mest",
+			"english": "most"
+		},
+		{
+			"danish": "andre",
+			"english": "other"
+		},
+		{
+			"danish": "god",
+			"english": "good"
+		},
+		{
+			"danish": "alle tiders",
+			"english": "great"
+		},
+		{
+			"danish": "få",
+			"english": "few"
+		},
+		{
+			"danish": "magt",
+			"english": "might"
+		},
+		{
+			"danish": "stadig",
+			"english": "still"
+		},
+		{
+			"danish": "offentlig",
+			"english": "public"
+		},
+		{
+			"danish": "human",
+			"english": "human"
+		},
+		{
+			"danish": "lokal",
+			"english": "local"
+		},
+		{
+			"danish": "generel",
+			"english": "general"
+		},
+		{
+			"danish": "hun",
+			"english": "she"
+		},
+		{
+			"danish": "bestemt",
+			"english": "specific"
+		},
+		{
+			"danish": "lang",
+			"english": "long"
+		},
+		{
+			"danish": "høj",
+			"english": "high"
+		},
+		{
+			"danish": "i aften",
+			"english": "tonight"
+		},
+		{
+			"danish": "fælles",
+			"english": "common"
+		},
+		{
+			"danish": "enkel",
+			"english": "simple"
+		},
+		{
+			"danish": "forbi",
+			"english": "past"
+		},
+		{
+			"danish": "stor",
+			"english": "big"
+		},
+		{
+			"danish": "mulig",
+			"english": "possible"
+		},
+		{
+			"danish": "særlig",
+			"english": "particular"
+		},
+		{
+			"danish": "i dag",
+			"english": "today"
+		},
+		{
+			"danish": "personlig",
+			"english": "personal"
+		},
+		{
+			"danish": "strøm",
+			"english": "current"
+		},
+		{
+			"danish": "national",
+			"english": "national"
+		},
+		{
+			"danish": "naturlig",
+			"english": "natural"
+		},
+		{
+			"danish": "fysisk",
+			"english": "physical"
+		},
+		{
+			"danish": "anden",
+			"english": "second"
+		},
+		{
+			"danish": "individuel",
+			"english": "individual"
+		},
+		{
+			"danish": "vigtigste",
+			"english": "main"
+		},
+		{
+			"danish": "potentiel",
+			"english": "potential"
+		},
+		{
+			"danish": "professionel",
+			"english": "professional"
+		},
+		{
+			"danish": "international",
+			"english": "international"
+		},
+		{
+			"danish": "alternativ",
+			"english": "alternative"
+		},
+		{
+			"danish": "Følgende",
+			"english": "following"
+		},
+		{
+			"danish": "særlig",
+			"english": "special"
+		},
+		{
+			"danish": "arbejder",
+			"english": "working"
+		},
+		{
+			"danish": "hel",
+			"english": "whole"
+		},
+		{
+			"danish": "kold",
+			"english": "cold"
+		},
+		{
+			"danish": "kommerciel",
+			"english": "commercial"
+		},
+		{
+			"danish": "lav",
+			"english": "low"
+		},
+		{
+			"danish": "primær",
+			"english": "primary"
+		},
+		{
+			"danish": "værdi",
+			"english": "worth"
+		},
+		{
+			"danish": "nødvendig",
+			"english": "necessary"
+		},
+		{
+			"danish": "positiv",
+			"english": "positive"
+		},
+		{
+			"danish": "kreativ",
+			"english": "creative"
+		},
+		{
+			"danish": "glad",
+			"english": "glad"
+		},
+		{
+			"danish": "grund",
+			"english": "due"
+		},
+		{
+			"danish": "effektiv",
+			"english": "effective"
+		},
+		{
+			"danish": "midten",
+			"english": "middle"
+		},
+		{
+			"danish": "fast",
+			"english": "regular"
+		},
+		{
+			"danish": "uafhængig",
+			"english": "independent"
+		},
+		{
+			"danish": "original",
+			"english": "original"
+		},
+		{
+			"danish": "smuk",
+			"english": "beautiful"
+		},
+		{
+			"danish": "aktiv",
+			"english": "active"
+		},
+		{
+			"danish": "negativ",
+			"english": "negative"
+		},
+		{
+			"danish": "sikker",
+			"english": "safe"
+		},
+		{
+			"danish": "visuel",
+			"english": "visual"
+		},
+		{
+			"danish": "ud over",
+			"english": "beyond"
+		},
+		{
+			"danish": "junior-",
+			"english": "junior"
+		},
+		{
+			"danish": "enestående",
+			"english": "unique"
+		},
+		{
+			"danish": "noget",
+			"english": "anything"
+		},
+		{
+			"danish": "klassisk",
+			"english": "classic"
+		},
+		{
+			"danish": "endelige",
+			"english": "final"
+		},
+		{
+			"danish": "privat",
+			"english": "private"
+		},
+		{
+			"danish": "vestlig",
+			"english": "western"
+		},
+		{
+			"danish": "velkendt",
+			"english": "familiar"
+		},
+		{
+			"danish": "officiel",
+			"english": "official"
+		},
+		{
+			"danish": "bred",
+			"english": "broad"
+		},
+		{
+			"danish": "komfortabel",
+			"english": "comfortable"
+		},
+		{
+			"danish": "kan være",
+			"english": "maybe"
+		},
+		{
+			"danish": "rig",
+			"english": "rich"
+		},
+		{
+			"danish": "ung",
+			"english": "young"
+		},
+		{
+			"danish": "tung",
+			"english": "heavy"
+		},
+		{
+			"danish": "hej",
+			"english": "hello"
+		},
+		{
+			"danish": "værdifuld",
+			"english": "valuable"
+		},
+		{
+			"danish": "førende",
+			"english": "leading"
+		},
+		{
+			"danish": "normal",
+			"english": "normal"
+		},
+		{
+			"danish": "hemmelighed",
+			"english": "secret"
+		},
+		{
+			"danish": "sej",
+			"english": "tough"
+		},
+		{
+			"danish": "dyb",
+			"english": "deep"
+		},
+		{
+			"danish": "objektiv",
+			"english": "objective"
+		},
+		{
+			"danish": "kemisk",
+			"english": "chemical"
+		},
+		{
+			"danish": "ekstrem",
+			"english": "extreme"
+		},
+		{
+			"danish": "formel",
+			"english": "formal"
+		},
+		{
+			"danish": "modsat",
+			"english": "opposite"
+		},
+		{
+			"danish": "fjern",
+			"english": "remote"
+		},
+		{
+			"danish": "langt",
+			"english": "vast"
+		},
+		{
+			"danish": "et eller andet sted",
+			"english": "somewhere"
+		},
+		{
+			"danish": "overalt",
+			"english": "anywhere"
+		},
+		{
+			"danish": "mørk",
+			"english": "dark"
+		},
+		{
+			"danish": "indre",
+			"english": "internal"
+		},
+		{
+			"danish": "følsom",
+			"english": "sensitive"
+		},
+		{
+			"danish": "konstant",
+			"english": "constant"
+		},
+		{
+			"danish": "rå",
+			"english": "raw"
+		},
+		{
+			"danish": "blød",
+			"english": "soft"
+		},
+		{
+			"danish": "solid",
+			"english": "solid"
+		},
+		{
+			"danish": "mærkelig",
+			"english": "weird"
+		},
+		{
+			"danish": "årligt",
+			"english": "annual"
+		},
+		{
+			"danish": "død",
+			"english": "dead"
+		},
+		{
+			"danish": "for evigt",
+			"english": "forever"
+		},
+		{
+			"danish": "ingen",
+			"english": "nobody"
+		},
+		{
+			"danish": "rund",
+			"english": "round"
+		},
+		{
+			"danish": "hvorimod",
+			"english": "whereas"
+		},
+		{
+			"danish": "tilsvarende",
+			"english": "equivalent"
+		},
+		{
+			"danish": "åndelig",
+			"english": "spiritual"
+		},
+		{
+			"danish": "voksen",
+			"english": "adult"
+		},
+		{
+			"danish": "skør",
+			"english": "crazy"
+		},
+		{
+			"danish": "forudgående",
+			"english": "prior"
+		},
+		{
+			"danish": "ru",
+			"english": "rough"
+		},
+		{
+			"danish": "trist",
+			"english": "sad"
+		},
+		{
+			"danish": "syg",
+			"english": "sick"
+		},
+		{
+			"danish": "ekstern",
+			"english": "external"
+		},
+		{
+			"danish": "ulovlig",
+			"english": "illegal"
+		},
+		{
+			"danish": "mobil",
+			"english": "mobile"
+		},
+		{
+			"danish": "grim",
+			"english": "nasty"
+		},
+		{
+			"danish": "almindelig",
+			"english": "ordinary"
+		},
+		{
+			"danish": "Royal",
+			"english": "royal"
+		},
+		{
+			"danish": "senior-",
+			"english": "senior"
+		},
+		{
+			"danish": "øverst",
+			"english": "upper"
+		},
+		{
+			"danish": "afhængig",
+			"english": "dependent"
+		},
+		{
+			"danish": "sjovt",
+			"english": "funny"
+		},
+		{
+			"danish": "sød",
+			"english": "sweet"
+		},
+		{
+			"danish": "ovenpå",
+			"english": "upstairs"
+		},
+		{
+			"danish": "sædvanlig",
+			"english": "usual"
+		},
+		{
+			"danish": "i udlandet",
+			"english": "abroad"
+		},
+		{
+			"danish": "Grand",
+			"english": "grand"
+		},
+		{
+			"danish": "han-",
+			"english": "male"
+		},
+		{
+			"danish": "nogen",
+			"english": "anybody"
+		},
+		{
+			"danish": "strålende",
+			"english": "brilliant"
+		},
+		{
+			"danish": "Kære",
+			"english": "dear"
+		},
+		{
+			"danish": "beruset",
+			"english": "drunk"
+		},
+		{
+			"danish": "kvinde",
+			"english": "female"
+		},
+		{
+			"danish": "uundgåelige",
+			"english": "inevitable"
+		},
+		{
+			"danish": "pæn",
+			"english": "neat"
+		},
+		{
+			"danish": "repræsentant",
+			"english": "representative"
+		},
+		{
+			"danish": "fjollet",
+			"english": "silly"
+		},
+		{
+			"danish": "dum",
+			"english": "stupid"
+		},
+		{
+			"danish": "midlertidig",
+			"english": "temporary"
+		},
+		{
+			"danish": "i morgen",
+			"english": "tomorrow"
+		},
+		{
+			"danish": "i går",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 522 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"dutch": "mensen",
+			"english": "people"
+		},
+		{
+			"dutch": "geschiedenis",
+			"english": "history"
+		},
+		{
+			"dutch": "manier",
+			"english": "way"
+		},
+		{
+			"dutch": "kunst",
+			"english": "art"
+		},
+		{
+			"dutch": "wereld-",
+			"english": "world"
+		},
+		{
+			"dutch": "informatie",
+			"english": "information"
+		},
+		{
+			"dutch": "kaart",
+			"english": "map"
+		},
+		{
+			"dutch": "twee",
+			"english": "two"
+		},
+		{
+			"dutch": "familie",
+			"english": "family"
+		},
+		{
+			"dutch": "regering",
+			"english": "government"
+		},
+		{
+			"dutch": "gezondheid",
+			"english": "health"
+		},
+		{
+			"dutch": "systeem",
+			"english": "system"
+		},
+		{
+			"dutch": "computer",
+			"english": "computer"
+		},
+		{
+			"dutch": "vlees",
+			"english": "meat"
+		},
+		{
+			"dutch": "jaar",
+			"english": "year"
+		},
+		{
+			"dutch": "bedankt",
+			"english": "thanks"
+		},
+		{
+			"dutch": "muziek-",
+			"english": "music"
+		},
+		{
+			"dutch": "persoon",
+			"english": "person"
+		},
+		{
+			"dutch": "lezing",
+			"english": "reading"
+		},
+		{
+			"dutch": "methode",
+			"english": "method"
+		},
+		{
+			"dutch": "gegevens",
+			"english": "data"
+		},
+		{
+			"dutch": "eten",
+			"english": "food"
+		},
+		{
+			"dutch": "begrip",
+			"english": "understanding"
+		},
+		{
+			"dutch": "theorie",
+			"english": "theory"
+		},
+		{
+			"dutch": "wet",
+			"english": "law"
+		},
+		{
+			"dutch": "vogel",
+			"english": "bird"
+		},
+		{
+			"dutch": "literatuur",
+			"english": "literature"
+		},
+		{
+			"dutch": "probleem",
+			"english": "problem"
+		},
+		{
+			"dutch": "software",
+			"english": "software"
+		},
+		{
+			"dutch": "controle",
+			"english": "control"
+		},
+		{
+			"dutch": "kennis",
+			"english": "knowledge"
+		},
+		{
+			"dutch": "macht",
+			"english": "power"
+		},
+		{
+			"dutch": "vermogen",
+			"english": "ability"
+		},
+		{
+			"dutch": "economie",
+			"english": "economics"
+		},
+		{
+			"dutch": "liefde",
+			"english": "love"
+		},
+		{
+			"dutch": "internet",
+			"english": "internet"
+		},
+		{
+			"dutch": "televisie",
+			"english": "television"
+		},
+		{
+			"dutch": "wetenschap",
+			"english": "science"
+		},
+		{
+			"dutch": "bibliotheek",
+			"english": "library"
+		},
+		{
+			"dutch": "natuur",
+			"english": "nature"
+		},
+		{
+			"dutch": "feit",
+			"english": "fact"
+		},
+		{
+			"dutch": "artikel",
+			"english": "product"
+		},
+		{
+			"dutch": "idee",
+			"english": "idea"
+		},
+		{
+			"dutch": "temperatuur-",
+			"english": "temperature"
+		},
+		{
+			"dutch": "investering",
+			"english": "investment"
+		},
+		{
+			"dutch": "gebied",
+			"english": "area"
+		},
+		{
+			"dutch": "maatschappij",
+			"english": "society"
+		},
+		{
+			"dutch": "activiteit",
+			"english": "activity"
+		},
+		{
+			"dutch": "verhaal",
+			"english": "story"
+		},
+		{
+			"dutch": "industrie",
+			"english": "industry"
+		},
+		{
+			"dutch": "media",
+			"english": "media"
+		},
+		{
+			"dutch": "ding",
+			"english": "thing"
+		},
+		{
+			"dutch": "oven",
+			"english": "oven"
+		},
+		{
+			"dutch": "gemeenschap",
+			"english": "community"
+		},
+		{
+			"dutch": "definitie",
+			"english": "definition"
+		},
+		{
+			"dutch": "veiligheid",
+			"english": "safety"
+		},
+		{
+			"dutch": "kwaliteit",
+			"english": "quality"
+		},
+		{
+			"dutch": "ontwikkeling",
+			"english": "development"
+		},
+		{
+			"dutch": "taal",
+			"english": "language"
+		},
+		{
+			"dutch": "beheer",
+			"english": "management"
+		},
+		{
+			"dutch": "speler",
+			"english": "player"
+		},
+		{
+			"dutch": "verscheidenheid",
+			"english": "variety"
+		},
+		{
+			"dutch": "video-",
+			"english": "video"
+		},
+		{
+			"dutch": "week",
+			"english": "week"
+		},
+		{
+			"dutch": "veiligheid",
+			"english": "security"
+		},
+		{
+			"dutch": "land",
+			"english": "country"
+		},
+		{
+			"dutch": "tentamen",
+			"english": "exam"
+		},
+		{
+			"dutch": "film",
+			"english": "movie"
+		},
+		{
+			"dutch": "organisatie",
+			"english": "organization"
+		},
+		{
+			"dutch": "uitrusting",
+			"english": "equipment"
+		},
+		{
+			"dutch": "fysica",
+			"english": "physics"
+		},
+		{
+			"dutch": "analyse",
+			"english": "analysis"
+		},
+		{
+			"dutch": "beleid",
+			"english": "policy"
+		},
+		{
+			"dutch": "serie",
+			"english": "series"
+		},
+		{
+			"dutch": "gedachte",
+			"english": "thought"
+		},
+		{
+			"dutch": "basis",
+			"english": "basis"
+		},
+		{
+			"dutch": "vriendje",
+			"english": "boyfriend"
+		},
+		{
+			"dutch": "richting",
+			"english": "direction"
+		},
+		{
+			"dutch": "strategie",
+			"english": "strategy"
+		},
+		{
+			"dutch": "technologie",
+			"english": "technology"
+		},
+		{
+			"dutch": "leger",
+			"english": "army"
+		},
+		{
+			"dutch": "camera",
+			"english": "camera"
+		},
+		{
+			"dutch": "vrijheid",
+			"english": "freedom"
+		},
+		{
+			"dutch": "papier",
+			"english": "paper"
+		},
+		{
+			"dutch": "milieu",
+			"english": "environment"
+		},
+		{
+			"dutch": "kind",
+			"english": "child"
+		},
+		{
+			"dutch": "aanleg",
+			"english": "instance"
+		},
+		{
+			"dutch": "maand",
+			"english": "month"
+		},
+		{
+			"dutch": "waarheid",
+			"english": "truth"
+		},
+		{
+			"dutch": "afzet",
+			"english": "marketing"
+		},
+		{
+			"dutch": "Universiteit",
+			"english": "university"
+		},
+		{
+			"dutch": "schrijf-",
+			"english": "writing"
+		},
+		{
+			"dutch": "artikel",
+			"english": "article"
+		},
+		{
+			"dutch": "afdeling",
+			"english": "department"
+		},
+		{
+			"dutch": "verschil",
+			"english": "difference"
+		},
+		{
+			"dutch": "doel",
+			"english": "goal"
+		},
+		{
+			"dutch": "nieuws",
+			"english": "news"
+		},
+		{
+			"dutch": "publiek",
+			"english": "audience"
+		},
+		{
+			"dutch": "visvangst",
+			"english": "fishing"
+		},
+		{
+			"dutch": "groei",
+			"english": "growth"
+		},
+		{
+			"dutch": "inkomen",
+			"english": "income"
+		},
+		{
+			"dutch": "huwelijk",
+			"english": "marriage"
+		},
+		{
+			"dutch": "gebruiker",
+			"english": "user"
+		},
+		{
+			"dutch": "combinatie",
+			"english": "combination"
+		},
+		{
+			"dutch": "mislukking",
+			"english": "failure"
+		},
+		{
+			"dutch": "betekenis",
+			"english": "meaning"
+		},
+		{
+			"dutch": "geneeskunde",
+			"english": "medicine"
+		},
+		{
+			"dutch": "filosofie",
+			"english": "philosophy"
+		},
+		{
+			"dutch": "leraar",
+			"english": "teacher"
+		},
+		{
+			"dutch": "communicatie",
+			"english": "communication"
+		},
+		{
+			"dutch": "nacht",
+			"english": "night"
+		},
+		{
+			"dutch": "chemie",
+			"english": "chemistry"
+		},
+		{
+			"dutch": "ziekte",
+			"english": "disease"
+		},
+		{
+			"dutch": "schijf",
+			"english": "disk"
+		},
+		{
+			"dutch": "energie",
+			"english": "energy"
+		},
+		{
+			"dutch": "natie",
+			"english": "nation"
+		},
+		{
+			"dutch": "weg",
+			"english": "road"
+		},
+		{
+			"dutch": "rol",
+			"english": "role"
+		},
+		{
+			"dutch": "soep",
+			"english": "soup"
+		},
+		{
+			"dutch": "reclame",
+			"english": "advertising"
+		},
+		{
+			"dutch": "plaats",
+			"english": "location"
+		},
+		{
+			"dutch": "succes",
+			"english": "success"
+		},
+		{
+			"dutch": "toevoeging",
+			"english": "addition"
+		},
+		{
+			"dutch": "appartement",
+			"english": "apartment"
+		},
+		{
+			"dutch": "onderwijs",
+			"english": "education"
+		},
+		{
+			"dutch": "wiskunde",
+			"english": "math"
+		},
+		{
+			"dutch": "moment",
+			"english": "moment"
+		},
+		{
+			"dutch": "schilderij",
+			"english": "painting"
+		},
+		{
+			"dutch": "politiek",
+			"english": "politics"
+		},
+		{
+			"dutch": "aandacht",
+			"english": "attention"
+		},
+		{
+			"dutch": "besluit",
+			"english": "decision"
+		},
+		{
+			"dutch": "evenement",
+			"english": "event"
+		},
+		{
+			"dutch": "eigendom",
+			"english": "property"
+		},
+		{
+			"dutch": "het winkelen",
+			"english": "shopping"
+		},
+		{
+			"dutch": "student",
+			"english": "student"
+		},
+		{
+			"dutch": "hout",
+			"english": "wood"
+		},
+		{
+			"dutch": "wedstrijd",
+			"english": "competition"
+		},
+		{
+			"dutch": "distributie",
+			"english": "distribution"
+		},
+		{
+			"dutch": "vermaak",
+			"english": "entertainment"
+		},
+		{
+			"dutch": "kantoor",
+			"english": "office"
+		},
+		{
+			"dutch": "bevolking",
+			"english": "population"
+		},
+		{
+			"dutch": "president",
+			"english": "president"
+		},
+		{
+			"dutch": "eenheid",
+			"english": "unit"
+		},
+		{
+			"dutch": "categorie",
+			"english": "category"
+		},
+		{
+			"dutch": "sigaret",
+			"english": "cigarette"
+		},
+		{
+			"dutch": "context",
+			"english": "context"
+		},
+		{
+			"dutch": "invoering",
+			"english": "introduction"
+		},
+		{
+			"dutch": "kans",
+			"english": "opportunity"
+		},
+		{
+			"dutch": "prestatie",
+			"english": "performance"
+		},
+		{
+			"dutch": "bestuurder",
+			"english": "driver"
+		},
+		{
+			"dutch": "vlucht",
+			"english": "flight"
+		},
+		{
+			"dutch": "lengte",
+			"english": "length"
+		},
+		{
+			"dutch": "tijdschrift",
+			"english": "magazine"
+		},
+		{
+			"dutch": "krant-",
+			"english": "newspaper"
+		},
+		{
+			"dutch": "verwantschap",
+			"english": "relationship"
+		},
+		{
+			"dutch": "onderwijs",
+			"english": "teaching"
+		},
+		{
+			"dutch": "cel",
+			"english": "cell"
+		},
+		{
+			"dutch": "handelaar",
+			"english": "dealer"
+		},
+		{
+			"dutch": "bevinding",
+			"english": "finding"
+		},
+		{
+			"dutch": "meer",
+			"english": "lake"
+		},
+		{
+			"dutch": "lid",
+			"english": "member"
+		},
+		{
+			"dutch": "bericht",
+			"english": "message"
+		},
+		{
+			"dutch": "telefoon",
+			"english": "phone"
+		},
+		{
+			"dutch": "tafereel",
+			"english": "scene"
+		},
+		{
+			"dutch": "uiterlijk",
+			"english": "appearance"
+		},
+		{
+			"dutch": "vereniging",
+			"english": "association"
+		},
+		{
+			"dutch": "concept",
+			"english": "concept"
+		},
+		{
+			"dutch": "klant",
+			"english": "customer"
+		},
+		{
+			"dutch": "dood",
+			"english": "death"
+		},
+		{
+			"dutch": "discussie",
+			"english": "discussion"
+		},
+		{
+			"dutch": "behuizing",
+			"english": "housing"
+		},
+		{
+			"dutch": "inflatie",
+			"english": "inflation"
+		},
+		{
+			"dutch": "verzekering",
+			"english": "insurance"
+		},
+		{
+			"dutch": "humeur",
+			"english": "mood"
+		},
+		{
+			"dutch": "vrouw",
+			"english": "woman"
+		},
+		{
+			"dutch": "advies",
+			"english": "advice"
+		},
+		{
+			"dutch": "bloed",
+			"english": "blood"
+		},
+		{
+			"dutch": "inspanning",
+			"english": "effort"
+		},
+		{
+			"dutch": "uitdrukking",
+			"english": "expression"
+		},
+		{
+			"dutch": "belang",
+			"english": "importance"
+		},
+		{
+			"dutch": "mening",
+			"english": "opinion"
+		},
+		{
+			"dutch": "betaling",
+			"english": "payment"
+		},
+		{
+			"dutch": "realiteit",
+			"english": "reality"
+		},
+		{
+			"dutch": "verantwoordelijkheid",
+			"english": "responsibility"
+		},
+		{
+			"dutch": "situatie",
+			"english": "situation"
+		},
+		{
+			"dutch": "bekwaamheid",
+			"english": "skill"
+		},
+		{
+			"dutch": "verklaring",
+			"english": "statement"
+		},
+		{
+			"dutch": "rijkdom",
+			"english": "wealth"
+		},
+		{
+			"dutch": "toepassing",
+			"english": "application"
+		},
+		{
+			"dutch": "stad",
+			"english": "city"
+		},
+		{
+			"dutch": "provincie",
+			"english": "county"
+		},
+		{
+			"dutch": "diepte",
+			"english": "depth"
+		},
+		{
+			"dutch": "landgoed",
+			"english": "estate"
+		},
+		{
+			"dutch": "fundament",
+			"english": "foundation"
+		},
+		{
+			"dutch": "grootmoeder",
+			"english": "grandmother"
+		},
+		{
+			"dutch": "hart-",
+			"english": "heart"
+		},
+		{
+			"dutch": "perspectief",
+			"english": "perspective"
+		},
+		{
+			"dutch": "foto",
+			"english": "photo"
+		},
+		{
+			"dutch": "recept",
+			"english": "recipe"
+		},
+		{
+			"dutch": "studio",
+			"english": "studio"
+		},
+		{
+			"dutch": "onderwerp",
+			"english": "topic"
+		},
+		{
+			"dutch": "verzameling",
+			"english": "collection"
+		},
+		{
+			"dutch": "depressie",
+			"english": "depression"
+		},
+		{
+			"dutch": "verbeelding",
+			"english": "imagination"
+		},
+		{
+			"dutch": "passie",
+			"english": "passion"
+		},
+		{
+			"dutch": "percentage",
+			"english": "percentage"
+		},
+		{
+			"dutch": "hulpbron",
+			"english": "resource"
+		},
+		{
+			"dutch": "omgeving",
+			"english": "setting"
+		},
+		{
+			"dutch": "advertentie",
+			"english": "ad"
+		},
+		{
+			"dutch": "agentschap",
+			"english": "agency"
+		},
+		{
+			"dutch": "college",
+			"english": "college"
+		},
+		{
+			"dutch": "verbinding",
+			"english": "connection"
+		},
+		{
+			"dutch": "kritiek",
+			"english": "criticism"
+		},
+		{
+			"dutch": "schuld",
+			"english": "debt"
+		},
+		{
+			"dutch": "beschrijving",
+			"english": "description"
+		},
+		{
+			"dutch": "geheugen",
+			"english": "memory"
+		},
+		{
+			"dutch": "geduld",
+			"english": "patience"
+		},
+		{
+			"dutch": "secretaris",
+			"english": "secretary"
+		},
+		{
+			"dutch": "oplossing",
+			"english": "solution"
+		},
+		{
+			"dutch": "administratie",
+			"english": "administration"
+		},
+		{
+			"dutch": "aspect",
+			"english": "aspect"
+		},
+		{
+			"dutch": "houding",
+			"english": "attitude"
+		},
+		{
+			"dutch": "directeur",
+			"english": "director"
+		},
+		{
+			"dutch": "persoonlijkheid",
+			"english": "personality"
+		},
+		{
+			"dutch": "psychologie",
+			"english": "psychology"
+		},
+		{
+			"dutch": "aanbeveling",
+			"english": "recommendation"
+		},
+		{
+			"dutch": "antwoord",
+			"english": "response"
+		},
+		{
+			"dutch": "selectie",
+			"english": "selection"
+		},
+		{
+			"dutch": "opslagruimte",
+			"english": "storage"
+		},
+		{
+			"dutch": "versie",
+			"english": "version"
+		},
+		{
+			"dutch": "alcohol",
+			"english": "alcohol"
+		},
+		{
+			"dutch": "argument",
+			"english": "argument"
+		},
+		{
+			"dutch": "klacht",
+			"english": "complaint"
+		},
+		{
+			"dutch": "contract",
+			"english": "contract"
+		},
+		{
+			"dutch": "nadruk",
+			"english": "emphasis"
+		},
+		{
+			"dutch": "snelweg",
+			"english": "highway"
+		},
+		{
+			"dutch": "verlies",
+			"english": "loss"
+		},
+		{
+			"dutch": "lidmaatschap",
+			"english": "membership"
+		},
+		{
+			"dutch": "bezit",
+			"english": "possession"
+		},
+		{
+			"dutch": "voorbereiding",
+			"english": "preparation"
+		},
+		{
+			"dutch": "biefstuk",
+			"english": "steak"
+		},
+		{
+			"dutch": "unie",
+			"english": "union"
+		},
+		{
+			"dutch": "overeenkomst",
+			"english": "agreement"
+		},
+		{
+			"dutch": "kanker",
+			"english": "cancer"
+		},
+		{
+			"dutch": "valuta",
+			"english": "currency"
+		},
+		{
+			"dutch": "werk",
+			"english": "employment"
+		},
+		{
+			"dutch": "bouwkunde",
+			"english": "engineering"
+		},
+		{
+			"dutch": "binnenkomst",
+			"english": "entry"
+		},
+		{
+			"dutch": "wisselwerking",
+			"english": "interaction"
+		},
+		{
+			"dutch": "mengsel",
+			"english": "mixture"
+		},
+		{
+			"dutch": "voorkeur",
+			"english": "preference"
+		},
+		{
+			"dutch": "regio",
+			"english": "region"
+		},
+		{
+			"dutch": "republiek",
+			"english": "republic"
+		},
+		{
+			"dutch": "traditie",
+			"english": "tradition"
+		},
+		{
+			"dutch": "virus",
+			"english": "virus"
+		},
+		{
+			"dutch": "acteur",
+			"english": "actor"
+		},
+		{
+			"dutch": "klas",
+			"english": "classroom"
+		},
+		{
+			"dutch": "levering",
+			"english": "delivery"
+		},
+		{
+			"dutch": "apparaat",
+			"english": "device"
+		},
+		{
+			"dutch": "moeilijkheid",
+			"english": "difficulty"
+		},
+		{
+			"dutch": "drama",
+			"english": "drama"
+		},
+		{
+			"dutch": "verkiezing",
+			"english": "election"
+		},
+		{
+			"dutch": "motor",
+			"english": "engine"
+		},
+		{
+			"dutch": "voetbal",
+			"english": "football"
+		},
+		{
+			"dutch": "leiding",
+			"english": "guidance"
+		},
+		{
+			"dutch": "hotel",
+			"english": "hotel"
+		},
+		{
+			"dutch": "bezitter",
+			"english": "owner"
+		},
+		{
+			"dutch": "prioriteit",
+			"english": "priority"
+		},
+		{
+			"dutch": "bescherming",
+			"english": "protection"
+		},
+		{
+			"dutch": "suggestie",
+			"english": "suggestion"
+		},
+		{
+			"dutch": "spanning",
+			"english": "tension"
+		},
+		{
+			"dutch": "variatie",
+			"english": "variation"
+		},
+		{
+			"dutch": "angst",
+			"english": "anxiety"
+		},
+		{
+			"dutch": "atmosfeer",
+			"english": "atmosphere"
+		},
+		{
+			"dutch": "bewustzijn",
+			"english": "awareness"
+		},
+		{
+			"dutch": "bad",
+			"english": "bath"
+		},
+		{
+			"dutch": "brood",
+			"english": "bread"
+		},
+		{
+			"dutch": "kandidaat",
+			"english": "candidate"
+		},
+		{
+			"dutch": "klimaat",
+			"english": "climate"
+		},
+		{
+			"dutch": "vergelijking",
+			"english": "comparison"
+		},
+		{
+			"dutch": "verwarring",
+			"english": "confusion"
+		},
+		{
+			"dutch": "bouw",
+			"english": "construction"
+		},
+		{
+			"dutch": "lift",
+			"english": "elevator"
+		},
+		{
+			"dutch": "emotie",
+			"english": "emotion"
+		},
+		{
+			"dutch": "werknemer",
+			"english": "employee"
+		},
+		{
+			"dutch": "werkgever",
+			"english": "employer"
+		},
+		{
+			"dutch": "gast",
+			"english": "guest"
+		},
+		{
+			"dutch": "hoogte",
+			"english": "height"
+		},
+		{
+			"dutch": "leiderschap",
+			"english": "leadership"
+		},
+		{
+			"dutch": "winkelcentrum",
+			"english": "mall"
+		},
+		{
+			"dutch": "manager",
+			"english": "manager"
+		},
+		{
+			"dutch": "operatie",
+			"english": "operation"
+		},
+		{
+			"dutch": "opname",
+			"english": "recording"
+		},
+		{
+			"dutch": "monster",
+			"english": "sample"
+		},
+		{
+			"dutch": "vervoer",
+			"english": "transportation"
+		},
+		{
+			"dutch": "liefdadigheid",
+			"english": "charity"
+		},
+		{
+			"dutch": "neef",
+			"english": "cousin"
+		},
+		{
+			"dutch": "ramp",
+			"english": "disaster"
+		},
+		{
+			"dutch": "editor",
+			"english": "editor"
+		},
+		{
+			"dutch": "doeltreffendheid",
+			"english": "efficiency"
+		},
+		{
+			"dutch": "opwinding",
+			"english": "excitement"
+		},
+		{
+			"dutch": "omvang",
+			"english": "extent"
+		},
+		{
+			"dutch": "terugkoppeling",
+			"english": "feedback"
+		},
+		{
+			"dutch": "gitaar",
+			"english": "guitar"
+		},
+		{
+			"dutch": "huiswerk",
+			"english": "homework"
+		},
+		{
+			"dutch": "leider",
+			"english": "leader"
+		},
+		{
+			"dutch": "mam",
+			"english": "mom"
+		},
+		{
+			"dutch": "resultaat",
+			"english": "outcome"
+		},
+		{
+			"dutch": "toestemming",
+			"english": "permission"
+		},
+		{
+			"dutch": "presentatie",
+			"english": "presentation"
+		},
+		{
+			"dutch": "bevordering",
+			"english": "promotion"
+		},
+		{
+			"dutch": "reflectie",
+			"english": "reflection"
+		},
+		{
+			"dutch": "koelkast",
+			"english": "refrigerator"
+		},
+		{
+			"dutch": "resolutie",
+			"english": "resolution"
+		},
+		{
+			"dutch": "inkomsten",
+			"english": "revenue"
+		},
+		{
+			"dutch": "sessie",
+			"english": "session"
+		},
+		{
+			"dutch": "zanger",
+			"english": "singer"
+		},
+		{
+			"dutch": "tennis",
+			"english": "tennis"
+		},
+		{
+			"dutch": "mand",
+			"english": "basket"
+		},
+		{
+			"dutch": "bonus",
+			"english": "bonus"
+		},
+		{
+			"dutch": "kabinet",
+			"english": "cabinet"
+		},
+		{
+			"dutch": "kindertijd",
+			"english": "childhood"
+		},
+		{
+			"dutch": "kerk",
+			"english": "church"
+		},
+		{
+			"dutch": "kleren",
+			"english": "clothes"
+		},
+		{
+			"dutch": "koffie",
+			"english": "coffee"
+		},
+		{
+			"dutch": "avondeten",
+			"english": "dinner"
+		},
+		{
+			"dutch": "tekening",
+			"english": "drawing"
+		},
+		{
+			"dutch": "haar-",
+			"english": "hair"
+		},
+		{
+			"dutch": "gehoor",
+			"english": "hearing"
+		},
+		{
+			"dutch": "initiatief",
+			"english": "initiative"
+		},
+		{
+			"dutch": "oordeel",
+			"english": "judgment"
+		},
+		{
+			"dutch": "laboratorium",
+			"english": "lab"
+		},
+		{
+			"dutch": "maat",
+			"english": "measurement"
+		},
+		{
+			"dutch": "mode",
+			"english": "mode"
+		},
+		{
+			"dutch": "modder",
+			"english": "mud"
+		},
+		{
+			"dutch": "oranje",
+			"english": "orange"
+		},
+		{
+			"dutch": "poëzie",
+			"english": "poetry"
+		},
+		{
+			"dutch": "Politie",
+			"english": "police"
+		},
+		{
+			"dutch": "mogelijkheid",
+			"english": "possibility"
+		},
+		{
+			"dutch": "procedure",
+			"english": "procedure"
+		},
+		{
+			"dutch": "koningin",
+			"english": "queen"
+		},
+		{
+			"dutch": "verhouding",
+			"english": "ratio"
+		},
+		{
+			"dutch": "relatie",
+			"english": "relation"
+		},
+		{
+			"dutch": "restaurant",
+			"english": "restaurant"
+		},
+		{
+			"dutch": "tevredenheid",
+			"english": "satisfaction"
+		},
+		{
+			"dutch": "sector",
+			"english": "sector"
+		},
+		{
+			"dutch": "handtekening",
+			"english": "signature"
+		},
+		{
+			"dutch": "betekenis",
+			"english": "significance"
+		},
+		{
+			"dutch": "lied",
+			"english": "song"
+		},
+		{
+			"dutch": "tand",
+			"english": "tooth"
+		},
+		{
+			"dutch": "stad-",
+			"english": "town"
+		},
+		{
+			"dutch": "voertuig",
+			"english": "vehicle"
+		},
+		{
+			"dutch": "volume",
+			"english": "volume"
+		},
+		{
+			"dutch": "vrouw",
+			"english": "wife"
+		},
+		{
+			"dutch": "ongeval",
+			"english": "accident"
+		},
+		{
+			"dutch": "luchthaven",
+			"english": "airport"
+		},
+		{
+			"dutch": "afspraak",
+			"english": "appointment"
+		},
+		{
+			"dutch": "aankomst",
+			"english": "arrival"
+		},
+		{
+			"dutch": "veronderstelling",
+			"english": "assumption"
+		},
+		{
+			"dutch": "basketbal",
+			"english": "baseball"
+		},
+		{
+			"dutch": "hoofdstuk",
+			"english": "chapter"
+		},
+		{
+			"dutch": "commissie",
+			"english": "committee"
+		},
+		{
+			"dutch": "gesprek",
+			"english": "conversation"
+		},
+		{
+			"dutch": "databank",
+			"english": "database"
+		},
+		{
+			"dutch": "enthousiasme",
+			"english": "enthusiasm"
+		},
+		{
+			"dutch": "fout",
+			"english": "error"
+		},
+		{
+			"dutch": "uitleg",
+			"english": "explanation"
+		},
+		{
+			"dutch": "boer",
+			"english": "farmer"
+		},
+		{
+			"dutch": "poort",
+			"english": "gate"
+		},
+		{
+			"dutch": "meisje",
+			"english": "girl"
+		},
+		{
+			"dutch": "hal",
+			"english": "hall"
+		},
+		{
+			"dutch": "geschiedschrijver",
+			"english": "historian"
+		},
+		{
+			"dutch": "ziekenhuis",
+			"english": "hospital"
+		},
+		{
+			"dutch": "letsel",
+			"english": "injury"
+		},
+		{
+			"dutch": "instructie",
+			"english": "instruction"
+		},
+		{
+			"dutch": "onderhoud",
+			"english": "maintenance"
+		},
+		{
+			"dutch": "fabrikant",
+			"english": "manufacturer"
+		},
+		{
+			"dutch": "maaltijd",
+			"english": "meal"
+		},
+		{
+			"dutch": "perceptie",
+			"english": "perception"
+		},
+		{
+			"dutch": "taart",
+			"english": "pie"
+		},
+		{
+			"dutch": "gedicht",
+			"english": "poem"
+		},
+		{
+			"dutch": "aanwezigheid",
+			"english": "presence"
+		},
+		{
+			"dutch": "voorstel",
+			"english": "proposal"
+		},
+		{
+			"dutch": "receptie",
+			"english": "reception"
+		},
+		{
+			"dutch": "vervanging",
+			"english": "replacement"
+		},
+		{
+			"dutch": "revolutie",
+			"english": "revolution"
+		},
+		{
+			"dutch": "rivier-",
+			"english": "river"
+		},
+		{
+			"dutch": "zoon",
+			"english": "son"
+		},
+		{
+			"dutch": "toespraak",
+			"english": "speech"
+		},
+		{
+			"dutch": "thee",
+			"english": "tea"
+		},
+		{
+			"dutch": "dorp",
+			"english": "village"
+		},
+		{
+			"dutch": "waarschuwing",
+			"english": "warning"
+		},
+		{
+			"dutch": "winnaar",
+			"english": "winner"
+		},
+		{
+			"dutch": "arbeider",
+			"english": "worker"
+		},
+		{
+			"dutch": "auteur",
+			"english": "writer"
+		},
+		{
+			"dutch": "bijstand",
+			"english": "assistance"
+		},
+		{
+			"dutch": "adem",
+			"english": "breath"
+		},
+		{
+			"dutch": "koper",
+			"english": "buyer"
+		},
+		{
+			"dutch": "borst",
+			"english": "chest"
+		},
+		{
+			"dutch": "chocola",
+			"english": "chocolate"
+		},
+		{
+			"dutch": "conclusie",
+			"english": "conclusion"
+		},
+		{
+			"dutch": "bijdrage",
+			"english": "contribution"
+		},
+		{
+			"dutch": "koekje",
+			"english": "cookie"
+		},
+		{
+			"dutch": "moed",
+			"english": "courage"
+		},
+		{
+			"dutch": "pa",
+			"english": "dad"
+		},
+		{
+			"dutch": "bureau",
+			"english": "desk"
+		},
+		{
+			"dutch": "lade",
+			"english": "drawer"
+		},
+		{
+			"dutch": "etablissement",
+			"english": "establishment"
+		},
+		{
+			"dutch": "examen",
+			"english": "examination"
+		},
+		{
+			"dutch": "vuilnis",
+			"english": "garbage"
+		},
+		{
+			"dutch": "kruidenierswinkel",
+			"english": "grocery"
+		},
+		{
+			"dutch": "honing",
+			"english": "honey"
+		},
+		{
+			"dutch": "indruk",
+			"english": "impression"
+		},
+		{
+			"dutch": "verbetering",
+			"english": "improvement"
+		},
+		{
+			"dutch": "onafhankelijkheid",
+			"english": "independence"
+		},
+		{
+			"dutch": "insect",
+			"english": "insect"
+		},
+		{
+			"dutch": "inspectie",
+			"english": "inspection"
+		},
+		{
+			"dutch": "inspecteur",
+			"english": "inspector"
+		},
+		{
+			"dutch": "koning",
+			"english": "king"
+		},
+		{
+			"dutch": "ladder",
+			"english": "ladder"
+		},
+		{
+			"dutch": "menu",
+			"english": "menu"
+		},
+		{
+			"dutch": "straf",
+			"english": "penalty"
+		},
+		{
+			"dutch": "piano",
+			"english": "piano"
+		},
+		{
+			"dutch": "aardappel",
+			"english": "potato"
+		},
+		{
+			"dutch": "beroep",
+			"english": "profession"
+		},
+		{
+			"dutch": "professor",
+			"english": "professor"
+		},
+		{
+			"dutch": "hoeveelheid",
+			"english": "quantity"
+		},
+		{
+			"dutch": "reactie",
+			"english": "reaction"
+		},
+		{
+			"dutch": "eis",
+			"english": "requirement"
+		},
+		{
+			"dutch": "salade",
+			"english": "salad"
+		},
+		{
+			"dutch": "zus",
+			"english": "sister"
+		},
+		{
+			"dutch": "supermarkt",
+			"english": "supermarket"
+		},
+		{
+			"dutch": "tong",
+			"english": "tongue"
+		},
+		{
+			"dutch": "zwakheid",
+			"english": "weakness"
+		},
+		{
+			"dutch": "huwelijk",
+			"english": "wedding"
+		},
+		{
+			"dutch": "affaire",
+			"english": "affair"
+		},
+		{
+			"dutch": "ambitie",
+			"english": "ambition"
+		},
+		{
+			"dutch": "analyst",
+			"english": "analyst"
+		},
+		{
+			"dutch": "appel",
+			"english": "apple"
+		},
+		{
+			"dutch": "toewijzing",
+			"english": "assignment"
+		},
+		{
+			"dutch": "assistent",
+			"english": "assistant"
+		},
+		{
+			"dutch": "badkamer",
+			"english": "bathroom"
+		},
+		{
+			"dutch": "slaapkamer",
+			"english": "bedroom"
+		},
+		{
+			"dutch": "bier",
+			"english": "beer"
+		},
+		{
+			"dutch": "verjaardag",
+			"english": "birthday"
+		},
+		{
+			"dutch": "viering",
+			"english": "celebration"
+		},
+		{
+			"dutch": "kampioenschap",
+			"english": "championship"
+		},
+		{
+			"dutch": "wang",
+			"english": "cheek"
+		},
+		{
+			"dutch": "cliënt",
+			"english": "client"
+		},
+		{
+			"dutch": "gevolg",
+			"english": "consequence"
+		},
+		{
+			"dutch": "vertrek",
+			"english": "departure"
+		},
+		{
+			"dutch": "diamant",
+			"english": "diamond"
+		},
+		{
+			"dutch": "vuil",
+			"english": "dirt"
+		},
+		{
+			"dutch": "oor",
+			"english": "ear"
+		},
+		{
+			"dutch": "fortuin",
+			"english": "fortune"
+		},
+		{
+			"dutch": "vriendschap",
+			"english": "friendship"
+		},
+		{
+			"dutch": "begrafenis",
+			"english": "funeral"
+		},
+		{
+			"dutch": "gen",
+			"english": "gene"
+		},
+		{
+			"dutch": "vriendin",
+			"english": "girlfriend"
+		},
+		{
+			"dutch": "hoed",
+			"english": "hat"
+		},
+		{
+			"dutch": "aanwijzing",
+			"english": "indication"
+		},
+		{
+			"dutch": "intentie",
+			"english": "intention"
+		},
+		{
+			"dutch": "dame",
+			"english": "lady"
+		},
+		{
+			"dutch": "middernacht",
+			"english": "midnight"
+		},
+		{
+			"dutch": "onderhandeling",
+			"english": "negotiation"
+		},
+		{
+			"dutch": "verplichting",
+			"english": "obligation"
+		},
+		{
+			"dutch": "passagier",
+			"english": "passenger"
+		},
+		{
+			"dutch": "pizza",
+			"english": "pizza"
+		},
+		{
+			"dutch": "platform",
+			"english": "platform"
+		},
+		{
+			"dutch": "dichter",
+			"english": "poet"
+		},
+		{
+			"dutch": "verontreiniging",
+			"english": "pollution"
+		},
+		{
+			"dutch": "erkenning",
+			"english": "recognition"
+		},
+		{
+			"dutch": "reputatie",
+			"english": "reputation"
+		},
+		{
+			"dutch": "overhemd",
+			"english": "shirt"
+		},
+		{
+			"dutch": "mijnheer",
+			"english": "sir"
+		},
+		{
+			"dutch": "spreker",
+			"english": "speaker"
+		},
+		{
+			"dutch": "vreemdeling",
+			"english": "stranger"
+		},
+		{
+			"dutch": "chirurgie",
+			"english": "surgery"
+		},
+		{
+			"dutch": "sympathie",
+			"english": "sympathy"
+		},
+		{
+			"dutch": "verhaal",
+			"english": "tale"
+		},
+		{
+			"dutch": "keel",
+			"english": "throat"
+		},
+		{
+			"dutch": "trainer",
+			"english": "trainer"
+		},
+		{
+			"dutch": "oom",
+			"english": "uncle"
+		},
+		{
+			"dutch": "jeugd",
+			"english": "youth"
+		},
+		{
+			"dutch": "geld",
+			"english": "money"
+		},
+		{
+			"dutch": "terwijl",
+			"english": "while"
+		},
+		{
+			"dutch": "bedrijf",
+			"english": "business"
+		},
+		{
+			"dutch": "leven",
+			"english": "life"
+		},
+		{
+			"dutch": "dag",
+			"english": "day"
+		},
+		{
+			"dutch": "huis-",
+			"english": "home"
+		},
+		{
+			"dutch": "economie",
+			"english": "economy"
+		},
+		{
+			"dutch": "opleiding",
+			"english": "training"
+		},
+		{
+			"dutch": "soort",
+			"english": "kind"
+		},
+		{
+			"dutch": "toekomst",
+			"english": "future"
+		},
+		{
+			"dutch": "actie",
+			"english": "action"
+		},
+		{
+			"dutch": "slecht",
+			"english": "bad"
+		},
+		{
+			"dutch": "niks",
+			"english": "nothing"
+		},
+		{
+			"dutch": "periode",
+			"english": "period"
+		},
+		{
+			"dutch": "onderwerpen",
+			"english": "subject"
+		},
+		{
+			"dutch": "kip",
+			"english": "chicken"
+		},
+		{
+			"dutch": "materiaal",
+			"english": "material"
+		},
+		{
+			"dutch": "auto",
+			"english": "car"
+		},
+		{
+			"dutch": "helft",
+			"english": "half"
+		},
+		{
+			"dutch": "binnen",
+			"english": "inside"
+		},
+		{
+			"dutch": "buiten",
+			"english": "outside"
+		},
+		{
+			"dutch": "standaard-",
+			"english": "standard"
+		},
+		{
+			"dutch": "item",
+			"english": "item"
+		},
+		{
+			"dutch": "medium",
+			"english": "medium"
+		},
+		{
+			"dutch": "keuze",
+			"english": "choice"
+		},
+		{
+			"dutch": "ochtend-",
+			"english": "morning"
+		},
+		{
+			"dutch": "noorden",
+			"english": "north"
+		},
+		{
+			"dutch": "plein",
+			"english": "square"
+		},
+		{
+			"dutch": "hoofdstad",
+			"english": "capital"
+		},
+		{
+			"dutch": "zelf",
+			"english": "self"
+		},
+		{
+			"dutch": "schot",
+			"english": "shot"
+		},
+		{
+			"dutch": "leven",
+			"english": "living"
+		},
+		{
+			"dutch": "plastic",
+			"english": "plastic"
+		},
+		{
+			"dutch": "gevoel",
+			"english": "feeling"
+		},
+		{
+			"dutch": "spaargeld",
+			"english": "savings"
+		},
+		{
+			"dutch": "dier",
+			"english": "animal"
+		},
+		{
+			"dutch": "maximum",
+			"english": "maximum"
+		},
+		{
+			"dutch": "roman",
+			"english": "novel"
+		},
+		{
+			"dutch": "overvloed",
+			"english": "plenty"
+		},
+		{
+			"dutch": "achtergrond",
+			"english": "background"
+		},
+		{
+			"dutch": "rood",
+			"english": "red"
+		},
+		{
+			"dutch": "kracht",
+			"english": "strength"
+		},
+		{
+			"dutch": "groente",
+			"english": "vegetable"
+		},
+		{
+			"dutch": "ideaal",
+			"english": "ideal"
+		},
+		{
+			"dutch": "keuken-",
+			"english": "kitchen"
+		},
+		{
+			"dutch": "beginsel",
+			"english": "principle"
+		},
+		{
+			"dutch": "familielid",
+			"english": "relative"
+		},
+		{
+			"dutch": "verkoop",
+			"english": "sale"
+		},
+		{
+			"dutch": "straat",
+			"english": "street"
+		},
+		{
+			"dutch": "minimum",
+			"english": "minimum"
+		},
+		{
+			"dutch": "pad",
+			"english": "path"
+		},
+		{
+			"dutch": "zee",
+			"english": "sea"
+		},
+		{
+			"dutch": "zuiden",
+			"english": "south"
+		},
+		{
+			"dutch": "toestand",
+			"english": "status"
+		},
+		{
+			"dutch": "vertrouwen",
+			"english": "confidence"
+		},
+		{
+			"dutch": "dochter",
+			"english": "daughter"
+		},
+		{
+			"dutch": "mate",
+			"english": "degree"
+		},
+		{
+			"dutch": "plicht",
+			"english": "duty"
+		},
+		{
+			"dutch": "uur",
+			"english": "hour"
+		},
+		{
+			"dutch": "stof",
+			"english": "substance"
+		},
+		{
+			"dutch": "middag",
+			"english": "afternoon"
+		},
+		{
+			"dutch": "overweging",
+			"english": "consideration"
+		},
+		{
+			"dutch": "goud",
+			"english": "gold"
+		},
+		{
+			"dutch": "missie",
+			"english": "mission"
+		},
+		{
+			"dutch": "deur-",
+			"english": "door"
+		},
+		{
+			"dutch": "oosten-",
+			"english": "east"
+		},
+		{
+			"dutch": "manier",
+			"english": "manner"
+		},
+		{
+			"dutch": "vergadering",
+			"english": "meeting"
+		},
+		{
+			"dutch": "parkeren",
+			"english": "parking"
+		},
+		{
+			"dutch": "routine-",
+			"english": "routine"
+		},
+		{
+			"dutch": "zwemmen",
+			"english": "swimming"
+		},
+		{
+			"dutch": "vliegmaatschappij",
+			"english": "airline"
+		},
+		{
+			"dutch": "ontwerper",
+			"english": "designer"
+		},
+		{
+			"dutch": "noodgeval",
+			"english": "emergency"
+		},
+		{
+			"dutch": "avond",
+			"english": "evening"
+		},
+		{
+			"dutch": "uitbreiding",
+			"english": "extension"
+		},
+		{
+			"dutch": "verschrikking",
+			"english": "horror"
+		},
+		{
+			"dutch": "berg-",
+			"english": "mountain"
+		},
+		{
+			"dutch": "geduldig",
+			"english": "patient"
+		},
+		{
+			"dutch": "reliëf",
+			"english": "relief"
+		},
+		{
+			"dutch": "toerist",
+			"english": "tourist"
+		},
+		{
+			"dutch": "westen",
+			"english": "west"
+		},
+		{
+			"dutch": "terzijde",
+			"english": "aside"
+		},
+		{
+			"dutch": "broer",
+			"english": "brother"
+		},
+		{
+			"dutch": "deskundige",
+			"english": "expert"
+		},
+		{
+			"dutch": "god",
+			"english": "god"
+		},
+		{
+			"dutch": "inheems",
+			"english": "native"
+		},
+		{
+			"dutch": "opening",
+			"english": "opening"
+		},
+		{
+			"dutch": "jongen",
+			"english": "boy"
+		},
+		{
+			"dutch": "specialist",
+			"english": "specialist"
+		},
+		{
+			"dutch": "bitter",
+			"english": "bitter"
+		},
+		{
+			"dutch": "hel",
+			"english": "hell"
+		},
+		{
+			"dutch": "incident",
+			"english": "incident"
+		},
+		{
+			"dutch": "inwoner",
+			"english": "resident"
+		},
+		{
+			"dutch": "een",
+			"english": "a"
+		},
+		{
+			"dutch": "u",
+			"english": "you"
+		},
+		{
+			"dutch": "het",
+			"english": "it"
+		},
+		{
+			"dutch": "kan",
+			"english": "can"
+		},
+		{
+			"dutch": "wil",
+			"english": "will"
+		},
+		{
+			"dutch": "als",
+			"english": "if"
+		},
+		{
+			"dutch": "een",
+			"english": "one"
+		},
+		{
+			"dutch": "veel",
+			"english": "many"
+		},
+		{
+			"dutch": "meest",
+			"english": "most"
+		},
+		{
+			"dutch": "anders",
+			"english": "other"
+		},
+		{
+			"dutch": "goed",
+			"english": "good"
+		},
+		{
+			"dutch": "groot",
+			"english": "great"
+		},
+		{
+			"dutch": "weinig",
+			"english": "few"
+		},
+		{
+			"dutch": "macht",
+			"english": "might"
+		},
+		{
+			"dutch": "nog",
+			"english": "still"
+		},
+		{
+			"dutch": "openbaar",
+			"english": "public"
+		},
+		{
+			"dutch": "menselijk",
+			"english": "human"
+		},
+		{
+			"dutch": "lokaal",
+			"english": "local"
+		},
+		{
+			"dutch": "algemeen",
+			"english": "general"
+		},
+		{
+			"dutch": "ze",
+			"english": "she"
+		},
+		{
+			"dutch": "specifiek",
+			"english": "specific"
+		},
+		{
+			"dutch": "lang",
+			"english": "long"
+		},
+		{
+			"dutch": "hoog",
+			"english": "high"
+		},
+		{
+			"dutch": "vanavond",
+			"english": "tonight"
+		},
+		{
+			"dutch": "gemeenschappelijk",
+			"english": "common"
+		},
+		{
+			"dutch": "eenvoudig",
+			"english": "simple"
+		},
+		{
+			"dutch": "verleden",
+			"english": "past"
+		},
+		{
+			"dutch": "groot",
+			"english": "big"
+		},
+		{
+			"dutch": "mogelijk",
+			"english": "possible"
+		},
+		{
+			"dutch": "bijzonder",
+			"english": "particular"
+		},
+		{
+			"dutch": "vandaag",
+			"english": "today"
+		},
+		{
+			"dutch": "persoonlijk",
+			"english": "personal"
+		},
+		{
+			"dutch": "actueel",
+			"english": "current"
+		},
+		{
+			"dutch": "nationaal",
+			"english": "national"
+		},
+		{
+			"dutch": "natuurlijk",
+			"english": "natural"
+		},
+		{
+			"dutch": "fysiek",
+			"english": "physical"
+		},
+		{
+			"dutch": "tweede",
+			"english": "second"
+		},
+		{
+			"dutch": "individu",
+			"english": "individual"
+		},
+		{
+			"dutch": "hoofd",
+			"english": "main"
+		},
+		{
+			"dutch": "potentieel",
+			"english": "potential"
+		},
+		{
+			"dutch": "professioneel",
+			"english": "professional"
+		},
+		{
+			"dutch": "Internationale",
+			"english": "international"
+		},
+		{
+			"dutch": "alternatief",
+			"english": "alternative"
+		},
+		{
+			"dutch": "volgend",
+			"english": "following"
+		},
+		{
+			"dutch": "speciaal",
+			"english": "special"
+		},
+		{
+			"dutch": "werkend",
+			"english": "working"
+		},
+		{
+			"dutch": "geheel",
+			"english": "whole"
+		},
+		{
+			"dutch": "koude",
+			"english": "cold"
+		},
+		{
+			"dutch": "commercieel",
+			"english": "commercial"
+		},
+		{
+			"dutch": "laag",
+			"english": "low"
+		},
+		{
+			"dutch": "primair",
+			"english": "primary"
+		},
+		{
+			"dutch": "waard",
+			"english": "worth"
+		},
+		{
+			"dutch": "noodzakelijk",
+			"english": "necessary"
+		},
+		{
+			"dutch": "positief",
+			"english": "positive"
+		},
+		{
+			"dutch": "creatief",
+			"english": "creative"
+		},
+		{
+			"dutch": "blij",
+			"english": "glad"
+		},
+		{
+			"dutch": "verschuldigd",
+			"english": "due"
+		},
+		{
+			"dutch": "effectief",
+			"english": "effective"
+		},
+		{
+			"dutch": "midden-",
+			"english": "middle"
+		},
+		{
+			"dutch": "regelmatig",
+			"english": "regular"
+		},
+		{
+			"dutch": "onafhankelijk",
+			"english": "independent"
+		},
+		{
+			"dutch": "origineel",
+			"english": "original"
+		},
+		{
+			"dutch": "mooi",
+			"english": "beautiful"
+		},
+		{
+			"dutch": "actief",
+			"english": "active"
+		},
+		{
+			"dutch": "negatief",
+			"english": "negative"
+		},
+		{
+			"dutch": "veilig",
+			"english": "safe"
+		},
+		{
+			"dutch": "zichtbaar",
+			"english": "visual"
+		},
+		{
+			"dutch": "voorbij",
+			"english": "beyond"
+		},
+		{
+			"dutch": "junior",
+			"english": "junior"
+		},
+		{
+			"dutch": "uniek",
+			"english": "unique"
+		},
+		{
+			"dutch": "iets",
+			"english": "anything"
+		},
+		{
+			"dutch": "klassiek",
+			"english": "classic"
+		},
+		{
+			"dutch": "laatste",
+			"english": "final"
+		},
+		{
+			"dutch": "privaat",
+			"english": "private"
+		},
+		{
+			"dutch": "westelijk",
+			"english": "western"
+		},
+		{
+			"dutch": "vertrouwd",
+			"english": "familiar"
+		},
+		{
+			"dutch": "officieel",
+			"english": "official"
+		},
+		{
+			"dutch": "breed",
+			"english": "broad"
+		},
+		{
+			"dutch": "comfortabel",
+			"english": "comfortable"
+		},
+		{
+			"dutch": "kan zijn",
+			"english": "maybe"
+		},
+		{
+			"dutch": "rijk",
+			"english": "rich"
+		},
+		{
+			"dutch": "jong",
+			"english": "young"
+		},
+		{
+			"dutch": "zwaar",
+			"english": "heavy"
+		},
+		{
+			"dutch": "Hallo",
+			"english": "hello"
+		},
+		{
+			"dutch": "waardevol",
+			"english": "valuable"
+		},
+		{
+			"dutch": "leidend",
+			"english": "leading"
+		},
+		{
+			"dutch": "normaal",
+			"english": "normal"
+		},
+		{
+			"dutch": "geheim",
+			"english": "secret"
+		},
+		{
+			"dutch": "taai",
+			"english": "tough"
+		},
+		{
+			"dutch": "diep",
+			"english": "deep"
+		},
+		{
+			"dutch": "doelstelling",
+			"english": "objective"
+		},
+		{
+			"dutch": "chemisch",
+			"english": "chemical"
+		},
+		{
+			"dutch": "extreem",
+			"english": "extreme"
+		},
+		{
+			"dutch": "formeel",
+			"english": "formal"
+		},
+		{
+			"dutch": "tegenover",
+			"english": "opposite"
+		},
+		{
+			"dutch": "afgelegen",
+			"english": "remote"
+		},
+		{
+			"dutch": "groot",
+			"english": "vast"
+		},
+		{
+			"dutch": "ergens",
+			"english": "somewhere"
+		},
+		{
+			"dutch": "overal",
+			"english": "anywhere"
+		},
+		{
+			"dutch": "donker",
+			"english": "dark"
+		},
+		{
+			"dutch": "intern",
+			"english": "internal"
+		},
+		{
+			"dutch": "gevoelig",
+			"english": "sensitive"
+		},
+		{
+			"dutch": "constante",
+			"english": "constant"
+		},
+		{
+			"dutch": "rauw",
+			"english": "raw"
+		},
+		{
+			"dutch": "zacht",
+			"english": "soft"
+		},
+		{
+			"dutch": "solide",
+			"english": "solid"
+		},
+		{
+			"dutch": "bizar",
+			"english": "weird"
+		},
+		{
+			"dutch": "jaar-",
+			"english": "annual"
+		},
+		{
+			"dutch": "dood",
+			"english": "dead"
+		},
+		{
+			"dutch": "voor altijd",
+			"english": "forever"
+		},
+		{
+			"dutch": "niemand",
+			"english": "nobody"
+		},
+		{
+			"dutch": "ronde",
+			"english": "round"
+		},
+		{
+			"dutch": "terwijl",
+			"english": "whereas"
+		},
+		{
+			"dutch": "gelijkwaardig",
+			"english": "equivalent"
+		},
+		{
+			"dutch": "geestelijk",
+			"english": "spiritual"
+		},
+		{
+			"dutch": "volwassen",
+			"english": "adult"
+		},
+		{
+			"dutch": "gek",
+			"english": "crazy"
+		},
+		{
+			"dutch": "voorafgaand",
+			"english": "prior"
+		},
+		{
+			"dutch": "ruw",
+			"english": "rough"
+		},
+		{
+			"dutch": "triest",
+			"english": "sad"
+		},
+		{
+			"dutch": "ziek",
+			"english": "sick"
+		},
+		{
+			"dutch": "extern",
+			"english": "external"
+		},
+		{
+			"dutch": "onwettig",
+			"english": "illegal"
+		},
+		{
+			"dutch": "mobiel",
+			"english": "mobile"
+		},
+		{
+			"dutch": "smerig",
+			"english": "nasty"
+		},
+		{
+			"dutch": "gewoon",
+			"english": "ordinary"
+		},
+		{
+			"dutch": "koninklijk",
+			"english": "royal"
+		},
+		{
+			"dutch": "senior",
+			"english": "senior"
+		},
+		{
+			"dutch": "bovenste",
+			"english": "upper"
+		},
+		{
+			"dutch": "afhankelijk",
+			"english": "dependent"
+		},
+		{
+			"dutch": "grappig",
+			"english": "funny"
+		},
+		{
+			"dutch": "zoet",
+			"english": "sweet"
+		},
+		{
+			"dutch": "boven",
+			"english": "upstairs"
+		},
+		{
+			"dutch": "gebruikelijk",
+			"english": "usual"
+		},
+		{
+			"dutch": "in het buitenland",
+			"english": "abroad"
+		},
+		{
+			"dutch": "groots",
+			"english": "grand"
+		},
+		{
+			"dutch": "mannetje",
+			"english": "male"
+		},
+		{
+			"dutch": "iemand",
+			"english": "anybody"
+		},
+		{
+			"dutch": "briljant",
+			"english": "brilliant"
+		},
+		{
+			"dutch": "Geachte",
+			"english": "dear"
+		},
+		{
+			"dutch": "dronken",
+			"english": "drunk"
+		},
+		{
+			"dutch": "vrouw",
+			"english": "female"
+		},
+		{
+			"dutch": "onvermijdelijk",
+			"english": "inevitable"
+		},
+		{
+			"dutch": "netjes",
+			"english": "neat"
+		},
+		{
+			"dutch": "vertegenwoordiger",
+			"english": "representative"
+		},
+		{
+			"dutch": "dwaas",
+			"english": "silly"
+		},
+		{
+			"dutch": "dom",
+			"english": "stupid"
+		},
+		{
+			"dutch": "tijdelijk",
+			"english": "temporary"
+		},
+		{
+			"dutch": "morgen",
+			"english": "tomorrow"
+		},
+		{
+			"dutch": "gisteren",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 523 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"hebrew": "אֲנָשִׁים",
+			"english": "people"
+		},
+		{
+			"hebrew": "הִיסטוֹרִיָה",
+			"english": "history"
+		},
+		{
+			"hebrew": "דֶרֶך",
+			"english": "way"
+		},
+		{
+			"hebrew": "אומנות",
+			"english": "art"
+		},
+		{
+			"hebrew": "עוֹלָם",
+			"english": "world"
+		},
+		{
+			"hebrew": "מֵידָע",
+			"english": "information"
+		},
+		{
+			"hebrew": "מַפָּה",
+			"english": "map"
+		},
+		{
+			"hebrew": "שתיים",
+			"english": "two"
+		},
+		{
+			"hebrew": "מִשׁפָּחָה",
+			"english": "family"
+		},
+		{
+			"hebrew": "מֶמְשָׁלָה",
+			"english": "government"
+		},
+		{
+			"hebrew": "בְּרִיאוּת",
+			"english": "health"
+		},
+		{
+			"hebrew": "מערכת",
+			"english": "system"
+		},
+		{
+			"hebrew": "מַחשֵׁב",
+			"english": "computer"
+		},
+		{
+			"hebrew": "בָּשָׂר",
+			"english": "meat"
+		},
+		{
+			"hebrew": "שָׁנָה",
+			"english": "year"
+		},
+		{
+			"hebrew": "תודה",
+			"english": "thanks"
+		},
+		{
+			"hebrew": "מוּסִיקָה",
+			"english": "music"
+		},
+		{
+			"hebrew": "אדם",
+			"english": "person"
+		},
+		{
+			"hebrew": "קריאה",
+			"english": "reading"
+		},
+		{
+			"hebrew": "שִׁיטָה",
+			"english": "method"
+		},
+		{
+			"hebrew": "נתונים",
+			"english": "data"
+		},
+		{
+			"hebrew": "מזון",
+			"english": "food"
+		},
+		{
+			"hebrew": "הֲבָנָה",
+			"english": "understanding"
+		},
+		{
+			"hebrew": "תֵאוֹרִיָה",
+			"english": "theory"
+		},
+		{
+			"hebrew": "חוֹק",
+			"english": "law"
+		},
+		{
+			"hebrew": "ציפור",
+			"english": "bird"
+		},
+		{
+			"hebrew": "סִפְרוּת",
+			"english": "literature"
+		},
+		{
+			"hebrew": "בְּעָיָה",
+			"english": "problem"
+		},
+		{
+			"hebrew": "תוֹכנָה",
+			"english": "software"
+		},
+		{
+			"hebrew": "לִשְׁלוֹט",
+			"english": "control"
+		},
+		{
+			"hebrew": "יֶדַע",
+			"english": "knowledge"
+		},
+		{
+			"hebrew": "כּוֹחַ",
+			"english": "power"
+		},
+		{
+			"hebrew": "יְכוֹלֶת",
+			"english": "ability"
+		},
+		{
+			"hebrew": "כלכלה",
+			"english": "economics"
+		},
+		{
+			"hebrew": "אהבה",
+			"english": "love"
+		},
+		{
+			"hebrew": "אינטרנט",
+			"english": "internet"
+		},
+		{
+			"hebrew": "טֵלֶוִיזִיָה",
+			"english": "television"
+		},
+		{
+			"hebrew": "מַדָע",
+			"english": "science"
+		},
+		{
+			"hebrew": "סִפְרִיָה",
+			"english": "library"
+		},
+		{
+			"hebrew": "טֶבַע",
+			"english": "nature"
+		},
+		{
+			"hebrew": "עוּבדָה",
+			"english": "fact"
+		},
+		{
+			"hebrew": "מוצר",
+			"english": "product"
+		},
+		{
+			"hebrew": "רַעְיוֹן",
+			"english": "idea"
+		},
+		{
+			"hebrew": "טֶמפֶּרָטוּרָה",
+			"english": "temperature"
+		},
+		{
+			"hebrew": "הַשׁקָעָה",
+			"english": "investment"
+		},
+		{
+			"hebrew": "אֵזוֹר",
+			"english": "area"
+		},
+		{
+			"hebrew": "חֶברָה",
+			"english": "society"
+		},
+		{
+			"hebrew": "פעילות",
+			"english": "activity"
+		},
+		{
+			"hebrew": "כַּתָבָה",
+			"english": "story"
+		},
+		{
+			"hebrew": "תַעֲשִׂיָה",
+			"english": "industry"
+		},
+		{
+			"hebrew": "כְּלֵי תִקְשׁוֹרֶת",
+			"english": "media"
+		},
+		{
+			"hebrew": "דָבָר",
+			"english": "thing"
+		},
+		{
+			"hebrew": "תנור",
+			"english": "oven"
+		},
+		{
+			"hebrew": "הקהילה",
+			"english": "community"
+		},
+		{
+			"hebrew": "הַגדָרָה",
+			"english": "definition"
+		},
+		{
+			"hebrew": "בְּטִיחוּת",
+			"english": "safety"
+		},
+		{
+			"hebrew": "איכות",
+			"english": "quality"
+		},
+		{
+			"hebrew": "התפתחות",
+			"english": "development"
+		},
+		{
+			"hebrew": "שפה",
+			"english": "language"
+		},
+		{
+			"hebrew": "הַנהָלָה",
+			"english": "management"
+		},
+		{
+			"hebrew": "שחקן",
+			"english": "player"
+		},
+		{
+			"hebrew": "מגוון",
+			"english": "variety"
+		},
+		{
+			"hebrew": "וִידֵאוֹ",
+			"english": "video"
+		},
+		{
+			"hebrew": "שָׁבוּעַ",
+			"english": "week"
+		},
+		{
+			"hebrew": "בִּטָחוֹן",
+			"english": "security"
+		},
+		{
+			"hebrew": "מדינה",
+			"english": "country"
+		},
+		{
+			"hebrew": "בְּחִינָה",
+			"english": "exam"
+		},
+		{
+			"hebrew": "סרט",
+			"english": "movie"
+		},
+		{
+			"hebrew": "אִרגוּן",
+			"english": "organization"
+		},
+		{
+			"hebrew": "צִיוּד",
+			"english": "equipment"
+		},
+		{
+			"hebrew": "פיזיקה",
+			"english": "physics"
+		},
+		{
+			"hebrew": "אָנָלִיזָה",
+			"english": "analysis"
+		},
+		{
+			"hebrew": "מְדִינִיוּת",
+			"english": "policy"
+		},
+		{
+			"hebrew": "סִדרָה",
+			"english": "series"
+		},
+		{
+			"hebrew": "מַחֲשָׁבָה",
+			"english": "thought"
+		},
+		{
+			"hebrew": "בָּסִיס",
+			"english": "basis"
+		},
+		{
+			"hebrew": "הֶחָבֵר",
+			"english": "boyfriend"
+		},
+		{
+			"hebrew": "כיוון",
+			"english": "direction"
+		},
+		{
+			"hebrew": "אִסטרָטֶגִיָה",
+			"english": "strategy"
+		},
+		{
+			"hebrew": "טֶכנוֹלוֹגִיָה",
+			"english": "technology"
+		},
+		{
+			"hebrew": "צָבָא",
+			"english": "army"
+		},
+		{
+			"hebrew": "מַצלֵמָה",
+			"english": "camera"
+		},
+		{
+			"hebrew": "חוֹפֶשׁ",
+			"english": "freedom"
+		},
+		{
+			"hebrew": "עיתון",
+			"english": "paper"
+		},
+		{
+			"hebrew": "סביבה",
+			"english": "environment"
+		},
+		{
+			"hebrew": "יֶלֶד",
+			"english": "child"
+		},
+		{
+			"hebrew": "למשל",
+			"english": "instance"
+		},
+		{
+			"hebrew": "חוֹדֶשׁ",
+			"english": "month"
+		},
+		{
+			"hebrew": "אֶמֶת",
+			"english": "truth"
+		},
+		{
+			"hebrew": "שיווק",
+			"english": "marketing"
+		},
+		{
+			"hebrew": "אוּנִיבֶרְסִיטָה",
+			"english": "university"
+		},
+		{
+			"hebrew": "כְּתִיבָה",
+			"english": "writing"
+		},
+		{
+			"hebrew": "מאמר",
+			"english": "article"
+		},
+		{
+			"hebrew": "מַחלָקָה",
+			"english": "department"
+		},
+		{
+			"hebrew": "הֶבדֵל",
+			"english": "difference"
+		},
+		{
+			"hebrew": "יעד",
+			"english": "goal"
+		},
+		{
+			"hebrew": "חֲדָשׁוֹת",
+			"english": "news"
+		},
+		{
+			"hebrew": "קהל",
+			"english": "audience"
+		},
+		{
+			"hebrew": "דיג",
+			"english": "fishing"
+		},
+		{
+			"hebrew": "צְמִיחָה",
+			"english": "growth"
+		},
+		{
+			"hebrew": "הַכנָסָה",
+			"english": "income"
+		},
+		{
+			"hebrew": "נישואים",
+			"english": "marriage"
+		},
+		{
+			"hebrew": "מִשׁתַמֵשׁ",
+			"english": "user"
+		},
+		{
+			"hebrew": "קוֹמבִּינַצִיָה",
+			"english": "combination"
+		},
+		{
+			"hebrew": "כישלון",
+			"english": "failure"
+		},
+		{
+			"hebrew": "מַשְׁמָעוּת",
+			"english": "meaning"
+		},
+		{
+			"hebrew": "תרופה",
+			"english": "medicine"
+		},
+		{
+			"hebrew": "פִילוֹסוֹפִיָה",
+			"english": "philosophy"
+		},
+		{
+			"hebrew": "מוֹרֶה",
+			"english": "teacher"
+		},
+		{
+			"hebrew": "תִקשׁוֹרֶת",
+			"english": "communication"
+		},
+		{
+			"hebrew": "לַיְלָה",
+			"english": "night"
+		},
+		{
+			"hebrew": "כִּימִיָה",
+			"english": "chemistry"
+		},
+		{
+			"hebrew": "מַחֲלָה",
+			"english": "disease"
+		},
+		{
+			"hebrew": "דִיסק",
+			"english": "disk"
+		},
+		{
+			"hebrew": "אֵנֶרְגִיָה",
+			"english": "energy"
+		},
+		{
+			"hebrew": "אוּמָה",
+			"english": "nation"
+		},
+		{
+			"hebrew": "כְּבִישׁ",
+			"english": "road"
+		},
+		{
+			"hebrew": "תַפְקִיד",
+			"english": "role"
+		},
+		{
+			"hebrew": "מרק",
+			"english": "soup"
+		},
+		{
+			"hebrew": "פִּרסוּם",
+			"english": "advertising"
+		},
+		{
+			"hebrew": "מקום",
+			"english": "location"
+		},
+		{
+			"hebrew": "הַצלָחָה",
+			"english": "success"
+		},
+		{
+			"hebrew": "בנוסף",
+			"english": "addition"
+		},
+		{
+			"hebrew": "דִירָה",
+			"english": "apartment"
+		},
+		{
+			"hebrew": "הַשׂכָּלָה",
+			"english": "education"
+		},
+		{
+			"hebrew": "מתמטיקה",
+			"english": "math"
+		},
+		{
+			"hebrew": "רֶגַע",
+			"english": "moment"
+		},
+		{
+			"hebrew": "צִיוּר",
+			"english": "painting"
+		},
+		{
+			"hebrew": "פּוֹלִיטִיקָה",
+			"english": "politics"
+		},
+		{
+			"hebrew": "תשומת הלב",
+			"english": "attention"
+		},
+		{
+			"hebrew": "הַחְלָטָה",
+			"english": "decision"
+		},
+		{
+			"hebrew": "מִקרֶה",
+			"english": "event"
+		},
+		{
+			"hebrew": "נכס",
+			"english": "property"
+		},
+		{
+			"hebrew": "קניות",
+			"english": "shopping"
+		},
+		{
+			"hebrew": "תלמיד",
+			"english": "student"
+		},
+		{
+			"hebrew": "עץ",
+			"english": "wood"
+		},
+		{
+			"hebrew": "תַחֲרוּת",
+			"english": "competition"
+		},
+		{
+			"hebrew": "הפצה",
+			"english": "distribution"
+		},
+		{
+			"hebrew": "בידור",
+			"english": "entertainment"
+		},
+		{
+			"hebrew": "מִשׂרָד",
+			"english": "office"
+		},
+		{
+			"hebrew": "אוּכְלוֹסִיָה",
+			"english": "population"
+		},
+		{
+			"hebrew": "נָשִׂיא",
+			"english": "president"
+		},
+		{
+			"hebrew": "יחידה",
+			"english": "unit"
+		},
+		{
+			"hebrew": "קטגוריה",
+			"english": "category"
+		},
+		{
+			"hebrew": "סִיגַרִיָה",
+			"english": "cigarette"
+		},
+		{
+			"hebrew": "הקשר",
+			"english": "context"
+		},
+		{
+			"hebrew": "מבוא",
+			"english": "introduction"
+		},
+		{
+			"hebrew": "הִזדַמְנוּת",
+			"english": "opportunity"
+		},
+		{
+			"hebrew": "ביצועים",
+			"english": "performance"
+		},
+		{
+			"hebrew": "נהג",
+			"english": "driver"
+		},
+		{
+			"hebrew": "טִיסָה",
+			"english": "flight"
+		},
+		{
+			"hebrew": "אורך",
+			"english": "length"
+		},
+		{
+			"hebrew": "מגזין",
+			"english": "magazine"
+		},
+		{
+			"hebrew": "עיתון",
+			"english": "newspaper"
+		},
+		{
+			"hebrew": "מערכת יחסים",
+			"english": "relationship"
+		},
+		{
+			"hebrew": "הוֹרָאָה",
+			"english": "teaching"
+		},
+		{
+			"hebrew": "תָא",
+			"english": "cell"
+		},
+		{
+			"hebrew": "סוֹחֵר",
+			"english": "dealer"
+		},
+		{
+			"hebrew": "מִמצָא",
+			"english": "finding"
+		},
+		{
+			"hebrew": "אֲגַם",
+			"english": "lake"
+		},
+		{
+			"hebrew": "חבר",
+			"english": "member"
+		},
+		{
+			"hebrew": "הוֹדָעָה",
+			"english": "message"
+		},
+		{
+			"hebrew": "טלפון",
+			"english": "phone"
+		},
+		{
+			"hebrew": "סְצֵינָה",
+			"english": "scene"
+		},
+		{
+			"hebrew": "מראה חיצוני",
+			"english": "appearance"
+		},
+		{
+			"hebrew": "אִרגוּן",
+			"english": "association"
+		},
+		{
+			"hebrew": "מוּשָׂג",
+			"english": "concept"
+		},
+		{
+			"hebrew": "צרכן",
+			"english": "customer"
+		},
+		{
+			"hebrew": "מוות",
+			"english": "death"
+		},
+		{
+			"hebrew": "דִיוּן",
+			"english": "discussion"
+		},
+		{
+			"hebrew": "דיור",
+			"english": "housing"
+		},
+		{
+			"hebrew": "אִינפלַצִיָה",
+			"english": "inflation"
+		},
+		{
+			"hebrew": "ביטוח",
+			"english": "insurance"
+		},
+		{
+			"hebrew": "מַצַב רוּחַ",
+			"english": "mood"
+		},
+		{
+			"hebrew": "אִשָׁה",
+			"english": "woman"
+		},
+		{
+			"hebrew": "עֵצָה",
+			"english": "advice"
+		},
+		{
+			"hebrew": "דָם",
+			"english": "blood"
+		},
+		{
+			"hebrew": "מַאֲמָץ",
+			"english": "effort"
+		},
+		{
+			"hebrew": "ביטוי",
+			"english": "expression"
+		},
+		{
+			"hebrew": "חֲשִׁיבוּת",
+			"english": "importance"
+		},
+		{
+			"hebrew": "דעה",
+			"english": "opinion"
+		},
+		{
+			"hebrew": "תַשְׁלוּם",
+			"english": "payment"
+		},
+		{
+			"hebrew": "מְצִיאוּת",
+			"english": "reality"
+		},
+		{
+			"hebrew": "אַחֲרָיוּת",
+			"english": "responsibility"
+		},
+		{
+			"hebrew": "מַצָב",
+			"english": "situation"
+		},
+		{
+			"hebrew": "מְיוּמָנוּת",
+			"english": "skill"
+		},
+		{
+			"hebrew": "הַצהָרָה",
+			"english": "statement"
+		},
+		{
+			"hebrew": "עוֹשֶׁר",
+			"english": "wealth"
+		},
+		{
+			"hebrew": "יישום",
+			"english": "application"
+		},
+		{
+			"hebrew": "עִיר",
+			"english": "city"
+		},
+		{
+			"hebrew": "מָחוֹז",
+			"english": "county"
+		},
+		{
+			"hebrew": "עוֹמֶק",
+			"english": "depth"
+		},
+		{
+			"hebrew": "נכס",
+			"english": "estate"
+		},
+		{
+			"hebrew": "קרן",
+			"english": "foundation"
+		},
+		{
+			"hebrew": "סַבתָא",
+			"english": "grandmother"
+		},
+		{
+			"hebrew": "לֵב",
+			"english": "heart"
+		},
+		{
+			"hebrew": "פֶּרספֶּקטִיבָה",
+			"english": "perspective"
+		},
+		{
+			"hebrew": "תמונה",
+			"english": "photo"
+		},
+		{
+			"hebrew": "מַתכּוֹן",
+			"english": "recipe"
+		},
+		{
+			"hebrew": "סטוּדִיוֹ",
+			"english": "studio"
+		},
+		{
+			"hebrew": "נוֹשֵׂא",
+			"english": "topic"
+		},
+		{
+			"hebrew": "אוסף",
+			"english": "collection"
+		},
+		{
+			"hebrew": "דִכָּאוֹן",
+			"english": "depression"
+		},
+		{
+			"hebrew": "דִמיוֹן",
+			"english": "imagination"
+		},
+		{
+			"hebrew": "תשוקה",
+			"english": "passion"
+		},
+		{
+			"hebrew": "אֲחוּזִים",
+			"english": "percentage"
+		},
+		{
+			"hebrew": "מַשׁאָב",
+			"english": "resource"
+		},
+		{
+			"hebrew": "הגדרה",
+			"english": "setting"
+		},
+		{
+			"hebrew": "מוֹדָעָה",
+			"english": "ad"
+		},
+		{
+			"hebrew": "סוֹכְנוּת",
+			"english": "agency"
+		},
+		{
+			"hebrew": "מִכלָלָה",
+			"english": "college"
+		},
+		{
+			"hebrew": "חיבור",
+			"english": "connection"
+		},
+		{
+			"hebrew": "ביקורת",
+			"english": "criticism"
+		},
+		{
+			"hebrew": "חוֹב",
+			"english": "debt"
+		},
+		{
+			"hebrew": "תיאור",
+			"english": "description"
+		},
+		{
+			"hebrew": "זיכרון",
+			"english": "memory"
+		},
+		{
+			"hebrew": "סבלנות",
+			"english": "patience"
+		},
+		{
+			"hebrew": "מזכיר",
+			"english": "secretary"
+		},
+		{
+			"hebrew": "פִּתָרוֹן",
+			"english": "solution"
+		},
+		{
+			"hebrew": "מִנהָל",
+			"english": "administration"
+		},
+		{
+			"hebrew": "אספקט",
+			"english": "aspect"
+		},
+		{
+			"hebrew": "יַחַס",
+			"english": "attitude"
+		},
+		{
+			"hebrew": "מְנַהֵל",
+			"english": "director"
+		},
+		{
+			"hebrew": "אִישִׁיוּת",
+			"english": "personality"
+		},
+		{
+			"hebrew": "פְּסִיכוֹלוֹגִיָה",
+			"english": "psychology"
+		},
+		{
+			"hebrew": "המלצה",
+			"english": "recommendation"
+		},
+		{
+			"hebrew": "תְגוּבָה",
+			"english": "response"
+		},
+		{
+			"hebrew": "בְּחִירָה",
+			"english": "selection"
+		},
+		{
+			"hebrew": "אִחסוּן",
+			"english": "storage"
+		},
+		{
+			"hebrew": "גִרְסָה",
+			"english": "version"
+		},
+		{
+			"hebrew": "כּוֹהֶל",
+			"english": "alcohol"
+		},
+		{
+			"hebrew": "טַעֲנָה",
+			"english": "argument"
+		},
+		{
+			"hebrew": "תְלוּנָה",
+			"english": "complaint"
+		},
+		{
+			"hebrew": "חוֹזֶה",
+			"english": "contract"
+		},
+		{
+			"hebrew": "דָגֵשׁ",
+			"english": "emphasis"
+		},
+		{
+			"hebrew": "כביש מהיר",
+			"english": "highway"
+		},
+		{
+			"hebrew": "הֶפסֵד",
+			"english": "loss"
+		},
+		{
+			"hebrew": "חֲבֵרוּת",
+			"english": "membership"
+		},
+		{
+			"hebrew": "רְשׁוּת",
+			"english": "possession"
+		},
+		{
+			"hebrew": "הכנה",
+			"english": "preparation"
+		},
+		{
+			"hebrew": "סטֵייק",
+			"english": "steak"
+		},
+		{
+			"hebrew": "הִתאַחֲדוּת",
+			"english": "union"
+		},
+		{
+			"hebrew": "הֶסכֵּם",
+			"english": "agreement"
+		},
+		{
+			"hebrew": "מחלת הסרטן",
+			"english": "cancer"
+		},
+		{
+			"hebrew": "מַטְבֵּעַ",
+			"english": "currency"
+		},
+		{
+			"hebrew": "תעסוקה",
+			"english": "employment"
+		},
+		{
+			"hebrew": "הַנדָסָה",
+			"english": "engineering"
+		},
+		{
+			"hebrew": "כְּנִיסָה",
+			"english": "entry"
+		},
+		{
+			"hebrew": "אינטראקציה",
+			"english": "interaction"
+		},
+		{
+			"hebrew": "תַעֲרוֹבֶת",
+			"english": "mixture"
+		},
+		{
+			"hebrew": "הַעֲדָפָה",
+			"english": "preference"
+		},
+		{
+			"hebrew": "אזור",
+			"english": "region"
+		},
+		{
+			"hebrew": "רפובליקה",
+			"english": "republic"
+		},
+		{
+			"hebrew": "מָסוֹרֶת",
+			"english": "tradition"
+		},
+		{
+			"hebrew": "וִירוּס",
+			"english": "virus"
+		},
+		{
+			"hebrew": "שַׂחְקָן",
+			"english": "actor"
+		},
+		{
+			"hebrew": "כיתה",
+			"english": "classroom"
+		},
+		{
+			"hebrew": "מְסִירָה",
+			"english": "delivery"
+		},
+		{
+			"hebrew": "התקן",
+			"english": "device"
+		},
+		{
+			"hebrew": "קושי",
+			"english": "difficulty"
+		},
+		{
+			"hebrew": "דרמה",
+			"english": "drama"
+		},
+		{
+			"hebrew": "בְּחִירָה",
+			"english": "election"
+		},
+		{
+			"hebrew": "מנוע",
+			"english": "engine"
+		},
+		{
+			"hebrew": "כדורגל",
+			"english": "football"
+		},
+		{
+			"hebrew": "הַדְרָכָה",
+			"english": "guidance"
+		},
+		{
+			"hebrew": "מלון",
+			"english": "hotel"
+		},
+		{
+			"hebrew": "בעלים",
+			"english": "owner"
+		},
+		{
+			"hebrew": "עדיפות",
+			"english": "priority"
+		},
+		{
+			"hebrew": "הֲגָנָה",
+			"english": "protection"
+		},
+		{
+			"hebrew": "הַצָעָה",
+			"english": "suggestion"
+		},
+		{
+			"hebrew": "מתח",
+			"english": "tension"
+		},
+		{
+			"hebrew": "וָרִיאַצִיָה",
+			"english": "variation"
+		},
+		{
+			"hebrew": "חֲרָדָה",
+			"english": "anxiety"
+		},
+		{
+			"hebrew": "אַטמוֹספֵרָה",
+			"english": "atmosphere"
+		},
+		{
+			"hebrew": "מוּדָעוּת",
+			"english": "awareness"
+		},
+		{
+			"hebrew": "מֶרחָץ",
+			"english": "bath"
+		},
+		{
+			"hebrew": "לֶחֶם",
+			"english": "bread"
+		},
+		{
+			"hebrew": "מוּעֲמָד",
+			"english": "candidate"
+		},
+		{
+			"hebrew": "אַקלִים",
+			"english": "climate"
+		},
+		{
+			"hebrew": "השוואה",
+			"english": "comparison"
+		},
+		{
+			"hebrew": "בִּלבּוּל",
+			"english": "confusion"
+		},
+		{
+			"hebrew": "בְּנִיָה",
+			"english": "construction"
+		},
+		{
+			"hebrew": "מַעֲלִית",
+			"english": "elevator"
+		},
+		{
+			"hebrew": "רֶגֶשׁ",
+			"english": "emotion"
+		},
+		{
+			"hebrew": "עוֹבֵד",
+			"english": "employee"
+		},
+		{
+			"hebrew": "מעסיק",
+			"english": "employer"
+		},
+		{
+			"hebrew": "אוֹרֵחַ",
+			"english": "guest"
+		},
+		{
+			"hebrew": "גוֹבַה",
+			"english": "height"
+		},
+		{
+			"hebrew": "מַנהִיגוּת",
+			"english": "leadership"
+		},
+		{
+			"hebrew": "קֶנִיוֹן",
+			"english": "mall"
+		},
+		{
+			"hebrew": "מנהל",
+			"english": "manager"
+		},
+		{
+			"hebrew": "מבצע",
+			"english": "operation"
+		},
+		{
+			"hebrew": "הקלטה",
+			"english": "recording"
+		},
+		{
+			"hebrew": "לִטעוֹם",
+			"english": "sample"
+		},
+		{
+			"hebrew": "הוֹבָלָה",
+			"english": "transportation"
+		},
+		{
+			"hebrew": "צדקה",
+			"english": "charity"
+		},
+		{
+			"hebrew": "בת דודה",
+			"english": "cousin"
+		},
+		{
+			"hebrew": "אסון",
+			"english": "disaster"
+		},
+		{
+			"hebrew": "עוֹרֵך",
+			"english": "editor"
+		},
+		{
+			"hebrew": "יְעִילוּת",
+			"english": "efficiency"
+		},
+		{
+			"hebrew": "התרגשות",
+			"english": "excitement"
+		},
+		{
+			"hebrew": "במידה",
+			"english": "extent"
+		},
+		{
+			"hebrew": "מָשׁוֹב",
+			"english": "feedback"
+		},
+		{
+			"hebrew": "גִיטָרָה",
+			"english": "guitar"
+		},
+		{
+			"hebrew": "שיעורי בית",
+			"english": "homework"
+		},
+		{
+			"hebrew": "מַנהִיג",
+			"english": "leader"
+		},
+		{
+			"hebrew": "אִמָא",
+			"english": "mom"
+		},
+		{
+			"hebrew": "תוֹצָאָה",
+			"english": "outcome"
+		},
+		{
+			"hebrew": "רְשׁוּת",
+			"english": "permission"
+		},
+		{
+			"hebrew": "הַצָגָה",
+			"english": "presentation"
+		},
+		{
+			"hebrew": "קידום",
+			"english": "promotion"
+		},
+		{
+			"hebrew": "הִשׁתַקְפוּת",
+			"english": "reflection"
+		},
+		{
+			"hebrew": "מְקָרֵר",
+			"english": "refrigerator"
+		},
+		{
+			"hebrew": "רזולוציה",
+			"english": "resolution"
+		},
+		{
+			"hebrew": "הַכנָסָה",
+			"english": "revenue"
+		},
+		{
+			"hebrew": "מוֹשָׁב",
+			"english": "session"
+		},
+		{
+			"hebrew": "זמר",
+			"english": "singer"
+		},
+		{
+			"hebrew": "טֶנִיס",
+			"english": "tennis"
+		},
+		{
+			"hebrew": "סַל",
+			"english": "basket"
+		},
+		{
+			"hebrew": "מַעֲנָק",
+			"english": "bonus"
+		},
+		{
+			"hebrew": "קבינט",
+			"english": "cabinet"
+		},
+		{
+			"hebrew": "יַלדוּת",
+			"english": "childhood"
+		},
+		{
+			"hebrew": "כְּנֵסִיָה",
+			"english": "church"
+		},
+		{
+			"hebrew": "בגדים",
+			"english": "clothes"
+		},
+		{
+			"hebrew": "קָפֶה",
+			"english": "coffee"
+		},
+		{
+			"hebrew": "אֲרוּחַת עֶרֶב",
+			"english": "dinner"
+		},
+		{
+			"hebrew": "צִיוּר",
+			"english": "drawing"
+		},
+		{
+			"hebrew": "שיער",
+			"english": "hair"
+		},
+		{
+			"hebrew": "שמיעה",
+			"english": "hearing"
+		},
+		{
+			"hebrew": "יוזמה",
+			"english": "initiative"
+		},
+		{
+			"hebrew": "פְּסַק דִין",
+			"english": "judgment"
+		},
+		{
+			"hebrew": "מַעבָּדָה",
+			"english": "lab"
+		},
+		{
+			"hebrew": "מדידה",
+			"english": "measurement"
+		},
+		{
+			"hebrew": "מצב",
+			"english": "mode"
+		},
+		{
+			"hebrew": "בּוֹץ",
+			"english": "mud"
+		},
+		{
+			"hebrew": "כָּתוֹם",
+			"english": "orange"
+		},
+		{
+			"hebrew": "שירה",
+			"english": "poetry"
+		},
+		{
+			"hebrew": "מִשׁטָרָה",
+			"english": "police"
+		},
+		{
+			"hebrew": "אפשרות",
+			"english": "possibility"
+		},
+		{
+			"hebrew": "תהליך",
+			"english": "procedure"
+		},
+		{
+			"hebrew": "מַלכָּה",
+			"english": "queen"
+		},
+		{
+			"hebrew": "יַחַס",
+			"english": "ratio"
+		},
+		{
+			"hebrew": "יַחַס",
+			"english": "relation"
+		},
+		{
+			"hebrew": "מִסעָדָה",
+			"english": "restaurant"
+		},
+		{
+			"hebrew": "שביעות רצון",
+			"english": "satisfaction"
+		},
+		{
+			"hebrew": "מִגזָר",
+			"english": "sector"
+		},
+		{
+			"hebrew": "חֲתִימָה",
+			"english": "signature"
+		},
+		{
+			"hebrew": "מַשְׁמָעוּת",
+			"english": "significance"
+		},
+		{
+			"hebrew": "שִׁיר",
+			"english": "song"
+		},
+		{
+			"hebrew": "שן",
+			"english": "tooth"
+		},
+		{
+			"hebrew": "העיר",
+			"english": "town"
+		},
+		{
+			"hebrew": "רכב",
+			"english": "vehicle"
+		},
+		{
+			"hebrew": "כֶּרֶך",
+			"english": "volume"
+		},
+		{
+			"hebrew": "אשה",
+			"english": "wife"
+		},
+		{
+			"hebrew": "תְאוּנָה",
+			"english": "accident"
+		},
+		{
+			"hebrew": "נמל תעופה",
+			"english": "airport"
+		},
+		{
+			"hebrew": "קביעת פגישה",
+			"english": "appointment"
+		},
+		{
+			"hebrew": "הַגָעָה",
+			"english": "arrival"
+		},
+		{
+			"hebrew": "הנחה",
+			"english": "assumption"
+		},
+		{
+			"hebrew": "בייסבול",
+			"english": "baseball"
+		},
+		{
+			"hebrew": "פֶּרֶק",
+			"english": "chapter"
+		},
+		{
+			"hebrew": "וַעֲדָה",
+			"english": "committee"
+		},
+		{
+			"hebrew": "שִׂיחָה",
+			"english": "conversation"
+		},
+		{
+			"hebrew": "מאגר מידע",
+			"english": "database"
+		},
+		{
+			"hebrew": "הִתלַהֲבוּת",
+			"english": "enthusiasm"
+		},
+		{
+			"hebrew": "שְׁגִיאָה",
+			"english": "error"
+		},
+		{
+			"hebrew": "הֶסבֵּר",
+			"english": "explanation"
+		},
+		{
+			"hebrew": "חַקלאַי",
+			"english": "farmer"
+		},
+		{
+			"hebrew": "שַׁעַר",
+			"english": "gate"
+		},
+		{
+			"hebrew": "ילדה",
+			"english": "girl"
+		},
+		{
+			"hebrew": "אולם",
+			"english": "hall"
+		},
+		{
+			"hebrew": "הִיסטוֹרִיוֹן",
+			"english": "historian"
+		},
+		{
+			"hebrew": "בית חולים",
+			"english": "hospital"
+		},
+		{
+			"hebrew": "פציעה",
+			"english": "injury"
+		},
+		{
+			"hebrew": "הוראה",
+			"english": "instruction"
+		},
+		{
+			"hebrew": "תחזוקה",
+			"english": "maintenance"
+		},
+		{
+			"hebrew": "יַצרָן",
+			"english": "manufacturer"
+		},
+		{
+			"hebrew": "ארוחה",
+			"english": "meal"
+		},
+		{
+			"hebrew": "תפיסה",
+			"english": "perception"
+		},
+		{
+			"hebrew": "פַּאִי",
+			"english": "pie"
+		},
+		{
+			"hebrew": "שִׁיר",
+			"english": "poem"
+		},
+		{
+			"hebrew": "נוכחות",
+			"english": "presence"
+		},
+		{
+			"hebrew": "הצעה",
+			"english": "proposal"
+		},
+		{
+			"hebrew": "קבלה",
+			"english": "reception"
+		},
+		{
+			"hebrew": "תַחֲלִיף",
+			"english": "replacement"
+		},
+		{
+			"hebrew": "מַהְפֵּכָה",
+			"english": "revolution"
+		},
+		{
+			"hebrew": "נהר",
+			"english": "river"
+		},
+		{
+			"hebrew": "בֵּן",
+			"english": "son"
+		},
+		{
+			"hebrew": "נְאוּם",
+			"english": "speech"
+		},
+		{
+			"hebrew": "תֵה",
+			"english": "tea"
+		},
+		{
+			"hebrew": "כְּפָר",
+			"english": "village"
+		},
+		{
+			"hebrew": "אַזהָרָה",
+			"english": "warning"
+		},
+		{
+			"hebrew": "זוֹכֵה",
+			"english": "winner"
+		},
+		{
+			"hebrew": "עוֹבֵד",
+			"english": "worker"
+		},
+		{
+			"hebrew": "סוֹפֵר",
+			"english": "writer"
+		},
+		{
+			"hebrew": "סִיוּעַ",
+			"english": "assistance"
+		},
+		{
+			"hebrew": "נְשִׁימָה",
+			"english": "breath"
+		},
+		{
+			"hebrew": "קוֹנֶה",
+			"english": "buyer"
+		},
+		{
+			"hebrew": "חזה",
+			"english": "chest"
+		},
+		{
+			"hebrew": "שׁוֹקוֹלַד",
+			"english": "chocolate"
+		},
+		{
+			"hebrew": "סיכום",
+			"english": "conclusion"
+		},
+		{
+			"hebrew": "תְרוּמָה",
+			"english": "contribution"
+		},
+		{
+			"hebrew": "עוגייה",
+			"english": "cookie"
+		},
+		{
+			"hebrew": "אומץ",
+			"english": "courage"
+		},
+		{
+			"hebrew": "אַבָּא",
+			"english": "dad"
+		},
+		{
+			"hebrew": "שׁוּלְחָן כְּתִיבָה",
+			"english": "desk"
+		},
+		{
+			"hebrew": "מְגֵרָה",
+			"english": "drawer"
+		},
+		{
+			"hebrew": "מוֹסָד",
+			"english": "establishment"
+		},
+		{
+			"hebrew": "בְּדִיקָה",
+			"english": "examination"
+		},
+		{
+			"hebrew": "אַשׁפָּה",
+			"english": "garbage"
+		},
+		{
+			"hebrew": "מַכּוֹלֶת",
+			"english": "grocery"
+		},
+		{
+			"hebrew": "דבש",
+			"english": "honey"
+		},
+		{
+			"hebrew": "רוֹשֶׁם",
+			"english": "impression"
+		},
+		{
+			"hebrew": "הַשׁבָּחָה",
+			"english": "improvement"
+		},
+		{
+			"hebrew": "עצמאות",
+			"english": "independence"
+		},
+		{
+			"hebrew": "חֶרֶק",
+			"english": "insect"
+		},
+		{
+			"hebrew": "בְּדִיקָה",
+			"english": "inspection"
+		},
+		{
+			"hebrew": "מְפַקֵחַ",
+			"english": "inspector"
+		},
+		{
+			"hebrew": "מלך",
+			"english": "king"
+		},
+		{
+			"hebrew": "סוּלָם",
+			"english": "ladder"
+		},
+		{
+			"hebrew": "תַפרִיט",
+			"english": "menu"
+		},
+		{
+			"hebrew": "עוֹנֶשׁ",
+			"english": "penalty"
+		},
+		{
+			"hebrew": "פְּסַנְתֵר",
+			"english": "piano"
+		},
+		{
+			"hebrew": "תפוח אדמה",
+			"english": "potato"
+		},
+		{
+			"hebrew": "מִקצוֹעַ",
+			"english": "profession"
+		},
+		{
+			"hebrew": "פּרוֹפֶסוֹר",
+			"english": "professor"
+		},
+		{
+			"hebrew": "כַּמוּת",
+			"english": "quantity"
+		},
+		{
+			"hebrew": "תְגוּבָה",
+			"english": "reaction"
+		},
+		{
+			"hebrew": "דְרִישָׁה",
+			"english": "requirement"
+		},
+		{
+			"hebrew": "סלט",
+			"english": "salad"
+		},
+		{
+			"hebrew": "אָחוֹת",
+			"english": "sister"
+		},
+		{
+			"hebrew": "סוּפֶּרמַרקֶט",
+			"english": "supermarket"
+		},
+		{
+			"hebrew": "לָשׁוֹן",
+			"english": "tongue"
+		},
+		{
+			"hebrew": "חוּלשָׁה",
+			"english": "weakness"
+		},
+		{
+			"hebrew": "חֲתוּנָה",
+			"english": "wedding"
+		},
+		{
+			"hebrew": "פָּרָשָׁה",
+			"english": "affair"
+		},
+		{
+			"hebrew": "שְׁאַפתָנוּת",
+			"english": "ambition"
+		},
+		{
+			"hebrew": "מְנַתֵחַ",
+			"english": "analyst"
+		},
+		{
+			"hebrew": "תפוח עץ",
+			"english": "apple"
+		},
+		{
+			"hebrew": "מְשִׁימָה",
+			"english": "assignment"
+		},
+		{
+			"hebrew": "עוֹזֵר",
+			"english": "assistant"
+		},
+		{
+			"hebrew": "חדר אמבטיה",
+			"english": "bathroom"
+		},
+		{
+			"hebrew": "שינה",
+			"english": "bedroom"
+		},
+		{
+			"hebrew": "בִּירָה",
+			"english": "beer"
+		},
+		{
+			"hebrew": "יום הולדת",
+			"english": "birthday"
+		},
+		{
+			"hebrew": "חֲגִיגָה",
+			"english": "celebration"
+		},
+		{
+			"hebrew": "אַלִיפוּת",
+			"english": "championship"
+		},
+		{
+			"hebrew": "לֶחִי",
+			"english": "cheek"
+		},
+		{
+			"hebrew": "לָקוּחַ",
+			"english": "client"
+		},
+		{
+			"hebrew": "תוֹצָאָה",
+			"english": "consequence"
+		},
+		{
+			"hebrew": "יְצִיאָה",
+			"english": "departure"
+		},
+		{
+			"hebrew": "יהלום",
+			"english": "diamond"
+		},
+		{
+			"hebrew": "עפר",
+			"english": "dirt"
+		},
+		{
+			"hebrew": "אֹזֶן",
+			"english": "ear"
+		},
+		{
+			"hebrew": "הון עתק",
+			"english": "fortune"
+		},
+		{
+			"hebrew": "חֲבֵרוּת",
+			"english": "friendship"
+		},
+		{
+			"hebrew": "הַלוָיָה",
+			"english": "funeral"
+		},
+		{
+			"hebrew": "גֵן",
+			"english": "gene"
+		},
+		{
+			"hebrew": "חֲבֵרָה",
+			"english": "girlfriend"
+		},
+		{
+			"hebrew": "כּוֹבַע",
+			"english": "hat"
+		},
+		{
+			"hebrew": "סִימָן",
+			"english": "indication"
+		},
+		{
+			"hebrew": "מַטָרָה",
+			"english": "intention"
+		},
+		{
+			"hebrew": "גברת",
+			"english": "lady"
+		},
+		{
+			"hebrew": "חצות",
+			"english": "midnight"
+		},
+		{
+			"hebrew": "מַשָׂא וּמַתָן",
+			"english": "negotiation"
+		},
+		{
+			"hebrew": "חוֹבָה",
+			"english": "obligation"
+		},
+		{
+			"hebrew": "נוֹסֵעַ",
+			"english": "passenger"
+		},
+		{
+			"hebrew": "פִּיצָה",
+			"english": "pizza"
+		},
+		{
+			"hebrew": "פּלַטפוֹרמָה",
+			"english": "platform"
+		},
+		{
+			"hebrew": "מְשׁוֹרֵר",
+			"english": "poet"
+		},
+		{
+			"hebrew": "זיהום",
+			"english": "pollution"
+		},
+		{
+			"hebrew": "הַכָּרָה",
+			"english": "recognition"
+		},
+		{
+			"hebrew": "מוֹנֵיטִין",
+			"english": "reputation"
+		},
+		{
+			"hebrew": "חוּלצָה",
+			"english": "shirt"
+		},
+		{
+			"hebrew": "אֲדוֹנִי",
+			"english": "sir"
+		},
+		{
+			"hebrew": "רַמקוֹל",
+			"english": "speaker"
+		},
+		{
+			"hebrew": "זָר",
+			"english": "stranger"
+		},
+		{
+			"hebrew": "כִּירוּרגִיָה",
+			"english": "surgery"
+		},
+		{
+			"hebrew": "אַהֲדָה",
+			"english": "sympathy"
+		},
+		{
+			"hebrew": "מַעֲשִׂיָה",
+			"english": "tale"
+		},
+		{
+			"hebrew": "גרון",
+			"english": "throat"
+		},
+		{
+			"hebrew": "מְאַמֵן",
+			"english": "trainer"
+		},
+		{
+			"hebrew": "דוֹד",
+			"english": "uncle"
+		},
+		{
+			"hebrew": "נוֹעַר",
+			"english": "youth"
+		},
+		{
+			"hebrew": "כֶּסֶף",
+			"english": "money"
+		},
+		{
+			"hebrew": "בזמן",
+			"english": "while"
+		},
+		{
+			"hebrew": "עֵסֶק",
+			"english": "business"
+		},
+		{
+			"hebrew": "חַיִים",
+			"english": "life"
+		},
+		{
+			"hebrew": "יְוֹם",
+			"english": "day"
+		},
+		{
+			"hebrew": "בית",
+			"english": "home"
+		},
+		{
+			"hebrew": "כַּלְכָּלָה",
+			"english": "economy"
+		},
+		{
+			"hebrew": "הַדְרָכָה",
+			"english": "training"
+		},
+		{
+			"hebrew": "סוג",
+			"english": "kind"
+		},
+		{
+			"hebrew": "עתיד",
+			"english": "future"
+		},
+		{
+			"hebrew": "פעולה",
+			"english": "action"
+		},
+		{
+			"hebrew": "רַע",
+			"english": "bad"
+		},
+		{
+			"hebrew": "שום דבר",
+			"english": "nothing"
+		},
+		{
+			"hebrew": "פרק זמן",
+			"english": "period"
+		},
+		{
+			"hebrew": "נושא",
+			"english": "subject"
+		},
+		{
+			"hebrew": "עוף",
+			"english": "chicken"
+		},
+		{
+			"hebrew": "חוֹמֶר",
+			"english": "material"
+		},
+		{
+			"hebrew": "אוטו",
+			"english": "car"
+		},
+		{
+			"hebrew": "חֲצִי",
+			"english": "half"
+		},
+		{
+			"hebrew": "בְּתוֹך",
+			"english": "inside"
+		},
+		{
+			"hebrew": "בחוץ",
+			"english": "outside"
+		},
+		{
+			"hebrew": "תֶקֶן",
+			"english": "standard"
+		},
+		{
+			"hebrew": "פריט",
+			"english": "item"
+		},
+		{
+			"hebrew": "בינוני",
+			"english": "medium"
+		},
+		{
+			"hebrew": "בְּחִירָה",
+			"english": "choice"
+		},
+		{
+			"hebrew": "בוקר",
+			"english": "morning"
+		},
+		{
+			"hebrew": "צָפוֹן",
+			"english": "north"
+		},
+		{
+			"hebrew": "כיכר",
+			"english": "square"
+		},
+		{
+			"hebrew": "עיר בירה",
+			"english": "capital"
+		},
+		{
+			"hebrew": "עצמי",
+			"english": "self"
+		},
+		{
+			"hebrew": "בְּעִיטָה",
+			"english": "shot"
+		},
+		{
+			"hebrew": "חַי",
+			"english": "living"
+		},
+		{
+			"hebrew": "פלסטי",
+			"english": "plastic"
+		},
+		{
+			"hebrew": "מַרגִישׁ",
+			"english": "feeling"
+		},
+		{
+			"hebrew": "חיסכון",
+			"english": "savings"
+		},
+		{
+			"hebrew": "בעל חיים",
+			"english": "animal"
+		},
+		{
+			"hebrew": "מַקסִימוּם",
+			"english": "maximum"
+		},
+		{
+			"hebrew": "רוֹמָן",
+			"english": "novel"
+		},
+		{
+			"hebrew": "שפע",
+			"english": "plenty"
+		},
+		{
+			"hebrew": "רקע",
+			"english": "background"
+		},
+		{
+			"hebrew": "אָדוֹם",
+			"english": "red"
+		},
+		{
+			"hebrew": "כוח",
+			"english": "strength"
+		},
+		{
+			"hebrew": "ירקות",
+			"english": "vegetable"
+		},
+		{
+			"hebrew": "אִידֵאָלִי",
+			"english": "ideal"
+		},
+		{
+			"hebrew": "מִטְבָּח",
+			"english": "kitchen"
+		},
+		{
+			"hebrew": "עִקָרוֹן",
+			"english": "principle"
+		},
+		{
+			"hebrew": "קרוב משפחה",
+			"english": "relative"
+		},
+		{
+			"hebrew": "מְכִירָה",
+			"english": "sale"
+		},
+		{
+			"hebrew": "רְחוֹב",
+			"english": "street"
+		},
+		{
+			"hebrew": "מִינִימוּם",
+			"english": "minimum"
+		},
+		{
+			"hebrew": "נָתִיב",
+			"english": "path"
+		},
+		{
+			"hebrew": "יָם",
+			"english": "sea"
+		},
+		{
+			"hebrew": "דָרוֹם",
+			"english": "south"
+		},
+		{
+			"hebrew": "סטָטוּס",
+			"english": "status"
+		},
+		{
+			"hebrew": "אֵמוּן",
+			"english": "confidence"
+		},
+		{
+			"hebrew": "בַּת",
+			"english": "daughter"
+		},
+		{
+			"hebrew": "תוֹאַר",
+			"english": "degree"
+		},
+		{
+			"hebrew": "חוֹבָה",
+			"english": "duty"
+		},
+		{
+			"hebrew": "שָׁעָה",
+			"english": "hour"
+		},
+		{
+			"hebrew": "חומר",
+			"english": "substance"
+		},
+		{
+			"hebrew": "אחרי הצהריים",
+			"english": "afternoon"
+		},
+		{
+			"hebrew": "הִתחַשְׁבוּת",
+			"english": "consideration"
+		},
+		{
+			"hebrew": "זהב",
+			"english": "gold"
+		},
+		{
+			"hebrew": "משימה",
+			"english": "mission"
+		},
+		{
+			"hebrew": "דלת",
+			"english": "door"
+		},
+		{
+			"hebrew": "מזרח",
+			"english": "east"
+		},
+		{
+			"hebrew": "דֶרֶך",
+			"english": "manner"
+		},
+		{
+			"hebrew": "פְּגִישָׁה",
+			"english": "meeting"
+		},
+		{
+			"hebrew": "חֲנָיָה",
+			"english": "parking"
+		},
+		{
+			"hebrew": "שגרה",
+			"english": "routine"
+		},
+		{
+			"hebrew": "שחייה",
+			"english": "swimming"
+		},
+		{
+			"hebrew": "חֶברַת תְעוּפָה",
+			"english": "airline"
+		},
+		{
+			"hebrew": "מְעַצֵב",
+			"english": "designer"
+		},
+		{
+			"hebrew": "חרום",
+			"english": "emergency"
+		},
+		{
+			"hebrew": "עֶרֶב",
+			"english": "evening"
+		},
+		{
+			"hebrew": "סיומת",
+			"english": "extension"
+		},
+		{
+			"hebrew": "חֲרָדָה",
+			"english": "horror"
+		},
+		{
+			"hebrew": "הַר",
+			"english": "mountain"
+		},
+		{
+			"hebrew": "חולה",
+			"english": "patient"
+		},
+		{
+			"hebrew": "הֲקָלָה",
+			"english": "relief"
+		},
+		{
+			"hebrew": "תיירות",
+			"english": "tourist"
+		},
+		{
+			"hebrew": "מַעֲרָב",
+			"english": "west"
+		},
+		{
+			"hebrew": "בַּצַד",
+			"english": "aside"
+		},
+		{
+			"hebrew": "אָח",
+			"english": "brother"
+		},
+		{
+			"hebrew": "מוּמחֶה",
+			"english": "expert"
+		},
+		{
+			"hebrew": "אלוהים",
+			"english": "god"
+		},
+		{
+			"hebrew": "יָלִיד",
+			"english": "native"
+		},
+		{
+			"hebrew": "פְּתִיחָה",
+			"english": "opening"
+		},
+		{
+			"hebrew": "יֶלֶד",
+			"english": "boy"
+		},
+		{
+			"hebrew": "מוּמחֶה",
+			"english": "specialist"
+		},
+		{
+			"hebrew": "טעם מר",
+			"english": "bitter"
+		},
+		{
+			"hebrew": "גֵיהִנוֹם",
+			"english": "hell"
+		},
+		{
+			"hebrew": "תַקרִית",
+			"english": "incident"
+		},
+		{
+			"hebrew": "תוֹשָׁב",
+			"english": "resident"
+		},
+		{
+			"hebrew": "א",
+			"english": "a"
+		},
+		{
+			"hebrew": "אתה",
+			"english": "you"
+		},
+		{
+			"hebrew": "זה",
+			"english": "it"
+		},
+		{
+			"hebrew": "פחית",
+			"english": "can"
+		},
+		{
+			"hebrew": "רָצוֹן",
+			"english": "will"
+		},
+		{
+			"hebrew": "אם",
+			"english": "if"
+		},
+		{
+			"hebrew": "אחד",
+			"english": "one"
+		},
+		{
+			"hebrew": "רב",
+			"english": "many"
+		},
+		{
+			"hebrew": "רוב",
+			"english": "most"
+		},
+		{
+			"hebrew": "אַחֵר",
+			"english": "other"
+		},
+		{
+			"hebrew": "טוֹב",
+			"english": "good"
+		},
+		{
+			"hebrew": "גדול",
+			"english": "great"
+		},
+		{
+			"hebrew": "מְעַטִים",
+			"english": "few"
+		},
+		{
+			"hebrew": "אולי",
+			"english": "might"
+		},
+		{
+			"hebrew": "עוֹד",
+			"english": "still"
+		},
+		{
+			"hebrew": "פּוּמְבֵּי",
+			"english": "public"
+		},
+		{
+			"hebrew": "בן אנוש",
+			"english": "human"
+		},
+		{
+			"hebrew": "מְקוֹמִי",
+			"english": "local"
+		},
+		{
+			"hebrew": "כללי",
+			"english": "general"
+		},
+		{
+			"hebrew": "היא",
+			"english": "she"
+		},
+		{
+			"hebrew": "ספֵּצִיפִי",
+			"english": "specific"
+		},
+		{
+			"hebrew": "ארוך",
+			"english": "long"
+		},
+		{
+			"hebrew": "גָבוֹהַ",
+			"english": "high"
+		},
+		{
+			"hebrew": "היום בלילה",
+			"english": "tonight"
+		},
+		{
+			"hebrew": "משותף",
+			"english": "common"
+		},
+		{
+			"hebrew": "פָּשׁוּט",
+			"english": "simple"
+		},
+		{
+			"hebrew": "עבר",
+			"english": "past"
+		},
+		{
+			"hebrew": "גָדוֹל",
+			"english": "big"
+		},
+		{
+			"hebrew": "אפשרי",
+			"english": "possible"
+		},
+		{
+			"hebrew": "מיוחד",
+			"english": "particular"
+		},
+		{
+			"hebrew": "היום",
+			"english": "today"
+		},
+		{
+			"hebrew": "אישי",
+			"english": "personal"
+		},
+		{
+			"hebrew": "נוֹכְחִי",
+			"english": "current"
+		},
+		{
+			"hebrew": "לאומי",
+			"english": "national"
+		},
+		{
+			"hebrew": "טִבעִי",
+			"english": "natural"
+		},
+		{
+			"hebrew": "גוּפָנִי",
+			"english": "physical"
+		},
+		{
+			"hebrew": "שְׁנִיָה",
+			"english": "second"
+		},
+		{
+			"hebrew": "אִישִׁי",
+			"english": "individual"
+		},
+		{
+			"hebrew": "רָאשִׁי",
+			"english": "main"
+		},
+		{
+			"hebrew": "פוטנציאל",
+			"english": "potential"
+		},
+		{
+			"hebrew": "מקצועי",
+			"english": "professional"
+		},
+		{
+			"hebrew": "בינלאומי",
+			"english": "international"
+		},
+		{
+			"hebrew": "חֲלוּפָה",
+			"english": "alternative"
+		},
+		{
+			"hebrew": "הבא",
+			"english": "following"
+		},
+		{
+			"hebrew": "מיוחד",
+			"english": "special"
+		},
+		{
+			"hebrew": "עובד",
+			"english": "working"
+		},
+		{
+			"hebrew": "כֹּל",
+			"english": "whole"
+		},
+		{
+			"hebrew": "קַר",
+			"english": "cold"
+		},
+		{
+			"hebrew": "מִסְחָרִי",
+			"english": "commercial"
+		},
+		{
+			"hebrew": "נָמוּך",
+			"english": "low"
+		},
+		{
+			"hebrew": "יְסוֹדִי",
+			"english": "primary"
+		},
+		{
+			"hebrew": "שִׁוּוּי",
+			"english": "worth"
+		},
+		{
+			"hebrew": "נחוץ",
+			"english": "necessary"
+		},
+		{
+			"hebrew": "חִיוּבִי",
+			"english": "positive"
+		},
+		{
+			"hebrew": "יְצִירָתִי",
+			"english": "creative"
+		},
+		{
+			"hebrew": "שַׂמֵחַ",
+			"english": "glad"
+		},
+		{
+			"hebrew": "בשל",
+			"english": "due"
+		},
+		{
+			"hebrew": "יָעִיל",
+			"english": "effective"
+		},
+		{
+			"hebrew": "אֶמצַע",
+			"english": "middle"
+		},
+		{
+			"hebrew": "רגיל",
+			"english": "regular"
+		},
+		{
+			"hebrew": "עצמאי",
+			"english": "independent"
+		},
+		{
+			"hebrew": "מְקוֹרִי",
+			"english": "original"
+		},
+		{
+			"hebrew": "יפה",
+			"english": "beautiful"
+		},
+		{
+			"hebrew": "פָּעִיל",
+			"english": "active"
+		},
+		{
+			"hebrew": "שלילי",
+			"english": "negative"
+		},
+		{
+			"hebrew": "בטוח",
+			"english": "safe"
+		},
+		{
+			"hebrew": "חָזוּתִי",
+			"english": "visual"
+		},
+		{
+			"hebrew": "מעבר",
+			"english": "beyond"
+		},
+		{
+			"hebrew": "זוּטָר",
+			"english": "junior"
+		},
+		{
+			"hebrew": "ייחודי",
+			"english": "unique"
+		},
+		{
+			"hebrew": "כל דבר",
+			"english": "anything"
+		},
+		{
+			"hebrew": "קלַאסִי",
+			"english": "classic"
+		},
+		{
+			"hebrew": "סופי",
+			"english": "final"
+		},
+		{
+			"hebrew": "פְּרָטִי",
+			"english": "private"
+		},
+		{
+			"hebrew": "מערבי",
+			"english": "western"
+		},
+		{
+			"hebrew": "מוּכָּר",
+			"english": "familiar"
+		},
+		{
+			"hebrew": "רשמי",
+			"english": "official"
+		},
+		{
+			"hebrew": "רָחָב",
+			"english": "broad"
+		},
+		{
+			"hebrew": "נוֹחַ",
+			"english": "comfortable"
+		},
+		{
+			"hebrew": "אולי",
+			"english": "maybe"
+		},
+		{
+			"hebrew": "עָשִׁיר",
+			"english": "rich"
+		},
+		{
+			"hebrew": "צָעִיר",
+			"english": "young"
+		},
+		{
+			"hebrew": "כָּבֵד",
+			"english": "heavy"
+		},
+		{
+			"hebrew": "שלום",
+			"english": "hello"
+		},
+		{
+			"hebrew": "בעל ערך",
+			"english": "valuable"
+		},
+		{
+			"hebrew": "מוֹבִיל",
+			"english": "leading"
+		},
+		{
+			"hebrew": "נוֹרמָלִי",
+			"english": "normal"
+		},
+		{
+			"hebrew": "סוֹד",
+			"english": "secret"
+		},
+		{
+			"hebrew": "קָשֶׁה",
+			"english": "tough"
+		},
+		{
+			"hebrew": "עָמוֹק",
+			"english": "deep"
+		},
+		{
+			"hebrew": "מַטָרָה",
+			"english": "objective"
+		},
+		{
+			"hebrew": "כִּימִי",
+			"english": "chemical"
+		},
+		{
+			"hebrew": "קיצוני",
+			"english": "extreme"
+		},
+		{
+			"hebrew": "רִשְׁמִי",
+			"english": "formal"
+		},
+		{
+			"hebrew": "מול",
+			"english": "opposite"
+		},
+		{
+			"hebrew": "מְרוּחָק",
+			"english": "remote"
+		},
+		{
+			"hebrew": "עָצוּם",
+			"english": "vast"
+		},
+		{
+			"hebrew": "אי שם",
+			"english": "somewhere"
+		},
+		{
+			"hebrew": "בְּכָל מָקוֹם",
+			"english": "anywhere"
+		},
+		{
+			"hebrew": "אפל",
+			"english": "dark"
+		},
+		{
+			"hebrew": "פְּנִימִי",
+			"english": "internal"
+		},
+		{
+			"hebrew": "רָגִישׁ",
+			"english": "sensitive"
+		},
+		{
+			"hebrew": "קָבוּעַ",
+			"english": "constant"
+		},
+		{
+			"hebrew": "גלם",
+			"english": "raw"
+		},
+		{
+			"hebrew": "רַך",
+			"english": "soft"
+		},
+		{
+			"hebrew": "מוצק",
+			"english": "solid"
+		},
+		{
+			"hebrew": "מְשׁוּנֶה",
+			"english": "weird"
+		},
+		{
+			"hebrew": "שנתי",
+			"english": "annual"
+		},
+		{
+			"hebrew": "מֵת",
+			"english": "dead"
+		},
+		{
+			"hebrew": "לָנֶצַח",
+			"english": "forever"
+		},
+		{
+			"hebrew": "אף אחד",
+			"english": "nobody"
+		},
+		{
+			"hebrew": "עָגוֹל",
+			"english": "round"
+		},
+		{
+			"hebrew": "ואילו",
+			"english": "whereas"
+		},
+		{
+			"hebrew": "שווה ערך",
+			"english": "equivalent"
+		},
+		{
+			"hebrew": "רוחני",
+			"english": "spiritual"
+		},
+		{
+			"hebrew": "מְבוּגָר",
+			"english": "adult"
+		},
+		{
+			"hebrew": "מְטוּרָף",
+			"english": "crazy"
+		},
+		{
+			"hebrew": "קוֹדֵם",
+			"english": "prior"
+		},
+		{
+			"hebrew": "מְחוּספָּס",
+			"english": "rough"
+		},
+		{
+			"hebrew": "עָצוּב",
+			"english": "sad"
+		},
+		{
+			"hebrew": "חוֹלֶה",
+			"english": "sick"
+		},
+		{
+			"hebrew": "חיצוני",
+			"english": "external"
+		},
+		{
+			"hebrew": "בִּלתִי חוּקִי",
+			"english": "illegal"
+		},
+		{
+			"hebrew": "נייד",
+			"english": "mobile"
+		},
+		{
+			"hebrew": "מַגְעִיל",
+			"english": "nasty"
+		},
+		{
+			"hebrew": "רגיל",
+			"english": "ordinary"
+		},
+		{
+			"hebrew": "מלכותי",
+			"english": "royal"
+		},
+		{
+			"hebrew": "בָּכִיר",
+			"english": "senior"
+		},
+		{
+			"hebrew": "עֶלִיוֹן",
+			"english": "upper"
+		},
+		{
+			"hebrew": "תלוי",
+			"english": "dependent"
+		},
+		{
+			"hebrew": "מצחיק",
+			"english": "funny"
+		},
+		{
+			"hebrew": "מתוק",
+			"english": "sweet"
+		},
+		{
+			"hebrew": "לְמַעלָה",
+			"english": "upstairs"
+		},
+		{
+			"hebrew": "רָגִיל",
+			"english": "usual"
+		},
+		{
+			"hebrew": "מחוץ לארץ",
+			"english": "abroad"
+		},
+		{
+			"hebrew": "גָדוֹל",
+			"english": "grand"
+		},
+		{
+			"hebrew": "זָכָר",
+			"english": "male"
+		},
+		{
+			"hebrew": "מִישֶׁהוּ",
+			"english": "anybody"
+		},
+		{
+			"hebrew": "מַברִיק",
+			"english": "brilliant"
+		},
+		{
+			"hebrew": "יָקָר",
+			"english": "dear"
+		},
+		{
+			"hebrew": "שיכור",
+			"english": "drunk"
+		},
+		{
+			"hebrew": "נְקֵבָה",
+			"english": "female"
+		},
+		{
+			"hebrew": "בִּלתִי נִמנַע",
+			"english": "inevitable"
+		},
+		{
+			"hebrew": "נקי",
+			"english": "neat"
+		},
+		{
+			"hebrew": "נציג",
+			"english": "representative"
+		},
+		{
+			"hebrew": "טִפּשִׁי",
+			"english": "silly"
+		},
+		{
+			"hebrew": "מְטוּפָּשׁ",
+			"english": "stupid"
+		},
+		{
+			"hebrew": "זמני",
+			"english": "temporary"
+		},
+		{
+			"hebrew": "מָחָר",
+			"english": "tomorrow"
+		},
+		{
+			"hebrew": "אתמול",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 524 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"italian": "persone",
+			"english": "people"
+		},
+		{
+			"italian": "storia",
+			"english": "history"
+		},
+		{
+			"italian": "modo",
+			"english": "way"
+		},
+		{
+			"italian": "arte",
+			"english": "art"
+		},
+		{
+			"italian": "mondo",
+			"english": "world"
+		},
+		{
+			"italian": "informazioni",
+			"english": "information"
+		},
+		{
+			"italian": "carta geografica",
+			"english": "map"
+		},
+		{
+			"italian": "Due",
+			"english": "two"
+		},
+		{
+			"italian": "famiglia",
+			"english": "family"
+		},
+		{
+			"italian": "governo",
+			"english": "government"
+		},
+		{
+			"italian": "Salute",
+			"english": "health"
+		},
+		{
+			"italian": "sistema",
+			"english": "system"
+		},
+		{
+			"italian": "Computer",
+			"english": "computer"
+		},
+		{
+			"italian": "la carne",
+			"english": "meat"
+		},
+		{
+			"italian": "anno",
+			"english": "year"
+		},
+		{
+			"italian": "Grazie",
+			"english": "thanks"
+		},
+		{
+			"italian": "musica",
+			"english": "music"
+		},
+		{
+			"italian": "persona",
+			"english": "person"
+		},
+		{
+			"italian": "lettura",
+			"english": "reading"
+		},
+		{
+			"italian": "metodo",
+			"english": "method"
+		},
+		{
+			"italian": "dati",
+			"english": "data"
+		},
+		{
+			"italian": "cibo",
+			"english": "food"
+		},
+		{
+			"italian": "comprensione",
+			"english": "understanding"
+		},
+		{
+			"italian": "teoria",
+			"english": "theory"
+		},
+		{
+			"italian": "legge",
+			"english": "law"
+		},
+		{
+			"italian": "uccello",
+			"english": "bird"
+		},
+		{
+			"italian": "letteratura",
+			"english": "literature"
+		},
+		{
+			"italian": "problema",
+			"english": "problem"
+		},
+		{
+			"italian": "Software",
+			"english": "software"
+		},
+		{
+			"italian": "controllo",
+			"english": "control"
+		},
+		{
+			"italian": "conoscenza",
+			"english": "knowledge"
+		},
+		{
+			"italian": "energia",
+			"english": "power"
+		},
+		{
+			"italian": "capacità",
+			"english": "ability"
+		},
+		{
+			"italian": "economia",
+			"english": "economics"
+		},
+		{
+			"italian": "amore",
+			"english": "love"
+		},
+		{
+			"italian": "Internet",
+			"english": "internet"
+		},
+		{
+			"italian": "televisione",
+			"english": "television"
+		},
+		{
+			"italian": "scienza",
+			"english": "science"
+		},
+		{
+			"italian": "biblioteca",
+			"english": "library"
+		},
+		{
+			"italian": "natura",
+			"english": "nature"
+		},
+		{
+			"italian": "fatto",
+			"english": "fact"
+		},
+		{
+			"italian": "prodotto",
+			"english": "product"
+		},
+		{
+			"italian": "idea",
+			"english": "idea"
+		},
+		{
+			"italian": "temperatura",
+			"english": "temperature"
+		},
+		{
+			"italian": "investimento",
+			"english": "investment"
+		},
+		{
+			"italian": "la zona",
+			"english": "area"
+		},
+		{
+			"italian": "società",
+			"english": "society"
+		},
+		{
+			"italian": "attività",
+			"english": "activity"
+		},
+		{
+			"italian": "storia",
+			"english": "story"
+		},
+		{
+			"italian": "industria",
+			"english": "industry"
+		},
+		{
+			"italian": "media",
+			"english": "media"
+		},
+		{
+			"italian": "cosa",
+			"english": "thing"
+		},
+		{
+			"italian": "forno",
+			"english": "oven"
+		},
+		{
+			"italian": "comunità",
+			"english": "community"
+		},
+		{
+			"italian": "definizione",
+			"english": "definition"
+		},
+		{
+			"italian": "sicurezza",
+			"english": "safety"
+		},
+		{
+			"italian": "qualità",
+			"english": "quality"
+		},
+		{
+			"italian": "sviluppo",
+			"english": "development"
+		},
+		{
+			"italian": "Lingua",
+			"english": "language"
+		},
+		{
+			"italian": "gestione",
+			"english": "management"
+		},
+		{
+			"italian": "giocatore",
+			"english": "player"
+		},
+		{
+			"italian": "varietà",
+			"english": "variety"
+		},
+		{
+			"italian": "video",
+			"english": "video"
+		},
+		{
+			"italian": "settimana",
+			"english": "week"
+		},
+		{
+			"italian": "sicurezza",
+			"english": "security"
+		},
+		{
+			"italian": "nazione",
+			"english": "country"
+		},
+		{
+			"italian": "esame",
+			"english": "exam"
+		},
+		{
+			"italian": "film",
+			"english": "movie"
+		},
+		{
+			"italian": "organizzazione",
+			"english": "organization"
+		},
+		{
+			"italian": "attrezzatura",
+			"english": "equipment"
+		},
+		{
+			"italian": "fisica",
+			"english": "physics"
+		},
+		{
+			"italian": "analisi",
+			"english": "analysis"
+		},
+		{
+			"italian": "politica",
+			"english": "policy"
+		},
+		{
+			"italian": "serie",
+			"english": "series"
+		},
+		{
+			"italian": "pensato",
+			"english": "thought"
+		},
+		{
+			"italian": "base",
+			"english": "basis"
+		},
+		{
+			"italian": "fidanzato",
+			"english": "boyfriend"
+		},
+		{
+			"italian": "direzione",
+			"english": "direction"
+		},
+		{
+			"italian": "strategia",
+			"english": "strategy"
+		},
+		{
+			"italian": "tecnologia",
+			"english": "technology"
+		},
+		{
+			"italian": "esercito",
+			"english": "army"
+		},
+		{
+			"italian": "macchina fotografica",
+			"english": "camera"
+		},
+		{
+			"italian": "la libertà",
+			"english": "freedom"
+		},
+		{
+			"italian": "carta",
+			"english": "paper"
+		},
+		{
+			"italian": "ambiente",
+			"english": "environment"
+		},
+		{
+			"italian": "bambino",
+			"english": "child"
+		},
+		{
+			"italian": "istanza",
+			"english": "instance"
+		},
+		{
+			"italian": "mese",
+			"english": "month"
+		},
+		{
+			"italian": "verità",
+			"english": "truth"
+		},
+		{
+			"italian": "marketing",
+			"english": "marketing"
+		},
+		{
+			"italian": "Università",
+			"english": "university"
+		},
+		{
+			"italian": "scrittura",
+			"english": "writing"
+		},
+		{
+			"italian": "articolo",
+			"english": "article"
+		},
+		{
+			"italian": "dipartimento",
+			"english": "department"
+		},
+		{
+			"italian": "differenza",
+			"english": "difference"
+		},
+		{
+			"italian": "goal",
+			"english": "goal"
+		},
+		{
+			"italian": "notizia",
+			"english": "news"
+		},
+		{
+			"italian": "pubblico",
+			"english": "audience"
+		},
+		{
+			"italian": "pesca",
+			"english": "fishing"
+		},
+		{
+			"italian": "crescita",
+			"english": "growth"
+		},
+		{
+			"italian": "reddito",
+			"english": "income"
+		},
+		{
+			"italian": "matrimonio",
+			"english": "marriage"
+		},
+		{
+			"italian": "utente",
+			"english": "user"
+		},
+		{
+			"italian": "combinazione",
+			"english": "combination"
+		},
+		{
+			"italian": "fallimento",
+			"english": "failure"
+		},
+		{
+			"italian": "senso",
+			"english": "meaning"
+		},
+		{
+			"italian": "medicina",
+			"english": "medicine"
+		},
+		{
+			"italian": "filosofia",
+			"english": "philosophy"
+		},
+		{
+			"italian": "insegnante",
+			"english": "teacher"
+		},
+		{
+			"italian": "comunicazione",
+			"english": "communication"
+		},
+		{
+			"italian": "notte",
+			"english": "night"
+		},
+		{
+			"italian": "chimica",
+			"english": "chemistry"
+		},
+		{
+			"italian": "malattia",
+			"english": "disease"
+		},
+		{
+			"italian": "disco",
+			"english": "disk"
+		},
+		{
+			"italian": "energia",
+			"english": "energy"
+		},
+		{
+			"italian": "nazione",
+			"english": "nation"
+		},
+		{
+			"italian": "strada",
+			"english": "road"
+		},
+		{
+			"italian": "ruolo",
+			"english": "role"
+		},
+		{
+			"italian": "la minestra",
+			"english": "soup"
+		},
+		{
+			"italian": "pubblicità",
+			"english": "advertising"
+		},
+		{
+			"italian": "luogo",
+			"english": "location"
+		},
+		{
+			"italian": "successo",
+			"english": "success"
+		},
+		{
+			"italian": "aggiunta",
+			"english": "addition"
+		},
+		{
+			"italian": "appartamento",
+			"english": "apartment"
+		},
+		{
+			"italian": "educazione",
+			"english": "education"
+		},
+		{
+			"italian": "matematica",
+			"english": "math"
+		},
+		{
+			"italian": "momento",
+			"english": "moment"
+		},
+		{
+			"italian": "la pittura",
+			"english": "painting"
+		},
+		{
+			"italian": "politica",
+			"english": "politics"
+		},
+		{
+			"italian": "Attenzione",
+			"english": "attention"
+		},
+		{
+			"italian": "decisione",
+			"english": "decision"
+		},
+		{
+			"italian": "evento",
+			"english": "event"
+		},
+		{
+			"italian": "proprietà",
+			"english": "property"
+		},
+		{
+			"italian": "shopping",
+			"english": "shopping"
+		},
+		{
+			"italian": "alunno",
+			"english": "student"
+		},
+		{
+			"italian": "legna",
+			"english": "wood"
+		},
+		{
+			"italian": "concorrenza",
+			"english": "competition"
+		},
+		{
+			"italian": "distribuzione",
+			"english": "distribution"
+		},
+		{
+			"italian": "divertimento",
+			"english": "entertainment"
+		},
+		{
+			"italian": "ufficio",
+			"english": "office"
+		},
+		{
+			"italian": "popolazione",
+			"english": "population"
+		},
+		{
+			"italian": "Presidente",
+			"english": "president"
+		},
+		{
+			"italian": "unità",
+			"english": "unit"
+		},
+		{
+			"italian": "categoria",
+			"english": "category"
+		},
+		{
+			"italian": "sigaretta",
+			"english": "cigarette"
+		},
+		{
+			"italian": "contesto",
+			"english": "context"
+		},
+		{
+			"italian": "introduzione",
+			"english": "introduction"
+		},
+		{
+			"italian": "opportunità",
+			"english": "opportunity"
+		},
+		{
+			"italian": "prestazione",
+			"english": "performance"
+		},
+		{
+			"italian": "autista",
+			"english": "driver"
+		},
+		{
+			"italian": "volo",
+			"english": "flight"
+		},
+		{
+			"italian": "lunghezza",
+			"english": "length"
+		},
+		{
+			"italian": "rivista",
+			"english": "magazine"
+		},
+		{
+			"italian": "giornale",
+			"english": "newspaper"
+		},
+		{
+			"italian": "relazione",
+			"english": "relationship"
+		},
+		{
+			"italian": "insegnamento",
+			"english": "teaching"
+		},
+		{
+			"italian": "cella",
+			"english": "cell"
+		},
+		{
+			"italian": "commerciante",
+			"english": "dealer"
+		},
+		{
+			"italian": "scoperta",
+			"english": "finding"
+		},
+		{
+			"italian": "lago",
+			"english": "lake"
+		},
+		{
+			"italian": "membro",
+			"english": "member"
+		},
+		{
+			"italian": "messaggio",
+			"english": "message"
+		},
+		{
+			"italian": "telefono",
+			"english": "phone"
+		},
+		{
+			"italian": "scena",
+			"english": "scene"
+		},
+		{
+			"italian": "aspetto",
+			"english": "appearance"
+		},
+		{
+			"italian": "associazione",
+			"english": "association"
+		},
+		{
+			"italian": "concetto",
+			"english": "concept"
+		},
+		{
+			"italian": "cliente",
+			"english": "customer"
+		},
+		{
+			"italian": "morte",
+			"english": "death"
+		},
+		{
+			"italian": "discussione",
+			"english": "discussion"
+		},
+		{
+			"italian": "alloggiamento",
+			"english": "housing"
+		},
+		{
+			"italian": "inflazione",
+			"english": "inflation"
+		},
+		{
+			"italian": "assicurazione",
+			"english": "insurance"
+		},
+		{
+			"italian": "umore",
+			"english": "mood"
+		},
+		{
+			"italian": "donna",
+			"english": "woman"
+		},
+		{
+			"italian": "consigli",
+			"english": "advice"
+		},
+		{
+			"italian": "sangue",
+			"english": "blood"
+		},
+		{
+			"italian": "sforzo",
+			"english": "effort"
+		},
+		{
+			"italian": "espressione",
+			"english": "expression"
+		},
+		{
+			"italian": "importanza",
+			"english": "importance"
+		},
+		{
+			"italian": "opinione",
+			"english": "opinion"
+		},
+		{
+			"italian": "Pagamento",
+			"english": "payment"
+		},
+		{
+			"italian": "la realtà",
+			"english": "reality"
+		},
+		{
+			"italian": "responsabilità",
+			"english": "responsibility"
+		},
+		{
+			"italian": "situazione",
+			"english": "situation"
+		},
+		{
+			"italian": "abilità",
+			"english": "skill"
+		},
+		{
+			"italian": "dichiarazione",
+			"english": "statement"
+		},
+		{
+			"italian": "ricchezza",
+			"english": "wealth"
+		},
+		{
+			"italian": "applicazione",
+			"english": "application"
+		},
+		{
+			"italian": "città",
+			"english": "city"
+		},
+		{
+			"italian": "contea",
+			"english": "county"
+		},
+		{
+			"italian": "profondità",
+			"english": "depth"
+		},
+		{
+			"italian": "tenuta",
+			"english": "estate"
+		},
+		{
+			"italian": "fondazione",
+			"english": "foundation"
+		},
+		{
+			"italian": "nonna",
+			"english": "grandmother"
+		},
+		{
+			"italian": "cuore",
+			"english": "heart"
+		},
+		{
+			"italian": "prospettiva",
+			"english": "perspective"
+		},
+		{
+			"italian": "foto",
+			"english": "photo"
+		},
+		{
+			"italian": "ricetta",
+			"english": "recipe"
+		},
+		{
+			"italian": "studio",
+			"english": "studio"
+		},
+		{
+			"italian": "argomento",
+			"english": "topic"
+		},
+		{
+			"italian": "collezione",
+			"english": "collection"
+		},
+		{
+			"italian": "depressione",
+			"english": "depression"
+		},
+		{
+			"italian": "immaginazione",
+			"english": "imagination"
+		},
+		{
+			"italian": "passione",
+			"english": "passion"
+		},
+		{
+			"italian": "percentuale",
+			"english": "percentage"
+		},
+		{
+			"italian": "risorsa",
+			"english": "resource"
+		},
+		{
+			"italian": "ambiente",
+			"english": "setting"
+		},
+		{
+			"italian": "anno Domini",
+			"english": "ad"
+		},
+		{
+			"italian": "agenzia",
+			"english": "agency"
+		},
+		{
+			"italian": "college",
+			"english": "college"
+		},
+		{
+			"italian": "connessione",
+			"english": "connection"
+		},
+		{
+			"italian": "critica",
+			"english": "criticism"
+		},
+		{
+			"italian": "debito",
+			"english": "debt"
+		},
+		{
+			"italian": "descrizione",
+			"english": "description"
+		},
+		{
+			"italian": "memoria",
+			"english": "memory"
+		},
+		{
+			"italian": "pazienza",
+			"english": "patience"
+		},
+		{
+			"italian": "segretario",
+			"english": "secretary"
+		},
+		{
+			"italian": "soluzione",
+			"english": "solution"
+		},
+		{
+			"italian": "amministrazione",
+			"english": "administration"
+		},
+		{
+			"italian": "aspetto",
+			"english": "aspect"
+		},
+		{
+			"italian": "atteggiamento",
+			"english": "attitude"
+		},
+		{
+			"italian": "direttore",
+			"english": "director"
+		},
+		{
+			"italian": "personalità",
+			"english": "personality"
+		},
+		{
+			"italian": "psicologia",
+			"english": "psychology"
+		},
+		{
+			"italian": "raccomandazione",
+			"english": "recommendation"
+		},
+		{
+			"italian": "risposta",
+			"english": "response"
+		},
+		{
+			"italian": "selezione",
+			"english": "selection"
+		},
+		{
+			"italian": "Conservazione",
+			"english": "storage"
+		},
+		{
+			"italian": "versione",
+			"english": "version"
+		},
+		{
+			"italian": "alcol",
+			"english": "alcohol"
+		},
+		{
+			"italian": "discussione",
+			"english": "argument"
+		},
+		{
+			"italian": "denuncia",
+			"english": "complaint"
+		},
+		{
+			"italian": "contrarre",
+			"english": "contract"
+		},
+		{
+			"italian": "enfasi",
+			"english": "emphasis"
+		},
+		{
+			"italian": "autostrada",
+			"english": "highway"
+		},
+		{
+			"italian": "perdita",
+			"english": "loss"
+		},
+		{
+			"italian": "membri",
+			"english": "membership"
+		},
+		{
+			"italian": "possesso",
+			"english": "possession"
+		},
+		{
+			"italian": "preparazione",
+			"english": "preparation"
+		},
+		{
+			"italian": "bistecca",
+			"english": "steak"
+		},
+		{
+			"italian": "unione",
+			"english": "union"
+		},
+		{
+			"italian": "accordo",
+			"english": "agreement"
+		},
+		{
+			"italian": "cancro",
+			"english": "cancer"
+		},
+		{
+			"italian": "moneta",
+			"english": "currency"
+		},
+		{
+			"italian": "occupazione",
+			"english": "employment"
+		},
+		{
+			"italian": "ingegneria",
+			"english": "engineering"
+		},
+		{
+			"italian": "iscrizione",
+			"english": "entry"
+		},
+		{
+			"italian": "interazione",
+			"english": "interaction"
+		},
+		{
+			"italian": "miscela",
+			"english": "mixture"
+		},
+		{
+			"italian": "preferenza",
+			"english": "preference"
+		},
+		{
+			"italian": "regione",
+			"english": "region"
+		},
+		{
+			"italian": "repubblica",
+			"english": "republic"
+		},
+		{
+			"italian": "tradizione",
+			"english": "tradition"
+		},
+		{
+			"italian": "virus",
+			"english": "virus"
+		},
+		{
+			"italian": "attore",
+			"english": "actor"
+		},
+		{
+			"italian": "aula",
+			"english": "classroom"
+		},
+		{
+			"italian": "consegna",
+			"english": "delivery"
+		},
+		{
+			"italian": "dispositivo",
+			"english": "device"
+		},
+		{
+			"italian": "difficoltà",
+			"english": "difficulty"
+		},
+		{
+			"italian": "dramma",
+			"english": "drama"
+		},
+		{
+			"italian": "elezione",
+			"english": "election"
+		},
+		{
+			"italian": "motore",
+			"english": "engine"
+		},
+		{
+			"italian": "calcio",
+			"english": "football"
+		},
+		{
+			"italian": "guida",
+			"english": "guidance"
+		},
+		{
+			"italian": "Hotel",
+			"english": "hotel"
+		},
+		{
+			"italian": "proprietario",
+			"english": "owner"
+		},
+		{
+			"italian": "priorità",
+			"english": "priority"
+		},
+		{
+			"italian": "protezione",
+			"english": "protection"
+		},
+		{
+			"italian": "suggerimento",
+			"english": "suggestion"
+		},
+		{
+			"italian": "tensione",
+			"english": "tension"
+		},
+		{
+			"italian": "variazione",
+			"english": "variation"
+		},
+		{
+			"italian": "ansia",
+			"english": "anxiety"
+		},
+		{
+			"italian": "atmosfera",
+			"english": "atmosphere"
+		},
+		{
+			"italian": "consapevolezza",
+			"english": "awareness"
+		},
+		{
+			"italian": "bagno",
+			"english": "bath"
+		},
+		{
+			"italian": "pane",
+			"english": "bread"
+		},
+		{
+			"italian": "candidato",
+			"english": "candidate"
+		},
+		{
+			"italian": "clima",
+			"english": "climate"
+		},
+		{
+			"italian": "confronto",
+			"english": "comparison"
+		},
+		{
+			"italian": "confusione",
+			"english": "confusion"
+		},
+		{
+			"italian": "costruzione",
+			"english": "construction"
+		},
+		{
+			"italian": "ascensore",
+			"english": "elevator"
+		},
+		{
+			"italian": "emozione",
+			"english": "emotion"
+		},
+		{
+			"italian": "dipendente",
+			"english": "employee"
+		},
+		{
+			"italian": "datore di lavoro",
+			"english": "employer"
+		},
+		{
+			"italian": "ospite",
+			"english": "guest"
+		},
+		{
+			"italian": "altezza",
+			"english": "height"
+		},
+		{
+			"italian": "comando",
+			"english": "leadership"
+		},
+		{
+			"italian": "centro commerciale",
+			"english": "mall"
+		},
+		{
+			"italian": "manager",
+			"english": "manager"
+		},
+		{
+			"italian": "operazione",
+			"english": "operation"
+		},
+		{
+			"italian": "registrazione",
+			"english": "recording"
+		},
+		{
+			"italian": "campione",
+			"english": "sample"
+		},
+		{
+			"italian": "mezzi di trasporto",
+			"english": "transportation"
+		},
+		{
+			"italian": "carità",
+			"english": "charity"
+		},
+		{
+			"italian": "cugino",
+			"english": "cousin"
+		},
+		{
+			"italian": "disastro",
+			"english": "disaster"
+		},
+		{
+			"italian": "editore",
+			"english": "editor"
+		},
+		{
+			"italian": "efficienza",
+			"english": "efficiency"
+		},
+		{
+			"italian": "eccitazione",
+			"english": "excitement"
+		},
+		{
+			"italian": "estensione",
+			"english": "extent"
+		},
+		{
+			"italian": "risposta",
+			"english": "feedback"
+		},
+		{
+			"italian": "chitarra",
+			"english": "guitar"
+		},
+		{
+			"italian": "compiti a casa",
+			"english": "homework"
+		},
+		{
+			"italian": "capo",
+			"english": "leader"
+		},
+		{
+			"italian": "mamma",
+			"english": "mom"
+		},
+		{
+			"italian": "risultato",
+			"english": "outcome"
+		},
+		{
+			"italian": "autorizzazione",
+			"english": "permission"
+		},
+		{
+			"italian": "presentazione",
+			"english": "presentation"
+		},
+		{
+			"italian": "promozione",
+			"english": "promotion"
+		},
+		{
+			"italian": "riflessione",
+			"english": "reflection"
+		},
+		{
+			"italian": "frigorifero",
+			"english": "refrigerator"
+		},
+		{
+			"italian": "risoluzione",
+			"english": "resolution"
+		},
+		{
+			"italian": "reddito",
+			"english": "revenue"
+		},
+		{
+			"italian": "sessione",
+			"english": "session"
+		},
+		{
+			"italian": "cantante",
+			"english": "singer"
+		},
+		{
+			"italian": "tennis",
+			"english": "tennis"
+		},
+		{
+			"italian": "cestino",
+			"english": "basket"
+		},
+		{
+			"italian": "premio",
+			"english": "bonus"
+		},
+		{
+			"italian": "Consiglio dei ministri",
+			"english": "cabinet"
+		},
+		{
+			"italian": "infanzia",
+			"english": "childhood"
+		},
+		{
+			"italian": "Chiesa",
+			"english": "church"
+		},
+		{
+			"italian": "Abiti",
+			"english": "clothes"
+		},
+		{
+			"italian": "Caffè",
+			"english": "coffee"
+		},
+		{
+			"italian": "cena",
+			"english": "dinner"
+		},
+		{
+			"italian": "disegno",
+			"english": "drawing"
+		},
+		{
+			"italian": "capelli",
+			"english": "hair"
+		},
+		{
+			"italian": "udito",
+			"english": "hearing"
+		},
+		{
+			"italian": "iniziativa",
+			"english": "initiative"
+		},
+		{
+			"italian": "giudizio",
+			"english": "judgment"
+		},
+		{
+			"italian": "laboratorio",
+			"english": "lab"
+		},
+		{
+			"italian": "misurazione",
+			"english": "measurement"
+		},
+		{
+			"italian": "modalità",
+			"english": "mode"
+		},
+		{
+			"italian": "fango",
+			"english": "mud"
+		},
+		{
+			"italian": "arancia",
+			"english": "orange"
+		},
+		{
+			"italian": "poesia",
+			"english": "poetry"
+		},
+		{
+			"italian": "polizia",
+			"english": "police"
+		},
+		{
+			"italian": "possibilità",
+			"english": "possibility"
+		},
+		{
+			"italian": "procedura",
+			"english": "procedure"
+		},
+		{
+			"italian": "Regina",
+			"english": "queen"
+		},
+		{
+			"italian": "rapporto",
+			"english": "ratio"
+		},
+		{
+			"italian": "relazione",
+			"english": "relation"
+		},
+		{
+			"italian": "ristorante",
+			"english": "restaurant"
+		},
+		{
+			"italian": "soddisfazione",
+			"english": "satisfaction"
+		},
+		{
+			"italian": "settore",
+			"english": "sector"
+		},
+		{
+			"italian": "firma",
+			"english": "signature"
+		},
+		{
+			"italian": "importanza",
+			"english": "significance"
+		},
+		{
+			"italian": "canzone",
+			"english": "song"
+		},
+		{
+			"italian": "dente",
+			"english": "tooth"
+		},
+		{
+			"italian": "cittadina",
+			"english": "town"
+		},
+		{
+			"italian": "veicolo",
+			"english": "vehicle"
+		},
+		{
+			"italian": "volume",
+			"english": "volume"
+		},
+		{
+			"italian": "moglie",
+			"english": "wife"
+		},
+		{
+			"italian": "incidente",
+			"english": "accident"
+		},
+		{
+			"italian": "aeroporto",
+			"english": "airport"
+		},
+		{
+			"italian": "appuntamento",
+			"english": "appointment"
+		},
+		{
+			"italian": "arrivo",
+			"english": "arrival"
+		},
+		{
+			"italian": "assunzione",
+			"english": "assumption"
+		},
+		{
+			"italian": "baseball",
+			"english": "baseball"
+		},
+		{
+			"italian": "capitolo",
+			"english": "chapter"
+		},
+		{
+			"italian": "Comitato",
+			"english": "committee"
+		},
+		{
+			"italian": "conversazione",
+			"english": "conversation"
+		},
+		{
+			"italian": "Banca dati",
+			"english": "database"
+		},
+		{
+			"italian": "entusiasmo",
+			"english": "enthusiasm"
+		},
+		{
+			"italian": "errore",
+			"english": "error"
+		},
+		{
+			"italian": "spiegazione",
+			"english": "explanation"
+		},
+		{
+			"italian": "contadino",
+			"english": "farmer"
+		},
+		{
+			"italian": "cancello",
+			"english": "gate"
+		},
+		{
+			"italian": "ragazza",
+			"english": "girl"
+		},
+		{
+			"italian": "sala",
+			"english": "hall"
+		},
+		{
+			"italian": "storico",
+			"english": "historian"
+		},
+		{
+			"italian": "ospedale",
+			"english": "hospital"
+		},
+		{
+			"italian": "ferita",
+			"english": "injury"
+		},
+		{
+			"italian": "istruzione",
+			"english": "instruction"
+		},
+		{
+			"italian": "Manutenzione",
+			"english": "maintenance"
+		},
+		{
+			"italian": "fabbricante",
+			"english": "manufacturer"
+		},
+		{
+			"italian": "pasto",
+			"english": "meal"
+		},
+		{
+			"italian": "percezione",
+			"english": "perception"
+		},
+		{
+			"italian": "torta",
+			"english": "pie"
+		},
+		{
+			"italian": "poesia",
+			"english": "poem"
+		},
+		{
+			"italian": "presenza",
+			"english": "presence"
+		},
+		{
+			"italian": "proposta",
+			"english": "proposal"
+		},
+		{
+			"italian": "ricezione",
+			"english": "reception"
+		},
+		{
+			"italian": "sostituzione",
+			"english": "replacement"
+		},
+		{
+			"italian": "rivoluzione",
+			"english": "revolution"
+		},
+		{
+			"italian": "fiume",
+			"english": "river"
+		},
+		{
+			"italian": "figlio",
+			"english": "son"
+		},
+		{
+			"italian": "discorso",
+			"english": "speech"
+		},
+		{
+			"italian": "tè",
+			"english": "tea"
+		},
+		{
+			"italian": "villaggio",
+			"english": "village"
+		},
+		{
+			"italian": "avvertimento",
+			"english": "warning"
+		},
+		{
+			"italian": "vincitore",
+			"english": "winner"
+		},
+		{
+			"italian": "lavoratore",
+			"english": "worker"
+		},
+		{
+			"italian": "scrittore",
+			"english": "writer"
+		},
+		{
+			"italian": "assistenza",
+			"english": "assistance"
+		},
+		{
+			"italian": "respiro",
+			"english": "breath"
+		},
+		{
+			"italian": "acquirente",
+			"english": "buyer"
+		},
+		{
+			"italian": "petto",
+			"english": "chest"
+		},
+		{
+			"italian": "cioccolato",
+			"english": "chocolate"
+		},
+		{
+			"italian": "conclusione",
+			"english": "conclusion"
+		},
+		{
+			"italian": "contributo",
+			"english": "contribution"
+		},
+		{
+			"italian": "biscotto",
+			"english": "cookie"
+		},
+		{
+			"italian": "coraggio",
+			"english": "courage"
+		},
+		{
+			"italian": "papà",
+			"english": "dad"
+		},
+		{
+			"italian": "scrivania",
+			"english": "desk"
+		},
+		{
+			"italian": "cassetto",
+			"english": "drawer"
+		},
+		{
+			"italian": "istituzione",
+			"english": "establishment"
+		},
+		{
+			"italian": "visita medica",
+			"english": "examination"
+		},
+		{
+			"italian": "spazzatura",
+			"english": "garbage"
+		},
+		{
+			"italian": "drogheria",
+			"english": "grocery"
+		},
+		{
+			"italian": "miele",
+			"english": "honey"
+		},
+		{
+			"italian": "impressione",
+			"english": "impression"
+		},
+		{
+			"italian": "miglioramento",
+			"english": "improvement"
+		},
+		{
+			"italian": "indipendenza",
+			"english": "independence"
+		},
+		{
+			"italian": "insetto",
+			"english": "insect"
+		},
+		{
+			"italian": "ispezione",
+			"english": "inspection"
+		},
+		{
+			"italian": "ispettore",
+			"english": "inspector"
+		},
+		{
+			"italian": "re",
+			"english": "king"
+		},
+		{
+			"italian": "scala",
+			"english": "ladder"
+		},
+		{
+			"italian": "Menu",
+			"english": "menu"
+		},
+		{
+			"italian": "pena",
+			"english": "penalty"
+		},
+		{
+			"italian": "pianoforte",
+			"english": "piano"
+		},
+		{
+			"italian": "Patata",
+			"english": "potato"
+		},
+		{
+			"italian": "professione",
+			"english": "profession"
+		},
+		{
+			"italian": "Professore",
+			"english": "professor"
+		},
+		{
+			"italian": "quantità",
+			"english": "quantity"
+		},
+		{
+			"italian": "reazione",
+			"english": "reaction"
+		},
+		{
+			"italian": "requisito",
+			"english": "requirement"
+		},
+		{
+			"italian": "insalata",
+			"english": "salad"
+		},
+		{
+			"italian": "sorella",
+			"english": "sister"
+		},
+		{
+			"italian": "supermercato",
+			"english": "supermarket"
+		},
+		{
+			"italian": "lingua",
+			"english": "tongue"
+		},
+		{
+			"italian": "debolezza",
+			"english": "weakness"
+		},
+		{
+			"italian": "matrimonio",
+			"english": "wedding"
+		},
+		{
+			"italian": "affare",
+			"english": "affair"
+		},
+		{
+			"italian": "ambizione",
+			"english": "ambition"
+		},
+		{
+			"italian": "analista",
+			"english": "analyst"
+		},
+		{
+			"italian": "Mela",
+			"english": "apple"
+		},
+		{
+			"italian": "assegnazione",
+			"english": "assignment"
+		},
+		{
+			"italian": "assistente",
+			"english": "assistant"
+		},
+		{
+			"italian": "bagno",
+			"english": "bathroom"
+		},
+		{
+			"italian": "Camera da letto",
+			"english": "bedroom"
+		},
+		{
+			"italian": "birra",
+			"english": "beer"
+		},
+		{
+			"italian": "compleanno",
+			"english": "birthday"
+		},
+		{
+			"italian": "celebrazione",
+			"english": "celebration"
+		},
+		{
+			"italian": "campionato",
+			"english": "championship"
+		},
+		{
+			"italian": "guancia",
+			"english": "cheek"
+		},
+		{
+			"italian": "cliente",
+			"english": "client"
+		},
+		{
+			"italian": "conseguenza",
+			"english": "consequence"
+		},
+		{
+			"italian": "partenza",
+			"english": "departure"
+		},
+		{
+			"italian": "diamante",
+			"english": "diamond"
+		},
+		{
+			"italian": "lo sporco",
+			"english": "dirt"
+		},
+		{
+			"italian": "orecchio",
+			"english": "ear"
+		},
+		{
+			"italian": "fortuna",
+			"english": "fortune"
+		},
+		{
+			"italian": "amicizia",
+			"english": "friendship"
+		},
+		{
+			"italian": "funerale",
+			"english": "funeral"
+		},
+		{
+			"italian": "gene",
+			"english": "gene"
+		},
+		{
+			"italian": "fidanzata",
+			"english": "girlfriend"
+		},
+		{
+			"italian": "cappello",
+			"english": "hat"
+		},
+		{
+			"italian": "indicazione",
+			"english": "indication"
+		},
+		{
+			"italian": "Intenzione",
+			"english": "intention"
+		},
+		{
+			"italian": "signora",
+			"english": "lady"
+		},
+		{
+			"italian": "mezzanotte",
+			"english": "midnight"
+		},
+		{
+			"italian": "trattativa",
+			"english": "negotiation"
+		},
+		{
+			"italian": "obbligo",
+			"english": "obligation"
+		},
+		{
+			"italian": "passeggeri",
+			"english": "passenger"
+		},
+		{
+			"italian": "Pizza",
+			"english": "pizza"
+		},
+		{
+			"italian": "piattaforma",
+			"english": "platform"
+		},
+		{
+			"italian": "poeta",
+			"english": "poet"
+		},
+		{
+			"italian": "inquinamento",
+			"english": "pollution"
+		},
+		{
+			"italian": "riconoscimento",
+			"english": "recognition"
+		},
+		{
+			"italian": "reputazione",
+			"english": "reputation"
+		},
+		{
+			"italian": "camicia",
+			"english": "shirt"
+		},
+		{
+			"italian": "Signore",
+			"english": "sir"
+		},
+		{
+			"italian": "altoparlante",
+			"english": "speaker"
+		},
+		{
+			"italian": "sconosciuto",
+			"english": "stranger"
+		},
+		{
+			"italian": "chirurgia",
+			"english": "surgery"
+		},
+		{
+			"italian": "simpatia",
+			"english": "sympathy"
+		},
+		{
+			"italian": "racconto",
+			"english": "tale"
+		},
+		{
+			"italian": "gola",
+			"english": "throat"
+		},
+		{
+			"italian": "allenatore",
+			"english": "trainer"
+		},
+		{
+			"italian": "zio",
+			"english": "uncle"
+		},
+		{
+			"italian": "gioventù",
+			"english": "youth"
+		},
+		{
+			"italian": "i soldi",
+			"english": "money"
+		},
+		{
+			"italian": "mentre",
+			"english": "while"
+		},
+		{
+			"italian": "attività commerciale",
+			"english": "business"
+		},
+		{
+			"italian": "vita",
+			"english": "life"
+		},
+		{
+			"italian": "giorno",
+			"english": "day"
+		},
+		{
+			"italian": "casa",
+			"english": "home"
+		},
+		{
+			"italian": "economia",
+			"english": "economy"
+		},
+		{
+			"italian": "formazione",
+			"english": "training"
+		},
+		{
+			"italian": "genere",
+			"english": "kind"
+		},
+		{
+			"italian": "futuro",
+			"english": "future"
+		},
+		{
+			"italian": "azione",
+			"english": "action"
+		},
+		{
+			"italian": "cattivo",
+			"english": "bad"
+		},
+		{
+			"italian": "Niente",
+			"english": "nothing"
+		},
+		{
+			"italian": "periodo",
+			"english": "period"
+		},
+		{
+			"italian": "soggetto",
+			"english": "subject"
+		},
+		{
+			"italian": "pollo",
+			"english": "chicken"
+		},
+		{
+			"italian": "materiale",
+			"english": "material"
+		},
+		{
+			"italian": "auto",
+			"english": "car"
+		},
+		{
+			"italian": "metà",
+			"english": "half"
+		},
+		{
+			"italian": "dentro",
+			"english": "inside"
+		},
+		{
+			"italian": "al di fuori",
+			"english": "outside"
+		},
+		{
+			"italian": "Standard",
+			"english": "standard"
+		},
+		{
+			"italian": "articolo",
+			"english": "item"
+		},
+		{
+			"italian": "medio",
+			"english": "medium"
+		},
+		{
+			"italian": "scelta",
+			"english": "choice"
+		},
+		{
+			"italian": "mattina",
+			"english": "morning"
+		},
+		{
+			"italian": "nord",
+			"english": "north"
+		},
+		{
+			"italian": "piazza",
+			"english": "square"
+		},
+		{
+			"italian": "capitale",
+			"english": "capital"
+		},
+		{
+			"italian": "se stesso",
+			"english": "self"
+		},
+		{
+			"italian": "tiro",
+			"english": "shot"
+		},
+		{
+			"italian": "vita",
+			"english": "living"
+		},
+		{
+			"italian": "plastica",
+			"english": "plastic"
+		},
+		{
+			"italian": "sensazione",
+			"english": "feeling"
+		},
+		{
+			"italian": "risparmi",
+			"english": "savings"
+		},
+		{
+			"italian": "animale",
+			"english": "animal"
+		},
+		{
+			"italian": "massimo",
+			"english": "maximum"
+		},
+		{
+			"italian": "romanzo",
+			"english": "novel"
+		},
+		{
+			"italian": "abbondanza",
+			"english": "plenty"
+		},
+		{
+			"italian": "sfondo",
+			"english": "background"
+		},
+		{
+			"italian": "rosso",
+			"english": "red"
+		},
+		{
+			"italian": "forza",
+			"english": "strength"
+		},
+		{
+			"italian": "verdura",
+			"english": "vegetable"
+		},
+		{
+			"italian": "ideale",
+			"english": "ideal"
+		},
+		{
+			"italian": "cucina",
+			"english": "kitchen"
+		},
+		{
+			"italian": "principio",
+			"english": "principle"
+		},
+		{
+			"italian": "parente",
+			"english": "relative"
+		},
+		{
+			"italian": "vendita",
+			"english": "sale"
+		},
+		{
+			"italian": "strada",
+			"english": "street"
+		},
+		{
+			"italian": "minimo",
+			"english": "minimum"
+		},
+		{
+			"italian": "il percorso",
+			"english": "path"
+		},
+		{
+			"italian": "mare",
+			"english": "sea"
+		},
+		{
+			"italian": "Sud",
+			"english": "south"
+		},
+		{
+			"italian": "stato",
+			"english": "status"
+		},
+		{
+			"italian": "fiducia",
+			"english": "confidence"
+		},
+		{
+			"italian": "figlia",
+			"english": "daughter"
+		},
+		{
+			"italian": "grado",
+			"english": "degree"
+		},
+		{
+			"italian": "dovere",
+			"english": "duty"
+		},
+		{
+			"italian": "ora",
+			"english": "hour"
+		},
+		{
+			"italian": "sostanza",
+			"english": "substance"
+		},
+		{
+			"italian": "pomeriggio",
+			"english": "afternoon"
+		},
+		{
+			"italian": "considerazione",
+			"english": "consideration"
+		},
+		{
+			"italian": "oro",
+			"english": "gold"
+		},
+		{
+			"italian": "missione",
+			"english": "mission"
+		},
+		{
+			"italian": "porta",
+			"english": "door"
+		},
+		{
+			"italian": "est",
+			"english": "east"
+		},
+		{
+			"italian": "maniera",
+			"english": "manner"
+		},
+		{
+			"italian": "incontro",
+			"english": "meeting"
+		},
+		{
+			"italian": "parcheggio",
+			"english": "parking"
+		},
+		{
+			"italian": "routine",
+			"english": "routine"
+		},
+		{
+			"italian": "nuoto",
+			"english": "swimming"
+		},
+		{
+			"italian": "linea aerea",
+			"english": "airline"
+		},
+		{
+			"italian": "progettista",
+			"english": "designer"
+		},
+		{
+			"italian": "Emergenza",
+			"english": "emergency"
+		},
+		{
+			"italian": "sera",
+			"english": "evening"
+		},
+		{
+			"italian": "estensione",
+			"english": "extension"
+		},
+		{
+			"italian": "orrore",
+			"english": "horror"
+		},
+		{
+			"italian": "montagna",
+			"english": "mountain"
+		},
+		{
+			"italian": "paziente",
+			"english": "patient"
+		},
+		{
+			"italian": "sollievo",
+			"english": "relief"
+		},
+		{
+			"italian": "turista",
+			"english": "tourist"
+		},
+		{
+			"italian": "ovest",
+			"english": "west"
+		},
+		{
+			"italian": "a parte",
+			"english": "aside"
+		},
+		{
+			"italian": "fratello",
+			"english": "brother"
+		},
+		{
+			"italian": "esperto",
+			"english": "expert"
+		},
+		{
+			"italian": "Dio",
+			"english": "god"
+		},
+		{
+			"italian": "nativo",
+			"english": "native"
+		},
+		{
+			"italian": "apertura",
+			"english": "opening"
+		},
+		{
+			"italian": "ragazzo",
+			"english": "boy"
+		},
+		{
+			"italian": "specialista",
+			"english": "specialist"
+		},
+		{
+			"italian": "amaro",
+			"english": "bitter"
+		},
+		{
+			"italian": "inferno",
+			"english": "hell"
+		},
+		{
+			"italian": "incidente",
+			"english": "incident"
+		},
+		{
+			"italian": "residente",
+			"english": "resident"
+		},
+		{
+			"italian": "un",
+			"english": "a"
+		},
+		{
+			"italian": "tu",
+			"english": "you"
+		},
+		{
+			"italian": "esso",
+			"english": "it"
+		},
+		{
+			"italian": "può",
+			"english": "can"
+		},
+		{
+			"italian": "volere",
+			"english": "will"
+		},
+		{
+			"italian": "Se",
+			"english": "if"
+		},
+		{
+			"italian": "uno",
+			"english": "one"
+		},
+		{
+			"italian": "molti",
+			"english": "many"
+		},
+		{
+			"italian": "maggior parte",
+			"english": "most"
+		},
+		{
+			"italian": "altro",
+			"english": "other"
+		},
+		{
+			"italian": "bene",
+			"english": "good"
+		},
+		{
+			"italian": "grande",
+			"english": "great"
+		},
+		{
+			"italian": "pochi",
+			"english": "few"
+		},
+		{
+			"italian": "potrebbe",
+			"english": "might"
+		},
+		{
+			"italian": "ancora",
+			"english": "still"
+		},
+		{
+			"italian": "pubblico",
+			"english": "public"
+		},
+		{
+			"italian": "umano",
+			"english": "human"
+		},
+		{
+			"italian": "del posto",
+			"english": "local"
+		},
+		{
+			"italian": "generale",
+			"english": "general"
+		},
+		{
+			"italian": "lei",
+			"english": "she"
+		},
+		{
+			"italian": "specifica",
+			"english": "specific"
+		},
+		{
+			"italian": "lungo",
+			"english": "long"
+		},
+		{
+			"italian": "alto",
+			"english": "high"
+		},
+		{
+			"italian": "stasera",
+			"english": "tonight"
+		},
+		{
+			"italian": "Comune",
+			"english": "common"
+		},
+		{
+			"italian": "semplice",
+			"english": "simple"
+		},
+		{
+			"italian": "passato",
+			"english": "past"
+		},
+		{
+			"italian": "grande",
+			"english": "big"
+		},
+		{
+			"italian": "possibile",
+			"english": "possible"
+		},
+		{
+			"italian": "particolare",
+			"english": "particular"
+		},
+		{
+			"italian": "oggi",
+			"english": "today"
+		},
+		{
+			"italian": "personale",
+			"english": "personal"
+		},
+		{
+			"italian": "attuale",
+			"english": "current"
+		},
+		{
+			"italian": "nazionale",
+			"english": "national"
+		},
+		{
+			"italian": "naturale",
+			"english": "natural"
+		},
+		{
+			"italian": "fisico",
+			"english": "physical"
+		},
+		{
+			"italian": "secondo",
+			"english": "second"
+		},
+		{
+			"italian": "individuale",
+			"english": "individual"
+		},
+		{
+			"italian": "principale",
+			"english": "main"
+		},
+		{
+			"italian": "potenziale",
+			"english": "potential"
+		},
+		{
+			"italian": "professionale",
+			"english": "professional"
+		},
+		{
+			"italian": "internazionale",
+			"english": "international"
+		},
+		{
+			"italian": "alternativa",
+			"english": "alternative"
+		},
+		{
+			"italian": "a seguire",
+			"english": "following"
+		},
+		{
+			"italian": "speciale",
+			"english": "special"
+		},
+		{
+			"italian": "lavoro",
+			"english": "working"
+		},
+		{
+			"italian": "intero",
+			"english": "whole"
+		},
+		{
+			"italian": "freddo",
+			"english": "cold"
+		},
+		{
+			"italian": "commerciale",
+			"english": "commercial"
+		},
+		{
+			"italian": "Basso",
+			"english": "low"
+		},
+		{
+			"italian": "primario",
+			"english": "primary"
+		},
+		{
+			"italian": "di valore",
+			"english": "worth"
+		},
+		{
+			"italian": "necessario",
+			"english": "necessary"
+		},
+		{
+			"italian": "positivo",
+			"english": "positive"
+		},
+		{
+			"italian": "creativo",
+			"english": "creative"
+		},
+		{
+			"italian": "lieto",
+			"english": "glad"
+		},
+		{
+			"italian": "dovuto",
+			"english": "due"
+		},
+		{
+			"italian": "efficace",
+			"english": "effective"
+		},
+		{
+			"italian": "in mezzo",
+			"english": "middle"
+		},
+		{
+			"italian": "regolare",
+			"english": "regular"
+		},
+		{
+			"italian": "indipendente",
+			"english": "independent"
+		},
+		{
+			"italian": "originale",
+			"english": "original"
+		},
+		{
+			"italian": "bellissimo",
+			"english": "beautiful"
+		},
+		{
+			"italian": "attivo",
+			"english": "active"
+		},
+		{
+			"italian": "negativo",
+			"english": "negative"
+		},
+		{
+			"italian": "sicuro",
+			"english": "safe"
+		},
+		{
+			"italian": "visivo",
+			"english": "visual"
+		},
+		{
+			"italian": "al di là",
+			"english": "beyond"
+		},
+		{
+			"italian": "junior",
+			"english": "junior"
+		},
+		{
+			"italian": "unico",
+			"english": "unique"
+		},
+		{
+			"italian": "qualsiasi cosa",
+			"english": "anything"
+		},
+		{
+			"italian": "classico",
+			"english": "classic"
+		},
+		{
+			"italian": "finale",
+			"english": "final"
+		},
+		{
+			"italian": "privato",
+			"english": "private"
+		},
+		{
+			"italian": "occidentale",
+			"english": "western"
+		},
+		{
+			"italian": "familiare",
+			"english": "familiar"
+		},
+		{
+			"italian": "ufficiale",
+			"english": "official"
+		},
+		{
+			"italian": "ampio",
+			"english": "broad"
+		},
+		{
+			"italian": "confortevole",
+			"english": "comfortable"
+		},
+		{
+			"italian": "può essere",
+			"english": "maybe"
+		},
+		{
+			"italian": "ricco",
+			"english": "rich"
+		},
+		{
+			"italian": "giovane",
+			"english": "young"
+		},
+		{
+			"italian": "pesante",
+			"english": "heavy"
+		},
+		{
+			"italian": "Ciao",
+			"english": "hello"
+		},
+		{
+			"italian": "prezioso",
+			"english": "valuable"
+		},
+		{
+			"italian": "principale",
+			"english": "leading"
+		},
+		{
+			"italian": "normale",
+			"english": "normal"
+		},
+		{
+			"italian": "segreto",
+			"english": "secret"
+		},
+		{
+			"italian": "difficile",
+			"english": "tough"
+		},
+		{
+			"italian": "in profondità",
+			"english": "deep"
+		},
+		{
+			"italian": "obbiettivo",
+			"english": "objective"
+		},
+		{
+			"italian": "chimico",
+			"english": "chemical"
+		},
+		{
+			"italian": "estremo",
+			"english": "extreme"
+		},
+		{
+			"italian": "formale",
+			"english": "formal"
+		},
+		{
+			"italian": "di fronte",
+			"english": "opposite"
+		},
+		{
+			"italian": "a distanza",
+			"english": "remote"
+		},
+		{
+			"italian": "vasto",
+			"english": "vast"
+		},
+		{
+			"italian": "da qualche parte",
+			"english": "somewhere"
+		},
+		{
+			"italian": "dovunque",
+			"english": "anywhere"
+		},
+		{
+			"italian": "buio",
+			"english": "dark"
+		},
+		{
+			"italian": "interno",
+			"english": "internal"
+		},
+		{
+			"italian": "sensibile",
+			"english": "sensitive"
+		},
+		{
+			"italian": "costante",
+			"english": "constant"
+		},
+		{
+			"italian": "crudo",
+			"english": "raw"
+		},
+		{
+			"italian": "morbido",
+			"english": "soft"
+		},
+		{
+			"italian": "solido",
+			"english": "solid"
+		},
+		{
+			"italian": "strano",
+			"english": "weird"
+		},
+		{
+			"italian": "annuale",
+			"english": "annual"
+		},
+		{
+			"italian": "defunto",
+			"english": "dead"
+		},
+		{
+			"italian": "per sempre",
+			"english": "forever"
+		},
+		{
+			"italian": "nessuno",
+			"english": "nobody"
+		},
+		{
+			"italian": "tondo",
+			"english": "round"
+		},
+		{
+			"italian": "mentre",
+			"english": "whereas"
+		},
+		{
+			"italian": "equivalente",
+			"english": "equivalent"
+		},
+		{
+			"italian": "spirituale",
+			"english": "spiritual"
+		},
+		{
+			"italian": "adulto",
+			"english": "adult"
+		},
+		{
+			"italian": "pazzo",
+			"english": "crazy"
+		},
+		{
+			"italian": "precedente",
+			"english": "prior"
+		},
+		{
+			"italian": "ruvido",
+			"english": "rough"
+		},
+		{
+			"italian": "triste",
+			"english": "sad"
+		},
+		{
+			"italian": "malato",
+			"english": "sick"
+		},
+		{
+			"italian": "esterno",
+			"english": "external"
+		},
+		{
+			"italian": "illegale",
+			"english": "illegal"
+		},
+		{
+			"italian": "mobile",
+			"english": "mobile"
+		},
+		{
+			"italian": "cattiva",
+			"english": "nasty"
+		},
+		{
+			"italian": "ordinario",
+			"english": "ordinary"
+		},
+		{
+			"italian": "reale",
+			"english": "royal"
+		},
+		{
+			"italian": "anziano",
+			"english": "senior"
+		},
+		{
+			"italian": "superiore",
+			"english": "upper"
+		},
+		{
+			"italian": "dipendente",
+			"english": "dependent"
+		},
+		{
+			"italian": "divertente",
+			"english": "funny"
+		},
+		{
+			"italian": "dolce",
+			"english": "sweet"
+		},
+		{
+			"italian": "di sopra",
+			"english": "upstairs"
+		},
+		{
+			"italian": "solito",
+			"english": "usual"
+		},
+		{
+			"italian": "all'estero",
+			"english": "abroad"
+		},
+		{
+			"italian": "grande",
+			"english": "grand"
+		},
+		{
+			"italian": "maschio",
+			"english": "male"
+		},
+		{
+			"italian": "nessuno",
+			"english": "anybody"
+		},
+		{
+			"italian": "brillante",
+			"english": "brilliant"
+		},
+		{
+			"italian": "caro",
+			"english": "dear"
+		},
+		{
+			"italian": "ubriaco",
+			"english": "drunk"
+		},
+		{
+			"italian": "femmina",
+			"english": "female"
+		},
+		{
+			"italian": "inevitabile",
+			"english": "inevitable"
+		},
+		{
+			"italian": "pulito",
+			"english": "neat"
+		},
+		{
+			"italian": "rappresentante",
+			"english": "representative"
+		},
+		{
+			"italian": "sciocco",
+			"english": "silly"
+		},
+		{
+			"italian": "stupido",
+			"english": "stupid"
+		},
+		{
+			"italian": "temporaneo",
+			"english": "temporary"
+		},
+		{
+			"italian": "Domani",
+			"english": "tomorrow"
+		},
+		{
+			"italian": "ieri",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 525 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"japanese": "人",
+			"english": "people"
+		},
+		{
+			"japanese": "歴史",
+			"english": "history"
+		},
+		{
+			"japanese": "方法",
+			"english": "way"
+		},
+		{
+			"japanese": "アート",
+			"english": "art"
+		},
+		{
+			"japanese": "世界",
+			"english": "world"
+		},
+		{
+			"japanese": "情報",
+			"english": "information"
+		},
+		{
+			"japanese": "地図",
+			"english": "map"
+		},
+		{
+			"japanese": "二",
+			"english": "two"
+		},
+		{
+			"japanese": "家族",
+			"english": "family"
+		},
+		{
+			"japanese": "政府",
+			"english": "government"
+		},
+		{
+			"japanese": "健康",
+			"english": "health"
+		},
+		{
+			"japanese": "システム",
+			"english": "system"
+		},
+		{
+			"japanese": "コンピューター",
+			"english": "computer"
+		},
+		{
+			"japanese": "お肉",
+			"english": "meat"
+		},
+		{
+			"japanese": "年",
+			"english": "year"
+		},
+		{
+			"japanese": "感謝",
+			"english": "thanks"
+		},
+		{
+			"japanese": "音楽",
+			"english": "music"
+		},
+		{
+			"japanese": "人",
+			"english": "person"
+		},
+		{
+			"japanese": "読書",
+			"english": "reading"
+		},
+		{
+			"japanese": "方法",
+			"english": "method"
+		},
+		{
+			"japanese": "データ",
+			"english": "data"
+		},
+		{
+			"japanese": "フード",
+			"english": "food"
+		},
+		{
+			"japanese": "理解",
+			"english": "understanding"
+		},
+		{
+			"japanese": "理論",
+			"english": "theory"
+		},
+		{
+			"japanese": "法律",
+			"english": "law"
+		},
+		{
+			"japanese": "鳥",
+			"english": "bird"
+		},
+		{
+			"japanese": "文献",
+			"english": "literature"
+		},
+		{
+			"japanese": "問題",
+			"english": "problem"
+		},
+		{
+			"japanese": "ソフトウェア",
+			"english": "software"
+		},
+		{
+			"japanese": "コントロール",
+			"english": "control"
+		},
+		{
+			"japanese": "知識",
+			"english": "knowledge"
+		},
+		{
+			"japanese": "パワー",
+			"english": "power"
+		},
+		{
+			"japanese": "能力",
+			"english": "ability"
+		},
+		{
+			"japanese": "経済",
+			"english": "economics"
+		},
+		{
+			"japanese": "愛",
+			"english": "love"
+		},
+		{
+			"japanese": "インターネット",
+			"english": "internet"
+		},
+		{
+			"japanese": "テレビ",
+			"english": "television"
+		},
+		{
+			"japanese": "科学",
+			"english": "science"
+		},
+		{
+			"japanese": "ライブラリ",
+			"english": "library"
+		},
+		{
+			"japanese": "自然",
+			"english": "nature"
+		},
+		{
+			"japanese": "事実",
+			"english": "fact"
+		},
+		{
+			"japanese": "製品",
+			"english": "product"
+		},
+		{
+			"japanese": "アイディア",
+			"english": "idea"
+		},
+		{
+			"japanese": "温度",
+			"english": "temperature"
+		},
+		{
+			"japanese": "投資",
+			"english": "investment"
+		},
+		{
+			"japanese": "エリア",
+			"english": "area"
+		},
+		{
+			"japanese": "社会",
+			"english": "society"
+		},
+		{
+			"japanese": "アクティビティ",
+			"english": "activity"
+		},
+		{
+			"japanese": "ストーリー",
+			"english": "story"
+		},
+		{
+			"japanese": "産業",
+			"english": "industry"
+		},
+		{
+			"japanese": "メディア",
+			"english": "media"
+		},
+		{
+			"japanese": "事",
+			"english": "thing"
+		},
+		{
+			"japanese": "オーブン",
+			"english": "oven"
+		},
+		{
+			"japanese": "コミュニティ",
+			"english": "community"
+		},
+		{
+			"japanese": "定義",
+			"english": "definition"
+		},
+		{
+			"japanese": "安全性",
+			"english": "safety"
+		},
+		{
+			"japanese": "品質",
+			"english": "quality"
+		},
+		{
+			"japanese": "開発",
+			"english": "development"
+		},
+		{
+			"japanese": "言語",
+			"english": "language"
+		},
+		{
+			"japanese": "管理",
+			"english": "management"
+		},
+		{
+			"japanese": "プレーヤー",
+			"english": "player"
+		},
+		{
+			"japanese": "多様",
+			"english": "variety"
+		},
+		{
+			"japanese": "ビデオ",
+			"english": "video"
+		},
+		{
+			"japanese": "週間",
+			"english": "week"
+		},
+		{
+			"japanese": "セキュリティ",
+			"english": "security"
+		},
+		{
+			"japanese": "国",
+			"english": "country"
+		},
+		{
+			"japanese": "試験",
+			"english": "exam"
+		},
+		{
+			"japanese": "映画",
+			"english": "movie"
+		},
+		{
+			"japanese": "組織",
+			"english": "organization"
+		},
+		{
+			"japanese": "装置",
+			"english": "equipment"
+		},
+		{
+			"japanese": "物理",
+			"english": "physics"
+		},
+		{
+			"japanese": "分析",
+			"english": "analysis"
+		},
+		{
+			"japanese": "ポリシー",
+			"english": "policy"
+		},
+		{
+			"japanese": "シリーズ",
+			"english": "series"
+		},
+		{
+			"japanese": "思想",
+			"english": "thought"
+		},
+		{
+			"japanese": "基本",
+			"english": "basis"
+		},
+		{
+			"japanese": "彼氏",
+			"english": "boyfriend"
+		},
+		{
+			"japanese": "方向",
+			"english": "direction"
+		},
+		{
+			"japanese": "戦略",
+			"english": "strategy"
+		},
+		{
+			"japanese": "技術",
+			"english": "technology"
+		},
+		{
+			"japanese": "軍",
+			"english": "army"
+		},
+		{
+			"japanese": "カメラ",
+			"english": "camera"
+		},
+		{
+			"japanese": "自由",
+			"english": "freedom"
+		},
+		{
+			"japanese": "紙",
+			"english": "paper"
+		},
+		{
+			"japanese": "環境",
+			"english": "environment"
+		},
+		{
+			"japanese": "子",
+			"english": "child"
+		},
+		{
+			"japanese": "インスタンス",
+			"english": "instance"
+		},
+		{
+			"japanese": "月",
+			"english": "month"
+		},
+		{
+			"japanese": "真実",
+			"english": "truth"
+		},
+		{
+			"japanese": "マーケティング",
+			"english": "marketing"
+		},
+		{
+			"japanese": "大学",
+			"english": "university"
+		},
+		{
+			"japanese": "書き込み",
+			"english": "writing"
+		},
+		{
+			"japanese": "記事",
+			"english": "article"
+		},
+		{
+			"japanese": "部門",
+			"english": "department"
+		},
+		{
+			"japanese": "差",
+			"english": "difference"
+		},
+		{
+			"japanese": "ゴール",
+			"english": "goal"
+		},
+		{
+			"japanese": "ニュース",
+			"english": "news"
+		},
+		{
+			"japanese": "聴衆",
+			"english": "audience"
+		},
+		{
+			"japanese": "釣り",
+			"english": "fishing"
+		},
+		{
+			"japanese": "成長",
+			"english": "growth"
+		},
+		{
+			"japanese": "所得",
+			"english": "income"
+		},
+		{
+			"japanese": "結婚",
+			"english": "marriage"
+		},
+		{
+			"japanese": "ユーザー",
+			"english": "user"
+		},
+		{
+			"japanese": "組み合わせ",
+			"english": "combination"
+		},
+		{
+			"japanese": "失敗",
+			"english": "failure"
+		},
+		{
+			"japanese": "意味",
+			"english": "meaning"
+		},
+		{
+			"japanese": "医学",
+			"english": "medicine"
+		},
+		{
+			"japanese": "哲学",
+			"english": "philosophy"
+		},
+		{
+			"japanese": "先生",
+			"english": "teacher"
+		},
+		{
+			"japanese": "コミュニケーション",
+			"english": "communication"
+		},
+		{
+			"japanese": "夜",
+			"english": "night"
+		},
+		{
+			"japanese": "化学",
+			"english": "chemistry"
+		},
+		{
+			"japanese": "疾患",
+			"english": "disease"
+		},
+		{
+			"japanese": "ディスク",
+			"english": "disk"
+		},
+		{
+			"japanese": "エネルギー",
+			"english": "energy"
+		},
+		{
+			"japanese": "国家",
+			"english": "nation"
+		},
+		{
+			"japanese": "道路",
+			"english": "road"
+		},
+		{
+			"japanese": "役割",
+			"english": "role"
+		},
+		{
+			"japanese": "スープ",
+			"english": "soup"
+		},
+		{
+			"japanese": "広告",
+			"english": "advertising"
+		},
+		{
+			"japanese": "ロケーション",
+			"english": "location"
+		},
+		{
+			"japanese": "成功",
+			"english": "success"
+		},
+		{
+			"japanese": "添加",
+			"english": "addition"
+		},
+		{
+			"japanese": "アパート",
+			"english": "apartment"
+		},
+		{
+			"japanese": "教育",
+			"english": "education"
+		},
+		{
+			"japanese": "数学",
+			"english": "math"
+		},
+		{
+			"japanese": "瞬間",
+			"english": "moment"
+		},
+		{
+			"japanese": "ペインティング",
+			"english": "painting"
+		},
+		{
+			"japanese": "政治",
+			"english": "politics"
+		},
+		{
+			"japanese": "注意",
+			"english": "attention"
+		},
+		{
+			"japanese": "決定",
+			"english": "decision"
+		},
+		{
+			"japanese": "イベント",
+			"english": "event"
+		},
+		{
+			"japanese": "プロパティ",
+			"english": "property"
+		},
+		{
+			"japanese": "ショッピング",
+			"english": "shopping"
+		},
+		{
+			"japanese": "学生",
+			"english": "student"
+		},
+		{
+			"japanese": "木材",
+			"english": "wood"
+		},
+		{
+			"japanese": "コンペ",
+			"english": "competition"
+		},
+		{
+			"japanese": "分布",
+			"english": "distribution"
+		},
+		{
+			"japanese": "エンターテインメント",
+			"english": "entertainment"
+		},
+		{
+			"japanese": "オフィス",
+			"english": "office"
+		},
+		{
+			"japanese": "人口",
+			"english": "population"
+		},
+		{
+			"japanese": "大統領",
+			"english": "president"
+		},
+		{
+			"japanese": "単位",
+			"english": "unit"
+		},
+		{
+			"japanese": "カテゴリー",
+			"english": "category"
+		},
+		{
+			"japanese": "シガレット",
+			"english": "cigarette"
+		},
+		{
+			"japanese": "コンテキスト",
+			"english": "context"
+		},
+		{
+			"japanese": "導入",
+			"english": "introduction"
+		},
+		{
+			"japanese": "機会",
+			"english": "opportunity"
+		},
+		{
+			"japanese": "パフォーマンス",
+			"english": "performance"
+		},
+		{
+			"japanese": "ドライバ",
+			"english": "driver"
+		},
+		{
+			"japanese": "フライト",
+			"english": "flight"
+		},
+		{
+			"japanese": "長さ",
+			"english": "length"
+		},
+		{
+			"japanese": "マガジン",
+			"english": "magazine"
+		},
+		{
+			"japanese": "新聞",
+			"english": "newspaper"
+		},
+		{
+			"japanese": "関係",
+			"english": "relationship"
+		},
+		{
+			"japanese": "教え",
+			"english": "teaching"
+		},
+		{
+			"japanese": "細胞",
+			"english": "cell"
+		},
+		{
+			"japanese": "ディーラー",
+			"english": "dealer"
+		},
+		{
+			"japanese": "認定",
+			"english": "finding"
+		},
+		{
+			"japanese": "湖",
+			"english": "lake"
+		},
+		{
+			"japanese": "メンバー",
+			"english": "member"
+		},
+		{
+			"japanese": "メッセージ",
+			"english": "message"
+		},
+		{
+			"japanese": "電話",
+			"english": "phone"
+		},
+		{
+			"japanese": "シーン",
+			"english": "scene"
+		},
+		{
+			"japanese": "外観",
+			"english": "appearance"
+		},
+		{
+			"japanese": "協会",
+			"english": "association"
+		},
+		{
+			"japanese": "概念",
+			"english": "concept"
+		},
+		{
+			"japanese": "顧客",
+			"english": "customer"
+		},
+		{
+			"japanese": "死",
+			"english": "death"
+		},
+		{
+			"japanese": "討論",
+			"english": "discussion"
+		},
+		{
+			"japanese": "ハウジング",
+			"english": "housing"
+		},
+		{
+			"japanese": "インフレーション",
+			"english": "inflation"
+		},
+		{
+			"japanese": "保険",
+			"english": "insurance"
+		},
+		{
+			"japanese": "気分",
+			"english": "mood"
+		},
+		{
+			"japanese": "女性",
+			"english": "woman"
+		},
+		{
+			"japanese": "助言",
+			"english": "advice"
+		},
+		{
+			"japanese": "血液",
+			"english": "blood"
+		},
+		{
+			"japanese": "努力",
+			"english": "effort"
+		},
+		{
+			"japanese": "表現",
+			"english": "expression"
+		},
+		{
+			"japanese": "重要性",
+			"english": "importance"
+		},
+		{
+			"japanese": "意見",
+			"english": "opinion"
+		},
+		{
+			"japanese": "支払い",
+			"english": "payment"
+		},
+		{
+			"japanese": "現実",
+			"english": "reality"
+		},
+		{
+			"japanese": "責任",
+			"english": "responsibility"
+		},
+		{
+			"japanese": "状況",
+			"english": "situation"
+		},
+		{
+			"japanese": "技能",
+			"english": "skill"
+		},
+		{
+			"japanese": "ステートメント",
+			"english": "statement"
+		},
+		{
+			"japanese": "富",
+			"english": "wealth"
+		},
+		{
+			"japanese": "応用",
+			"english": "application"
+		},
+		{
+			"japanese": "シティ",
+			"english": "city"
+		},
+		{
+			"japanese": "郡",
+			"english": "county"
+		},
+		{
+			"japanese": "深さ",
+			"english": "depth"
+		},
+		{
+			"japanese": "エステート",
+			"english": "estate"
+		},
+		{
+			"japanese": "財団",
+			"english": "foundation"
+		},
+		{
+			"japanese": "祖母",
+			"english": "grandmother"
+		},
+		{
+			"japanese": "ハート",
+			"english": "heart"
+		},
+		{
+			"japanese": "視点",
+			"english": "perspective"
+		},
+		{
+			"japanese": "写真",
+			"english": "photo"
+		},
+		{
+			"japanese": "レシピ",
+			"english": "recipe"
+		},
+		{
+			"japanese": "スタジオ",
+			"english": "studio"
+		},
+		{
+			"japanese": "トピック",
+			"english": "topic"
+		},
+		{
+			"japanese": "コレクション",
+			"english": "collection"
+		},
+		{
+			"japanese": "うつ病",
+			"english": "depression"
+		},
+		{
+			"japanese": "想像力",
+			"english": "imagination"
+		},
+		{
+			"japanese": "情熱",
+			"english": "passion"
+		},
+		{
+			"japanese": "パーセンテージ",
+			"english": "percentage"
+		},
+		{
+			"japanese": "リソース",
+			"english": "resource"
+		},
+		{
+			"japanese": "設定",
+			"english": "setting"
+		},
+		{
+			"japanese": "広告",
+			"english": "ad"
+		},
+		{
+			"japanese": "代理店",
+			"english": "agency"
+		},
+		{
+			"japanese": "カレッジ",
+			"english": "college"
+		},
+		{
+			"japanese": "接続",
+			"english": "connection"
+		},
+		{
+			"japanese": "批判",
+			"english": "criticism"
+		},
+		{
+			"japanese": "債務",
+			"english": "debt"
+		},
+		{
+			"japanese": "説明",
+			"english": "description"
+		},
+		{
+			"japanese": "メモリ",
+			"english": "memory"
+		},
+		{
+			"japanese": "忍耐",
+			"english": "patience"
+		},
+		{
+			"japanese": "秘書",
+			"english": "secretary"
+		},
+		{
+			"japanese": "溶液",
+			"english": "solution"
+		},
+		{
+			"japanese": "管理",
+			"english": "administration"
+		},
+		{
+			"japanese": "アスペクト",
+			"english": "aspect"
+		},
+		{
+			"japanese": "姿勢",
+			"english": "attitude"
+		},
+		{
+			"japanese": "ディレクター",
+			"english": "director"
+		},
+		{
+			"japanese": "人",
+			"english": "personality"
+		},
+		{
+			"japanese": "心理学",
+			"english": "psychology"
+		},
+		{
+			"japanese": "勧告",
+			"english": "recommendation"
+		},
+		{
+			"japanese": "応答",
+			"english": "response"
+		},
+		{
+			"japanese": "選択",
+			"english": "selection"
+		},
+		{
+			"japanese": "ストレージ",
+			"english": "storage"
+		},
+		{
+			"japanese": "バージョン",
+			"english": "version"
+		},
+		{
+			"japanese": "アルコール",
+			"english": "alcohol"
+		},
+		{
+			"japanese": "引数",
+			"english": "argument"
+		},
+		{
+			"japanese": "苦情",
+			"english": "complaint"
+		},
+		{
+			"japanese": "契約する",
+			"english": "contract"
+		},
+		{
+			"japanese": "強調",
+			"english": "emphasis"
+		},
+		{
+			"japanese": "高速道路",
+			"english": "highway"
+		},
+		{
+			"japanese": "損失",
+			"english": "loss"
+		},
+		{
+			"japanese": "メンバーシップ",
+			"english": "membership"
+		},
+		{
+			"japanese": "所持",
+			"english": "possession"
+		},
+		{
+			"japanese": "準備",
+			"english": "preparation"
+		},
+		{
+			"japanese": "ステーキ",
+			"english": "steak"
+		},
+		{
+			"japanese": "連合",
+			"english": "union"
+		},
+		{
+			"japanese": "契約",
+			"english": "agreement"
+		},
+		{
+			"japanese": "癌",
+			"english": "cancer"
+		},
+		{
+			"japanese": "通貨",
+			"english": "currency"
+		},
+		{
+			"japanese": "雇用",
+			"english": "employment"
+		},
+		{
+			"japanese": "エンジニアリング",
+			"english": "engineering"
+		},
+		{
+			"japanese": "エントリ",
+			"english": "entry"
+		},
+		{
+			"japanese": "インタラクション",
+			"english": "interaction"
+		},
+		{
+			"japanese": "混合",
+			"english": "mixture"
+		},
+		{
+			"japanese": "好み",
+			"english": "preference"
+		},
+		{
+			"japanese": "領域",
+			"english": "region"
+		},
+		{
+			"japanese": "共和国",
+			"english": "republic"
+		},
+		{
+			"japanese": "伝統",
+			"english": "tradition"
+		},
+		{
+			"japanese": "ウイルス",
+			"english": "virus"
+		},
+		{
+			"japanese": "俳優",
+			"english": "actor"
+		},
+		{
+			"japanese": "教室",
+			"english": "classroom"
+		},
+		{
+			"japanese": "配信",
+			"english": "delivery"
+		},
+		{
+			"japanese": "デバイス",
+			"english": "device"
+		},
+		{
+			"japanese": "困難",
+			"english": "difficulty"
+		},
+		{
+			"japanese": "ドラマ",
+			"english": "drama"
+		},
+		{
+			"japanese": "選挙",
+			"english": "election"
+		},
+		{
+			"japanese": "エンジン",
+			"english": "engine"
+		},
+		{
+			"japanese": "フットボール",
+			"english": "football"
+		},
+		{
+			"japanese": "ガイダンス",
+			"english": "guidance"
+		},
+		{
+			"japanese": "ホテル",
+			"english": "hotel"
+		},
+		{
+			"japanese": "オーナー",
+			"english": "owner"
+		},
+		{
+			"japanese": "優先",
+			"english": "priority"
+		},
+		{
+			"japanese": "保護",
+			"english": "protection"
+		},
+		{
+			"japanese": "提案",
+			"english": "suggestion"
+		},
+		{
+			"japanese": "テンション",
+			"english": "tension"
+		},
+		{
+			"japanese": "変化",
+			"english": "variation"
+		},
+		{
+			"japanese": "不安",
+			"english": "anxiety"
+		},
+		{
+			"japanese": "雰囲気",
+			"english": "atmosphere"
+		},
+		{
+			"japanese": "認知度",
+			"english": "awareness"
+		},
+		{
+			"japanese": "浴",
+			"english": "bath"
+		},
+		{
+			"japanese": "パン",
+			"english": "bread"
+		},
+		{
+			"japanese": "候補者",
+			"english": "candidate"
+		},
+		{
+			"japanese": "気候",
+			"english": "climate"
+		},
+		{
+			"japanese": "比較",
+			"english": "comparison"
+		},
+		{
+			"japanese": "混乱",
+			"english": "confusion"
+		},
+		{
+			"japanese": "建設",
+			"english": "construction"
+		},
+		{
+			"japanese": "エレベーター",
+			"english": "elevator"
+		},
+		{
+			"japanese": "感情",
+			"english": "emotion"
+		},
+		{
+			"japanese": "従業員",
+			"english": "employee"
+		},
+		{
+			"japanese": "雇用者",
+			"english": "employer"
+		},
+		{
+			"japanese": "ゲスト",
+			"english": "guest"
+		},
+		{
+			"japanese": "高さ",
+			"english": "height"
+		},
+		{
+			"japanese": "リーダーシップ",
+			"english": "leadership"
+		},
+		{
+			"japanese": "モール",
+			"english": "mall"
+		},
+		{
+			"japanese": "マネージャー",
+			"english": "manager"
+		},
+		{
+			"japanese": "操作",
+			"english": "operation"
+		},
+		{
+			"japanese": "録音",
+			"english": "recording"
+		},
+		{
+			"japanese": "サンプル",
+			"english": "sample"
+		},
+		{
+			"japanese": "交通",
+			"english": "transportation"
+		},
+		{
+			"japanese": "慈善",
+			"english": "charity"
+		},
+		{
+			"japanese": "いとこ",
+			"english": "cousin"
+		},
+		{
+			"japanese": "災害",
+			"english": "disaster"
+		},
+		{
+			"japanese": "編集者",
+			"english": "editor"
+		},
+		{
+			"japanese": "効率",
+			"english": "efficiency"
+		},
+		{
+			"japanese": "興奮",
+			"english": "excitement"
+		},
+		{
+			"japanese": "エクステント",
+			"english": "extent"
+		},
+		{
+			"japanese": "フィードバック",
+			"english": "feedback"
+		},
+		{
+			"japanese": "ギター",
+			"english": "guitar"
+		},
+		{
+			"japanese": "宿題",
+			"english": "homework"
+		},
+		{
+			"japanese": "リーダー",
+			"english": "leader"
+		},
+		{
+			"japanese": "ママ",
+			"english": "mom"
+		},
+		{
+			"japanese": "結果",
+			"english": "outcome"
+		},
+		{
+			"japanese": "許可",
+			"english": "permission"
+		},
+		{
+			"japanese": "プレゼン",
+			"english": "presentation"
+		},
+		{
+			"japanese": "プロモーション",
+			"english": "promotion"
+		},
+		{
+			"japanese": "反射",
+			"english": "reflection"
+		},
+		{
+			"japanese": "冷蔵庫",
+			"english": "refrigerator"
+		},
+		{
+			"japanese": "解決",
+			"english": "resolution"
+		},
+		{
+			"japanese": "収入",
+			"english": "revenue"
+		},
+		{
+			"japanese": "セッション",
+			"english": "session"
+		},
+		{
+			"japanese": "歌手",
+			"english": "singer"
+		},
+		{
+			"japanese": "テニス",
+			"english": "tennis"
+		},
+		{
+			"japanese": "バスケット",
+			"english": "basket"
+		},
+		{
+			"japanese": "ボーナス",
+			"english": "bonus"
+		},
+		{
+			"japanese": "キャビネット",
+			"english": "cabinet"
+		},
+		{
+			"japanese": "幼年時代",
+			"english": "childhood"
+		},
+		{
+			"japanese": "教会",
+			"english": "church"
+		},
+		{
+			"japanese": "服",
+			"english": "clothes"
+		},
+		{
+			"japanese": "コー​​ヒー",
+			"english": "coffee"
+		},
+		{
+			"japanese": "ディナー",
+			"english": "dinner"
+		},
+		{
+			"japanese": "お絵かき",
+			"english": "drawing"
+		},
+		{
+			"japanese": "ヘア",
+			"english": "hair"
+		},
+		{
+			"japanese": "聴覚",
+			"english": "hearing"
+		},
+		{
+			"japanese": "イニシアチブ",
+			"english": "initiative"
+		},
+		{
+			"japanese": "判定",
+			"english": "judgment"
+		},
+		{
+			"japanese": "ラボ",
+			"english": "lab"
+		},
+		{
+			"japanese": "測定",
+			"english": "measurement"
+		},
+		{
+			"japanese": "モード",
+			"english": "mode"
+		},
+		{
+			"japanese": "泥",
+			"english": "mud"
+		},
+		{
+			"japanese": "オレンジ",
+			"english": "orange"
+		},
+		{
+			"japanese": "詩",
+			"english": "poetry"
+		},
+		{
+			"japanese": "警察",
+			"english": "police"
+		},
+		{
+			"japanese": "可能性",
+			"english": "possibility"
+		},
+		{
+			"japanese": "手順",
+			"english": "procedure"
+		},
+		{
+			"japanese": "女王",
+			"english": "queen"
+		},
+		{
+			"japanese": "比",
+			"english": "ratio"
+		},
+		{
+			"japanese": "関係",
+			"english": "relation"
+		},
+		{
+			"japanese": "レストラン",
+			"english": "restaurant"
+		},
+		{
+			"japanese": "満足",
+			"english": "satisfaction"
+		},
+		{
+			"japanese": "セクタ",
+			"english": "sector"
+		},
+		{
+			"japanese": "署名",
+			"english": "signature"
+		},
+		{
+			"japanese": "意義",
+			"english": "significance"
+		},
+		{
+			"japanese": "歌",
+			"english": "song"
+		},
+		{
+			"japanese": "歯",
+			"english": "tooth"
+		},
+		{
+			"japanese": "タウン",
+			"english": "town"
+		},
+		{
+			"japanese": "車両",
+			"english": "vehicle"
+		},
+		{
+			"japanese": "ボリューム",
+			"english": "volume"
+		},
+		{
+			"japanese": "妻",
+			"english": "wife"
+		},
+		{
+			"japanese": "事故",
+			"english": "accident"
+		},
+		{
+			"japanese": "空港",
+			"english": "airport"
+		},
+		{
+			"japanese": "任命",
+			"english": "appointment"
+		},
+		{
+			"japanese": "到着",
+			"english": "arrival"
+		},
+		{
+			"japanese": "仮定",
+			"english": "assumption"
+		},
+		{
+			"japanese": "野球",
+			"english": "baseball"
+		},
+		{
+			"japanese": "章",
+			"english": "chapter"
+		},
+		{
+			"japanese": "委員会",
+			"english": "committee"
+		},
+		{
+			"japanese": "会話",
+			"english": "conversation"
+		},
+		{
+			"japanese": "データベース",
+			"english": "database"
+		},
+		{
+			"japanese": "熱意",
+			"english": "enthusiasm"
+		},
+		{
+			"japanese": "エラー",
+			"english": "error"
+		},
+		{
+			"japanese": "説明",
+			"english": "explanation"
+		},
+		{
+			"japanese": "農家",
+			"english": "farmer"
+		},
+		{
+			"japanese": "ゲート",
+			"english": "gate"
+		},
+		{
+			"japanese": "女の子",
+			"english": "girl"
+		},
+		{
+			"japanese": "ホール",
+			"english": "hall"
+		},
+		{
+			"japanese": "歴史家",
+			"english": "historian"
+		},
+		{
+			"japanese": "病院",
+			"english": "hospital"
+		},
+		{
+			"japanese": "損傷",
+			"english": "injury"
+		},
+		{
+			"japanese": "命令",
+			"english": "instruction"
+		},
+		{
+			"japanese": "メンテナンス",
+			"english": "maintenance"
+		},
+		{
+			"japanese": "メーカー",
+			"english": "manufacturer"
+		},
+		{
+			"japanese": "お食事",
+			"english": "meal"
+		},
+		{
+			"japanese": "知覚",
+			"english": "perception"
+		},
+		{
+			"japanese": "パイ",
+			"english": "pie"
+		},
+		{
+			"japanese": "詩",
+			"english": "poem"
+		},
+		{
+			"japanese": "プレゼンス",
+			"english": "presence"
+		},
+		{
+			"japanese": "提案",
+			"english": "proposal"
+		},
+		{
+			"japanese": "受付",
+			"english": "reception"
+		},
+		{
+			"japanese": "置換",
+			"english": "replacement"
+		},
+		{
+			"japanese": "革命",
+			"english": "revolution"
+		},
+		{
+			"japanese": "川",
+			"english": "river"
+		},
+		{
+			"japanese": "息子",
+			"english": "son"
+		},
+		{
+			"japanese": "スピーチ",
+			"english": "speech"
+		},
+		{
+			"japanese": "お茶",
+			"english": "tea"
+		},
+		{
+			"japanese": "村",
+			"english": "village"
+		},
+		{
+			"japanese": "警告",
+			"english": "warning"
+		},
+		{
+			"japanese": "勝者",
+			"english": "winner"
+		},
+		{
+			"japanese": "ワーカー",
+			"english": "worker"
+		},
+		{
+			"japanese": "ライター",
+			"english": "writer"
+		},
+		{
+			"japanese": "支援",
+			"english": "assistance"
+		},
+		{
+			"japanese": "息",
+			"english": "breath"
+		},
+		{
+			"japanese": "買い手",
+			"english": "buyer"
+		},
+		{
+			"japanese": "胸",
+			"english": "chest"
+		},
+		{
+			"japanese": "チョコレート",
+			"english": "chocolate"
+		},
+		{
+			"japanese": "結論",
+			"english": "conclusion"
+		},
+		{
+			"japanese": "貢献",
+			"english": "contribution"
+		},
+		{
+			"japanese": "クッキー",
+			"english": "cookie"
+		},
+		{
+			"japanese": "勇気",
+			"english": "courage"
+		},
+		{
+			"japanese": "パパ",
+			"english": "dad"
+		},
+		{
+			"japanese": "机",
+			"english": "desk"
+		},
+		{
+			"japanese": "引き出し",
+			"english": "drawer"
+		},
+		{
+			"japanese": "確立",
+			"english": "establishment"
+		},
+		{
+			"japanese": "検査",
+			"english": "examination"
+		},
+		{
+			"japanese": "ごみ",
+			"english": "garbage"
+		},
+		{
+			"japanese": "食料品",
+			"english": "grocery"
+		},
+		{
+			"japanese": "蜂蜜",
+			"english": "honey"
+		},
+		{
+			"japanese": "印象",
+			"english": "impression"
+		},
+		{
+			"japanese": "改善",
+			"english": "improvement"
+		},
+		{
+			"japanese": "独立",
+			"english": "independence"
+		},
+		{
+			"japanese": "昆虫",
+			"english": "insect"
+		},
+		{
+			"japanese": "検査",
+			"english": "inspection"
+		},
+		{
+			"japanese": "検査官",
+			"english": "inspector"
+		},
+		{
+			"japanese": "キング",
+			"english": "king"
+		},
+		{
+			"japanese": "はしご",
+			"english": "ladder"
+		},
+		{
+			"japanese": "メニュー",
+			"english": "menu"
+		},
+		{
+			"japanese": "ペナルティ",
+			"english": "penalty"
+		},
+		{
+			"japanese": "ピアノ",
+			"english": "piano"
+		},
+		{
+			"japanese": "ポテト",
+			"english": "potato"
+		},
+		{
+			"japanese": "職業",
+			"english": "profession"
+		},
+		{
+			"japanese": "教授",
+			"english": "professor"
+		},
+		{
+			"japanese": "量",
+			"english": "quantity"
+		},
+		{
+			"japanese": "反応",
+			"english": "reaction"
+		},
+		{
+			"japanese": "要件",
+			"english": "requirement"
+		},
+		{
+			"japanese": "サラダ",
+			"english": "salad"
+		},
+		{
+			"japanese": "シスター",
+			"english": "sister"
+		},
+		{
+			"japanese": "スーパーマーケット",
+			"english": "supermarket"
+		},
+		{
+			"japanese": "舌",
+			"english": "tongue"
+		},
+		{
+			"japanese": "弱点",
+			"english": "weakness"
+		},
+		{
+			"japanese": "結婚式",
+			"english": "wedding"
+		},
+		{
+			"japanese": "事件",
+			"english": "affair"
+		},
+		{
+			"japanese": "野心",
+			"english": "ambition"
+		},
+		{
+			"japanese": "アナリスト",
+			"english": "analyst"
+		},
+		{
+			"japanese": "林檎",
+			"english": "apple"
+		},
+		{
+			"japanese": "割り当て",
+			"english": "assignment"
+		},
+		{
+			"japanese": "アシスタント",
+			"english": "assistant"
+		},
+		{
+			"japanese": "バスルーム",
+			"english": "bathroom"
+		},
+		{
+			"japanese": "ベッドルーム",
+			"english": "bedroom"
+		},
+		{
+			"japanese": "ビール",
+			"english": "beer"
+		},
+		{
+			"japanese": "お誕生日",
+			"english": "birthday"
+		},
+		{
+			"japanese": "お祝い",
+			"english": "celebration"
+		},
+		{
+			"japanese": "チャンピオンシップ",
+			"english": "championship"
+		},
+		{
+			"japanese": "頬",
+			"english": "cheek"
+		},
+		{
+			"japanese": "クライアント",
+			"english": "client"
+		},
+		{
+			"japanese": "結果",
+			"english": "consequence"
+		},
+		{
+			"japanese": "出発",
+			"english": "departure"
+		},
+		{
+			"japanese": "ダイヤモンド",
+			"english": "diamond"
+		},
+		{
+			"japanese": "泥",
+			"english": "dirt"
+		},
+		{
+			"japanese": "耳",
+			"english": "ear"
+		},
+		{
+			"japanese": "幸運",
+			"english": "fortune"
+		},
+		{
+			"japanese": "友情",
+			"english": "friendship"
+		},
+		{
+			"japanese": "葬儀",
+			"english": "funeral"
+		},
+		{
+			"japanese": "遺伝子",
+			"english": "gene"
+		},
+		{
+			"japanese": "ガールフレンド",
+			"english": "girlfriend"
+		},
+		{
+			"japanese": "帽子",
+			"english": "hat"
+		},
+		{
+			"japanese": "表示",
+			"english": "indication"
+		},
+		{
+			"japanese": "意図",
+			"english": "intention"
+		},
+		{
+			"japanese": "レディ",
+			"english": "lady"
+		},
+		{
+			"japanese": "真夜中",
+			"english": "midnight"
+		},
+		{
+			"japanese": "ネゴシエーション",
+			"english": "negotiation"
+		},
+		{
+			"japanese": "義務",
+			"english": "obligation"
+		},
+		{
+			"japanese": "旅客",
+			"english": "passenger"
+		},
+		{
+			"japanese": "ピザ",
+			"english": "pizza"
+		},
+		{
+			"japanese": "プラットフォーム",
+			"english": "platform"
+		},
+		{
+			"japanese": "詩人",
+			"english": "poet"
+		},
+		{
+			"japanese": "汚染",
+			"english": "pollution"
+		},
+		{
+			"japanese": "認識",
+			"english": "recognition"
+		},
+		{
+			"japanese": "評判",
+			"english": "reputation"
+		},
+		{
+			"japanese": "シャツ",
+			"english": "shirt"
+		},
+		{
+			"japanese": "サー",
+			"english": "sir"
+		},
+		{
+			"japanese": "スピーカー",
+			"english": "speaker"
+		},
+		{
+			"japanese": "ストレンジャー",
+			"english": "stranger"
+		},
+		{
+			"japanese": "手術",
+			"english": "surgery"
+		},
+		{
+			"japanese": "同情",
+			"english": "sympathy"
+		},
+		{
+			"japanese": "物語",
+			"english": "tale"
+		},
+		{
+			"japanese": "喉",
+			"english": "throat"
+		},
+		{
+			"japanese": "トレーナー",
+			"english": "trainer"
+		},
+		{
+			"japanese": "叔父",
+			"english": "uncle"
+		},
+		{
+			"japanese": "若者",
+			"english": "youth"
+		},
+		{
+			"japanese": "お金",
+			"english": "money"
+		},
+		{
+			"japanese": "同時に",
+			"english": "while"
+		},
+		{
+			"japanese": "ビジネス",
+			"english": "business"
+		},
+		{
+			"japanese": "生活",
+			"english": "life"
+		},
+		{
+			"japanese": "日",
+			"english": "day"
+		},
+		{
+			"japanese": "ホーム",
+			"english": "home"
+		},
+		{
+			"japanese": "経済",
+			"english": "economy"
+		},
+		{
+			"japanese": "トレーニング",
+			"english": "training"
+		},
+		{
+			"japanese": "種類",
+			"english": "kind"
+		},
+		{
+			"japanese": "未来",
+			"english": "future"
+		},
+		{
+			"japanese": "アクション",
+			"english": "action"
+		},
+		{
+			"japanese": "悪い",
+			"english": "bad"
+		},
+		{
+			"japanese": "何も",
+			"english": "nothing"
+		},
+		{
+			"japanese": "期間",
+			"english": "period"
+		},
+		{
+			"japanese": "テーマ",
+			"english": "subject"
+		},
+		{
+			"japanese": "チキン",
+			"english": "chicken"
+		},
+		{
+			"japanese": "材料",
+			"english": "material"
+		},
+		{
+			"japanese": "車",
+			"english": "car"
+		},
+		{
+			"japanese": "ハーフ",
+			"english": "half"
+		},
+		{
+			"japanese": "内部",
+			"english": "inside"
+		},
+		{
+			"japanese": "外側",
+			"english": "outside"
+		},
+		{
+			"japanese": "標準",
+			"english": "standard"
+		},
+		{
+			"japanese": "項目",
+			"english": "item"
+		},
+		{
+			"japanese": "ミディアム",
+			"english": "medium"
+		},
+		{
+			"japanese": "選択",
+			"english": "choice"
+		},
+		{
+			"japanese": "朝",
+			"english": "morning"
+		},
+		{
+			"japanese": "北",
+			"english": "north"
+		},
+		{
+			"japanese": "平方",
+			"english": "square"
+		},
+		{
+			"japanese": "資本",
+			"english": "capital"
+		},
+		{
+			"japanese": "自己",
+			"english": "self"
+		},
+		{
+			"japanese": "ショット",
+			"english": "shot"
+		},
+		{
+			"japanese": "生活",
+			"english": "living"
+		},
+		{
+			"japanese": "プラスチック",
+			"english": "plastic"
+		},
+		{
+			"japanese": "感じ",
+			"english": "feeling"
+		},
+		{
+			"japanese": "貯蓄",
+			"english": "savings"
+		},
+		{
+			"japanese": "動物",
+			"english": "animal"
+		},
+		{
+			"japanese": "最大",
+			"english": "maximum"
+		},
+		{
+			"japanese": "小説",
+			"english": "novel"
+		},
+		{
+			"japanese": "たくさん",
+			"english": "plenty"
+		},
+		{
+			"japanese": "バックグラウンド",
+			"english": "background"
+		},
+		{
+			"japanese": "赤",
+			"english": "red"
+		},
+		{
+			"japanese": "力",
+			"english": "strength"
+		},
+		{
+			"japanese": "野菜",
+			"english": "vegetable"
+		},
+		{
+			"japanese": "理想的",
+			"english": "ideal"
+		},
+		{
+			"japanese": "キッチン",
+			"english": "kitchen"
+		},
+		{
+			"japanese": "原理",
+			"english": "principle"
+		},
+		{
+			"japanese": "相対",
+			"english": "relative"
+		},
+		{
+			"japanese": "販売",
+			"english": "sale"
+		},
+		{
+			"japanese": "通り",
+			"english": "street"
+		},
+		{
+			"japanese": "最小",
+			"english": "minimum"
+		},
+		{
+			"japanese": "パス",
+			"english": "path"
+		},
+		{
+			"japanese": "海",
+			"english": "sea"
+		},
+		{
+			"japanese": "南",
+			"english": "south"
+		},
+		{
+			"japanese": "状態",
+			"english": "status"
+		},
+		{
+			"japanese": "信頼",
+			"english": "confidence"
+		},
+		{
+			"japanese": "娘",
+			"english": "daughter"
+		},
+		{
+			"japanese": "度",
+			"english": "degree"
+		},
+		{
+			"japanese": "義務",
+			"english": "duty"
+		},
+		{
+			"japanese": "時間",
+			"english": "hour"
+		},
+		{
+			"japanese": "物質",
+			"english": "substance"
+		},
+		{
+			"japanese": "午後",
+			"english": "afternoon"
+		},
+		{
+			"japanese": "考慮",
+			"english": "consideration"
+		},
+		{
+			"japanese": "ゴールド",
+			"english": "gold"
+		},
+		{
+			"japanese": "ミッション",
+			"english": "mission"
+		},
+		{
+			"japanese": "ドア",
+			"english": "door"
+		},
+		{
+			"japanese": "東",
+			"english": "east"
+		},
+		{
+			"japanese": "やり方",
+			"english": "manner"
+		},
+		{
+			"japanese": "会議",
+			"english": "meeting"
+		},
+		{
+			"japanese": "パーキング",
+			"english": "parking"
+		},
+		{
+			"japanese": "ルーチン",
+			"english": "routine"
+		},
+		{
+			"japanese": "水泳",
+			"english": "swimming"
+		},
+		{
+			"japanese": "航空会社",
+			"english": "airline"
+		},
+		{
+			"japanese": "デザイナー",
+			"english": "designer"
+		},
+		{
+			"japanese": "緊急",
+			"english": "emergency"
+		},
+		{
+			"japanese": "イブニング",
+			"english": "evening"
+		},
+		{
+			"japanese": "拡張",
+			"english": "extension"
+		},
+		{
+			"japanese": "ホラー",
+			"english": "horror"
+		},
+		{
+			"japanese": "山",
+			"english": "mountain"
+		},
+		{
+			"japanese": "患者",
+			"english": "patient"
+		},
+		{
+			"japanese": "救済",
+			"english": "relief"
+		},
+		{
+			"japanese": "ツーリスト",
+			"english": "tourist"
+		},
+		{
+			"japanese": "西",
+			"english": "west"
+		},
+		{
+			"japanese": "余談",
+			"english": "aside"
+		},
+		{
+			"japanese": "兄",
+			"english": "brother"
+		},
+		{
+			"japanese": "専門家",
+			"english": "expert"
+		},
+		{
+			"japanese": "神",
+			"english": "god"
+		},
+		{
+			"japanese": "ネイティブ",
+			"english": "native"
+		},
+		{
+			"japanese": "オープニング",
+			"english": "opening"
+		},
+		{
+			"japanese": "男の子",
+			"english": "boy"
+		},
+		{
+			"japanese": "スペシャリスト",
+			"english": "specialist"
+		},
+		{
+			"japanese": "苦い",
+			"english": "bitter"
+		},
+		{
+			"japanese": "地獄",
+			"english": "hell"
+		},
+		{
+			"japanese": "入射",
+			"english": "incident"
+		},
+		{
+			"japanese": "居住者",
+			"english": "resident"
+		},
+		{
+			"japanese": "A",
+			"english": "a"
+		},
+		{
+			"japanese": "君は",
+			"english": "you"
+		},
+		{
+			"japanese": "それ",
+			"english": "it"
+		},
+		{
+			"japanese": "できる",
+			"english": "can"
+		},
+		{
+			"japanese": "意志",
+			"english": "will"
+		},
+		{
+			"japanese": "もし",
+			"english": "if"
+		},
+		{
+			"japanese": 1,
+			"english": "one"
+		},
+		{
+			"japanese": "たくさんの",
+			"english": "many"
+		},
+		{
+			"japanese": "最も",
+			"english": "most"
+		},
+		{
+			"japanese": "他の",
+			"english": "other"
+		},
+		{
+			"japanese": "良い",
+			"english": "good"
+		},
+		{
+			"japanese": "すばらしいです",
+			"english": "great"
+		},
+		{
+			"japanese": "少数",
+			"english": "few"
+		},
+		{
+			"japanese": "可能性があります",
+			"english": "might"
+		},
+		{
+			"japanese": "まだ",
+			"english": "still"
+		},
+		{
+			"japanese": "パブリック",
+			"english": "public"
+		},
+		{
+			"japanese": "人間",
+			"english": "human"
+		},
+		{
+			"japanese": "地元",
+			"english": "local"
+		},
+		{
+			"japanese": "一般的な",
+			"english": "general"
+		},
+		{
+			"japanese": "彼女",
+			"english": "she"
+		},
+		{
+			"japanese": "特定",
+			"english": "specific"
+		},
+		{
+			"japanese": "長いです",
+			"english": "long"
+		},
+		{
+			"japanese": "高い",
+			"english": "high"
+		},
+		{
+			"japanese": "今晩",
+			"english": "tonight"
+		},
+		{
+			"japanese": "一般",
+			"english": "common"
+		},
+		{
+			"japanese": "シンプル",
+			"english": "simple"
+		},
+		{
+			"japanese": "過去",
+			"english": "past"
+		},
+		{
+			"japanese": "大きい",
+			"english": "big"
+		},
+		{
+			"japanese": "可能",
+			"english": "possible"
+		},
+		{
+			"japanese": "特定の",
+			"english": "particular"
+		},
+		{
+			"japanese": "今日",
+			"english": "today"
+		},
+		{
+			"japanese": "個人的な",
+			"english": "personal"
+		},
+		{
+			"japanese": "現在",
+			"english": "current"
+		},
+		{
+			"japanese": "国民",
+			"english": "national"
+		},
+		{
+			"japanese": "ナチュラル",
+			"english": "natural"
+		},
+		{
+			"japanese": "物理的",
+			"english": "physical"
+		},
+		{
+			"japanese": "二番",
+			"english": "second"
+		},
+		{
+			"japanese": "個人",
+			"english": "individual"
+		},
+		{
+			"japanese": "メイン",
+			"english": "main"
+		},
+		{
+			"japanese": "潜在的な",
+			"english": "potential"
+		},
+		{
+			"japanese": "プロ",
+			"english": "professional"
+		},
+		{
+			"japanese": "国際",
+			"english": "international"
+		},
+		{
+			"japanese": "代替案",
+			"english": "alternative"
+		},
+		{
+			"japanese": "以下",
+			"english": "following"
+		},
+		{
+			"japanese": "特別",
+			"english": "special"
+		},
+		{
+			"japanese": "ワーキング",
+			"english": "working"
+		},
+		{
+			"japanese": "全体",
+			"english": "whole"
+		},
+		{
+			"japanese": "コールド",
+			"english": "cold"
+		},
+		{
+			"japanese": "商業の",
+			"english": "commercial"
+		},
+		{
+			"japanese": "低いです",
+			"english": "low"
+		},
+		{
+			"japanese": "プライマリー",
+			"english": "primary"
+		},
+		{
+			"japanese": "価値",
+			"english": "worth"
+		},
+		{
+			"japanese": "必要",
+			"english": "necessary"
+		},
+		{
+			"japanese": "ポジティブ",
+			"english": "positive"
+		},
+		{
+			"japanese": "クリエイティブ",
+			"english": "creative"
+		},
+		{
+			"japanese": "嬉しいです",
+			"english": "glad"
+		},
+		{
+			"japanese": "原因",
+			"english": "due"
+		},
+		{
+			"japanese": "効果的な",
+			"english": "effective"
+		},
+		{
+			"japanese": "中間",
+			"english": "middle"
+		},
+		{
+			"japanese": "レギュラー",
+			"english": "regular"
+		},
+		{
+			"japanese": "独立しました",
+			"english": "independent"
+		},
+		{
+			"japanese": "元の",
+			"english": "original"
+		},
+		{
+			"japanese": "綺麗な",
+			"english": "beautiful"
+		},
+		{
+			"japanese": "アクティブ",
+			"english": "active"
+		},
+		{
+			"japanese": "負",
+			"english": "negative"
+		},
+		{
+			"japanese": "安全",
+			"english": "safe"
+		},
+		{
+			"japanese": "ビジュアル",
+			"english": "visual"
+		},
+		{
+			"japanese": "超えて",
+			"english": "beyond"
+		},
+		{
+			"japanese": "ジュニア",
+			"english": "junior"
+		},
+		{
+			"japanese": "ユニーク",
+			"english": "unique"
+		},
+		{
+			"japanese": "何でも",
+			"english": "anything"
+		},
+		{
+			"japanese": "クラシック",
+			"english": "classic"
+		},
+		{
+			"japanese": "最後の",
+			"english": "final"
+		},
+		{
+			"japanese": "プライベート",
+			"english": "private"
+		},
+		{
+			"japanese": "西部の",
+			"english": "western"
+		},
+		{
+			"japanese": "おなじみの",
+			"english": "familiar"
+		},
+		{
+			"japanese": "公式",
+			"english": "official"
+		},
+		{
+			"japanese": "広いです",
+			"english": "broad"
+		},
+		{
+			"japanese": "快適",
+			"english": "comfortable"
+		},
+		{
+			"japanese": "多分",
+			"english": "maybe"
+		},
+		{
+			"japanese": "リッチ",
+			"english": "rich"
+		},
+		{
+			"japanese": "若い",
+			"english": "young"
+		},
+		{
+			"japanese": "ヘビー",
+			"english": "heavy"
+		},
+		{
+			"japanese": "こんにちは",
+			"english": "hello"
+		},
+		{
+			"japanese": "貴重な",
+			"english": "valuable"
+		},
+		{
+			"japanese": "リーディング",
+			"english": "leading"
+		},
+		{
+			"japanese": "ノーマル",
+			"english": "normal"
+		},
+		{
+			"japanese": "秘密",
+			"english": "secret"
+		},
+		{
+			"japanese": "タフ",
+			"english": "tough"
+		},
+		{
+			"japanese": "深い",
+			"english": "deep"
+		},
+		{
+			"japanese": "目的",
+			"english": "objective"
+		},
+		{
+			"japanese": "化学物質",
+			"english": "chemical"
+		},
+		{
+			"japanese": "極端な",
+			"english": "extreme"
+		},
+		{
+			"japanese": "フォーマル",
+			"english": "formal"
+		},
+		{
+			"japanese": "反対",
+			"english": "opposite"
+		},
+		{
+			"japanese": "リモート",
+			"english": "remote"
+		},
+		{
+			"japanese": "広大な",
+			"english": "vast"
+		},
+		{
+			"japanese": "どこか",
+			"english": "somewhere"
+		},
+		{
+			"japanese": "どこでも",
+			"english": "anywhere"
+		},
+		{
+			"japanese": "ダーク",
+			"english": "dark"
+		},
+		{
+			"japanese": "内部",
+			"english": "internal"
+		},
+		{
+			"japanese": "敏感",
+			"english": "sensitive"
+		},
+		{
+			"japanese": "定数",
+			"english": "constant"
+		},
+		{
+			"japanese": "生",
+			"english": "raw"
+		},
+		{
+			"japanese": "柔らかい",
+			"english": "soft"
+		},
+		{
+			"japanese": "固体",
+			"english": "solid"
+		},
+		{
+			"japanese": "奇妙な",
+			"english": "weird"
+		},
+		{
+			"japanese": "年次",
+			"english": "annual"
+		},
+		{
+			"japanese": "デッド",
+			"english": "dead"
+		},
+		{
+			"japanese": "永遠に",
+			"english": "forever"
+		},
+		{
+			"japanese": "誰も",
+			"english": "nobody"
+		},
+		{
+			"japanese": "円形",
+			"english": "round"
+		},
+		{
+			"japanese": "一方、",
+			"english": "whereas"
+		},
+		{
+			"japanese": "同等の",
+			"english": "equivalent"
+		},
+		{
+			"japanese": "スピリチュアル",
+			"english": "spiritual"
+		},
+		{
+			"japanese": "大人",
+			"english": "adult"
+		},
+		{
+			"japanese": "クレイジー",
+			"english": "crazy"
+		},
+		{
+			"japanese": "前の",
+			"english": "prior"
+		},
+		{
+			"japanese": "ラフ",
+			"english": "rough"
+		},
+		{
+			"japanese": "悲しい",
+			"english": "sad"
+		},
+		{
+			"japanese": "病気",
+			"english": "sick"
+		},
+		{
+			"japanese": "外部",
+			"english": "external"
+		},
+		{
+			"japanese": "違法",
+			"english": "illegal"
+		},
+		{
+			"japanese": "モバイル",
+			"english": "mobile"
+		},
+		{
+			"japanese": "不快な",
+			"english": "nasty"
+		},
+		{
+			"japanese": "一般",
+			"english": "ordinary"
+		},
+		{
+			"japanese": "ロイヤル",
+			"english": "royal"
+		},
+		{
+			"japanese": "上級",
+			"english": "senior"
+		},
+		{
+			"japanese": "アッパー",
+			"english": "upper"
+		},
+		{
+			"japanese": "依存",
+			"english": "dependent"
+		},
+		{
+			"japanese": "おかしいです",
+			"english": "funny"
+		},
+		{
+			"japanese": "甘い",
+			"english": "sweet"
+		},
+		{
+			"japanese": "2階",
+			"english": "upstairs"
+		},
+		{
+			"japanese": "いつもの",
+			"english": "usual"
+		},
+		{
+			"japanese": "海外で",
+			"english": "abroad"
+		},
+		{
+			"japanese": "壮大な",
+			"english": "grand"
+		},
+		{
+			"japanese": "男性",
+			"english": "male"
+		},
+		{
+			"japanese": "誰でも",
+			"english": "anybody"
+		},
+		{
+			"japanese": "ブリリアント",
+			"english": "brilliant"
+		},
+		{
+			"japanese": "親愛な",
+			"english": "dear"
+		},
+		{
+			"japanese": "酔っぱらい",
+			"english": "drunk"
+		},
+		{
+			"japanese": "女性",
+			"english": "female"
+		},
+		{
+			"japanese": "避けられません",
+			"english": "inevitable"
+		},
+		{
+			"japanese": "ニート",
+			"english": "neat"
+		},
+		{
+			"japanese": "代表",
+			"english": "representative"
+		},
+		{
+			"japanese": "愚かな",
+			"english": "silly"
+		},
+		{
+			"japanese": "愚か",
+			"english": "stupid"
+		},
+		{
+			"japanese": "一時的",
+			"english": "temporary"
+		},
+		{
+			"japanese": "明日",
+			"english": "tomorrow"
+		},
+		{
+			"japanese": "昨日",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 526 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"kannada": "ಜನರು",
+			"english": "people"
+		},
+		{
+			"kannada": "ಇತಿಹಾಸ",
+			"english": "history"
+		},
+		{
+			"kannada": "ರೀತಿಯಲ್ಲಿ",
+			"english": "way"
+		},
+		{
+			"kannada": "ಕಲೆ",
+			"english": "art"
+		},
+		{
+			"kannada": "ವಿಶ್ವದ",
+			"english": "world"
+		},
+		{
+			"kannada": "ಮಾಹಿತಿ",
+			"english": "information"
+		},
+		{
+			"kannada": "ನಕ್ಷೆ",
+			"english": "map"
+		},
+		{
+			"kannada": "ಎರಡು",
+			"english": "two"
+		},
+		{
+			"kannada": "ಕುಟುಂಬ",
+			"english": "family"
+		},
+		{
+			"kannada": "ಸರ್ಕಾರ",
+			"english": "government"
+		},
+		{
+			"kannada": "ಆರೋಗ್ಯ",
+			"english": "health"
+		},
+		{
+			"kannada": "ವ್ಯವಸ್ಥೆ",
+			"english": "system"
+		},
+		{
+			"kannada": "ಕಂಪ್ಯೂಟರ್",
+			"english": "computer"
+		},
+		{
+			"kannada": "ಮಾಂಸ",
+			"english": "meat"
+		},
+		{
+			"kannada": "ವರ್ಷ",
+			"english": "year"
+		},
+		{
+			"kannada": "ಧನ್ಯವಾದಗಳು",
+			"english": "thanks"
+		},
+		{
+			"kannada": "ಸಂಗೀತ",
+			"english": "music"
+		},
+		{
+			"kannada": "ವ್ಯಕ್ತಿ",
+			"english": "person"
+		},
+		{
+			"kannada": "ಓದುವ",
+			"english": "reading"
+		},
+		{
+			"kannada": "ವಿಧಾನ",
+			"english": "method"
+		},
+		{
+			"kannada": "ಡೇಟಾ",
+			"english": "data"
+		},
+		{
+			"kannada": "ಆಹಾರ",
+			"english": "food"
+		},
+		{
+			"kannada": "ತಿಳುವಳಿಕೆ",
+			"english": "understanding"
+		},
+		{
+			"kannada": "ಸಿದ್ಧಾಂತ",
+			"english": "theory"
+		},
+		{
+			"kannada": "ಕಾನೂನು",
+			"english": "law"
+		},
+		{
+			"kannada": "ಹಕ್ಕಿ",
+			"english": "bird"
+		},
+		{
+			"kannada": "ಸಾಹಿತ್ಯ",
+			"english": "literature"
+		},
+		{
+			"kannada": "ಸಮಸ್ಯೆ",
+			"english": "problem"
+		},
+		{
+			"kannada": "ಸಾಫ್ಟ್ವೇರ್",
+			"english": "software"
+		},
+		{
+			"kannada": "ನಿಯಂತ್ರಣ",
+			"english": "control"
+		},
+		{
+			"kannada": "ಜ್ಞಾನ",
+			"english": "knowledge"
+		},
+		{
+			"kannada": "ವಿದ್ಯುತ್",
+			"english": "power"
+		},
+		{
+			"kannada": "ಸಾಮರ್ಥ್ಯ",
+			"english": "ability"
+		},
+		{
+			"kannada": "ಅರ್ಥಶಾಸ್ತ್ರ",
+			"english": "economics"
+		},
+		{
+			"kannada": "ಪ್ರೀತಿ",
+			"english": "love"
+		},
+		{
+			"kannada": "ಇಂಟರ್ನೆಟ್",
+			"english": "internet"
+		},
+		{
+			"kannada": "ದೂರದರ್ಶನ",
+			"english": "television"
+		},
+		{
+			"kannada": "ವಿಜ್ಞಾನ",
+			"english": "science"
+		},
+		{
+			"kannada": "ಗ್ರಂಥಾಲಯದ",
+			"english": "library"
+		},
+		{
+			"kannada": "ಪ್ರಕೃತಿ",
+			"english": "nature"
+		},
+		{
+			"kannada": "ವಾಸ್ತವವಾಗಿ",
+			"english": "fact"
+		},
+		{
+			"kannada": "ಉತ್ಪನ್ನ",
+			"english": "product"
+		},
+		{
+			"kannada": "ಕಲ್ಪನೆ",
+			"english": "idea"
+		},
+		{
+			"kannada": "ತಾಪಮಾನ",
+			"english": "temperature"
+		},
+		{
+			"kannada": "ಬಂಡವಾಳ",
+			"english": "investment"
+		},
+		{
+			"kannada": "ಪ್ರದೇಶ",
+			"english": "area"
+		},
+		{
+			"kannada": "ಸಮಾಜದ",
+			"english": "society"
+		},
+		{
+			"kannada": "ಚಟುವಟಿಕೆ",
+			"english": "activity"
+		},
+		{
+			"kannada": "ಕಥೆ",
+			"english": "story"
+		},
+		{
+			"kannada": "ಉದ್ಯಮ",
+			"english": "industry"
+		},
+		{
+			"kannada": "ಮಾಧ್ಯಮ",
+			"english": "media"
+		},
+		{
+			"kannada": "ವಿಷಯ",
+			"english": "thing"
+		},
+		{
+			"kannada": "ಒಲೆಯಲ್ಲಿ",
+			"english": "oven"
+		},
+		{
+			"kannada": "ಸಮುದಾಯ",
+			"english": "community"
+		},
+		{
+			"kannada": "ವ್ಯಾಖ್ಯಾನ",
+			"english": "definition"
+		},
+		{
+			"kannada": "ಸುರಕ್ಷತೆ",
+			"english": "safety"
+		},
+		{
+			"kannada": "ಗುಣಮಟ್ಟದ",
+			"english": "quality"
+		},
+		{
+			"kannada": "ಅಭಿವೃದ್ಧಿ",
+			"english": "development"
+		},
+		{
+			"kannada": "ಭಾಷೆ",
+			"english": "language"
+		},
+		{
+			"kannada": "ನಿರ್ವಹಣೆ",
+			"english": "management"
+		},
+		{
+			"kannada": "ಆಟಗಾರ",
+			"english": "player"
+		},
+		{
+			"kannada": "ವಿವಿಧ",
+			"english": "variety"
+		},
+		{
+			"kannada": "ವೀಡಿಯೊ",
+			"english": "video"
+		},
+		{
+			"kannada": "ವಾರ",
+			"english": "week"
+		},
+		{
+			"kannada": "ಭದ್ರತಾ",
+			"english": "security"
+		},
+		{
+			"kannada": "ದೇಶದ",
+			"english": "country"
+		},
+		{
+			"kannada": "ಪರೀಕ್ಷೆಯಲ್ಲಿ",
+			"english": "exam"
+		},
+		{
+			"kannada": "ಚಿತ್ರ",
+			"english": "movie"
+		},
+		{
+			"kannada": "ಸಂಸ್ಥೆಯ",
+			"english": "organization"
+		},
+		{
+			"kannada": "ಉಪಕರಣ",
+			"english": "equipment"
+		},
+		{
+			"kannada": "ಭೌತಶಾಸ್ತ್ರ",
+			"english": "physics"
+		},
+		{
+			"kannada": "ವಿಶ್ಲೇಷಣೆ",
+			"english": "analysis"
+		},
+		{
+			"kannada": "ನೀತಿ",
+			"english": "policy"
+		},
+		{
+			"kannada": "ಸರಣಿ",
+			"english": "series"
+		},
+		{
+			"kannada": "ಭಾವಿಸಲಾಗಿದೆ",
+			"english": "thought"
+		},
+		{
+			"kannada": "ಆಧಾರದ",
+			"english": "basis"
+		},
+		{
+			"kannada": "ಗೆಳೆಯ",
+			"english": "boyfriend"
+		},
+		{
+			"kannada": "ದಿಕ್ಕಿನಲ್ಲಿ",
+			"english": "direction"
+		},
+		{
+			"kannada": "ತಂತ್ರ",
+			"english": "strategy"
+		},
+		{
+			"kannada": "ತಂತ್ರಜ್ಞಾನ",
+			"english": "technology"
+		},
+		{
+			"kannada": "ಸೇನೆ",
+			"english": "army"
+		},
+		{
+			"kannada": "ಕ್ಯಾಮೆರಾ",
+			"english": "camera"
+		},
+		{
+			"kannada": "ಸ್ವಾತಂತ್ರ್ಯ",
+			"english": "freedom"
+		},
+		{
+			"kannada": "ಕಾಗದದ",
+			"english": "paper"
+		},
+		{
+			"kannada": "ಪರಿಸರ",
+			"english": "environment"
+		},
+		{
+			"kannada": "ಮಗು",
+			"english": "child"
+		},
+		{
+			"kannada": "ಉದಾಹರಣೆಗೆ",
+			"english": "instance"
+		},
+		{
+			"kannada": "ತಿಂಗಳು",
+			"english": "month"
+		},
+		{
+			"kannada": "ಸತ್ಯ",
+			"english": "truth"
+		},
+		{
+			"kannada": "ಮಾರ್ಕೆಟಿಂಗ್",
+			"english": "marketing"
+		},
+		{
+			"kannada": "ವಿಶ್ವವಿದ್ಯಾಲಯ",
+			"english": "university"
+		},
+		{
+			"kannada": "ಬರವಣಿಗೆ",
+			"english": "writing"
+		},
+		{
+			"kannada": "ಲೇಖನ",
+			"english": "article"
+		},
+		{
+			"kannada": "ಇಲಾಖೆ",
+			"english": "department"
+		},
+		{
+			"kannada": "ವ್ಯತ್ಯಾಸ",
+			"english": "difference"
+		},
+		{
+			"kannada": "ಗುರಿ",
+			"english": "goal"
+		},
+		{
+			"kannada": "ಸುದ್ದಿ",
+			"english": "news"
+		},
+		{
+			"kannada": "ಪ್ರೇಕ್ಷಕರು",
+			"english": "audience"
+		},
+		{
+			"kannada": "ಮೀನುಗಾರಿಕೆ",
+			"english": "fishing"
+		},
+		{
+			"kannada": "ಬೆಳವಣಿಗೆ",
+			"english": "growth"
+		},
+		{
+			"kannada": "ಆದಾಯ",
+			"english": "income"
+		},
+		{
+			"kannada": "ಮದುವೆ",
+			"english": "marriage"
+		},
+		{
+			"kannada": "ಬಳಕೆದಾರ",
+			"english": "user"
+		},
+		{
+			"kannada": "ಸಂಯೋಜನೆಯನ್ನು",
+			"english": "combination"
+		},
+		{
+			"kannada": "ವೈಫಲ್ಯ",
+			"english": "failure"
+		},
+		{
+			"kannada": "ಅರ್ಥ",
+			"english": "meaning"
+		},
+		{
+			"kannada": "ಔಷಧ",
+			"english": "medicine"
+		},
+		{
+			"kannada": "ತತ್ವಶಾಸ್ತ್ರ",
+			"english": "philosophy"
+		},
+		{
+			"kannada": "ಶಿಕ್ಷಕ",
+			"english": "teacher"
+		},
+		{
+			"kannada": "ಸಂವಹನ",
+			"english": "communication"
+		},
+		{
+			"kannada": "ರಾತ್ರಿ",
+			"english": "night"
+		},
+		{
+			"kannada": "ರಸಾಯನಶಾಸ್ತ್ರ",
+			"english": "chemistry"
+		},
+		{
+			"kannada": "ರೋಗ",
+			"english": "disease"
+		},
+		{
+			"kannada": "ಡಿಸ್ಕ್",
+			"english": "disk"
+		},
+		{
+			"kannada": "ಶಕ್ತಿ",
+			"english": "energy"
+		},
+		{
+			"kannada": "ರಾಷ್ಟ್ರದ",
+			"english": "nation"
+		},
+		{
+			"kannada": "ರಸ್ತೆ",
+			"english": "road"
+		},
+		{
+			"kannada": "ಪಾತ್ರ",
+			"english": "role"
+		},
+		{
+			"kannada": "ಸೂಪ್",
+			"english": "soup"
+		},
+		{
+			"kannada": "ಜಾಹೀರಾತು",
+			"english": "advertising"
+		},
+		{
+			"kannada": "ಸ್ಥಳ",
+			"english": "location"
+		},
+		{
+			"kannada": "ಯಶಸ್ಸು",
+			"english": "success"
+		},
+		{
+			"kannada": "ಜೊತೆಗೆ",
+			"english": "addition"
+		},
+		{
+			"kannada": "ಅಪಾರ್ಟ್ಮೆಂಟ್",
+			"english": "apartment"
+		},
+		{
+			"kannada": "ಶಿಕ್ಷಣ",
+			"english": "education"
+		},
+		{
+			"kannada": "ಗಣಿತ",
+			"english": "math"
+		},
+		{
+			"kannada": "ಕ್ಷಣ",
+			"english": "moment"
+		},
+		{
+			"kannada": "ಚಿತ್ರಕಲೆ",
+			"english": "painting"
+		},
+		{
+			"kannada": "ರಾಜಕೀಯ",
+			"english": "politics"
+		},
+		{
+			"kannada": "ಗಮನ",
+			"english": "attention"
+		},
+		{
+			"kannada": "ನಿರ್ಧಾರ",
+			"english": "decision"
+		},
+		{
+			"kannada": "ಕ್ರಿಯೆಯನ್ನು",
+			"english": "event"
+		},
+		{
+			"kannada": "ಆಸ್ತಿ",
+			"english": "property"
+		},
+		{
+			"kannada": "ಶಾಪಿಂಗ್",
+			"english": "shopping"
+		},
+		{
+			"kannada": "ವಿದ್ಯಾರ್ಥಿ",
+			"english": "student"
+		},
+		{
+			"kannada": "ಮರದ",
+			"english": "wood"
+		},
+		{
+			"kannada": "ಸ್ಪರ್ಧೆಯಲ್ಲಿ",
+			"english": "competition"
+		},
+		{
+			"kannada": "ವಿತರಣೆ",
+			"english": "distribution"
+		},
+		{
+			"kannada": "ಮನರಂಜನೆ",
+			"english": "entertainment"
+		},
+		{
+			"kannada": "ಕಚೇರಿ",
+			"english": "office"
+		},
+		{
+			"kannada": "ಜನಸಂಖ್ಯೆ",
+			"english": "population"
+		},
+		{
+			"kannada": "ಅಧ್ಯಕ್ಷ",
+			"english": "president"
+		},
+		{
+			"kannada": "ಘಟಕ",
+			"english": "unit"
+		},
+		{
+			"kannada": "ವರ್ಗದಲ್ಲಿ",
+			"english": "category"
+		},
+		{
+			"kannada": "ಸಿಗರೇಟ್",
+			"english": "cigarette"
+		},
+		{
+			"kannada": "ಸಂದರ್ಭವನ್ನು",
+			"english": "context"
+		},
+		{
+			"kannada": "ಪರಿಚಯ",
+			"english": "introduction"
+		},
+		{
+			"kannada": "ಅವಕಾಶ",
+			"english": "opportunity"
+		},
+		{
+			"kannada": "ಪ್ರದರ್ಶನ",
+			"english": "performance"
+		},
+		{
+			"kannada": "ಚಾಲಕ",
+			"english": "driver"
+		},
+		{
+			"kannada": "ವಿಮಾನ",
+			"english": "flight"
+		},
+		{
+			"kannada": "ಉದ್ದ",
+			"english": "length"
+		},
+		{
+			"kannada": "ಪತ್ರಿಕೆ",
+			"english": "magazine"
+		},
+		{
+			"kannada": "ಪತ್ರಿಕೆ",
+			"english": "newspaper"
+		},
+		{
+			"kannada": "ಸಂಬಂಧ",
+			"english": "relationship"
+		},
+		{
+			"kannada": "ಬೋಧನೆ",
+			"english": "teaching"
+		},
+		{
+			"kannada": "ಸೆಲ್",
+			"english": "cell"
+		},
+		{
+			"kannada": "ವ್ಯಾಪಾರಿ",
+			"english": "dealer"
+		},
+		{
+			"kannada": "ಶೋಧನೆಯಲ್ಲಿ",
+			"english": "finding"
+		},
+		{
+			"kannada": "ಸರೋವರದ",
+			"english": "lake"
+		},
+		{
+			"kannada": "ಸದಸ್ಯ",
+			"english": "member"
+		},
+		{
+			"kannada": "ಸಂದೇಶವನ್ನು",
+			"english": "message"
+		},
+		{
+			"kannada": "ದೂರವಾಣಿ",
+			"english": "phone"
+		},
+		{
+			"kannada": "ದೃಶ್ಯ",
+			"english": "scene"
+		},
+		{
+			"kannada": "ನೋಟವನ್ನು",
+			"english": "appearance"
+		},
+		{
+			"kannada": "ಸಂಘದ",
+			"english": "association"
+		},
+		{
+			"kannada": "ಪರಿಕಲ್ಪನೆ",
+			"english": "concept"
+		},
+		{
+			"kannada": "ಗ್ರಾಹಕ",
+			"english": "customer"
+		},
+		{
+			"kannada": "ಸಾವಿನ",
+			"english": "death"
+		},
+		{
+			"kannada": "ಚರ್ಚೆ",
+			"english": "discussion"
+		},
+		{
+			"kannada": "ವಸತಿ",
+			"english": "housing"
+		},
+		{
+			"kannada": "ಹಣದುಬ್ಬರ",
+			"english": "inflation"
+		},
+		{
+			"kannada": "ವಿಮೆ",
+			"english": "insurance"
+		},
+		{
+			"kannada": "ಚಿತ್ತ",
+			"english": "mood"
+		},
+		{
+			"kannada": "ಮಹಿಳೆ",
+			"english": "woman"
+		},
+		{
+			"kannada": "ಸಲಹೆ",
+			"english": "advice"
+		},
+		{
+			"kannada": "ರಕ್ತ",
+			"english": "blood"
+		},
+		{
+			"kannada": "ಪ್ರಯತ್ನ",
+			"english": "effort"
+		},
+		{
+			"kannada": "ಅಭಿವ್ಯಕ್ತಿ",
+			"english": "expression"
+		},
+		{
+			"kannada": "ಪ್ರಾಮುಖ್ಯತೆಯನ್ನು",
+			"english": "importance"
+		},
+		{
+			"kannada": "ಅಭಿಪ್ರಾಯ",
+			"english": "opinion"
+		},
+		{
+			"kannada": "ಪಾವತಿ",
+			"english": "payment"
+		},
+		{
+			"kannada": "ರಿಯಾಲಿಟಿ",
+			"english": "reality"
+		},
+		{
+			"kannada": "ಜವಾಬ್ದಾರಿ",
+			"english": "responsibility"
+		},
+		{
+			"kannada": "ಪರಿಸ್ಥಿತಿ",
+			"english": "situation"
+		},
+		{
+			"kannada": "ಕೌಶಲ್ಯ",
+			"english": "skill"
+		},
+		{
+			"kannada": "ಹೇಳಿಕೆ",
+			"english": "statement"
+		},
+		{
+			"kannada": "ಸಂಪತ್ತು",
+			"english": "wealth"
+		},
+		{
+			"kannada": "ಅಪ್ಲಿಕೇಶನ್",
+			"english": "application"
+		},
+		{
+			"kannada": "ನಗರ",
+			"english": "city"
+		},
+		{
+			"kannada": "ಕೌಂಟಿ",
+			"english": "county"
+		},
+		{
+			"kannada": "ಆಳ",
+			"english": "depth"
+		},
+		{
+			"kannada": "ಎಸ್ಟೇಟ್",
+			"english": "estate"
+		},
+		{
+			"kannada": "ಅಡಿಪಾಯ",
+			"english": "foundation"
+		},
+		{
+			"kannada": "ಅಜ್ಜಿ",
+			"english": "grandmother"
+		},
+		{
+			"kannada": "ಹೃದಯ",
+			"english": "heart"
+		},
+		{
+			"kannada": "ದೃಷ್ಟಿಕೋನದಿಂದ",
+			"english": "perspective"
+		},
+		{
+			"kannada": "ಫೋಟೋ",
+			"english": "photo"
+		},
+		{
+			"kannada": "ಪಾಕವಿಧಾನ",
+			"english": "recipe"
+		},
+		{
+			"kannada": "ಸ್ಟುಡಿಯೋ",
+			"english": "studio"
+		},
+		{
+			"kannada": "ವಿಷಯ",
+			"english": "topic"
+		},
+		{
+			"kannada": "ಸಂಗ್ರಹ",
+			"english": "collection"
+		},
+		{
+			"kannada": "ಖಿನ್ನತೆ",
+			"english": "depression"
+		},
+		{
+			"kannada": "ಕಲ್ಪನೆಯ",
+			"english": "imagination"
+		},
+		{
+			"kannada": "ಉತ್ಸಾಹ",
+			"english": "passion"
+		},
+		{
+			"kannada": "ಶೇಕಡಾವಾರು",
+			"english": "percentage"
+		},
+		{
+			"kannada": "ಸಂಪನ್ಮೂಲ",
+			"english": "resource"
+		},
+		{
+			"kannada": "ಸೆಟ್ಟಿಂಗ್",
+			"english": "setting"
+		},
+		{
+			"kannada": "ಜಾಹೀರಾತು",
+			"english": "ad"
+		},
+		{
+			"kannada": "ಸಂಸ್ಥೆ",
+			"english": "agency"
+		},
+		{
+			"kannada": "ಕಾಲೇಜು",
+			"english": "college"
+		},
+		{
+			"kannada": "ಸಂಪರ್ಕ",
+			"english": "connection"
+		},
+		{
+			"kannada": "ವಿಮರ್ಶೆ",
+			"english": "criticism"
+		},
+		{
+			"kannada": "ಸಾಲ",
+			"english": "debt"
+		},
+		{
+			"kannada": "ವಿವರಣೆ",
+			"english": "description"
+		},
+		{
+			"kannada": "ಮೆಮೊರಿ",
+			"english": "memory"
+		},
+		{
+			"kannada": "ತಾಳ್ಮೆ",
+			"english": "patience"
+		},
+		{
+			"kannada": "ಕಾರ್ಯದರ್ಶಿ",
+			"english": "secretary"
+		},
+		{
+			"kannada": "ಪರಿಹಾರ",
+			"english": "solution"
+		},
+		{
+			"kannada": "ಆಡಳಿತ",
+			"english": "administration"
+		},
+		{
+			"kannada": "ಅಂಶವು",
+			"english": "aspect"
+		},
+		{
+			"kannada": "ವರ್ತನೆ",
+			"english": "attitude"
+		},
+		{
+			"kannada": "ನಿರ್ದೇಶಕ",
+			"english": "director"
+		},
+		{
+			"kannada": "ವ್ಯಕ್ತಿತ್ವ",
+			"english": "personality"
+		},
+		{
+			"kannada": "ಮನೋವಿಜ್ಞಾನ",
+			"english": "psychology"
+		},
+		{
+			"kannada": "ಶಿಫಾರಸು",
+			"english": "recommendation"
+		},
+		{
+			"kannada": "ಪ್ರತಿಕ್ರಿಯೆ",
+			"english": "response"
+		},
+		{
+			"kannada": "ಆಯ್ಕೆ",
+			"english": "selection"
+		},
+		{
+			"kannada": "ಸಂಗ್ರಹ",
+			"english": "storage"
+		},
+		{
+			"kannada": "ಆವೃತ್ತಿ",
+			"english": "version"
+		},
+		{
+			"kannada": "ಮದ್ಯ",
+			"english": "alcohol"
+		},
+		{
+			"kannada": "ವಾದ",
+			"english": "argument"
+		},
+		{
+			"kannada": "ದೂರು",
+			"english": "complaint"
+		},
+		{
+			"kannada": "ಒಪ್ಪಂದ",
+			"english": "contract"
+		},
+		{
+			"kannada": "ಒತ್ತು",
+			"english": "emphasis"
+		},
+		{
+			"kannada": "ಹೆದ್ದಾರಿ",
+			"english": "highway"
+		},
+		{
+			"kannada": "ನಷ್ಟ",
+			"english": "loss"
+		},
+		{
+			"kannada": "ಸದಸ್ಯತ್ವ",
+			"english": "membership"
+		},
+		{
+			"kannada": "ಹತೋಟಿ",
+			"english": "possession"
+		},
+		{
+			"kannada": "ತಯಾರಿ",
+			"english": "preparation"
+		},
+		{
+			"kannada": "ಸ್ಟೀಕ್",
+			"english": "steak"
+		},
+		{
+			"kannada": "ಒಕ್ಕೂಟ",
+			"english": "union"
+		},
+		{
+			"kannada": "ಒಪ್ಪಂದದ",
+			"english": "agreement"
+		},
+		{
+			"kannada": "ಕ್ಯಾನ್ಸರ್",
+			"english": "cancer"
+		},
+		{
+			"kannada": "ಕರೆನ್ಸಿ",
+			"english": "currency"
+		},
+		{
+			"kannada": "ಉದ್ಯೋಗ",
+			"english": "employment"
+		},
+		{
+			"kannada": "ಎಂಜಿನಿಯರಿಂಗ್",
+			"english": "engineering"
+		},
+		{
+			"kannada": "ಪ್ರವೇಶ",
+			"english": "entry"
+		},
+		{
+			"kannada": "ಪರಸ್ಪರ",
+			"english": "interaction"
+		},
+		{
+			"kannada": "ಮಿಶ್ರಣವನ್ನು",
+			"english": "mixture"
+		},
+		{
+			"kannada": "ಆದ್ಯತೆ",
+			"english": "preference"
+		},
+		{
+			"kannada": "ಪ್ರದೇಶದಲ್ಲಿ",
+			"english": "region"
+		},
+		{
+			"kannada": "ಗಣರಾಜ್ಯ",
+			"english": "republic"
+		},
+		{
+			"kannada": "ಸಂಪ್ರದಾಯ",
+			"english": "tradition"
+		},
+		{
+			"kannada": "ವೈರಸ್",
+			"english": "virus"
+		},
+		{
+			"kannada": "ನಟ",
+			"english": "actor"
+		},
+		{
+			"kannada": "ತರಗತಿಯ",
+			"english": "classroom"
+		},
+		{
+			"kannada": "ವಿತರಣಾ",
+			"english": "delivery"
+		},
+		{
+			"kannada": "ಸಾಧನ",
+			"english": "device"
+		},
+		{
+			"kannada": "ತೊಂದರೆ",
+			"english": "difficulty"
+		},
+		{
+			"kannada": "ನಾಟಕ",
+			"english": "drama"
+		},
+		{
+			"kannada": "ಚುನಾವಣೆ",
+			"english": "election"
+		},
+		{
+			"kannada": "ಎಂಜಿನ್",
+			"english": "engine"
+		},
+		{
+			"kannada": "ಫುಟ್ಬಾಲ್",
+			"english": "football"
+		},
+		{
+			"kannada": "ಮಾರ್ಗದರ್ಶನ",
+			"english": "guidance"
+		},
+		{
+			"kannada": "ಹೋಟೆಲ್",
+			"english": "hotel"
+		},
+		{
+			"kannada": "ಮಾಲೀಕರು",
+			"english": "owner"
+		},
+		{
+			"kannada": "ಆದ್ಯತೆ",
+			"english": "priority"
+		},
+		{
+			"kannada": "ರಕ್ಷಣೆ",
+			"english": "protection"
+		},
+		{
+			"kannada": "ಸಲಹೆ",
+			"english": "suggestion"
+		},
+		{
+			"kannada": "ಒತ್ತಡ",
+			"english": "tension"
+		},
+		{
+			"kannada": "ಬದಲಾವಣೆ",
+			"english": "variation"
+		},
+		{
+			"kannada": "ಆತಂಕ",
+			"english": "anxiety"
+		},
+		{
+			"kannada": "ವಾತಾವರಣದಲ್ಲಿ",
+			"english": "atmosphere"
+		},
+		{
+			"kannada": "ಅರಿವು",
+			"english": "awareness"
+		},
+		{
+			"kannada": "ಸ್ನಾನ",
+			"english": "bath"
+		},
+		{
+			"kannada": "ಬ್ರೆಡ್",
+			"english": "bread"
+		},
+		{
+			"kannada": "ಅಭ್ಯರ್ಥಿ",
+			"english": "candidate"
+		},
+		{
+			"kannada": "ಹವಾಮಾನ",
+			"english": "climate"
+		},
+		{
+			"kannada": "ಹೋಲಿಕೆ",
+			"english": "comparison"
+		},
+		{
+			"kannada": "ಗೊಂದಲ",
+			"english": "confusion"
+		},
+		{
+			"kannada": "ನಿರ್ಮಾಣ",
+			"english": "construction"
+		},
+		{
+			"kannada": "ಲಿಫ್ಟ್",
+			"english": "elevator"
+		},
+		{
+			"kannada": "ಭಾವನೆಯ",
+			"english": "emotion"
+		},
+		{
+			"kannada": "ಉದ್ಯೋಗಿ",
+			"english": "employee"
+		},
+		{
+			"kannada": "ಉದ್ಯೋಗದಾತ",
+			"english": "employer"
+		},
+		{
+			"kannada": "ಅತಿಥಿ",
+			"english": "guest"
+		},
+		{
+			"kannada": "ಎತ್ತರ",
+			"english": "height"
+		},
+		{
+			"kannada": "ನಾಯಕತ್ವ",
+			"english": "leadership"
+		},
+		{
+			"kannada": "ಮಾಲ್",
+			"english": "mall"
+		},
+		{
+			"kannada": "ಮ್ಯಾನೇಜರ್",
+			"english": "manager"
+		},
+		{
+			"kannada": "ಕಾರ್ಯಾಚರಣೆ",
+			"english": "operation"
+		},
+		{
+			"kannada": "ರೆಕಾರ್ಡಿಂಗ್",
+			"english": "recording"
+		},
+		{
+			"kannada": "ಮಾದರಿ",
+			"english": "sample"
+		},
+		{
+			"kannada": "ಸಾರಿಗೆ",
+			"english": "transportation"
+		},
+		{
+			"kannada": "ಚಾರಿಟಿ",
+			"english": "charity"
+		},
+		{
+			"kannada": "ಸೋದರಸಂಬಂಧಿ",
+			"english": "cousin"
+		},
+		{
+			"kannada": "ದುರಂತದ",
+			"english": "disaster"
+		},
+		{
+			"kannada": "ಸಂಪಾದಕ",
+			"english": "editor"
+		},
+		{
+			"kannada": "ದಕ್ಷತೆ",
+			"english": "efficiency"
+		},
+		{
+			"kannada": "ಉತ್ಸಾಹ",
+			"english": "excitement"
+		},
+		{
+			"kannada": "ಮಟ್ಟಿಗೆ",
+			"english": "extent"
+		},
+		{
+			"kannada": "ಪ್ರತಿಕ್ರಿಯೆ",
+			"english": "feedback"
+		},
+		{
+			"kannada": "ಗಿಟಾರ್",
+			"english": "guitar"
+		},
+		{
+			"kannada": "ಮನೆ ಕೆಲಸ",
+			"english": "homework"
+		},
+		{
+			"kannada": "ನಾಯಕ",
+			"english": "leader"
+		},
+		{
+			"kannada": "ತಾಯಿ",
+			"english": "mom"
+		},
+		{
+			"kannada": "ಫಲಿತಾಂಶದ",
+			"english": "outcome"
+		},
+		{
+			"kannada": "ಅನುಮತಿ",
+			"english": "permission"
+		},
+		{
+			"kannada": "ಪ್ರಸ್ತುತಿ",
+			"english": "presentation"
+		},
+		{
+			"kannada": "ಪ್ರಚಾರ",
+			"english": "promotion"
+		},
+		{
+			"kannada": "ಪ್ರತಿಬಿಂಬ",
+			"english": "reflection"
+		},
+		{
+			"kannada": "ರೆಫ್ರಿಜಿರೇಟರ್",
+			"english": "refrigerator"
+		},
+		{
+			"kannada": "ರೆಸಲ್ಯೂಶನ್",
+			"english": "resolution"
+		},
+		{
+			"kannada": "ಆದಾಯ",
+			"english": "revenue"
+		},
+		{
+			"kannada": "ಅಧಿವೇಶನ",
+			"english": "session"
+		},
+		{
+			"kannada": "ಗಾಯಕ",
+			"english": "singer"
+		},
+		{
+			"kannada": "ಟೆನಿಸ್",
+			"english": "tennis"
+		},
+		{
+			"kannada": "ಬ್ಯಾಸ್ಕೆಟ್",
+			"english": "basket"
+		},
+		{
+			"kannada": "ಬೋನಸ್",
+			"english": "bonus"
+		},
+		{
+			"kannada": "ಕ್ಯಾಬಿನೆಟ್",
+			"english": "cabinet"
+		},
+		{
+			"kannada": "ಬಾಲ್ಯದ",
+			"english": "childhood"
+		},
+		{
+			"kannada": "ಚರ್ಚ್",
+			"english": "church"
+		},
+		{
+			"kannada": "ಬಟ್ಟೆ",
+			"english": "clothes"
+		},
+		{
+			"kannada": "ಕಾಫಿ",
+			"english": "coffee"
+		},
+		{
+			"kannada": "ಭೋಜನ",
+			"english": "dinner"
+		},
+		{
+			"kannada": "ಚಿತ್ರ",
+			"english": "drawing"
+		},
+		{
+			"kannada": "ಕೂದಲು",
+			"english": "hair"
+		},
+		{
+			"kannada": "ಕೇಳಿದ",
+			"english": "hearing"
+		},
+		{
+			"kannada": "ಉಪಕ್ರಮವು",
+			"english": "initiative"
+		},
+		{
+			"kannada": "ತೀರ್ಪು",
+			"english": "judgment"
+		},
+		{
+			"kannada": "ಲ್ಯಾಬ್",
+			"english": "lab"
+		},
+		{
+			"kannada": "ಮಾಪನ",
+			"english": "measurement"
+		},
+		{
+			"kannada": "ಕ್ರಮದಲ್ಲಿ",
+			"english": "mode"
+		},
+		{
+			"kannada": "ಮಣ್ಣು",
+			"english": "mud"
+		},
+		{
+			"kannada": "ಕಿತ್ತಳೆ",
+			"english": "orange"
+		},
+		{
+			"kannada": "ಕವನ",
+			"english": "poetry"
+		},
+		{
+			"kannada": "ಪೊಲೀಸ್",
+			"english": "police"
+		},
+		{
+			"kannada": "ಸಾಧ್ಯತೆಯನ್ನು",
+			"english": "possibility"
+		},
+		{
+			"kannada": "ವಿಧಾನ",
+			"english": "procedure"
+		},
+		{
+			"kannada": "ರಾಣಿ",
+			"english": "queen"
+		},
+		{
+			"kannada": "ಅನುಪಾತ",
+			"english": "ratio"
+		},
+		{
+			"kannada": "ಸಂಬಂಧಿಸಿದಂತೆ",
+			"english": "relation"
+		},
+		{
+			"kannada": "ಉಪಹಾರ ಗೃಹ",
+			"english": "restaurant"
+		},
+		{
+			"kannada": "ತೃಪ್ತಿ",
+			"english": "satisfaction"
+		},
+		{
+			"kannada": "ವಲಯದ",
+			"english": "sector"
+		},
+		{
+			"kannada": "ಸಹಿ",
+			"english": "signature"
+		},
+		{
+			"kannada": "ಮಹತ್ವ",
+			"english": "significance"
+		},
+		{
+			"kannada": "ಹಾಡು",
+			"english": "song"
+		},
+		{
+			"kannada": "ಹಲ್ಲು",
+			"english": "tooth"
+		},
+		{
+			"kannada": "ಪಟ್ಟಣದ",
+			"english": "town"
+		},
+		{
+			"kannada": "ವಾಹನ",
+			"english": "vehicle"
+		},
+		{
+			"kannada": "ಪರಿಮಾಣ",
+			"english": "volume"
+		},
+		{
+			"kannada": "ಪತ್ನಿ",
+			"english": "wife"
+		},
+		{
+			"kannada": "ಅಪಘಾತ",
+			"english": "accident"
+		},
+		{
+			"kannada": "ವಿಮಾನ ನಿಲ್ದಾಣ",
+			"english": "airport"
+		},
+		{
+			"kannada": "ಅಪಾಯಿಂಟ್ಮೆಂಟ್",
+			"english": "appointment"
+		},
+		{
+			"kannada": "ಆಗಮನದ",
+			"english": "arrival"
+		},
+		{
+			"kannada": "ಊಹೆ",
+			"english": "assumption"
+		},
+		{
+			"kannada": "ಬೇಸ್ಬಾಲ್",
+			"english": "baseball"
+		},
+		{
+			"kannada": "ಅಧ್ಯಾಯ",
+			"english": "chapter"
+		},
+		{
+			"kannada": "ಸಮಿತಿ",
+			"english": "committee"
+		},
+		{
+			"kannada": "ಸಂಭಾಷಣೆ",
+			"english": "conversation"
+		},
+		{
+			"kannada": "ಡೇಟಾಬೇಸ್",
+			"english": "database"
+		},
+		{
+			"kannada": "ಉತ್ಸಾಹ",
+			"english": "enthusiasm"
+		},
+		{
+			"kannada": "ದೋಷ",
+			"english": "error"
+		},
+		{
+			"kannada": "ವಿವರಣೆಯನ್ನು",
+			"english": "explanation"
+		},
+		{
+			"kannada": "ರೈತ",
+			"english": "farmer"
+		},
+		{
+			"kannada": "ಗೇಟ್",
+			"english": "gate"
+		},
+		{
+			"kannada": "ಹುಡುಗಿ",
+			"english": "girl"
+		},
+		{
+			"kannada": "ಸಭಾಂಗಣ",
+			"english": "hall"
+		},
+		{
+			"kannada": "ಇತಿಹಾಸಕಾರ",
+			"english": "historian"
+		},
+		{
+			"kannada": "ಆಸ್ಪತ್ರೆಯಲ್ಲಿ",
+			"english": "hospital"
+		},
+		{
+			"kannada": "ಗಾಯ",
+			"english": "injury"
+		},
+		{
+			"kannada": "ಸೂಚನಾ",
+			"english": "instruction"
+		},
+		{
+			"kannada": "ನಿರ್ವಹಣೆ",
+			"english": "maintenance"
+		},
+		{
+			"kannada": "ತಯಾರಕ",
+			"english": "manufacturer"
+		},
+		{
+			"kannada": "ಊಟ",
+			"english": "meal"
+		},
+		{
+			"kannada": "ಗ್ರಹಿಕೆ",
+			"english": "perception"
+		},
+		{
+			"kannada": "ಪೈ",
+			"english": "pie"
+		},
+		{
+			"kannada": "ಕವಿತೆ",
+			"english": "poem"
+		},
+		{
+			"kannada": "ಉಪಸ್ಥಿತಿ",
+			"english": "presence"
+		},
+		{
+			"kannada": "ಪ್ರಸ್ತಾವನೆಯನ್ನು",
+			"english": "proposal"
+		},
+		{
+			"kannada": "ಸ್ವಾಗತ",
+			"english": "reception"
+		},
+		{
+			"kannada": "ಬದಲಿ",
+			"english": "replacement"
+		},
+		{
+			"kannada": "ಕ್ರಾಂತಿ",
+			"english": "revolution"
+		},
+		{
+			"kannada": "ನದಿ",
+			"english": "river"
+		},
+		{
+			"kannada": "ಮಗ",
+			"english": "son"
+		},
+		{
+			"kannada": "ಭಾಷಣ",
+			"english": "speech"
+		},
+		{
+			"kannada": "ಚಹಾ",
+			"english": "tea"
+		},
+		{
+			"kannada": "ಗ್ರಾಮ",
+			"english": "village"
+		},
+		{
+			"kannada": "ಎಚ್ಚರಿಕೆ",
+			"english": "warning"
+		},
+		{
+			"kannada": "ವಿಜೇತ",
+			"english": "winner"
+		},
+		{
+			"kannada": "ಕೆಲಸಗಾರ",
+			"english": "worker"
+		},
+		{
+			"kannada": "ಬರಹಗಾರ",
+			"english": "writer"
+		},
+		{
+			"kannada": "ನೆರವು",
+			"english": "assistance"
+		},
+		{
+			"kannada": "ಉಸಿರಾಟದ",
+			"english": "breath"
+		},
+		{
+			"kannada": "ಖರೀದಿದಾರ",
+			"english": "buyer"
+		},
+		{
+			"kannada": "ಎದೆಯ",
+			"english": "chest"
+		},
+		{
+			"kannada": "ಚಾಕೊಲೇಟ್",
+			"english": "chocolate"
+		},
+		{
+			"kannada": "ತೀರ್ಮಾನಕ್ಕೆ",
+			"english": "conclusion"
+		},
+		{
+			"kannada": "ಕೊಡುಗೆ",
+			"english": "contribution"
+		},
+		{
+			"kannada": "ಕುಕೀ",
+			"english": "cookie"
+		},
+		{
+			"kannada": "ಧೈರ್ಯ",
+			"english": "courage"
+		},
+		{
+			"kannada": "ತಂದೆ",
+			"english": "dad"
+		},
+		{
+			"kannada": "ಮೇಜಿನ",
+			"english": "desk"
+		},
+		{
+			"kannada": "ಡ್ರಾಯರ್",
+			"english": "drawer"
+		},
+		{
+			"kannada": "ಸ್ಥಾಪನೆ",
+			"english": "establishment"
+		},
+		{
+			"kannada": "ಪರೀಕ್ಷೆ",
+			"english": "examination"
+		},
+		{
+			"kannada": "ಕಸ",
+			"english": "garbage"
+		},
+		{
+			"kannada": "ಕಿರಾಣಿ",
+			"english": "grocery"
+		},
+		{
+			"kannada": "ಜೇನು",
+			"english": "honey"
+		},
+		{
+			"kannada": "ಅನಿಸಿಕೆ",
+			"english": "impression"
+		},
+		{
+			"kannada": "ಸುಧಾರಣೆ",
+			"english": "improvement"
+		},
+		{
+			"kannada": "ಸ್ವಾತಂತ್ರ್ಯ",
+			"english": "independence"
+		},
+		{
+			"kannada": "ಕೀಟ",
+			"english": "insect"
+		},
+		{
+			"kannada": "ತಪಾಸಣೆ",
+			"english": "inspection"
+		},
+		{
+			"kannada": "ಇನ್ಸ್ಪೆಕ್ಟರ್",
+			"english": "inspector"
+		},
+		{
+			"kannada": "ರಾಜ",
+			"english": "king"
+		},
+		{
+			"kannada": "ಏಣಿಯ",
+			"english": "ladder"
+		},
+		{
+			"kannada": "ಮೆನು",
+			"english": "menu"
+		},
+		{
+			"kannada": "ಪೆನಾಲ್ಟಿ",
+			"english": "penalty"
+		},
+		{
+			"kannada": "ಪಿಯಾನೋ",
+			"english": "piano"
+		},
+		{
+			"kannada": "ಆಲೂಗಡ್ಡೆ",
+			"english": "potato"
+		},
+		{
+			"kannada": "ವೃತ್ತಿ",
+			"english": "profession"
+		},
+		{
+			"kannada": "ಪ್ರಾಧ್ಯಾಪಕ",
+			"english": "professor"
+		},
+		{
+			"kannada": "ಪ್ರಮಾಣ",
+			"english": "quantity"
+		},
+		{
+			"kannada": "ಪ್ರತಿಕ್ರಿಯೆ",
+			"english": "reaction"
+		},
+		{
+			"kannada": "ಅವಶ್ಯಕತೆ",
+			"english": "requirement"
+		},
+		{
+			"kannada": "ಸಲಾಡ್",
+			"english": "salad"
+		},
+		{
+			"kannada": "ಸಹೋದರಿ",
+			"english": "sister"
+		},
+		{
+			"kannada": "ಸೂಪರ್ಮಾರ್ಕೆಟ್",
+			"english": "supermarket"
+		},
+		{
+			"kannada": "ನಾಲಿಗೆ",
+			"english": "tongue"
+		},
+		{
+			"kannada": "ದೌರ್ಬಲ್ಯ",
+			"english": "weakness"
+		},
+		{
+			"kannada": "ಮದುವೆ",
+			"english": "wedding"
+		},
+		{
+			"kannada": "ಸಂಬಂಧ",
+			"english": "affair"
+		},
+		{
+			"kannada": "ಮಹತ್ವಾಕಾಂಕ್ಷೆ",
+			"english": "ambition"
+		},
+		{
+			"kannada": "ವಿಶ್ಲೇಷಕ",
+			"english": "analyst"
+		},
+		{
+			"kannada": "ಸೇಬು",
+			"english": "apple"
+		},
+		{
+			"kannada": "ಹುದ್ದೆ",
+			"english": "assignment"
+		},
+		{
+			"kannada": "ಸಹಾಯಕ",
+			"english": "assistant"
+		},
+		{
+			"kannada": "ಬಾತ್ರೂಮ್",
+			"english": "bathroom"
+		},
+		{
+			"kannada": "ಮಲಗುವ ಕೋಣೆ",
+			"english": "bedroom"
+		},
+		{
+			"kannada": "ಬಿಯರ್",
+			"english": "beer"
+		},
+		{
+			"kannada": "ಹುಟ್ಟುಹಬ್ಬದ",
+			"english": "birthday"
+		},
+		{
+			"kannada": "ಆಚರಣೆ",
+			"english": "celebration"
+		},
+		{
+			"kannada": "ಚಾಂಪಿಯನ್ ಶಿಪ್",
+			"english": "championship"
+		},
+		{
+			"kannada": "ಕೆನ್ನೆಯ",
+			"english": "cheek"
+		},
+		{
+			"kannada": "ಕ್ಲೈಂಟ್",
+			"english": "client"
+		},
+		{
+			"kannada": "ಪರಿಣಾಮವಾಗಿ",
+			"english": "consequence"
+		},
+		{
+			"kannada": "ನಿರ್ಗಮನ",
+			"english": "departure"
+		},
+		{
+			"kannada": "ವಜ್ರ",
+			"english": "diamond"
+		},
+		{
+			"kannada": "ಕೊಳಕು",
+			"english": "dirt"
+		},
+		{
+			"kannada": "ಕಿವಿ",
+			"english": "ear"
+		},
+		{
+			"kannada": "ಅದೃಷ್ಟ",
+			"english": "fortune"
+		},
+		{
+			"kannada": "ಸ್ನೇಹಕ್ಕಾಗಿ",
+			"english": "friendship"
+		},
+		{
+			"kannada": "ಅಂತ್ಯಕ್ರಿಯೆ",
+			"english": "funeral"
+		},
+		{
+			"kannada": "ಜೀನ್",
+			"english": "gene"
+		},
+		{
+			"kannada": "ಗೆಳತಿ",
+			"english": "girlfriend"
+		},
+		{
+			"kannada": "ಹ್ಯಾಟ್",
+			"english": "hat"
+		},
+		{
+			"kannada": "ಸೂಚನೆ",
+			"english": "indication"
+		},
+		{
+			"kannada": "ಉದ್ದೇಶ",
+			"english": "intention"
+		},
+		{
+			"kannada": "ಮಹಿಳೆ",
+			"english": "lady"
+		},
+		{
+			"kannada": "ಮಧ್ಯರಾತ್ರಿ",
+			"english": "midnight"
+		},
+		{
+			"kannada": "ಸಮಾಲೋಚನಾ",
+			"english": "negotiation"
+		},
+		{
+			"kannada": "ಬಾಧ್ಯತೆ",
+			"english": "obligation"
+		},
+		{
+			"kannada": "ಪ್ರಯಾಣಿಕರ",
+			"english": "passenger"
+		},
+		{
+			"kannada": "ಪಿಜ್ಜಾ",
+			"english": "pizza"
+		},
+		{
+			"kannada": "ವೇದಿಕೆ",
+			"english": "platform"
+		},
+		{
+			"kannada": "ಕವಿ",
+			"english": "poet"
+		},
+		{
+			"kannada": "ಮಾಲಿನ್ಯ",
+			"english": "pollution"
+		},
+		{
+			"kannada": "ಗುರುತಿಸುವಿಕೆ",
+			"english": "recognition"
+		},
+		{
+			"kannada": "ಖ್ಯಾತಿ",
+			"english": "reputation"
+		},
+		{
+			"kannada": "ಶರ್ಟ್",
+			"english": "shirt"
+		},
+		{
+			"kannada": "ಸರ್",
+			"english": "sir"
+		},
+		{
+			"kannada": "ಸ್ಪೀಕರ್",
+			"english": "speaker"
+		},
+		{
+			"kannada": "ಅಪರಿಚಿತ",
+			"english": "stranger"
+		},
+		{
+			"kannada": "ಶಸ್ತ್ರಚಿಕಿತ್ಸೆ",
+			"english": "surgery"
+		},
+		{
+			"kannada": "ಸಹಾನುಭೂತಿ",
+			"english": "sympathy"
+		},
+		{
+			"kannada": "ಕಥೆ",
+			"english": "tale"
+		},
+		{
+			"kannada": "ಗಂಟಲು",
+			"english": "throat"
+		},
+		{
+			"kannada": "ತರಬೇತುದಾರ",
+			"english": "trainer"
+		},
+		{
+			"kannada": "ಚಿಕ್ಕಪ್ಪ",
+			"english": "uncle"
+		},
+		{
+			"kannada": "ಯುವ ಜನ",
+			"english": "youth"
+		},
+		{
+			"kannada": "ಹಣ",
+			"english": "money"
+		},
+		{
+			"kannada": "ಹಾಗೆಯೇ",
+			"english": "while"
+		},
+		{
+			"kannada": "ವ್ಯಾಪಾರ",
+			"english": "business"
+		},
+		{
+			"kannada": "ಜೀವನ",
+			"english": "life"
+		},
+		{
+			"kannada": "ದಿನ",
+			"english": "day"
+		},
+		{
+			"kannada": "ಮನೆ",
+			"english": "home"
+		},
+		{
+			"kannada": "ಆರ್ಥಿಕ",
+			"english": "economy"
+		},
+		{
+			"kannada": "ತರಬೇತಿ",
+			"english": "training"
+		},
+		{
+			"kannada": "ರೀತಿಯ",
+			"english": "kind"
+		},
+		{
+			"kannada": "ಭವಿಷ್ಯದ",
+			"english": "future"
+		},
+		{
+			"kannada": "ಕ್ರಮ",
+			"english": "action"
+		},
+		{
+			"kannada": "ಕೆಟ್ಟ",
+			"english": "bad"
+		},
+		{
+			"kannada": "ಏನೂ",
+			"english": "nothing"
+		},
+		{
+			"kannada": "ಅವಧಿಯಲ್ಲಿ",
+			"english": "period"
+		},
+		{
+			"kannada": "ವಿಷಯ",
+			"english": "subject"
+		},
+		{
+			"kannada": "ಕೋಳಿ",
+			"english": "chicken"
+		},
+		{
+			"kannada": "ವಸ್ತು",
+			"english": "material"
+		},
+		{
+			"kannada": "ಕಾರು",
+			"english": "car"
+		},
+		{
+			"kannada": "ಅರ್ಧ",
+			"english": "half"
+		},
+		{
+			"kannada": "ಒಳಗೆ",
+			"english": "inside"
+		},
+		{
+			"kannada": "ಹೊರಗೆ",
+			"english": "outside"
+		},
+		{
+			"kannada": "ಪ್ರಮಾಣಿತ",
+			"english": "standard"
+		},
+		{
+			"kannada": "ಐಟಂ",
+			"english": "item"
+		},
+		{
+			"kannada": "ಮಧ್ಯಮ",
+			"english": "medium"
+		},
+		{
+			"kannada": "ಆಯ್ಕೆ",
+			"english": "choice"
+		},
+		{
+			"kannada": "ಬೆಳಿಗ್ಗೆ",
+			"english": "morning"
+		},
+		{
+			"kannada": "ಉತ್ತರ",
+			"english": "north"
+		},
+		{
+			"kannada": "ಚದರ",
+			"english": "square"
+		},
+		{
+			"kannada": "ರಾಜಧಾನಿ",
+			"english": "capital"
+		},
+		{
+			"kannada": "ಸ್ವಯಂ",
+			"english": "self"
+		},
+		{
+			"kannada": "ಶಾಟ್",
+			"english": "shot"
+		},
+		{
+			"kannada": "ದೇಶ",
+			"english": "living"
+		},
+		{
+			"kannada": "ಪ್ಲಾಸ್ಟಿಕ್",
+			"english": "plastic"
+		},
+		{
+			"kannada": "ಭಾವನೆ",
+			"english": "feeling"
+		},
+		{
+			"kannada": "ಉಳಿತಾಯ",
+			"english": "savings"
+		},
+		{
+			"kannada": "ಪ್ರಾಣಿ",
+			"english": "animal"
+		},
+		{
+			"kannada": "ಗರಿಷ್ಠ",
+			"english": "maximum"
+		},
+		{
+			"kannada": "ಕಾದಂಬರಿ",
+			"english": "novel"
+		},
+		{
+			"kannada": "ಸಾಕಷ್ಟು",
+			"english": "plenty"
+		},
+		{
+			"kannada": "ಹಿನ್ನೆಲೆ",
+			"english": "background"
+		},
+		{
+			"kannada": "ಕೆಂಪು",
+			"english": "red"
+		},
+		{
+			"kannada": "ಶಕ್ತಿ",
+			"english": "strength"
+		},
+		{
+			"kannada": "ತರಕಾರಿ",
+			"english": "vegetable"
+		},
+		{
+			"kannada": "ಆದರ್ಶ",
+			"english": "ideal"
+		},
+		{
+			"kannada": "ಅಡಿಗೆ",
+			"english": "kitchen"
+		},
+		{
+			"kannada": "ತತ್ವ",
+			"english": "principle"
+		},
+		{
+			"kannada": "ಸಂಬಂಧಿತ",
+			"english": "relative"
+		},
+		{
+			"kannada": "ಮಾರಾಟ",
+			"english": "sale"
+		},
+		{
+			"kannada": "ರಸ್ತೆ",
+			"english": "street"
+		},
+		{
+			"kannada": "ಕನಿಷ್ಠ",
+			"english": "minimum"
+		},
+		{
+			"kannada": "ಮಾರ್ಗ",
+			"english": "path"
+		},
+		{
+			"kannada": "ಸಮುದ್ರ",
+			"english": "sea"
+		},
+		{
+			"kannada": "ದಕ್ಷಿಣ",
+			"english": "south"
+		},
+		{
+			"kannada": "ಸ್ಥಿತಿ",
+			"english": "status"
+		},
+		{
+			"kannada": "ವಿಶ್ವಾಸ",
+			"english": "confidence"
+		},
+		{
+			"kannada": "ಮಗಳು",
+			"english": "daughter"
+		},
+		{
+			"kannada": "ಪದವಿ",
+			"english": "degree"
+		},
+		{
+			"kannada": "ಕರ್ತವ್ಯ",
+			"english": "duty"
+		},
+		{
+			"kannada": "ಗಂಟೆ",
+			"english": "hour"
+		},
+		{
+			"kannada": "ವಸ್ತುವಿನ",
+			"english": "substance"
+		},
+		{
+			"kannada": "ಮಧ್ಯಾಹ್ನ",
+			"english": "afternoon"
+		},
+		{
+			"kannada": "ಪರಿಗಣಿಸಿ",
+			"english": "consideration"
+		},
+		{
+			"kannada": "ಚಿನ್ನದ",
+			"english": "gold"
+		},
+		{
+			"kannada": "ಮಿಷನ್",
+			"english": "mission"
+		},
+		{
+			"kannada": "ಬಾಗಿಲು",
+			"english": "door"
+		},
+		{
+			"kannada": "ಪೂರ್ವ",
+			"english": "east"
+		},
+		{
+			"kannada": "ರೀತಿಯಲ್ಲಿ",
+			"english": "manner"
+		},
+		{
+			"kannada": "ಸಭೆಯಲ್ಲಿ",
+			"english": "meeting"
+		},
+		{
+			"kannada": "ಪಾರ್ಕಿಂಗ್",
+			"english": "parking"
+		},
+		{
+			"kannada": "ವಾಡಿಕೆಯ",
+			"english": "routine"
+		},
+		{
+			"kannada": "ಈಜು",
+			"english": "swimming"
+		},
+		{
+			"kannada": "ವಿಮಾನಯಾನ",
+			"english": "airline"
+		},
+		{
+			"kannada": "ಡಿಸೈನರ್",
+			"english": "designer"
+		},
+		{
+			"kannada": "ತುರ್ತು",
+			"english": "emergency"
+		},
+		{
+			"kannada": "ಸಂಜೆ",
+			"english": "evening"
+		},
+		{
+			"kannada": "ವಿಸ್ತರಣೆ",
+			"english": "extension"
+		},
+		{
+			"kannada": "ಭಯಾನಕ",
+			"english": "horror"
+		},
+		{
+			"kannada": "ಪರ್ವತ",
+			"english": "mountain"
+		},
+		{
+			"kannada": "ರೋಗಿಯ",
+			"english": "patient"
+		},
+		{
+			"kannada": "ಪರಿಹಾರ",
+			"english": "relief"
+		},
+		{
+			"kannada": "ಪ್ರವಾಸಿ",
+			"english": "tourist"
+		},
+		{
+			"kannada": "ಪಶ್ಚಿಮ",
+			"english": "west"
+		},
+		{
+			"kannada": "ಪಕ್ಕಕ್ಕೆ",
+			"english": "aside"
+		},
+		{
+			"kannada": "ಸಹೋದರ",
+			"english": "brother"
+		},
+		{
+			"kannada": "ತಜ್ಞ",
+			"english": "expert"
+		},
+		{
+			"kannada": "ದೇವರು",
+			"english": "god"
+		},
+		{
+			"kannada": "ಸ್ಥಳೀಯ",
+			"english": "native"
+		},
+		{
+			"kannada": "ಆರಂಭಿಕ",
+			"english": "opening"
+		},
+		{
+			"kannada": "ಹುಡುಗ",
+			"english": "boy"
+		},
+		{
+			"kannada": "ತಜ್ಞ",
+			"english": "specialist"
+		},
+		{
+			"kannada": "ಕಹಿ",
+			"english": "bitter"
+		},
+		{
+			"kannada": "ನರಕದ",
+			"english": "hell"
+		},
+		{
+			"kannada": "ಘಟನೆ",
+			"english": "incident"
+		},
+		{
+			"kannada": "ನಿವಾಸಿ",
+			"english": "resident"
+		},
+		{
+			"kannada": "ಒಂದು",
+			"english": "a"
+		},
+		{
+			"kannada": "ನೀವು",
+			"english": "you"
+		},
+		{
+			"kannada": "ಇದು",
+			"english": "it"
+		},
+		{
+			"kannada": "ಮಾಡಬಹುದು",
+			"english": "can"
+		},
+		{
+			"kannada": "ತಿನ್ನುವೆ",
+			"english": "will"
+		},
+		{
+			"kannada": "ವೇಳೆ",
+			"english": "if"
+		},
+		{
+			"kannada": "ಒಂದು",
+			"english": "one"
+		},
+		{
+			"kannada": "ಅನೇಕ",
+			"english": "many"
+		},
+		{
+			"kannada": "ಅತ್ಯಂತ",
+			"english": "most"
+		},
+		{
+			"kannada": "ಇತರ",
+			"english": "other"
+		},
+		{
+			"kannada": "ಉತ್ತಮ",
+			"english": "good"
+		},
+		{
+			"kannada": "ದೊಡ್ಡ",
+			"english": "great"
+		},
+		{
+			"kannada": "ಕೆಲವು",
+			"english": "few"
+		},
+		{
+			"kannada": "ಬಹುಶಃ",
+			"english": "might"
+		},
+		{
+			"kannada": "ಇನ್ನೂ",
+			"english": "still"
+		},
+		{
+			"kannada": "ಸಾರ್ವಜನಿಕ",
+			"english": "public"
+		},
+		{
+			"kannada": "ಮಾನವ",
+			"english": "human"
+		},
+		{
+			"kannada": "ಸ್ಥಳೀಯ",
+			"english": "local"
+		},
+		{
+			"kannada": "ಸಾಮಾನ್ಯ",
+			"english": "general"
+		},
+		{
+			"kannada": "ಅವರು",
+			"english": "she"
+		},
+		{
+			"kannada": "ನಿರ್ದಿಷ್ಟ",
+			"english": "specific"
+		},
+		{
+			"kannada": "ದೀರ್ಘ",
+			"english": "long"
+		},
+		{
+			"kannada": "ಹೆಚ್ಚಿನ",
+			"english": "high"
+		},
+		{
+			"kannada": "ಟುನೈಟ್",
+			"english": "tonight"
+		},
+		{
+			"kannada": "ಸಾಮಾನ್ಯ",
+			"english": "common"
+		},
+		{
+			"kannada": "ಸರಳ",
+			"english": "simple"
+		},
+		{
+			"kannada": "ಕಳೆದ",
+			"english": "past"
+		},
+		{
+			"kannada": "ದೊಡ್ಡ",
+			"english": "big"
+		},
+		{
+			"kannada": "ಸಾಧ್ಯ",
+			"english": "possible"
+		},
+		{
+			"kannada": "ನಿರ್ದಿಷ್ಟ",
+			"english": "particular"
+		},
+		{
+			"kannada": "ಇಂದು",
+			"english": "today"
+		},
+		{
+			"kannada": "ವೈಯಕ್ತಿಕ",
+			"english": "personal"
+		},
+		{
+			"kannada": "ಪ್ರಸ್ತುತ",
+			"english": "current"
+		},
+		{
+			"kannada": "ರಾಷ್ಟ್ರೀಯ",
+			"english": "national"
+		},
+		{
+			"kannada": "ನೈಸರ್ಗಿಕ",
+			"english": "natural"
+		},
+		{
+			"kannada": "ದೈಹಿಕ",
+			"english": "physical"
+		},
+		{
+			"kannada": "ಎರಡನೇ",
+			"english": "second"
+		},
+		{
+			"kannada": "ವೈಯಕ್ತಿಕ",
+			"english": "individual"
+		},
+		{
+			"kannada": "ಮುಖ್ಯ",
+			"english": "main"
+		},
+		{
+			"kannada": "ಸಂಭಾವ್ಯ",
+			"english": "potential"
+		},
+		{
+			"kannada": "ವೃತ್ತಿಪರ",
+			"english": "professional"
+		},
+		{
+			"kannada": "ಅಂತಾರಾಷ್ಟ್ರೀಯ",
+			"english": "international"
+		},
+		{
+			"kannada": "ಪರ್ಯಾಯ",
+			"english": "alternative"
+		},
+		{
+			"kannada": "ಕೆಳಗಿನ",
+			"english": "following"
+		},
+		{
+			"kannada": "ವಿಶೇಷ",
+			"english": "special"
+		},
+		{
+			"kannada": "ಕೆಲಸ",
+			"english": "working"
+		},
+		{
+			"kannada": "ಇಡೀ",
+			"english": "whole"
+		},
+		{
+			"kannada": "ಶೀತ",
+			"english": "cold"
+		},
+		{
+			"kannada": "ವಾಣಿಜ್ಯ",
+			"english": "commercial"
+		},
+		{
+			"kannada": "ಕಡಿಮೆ",
+			"english": "low"
+		},
+		{
+			"kannada": "ಪ್ರಾಥಮಿಕ",
+			"english": "primary"
+		},
+		{
+			"kannada": "ಮೌಲ್ಯದ",
+			"english": "worth"
+		},
+		{
+			"kannada": "ಅಗತ್ಯ",
+			"english": "necessary"
+		},
+		{
+			"kannada": "ಧನಾತ್ಮಕ",
+			"english": "positive"
+		},
+		{
+			"kannada": "ಸೃಜನಶೀಲ",
+			"english": "creative"
+		},
+		{
+			"kannada": "ಸಂತೋಷವನ್ನು",
+			"english": "glad"
+		},
+		{
+			"kannada": "ಕಾರಣ",
+			"english": "due"
+		},
+		{
+			"kannada": "ಪರಿಣಾಮಕಾರಿ",
+			"english": "effective"
+		},
+		{
+			"kannada": "ಮಧ್ಯಮ",
+			"english": "middle"
+		},
+		{
+			"kannada": "ಸಾಮಾನ್ಯ",
+			"english": "regular"
+		},
+		{
+			"kannada": "ಸ್ವತಂತ್ರ",
+			"english": "independent"
+		},
+		{
+			"kannada": "ಮೂಲ",
+			"english": "original"
+		},
+		{
+			"kannada": "ಸುಂದರ",
+			"english": "beautiful"
+		},
+		{
+			"kannada": "ಸಕ್ರಿಯ",
+			"english": "active"
+		},
+		{
+			"kannada": "ಋಣಾತ್ಮಕ",
+			"english": "negative"
+		},
+		{
+			"kannada": "ಸುರಕ್ಷಿತ",
+			"english": "safe"
+		},
+		{
+			"kannada": "ದೃಶ್ಯ",
+			"english": "visual"
+		},
+		{
+			"kannada": "ಮೀರಿ",
+			"english": "beyond"
+		},
+		{
+			"kannada": "ಕಿರಿಯ",
+			"english": "junior"
+		},
+		{
+			"kannada": "ಅನನ್ಯ",
+			"english": "unique"
+		},
+		{
+			"kannada": "ಏನು",
+			"english": "anything"
+		},
+		{
+			"kannada": "ಶಾಸ್ತ್ರೀಯ",
+			"english": "classic"
+		},
+		{
+			"kannada": "ಅಂತಿಮ",
+			"english": "final"
+		},
+		{
+			"kannada": "ಖಾಸಗಿ",
+			"english": "private"
+		},
+		{
+			"kannada": "ಪಶ್ಚಿಮ",
+			"english": "western"
+		},
+		{
+			"kannada": "ಪರಿಚಿತ",
+			"english": "familiar"
+		},
+		{
+			"kannada": "ಅಧಿಕೃತ",
+			"english": "official"
+		},
+		{
+			"kannada": "ವಿಶಾಲ",
+			"english": "broad"
+		},
+		{
+			"kannada": "ಆರಾಮದಾಯಕ",
+			"english": "comfortable"
+		},
+		{
+			"kannada": "ಇರಬಹುದು",
+			"english": "maybe"
+		},
+		{
+			"kannada": "ಶ್ರೀಮಂತ",
+			"english": "rich"
+		},
+		{
+			"kannada": "ಯುವ",
+			"english": "young"
+		},
+		{
+			"kannada": "ಭಾರೀ",
+			"english": "heavy"
+		},
+		{
+			"kannada": "ಹಲೋ",
+			"english": "hello"
+		},
+		{
+			"kannada": "ಬೆಲೆಬಾಳುವ",
+			"english": "valuable"
+		},
+		{
+			"kannada": "ಪ್ರಮುಖ",
+			"english": "leading"
+		},
+		{
+			"kannada": "ಸಾಮಾನ್ಯ",
+			"english": "normal"
+		},
+		{
+			"kannada": "ರಹಸ್ಯ",
+			"english": "secret"
+		},
+		{
+			"kannada": "ಕಠಿಣ",
+			"english": "tough"
+		},
+		{
+			"kannada": "ಆಳವಾದ",
+			"english": "deep"
+		},
+		{
+			"kannada": "ಉದ್ದೇಶ",
+			"english": "objective"
+		},
+		{
+			"kannada": "ರಾಸಾಯನಿಕ",
+			"english": "chemical"
+		},
+		{
+			"kannada": "ತೀವ್ರ",
+			"english": "extreme"
+		},
+		{
+			"kannada": "ಔಪಚಾರಿಕ",
+			"english": "formal"
+		},
+		{
+			"kannada": "ವಿರುದ್ದ",
+			"english": "opposite"
+		},
+		{
+			"kannada": "ದೂರಸ್ಥ",
+			"english": "remote"
+		},
+		{
+			"kannada": "ವ್ಯಾಪಕ",
+			"english": "vast"
+		},
+		{
+			"kannada": "ಎಲ್ಲೋ",
+			"english": "somewhere"
+		},
+		{
+			"kannada": "ಎಲ್ಲಿಯಾದರೂ",
+			"english": "anywhere"
+		},
+		{
+			"kannada": "ಡಾರ್ಕ್",
+			"english": "dark"
+		},
+		{
+			"kannada": "ಆಂತರಿಕ",
+			"english": "internal"
+		},
+		{
+			"kannada": "ಸೂಕ್ಷ್ಮ",
+			"english": "sensitive"
+		},
+		{
+			"kannada": "ನಿರಂತರ",
+			"english": "constant"
+		},
+		{
+			"kannada": "ಕಚ್ಚಾ",
+			"english": "raw"
+		},
+		{
+			"kannada": "ಮೃದು",
+			"english": "soft"
+		},
+		{
+			"kannada": "ಘನ",
+			"english": "solid"
+		},
+		{
+			"kannada": "ವಿಲಕ್ಷಣ",
+			"english": "weird"
+		},
+		{
+			"kannada": "ವಾರ್ಷಿಕ",
+			"english": "annual"
+		},
+		{
+			"kannada": "ಸತ್ತ",
+			"english": "dead"
+		},
+		{
+			"kannada": "ಶಾಶ್ವತವಾಗಿ",
+			"english": "forever"
+		},
+		{
+			"kannada": "ಯಾರೂ",
+			"english": "nobody"
+		},
+		{
+			"kannada": "ಸುತ್ತಿನಲ್ಲಿ",
+			"english": "round"
+		},
+		{
+			"kannada": "ಆದರೆ",
+			"english": "whereas"
+		},
+		{
+			"kannada": "ಸಮಾನ",
+			"english": "equivalent"
+		},
+		{
+			"kannada": "ಆಧ್ಯಾತ್ಮಿಕ",
+			"english": "spiritual"
+		},
+		{
+			"kannada": "ವಯಸ್ಕ",
+			"english": "adult"
+		},
+		{
+			"kannada": "ಕ್ರೇಜಿ",
+			"english": "crazy"
+		},
+		{
+			"kannada": "ಮೊದಲು",
+			"english": "prior"
+		},
+		{
+			"kannada": "ಒರಟು",
+			"english": "rough"
+		},
+		{
+			"kannada": "ದುಃಖ",
+			"english": "sad"
+		},
+		{
+			"kannada": "ಅನಾರೋಗ್ಯ",
+			"english": "sick"
+		},
+		{
+			"kannada": "ಬಾಹ್ಯ",
+			"english": "external"
+		},
+		{
+			"kannada": "ಅಕ್ರಮ",
+			"english": "illegal"
+		},
+		{
+			"kannada": "ಮೊಬೈಲ್",
+			"english": "mobile"
+		},
+		{
+			"kannada": "ಅಸಹ್ಯ",
+			"english": "nasty"
+		},
+		{
+			"kannada": "ಸಾಮಾನ್ಯ",
+			"english": "ordinary"
+		},
+		{
+			"kannada": "ರಾಯಲ್",
+			"english": "royal"
+		},
+		{
+			"kannada": "ಹಿರಿಯ",
+			"english": "senior"
+		},
+		{
+			"kannada": "ಮೇಲಿನ",
+			"english": "upper"
+		},
+		{
+			"kannada": "ಅವಲಂಬಿತ",
+			"english": "dependent"
+		},
+		{
+			"kannada": "ತಮಾಷೆಯ",
+			"english": "funny"
+		},
+		{
+			"kannada": "ಸಿಹಿ",
+			"english": "sweet"
+		},
+		{
+			"kannada": "ಉಪ್ಪರಿಗೆ",
+			"english": "upstairs"
+		},
+		{
+			"kannada": "ಸಾಮಾನ್ಯ",
+			"english": "usual"
+		},
+		{
+			"kannada": "ವಿದೇಶದಲ್ಲಿ",
+			"english": "abroad"
+		},
+		{
+			"kannada": "ಗ್ರಾಂಡ್",
+			"english": "grand"
+		},
+		{
+			"kannada": "ಪುರುಷ",
+			"english": "male"
+		},
+		{
+			"kannada": "ಯಾರೇ",
+			"english": "anybody"
+		},
+		{
+			"kannada": "ಅದ್ಭುತ",
+			"english": "brilliant"
+		},
+		{
+			"kannada": "ಪ್ರೀತಿಯ",
+			"english": "dear"
+		},
+		{
+			"kannada": "ಕುಡಿದು",
+			"english": "drunk"
+		},
+		{
+			"kannada": "ಸ್ತ್ರೀ",
+			"english": "female"
+		},
+		{
+			"kannada": "ಅನಿವಾರ್ಯ",
+			"english": "inevitable"
+		},
+		{
+			"kannada": "ಅಚ್ಚುಕಟ್ಟಾಗಿ",
+			"english": "neat"
+		},
+		{
+			"kannada": "ಪ್ರತಿನಿಧಿ",
+			"english": "representative"
+		},
+		{
+			"kannada": "ಸಿಲ್ಲಿ",
+			"english": "silly"
+		},
+		{
+			"kannada": "ಸ್ಟುಪಿಡ್",
+			"english": "stupid"
+		},
+		{
+			"kannada": "ತಾತ್ಕಾಲಿಕ",
+			"english": "temporary"
+		},
+		{
+			"kannada": "ನಾಳೆ",
+			"english": "tomorrow"
+		},
+		{
+			"kannada": "ನಿನ್ನೆ",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 527 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"korean": "사람들",
+			"english": "people"
+		},
+		{
+			"korean": "역사",
+			"english": "history"
+		},
+		{
+			"korean": "방법",
+			"english": "way"
+		},
+		{
+			"korean": "미술",
+			"english": "art"
+		},
+		{
+			"korean": "세계",
+			"english": "world"
+		},
+		{
+			"korean": "정보",
+			"english": "information"
+		},
+		{
+			"korean": "지도",
+			"english": "map"
+		},
+		{
+			"korean": "두",
+			"english": "two"
+		},
+		{
+			"korean": "가족",
+			"english": "family"
+		},
+		{
+			"korean": "정부",
+			"english": "government"
+		},
+		{
+			"korean": "건강",
+			"english": "health"
+		},
+		{
+			"korean": "체계",
+			"english": "system"
+		},
+		{
+			"korean": "컴퓨터",
+			"english": "computer"
+		},
+		{
+			"korean": "고기",
+			"english": "meat"
+		},
+		{
+			"korean": "년",
+			"english": "year"
+		},
+		{
+			"korean": "감사",
+			"english": "thanks"
+		},
+		{
+			"korean": "음악",
+			"english": "music"
+		},
+		{
+			"korean": "사람",
+			"english": "person"
+		},
+		{
+			"korean": "독서",
+			"english": "reading"
+		},
+		{
+			"korean": "방법",
+			"english": "method"
+		},
+		{
+			"korean": "데이터",
+			"english": "data"
+		},
+		{
+			"korean": "식품",
+			"english": "food"
+		},
+		{
+			"korean": "이해",
+			"english": "understanding"
+		},
+		{
+			"korean": "이론",
+			"english": "theory"
+		},
+		{
+			"korean": "법",
+			"english": "law"
+		},
+		{
+			"korean": "새",
+			"english": "bird"
+		},
+		{
+			"korean": "문학",
+			"english": "literature"
+		},
+		{
+			"korean": "문제",
+			"english": "problem"
+		},
+		{
+			"korean": "소프트웨어",
+			"english": "software"
+		},
+		{
+			"korean": "제어",
+			"english": "control"
+		},
+		{
+			"korean": "지식",
+			"english": "knowledge"
+		},
+		{
+			"korean": "힘",
+			"english": "power"
+		},
+		{
+			"korean": "능력",
+			"english": "ability"
+		},
+		{
+			"korean": "경제학",
+			"english": "economics"
+		},
+		{
+			"korean": "애정",
+			"english": "love"
+		},
+		{
+			"korean": "인터넷",
+			"english": "internet"
+		},
+		{
+			"korean": "텔레비전",
+			"english": "television"
+		},
+		{
+			"korean": "과학",
+			"english": "science"
+		},
+		{
+			"korean": "도서관",
+			"english": "library"
+		},
+		{
+			"korean": "자연",
+			"english": "nature"
+		},
+		{
+			"korean": "것",
+			"english": "fact"
+		},
+		{
+			"korean": "생성물",
+			"english": "product"
+		},
+		{
+			"korean": "생각",
+			"english": "idea"
+		},
+		{
+			"korean": "온도",
+			"english": "temperature"
+		},
+		{
+			"korean": "투자",
+			"english": "investment"
+		},
+		{
+			"korean": "지역",
+			"english": "area"
+		},
+		{
+			"korean": "사회",
+			"english": "society"
+		},
+		{
+			"korean": "활동",
+			"english": "activity"
+		},
+		{
+			"korean": "이야기",
+			"english": "story"
+		},
+		{
+			"korean": "산업",
+			"english": "industry"
+		},
+		{
+			"korean": "미디어",
+			"english": "media"
+		},
+		{
+			"korean": "맡은 일",
+			"english": "thing"
+		},
+		{
+			"korean": "오븐",
+			"english": "oven"
+		},
+		{
+			"korean": "커뮤니티",
+			"english": "community"
+		},
+		{
+			"korean": "정의",
+			"english": "definition"
+		},
+		{
+			"korean": "안전",
+			"english": "safety"
+		},
+		{
+			"korean": "품질",
+			"english": "quality"
+		},
+		{
+			"korean": "개발",
+			"english": "development"
+		},
+		{
+			"korean": "언어",
+			"english": "language"
+		},
+		{
+			"korean": "조치",
+			"english": "management"
+		},
+		{
+			"korean": "플레이어",
+			"english": "player"
+		},
+		{
+			"korean": "종류",
+			"english": "variety"
+		},
+		{
+			"korean": "비디오",
+			"english": "video"
+		},
+		{
+			"korean": "주",
+			"english": "week"
+		},
+		{
+			"korean": "보안",
+			"english": "security"
+		},
+		{
+			"korean": "국가",
+			"english": "country"
+		},
+		{
+			"korean": "시험",
+			"english": "exam"
+		},
+		{
+			"korean": "영화",
+			"english": "movie"
+		},
+		{
+			"korean": "조직",
+			"english": "organization"
+		},
+		{
+			"korean": "장비",
+			"english": "equipment"
+		},
+		{
+			"korean": "물리학",
+			"english": "physics"
+		},
+		{
+			"korean": "분석",
+			"english": "analysis"
+		},
+		{
+			"korean": "정책",
+			"english": "policy"
+		},
+		{
+			"korean": "연속",
+			"english": "series"
+		},
+		{
+			"korean": "생각",
+			"english": "thought"
+		},
+		{
+			"korean": "기초",
+			"english": "basis"
+		},
+		{
+			"korean": "남자 친구",
+			"english": "boyfriend"
+		},
+		{
+			"korean": "방향",
+			"english": "direction"
+		},
+		{
+			"korean": "병법",
+			"english": "strategy"
+		},
+		{
+			"korean": "과학 기술",
+			"english": "technology"
+		},
+		{
+			"korean": "육군",
+			"english": "army"
+		},
+		{
+			"korean": "카메라",
+			"english": "camera"
+		},
+		{
+			"korean": "자유",
+			"english": "freedom"
+		},
+		{
+			"korean": "종이",
+			"english": "paper"
+		},
+		{
+			"korean": "환경",
+			"english": "environment"
+		},
+		{
+			"korean": "아이",
+			"english": "child"
+		},
+		{
+			"korean": "예",
+			"english": "instance"
+		},
+		{
+			"korean": "달",
+			"english": "month"
+		},
+		{
+			"korean": "진실",
+			"english": "truth"
+		},
+		{
+			"korean": "마케팅",
+			"english": "marketing"
+		},
+		{
+			"korean": "대학",
+			"english": "university"
+		},
+		{
+			"korean": "쓰기",
+			"english": "writing"
+		},
+		{
+			"korean": "기사",
+			"english": "article"
+		},
+		{
+			"korean": "학과",
+			"english": "department"
+		},
+		{
+			"korean": "차이",
+			"english": "difference"
+		},
+		{
+			"korean": "골",
+			"english": "goal"
+		},
+		{
+			"korean": "뉴스",
+			"english": "news"
+		},
+		{
+			"korean": "청중",
+			"english": "audience"
+		},
+		{
+			"korean": "어업",
+			"english": "fishing"
+		},
+		{
+			"korean": "성장",
+			"english": "growth"
+		},
+		{
+			"korean": "수입",
+			"english": "income"
+		},
+		{
+			"korean": "결혼",
+			"english": "marriage"
+		},
+		{
+			"korean": "사용자",
+			"english": "user"
+		},
+		{
+			"korean": "콤비네이션",
+			"english": "combination"
+		},
+		{
+			"korean": "실패",
+			"english": "failure"
+		},
+		{
+			"korean": "의미",
+			"english": "meaning"
+		},
+		{
+			"korean": "의학",
+			"english": "medicine"
+		},
+		{
+			"korean": "철학",
+			"english": "philosophy"
+		},
+		{
+			"korean": "선생",
+			"english": "teacher"
+		},
+		{
+			"korean": "통신",
+			"english": "communication"
+		},
+		{
+			"korean": "밤",
+			"english": "night"
+		},
+		{
+			"korean": "화학",
+			"english": "chemistry"
+		},
+		{
+			"korean": "질병",
+			"english": "disease"
+		},
+		{
+			"korean": "디스크",
+			"english": "disk"
+		},
+		{
+			"korean": "에너지",
+			"english": "energy"
+		},
+		{
+			"korean": "민족",
+			"english": "nation"
+		},
+		{
+			"korean": "도로",
+			"english": "road"
+		},
+		{
+			"korean": "역할",
+			"english": "role"
+		},
+		{
+			"korean": "수프",
+			"english": "soup"
+		},
+		{
+			"korean": "광고하는",
+			"english": "advertising"
+		},
+		{
+			"korean": "위치",
+			"english": "location"
+		},
+		{
+			"korean": "성공",
+			"english": "success"
+		},
+		{
+			"korean": "부가",
+			"english": "addition"
+		},
+		{
+			"korean": "아파트",
+			"english": "apartment"
+		},
+		{
+			"korean": "교육",
+			"english": "education"
+		},
+		{
+			"korean": "수학",
+			"english": "math"
+		},
+		{
+			"korean": "순간",
+			"english": "moment"
+		},
+		{
+			"korean": "그림",
+			"english": "painting"
+		},
+		{
+			"korean": "정치",
+			"english": "politics"
+		},
+		{
+			"korean": "주의",
+			"english": "attention"
+		},
+		{
+			"korean": "결정",
+			"english": "decision"
+		},
+		{
+			"korean": "행사",
+			"english": "event"
+		},
+		{
+			"korean": "재산",
+			"english": "property"
+		},
+		{
+			"korean": "쇼핑",
+			"english": "shopping"
+		},
+		{
+			"korean": "학생",
+			"english": "student"
+		},
+		{
+			"korean": "목재",
+			"english": "wood"
+		},
+		{
+			"korean": "경쟁",
+			"english": "competition"
+		},
+		{
+			"korean": "분포",
+			"english": "distribution"
+		},
+		{
+			"korean": "환대",
+			"english": "entertainment"
+		},
+		{
+			"korean": "사무실",
+			"english": "office"
+		},
+		{
+			"korean": "인구",
+			"english": "population"
+		},
+		{
+			"korean": "대통령",
+			"english": "president"
+		},
+		{
+			"korean": "단위",
+			"english": "unit"
+		},
+		{
+			"korean": "범주",
+			"english": "category"
+		},
+		{
+			"korean": "담배",
+			"english": "cigarette"
+		},
+		{
+			"korean": "문맥",
+			"english": "context"
+		},
+		{
+			"korean": "소개",
+			"english": "introduction"
+		},
+		{
+			"korean": "기회",
+			"english": "opportunity"
+		},
+		{
+			"korean": "공연",
+			"english": "performance"
+		},
+		{
+			"korean": "운전사",
+			"english": "driver"
+		},
+		{
+			"korean": "비행",
+			"english": "flight"
+		},
+		{
+			"korean": "길이",
+			"english": "length"
+		},
+		{
+			"korean": "매거진",
+			"english": "magazine"
+		},
+		{
+			"korean": "신문",
+			"english": "newspaper"
+		},
+		{
+			"korean": "관계",
+			"english": "relationship"
+		},
+		{
+			"korean": "가르치는",
+			"english": "teaching"
+		},
+		{
+			"korean": "세포",
+			"english": "cell"
+		},
+		{
+			"korean": "상인",
+			"english": "dealer"
+		},
+		{
+			"korean": "발견",
+			"english": "finding"
+		},
+		{
+			"korean": "호수",
+			"english": "lake"
+		},
+		{
+			"korean": "회원",
+			"english": "member"
+		},
+		{
+			"korean": "메시지",
+			"english": "message"
+		},
+		{
+			"korean": "전화",
+			"english": "phone"
+		},
+		{
+			"korean": "장면",
+			"english": "scene"
+		},
+		{
+			"korean": "외관",
+			"english": "appearance"
+		},
+		{
+			"korean": "협회",
+			"english": "association"
+		},
+		{
+			"korean": "개념",
+			"english": "concept"
+		},
+		{
+			"korean": "고객",
+			"english": "customer"
+		},
+		{
+			"korean": "죽음",
+			"english": "death"
+		},
+		{
+			"korean": "토론",
+			"english": "discussion"
+		},
+		{
+			"korean": "주택",
+			"english": "housing"
+		},
+		{
+			"korean": "인플레이션",
+			"english": "inflation"
+		},
+		{
+			"korean": "보험",
+			"english": "insurance"
+		},
+		{
+			"korean": "기분",
+			"english": "mood"
+		},
+		{
+			"korean": "여자",
+			"english": "woman"
+		},
+		{
+			"korean": "조언",
+			"english": "advice"
+		},
+		{
+			"korean": "피",
+			"english": "blood"
+		},
+		{
+			"korean": "노력",
+			"english": "effort"
+		},
+		{
+			"korean": "표현",
+			"english": "expression"
+		},
+		{
+			"korean": "중요성",
+			"english": "importance"
+		},
+		{
+			"korean": "의견",
+			"english": "opinion"
+		},
+		{
+			"korean": "지불",
+			"english": "payment"
+		},
+		{
+			"korean": "현실",
+			"english": "reality"
+		},
+		{
+			"korean": "책임",
+			"english": "responsibility"
+		},
+		{
+			"korean": "상태",
+			"english": "situation"
+		},
+		{
+			"korean": "기술",
+			"english": "skill"
+		},
+		{
+			"korean": "성명서",
+			"english": "statement"
+		},
+		{
+			"korean": "부",
+			"english": "wealth"
+		},
+		{
+			"korean": "신청",
+			"english": "application"
+		},
+		{
+			"korean": "시티",
+			"english": "city"
+		},
+		{
+			"korean": "군",
+			"english": "county"
+		},
+		{
+			"korean": "깊이",
+			"english": "depth"
+		},
+		{
+			"korean": "재산",
+			"english": "estate"
+		},
+		{
+			"korean": "기초",
+			"english": "foundation"
+		},
+		{
+			"korean": "할머니",
+			"english": "grandmother"
+		},
+		{
+			"korean": "심장",
+			"english": "heart"
+		},
+		{
+			"korean": "원근법",
+			"english": "perspective"
+		},
+		{
+			"korean": "사진",
+			"english": "photo"
+		},
+		{
+			"korean": "레시피",
+			"english": "recipe"
+		},
+		{
+			"korean": "사진관",
+			"english": "studio"
+		},
+		{
+			"korean": "이야기",
+			"english": "topic"
+		},
+		{
+			"korean": "수집",
+			"english": "collection"
+		},
+		{
+			"korean": "우울증",
+			"english": "depression"
+		},
+		{
+			"korean": "상상력",
+			"english": "imagination"
+		},
+		{
+			"korean": "열정",
+			"english": "passion"
+		},
+		{
+			"korean": "백분율",
+			"english": "percentage"
+		},
+		{
+			"korean": "의지",
+			"english": "resource"
+		},
+		{
+			"korean": "환경",
+			"english": "setting"
+		},
+		{
+			"korean": "광고",
+			"english": "ad"
+		},
+		{
+			"korean": "대리점",
+			"english": "agency"
+		},
+		{
+			"korean": "칼리지",
+			"english": "college"
+		},
+		{
+			"korean": "연결",
+			"english": "connection"
+		},
+		{
+			"korean": "비판",
+			"english": "criticism"
+		},
+		{
+			"korean": "빚",
+			"english": "debt"
+		},
+		{
+			"korean": "기술",
+			"english": "description"
+		},
+		{
+			"korean": "기억",
+			"english": "memory"
+		},
+		{
+			"korean": "인내",
+			"english": "patience"
+		},
+		{
+			"korean": "비서",
+			"english": "secretary"
+		},
+		{
+			"korean": "해결책",
+			"english": "solution"
+		},
+		{
+			"korean": "관리",
+			"english": "administration"
+		},
+		{
+			"korean": "양상",
+			"english": "aspect"
+		},
+		{
+			"korean": "태도",
+			"english": "attitude"
+		},
+		{
+			"korean": "감독",
+			"english": "director"
+		},
+		{
+			"korean": "인격",
+			"english": "personality"
+		},
+		{
+			"korean": "심리학",
+			"english": "psychology"
+		},
+		{
+			"korean": "추천",
+			"english": "recommendation"
+		},
+		{
+			"korean": "응답",
+			"english": "response"
+		},
+		{
+			"korean": "선택",
+			"english": "selection"
+		},
+		{
+			"korean": "저장",
+			"english": "storage"
+		},
+		{
+			"korean": "번역",
+			"english": "version"
+		},
+		{
+			"korean": "알코올",
+			"english": "alcohol"
+		},
+		{
+			"korean": "논의",
+			"english": "argument"
+		},
+		{
+			"korean": "불평",
+			"english": "complaint"
+		},
+		{
+			"korean": "계약",
+			"english": "contract"
+		},
+		{
+			"korean": "중요성",
+			"english": "emphasis"
+		},
+		{
+			"korean": "고속도로",
+			"english": "highway"
+		},
+		{
+			"korean": "손실",
+			"english": "loss"
+		},
+		{
+			"korean": "회원",
+			"english": "membership"
+		},
+		{
+			"korean": "소유",
+			"english": "possession"
+		},
+		{
+			"korean": "예비",
+			"english": "preparation"
+		},
+		{
+			"korean": "스테이크",
+			"english": "steak"
+		},
+		{
+			"korean": "노동 조합",
+			"english": "union"
+		},
+		{
+			"korean": "협정",
+			"english": "agreement"
+		},
+		{
+			"korean": "암",
+			"english": "cancer"
+		},
+		{
+			"korean": "통화",
+			"english": "currency"
+		},
+		{
+			"korean": "고용",
+			"english": "employment"
+		},
+		{
+			"korean": "공학",
+			"english": "engineering"
+		},
+		{
+			"korean": "기입",
+			"english": "entry"
+		},
+		{
+			"korean": "상호 작용",
+			"english": "interaction"
+		},
+		{
+			"korean": "혼합물",
+			"english": "mixture"
+		},
+		{
+			"korean": "우선권",
+			"english": "preference"
+		},
+		{
+			"korean": "부위",
+			"english": "region"
+		},
+		{
+			"korean": "공화국",
+			"english": "republic"
+		},
+		{
+			"korean": "전통",
+			"english": "tradition"
+		},
+		{
+			"korean": "바이러스",
+			"english": "virus"
+		},
+		{
+			"korean": "배우",
+			"english": "actor"
+		},
+		{
+			"korean": "교실",
+			"english": "classroom"
+		},
+		{
+			"korean": "배달",
+			"english": "delivery"
+		},
+		{
+			"korean": "장치",
+			"english": "device"
+		},
+		{
+			"korean": "어려움",
+			"english": "difficulty"
+		},
+		{
+			"korean": "드라마",
+			"english": "drama"
+		},
+		{
+			"korean": "선거",
+			"english": "election"
+		},
+		{
+			"korean": "엔진",
+			"english": "engine"
+		},
+		{
+			"korean": "축구",
+			"english": "football"
+		},
+		{
+			"korean": "지도",
+			"english": "guidance"
+		},
+		{
+			"korean": "호텔",
+			"english": "hotel"
+		},
+		{
+			"korean": "소유자",
+			"english": "owner"
+		},
+		{
+			"korean": "우선 순위",
+			"english": "priority"
+		},
+		{
+			"korean": "보호",
+			"english": "protection"
+		},
+		{
+			"korean": "암시",
+			"english": "suggestion"
+		},
+		{
+			"korean": "장력",
+			"english": "tension"
+		},
+		{
+			"korean": "변화",
+			"english": "variation"
+		},
+		{
+			"korean": "걱정",
+			"english": "anxiety"
+		},
+		{
+			"korean": "분위기",
+			"english": "atmosphere"
+		},
+		{
+			"korean": "인식",
+			"english": "awareness"
+		},
+		{
+			"korean": "목욕",
+			"english": "bath"
+		},
+		{
+			"korean": "빵",
+			"english": "bread"
+		},
+		{
+			"korean": "후보자",
+			"english": "candidate"
+		},
+		{
+			"korean": "기후",
+			"english": "climate"
+		},
+		{
+			"korean": "비교",
+			"english": "comparison"
+		},
+		{
+			"korean": "혼동",
+			"english": "confusion"
+		},
+		{
+			"korean": "구성",
+			"english": "construction"
+		},
+		{
+			"korean": "엘리베이터",
+			"english": "elevator"
+		},
+		{
+			"korean": "감정",
+			"english": "emotion"
+		},
+		{
+			"korean": "종업원",
+			"english": "employee"
+		},
+		{
+			"korean": "고용주",
+			"english": "employer"
+		},
+		{
+			"korean": "손님",
+			"english": "guest"
+		},
+		{
+			"korean": "신장",
+			"english": "height"
+		},
+		{
+			"korean": "지도",
+			"english": "leadership"
+		},
+		{
+			"korean": "쇼핑 센터",
+			"english": "mall"
+		},
+		{
+			"korean": "매니저",
+			"english": "manager"
+		},
+		{
+			"korean": "조작",
+			"english": "operation"
+		},
+		{
+			"korean": "녹음",
+			"english": "recording"
+		},
+		{
+			"korean": "견본",
+			"english": "sample"
+		},
+		{
+			"korean": "교통",
+			"english": "transportation"
+		},
+		{
+			"korean": "자선",
+			"english": "charity"
+		},
+		{
+			"korean": "사촌",
+			"english": "cousin"
+		},
+		{
+			"korean": "재앙",
+			"english": "disaster"
+		},
+		{
+			"korean": "편집자",
+			"english": "editor"
+		},
+		{
+			"korean": "능률",
+			"english": "efficiency"
+		},
+		{
+			"korean": "흥분",
+			"english": "excitement"
+		},
+		{
+			"korean": "범위",
+			"english": "extent"
+		},
+		{
+			"korean": "피드백",
+			"english": "feedback"
+		},
+		{
+			"korean": "기타",
+			"english": "guitar"
+		},
+		{
+			"korean": "숙제",
+			"english": "homework"
+		},
+		{
+			"korean": "리더",
+			"english": "leader"
+		},
+		{
+			"korean": "엄마",
+			"english": "mom"
+		},
+		{
+			"korean": "결과",
+			"english": "outcome"
+		},
+		{
+			"korean": "허가",
+			"english": "permission"
+		},
+		{
+			"korean": "프레젠테이션",
+			"english": "presentation"
+		},
+		{
+			"korean": "승진",
+			"english": "promotion"
+		},
+		{
+			"korean": "반사",
+			"english": "reflection"
+		},
+		{
+			"korean": "냉장고",
+			"english": "refrigerator"
+		},
+		{
+			"korean": "해결",
+			"english": "resolution"
+		},
+		{
+			"korean": "수익",
+			"english": "revenue"
+		},
+		{
+			"korean": "세션",
+			"english": "session"
+		},
+		{
+			"korean": "가수",
+			"english": "singer"
+		},
+		{
+			"korean": "테니스",
+			"english": "tennis"
+		},
+		{
+			"korean": "바구니",
+			"english": "basket"
+		},
+		{
+			"korean": "보너스",
+			"english": "bonus"
+		},
+		{
+			"korean": "캐비넷",
+			"english": "cabinet"
+		},
+		{
+			"korean": "어린 시절",
+			"english": "childhood"
+		},
+		{
+			"korean": "교회에",
+			"english": "church"
+		},
+		{
+			"korean": "천",
+			"english": "clothes"
+		},
+		{
+			"korean": "커피",
+			"english": "coffee"
+		},
+		{
+			"korean": "공식 만찬",
+			"english": "dinner"
+		},
+		{
+			"korean": "그림",
+			"english": "drawing"
+		},
+		{
+			"korean": "머리",
+			"english": "hair"
+		},
+		{
+			"korean": "듣기",
+			"english": "hearing"
+		},
+		{
+			"korean": "발의",
+			"english": "initiative"
+		},
+		{
+			"korean": "심판",
+			"english": "judgment"
+		},
+		{
+			"korean": "실험실",
+			"english": "lab"
+		},
+		{
+			"korean": "측정",
+			"english": "measurement"
+		},
+		{
+			"korean": "방법",
+			"english": "mode"
+		},
+		{
+			"korean": "진흙",
+			"english": "mud"
+		},
+		{
+			"korean": "주황색",
+			"english": "orange"
+		},
+		{
+			"korean": "시",
+			"english": "poetry"
+		},
+		{
+			"korean": "경찰",
+			"english": "police"
+		},
+		{
+			"korean": "가능성",
+			"english": "possibility"
+		},
+		{
+			"korean": "순서",
+			"english": "procedure"
+		},
+		{
+			"korean": "퀸",
+			"english": "queen"
+		},
+		{
+			"korean": "비율",
+			"english": "ratio"
+		},
+		{
+			"korean": "관계",
+			"english": "relation"
+		},
+		{
+			"korean": "레스토랑",
+			"english": "restaurant"
+		},
+		{
+			"korean": "만족함",
+			"english": "satisfaction"
+		},
+		{
+			"korean": "부문",
+			"english": "sector"
+		},
+		{
+			"korean": "서명",
+			"english": "signature"
+		},
+		{
+			"korean": "의미",
+			"english": "significance"
+		},
+		{
+			"korean": "노래",
+			"english": "song"
+		},
+		{
+			"korean": "이",
+			"english": "tooth"
+		},
+		{
+			"korean": "도시",
+			"english": "town"
+		},
+		{
+			"korean": "차량",
+			"english": "vehicle"
+		},
+		{
+			"korean": "음량",
+			"english": "volume"
+		},
+		{
+			"korean": "아내",
+			"english": "wife"
+		},
+		{
+			"korean": "사고",
+			"english": "accident"
+		},
+		{
+			"korean": "공항",
+			"english": "airport"
+		},
+		{
+			"korean": "약속",
+			"english": "appointment"
+		},
+		{
+			"korean": "도착",
+			"english": "arrival"
+		},
+		{
+			"korean": "인수",
+			"english": "assumption"
+		},
+		{
+			"korean": "야구",
+			"english": "baseball"
+		},
+		{
+			"korean": "장",
+			"english": "chapter"
+		},
+		{
+			"korean": "위원회",
+			"english": "committee"
+		},
+		{
+			"korean": "대화",
+			"english": "conversation"
+		},
+		{
+			"korean": "데이터 베이스",
+			"english": "database"
+		},
+		{
+			"korean": "열광",
+			"english": "enthusiasm"
+		},
+		{
+			"korean": "오류",
+			"english": "error"
+		},
+		{
+			"korean": "설명",
+			"english": "explanation"
+		},
+		{
+			"korean": "농장주",
+			"english": "farmer"
+		},
+		{
+			"korean": "문",
+			"english": "gate"
+		},
+		{
+			"korean": "소녀",
+			"english": "girl"
+		},
+		{
+			"korean": "홀",
+			"english": "hall"
+		},
+		{
+			"korean": "역사가",
+			"english": "historian"
+		},
+		{
+			"korean": "병원",
+			"english": "hospital"
+		},
+		{
+			"korean": "해",
+			"english": "injury"
+		},
+		{
+			"korean": "교수",
+			"english": "instruction"
+		},
+		{
+			"korean": "유지",
+			"english": "maintenance"
+		},
+		{
+			"korean": "제조업 자",
+			"english": "manufacturer"
+		},
+		{
+			"korean": "식사",
+			"english": "meal"
+		},
+		{
+			"korean": "지각",
+			"english": "perception"
+		},
+		{
+			"korean": "파이",
+			"english": "pie"
+		},
+		{
+			"korean": "시",
+			"english": "poem"
+		},
+		{
+			"korean": "존재",
+			"english": "presence"
+		},
+		{
+			"korean": "신청",
+			"english": "proposal"
+		},
+		{
+			"korean": "수신",
+			"english": "reception"
+		},
+		{
+			"korean": "바꿔 놓음",
+			"english": "replacement"
+		},
+		{
+			"korean": "혁명",
+			"english": "revolution"
+		},
+		{
+			"korean": "강",
+			"english": "river"
+		},
+		{
+			"korean": "아들",
+			"english": "son"
+		},
+		{
+			"korean": "연설",
+			"english": "speech"
+		},
+		{
+			"korean": "차",
+			"english": "tea"
+		},
+		{
+			"korean": "마을",
+			"english": "village"
+		},
+		{
+			"korean": "경고",
+			"english": "warning"
+		},
+		{
+			"korean": "승자",
+			"english": "winner"
+		},
+		{
+			"korean": "노동자",
+			"english": "worker"
+		},
+		{
+			"korean": "작가",
+			"english": "writer"
+		},
+		{
+			"korean": "보조",
+			"english": "assistance"
+		},
+		{
+			"korean": "숨",
+			"english": "breath"
+		},
+		{
+			"korean": "사는 사람",
+			"english": "buyer"
+		},
+		{
+			"korean": "가슴",
+			"english": "chest"
+		},
+		{
+			"korean": "초콜릿",
+			"english": "chocolate"
+		},
+		{
+			"korean": "결론",
+			"english": "conclusion"
+		},
+		{
+			"korean": "기부",
+			"english": "contribution"
+		},
+		{
+			"korean": "쿠키",
+			"english": "cookie"
+		},
+		{
+			"korean": "용기",
+			"english": "courage"
+		},
+		{
+			"korean": "아빠",
+			"english": "dad"
+		},
+		{
+			"korean": "책상",
+			"english": "desk"
+		},
+		{
+			"korean": "서랍",
+			"english": "drawer"
+		},
+		{
+			"korean": "설립",
+			"english": "establishment"
+		},
+		{
+			"korean": "시험",
+			"english": "examination"
+		},
+		{
+			"korean": "찌꺼기",
+			"english": "garbage"
+		},
+		{
+			"korean": "잡화",
+			"english": "grocery"
+		},
+		{
+			"korean": "꿀",
+			"english": "honey"
+		},
+		{
+			"korean": "인상",
+			"english": "impression"
+		},
+		{
+			"korean": "개량",
+			"english": "improvement"
+		},
+		{
+			"korean": "독립",
+			"english": "independence"
+		},
+		{
+			"korean": "곤충",
+			"english": "insect"
+		},
+		{
+			"korean": "검사",
+			"english": "inspection"
+		},
+		{
+			"korean": "검사관",
+			"english": "inspector"
+		},
+		{
+			"korean": "왕",
+			"english": "king"
+		},
+		{
+			"korean": "사닥다리",
+			"english": "ladder"
+		},
+		{
+			"korean": "메뉴",
+			"english": "menu"
+		},
+		{
+			"korean": "패널티",
+			"english": "penalty"
+		},
+		{
+			"korean": "피아노",
+			"english": "piano"
+		},
+		{
+			"korean": "감자",
+			"english": "potato"
+		},
+		{
+			"korean": "직업",
+			"english": "profession"
+		},
+		{
+			"korean": "교수",
+			"english": "professor"
+		},
+		{
+			"korean": "수량",
+			"english": "quantity"
+		},
+		{
+			"korean": "반응",
+			"english": "reaction"
+		},
+		{
+			"korean": "요구 사항",
+			"english": "requirement"
+		},
+		{
+			"korean": "샐러드",
+			"english": "salad"
+		},
+		{
+			"korean": "여자 형제",
+			"english": "sister"
+		},
+		{
+			"korean": "슈퍼마켓",
+			"english": "supermarket"
+		},
+		{
+			"korean": "혀",
+			"english": "tongue"
+		},
+		{
+			"korean": "약점",
+			"english": "weakness"
+		},
+		{
+			"korean": "혼례",
+			"english": "wedding"
+		},
+		{
+			"korean": "일",
+			"english": "affair"
+		},
+		{
+			"korean": "큰 뜻",
+			"english": "ambition"
+		},
+		{
+			"korean": "분석자",
+			"english": "analyst"
+		},
+		{
+			"korean": "사과",
+			"english": "apple"
+		},
+		{
+			"korean": "할당",
+			"english": "assignment"
+		},
+		{
+			"korean": "조수",
+			"english": "assistant"
+		},
+		{
+			"korean": "화장실",
+			"english": "bathroom"
+		},
+		{
+			"korean": "침실",
+			"english": "bedroom"
+		},
+		{
+			"korean": "맥주",
+			"english": "beer"
+		},
+		{
+			"korean": "생일",
+			"english": "birthday"
+		},
+		{
+			"korean": "축하",
+			"english": "celebration"
+		},
+		{
+			"korean": "선수권 대회",
+			"english": "championship"
+		},
+		{
+			"korean": "뺨",
+			"english": "cheek"
+		},
+		{
+			"korean": "고객",
+			"english": "client"
+		},
+		{
+			"korean": "결과",
+			"english": "consequence"
+		},
+		{
+			"korean": "출발",
+			"english": "departure"
+		},
+		{
+			"korean": "다이아몬드",
+			"english": "diamond"
+		},
+		{
+			"korean": "더러운",
+			"english": "dirt"
+		},
+		{
+			"korean": "귀",
+			"english": "ear"
+		},
+		{
+			"korean": "재산",
+			"english": "fortune"
+		},
+		{
+			"korean": "우정",
+			"english": "friendship"
+		},
+		{
+			"korean": "장례",
+			"english": "funeral"
+		},
+		{
+			"korean": "유전자",
+			"english": "gene"
+		},
+		{
+			"korean": "여자 친구",
+			"english": "girlfriend"
+		},
+		{
+			"korean": "모자",
+			"english": "hat"
+		},
+		{
+			"korean": "표시",
+			"english": "indication"
+		},
+		{
+			"korean": "의향",
+			"english": "intention"
+		},
+		{
+			"korean": "레이디",
+			"english": "lady"
+		},
+		{
+			"korean": "한밤중",
+			"english": "midnight"
+		},
+		{
+			"korean": "협상",
+			"english": "negotiation"
+		},
+		{
+			"korean": "의무",
+			"english": "obligation"
+		},
+		{
+			"korean": "승객",
+			"english": "passenger"
+		},
+		{
+			"korean": "피자",
+			"english": "pizza"
+		},
+		{
+			"korean": "플랫폼",
+			"english": "platform"
+		},
+		{
+			"korean": "시인",
+			"english": "poet"
+		},
+		{
+			"korean": "타락",
+			"english": "pollution"
+		},
+		{
+			"korean": "인식",
+			"english": "recognition"
+		},
+		{
+			"korean": "평판",
+			"english": "reputation"
+		},
+		{
+			"korean": "셔츠",
+			"english": "shirt"
+		},
+		{
+			"korean": "경",
+			"english": "sir"
+		},
+		{
+			"korean": "스피커",
+			"english": "speaker"
+		},
+		{
+			"korean": "낯선 사람",
+			"english": "stranger"
+		},
+		{
+			"korean": "외과",
+			"english": "surgery"
+		},
+		{
+			"korean": "동정",
+			"english": "sympathy"
+		},
+		{
+			"korean": "이야기",
+			"english": "tale"
+		},
+		{
+			"korean": "목",
+			"english": "throat"
+		},
+		{
+			"korean": "훈련자",
+			"english": "trainer"
+		},
+		{
+			"korean": "삼촌",
+			"english": "uncle"
+		},
+		{
+			"korean": "청소년",
+			"english": "youth"
+		},
+		{
+			"korean": "돈",
+			"english": "money"
+		},
+		{
+			"korean": "동안",
+			"english": "while"
+		},
+		{
+			"korean": "사업",
+			"english": "business"
+		},
+		{
+			"korean": "생명",
+			"english": "life"
+		},
+		{
+			"korean": "일",
+			"english": "day"
+		},
+		{
+			"korean": "집",
+			"english": "home"
+		},
+		{
+			"korean": "경제",
+			"english": "economy"
+		},
+		{
+			"korean": "훈련",
+			"english": "training"
+		},
+		{
+			"korean": "종류",
+			"english": "kind"
+		},
+		{
+			"korean": "미래",
+			"english": "future"
+		},
+		{
+			"korean": "동작",
+			"english": "action"
+		},
+		{
+			"korean": "나쁜",
+			"english": "bad"
+		},
+		{
+			"korean": "아무것도",
+			"english": "nothing"
+		},
+		{
+			"korean": "기간",
+			"english": "period"
+		},
+		{
+			"korean": "제목",
+			"english": "subject"
+		},
+		{
+			"korean": "치킨",
+			"english": "chicken"
+		},
+		{
+			"korean": "자료",
+			"english": "material"
+		},
+		{
+			"korean": "차",
+			"english": "car"
+		},
+		{
+			"korean": "절반",
+			"english": "half"
+		},
+		{
+			"korean": "내부",
+			"english": "inside"
+		},
+		{
+			"korean": "외부",
+			"english": "outside"
+		},
+		{
+			"korean": "표준",
+			"english": "standard"
+		},
+		{
+			"korean": "목",
+			"english": "item"
+		},
+		{
+			"korean": "매질",
+			"english": "medium"
+		},
+		{
+			"korean": "선택",
+			"english": "choice"
+		},
+		{
+			"korean": "아침",
+			"english": "morning"
+		},
+		{
+			"korean": "북쪽",
+			"english": "north"
+		},
+		{
+			"korean": "광장",
+			"english": "square"
+		},
+		{
+			"korean": "자본",
+			"english": "capital"
+		},
+		{
+			"korean": "본인",
+			"english": "self"
+		},
+		{
+			"korean": "샷",
+			"english": "shot"
+		},
+		{
+			"korean": "생활",
+			"english": "living"
+		},
+		{
+			"korean": "플라스틱",
+			"english": "plastic"
+		},
+		{
+			"korean": "감각",
+			"english": "feeling"
+		},
+		{
+			"korean": "저금",
+			"english": "savings"
+		},
+		{
+			"korean": "동물",
+			"english": "animal"
+		},
+		{
+			"korean": "최고",
+			"english": "maximum"
+		},
+		{
+			"korean": "소설",
+			"english": "novel"
+		},
+		{
+			"korean": "많은",
+			"english": "plenty"
+		},
+		{
+			"korean": "배경",
+			"english": "background"
+		},
+		{
+			"korean": "빨간",
+			"english": "red"
+		},
+		{
+			"korean": "힘",
+			"english": "strength"
+		},
+		{
+			"korean": "야채",
+			"english": "vegetable"
+		},
+		{
+			"korean": "이상",
+			"english": "ideal"
+		},
+		{
+			"korean": "부엌",
+			"english": "kitchen"
+		},
+		{
+			"korean": "원리",
+			"english": "principle"
+		},
+		{
+			"korean": "상대적인",
+			"english": "relative"
+		},
+		{
+			"korean": "판매",
+			"english": "sale"
+		},
+		{
+			"korean": "거리",
+			"english": "street"
+		},
+		{
+			"korean": "최저한의",
+			"english": "minimum"
+		},
+		{
+			"korean": "통로",
+			"english": "path"
+		},
+		{
+			"korean": "바다",
+			"english": "sea"
+		},
+		{
+			"korean": "남쪽",
+			"english": "south"
+		},
+		{
+			"korean": "지위",
+			"english": "status"
+		},
+		{
+			"korean": "자신",
+			"english": "confidence"
+		},
+		{
+			"korean": "딸",
+			"english": "daughter"
+		},
+		{
+			"korean": "정도",
+			"english": "degree"
+		},
+		{
+			"korean": "의무",
+			"english": "duty"
+		},
+		{
+			"korean": "시간",
+			"english": "hour"
+		},
+		{
+			"korean": "물질",
+			"english": "substance"
+		},
+		{
+			"korean": "대낮",
+			"english": "afternoon"
+		},
+		{
+			"korean": "고려",
+			"english": "consideration"
+		},
+		{
+			"korean": "금",
+			"english": "gold"
+		},
+		{
+			"korean": "사명",
+			"english": "mission"
+		},
+		{
+			"korean": "문",
+			"english": "door"
+		},
+		{
+			"korean": "동쪽",
+			"english": "east"
+		},
+		{
+			"korean": "방법",
+			"english": "manner"
+		},
+		{
+			"korean": "모임",
+			"english": "meeting"
+		},
+		{
+			"korean": "주차",
+			"english": "parking"
+		},
+		{
+			"korean": "루틴",
+			"english": "routine"
+		},
+		{
+			"korean": "수영",
+			"english": "swimming"
+		},
+		{
+			"korean": "공기 호스",
+			"english": "airline"
+		},
+		{
+			"korean": "디자이너",
+			"english": "designer"
+		},
+		{
+			"korean": "비상 사태",
+			"english": "emergency"
+		},
+		{
+			"korean": "저녁",
+			"english": "evening"
+		},
+		{
+			"korean": "신장",
+			"english": "extension"
+		},
+		{
+			"korean": "공포",
+			"english": "horror"
+		},
+		{
+			"korean": "산",
+			"english": "mountain"
+		},
+		{
+			"korean": "환자",
+			"english": "patient"
+		},
+		{
+			"korean": "구조",
+			"english": "relief"
+		},
+		{
+			"korean": "관광객",
+			"english": "tourist"
+		},
+		{
+			"korean": "서쪽",
+			"english": "west"
+		},
+		{
+			"korean": "곁에",
+			"english": "aside"
+		},
+		{
+			"korean": "동료",
+			"english": "brother"
+		},
+		{
+			"korean": "전문가",
+			"english": "expert"
+		},
+		{
+			"korean": "하나님",
+			"english": "god"
+		},
+		{
+			"korean": "원주민",
+			"english": "native"
+		},
+		{
+			"korean": "열리는",
+			"english": "opening"
+		},
+		{
+			"korean": "소년",
+			"english": "boy"
+		},
+		{
+			"korean": "전문가",
+			"english": "specialist"
+		},
+		{
+			"korean": "쓴",
+			"english": "bitter"
+		},
+		{
+			"korean": "지옥",
+			"english": "hell"
+		},
+		{
+			"korean": "사건",
+			"english": "incident"
+		},
+		{
+			"korean": "거주자",
+			"english": "resident"
+		},
+		{
+			"korean": "에이",
+			"english": "a"
+		},
+		{
+			"korean": "당신",
+			"english": "you"
+		},
+		{
+			"korean": "이것",
+			"english": "it"
+		},
+		{
+			"korean": "양철통",
+			"english": "can"
+		},
+		{
+			"korean": "의지",
+			"english": "will"
+		},
+		{
+			"korean": "만약",
+			"english": "if"
+		},
+		{
+			"korean": "하나",
+			"english": "one"
+		},
+		{
+			"korean": "많이",
+			"english": "many"
+		},
+		{
+			"korean": "가장",
+			"english": "most"
+		},
+		{
+			"korean": "다른",
+			"english": "other"
+		},
+		{
+			"korean": "좋은",
+			"english": "good"
+		},
+		{
+			"korean": "큰",
+			"english": "great"
+		},
+		{
+			"korean": "조금",
+			"english": "few"
+		},
+		{
+			"korean": "아마도",
+			"english": "might"
+		},
+		{
+			"korean": "아직도",
+			"english": "still"
+		},
+		{
+			"korean": "공공의",
+			"english": "public"
+		},
+		{
+			"korean": "사람의",
+			"english": "human"
+		},
+		{
+			"korean": "노동 조합 지부",
+			"english": "local"
+		},
+		{
+			"korean": "일반",
+			"english": "general"
+		},
+		{
+			"korean": "여자",
+			"english": "she"
+		},
+		{
+			"korean": "특유한",
+			"english": "specific"
+		},
+		{
+			"korean": "긴",
+			"english": "long"
+		},
+		{
+			"korean": "높은",
+			"english": "high"
+		},
+		{
+			"korean": "오늘 밤",
+			"english": "tonight"
+		},
+		{
+			"korean": "공유지",
+			"english": "common"
+		},
+		{
+			"korean": "단순한",
+			"english": "simple"
+		},
+		{
+			"korean": "과거",
+			"english": "past"
+		},
+		{
+			"korean": "큰",
+			"english": "big"
+		},
+		{
+			"korean": "가능한",
+			"english": "possible"
+		},
+		{
+			"korean": "특별한",
+			"english": "particular"
+		},
+		{
+			"korean": "오늘",
+			"english": "today"
+		},
+		{
+			"korean": "개인적인",
+			"english": "personal"
+		},
+		{
+			"korean": "흐름",
+			"english": "current"
+		},
+		{
+			"korean": "국가의",
+			"english": "national"
+		},
+		{
+			"korean": "자연스러운",
+			"english": "natural"
+		},
+		{
+			"korean": "신체적 인",
+			"english": "physical"
+		},
+		{
+			"korean": "둘째",
+			"english": "second"
+		},
+		{
+			"korean": "개인",
+			"english": "individual"
+		},
+		{
+			"korean": "본관",
+			"english": "main"
+		},
+		{
+			"korean": "가능성",
+			"english": "potential"
+		},
+		{
+			"korean": "직업적인",
+			"english": "professional"
+		},
+		{
+			"korean": "국제 노동자 동맹",
+			"english": "international"
+		},
+		{
+			"korean": "선택적인",
+			"english": "alternative"
+		},
+		{
+			"korean": "수행원",
+			"english": "following"
+		},
+		{
+			"korean": "특별한",
+			"english": "special"
+		},
+		{
+			"korean": "일",
+			"english": "working"
+		},
+		{
+			"korean": "모든",
+			"english": "whole"
+		},
+		{
+			"korean": "감기",
+			"english": "cold"
+		},
+		{
+			"korean": "광고 방송",
+			"english": "commercial"
+		},
+		{
+			"korean": "낮은",
+			"english": "low"
+		},
+		{
+			"korean": "행성",
+			"english": "primary"
+		},
+		{
+			"korean": "가치",
+			"english": "worth"
+		},
+		{
+			"korean": "필요한",
+			"english": "necessary"
+		},
+		{
+			"korean": "양",
+			"english": "positive"
+		},
+		{
+			"korean": "창조적 인",
+			"english": "creative"
+		},
+		{
+			"korean": "기쁜",
+			"english": "glad"
+		},
+		{
+			"korean": "정당한",
+			"english": "due"
+		},
+		{
+			"korean": "유효한",
+			"english": "effective"
+		},
+		{
+			"korean": "중간",
+			"english": "middle"
+		},
+		{
+			"korean": "정규병",
+			"english": "regular"
+		},
+		{
+			"korean": "독립",
+			"english": "independent"
+		},
+		{
+			"korean": "실물",
+			"english": "original"
+		},
+		{
+			"korean": "아름다운",
+			"english": "beautiful"
+		},
+		{
+			"korean": "유효한",
+			"english": "active"
+		},
+		{
+			"korean": "부정",
+			"english": "negative"
+		},
+		{
+			"korean": "안전한",
+			"english": "safe"
+		},
+		{
+			"korean": "시각적",
+			"english": "visual"
+		},
+		{
+			"korean": "...을 넘어서",
+			"english": "beyond"
+		},
+		{
+			"korean": "주니어",
+			"english": "junior"
+		},
+		{
+			"korean": "독특한",
+			"english": "unique"
+		},
+		{
+			"korean": "아무것도",
+			"english": "anything"
+		},
+		{
+			"korean": "권위 있는",
+			"english": "classic"
+		},
+		{
+			"korean": "결정적인",
+			"english": "final"
+		},
+		{
+			"korean": "은밀한",
+			"english": "private"
+		},
+		{
+			"korean": "서부 사람",
+			"english": "western"
+		},
+		{
+			"korean": "익숙한",
+			"english": "familiar"
+		},
+		{
+			"korean": "공무원",
+			"english": "official"
+		},
+		{
+			"korean": "넓은",
+			"english": "broad"
+		},
+		{
+			"korean": "편안",
+			"english": "comfortable"
+		},
+		{
+			"korean": "아마도",
+			"english": "maybe"
+		},
+		{
+			"korean": "풍부한",
+			"english": "rich"
+		},
+		{
+			"korean": "어린",
+			"english": "young"
+		},
+		{
+			"korean": "무거운",
+			"english": "heavy"
+		},
+		{
+			"korean": "여보세요",
+			"english": "hello"
+		},
+		{
+			"korean": "가치 있는",
+			"english": "valuable"
+		},
+		{
+			"korean": "주요한",
+			"english": "leading"
+		},
+		{
+			"korean": "표준",
+			"english": "normal"
+		},
+		{
+			"korean": "비밀",
+			"english": "secret"
+		},
+		{
+			"korean": "강인한",
+			"english": "tough"
+		},
+		{
+			"korean": "깊은",
+			"english": "deep"
+		},
+		{
+			"korean": "목표",
+			"english": "objective"
+		},
+		{
+			"korean": "화학",
+			"english": "chemical"
+		},
+		{
+			"korean": "극단",
+			"english": "extreme"
+		},
+		{
+			"korean": "형식적인",
+			"english": "formal"
+		},
+		{
+			"korean": "반대말",
+			"english": "opposite"
+		},
+		{
+			"korean": "먼",
+			"english": "remote"
+		},
+		{
+			"korean": "거대한",
+			"english": "vast"
+		},
+		{
+			"korean": "어딘가에",
+			"english": "somewhere"
+		},
+		{
+			"korean": "어딘가에",
+			"english": "anywhere"
+		},
+		{
+			"korean": "어두운",
+			"english": "dark"
+		},
+		{
+			"korean": "내부의",
+			"english": "internal"
+		},
+		{
+			"korean": "민감한",
+			"english": "sensitive"
+		},
+		{
+			"korean": "일정한",
+			"english": "constant"
+		},
+		{
+			"korean": "노골적인",
+			"english": "raw"
+		},
+		{
+			"korean": "부드러운",
+			"english": "soft"
+		},
+		{
+			"korean": "고체",
+			"english": "solid"
+		},
+		{
+			"korean": "기묘한",
+			"english": "weird"
+		},
+		{
+			"korean": "일년생 식물",
+			"english": "annual"
+		},
+		{
+			"korean": "죽은",
+			"english": "dead"
+		},
+		{
+			"korean": "영원히",
+			"english": "forever"
+		},
+		{
+			"korean": "보잘것없는 사람",
+			"english": "nobody"
+		},
+		{
+			"korean": "일주",
+			"english": "round"
+		},
+		{
+			"korean": "이므로",
+			"english": "whereas"
+		},
+		{
+			"korean": "동등한",
+			"english": "equivalent"
+		},
+		{
+			"korean": "영적인",
+			"english": "spiritual"
+		},
+		{
+			"korean": "성인",
+			"english": "adult"
+		},
+		{
+			"korean": "미친",
+			"english": "crazy"
+		},
+		{
+			"korean": "이전에",
+			"english": "prior"
+		},
+		{
+			"korean": "거칠게",
+			"english": "rough"
+		},
+		{
+			"korean": "슬퍼",
+			"english": "sad"
+		},
+		{
+			"korean": "고약한",
+			"english": "sick"
+		},
+		{
+			"korean": "외부",
+			"english": "external"
+		},
+		{
+			"korean": "불법",
+			"english": "illegal"
+		},
+		{
+			"korean": "변하기 쉬운",
+			"english": "mobile"
+		},
+		{
+			"korean": "추잡한",
+			"english": "nasty"
+		},
+		{
+			"korean": "보통주",
+			"english": "ordinary"
+		},
+		{
+			"korean": "감청색",
+			"english": "royal"
+		},
+		{
+			"korean": "연장자",
+			"english": "senior"
+		},
+		{
+			"korean": "높은",
+			"english": "upper"
+		},
+		{
+			"korean": "매달린",
+			"english": "dependent"
+		},
+		{
+			"korean": "이상한",
+			"english": "funny"
+		},
+		{
+			"korean": "단",
+			"english": "sweet"
+		},
+		{
+			"korean": "높은 곳에 있는",
+			"english": "upstairs"
+		},
+		{
+			"korean": "보통의",
+			"english": "usual"
+		},
+		{
+			"korean": "널리",
+			"english": "abroad"
+		},
+		{
+			"korean": "멋진",
+			"english": "grand"
+		},
+		{
+			"korean": "남성",
+			"english": "male"
+		},
+		{
+			"korean": "누구나",
+			"english": "anybody"
+		},
+		{
+			"korean": "훌륭한",
+			"english": "brilliant"
+		},
+		{
+			"korean": "소중한",
+			"english": "dear"
+		},
+		{
+			"korean": "취한",
+			"english": "drunk"
+		},
+		{
+			"korean": "여자",
+			"english": "female"
+		},
+		{
+			"korean": "피할 수 없는",
+			"english": "inevitable"
+		},
+		{
+			"korean": "산뜻한",
+			"english": "neat"
+		},
+		{
+			"korean": "대리인",
+			"english": "representative"
+		},
+		{
+			"korean": "바보",
+			"english": "silly"
+		},
+		{
+			"korean": "바보",
+			"english": "stupid"
+		},
+		{
+			"korean": "일시적인",
+			"english": "temporary"
+		},
+		{
+			"korean": "내일",
+			"english": "tomorrow"
+		},
+		{
+			"korean": "어제",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 528 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"latin": "populo",
+			"english": "people"
+		},
+		{
+			"latin": "Historiarum",
+			"english": "history"
+		},
+		{
+			"latin": "modum",
+			"english": "way"
+		},
+		{
+			"latin": "artem",
+			"english": "art"
+		},
+		{
+			"latin": "orbis",
+			"english": "world"
+		},
+		{
+			"latin": "indicium",
+			"english": "information"
+		},
+		{
+			"latin": "map",
+			"english": "map"
+		},
+		{
+			"latin": "duo",
+			"english": "two"
+		},
+		{
+			"latin": "genus",
+			"english": "family"
+		},
+		{
+			"latin": "imperium",
+			"english": "government"
+		},
+		{
+			"latin": "salutem",
+			"english": "health"
+		},
+		{
+			"latin": "ratio",
+			"english": "system"
+		},
+		{
+			"latin": "Computer",
+			"english": "computer"
+		},
+		{
+			"latin": "cibus",
+			"english": "meat"
+		},
+		{
+			"latin": "anno",
+			"english": "year"
+		},
+		{
+			"latin": "gratias ago",
+			"english": "thanks"
+		},
+		{
+			"latin": "Music",
+			"english": "music"
+		},
+		{
+			"latin": "hominem",
+			"english": "person"
+		},
+		{
+			"latin": "Reading",
+			"english": "reading"
+		},
+		{
+			"latin": "ratio",
+			"english": "method"
+		},
+		{
+			"latin": "Data",
+			"english": "data"
+		},
+		{
+			"latin": "cibus",
+			"english": "food"
+		},
+		{
+			"latin": "intellectus",
+			"english": "understanding"
+		},
+		{
+			"latin": "ratio",
+			"english": "theory"
+		},
+		{
+			"latin": "lex",
+			"english": "law"
+		},
+		{
+			"latin": "avem",
+			"english": "bird"
+		},
+		{
+			"latin": "literature",
+			"english": "literature"
+		},
+		{
+			"latin": "quaestio",
+			"english": "problem"
+		},
+		{
+			"latin": "Software",
+			"english": "software"
+		},
+		{
+			"latin": "imperium",
+			"english": "control"
+		},
+		{
+			"latin": "cognitio",
+			"english": "knowledge"
+		},
+		{
+			"latin": "potestatem",
+			"english": "power"
+		},
+		{
+			"latin": "ingenium",
+			"english": "ability"
+		},
+		{
+			"latin": "History",
+			"english": "economics"
+		},
+		{
+			"latin": "amare",
+			"english": "love"
+		},
+		{
+			"latin": "Latin",
+			"english": "internet"
+		},
+		{
+			"latin": "television",
+			"english": "television"
+		},
+		{
+			"latin": "Science",
+			"english": "science"
+		},
+		{
+			"latin": "Bibliotheca",
+			"english": "library"
+		},
+		{
+			"latin": "naturae",
+			"english": "nature"
+		},
+		{
+			"latin": "quod",
+			"english": "fact"
+		},
+		{
+			"latin": "Product",
+			"english": "product"
+		},
+		{
+			"latin": "ratio",
+			"english": "idea"
+		},
+		{
+			"latin": "temperature",
+			"english": "temperature"
+		},
+		{
+			"latin": "Investment",
+			"english": "investment"
+		},
+		{
+			"latin": "spatium",
+			"english": "area"
+		},
+		{
+			"latin": "Society",
+			"english": "society"
+		},
+		{
+			"latin": "actionis",
+			"english": "activity"
+		},
+		{
+			"latin": "Recipe",
+			"english": "story"
+		},
+		{
+			"latin": "industria,",
+			"english": "industry"
+		},
+		{
+			"latin": "Media",
+			"english": "media"
+		},
+		{
+			"latin": "quod",
+			"english": "thing"
+		},
+		{
+			"latin": "caminus",
+			"english": "oven"
+		},
+		{
+			"latin": "Community",
+			"english": "community"
+		},
+		{
+			"latin": "definition",
+			"english": "definition"
+		},
+		{
+			"latin": "salutem",
+			"english": "safety"
+		},
+		{
+			"latin": "qualitas",
+			"english": "quality"
+		},
+		{
+			"latin": "development",
+			"english": "development"
+		},
+		{
+			"latin": "Language",
+			"english": "language"
+		},
+		{
+			"latin": "Management",
+			"english": "management"
+		},
+		{
+			"latin": "ludius",
+			"english": "player"
+		},
+		{
+			"latin": "genus",
+			"english": "variety"
+		},
+		{
+			"latin": "Video",
+			"english": "video"
+		},
+		{
+			"latin": "sabbati",
+			"english": "week"
+		},
+		{
+			"latin": "Security",
+			"english": "security"
+		},
+		{
+			"latin": "patriam",
+			"english": "country"
+		},
+		{
+			"latin": "ipsum",
+			"english": "exam"
+		},
+		{
+			"latin": "Movie",
+			"english": "movie"
+		},
+		{
+			"latin": "ordinem",
+			"english": "organization"
+		},
+		{
+			"latin": "paratus",
+			"english": "equipment"
+		},
+		{
+			"latin": "Physicorum",
+			"english": "physics"
+		},
+		{
+			"latin": "analysis",
+			"english": "analysis"
+		},
+		{
+			"latin": "consilium",
+			"english": "policy"
+		},
+		{
+			"latin": "Series",
+			"english": "series"
+		},
+		{
+			"latin": "cogitari",
+			"english": "thought"
+		},
+		{
+			"latin": "ratio",
+			"english": "basis"
+		},
+		{
+			"latin": "boyfriend",
+			"english": "boyfriend"
+		},
+		{
+			"latin": "partem",
+			"english": "direction"
+		},
+		{
+			"latin": "militarium",
+			"english": "strategy"
+		},
+		{
+			"latin": "Technology",
+			"english": "technology"
+		},
+		{
+			"latin": "exercitus",
+			"english": "army"
+		},
+		{
+			"latin": "Camera",
+			"english": "camera"
+		},
+		{
+			"latin": "libertatem",
+			"english": "freedom"
+		},
+		{
+			"latin": "paper",
+			"english": "paper"
+		},
+		{
+			"latin": "environment",
+			"english": "environment"
+		},
+		{
+			"latin": "puer",
+			"english": "child"
+		},
+		{
+			"latin": "ut",
+			"english": "instance"
+		},
+		{
+			"latin": "mense",
+			"english": "month"
+		},
+		{
+			"latin": "verum,",
+			"english": "truth"
+		},
+		{
+			"latin": "venalicium",
+			"english": "marketing"
+		},
+		{
+			"latin": "University",
+			"english": "university"
+		},
+		{
+			"latin": "scriptum",
+			"english": "writing"
+		},
+		{
+			"latin": "articulus",
+			"english": "article"
+		},
+		{
+			"latin": "Donec",
+			"english": "department"
+		},
+		{
+			"latin": "differentia",
+			"english": "difference"
+		},
+		{
+			"latin": "finis",
+			"english": "goal"
+		},
+		{
+			"latin": "News",
+			"english": "news"
+		},
+		{
+			"latin": "auditorium",
+			"english": "audience"
+		},
+		{
+			"latin": "piscari",
+			"english": "fishing"
+		},
+		{
+			"latin": "incrementum",
+			"english": "growth"
+		},
+		{
+			"latin": "fructus",
+			"english": "income"
+		},
+		{
+			"latin": "matrimonium",
+			"english": "marriage"
+		},
+		{
+			"latin": "Disputatio",
+			"english": "user"
+		},
+		{
+			"latin": "coniunctio",
+			"english": "combination"
+		},
+		{
+			"latin": "defectum,",
+			"english": "failure"
+		},
+		{
+			"latin": "quod",
+			"english": "meaning"
+		},
+		{
+			"latin": "medicinae",
+			"english": "medicine"
+		},
+		{
+			"latin": "philosophy",
+			"english": "philosophy"
+		},
+		{
+			"latin": "magister",
+			"english": "teacher"
+		},
+		{
+			"latin": "communicatio,",
+			"english": "communication"
+		},
+		{
+			"latin": "noctis",
+			"english": "night"
+		},
+		{
+			"latin": "liber",
+			"english": "chemistry"
+		},
+		{
+			"latin": "morbus",
+			"english": "disease"
+		},
+		{
+			"latin": "orbis",
+			"english": "disk"
+		},
+		{
+			"latin": "industria",
+			"english": "energy"
+		},
+		{
+			"latin": "gentem",
+			"english": "nation"
+		},
+		{
+			"latin": "via",
+			"english": "road"
+		},
+		{
+			"latin": "officium",
+			"english": "role"
+		},
+		{
+			"latin": "pulmenti:",
+			"english": "soup"
+		},
+		{
+			"latin": "Advertising",
+			"english": "advertising"
+		},
+		{
+			"latin": "Location",
+			"english": "location"
+		},
+		{
+			"latin": "rebus",
+			"english": "success"
+		},
+		{
+			"latin": "praeter",
+			"english": "addition"
+		},
+		{
+			"latin": "aedes",
+			"english": "apartment"
+		},
+		{
+			"latin": "Education",
+			"english": "education"
+		},
+		{
+			"latin": "math",
+			"english": "math"
+		},
+		{
+			"latin": "momentum",
+			"english": "moment"
+		},
+		{
+			"latin": "picturae",
+			"english": "painting"
+		},
+		{
+			"latin": "Politics",
+			"english": "politics"
+		},
+		{
+			"latin": "attendentes",
+			"english": "attention"
+		},
+		{
+			"latin": "arbitrium",
+			"english": "decision"
+		},
+		{
+			"latin": "rem",
+			"english": "event"
+		},
+		{
+			"latin": "rerum",
+			"english": "property"
+		},
+		{
+			"latin": "Shopping",
+			"english": "shopping"
+		},
+		{
+			"latin": "Student",
+			"english": "student"
+		},
+		{
+			"latin": "ligna,",
+			"english": "wood"
+		},
+		{
+			"latin": "auctor",
+			"english": "competition"
+		},
+		{
+			"latin": "distributio",
+			"english": "distribution"
+		},
+		{
+			"latin": "Entertainment",
+			"english": "entertainment"
+		},
+		{
+			"latin": "officium",
+			"english": "office"
+		},
+		{
+			"latin": "hominum",
+			"english": "population"
+		},
+		{
+			"latin": "Praeses",
+			"english": "president"
+		},
+		{
+			"latin": "unum",
+			"english": "unit"
+		},
+		{
+			"latin": "Category",
+			"english": "category"
+		},
+		{
+			"latin": "Cicero",
+			"english": "cigarette"
+		},
+		{
+			"latin": "context",
+			"english": "context"
+		},
+		{
+			"latin": "Introduction",
+			"english": "introduction"
+		},
+		{
+			"latin": "tempus",
+			"english": "opportunity"
+		},
+		{
+			"latin": "effectus",
+			"english": "performance"
+		},
+		{
+			"latin": "agitator",
+			"english": "driver"
+		},
+		{
+			"latin": "fugam,",
+			"english": "flight"
+		},
+		{
+			"latin": "tandem",
+			"english": "length"
+		},
+		{
+			"latin": "Magazine",
+			"english": "magazine"
+		},
+		{
+			"latin": "Book",
+			"english": "newspaper"
+		},
+		{
+			"latin": "ratio",
+			"english": "relationship"
+		},
+		{
+			"latin": "docens",
+			"english": "teaching"
+		},
+		{
+			"latin": "Cell",
+			"english": "cell"
+		},
+		{
+			"latin": "mangone",
+			"english": "dealer"
+		},
+		{
+			"latin": "inventum",
+			"english": "finding"
+		},
+		{
+			"latin": "lacus",
+			"english": "lake"
+		},
+		{
+			"latin": "Member",
+			"english": "member"
+		},
+		{
+			"latin": "Nuntius",
+			"english": "message"
+		},
+		{
+			"latin": "Phone",
+			"english": "phone"
+		},
+		{
+			"latin": "scene",
+			"english": "scene"
+		},
+		{
+			"latin": "aspectus",
+			"english": "appearance"
+		},
+		{
+			"latin": "consociatio",
+			"english": "association"
+		},
+		{
+			"latin": "ratio",
+			"english": "concept"
+		},
+		{
+			"latin": "Customer",
+			"english": "customer"
+		},
+		{
+			"latin": "mortem",
+			"english": "death"
+		},
+		{
+			"latin": "Discussion",
+			"english": "discussion"
+		},
+		{
+			"latin": "habitationem",
+			"english": "housing"
+		},
+		{
+			"latin": "inflatio",
+			"english": "inflation"
+		},
+		{
+			"latin": "Insurance",
+			"english": "insurance"
+		},
+		{
+			"latin": "mood",
+			"english": "mood"
+		},
+		{
+			"latin": "femina",
+			"english": "woman"
+		},
+		{
+			"latin": "consilium",
+			"english": "advice"
+		},
+		{
+			"latin": "sanguinem,",
+			"english": "blood"
+		},
+		{
+			"latin": "conatus",
+			"english": "effort"
+		},
+		{
+			"latin": "dictum",
+			"english": "expression"
+		},
+		{
+			"latin": "momentum",
+			"english": "importance"
+		},
+		{
+			"latin": "sententia",
+			"english": "opinion"
+		},
+		{
+			"latin": "pretium",
+			"english": "payment"
+		},
+		{
+			"latin": "rerum",
+			"english": "reality"
+		},
+		{
+			"latin": "officium",
+			"english": "responsibility"
+		},
+		{
+			"latin": "rerum",
+			"english": "situation"
+		},
+		{
+			"latin": "artem",
+			"english": "skill"
+		},
+		{
+			"latin": "quod",
+			"english": "statement"
+		},
+		{
+			"latin": "opes,",
+			"english": "wealth"
+		},
+		{
+			"latin": "application",
+			"english": "application"
+		},
+		{
+			"latin": "urbs",
+			"english": "city"
+		},
+		{
+			"latin": "comitatus",
+			"english": "county"
+		},
+		{
+			"latin": "altitudo",
+			"english": "depth"
+		},
+		{
+			"latin": "praedium",
+			"english": "estate"
+		},
+		{
+			"latin": "fundamentum",
+			"english": "foundation"
+		},
+		{
+			"latin": "avia",
+			"english": "grandmother"
+		},
+		{
+			"latin": "cor",
+			"english": "heart"
+		},
+		{
+			"latin": "perspective",
+			"english": "perspective"
+		},
+		{
+			"latin": "photo",
+			"english": "photo"
+		},
+		{
+			"latin": "recipe",
+			"english": "recipe"
+		},
+		{
+			"latin": "Studio",
+			"english": "studio"
+		},
+		{
+			"latin": "locus",
+			"english": "topic"
+		},
+		{
+			"latin": "Collection",
+			"english": "collection"
+		},
+		{
+			"latin": "Depressione",
+			"english": "depression"
+		},
+		{
+			"latin": "cogitatio",
+			"english": "imagination"
+		},
+		{
+			"latin": "passionis",
+			"english": "passion"
+		},
+		{
+			"latin": "recipis",
+			"english": "percentage"
+		},
+		{
+			"latin": "resource",
+			"english": "resource"
+		},
+		{
+			"latin": "occasum",
+			"english": "setting"
+		},
+		{
+			"latin": "ad",
+			"english": "ad"
+		},
+		{
+			"latin": "Agency",
+			"english": "agency"
+		},
+		{
+			"latin": "collegium",
+			"english": "college"
+		},
+		{
+			"latin": "Connection",
+			"english": "connection"
+		},
+		{
+			"latin": "History",
+			"english": "criticism"
+		},
+		{
+			"latin": "debitum",
+			"english": "debt"
+		},
+		{
+			"latin": "Description",
+			"english": "description"
+		},
+		{
+			"latin": "memoriae",
+			"english": "memory"
+		},
+		{
+			"latin": "patientia",
+			"english": "patience"
+		},
+		{
+			"latin": "Secretarius",
+			"english": "secretary"
+		},
+		{
+			"latin": "solutio",
+			"english": "solution"
+		},
+		{
+			"latin": "administrationem",
+			"english": "administration"
+		},
+		{
+			"latin": "ratio",
+			"english": "aspect"
+		},
+		{
+			"latin": "habitus",
+			"english": "attitude"
+		},
+		{
+			"latin": "director",
+			"english": "director"
+		},
+		{
+			"latin": "personalitate",
+			"english": "personality"
+		},
+		{
+			"latin": "Latin",
+			"english": "psychology"
+		},
+		{
+			"latin": "commendatione",
+			"english": "recommendation"
+		},
+		{
+			"latin": "Response",
+			"english": "response"
+		},
+		{
+			"latin": "selection",
+			"english": "selection"
+		},
+		{
+			"latin": "storage",
+			"english": "storage"
+		},
+		{
+			"latin": "Version",
+			"english": "version"
+		},
+		{
+			"latin": "Vocatus",
+			"english": "alcohol"
+		},
+		{
+			"latin": "ratio",
+			"english": "argument"
+		},
+		{
+			"latin": "queritur",
+			"english": "complaint"
+		},
+		{
+			"latin": "contractus",
+			"english": "contract"
+		},
+		{
+			"latin": "momentum",
+			"english": "emphasis"
+		},
+		{
+			"latin": "via",
+			"english": "highway"
+		},
+		{
+			"latin": "damnum",
+			"english": "loss"
+		},
+		{
+			"latin": "membership",
+			"english": "membership"
+		},
+		{
+			"latin": "possessionem",
+			"english": "possession"
+		},
+		{
+			"latin": "praeparatio",
+			"english": "preparation"
+		},
+		{
+			"latin": "CARNIS",
+			"english": "steak"
+		},
+		{
+			"latin": "coniunctio",
+			"english": "union"
+		},
+		{
+			"latin": "pactum",
+			"english": "agreement"
+		},
+		{
+			"latin": "cancer",
+			"english": "cancer"
+		},
+		{
+			"latin": "currency",
+			"english": "currency"
+		},
+		{
+			"latin": "Aliquam",
+			"english": "employment"
+		},
+		{
+			"latin": "ipsum",
+			"english": "engineering"
+		},
+		{
+			"latin": "ostium",
+			"english": "entry"
+		},
+		{
+			"latin": "commercium",
+			"english": "interaction"
+		},
+		{
+			"latin": "mixtio",
+			"english": "mixture"
+		},
+		{
+			"latin": "potius",
+			"english": "preference"
+		},
+		{
+			"latin": "tractus",
+			"english": "region"
+		},
+		{
+			"latin": "publicae",
+			"english": "republic"
+		},
+		{
+			"latin": "traditionem,",
+			"english": "tradition"
+		},
+		{
+			"latin": "virus",
+			"english": "virus"
+		},
+		{
+			"latin": "actor",
+			"english": "actor"
+		},
+		{
+			"latin": "Curabitur",
+			"english": "classroom"
+		},
+		{
+			"latin": "Delivery",
+			"english": "delivery"
+		},
+		{
+			"latin": "fabrica",
+			"english": "device"
+		},
+		{
+			"latin": "difficultas",
+			"english": "difficulty"
+		},
+		{
+			"latin": "Drama",
+			"english": "drama"
+		},
+		{
+			"latin": "comitia",
+			"english": "election"
+		},
+		{
+			"latin": "Engine",
+			"english": "engine"
+		},
+		{
+			"latin": "ipsum",
+			"english": "football"
+		},
+		{
+			"latin": "ductu",
+			"english": "guidance"
+		},
+		{
+			"latin": "Hotel",
+			"english": "hotel"
+		},
+		{
+			"latin": "dominus",
+			"english": "owner"
+		},
+		{
+			"latin": "prius",
+			"english": "priority"
+		},
+		{
+			"latin": "praesidium",
+			"english": "protection"
+		},
+		{
+			"latin": "consilium",
+			"english": "suggestion"
+		},
+		{
+			"latin": "contentionum",
+			"english": "tension"
+		},
+		{
+			"latin": "variatio",
+			"english": "variation"
+		},
+		{
+			"latin": "sollicitudo",
+			"english": "anxiety"
+		},
+		{
+			"latin": "aeris",
+			"english": "atmosphere"
+		},
+		{
+			"latin": "conscientia",
+			"english": "awareness"
+		},
+		{
+			"latin": "Bath",
+			"english": "bath"
+		},
+		{
+			"latin": "panem",
+			"english": "bread"
+		},
+		{
+			"latin": "ratio",
+			"english": "candidate"
+		},
+		{
+			"latin": "caelum",
+			"english": "climate"
+		},
+		{
+			"latin": "collatio",
+			"english": "comparison"
+		},
+		{
+			"latin": "tumultu",
+			"english": "confusion"
+		},
+		{
+			"latin": "constructione",
+			"english": "construction"
+		},
+		{
+			"latin": "elevator",
+			"english": "elevator"
+		},
+		{
+			"latin": "motus",
+			"english": "emotion"
+		},
+		{
+			"latin": "molestie",
+			"english": "employee"
+		},
+		{
+			"latin": "dico",
+			"english": "employer"
+		},
+		{
+			"latin": "hospes",
+			"english": "guest"
+		},
+		{
+			"latin": "altitudo",
+			"english": "height"
+		},
+		{
+			"latin": "ductu",
+			"english": "leadership"
+		},
+		{
+			"latin": "Mall",
+			"english": "mall"
+		},
+		{
+			"latin": "Manager",
+			"english": "manager"
+		},
+		{
+			"latin": "operatio",
+			"english": "operation"
+		},
+		{
+			"latin": "recording",
+			"english": "recording"
+		},
+		{
+			"latin": "Sample",
+			"english": "sample"
+		},
+		{
+			"latin": "transportation",
+			"english": "transportation"
+		},
+		{
+			"latin": "caritas",
+			"english": "charity"
+		},
+		{
+			"latin": "cognata",
+			"english": "cousin"
+		},
+		{
+			"latin": "malum",
+			"english": "disaster"
+		},
+		{
+			"latin": "Editor",
+			"english": "editor"
+		},
+		{
+			"latin": "efficientiam,",
+			"english": "efficiency"
+		},
+		{
+			"latin": "tumultu",
+			"english": "excitement"
+		},
+		{
+			"latin": "tantum",
+			"english": "extent"
+		},
+		{
+			"latin": "feedback",
+			"english": "feedback"
+		},
+		{
+			"latin": "Guitar",
+			"english": "guitar"
+		},
+		{
+			"latin": "Duis congue",
+			"english": "homework"
+		},
+		{
+			"latin": "ductor",
+			"english": "leader"
+		},
+		{
+			"latin": "Mom",
+			"english": "mom"
+		},
+		{
+			"latin": "exitus",
+			"english": "outcome"
+		},
+		{
+			"latin": "licentiam",
+			"english": "permission"
+		},
+		{
+			"latin": "presentation",
+			"english": "presentation"
+		},
+		{
+			"latin": "provectus",
+			"english": "promotion"
+		},
+		{
+			"latin": "cogitatio",
+			"english": "reflection"
+		},
+		{
+			"latin": "armarium",
+			"english": "refrigerator"
+		},
+		{
+			"latin": "consilium",
+			"english": "resolution"
+		},
+		{
+			"latin": "fructus",
+			"english": "revenue"
+		},
+		{
+			"latin": "sessionem",
+			"english": "session"
+		},
+		{
+			"latin": "cantor",
+			"english": "singer"
+		},
+		{
+			"latin": "tennis",
+			"english": "tennis"
+		},
+		{
+			"latin": "sporta",
+			"english": "basket"
+		},
+		{
+			"latin": "Bonus",
+			"english": "bonus"
+		},
+		{
+			"latin": "Cabinet",
+			"english": "cabinet"
+		},
+		{
+			"latin": "pueritiae",
+			"english": "childhood"
+		},
+		{
+			"latin": "Ecclesia,",
+			"english": "church"
+		},
+		{
+			"latin": "vestimenta",
+			"english": "clothes"
+		},
+		{
+			"latin": "Coffee",
+			"english": "coffee"
+		},
+		{
+			"latin": "cena",
+			"english": "dinner"
+		},
+		{
+			"latin": "tRACTUS",
+			"english": "drawing"
+		},
+		{
+			"latin": "pilorum",
+			"english": "hair"
+		},
+		{
+			"latin": "auditis",
+			"english": "hearing"
+		},
+		{
+			"latin": "inceptum",
+			"english": "initiative"
+		},
+		{
+			"latin": "iudicium",
+			"english": "judgment"
+		},
+		{
+			"latin": "Lab",
+			"english": "lab"
+		},
+		{
+			"latin": "mensurae",
+			"english": "measurement"
+		},
+		{
+			"latin": "modum",
+			"english": "mode"
+		},
+		{
+			"latin": "lutum",
+			"english": "mud"
+		},
+		{
+			"latin": "Aliquam",
+			"english": "orange"
+		},
+		{
+			"latin": "poetry",
+			"english": "poetry"
+		},
+		{
+			"latin": "DENUNTIATOR",
+			"english": "police"
+		},
+		{
+			"latin": "possibilitatem",
+			"english": "possibility"
+		},
+		{
+			"latin": "ratio",
+			"english": "procedure"
+		},
+		{
+			"latin": "regina",
+			"english": "queen"
+		},
+		{
+			"latin": "ratio",
+			"english": "ratio"
+		},
+		{
+			"latin": "secundum",
+			"english": "relation"
+		},
+		{
+			"latin": "Restaurant",
+			"english": "restaurant"
+		},
+		{
+			"latin": "satis",
+			"english": "satisfaction"
+		},
+		{
+			"latin": "pars",
+			"english": "sector"
+		},
+		{
+			"latin": "signature",
+			"english": "signature"
+		},
+		{
+			"latin": "momentum",
+			"english": "significance"
+		},
+		{
+			"latin": "Album",
+			"english": "song"
+		},
+		{
+			"latin": "dente",
+			"english": "tooth"
+		},
+		{
+			"latin": "oppidum",
+			"english": "town"
+		},
+		{
+			"latin": "vehiculum",
+			"english": "vehicle"
+		},
+		{
+			"latin": "magnitudo",
+			"english": "volume"
+		},
+		{
+			"latin": "uxorem",
+			"english": "wife"
+		},
+		{
+			"latin": "accident",
+			"english": "accident"
+		},
+		{
+			"latin": "Airport",
+			"english": "airport"
+		},
+		{
+			"latin": "tempus",
+			"english": "appointment"
+		},
+		{
+			"latin": "adventum",
+			"english": "arrival"
+		},
+		{
+			"latin": "principium",
+			"english": "assumption"
+		},
+		{
+			"latin": "Baseball",
+			"english": "baseball"
+		},
+		{
+			"latin": "CAPUT",
+			"english": "chapter"
+		},
+		{
+			"latin": "ipsum",
+			"english": "committee"
+		},
+		{
+			"latin": "sermone",
+			"english": "conversation"
+		},
+		{
+			"latin": "Database",
+			"english": "database"
+		},
+		{
+			"latin": "studium",
+			"english": "enthusiasm"
+		},
+		{
+			"latin": "error,",
+			"english": "error"
+		},
+		{
+			"latin": "ratio",
+			"english": "explanation"
+		},
+		{
+			"latin": "agricola",
+			"english": "farmer"
+		},
+		{
+			"latin": "ostium",
+			"english": "gate"
+		},
+		{
+			"latin": "puella",
+			"english": "girl"
+		},
+		{
+			"latin": "praetorium",
+			"english": "hall"
+		},
+		{
+			"latin": "rerum",
+			"english": "historian"
+		},
+		{
+			"latin": "hospitium",
+			"english": "hospital"
+		},
+		{
+			"latin": "iniuriam",
+			"english": "injury"
+		},
+		{
+			"latin": "disciplinam",
+			"english": "instruction"
+		},
+		{
+			"latin": "victum",
+			"english": "maintenance"
+		},
+		{
+			"latin": "fabrica",
+			"english": "manufacturer"
+		},
+		{
+			"latin": "prandium",
+			"english": "meal"
+		},
+		{
+			"latin": "perceptio,",
+			"english": "perception"
+		},
+		{
+			"latin": "crustum",
+			"english": "pie"
+		},
+		{
+			"latin": "poem",
+			"english": "poem"
+		},
+		{
+			"latin": "praesentia",
+			"english": "presence"
+		},
+		{
+			"latin": "propositum",
+			"english": "proposal"
+		},
+		{
+			"latin": "receptio",
+			"english": "reception"
+		},
+		{
+			"latin": "replacement",
+			"english": "replacement"
+		},
+		{
+			"latin": "rerum",
+			"english": "revolution"
+		},
+		{
+			"latin": "flumine",
+			"english": "river"
+		},
+		{
+			"latin": "filius",
+			"english": "son"
+		},
+		{
+			"latin": "oratio",
+			"english": "speech"
+		},
+		{
+			"latin": "tea",
+			"english": "tea"
+		},
+		{
+			"latin": "castellum",
+			"english": "village"
+		},
+		{
+			"latin": "monitum",
+			"english": "warning"
+		},
+		{
+			"latin": "victor",
+			"english": "winner"
+		},
+		{
+			"latin": "operatur",
+			"english": "worker"
+		},
+		{
+			"latin": "scriptor",
+			"english": "writer"
+		},
+		{
+			"latin": "auxilium",
+			"english": "assistance"
+		},
+		{
+			"latin": "spiritus",
+			"english": "breath"
+		},
+		{
+			"latin": "emptor",
+			"english": "buyer"
+		},
+		{
+			"latin": "pectus",
+			"english": "chest"
+		},
+		{
+			"latin": "Chocolate",
+			"english": "chocolate"
+		},
+		{
+			"latin": "conclusio,",
+			"english": "conclusion"
+		},
+		{
+			"latin": "conlatio",
+			"english": "contribution"
+		},
+		{
+			"latin": "cookie",
+			"english": "cookie"
+		},
+		{
+			"latin": "fortitudo",
+			"english": "courage"
+		},
+		{
+			"latin": "Pater",
+			"english": "dad"
+		},
+		{
+			"latin": "mensam",
+			"english": "desk"
+		},
+		{
+			"latin": "qui conportant",
+			"english": "drawer"
+		},
+		{
+			"latin": "instauratio",
+			"english": "establishment"
+		},
+		{
+			"latin": "quaestione",
+			"english": "examination"
+		},
+		{
+			"latin": "QUISQUILIAE",
+			"english": "garbage"
+		},
+		{
+			"latin": "Grocery",
+			"english": "grocery"
+		},
+		{
+			"latin": "mel,",
+			"english": "honey"
+		},
+		{
+			"latin": "impressio",
+			"english": "impression"
+		},
+		{
+			"latin": "melius",
+			"english": "improvement"
+		},
+		{
+			"latin": "libertatem",
+			"english": "independence"
+		},
+		{
+			"latin": "insectum",
+			"english": "insect"
+		},
+		{
+			"latin": "inspectis",
+			"english": "inspection"
+		},
+		{
+			"latin": "Inspector",
+			"english": "inspector"
+		},
+		{
+			"latin": "rex,",
+			"english": "king"
+		},
+		{
+			"latin": "scalam",
+			"english": "ladder"
+		},
+		{
+			"latin": "Menu",
+			"english": "menu"
+		},
+		{
+			"latin": "supplicium",
+			"english": "penalty"
+		},
+		{
+			"latin": "Music",
+			"english": "piano"
+		},
+		{
+			"latin": "Capsicum annuum",
+			"english": "potato"
+		},
+		{
+			"latin": "professione,",
+			"english": "profession"
+		},
+		{
+			"latin": "Professor",
+			"english": "professor"
+		},
+		{
+			"latin": "quantitatem,",
+			"english": "quantity"
+		},
+		{
+			"latin": "motus",
+			"english": "reaction"
+		},
+		{
+			"latin": "commodum",
+			"english": "requirement"
+		},
+		{
+			"latin": "MORETUM",
+			"english": "salad"
+		},
+		{
+			"latin": "sororis",
+			"english": "sister"
+		},
+		{
+			"latin": "forum",
+			"english": "supermarket"
+		},
+		{
+			"latin": "lingua",
+			"english": "tongue"
+		},
+		{
+			"latin": "infirmitate,",
+			"english": "weakness"
+		},
+		{
+			"latin": "nuptias",
+			"english": "wedding"
+		},
+		{
+			"latin": "rem",
+			"english": "affair"
+		},
+		{
+			"latin": "gloria",
+			"english": "ambition"
+		},
+		{
+			"latin": "Analyticum",
+			"english": "analyst"
+		},
+		{
+			"latin": "Apple",
+			"english": "apple"
+		},
+		{
+			"latin": "assignatione",
+			"english": "assignment"
+		},
+		{
+			"latin": "assistant",
+			"english": "assistant"
+		},
+		{
+			"latin": "latrina",
+			"english": "bathroom"
+		},
+		{
+			"latin": "cubiculum",
+			"english": "bedroom"
+		},
+		{
+			"latin": "Bersabee",
+			"english": "beer"
+		},
+		{
+			"latin": "natalis",
+			"english": "birthday"
+		},
+		{
+			"latin": "celebrationem",
+			"english": "celebration"
+		},
+		{
+			"latin": "patrocinium",
+			"english": "championship"
+		},
+		{
+			"latin": "maxilla",
+			"english": "cheek"
+		},
+		{
+			"latin": "huius",
+			"english": "client"
+		},
+		{
+			"latin": "igitur",
+			"english": "consequence"
+		},
+		{
+			"latin": "exitum",
+			"english": "departure"
+		},
+		{
+			"latin": "Diamond",
+			"english": "diamond"
+		},
+		{
+			"latin": "lutum",
+			"english": "dirt"
+		},
+		{
+			"latin": "audite",
+			"english": "ear"
+		},
+		{
+			"latin": "fortune",
+			"english": "fortune"
+		},
+		{
+			"latin": "amicitia,",
+			"english": "friendship"
+		},
+		{
+			"latin": "funus",
+			"english": "funeral"
+		},
+		{
+			"latin": "gene",
+			"english": "gene"
+		},
+		{
+			"latin": "ipsum",
+			"english": "girlfriend"
+		},
+		{
+			"latin": "hat",
+			"english": "hat"
+		},
+		{
+			"latin": "indicium",
+			"english": "indication"
+		},
+		{
+			"latin": "intentio,",
+			"english": "intention"
+		},
+		{
+			"latin": "lady",
+			"english": "lady"
+		},
+		{
+			"latin": "noctis",
+			"english": "midnight"
+		},
+		{
+			"latin": "negotium",
+			"english": "negotiation"
+		},
+		{
+			"latin": "officium",
+			"english": "obligation"
+		},
+		{
+			"latin": "passenger",
+			"english": "passenger"
+		},
+		{
+			"latin": "pizza",
+			"english": "pizza"
+		},
+		{
+			"latin": "tribunal",
+			"english": "platform"
+		},
+		{
+			"latin": "poet",
+			"english": "poet"
+		},
+		{
+			"latin": "coinquinationis",
+			"english": "pollution"
+		},
+		{
+			"latin": "recognitionem",
+			"english": "recognition"
+		},
+		{
+			"latin": "gloria",
+			"english": "reputation"
+		},
+		{
+			"latin": "Shirt",
+			"english": "shirt"
+		},
+		{
+			"latin": "Domine",
+			"english": "sir"
+		},
+		{
+			"latin": "dicens",
+			"english": "speaker"
+		},
+		{
+			"latin": "peregrinus",
+			"english": "stranger"
+		},
+		{
+			"latin": "surgery",
+			"english": "surgery"
+		},
+		{
+			"latin": "ferantur",
+			"english": "sympathy"
+		},
+		{
+			"latin": "Tale",
+			"english": "tale"
+		},
+		{
+			"latin": "faucibus",
+			"english": "throat"
+		},
+		{
+			"latin": "trainer",
+			"english": "trainer"
+		},
+		{
+			"latin": "uncle",
+			"english": "uncle"
+		},
+		{
+			"latin": "adulescentia",
+			"english": "youth"
+		},
+		{
+			"latin": "pecunia",
+			"english": "money"
+		},
+		{
+			"latin": "cum",
+			"english": "while"
+		},
+		{
+			"latin": "negotium",
+			"english": "business"
+		},
+		{
+			"latin": "vitae",
+			"english": "life"
+		},
+		{
+			"latin": "die",
+			"english": "day"
+		},
+		{
+			"latin": "domum",
+			"english": "home"
+		},
+		{
+			"latin": "oeconomia",
+			"english": "economy"
+		},
+		{
+			"latin": "Training",
+			"english": "training"
+		},
+		{
+			"latin": "genus",
+			"english": "kind"
+		},
+		{
+			"latin": "future",
+			"english": "future"
+		},
+		{
+			"latin": "actionis",
+			"english": "action"
+		},
+		{
+			"latin": "malus",
+			"english": "bad"
+		},
+		{
+			"latin": "nihil",
+			"english": "nothing"
+		},
+		{
+			"latin": "tempus",
+			"english": "period"
+		},
+		{
+			"latin": "Subject",
+			"english": "subject"
+		},
+		{
+			"latin": "pullum",
+			"english": "chicken"
+		},
+		{
+			"latin": "materiales",
+			"english": "material"
+		},
+		{
+			"latin": "Car",
+			"english": "car"
+		},
+		{
+			"latin": "medium",
+			"english": "half"
+		},
+		{
+			"latin": "intrinsecus",
+			"english": "inside"
+		},
+		{
+			"latin": "praeter",
+			"english": "outside"
+		},
+		{
+			"latin": "Latin",
+			"english": "standard"
+		},
+		{
+			"latin": "item",
+			"english": "item"
+		},
+		{
+			"latin": "medium",
+			"english": "medium"
+		},
+		{
+			"latin": "arbitrio",
+			"english": "choice"
+		},
+		{
+			"latin": "mane",
+			"english": "morning"
+		},
+		{
+			"latin": "North",
+			"english": "north"
+		},
+		{
+			"latin": "square",
+			"english": "square"
+		},
+		{
+			"latin": "urbe",
+			"english": "capital"
+		},
+		{
+			"latin": "sui",
+			"english": "self"
+		},
+		{
+			"latin": "iactus",
+			"english": "shot"
+		},
+		{
+			"latin": "vitae",
+			"english": "living"
+		},
+		{
+			"latin": "plastic",
+			"english": "plastic"
+		},
+		{
+			"latin": "sensum",
+			"english": "feeling"
+		},
+		{
+			"latin": "PECULIUM",
+			"english": "savings"
+		},
+		{
+			"latin": "animal,",
+			"english": "animal"
+		},
+		{
+			"latin": "maximum",
+			"english": "maximum"
+		},
+		{
+			"latin": "novel",
+			"english": "novel"
+		},
+		{
+			"latin": "satis",
+			"english": "plenty"
+		},
+		{
+			"latin": "font",
+			"english": "background"
+		},
+		{
+			"latin": "red",
+			"english": "red"
+		},
+		{
+			"latin": "fortitudo",
+			"english": "strength"
+		},
+		{
+			"latin": "vegetable",
+			"english": "vegetable"
+		},
+		{
+			"latin": "ideal",
+			"english": "ideal"
+		},
+		{
+			"latin": "Kitchen",
+			"english": "kitchen"
+		},
+		{
+			"latin": "principium",
+			"english": "principle"
+		},
+		{
+			"latin": "aliquid",
+			"english": "relative"
+		},
+		{
+			"latin": "Sale",
+			"english": "sale"
+		},
+		{
+			"latin": "via",
+			"english": "street"
+		},
+		{
+			"latin": "minimum",
+			"english": "minimum"
+		},
+		{
+			"latin": "semita",
+			"english": "path"
+		},
+		{
+			"latin": "mare",
+			"english": "sea"
+		},
+		{
+			"latin": "meridiem,",
+			"english": "south"
+		},
+		{
+			"latin": "Status",
+			"english": "status"
+		},
+		{
+			"latin": "confidentia",
+			"english": "confidence"
+		},
+		{
+			"latin": "filia,",
+			"english": "daughter"
+		},
+		{
+			"latin": "tantum",
+			"english": "degree"
+		},
+		{
+			"latin": "officium",
+			"english": "duty"
+		},
+		{
+			"latin": "hora",
+			"english": "hour"
+		},
+		{
+			"latin": "substantia",
+			"english": "substance"
+		},
+		{
+			"latin": "post meridiem,",
+			"english": "afternoon"
+		},
+		{
+			"latin": "ratio",
+			"english": "consideration"
+		},
+		{
+			"latin": "aurum",
+			"english": "gold"
+		},
+		{
+			"latin": "missionis",
+			"english": "mission"
+		},
+		{
+			"latin": "ostium",
+			"english": "door"
+		},
+		{
+			"latin": "ad orientalem plagam",
+			"english": "east"
+		},
+		{
+			"latin": "modum",
+			"english": "manner"
+		},
+		{
+			"latin": "occurrens",
+			"english": "meeting"
+		},
+		{
+			"latin": "Quisque",
+			"english": "parking"
+		},
+		{
+			"latin": "uno",
+			"english": "routine"
+		},
+		{
+			"latin": "swimming",
+			"english": "swimming"
+		},
+		{
+			"latin": "airline",
+			"english": "airline"
+		},
+		{
+			"latin": "Designer",
+			"english": "designer"
+		},
+		{
+			"latin": "tempus",
+			"english": "emergency"
+		},
+		{
+			"latin": "vesperum",
+			"english": "evening"
+		},
+		{
+			"latin": "tractus",
+			"english": "extension"
+		},
+		{
+			"latin": "horror",
+			"english": "horror"
+		},
+		{
+			"latin": "montem",
+			"english": "mountain"
+		},
+		{
+			"latin": "patiens,",
+			"english": "patient"
+		},
+		{
+			"latin": "auxilium",
+			"english": "relief"
+		},
+		{
+			"latin": "urbis",
+			"english": "tourist"
+		},
+		{
+			"latin": "West",
+			"english": "west"
+		},
+		{
+			"latin": "seorsum",
+			"english": "aside"
+		},
+		{
+			"latin": "fratrem",
+			"english": "brother"
+		},
+		{
+			"latin": "peritum",
+			"english": "expert"
+		},
+		{
+			"latin": "Deus",
+			"english": "god"
+		},
+		{
+			"latin": "patriam",
+			"english": "native"
+		},
+		{
+			"latin": "ostium",
+			"english": "opening"
+		},
+		{
+			"latin": "Puer",
+			"english": "boy"
+		},
+		{
+			"latin": "specialitas",
+			"english": "specialist"
+		},
+		{
+			"latin": "acerbissimum",
+			"english": "bitter"
+		},
+		{
+			"latin": "infernum,",
+			"english": "hell"
+		},
+		{
+			"latin": "rem",
+			"english": "incident"
+		},
+		{
+			"latin": "resident",
+			"english": "resident"
+		},
+		{
+			"latin": "a",
+			"english": "a"
+		},
+		{
+			"latin": "vos",
+			"english": "you"
+		},
+		{
+			"latin": "quod",
+			"english": "it"
+		},
+		{
+			"latin": "potes",
+			"english": "can"
+		},
+		{
+			"latin": "autem",
+			"english": "will"
+		},
+		{
+			"latin": "si",
+			"english": "if"
+		},
+		{
+			"latin": "unum",
+			"english": "one"
+		},
+		{
+			"latin": "multis",
+			"english": "many"
+		},
+		{
+			"latin": "maxime",
+			"english": "most"
+		},
+		{
+			"latin": "aliud",
+			"english": "other"
+		},
+		{
+			"latin": "bonum",
+			"english": "good"
+		},
+		{
+			"latin": "magna",
+			"english": "great"
+		},
+		{
+			"latin": "paucis",
+			"english": "few"
+		},
+		{
+			"latin": "ut",
+			"english": "might"
+		},
+		{
+			"latin": "adhuc",
+			"english": "still"
+		},
+		{
+			"latin": "publicae",
+			"english": "public"
+		},
+		{
+			"latin": "hominum",
+			"english": "human"
+		},
+		{
+			"latin": "locorum",
+			"english": "local"
+		},
+		{
+			"latin": "generalis",
+			"english": "general"
+		},
+		{
+			"latin": "quod",
+			"english": "she"
+		},
+		{
+			"latin": "speciem",
+			"english": "specific"
+		},
+		{
+			"latin": "multum",
+			"english": "long"
+		},
+		{
+			"latin": "altum",
+			"english": "high"
+		},
+		{
+			"latin": "nocte",
+			"english": "tonight"
+		},
+		{
+			"latin": "communia",
+			"english": "common"
+		},
+		{
+			"latin": "simplex,",
+			"english": "simple"
+		},
+		{
+			"latin": "praeteritum",
+			"english": "past"
+		},
+		{
+			"latin": "magnum",
+			"english": "big"
+		},
+		{
+			"latin": "fieri",
+			"english": "possible"
+		},
+		{
+			"latin": "maxime",
+			"english": "particular"
+		},
+		{
+			"latin": "hodie",
+			"english": "today"
+		},
+		{
+			"latin": "Personal",
+			"english": "personal"
+		},
+		{
+			"latin": "Current",
+			"english": "current"
+		},
+		{
+			"latin": "National",
+			"english": "national"
+		},
+		{
+			"latin": "naturali,",
+			"english": "natural"
+		},
+		{
+			"latin": "corporis",
+			"english": "physical"
+		},
+		{
+			"latin": "secundo,",
+			"english": "second"
+		},
+		{
+			"latin": "singulorum",
+			"english": "individual"
+		},
+		{
+			"latin": "summa",
+			"english": "main"
+		},
+		{
+			"latin": "potentia,",
+			"english": "potential"
+		},
+		{
+			"latin": "professionalem",
+			"english": "professional"
+		},
+		{
+			"latin": "International",
+			"english": "international"
+		},
+		{
+			"latin": "Alternative",
+			"english": "alternative"
+		},
+		{
+			"latin": "haec",
+			"english": "following"
+		},
+		{
+			"latin": "maxime",
+			"english": "special"
+		},
+		{
+			"latin": "opus",
+			"english": "working"
+		},
+		{
+			"latin": "totius",
+			"english": "whole"
+		},
+		{
+			"latin": "frigidum",
+			"english": "cold"
+		},
+		{
+			"latin": "commercial",
+			"english": "commercial"
+		},
+		{
+			"latin": "Minimum",
+			"english": "low"
+		},
+		{
+			"latin": "primum",
+			"english": "primary"
+		},
+		{
+			"latin": "dignitas",
+			"english": "worth"
+		},
+		{
+			"latin": "necessarium",
+			"english": "necessary"
+		},
+		{
+			"latin": "positive",
+			"english": "positive"
+		},
+		{
+			"latin": "Creative",
+			"english": "creative"
+		},
+		{
+			"latin": "gavisus",
+			"english": "glad"
+		},
+		{
+			"latin": "debitum",
+			"english": "due"
+		},
+		{
+			"latin": "efficax,",
+			"english": "effective"
+		},
+		{
+			"latin": "medium",
+			"english": "middle"
+		},
+		{
+			"latin": "iusto",
+			"english": "regular"
+		},
+		{
+			"latin": "iuris",
+			"english": "independent"
+		},
+		{
+			"latin": "original",
+			"english": "original"
+		},
+		{
+			"latin": "decorus",
+			"english": "beautiful"
+		},
+		{
+			"latin": "active",
+			"english": "active"
+		},
+		{
+			"latin": "negativa",
+			"english": "negative"
+		},
+		{
+			"latin": "tutus",
+			"english": "safe"
+		},
+		{
+			"latin": "Visual",
+			"english": "visual"
+		},
+		{
+			"latin": "praeter",
+			"english": "beyond"
+		},
+		{
+			"latin": "Junior",
+			"english": "junior"
+		},
+		{
+			"latin": "unicum",
+			"english": "unique"
+		},
+		{
+			"latin": "aliquid",
+			"english": "anything"
+		},
+		{
+			"latin": "Classic",
+			"english": "classic"
+		},
+		{
+			"latin": "final",
+			"english": "final"
+		},
+		{
+			"latin": "private",
+			"english": "private"
+		},
+		{
+			"latin": "Western",
+			"english": "western"
+		},
+		{
+			"latin": "familiar",
+			"english": "familiar"
+		},
+		{
+			"latin": "Official",
+			"english": "official"
+		},
+		{
+			"latin": "lata,",
+			"english": "broad"
+		},
+		{
+			"latin": "consolatoria",
+			"english": "comfortable"
+		},
+		{
+			"latin": "maybe",
+			"english": "maybe"
+		},
+		{
+			"latin": "dives",
+			"english": "rich"
+		},
+		{
+			"latin": "iuvenis",
+			"english": "young"
+		},
+		{
+			"latin": "gravis",
+			"english": "heavy"
+		},
+		{
+			"latin": "Salve",
+			"english": "hello"
+		},
+		{
+			"latin": "melior",
+			"english": "valuable"
+		},
+		{
+			"latin": "ducit",
+			"english": "leading"
+		},
+		{
+			"latin": "Northmanni",
+			"english": "normal"
+		},
+		{
+			"latin": "secreto",
+			"english": "secret"
+		},
+		{
+			"latin": "lentus",
+			"english": "tough"
+		},
+		{
+			"latin": "altum",
+			"english": "deep"
+		},
+		{
+			"latin": "objectum",
+			"english": "objective"
+		},
+		{
+			"latin": "chemical",
+			"english": "chemical"
+		},
+		{
+			"latin": "summa",
+			"english": "extreme"
+		},
+		{
+			"latin": "formal",
+			"english": "formal"
+		},
+		{
+			"latin": "adversus",
+			"english": "opposite"
+		},
+		{
+			"latin": "remote",
+			"english": "remote"
+		},
+		{
+			"latin": "magna",
+			"english": "vast"
+		},
+		{
+			"latin": "aliqua",
+			"english": "somewhere"
+		},
+		{
+			"latin": "usquam",
+			"english": "anywhere"
+		},
+		{
+			"latin": "tenebris",
+			"english": "dark"
+		},
+		{
+			"latin": "internum,",
+			"english": "internal"
+		},
+		{
+			"latin": "sensitiva",
+			"english": "sensitive"
+		},
+		{
+			"latin": "semper",
+			"english": "constant"
+		},
+		{
+			"latin": "crudam",
+			"english": "raw"
+		},
+		{
+			"latin": "mollia",
+			"english": "soft"
+		},
+		{
+			"latin": "solidum",
+			"english": "solid"
+		},
+		{
+			"latin": "Ridiculum",
+			"english": "weird"
+		},
+		{
+			"latin": "annua",
+			"english": "annual"
+		},
+		{
+			"latin": "mortuus est",
+			"english": "dead"
+		},
+		{
+			"latin": "in perpetuum",
+			"english": "forever"
+		},
+		{
+			"latin": "neminem",
+			"english": "nobody"
+		},
+		{
+			"latin": "circum",
+			"english": "round"
+		},
+		{
+			"latin": "autem",
+			"english": "whereas"
+		},
+		{
+			"latin": "equivalent",
+			"english": "equivalent"
+		},
+		{
+			"latin": "spiritualis,",
+			"english": "spiritual"
+		},
+		{
+			"latin": "adultus",
+			"english": "adult"
+		},
+		{
+			"latin": "insanis",
+			"english": "crazy"
+		},
+		{
+			"latin": "ante",
+			"english": "prior"
+		},
+		{
+			"latin": "rough",
+			"english": "rough"
+		},
+		{
+			"latin": "sad",
+			"english": "sad"
+		},
+		{
+			"latin": "infirmum",
+			"english": "sick"
+		},
+		{
+			"latin": "external",
+			"english": "external"
+		},
+		{
+			"latin": "illegal",
+			"english": "illegal"
+		},
+		{
+			"latin": "Mobile",
+			"english": "mobile"
+		},
+		{
+			"latin": "bona",
+			"english": "nasty"
+		},
+		{
+			"latin": "ordinarium",
+			"english": "ordinary"
+		},
+		{
+			"latin": "regium",
+			"english": "royal"
+		},
+		{
+			"latin": "Senior",
+			"english": "senior"
+		},
+		{
+			"latin": "lacertus",
+			"english": "upper"
+		},
+		{
+			"latin": "secundum",
+			"english": "dependent"
+		},
+		{
+			"latin": "Funny",
+			"english": "funny"
+		},
+		{
+			"latin": "dulcis",
+			"english": "sweet"
+		},
+		{
+			"latin": "susum",
+			"english": "upstairs"
+		},
+		{
+			"latin": "consuetudinem",
+			"english": "usual"
+		},
+		{
+			"latin": "foris",
+			"english": "abroad"
+		},
+		{
+			"latin": "Maximus",
+			"english": "grand"
+		},
+		{
+			"latin": "masculum",
+			"english": "male"
+		},
+		{
+			"latin": "cuiquam",
+			"english": "anybody"
+		},
+		{
+			"latin": "praeclarum",
+			"english": "brilliant"
+		},
+		{
+			"latin": "cara",
+			"english": "dear"
+		},
+		{
+			"latin": "ebrius",
+			"english": "drunk"
+		},
+		{
+			"latin": "female",
+			"english": "female"
+		},
+		{
+			"latin": "necesse",
+			"english": "inevitable"
+		},
+		{
+			"latin": "tersus",
+			"english": "neat"
+		},
+		{
+			"latin": "repraesentativum",
+			"english": "representative"
+		},
+		{
+			"latin": "inepta",
+			"english": "silly"
+		},
+		{
+			"latin": "stultus",
+			"english": "stupid"
+		},
+		{
+			"latin": "tempus",
+			"english": "temporary"
+		},
+		{
+			"latin": "cras",
+			"english": "tomorrow"
+		},
+		{
+			"latin": "heri",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 529 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		{
+			"romanian": "oameni",
+			"english": "people"
+		},
+		{
+			"romanian": "istorie",
+			"english": "history"
+		},
+		{
+			"romanian": "cale",
+			"english": "way"
+		},
+		{
+			"romanian": "artă",
+			"english": "art"
+		},
+		{
+			"romanian": "lume",
+			"english": "world"
+		},
+		{
+			"romanian": "informație",
+			"english": "information"
+		},
+		{
+			"romanian": "Hartă",
+			"english": "map"
+		},
+		{
+			"romanian": "Două",
+			"english": "two"
+		},
+		{
+			"romanian": "familie",
+			"english": "family"
+		},
+		{
+			"romanian": "Guvern",
+			"english": "government"
+		},
+		{
+			"romanian": "sănătate",
+			"english": "health"
+		},
+		{
+			"romanian": "sistem",
+			"english": "system"
+		},
+		{
+			"romanian": "computer",
+			"english": "computer"
+		},
+		{
+			"romanian": "carne",
+			"english": "meat"
+		},
+		{
+			"romanian": "an",
+			"english": "year"
+		},
+		{
+			"romanian": "Mulțumiri",
+			"english": "thanks"
+		},
+		{
+			"romanian": "muzică",
+			"english": "music"
+		},
+		{
+			"romanian": "persoană",
+			"english": "person"
+		},
+		{
+			"romanian": "citind",
+			"english": "reading"
+		},
+		{
+			"romanian": "metodă",
+			"english": "method"
+		},
+		{
+			"romanian": "date",
+			"english": "data"
+		},
+		{
+			"romanian": "alimente",
+			"english": "food"
+		},
+		{
+			"romanian": "înţelegere",
+			"english": "understanding"
+		},
+		{
+			"romanian": "teorie",
+			"english": "theory"
+		},
+		{
+			"romanian": "lege",
+			"english": "law"
+		},
+		{
+			"romanian": "pasăre",
+			"english": "bird"
+		},
+		{
+			"romanian": "literatură",
+			"english": "literature"
+		},
+		{
+			"romanian": "problemă",
+			"english": "problem"
+		},
+		{
+			"romanian": "software-ul",
+			"english": "software"
+		},
+		{
+			"romanian": "Control",
+			"english": "control"
+		},
+		{
+			"romanian": "cunoştinţe",
+			"english": "knowledge"
+		},
+		{
+			"romanian": "putere",
+			"english": "power"
+		},
+		{
+			"romanian": "abilitate",
+			"english": "ability"
+		},
+		{
+			"romanian": "economie",
+			"english": "economics"
+		},
+		{
+			"romanian": "dragoste",
+			"english": "love"
+		},
+		{
+			"romanian": "Internet",
+			"english": "internet"
+		},
+		{
+			"romanian": "televiziune",
+			"english": "television"
+		},
+		{
+			"romanian": "ştiinţă",
+			"english": "science"
+		},
+		{
+			"romanian": "bibliotecă",
+			"english": "library"
+		},
+		{
+			"romanian": "natură",
+			"english": "nature"
+		},
+		{
+			"romanian": "fapt",
+			"english": "fact"
+		},
+		{
+			"romanian": "produs",
+			"english": "product"
+		},
+		{
+			"romanian": "idee",
+			"english": "idea"
+		},
+		{
+			"romanian": "temperatura",
+			"english": "temperature"
+		},
+		{
+			"romanian": "investiție",
+			"english": "investment"
+		},
+		{
+			"romanian": "zonă",
+			"english": "area"
+		},
+		{
+			"romanian": "societate",
+			"english": "society"
+		},
+		{
+			"romanian": "activitate",
+			"english": "activity"
+		},
+		{
+			"romanian": "poveste",
+			"english": "story"
+		},
+		{
+			"romanian": "industrie",
+			"english": "industry"
+		},
+		{
+			"romanian": "mass-media",
+			"english": "media"
+		},
+		{
+			"romanian": "lucru",
+			"english": "thing"
+		},
+		{
+			"romanian": "cuptor",
+			"english": "oven"
+		},
+		{
+			"romanian": "comunitate",
+			"english": "community"
+		},
+		{
+			"romanian": "definiție",
+			"english": "definition"
+		},
+		{
+			"romanian": "Siguranță",
+			"english": "safety"
+		},
+		{
+			"romanian": "calitate",
+			"english": "quality"
+		},
+		{
+			"romanian": "dezvoltare",
+			"english": "development"
+		},
+		{
+			"romanian": "limba",
+			"english": "language"
+		},
+		{
+			"romanian": "administrare",
+			"english": "management"
+		},
+		{
+			"romanian": "jucător",
+			"english": "player"
+		},
+		{
+			"romanian": "varietate",
+			"english": "variety"
+		},
+		{
+			"romanian": "video",
+			"english": "video"
+		},
+		{
+			"romanian": "săptămână",
+			"english": "week"
+		},
+		{
+			"romanian": "Securitate",
+			"english": "security"
+		},
+		{
+			"romanian": "țară",
+			"english": "country"
+		},
+		{
+			"romanian": "examen",
+			"english": "exam"
+		},
+		{
+			"romanian": "film",
+			"english": "movie"
+		},
+		{
+			"romanian": "organizare",
+			"english": "organization"
+		},
+		{
+			"romanian": "echipament",
+			"english": "equipment"
+		},
+		{
+			"romanian": "fizică",
+			"english": "physics"
+		},
+		{
+			"romanian": "analiză",
+			"english": "analysis"
+		},
+		{
+			"romanian": "politică",
+			"english": "policy"
+		},
+		{
+			"romanian": "serie",
+			"english": "series"
+		},
+		{
+			"romanian": "gândire",
+			"english": "thought"
+		},
+		{
+			"romanian": "bază",
+			"english": "basis"
+		},
+		{
+			"romanian": "prieten",
+			"english": "boyfriend"
+		},
+		{
+			"romanian": "direcţie",
+			"english": "direction"
+		},
+		{
+			"romanian": "strategie",
+			"english": "strategy"
+		},
+		{
+			"romanian": "tehnologie",
+			"english": "technology"
+		},
+		{
+			"romanian": "armată",
+			"english": "army"
+		},
+		{
+			"romanian": "aparat foto",
+			"english": "camera"
+		},
+		{
+			"romanian": "libertate",
+			"english": "freedom"
+		},
+		{
+			"romanian": "hârtie",
+			"english": "paper"
+		},
+		{
+			"romanian": "mediu inconjurator",
+			"english": "environment"
+		},
+		{
+			"romanian": "copil",
+			"english": "child"
+		},
+		{
+			"romanian": "instanță",
+			"english": "instance"
+		},
+		{
+			"romanian": "lună",
+			"english": "month"
+		},
+		{
+			"romanian": "adevăr",
+			"english": "truth"
+		},
+		{
+			"romanian": "marketing",
+			"english": "marketing"
+		},
+		{
+			"romanian": "universitate",
+			"english": "university"
+		},
+		{
+			"romanian": "scris",
+			"english": "writing"
+		},
+		{
+			"romanian": "articol",
+			"english": "article"
+		},
+		{
+			"romanian": "departament",
+			"english": "department"
+		},
+		{
+			"romanian": "diferență",
+			"english": "difference"
+		},
+		{
+			"romanian": "poartă",
+			"english": "goal"
+		},
+		{
+			"romanian": "știri",
+			"english": "news"
+		},
+		{
+			"romanian": "public",
+			"english": "audience"
+		},
+		{
+			"romanian": "pescuit",
+			"english": "fishing"
+		},
+		{
+			"romanian": "creştere",
+			"english": "growth"
+		},
+		{
+			"romanian": "sursa de venit",
+			"english": "income"
+		},
+		{
+			"romanian": "căsătorie",
+			"english": "marriage"
+		},
+		{
+			"romanian": "utilizator",
+			"english": "user"
+		},
+		{
+			"romanian": "combinaţie",
+			"english": "combination"
+		},
+		{
+			"romanian": "eșec",
+			"english": "failure"
+		},
+		{
+			"romanian": "sens",
+			"english": "meaning"
+		},
+		{
+			"romanian": "medicament",
+			"english": "medicine"
+		},
+		{
+			"romanian": "filozofie",
+			"english": "philosophy"
+		},
+		{
+			"romanian": "profesor",
+			"english": "teacher"
+		},
+		{
+			"romanian": "comunicare",
+			"english": "communication"
+		},
+		{
+			"romanian": "noapte",
+			"english": "night"
+		},
+		{
+			"romanian": "chimie",
+			"english": "chemistry"
+		},
+		{
+			"romanian": "boală",
+			"english": "disease"
+		},
+		{
+			"romanian": "disc",
+			"english": "disk"
+		},
+		{
+			"romanian": "energie",
+			"english": "energy"
+		},
+		{
+			"romanian": "naţiune",
+			"english": "nation"
+		},
+		{
+			"romanian": "drum",
+			"english": "road"
+		},
+		{
+			"romanian": "rol",
+			"english": "role"
+		},
+		{
+			"romanian": "supă",
+			"english": "soup"
+		},
+		{
+			"romanian": "reclamă",
+			"english": "advertising"
+		},
+		{
+			"romanian": "Locație",
+			"english": "location"
+		},
+		{
+			"romanian": "succes",
+			"english": "success"
+		},
+		{
+			"romanian": "plus",
+			"english": "addition"
+		},
+		{
+			"romanian": "apartament",
+			"english": "apartment"
+		},
+		{
+			"romanian": "educaţie",
+			"english": "education"
+		},
+		{
+			"romanian": "matematica",
+			"english": "math"
+		},
+		{
+			"romanian": "moment",
+			"english": "moment"
+		},
+		{
+			"romanian": "pictură",
+			"english": "painting"
+		},
+		{
+			"romanian": "politică",
+			"english": "politics"
+		},
+		{
+			"romanian": "Atenţie",
+			"english": "attention"
+		},
+		{
+			"romanian": "decizie",
+			"english": "decision"
+		},
+		{
+			"romanian": "eveniment",
+			"english": "event"
+		},
+		{
+			"romanian": "proprietate",
+			"english": "property"
+		},
+		{
+			"romanian": "cumpărături",
+			"english": "shopping"
+		},
+		{
+			"romanian": "student",
+			"english": "student"
+		},
+		{
+			"romanian": "lemn",
+			"english": "wood"
+		},
+		{
+			"romanian": "competiție",
+			"english": "competition"
+		},
+		{
+			"romanian": "distribuire",
+			"english": "distribution"
+		},
+		{
+			"romanian": "divertisment",
+			"english": "entertainment"
+		},
+		{
+			"romanian": "birou",
+			"english": "office"
+		},
+		{
+			"romanian": "populație",
+			"english": "population"
+		},
+		{
+			"romanian": "președinte",
+			"english": "president"
+		},
+		{
+			"romanian": "unitate",
+			"english": "unit"
+		},
+		{
+			"romanian": "categorie",
+			"english": "category"
+		},
+		{
+			"romanian": "ţigară",
+			"english": "cigarette"
+		},
+		{
+			"romanian": "context",
+			"english": "context"
+		},
+		{
+			"romanian": "introducere",
+			"english": "introduction"
+		},
+		{
+			"romanian": "oportunitate",
+			"english": "opportunity"
+		},
+		{
+			"romanian": "performanţă",
+			"english": "performance"
+		},
+		{
+			"romanian": "conducător auto",
+			"english": "driver"
+		},
+		{
+			"romanian": "zbor",
+			"english": "flight"
+		},
+		{
+			"romanian": "lungime",
+			"english": "length"
+		},
+		{
+			"romanian": "revistă",
+			"english": "magazine"
+		},
+		{
+			"romanian": "ziar",
+			"english": "newspaper"
+		},
+		{
+			"romanian": "relaţie",
+			"english": "relationship"
+		},
+		{
+			"romanian": "învățătură",
+			"english": "teaching"
+		},
+		{
+			"romanian": "celulă",
+			"english": "cell"
+		},
+		{
+			"romanian": "comerciant",
+			"english": "dealer"
+		},
+		{
+			"romanian": "descoperire",
+			"english": "finding"
+		},
+		{
+			"romanian": "lac",
+			"english": "lake"
+		},
+		{
+			"romanian": "membru",
+			"english": "member"
+		},
+		{
+			"romanian": "mesaj",
+			"english": "message"
+		},
+		{
+			"romanian": "telefon",
+			"english": "phone"
+		},
+		{
+			"romanian": "scenă",
+			"english": "scene"
+		},
+		{
+			"romanian": "aspect",
+			"english": "appearance"
+		},
+		{
+			"romanian": "asociere",
+			"english": "association"
+		},
+		{
+			"romanian": "concept",
+			"english": "concept"
+		},
+		{
+			"romanian": "client",
+			"english": "customer"
+		},
+		{
+			"romanian": "moarte",
+			"english": "death"
+		},
+		{
+			"romanian": "discuţie",
+			"english": "discussion"
+		},
+		{
+			"romanian": "carcasă",
+			"english": "housing"
+		},
+		{
+			"romanian": "umflare",
+			"english": "inflation"
+		},
+		{
+			"romanian": "asigurare",
+			"english": "insurance"
+		},
+		{
+			"romanian": "dispozitie",
+			"english": "mood"
+		},
+		{
+			"romanian": "femeie",
+			"english": "woman"
+		},
+		{
+			"romanian": "sfat",
+			"english": "advice"
+		},
+		{
+			"romanian": "sânge",
+			"english": "blood"
+		},
+		{
+			"romanian": "efort",
+			"english": "effort"
+		},
+		{
+			"romanian": "expresie",
+			"english": "expression"
+		},
+		{
+			"romanian": "importanţă",
+			"english": "importance"
+		},
+		{
+			"romanian": "opinie",
+			"english": "opinion"
+		},
+		{
+			"romanian": "plată",
+			"english": "payment"
+		},
+		{
+			"romanian": "realitate",
+			"english": "reality"
+		},
+		{
+			"romanian": "responsabilitate",
+			"english": "responsibility"
+		},
+		{
+			"romanian": "situatie",
+			"english": "situation"
+		},
+		{
+			"romanian": "abilitate",
+			"english": "skill"
+		},
+		{
+			"romanian": "afirmație",
+			"english": "statement"
+		},
+		{
+			"romanian": "bogatie",
+			"english": "wealth"
+		},
+		{
+			"romanian": "cerere",
+			"english": "application"
+		},
+		{
+			"romanian": "oraș",
+			"english": "city"
+		},
+		{
+			"romanian": "județ",
+			"english": "county"
+		},
+		{
+			"romanian": "adâncime",
+			"english": "depth"
+		},
+		{
+			"romanian": "proprietate",
+			"english": "estate"
+		},
+		{
+			"romanian": "fundație",
+			"english": "foundation"
+		},
+		{
+			"romanian": "bunică",
+			"english": "grandmother"
+		},
+		{
+			"romanian": "inimă",
+			"english": "heart"
+		},
+		{
+			"romanian": "perspectivă",
+			"english": "perspective"
+		},
+		{
+			"romanian": "fotografie",
+			"english": "photo"
+		},
+		{
+			"romanian": "reţetă",
+			"english": "recipe"
+		},
+		{
+			"romanian": "studio",
+			"english": "studio"
+		},
+		{
+			"romanian": "subiect",
+			"english": "topic"
+		},
+		{
+			"romanian": "Colectie",
+			"english": "collection"
+		},
+		{
+			"romanian": "depresiune",
+			"english": "depression"
+		},
+		{
+			"romanian": "imaginație",
+			"english": "imagination"
+		},
+		{
+			"romanian": "pasiune",
+			"english": "passion"
+		},
+		{
+			"romanian": "procent",
+			"english": "percentage"
+		},
+		{
+			"romanian": "resursă",
+			"english": "resource"
+		},
+		{
+			"romanian": "cadru",
+			"english": "setting"
+		},
+		{
+			"romanian": "anunț",
+			"english": "ad"
+		},
+		{
+			"romanian": "agenţie",
+			"english": "agency"
+		},
+		{
+			"romanian": "colegiu",
+			"english": "college"
+		},
+		{
+			"romanian": "conexiune",
+			"english": "connection"
+		},
+		{
+			"romanian": "critică",
+			"english": "criticism"
+		},
+		{
+			"romanian": "creanţă",
+			"english": "debt"
+		},
+		{
+			"romanian": "Descriere",
+			"english": "description"
+		},
+		{
+			"romanian": "memorie",
+			"english": "memory"
+		},
+		{
+			"romanian": "răbdare",
+			"english": "patience"
+		},
+		{
+			"romanian": "secretar",
+			"english": "secretary"
+		},
+		{
+			"romanian": "soluţie",
+			"english": "solution"
+		},
+		{
+			"romanian": "administrare",
+			"english": "administration"
+		},
+		{
+			"romanian": "aspect",
+			"english": "aspect"
+		},
+		{
+			"romanian": "atitudine",
+			"english": "attitude"
+		},
+		{
+			"romanian": "director",
+			"english": "director"
+		},
+		{
+			"romanian": "personalitate",
+			"english": "personality"
+		},
+		{
+			"romanian": "psihologie",
+			"english": "psychology"
+		},
+		{
+			"romanian": "recomandare",
+			"english": "recommendation"
+		},
+		{
+			"romanian": "raspuns",
+			"english": "response"
+		},
+		{
+			"romanian": "selecţie",
+			"english": "selection"
+		},
+		{
+			"romanian": "depozitare",
+			"english": "storage"
+		},
+		{
+			"romanian": "versiune",
+			"english": "version"
+		},
+		{
+			"romanian": "alcool",
+			"english": "alcohol"
+		},
+		{
+			"romanian": "ceartă",
+			"english": "argument"
+		},
+		{
+			"romanian": "plângere",
+			"english": "complaint"
+		},
+		{
+			"romanian": "contracta",
+			"english": "contract"
+		},
+		{
+			"romanian": "accent",
+			"english": "emphasis"
+		},
+		{
+			"romanian": "șosea",
+			"english": "highway"
+		},
+		{
+			"romanian": "pierderi",
+			"english": "loss"
+		},
+		{
+			"romanian": "apartenență",
+			"english": "membership"
+		},
+		{
+			"romanian": "deţinere",
+			"english": "possession"
+		},
+		{
+			"romanian": "preparare",
+			"english": "preparation"
+		},
+		{
+			"romanian": "friptură",
+			"english": "steak"
+		},
+		{
+			"romanian": "uniune",
+			"english": "union"
+		},
+		{
+			"romanian": "acord",
+			"english": "agreement"
+		},
+		{
+			"romanian": "cancer",
+			"english": "cancer"
+		},
+		{
+			"romanian": "valută",
+			"english": "currency"
+		},
+		{
+			"romanian": "ocuparea forței de muncă",
+			"english": "employment"
+		},
+		{
+			"romanian": "Inginerie",
+			"english": "engineering"
+		},
+		{
+			"romanian": "intrare",
+			"english": "entry"
+		},
+		{
+			"romanian": "interacţiune",
+			"english": "interaction"
+		},
+		{
+			"romanian": "amestec",
+			"english": "mixture"
+		},
+		{
+			"romanian": "preferinţă",
+			"english": "preference"
+		},
+		{
+			"romanian": "regiune",
+			"english": "region"
+		},
+		{
+			"romanian": "republică",
+			"english": "republic"
+		},
+		{
+			"romanian": "tradiţie",
+			"english": "tradition"
+		},
+		{
+			"romanian": "virus",
+			"english": "virus"
+		},
+		{
+			"romanian": "actor",
+			"english": "actor"
+		},
+		{
+			"romanian": "sală de clasă",
+			"english": "classroom"
+		},
+		{
+			"romanian": "livrare",
+			"english": "delivery"
+		},
+		{
+			"romanian": "dispozitiv",
+			"english": "device"
+		},
+		{
+			"romanian": "dificultate",
+			"english": "difficulty"
+		},
+		{
+			"romanian": "dramă",
+			"english": "drama"
+		},
+		{
+			"romanian": "alegere",
+			"english": "election"
+		},
+		{
+			"romanian": "motor",
+			"english": "engine"
+		},
+		{
+			"romanian": "fotbal",
+			"english": "football"
+		},
+		{
+			"romanian": "îndrumare",
+			"english": "guidance"
+		},
+		{
+			"romanian": "hotel",
+			"english": "hotel"
+		},
+		{
+			"romanian": "proprietar",
+			"english": "owner"
+		},
+		{
+			"romanian": "prioritate",
+			"english": "priority"
+		},
+		{
+			"romanian": "protecţie",
+			"english": "protection"
+		},
+		{
+			"romanian": "sugestie",
+			"english": "suggestion"
+		},
+		{
+			"romanian": "tensiune",
+			"english": "tension"
+		},
+		{
+			"romanian": "variatie",
+			"english": "variation"
+		},
+		{
+			"romanian": "anxietate",
+			"english": "anxiety"
+		},
+		{
+			"romanian": "atmosfera",
+			"english": "atmosphere"
+		},
+		{
+			"romanian": "conștientizare",
+			"english": "awareness"
+		},
+		{
+			"romanian": "baie",
+			"english": "bath"
+		},
+		{
+			"romanian": "pâine",
+			"english": "bread"
+		},
+		{
+			"romanian": "candidat",
+			"english": "candidate"
+		},
+		{
+			"romanian": "climat",
+			"english": "climate"
+		},
+		{
+			"romanian": "comparaţie",
+			"english": "comparison"
+		},
+		{
+			"romanian": "confuzie",
+			"english": "confusion"
+		},
+		{
+			"romanian": "constructie",
+			"english": "construction"
+		},
+		{
+			"romanian": "lift",
+			"english": "elevator"
+		},
+		{
+			"romanian": "emoţie",
+			"english": "emotion"
+		},
+		{
+			"romanian": "angajat",
+			"english": "employee"
+		},
+		{
+			"romanian": "patron",
+			"english": "employer"
+		},
+		{
+			"romanian": "oaspete",
+			"english": "guest"
+		},
+		{
+			"romanian": "înălţime",
+			"english": "height"
+		},
+		{
+			"romanian": "conducere",
+			"english": "leadership"
+		},
+		{
+			"romanian": "centru comercial",
+			"english": "mall"
+		},
+		{
+			"romanian": "manager",
+			"english": "manager"
+		},
+		{
+			"romanian": "operație",
+			"english": "operation"
+		},
+		{
+			"romanian": "înregistrare",
+			"english": "recording"
+		},
+		{
+			"romanian": "probă",
+			"english": "sample"
+		},
+		{
+			"romanian": "transport",
+			"english": "transportation"
+		},
+		{
+			"romanian": "caritate",
+			"english": "charity"
+		},
+		{
+			"romanian": "văr",
+			"english": "cousin"
+		},
+		{
+			"romanian": "dezastru",
+			"english": "disaster"
+		},
+		{
+			"romanian": "editor",
+			"english": "editor"
+		},
+		{
+			"romanian": "eficienţă",
+			"english": "efficiency"
+		},
+		{
+			"romanian": "excitare",
+			"english": "excitement"
+		},
+		{
+			"romanian": "măsură",
+			"english": "extent"
+		},
+		{
+			"romanian": "parere",
+			"english": "feedback"
+		},
+		{
+			"romanian": "chitară",
+			"english": "guitar"
+		},
+		{
+			"romanian": "teme pentru acasă",
+			"english": "homework"
+		},
+		{
+			"romanian": "lider",
+			"english": "leader"
+		},
+		{
+			"romanian": "mama",
+			"english": "mom"
+		},
+		{
+			"romanian": "rezultat",
+			"english": "outcome"
+		},
+		{
+			"romanian": "permisiune",
+			"english": "permission"
+		},
+		{
+			"romanian": "prezentare",
+			"english": "presentation"
+		},
+		{
+			"romanian": "promovare",
+			"english": "promotion"
+		},
+		{
+			"romanian": "reflecţie",
+			"english": "reflection"
+		},
+		{
+			"romanian": "frigider",
+			"english": "refrigerator"
+		},
+		{
+			"romanian": "rezoluţie",
+			"english": "resolution"
+		},
+		{
+			"romanian": "venituri",
+			"english": "revenue"
+		},
+		{
+			"romanian": "sesiune",
+			"english": "session"
+		},
+		{
+			"romanian": "cântăreaţă",
+			"english": "singer"
+		},
+		{
+			"romanian": "tenis",
+			"english": "tennis"
+		},
+		{
+			"romanian": "coş",
+			"english": "basket"
+		},
+		{
+			"romanian": "primă",
+			"english": "bonus"
+		},
+		{
+			"romanian": "cabinet",
+			"english": "cabinet"
+		},
+		{
+			"romanian": "copilărie",
+			"english": "childhood"
+		},
+		{
+			"romanian": "biserică",
+			"english": "church"
+		},
+		{
+			"romanian": "haine",
+			"english": "clothes"
+		},
+		{
+			"romanian": "cafea",
+			"english": "coffee"
+		},
+		{
+			"romanian": "cină",
+			"english": "dinner"
+		},
+		{
+			"romanian": "desen",
+			"english": "drawing"
+		},
+		{
+			"romanian": "par",
+			"english": "hair"
+		},
+		{
+			"romanian": "auz",
+			"english": "hearing"
+		},
+		{
+			"romanian": "inițiativă",
+			"english": "initiative"
+		},
+		{
+			"romanian": "judecata",
+			"english": "judgment"
+		},
+		{
+			"romanian": "laborator",
+			"english": "lab"
+		},
+		{
+			"romanian": "măsurare",
+			"english": "measurement"
+		},
+		{
+			"romanian": "mod",
+			"english": "mode"
+		},
+		{
+			"romanian": "noroi",
+			"english": "mud"
+		},
+		{
+			"romanian": "portocale",
+			"english": "orange"
+		},
+		{
+			"romanian": "poezie",
+			"english": "poetry"
+		},
+		{
+			"romanian": "politie",
+			"english": "police"
+		},
+		{
+			"romanian": "posibilitate",
+			"english": "possibility"
+		},
+		{
+			"romanian": "procedură",
+			"english": "procedure"
+		},
+		{
+			"romanian": "regină",
+			"english": "queen"
+		},
+		{
+			"romanian": "raport",
+			"english": "ratio"
+		},
+		{
+			"romanian": "relație",
+			"english": "relation"
+		},
+		{
+			"romanian": "restaurant",
+			"english": "restaurant"
+		},
+		{
+			"romanian": "satisfacţie",
+			"english": "satisfaction"
+		},
+		{
+			"romanian": "sector",
+			"english": "sector"
+		},
+		{
+			"romanian": "semnătură",
+			"english": "signature"
+		},
+		{
+			"romanian": "semnificaţie",
+			"english": "significance"
+		},
+		{
+			"romanian": "cântec",
+			"english": "song"
+		},
+		{
+			"romanian": "dinte",
+			"english": "tooth"
+		},
+		{
+			"romanian": "oraș",
+			"english": "town"
+		},
+		{
+			"romanian": "vehicul",
+			"english": "vehicle"
+		},
+		{
+			"romanian": "volum",
+			"english": "volume"
+		},
+		{
+			"romanian": "soție",
+			"english": "wife"
+		},
+		{
+			"romanian": "accident",
+			"english": "accident"
+		},
+		{
+			"romanian": "aeroport",
+			"english": "airport"
+		},
+		{
+			"romanian": "programare",
+			"english": "appointment"
+		},
+		{
+			"romanian": "sosire",
+			"english": "arrival"
+		},
+		{
+			"romanian": "presupunere",
+			"english": "assumption"
+		},
+		{
+			"romanian": "baseball",
+			"english": "baseball"
+		},
+		{
+			"romanian": "capitol",
+			"english": "chapter"
+		},
+		{
+			"romanian": "comitet",
+			"english": "committee"
+		},
+		{
+			"romanian": "conversaţie",
+			"english": "conversation"
+		},
+		{
+			"romanian": "Bază de date",
+			"english": "database"
+		},
+		{
+			"romanian": "entuziasm",
+			"english": "enthusiasm"
+		},
+		{
+			"romanian": "eroare",
+			"english": "error"
+		},
+		{
+			"romanian": "explicaţie",
+			"english": "explanation"
+		},
+		{
+			"romanian": "agricultor",
+			"english": "farmer"
+		},
+		{
+			"romanian": "Poartă",
+			"english": "gate"
+		},
+		{
+			"romanian": "fată",
+			"english": "girl"
+		},
+		{
+			"romanian": "hol",
+			"english": "hall"
+		},
+		{
+			"romanian": "istoric",
+			"english": "historian"
+		},
+		{
+			"romanian": "spital",
+			"english": "hospital"
+		},
+		{
+			"romanian": "rănire",
+			"english": "injury"
+		},
+		{
+			"romanian": "instrucție",
+			"english": "instruction"
+		},
+		{
+			"romanian": "întreținere",
+			"english": "maintenance"
+		},
+		{
+			"romanian": "producător",
+			"english": "manufacturer"
+		},
+		{
+			"romanian": "masă",
+			"english": "meal"
+		},
+		{
+			"romanian": "percepţie",
+			"english": "perception"
+		},
+		{
+			"romanian": "plăcintă",
+			"english": "pie"
+		},
+		{
+			"romanian": "poem",
+			"english": "poem"
+		},
+		{
+			"romanian": "prezenţă",
+			"english": "presence"
+		},
+		{
+			"romanian": "propunere",
+			"english": "proposal"
+		},
+		{
+			"romanian": "recepţie",
+			"english": "reception"
+		},
+		{
+			"romanian": "înlocuire",
+			"english": "replacement"
+		},
+		{
+			"romanian": "revoluţie",
+			"english": "revolution"
+		},
+		{
+			"romanian": "râu",
+			"english": "river"
+		},
+		{
+			"romanian": "fiu",
+			"english": "son"
+		},
+		{
+			"romanian": "vorbire",
+			"english": "speech"
+		},
+		{
+			"romanian": "ceai",
+			"english": "tea"
+		},
+		{
+			"romanian": "sat",
+			"english": "village"
+		},
+		{
+			"romanian": "avertizare",
+			"english": "warning"
+		},
+		{
+			"romanian": "câştigător",
+			"english": "winner"
+		},
+		{
+			"romanian": "muncitor",
+			"english": "worker"
+		},
+		{
+			"romanian": "scriitor",
+			"english": "writer"
+		},
+		{
+			"romanian": "asistenţă",
+			"english": "assistance"
+		},
+		{
+			"romanian": "suflare",
+			"english": "breath"
+		},
+		{
+			"romanian": "cumpărător",
+			"english": "buyer"
+		},
+		{
+			"romanian": "cufăr",
+			"english": "chest"
+		},
+		{
+			"romanian": "ciocolată",
+			"english": "chocolate"
+		},
+		{
+			"romanian": "concluzie",
+			"english": "conclusion"
+		},
+		{
+			"romanian": "contribuţie",
+			"english": "contribution"
+		},
+		{
+			"romanian": "fursec",
+			"english": "cookie"
+		},
+		{
+			"romanian": "curaj",
+			"english": "courage"
+		},
+		{
+			"romanian": "tata",
+			"english": "dad"
+		},
+		{
+			"romanian": "birou",
+			"english": "desk"
+		},
+		{
+			"romanian": "sertar",
+			"english": "drawer"
+		},
+		{
+			"romanian": "stabilire",
+			"english": "establishment"
+		},
+		{
+			"romanian": "examinare",
+			"english": "examination"
+		},
+		{
+			"romanian": "gunoi",
+			"english": "garbage"
+		},
+		{
+			"romanian": "băcănie",
+			"english": "grocery"
+		},
+		{
+			"romanian": "Miere",
+			"english": "honey"
+		},
+		{
+			"romanian": "impresie",
+			"english": "impression"
+		},
+		{
+			"romanian": "îmbunătăţire",
+			"english": "improvement"
+		},
+		{
+			"romanian": "independenţă",
+			"english": "independence"
+		},
+		{
+			"romanian": "insectă",
+			"english": "insect"
+		},
+		{
+			"romanian": "inspecţie",
+			"english": "inspection"
+		},
+		{
+			"romanian": "inspector",
+			"english": "inspector"
+		},
+		{
+			"romanian": "rege",
+			"english": "king"
+		},
+		{
+			"romanian": "scară",
+			"english": "ladder"
+		},
+		{
+			"romanian": "meniul",
+			"english": "menu"
+		},
+		{
+			"romanian": "penalizare",
+			"english": "penalty"
+		},
+		{
+			"romanian": "pian",
+			"english": "piano"
+		},
+		{
+			"romanian": "cartof",
+			"english": "potato"
+		},
+		{
+			"romanian": "profesie",
+			"english": "profession"
+		},
+		{
+			"romanian": "Profesor",
+			"english": "professor"
+		},
+		{
+			"romanian": "cantitate",
+			"english": "quantity"
+		},
+		{
+			"romanian": "reacţie",
+			"english": "reaction"
+		},
+		{
+			"romanian": "cerinţă",
+			"english": "requirement"
+		},
+		{
+			"romanian": "salată",
+			"english": "salad"
+		},
+		{
+			"romanian": "soră",
+			"english": "sister"
+		},
+		{
+			"romanian": "supermarket",
+			"english": "supermarket"
+		},
+		{
+			"romanian": "limbă",
+			"english": "tongue"
+		},
+		{
+			"romanian": "slăbiciune",
+			"english": "weakness"
+		},
+		{
+			"romanian": "nuntă",
+			"english": "wedding"
+		},
+		{
+			"romanian": "afacere",
+			"english": "affair"
+		},
+		{
+			"romanian": "ambiţie",
+			"english": "ambition"
+		},
+		{
+			"romanian": "analist",
+			"english": "analyst"
+		},
+		{
+			"romanian": "măr",
+			"english": "apple"
+		},
+		{
+			"romanian": "misiune",
+			"english": "assignment"
+		},
+		{
+			"romanian": "asistent",
+			"english": "assistant"
+		},
+		{
+			"romanian": "baie",
+			"english": "bathroom"
+		},
+		{
+			"romanian": "dormitor",
+			"english": "bedroom"
+		},
+		{
+			"romanian": "bere",
+			"english": "beer"
+		},
+		{
+			"romanian": "zi de nastere",
+			"english": "birthday"
+		},
+		{
+			"romanian": "celebrare",
+			"english": "celebration"
+		},
+		{
+			"romanian": "campionat",
+			"english": "championship"
+		},
+		{
+			"romanian": "obraz",
+			"english": "cheek"
+		},
+		{
+			"romanian": "client",
+			"english": "client"
+		},
+		{
+			"romanian": "consecinţă",
+			"english": "consequence"
+		},
+		{
+			"romanian": "plecare",
+			"english": "departure"
+		},
+		{
+			"romanian": "diamant",
+			"english": "diamond"
+		},
+		{
+			"romanian": "murdărie",
+			"english": "dirt"
+		},
+		{
+			"romanian": "ureche",
+			"english": "ear"
+		},
+		{
+			"romanian": "avere",
+			"english": "fortune"
+		},
+		{
+			"romanian": "prietenie",
+			"english": "friendship"
+		},
+		{
+			"romanian": "înmormântare",
+			"english": "funeral"
+		},
+		{
+			"romanian": "genă",
+			"english": "gene"
+		},
+		{
+			"romanian": "iubita",
+			"english": "girlfriend"
+		},
+		{
+			"romanian": "pălărie",
+			"english": "hat"
+		},
+		{
+			"romanian": "indicaţie",
+			"english": "indication"
+		},
+		{
+			"romanian": "intenție",
+			"english": "intention"
+		},
+		{
+			"romanian": "doamnă",
+			"english": "lady"
+		},
+		{
+			"romanian": "miezul nopţii",
+			"english": "midnight"
+		},
+		{
+			"romanian": "negociere",
+			"english": "negotiation"
+		},
+		{
+			"romanian": "obligaţie",
+			"english": "obligation"
+		},
+		{
+			"romanian": "pasager",
+			"english": "passenger"
+		},
+		{
+			"romanian": "pizza",
+			"english": "pizza"
+		},
+		{
+			"romanian": "platformă",
+			"english": "platform"
+		},
+		{
+			"romanian": "poet",
+			"english": "poet"
+		},
+		{
+			"romanian": "poluare",
+			"english": "pollution"
+		},
+		{
+			"romanian": "recunoaştere",
+			"english": "recognition"
+		},
+		{
+			"romanian": "reputatie",
+			"english": "reputation"
+		},
+		{
+			"romanian": "cămaşă",
+			"english": "shirt"
+		},
+		{
+			"romanian": "domn",
+			"english": "sir"
+		},
+		{
+			"romanian": "vorbitor",
+			"english": "speaker"
+		},
+		{
+			"romanian": "străin",
+			"english": "stranger"
+		},
+		{
+			"romanian": "interventie chirurgicala",
+			"english": "surgery"
+		},
+		{
+			"romanian": "simpatie",
+			"english": "sympathy"
+		},
+		{
+			"romanian": "poveste",
+			"english": "tale"
+		},
+		{
+			"romanian": "gât",
+			"english": "throat"
+		},
+		{
+			"romanian": "antrenor",
+			"english": "trainer"
+		},
+		{
+			"romanian": "unchi",
+			"english": "uncle"
+		},
+		{
+			"romanian": "tineret",
+			"english": "youth"
+		},
+		{
+			"romanian": "bani",
+			"english": "money"
+		},
+		{
+			"romanian": "in timp ce",
+			"english": "while"
+		},
+		{
+			"romanian": "Afaceri",
+			"english": "business"
+		},
+		{
+			"romanian": "viaţă",
+			"english": "life"
+		},
+		{
+			"romanian": "zi",
+			"english": "day"
+		},
+		{
+			"romanian": "Acasă",
+			"english": "home"
+		},
+		{
+			"romanian": "economie",
+			"english": "economy"
+		},
+		{
+			"romanian": "pregătire",
+			"english": "training"
+		},
+		{
+			"romanian": "drăguț",
+			"english": "kind"
+		},
+		{
+			"romanian": "viitor",
+			"english": "future"
+		},
+		{
+			"romanian": "acțiune",
+			"english": "action"
+		},
+		{
+			"romanian": "rău",
+			"english": "bad"
+		},
+		{
+			"romanian": "nimic",
+			"english": "nothing"
+		},
+		{
+			"romanian": "perioadă",
+			"english": "period"
+		},
+		{
+			"romanian": "subiect",
+			"english": "subject"
+		},
+		{
+			"romanian": "pui",
+			"english": "chicken"
+		},
+		{
+			"romanian": "material",
+			"english": "material"
+		},
+		{
+			"romanian": "mașină",
+			"english": "car"
+		},
+		{
+			"romanian": "jumătate",
+			"english": "half"
+		},
+		{
+			"romanian": "interior",
+			"english": "inside"
+		},
+		{
+			"romanian": "in afara",
+			"english": "outside"
+		},
+		{
+			"romanian": "standard",
+			"english": "standard"
+		},
+		{
+			"romanian": "articol",
+			"english": "item"
+		},
+		{
+			"romanian": "mediu",
+			"english": "medium"
+		},
+		{
+			"romanian": "alegere",
+			"english": "choice"
+		},
+		{
+			"romanian": "dimineaţă",
+			"english": "morning"
+		},
+		{
+			"romanian": "Nord",
+			"english": "north"
+		},
+		{
+			"romanian": "pătrat",
+			"english": "square"
+		},
+		{
+			"romanian": "capital",
+			"english": "capital"
+		},
+		{
+			"romanian": "de sine",
+			"english": "self"
+		},
+		{
+			"romanian": "lovitură",
+			"english": "shot"
+		},
+		{
+			"romanian": "viaţă",
+			"english": "living"
+		},
+		{
+			"romanian": "plastic",
+			"english": "plastic"
+		},
+		{
+			"romanian": "sentiment",
+			"english": "feeling"
+		},
+		{
+			"romanian": "economie",
+			"english": "savings"
+		},
+		{
+			"romanian": "animal",
+			"english": "animal"
+		},
+		{
+			"romanian": "maxim",
+			"english": "maximum"
+		},
+		{
+			"romanian": "roman",
+			"english": "novel"
+		},
+		{
+			"romanian": "belșug",
+			"english": "plenty"
+		},
+		{
+			"romanian": "fundal",
+			"english": "background"
+		},
+		{
+			"romanian": "roșu",
+			"english": "red"
+		},
+		{
+			"romanian": "putere",
+			"english": "strength"
+		},
+		{
+			"romanian": "vegetal",
+			"english": "vegetable"
+		},
+		{
+			"romanian": "ideal",
+			"english": "ideal"
+		},
+		{
+			"romanian": "bucătărie",
+			"english": "kitchen"
+		},
+		{
+			"romanian": "principiu",
+			"english": "principle"
+		},
+		{
+			"romanian": "relativ",
+			"english": "relative"
+		},
+		{
+			"romanian": "vânzare",
+			"english": "sale"
+		},
+		{
+			"romanian": "stradă",
+			"english": "street"
+		},
+		{
+			"romanian": "minim",
+			"english": "minimum"
+		},
+		{
+			"romanian": "cale",
+			"english": "path"
+		},
+		{
+			"romanian": "mare",
+			"english": "sea"
+		},
+		{
+			"romanian": "sud",
+			"english": "south"
+		},
+		{
+			"romanian": "stare",
+			"english": "status"
+		},
+		{
+			"romanian": "încredere",
+			"english": "confidence"
+		},
+		{
+			"romanian": "fiică",
+			"english": "daughter"
+		},
+		{
+			"romanian": "grad",
+			"english": "degree"
+		},
+		{
+			"romanian": "datorie",
+			"english": "duty"
+		},
+		{
+			"romanian": "ora",
+			"english": "hour"
+		},
+		{
+			"romanian": "substanţă",
+			"english": "substance"
+		},
+		{
+			"romanian": "dupa amiaza",
+			"english": "afternoon"
+		},
+		{
+			"romanian": "considerare",
+			"english": "consideration"
+		},
+		{
+			"romanian": "aur",
+			"english": "gold"
+		},
+		{
+			"romanian": "misiune",
+			"english": "mission"
+		},
+		{
+			"romanian": "uşă",
+			"english": "door"
+		},
+		{
+			"romanian": "Orientul",
+			"english": "east"
+		},
+		{
+			"romanian": "manieră",
+			"english": "manner"
+		},
+		{
+			"romanian": "întâlnire",
+			"english": "meeting"
+		},
+		{
+			"romanian": "parcare",
+			"english": "parking"
+		},
+		{
+			"romanian": "rutină",
+			"english": "routine"
+		},
+		{
+			"romanian": "înot",
+			"english": "swimming"
+		},
+		{
+			"romanian": "linie aeriană",
+			"english": "airline"
+		},
+		{
+			"romanian": "proiectant",
+			"english": "designer"
+		},
+		{
+			"romanian": "caz de urgență",
+			"english": "emergency"
+		},
+		{
+			"romanian": "seară",
+			"english": "evening"
+		},
+		{
+			"romanian": "extensie",
+			"english": "extension"
+		},
+		{
+			"romanian": "groază",
+			"english": "horror"
+		},
+		{
+			"romanian": "munte",
+			"english": "mountain"
+		},
+		{
+			"romanian": "rabdator",
+			"english": "patient"
+		},
+		{
+			"romanian": "relief",
+			"english": "relief"
+		},
+		{
+			"romanian": "turist",
+			"english": "tourist"
+		},
+		{
+			"romanian": "vest",
+			"english": "west"
+		},
+		{
+			"romanian": "deoparte",
+			"english": "aside"
+		},
+		{
+			"romanian": "frate",
+			"english": "brother"
+		},
+		{
+			"romanian": "expert",
+			"english": "expert"
+		},
+		{
+			"romanian": "dumnezeu",
+			"english": "god"
+		},
+		{
+			"romanian": "nativ",
+			"english": "native"
+		},
+		{
+			"romanian": "deschidere",
+			"english": "opening"
+		},
+		{
+			"romanian": "băiat",
+			"english": "boy"
+		},
+		{
+			"romanian": "specialist",
+			"english": "specialist"
+		},
+		{
+			"romanian": "amar",
+			"english": "bitter"
+		},
+		{
+			"romanian": "iad",
+			"english": "hell"
+		},
+		{
+			"romanian": "incident",
+			"english": "incident"
+		},
+		{
+			"romanian": "rezident",
+			"english": "resident"
+		},
+		{
+			"romanian": "A",
+			"english": "a"
+		},
+		{
+			"romanian": "tu",
+			"english": "you"
+		},
+		{
+			"romanian": "aceasta",
+			"english": "it"
+		},
+		{
+			"romanian": "poate sa",
+			"english": "can"
+		},
+		{
+			"romanian": "voi",
+			"english": "will"
+		},
+		{
+			"romanian": "dacă",
+			"english": "if"
+		},
+		{
+			"romanian": "unu",
+			"english": "one"
+		},
+		{
+			"romanian": "mulți",
+			"english": "many"
+		},
+		{
+			"romanian": "cel mai",
+			"english": "most"
+		},
+		{
+			"romanian": "alte",
+			"english": "other"
+		},
+		{
+			"romanian": "bun",
+			"english": "good"
+		},
+		{
+			"romanian": "Grozav",
+			"english": "great"
+		},
+		{
+			"romanian": "puțini",
+			"english": "few"
+		},
+		{
+			"romanian": "ar putea",
+			"english": "might"
+		},
+		{
+			"romanian": "încă",
+			"english": "still"
+		},
+		{
+			"romanian": "public",
+			"english": "public"
+		},
+		{
+			"romanian": "uman",
+			"english": "human"
+		},
+		{
+			"romanian": "local",
+			"english": "local"
+		},
+		{
+			"romanian": "general",
+			"english": "general"
+		},
+		{
+			"romanian": "ea",
+			"english": "she"
+		},
+		{
+			"romanian": "specific",
+			"english": "specific"
+		},
+		{
+			"romanian": "lung",
+			"english": "long"
+		},
+		{
+			"romanian": "înalt",
+			"english": "high"
+		},
+		{
+			"romanian": "astă seară",
+			"english": "tonight"
+		},
+		{
+			"romanian": "comun",
+			"english": "common"
+		},
+		{
+			"romanian": "simplu",
+			"english": "simple"
+		},
+		{
+			"romanian": "trecut",
+			"english": "past"
+		},
+		{
+			"romanian": "mare",
+			"english": "big"
+		},
+		{
+			"romanian": "posibil",
+			"english": "possible"
+		},
+		{
+			"romanian": "special",
+			"english": "particular"
+		},
+		{
+			"romanian": "astăzi",
+			"english": "today"
+		},
+		{
+			"romanian": "personal",
+			"english": "personal"
+		},
+		{
+			"romanian": "actual",
+			"english": "current"
+		},
+		{
+			"romanian": "naţional",
+			"english": "national"
+		},
+		{
+			"romanian": "natural",
+			"english": "natural"
+		},
+		{
+			"romanian": "fizic",
+			"english": "physical"
+		},
+		{
+			"romanian": "al doilea",
+			"english": "second"
+		},
+		{
+			"romanian": "individual",
+			"english": "individual"
+		},
+		{
+			"romanian": "principal",
+			"english": "main"
+		},
+		{
+			"romanian": "potenţial",
+			"english": "potential"
+		},
+		{
+			"romanian": "profesional",
+			"english": "professional"
+		},
+		{
+			"romanian": "internaţional",
+			"english": "international"
+		},
+		{
+			"romanian": "alternativă",
+			"english": "alternative"
+		},
+		{
+			"romanian": "ca urmare a",
+			"english": "following"
+		},
+		{
+			"romanian": "special",
+			"english": "special"
+		},
+		{
+			"romanian": "lucru",
+			"english": "working"
+		},
+		{
+			"romanian": "întreg",
+			"english": "whole"
+		},
+		{
+			"romanian": "rece",
+			"english": "cold"
+		},
+		{
+			"romanian": "comercial",
+			"english": "commercial"
+		},
+		{
+			"romanian": "scăzut",
+			"english": "low"
+		},
+		{
+			"romanian": "primar",
+			"english": "primary"
+		},
+		{
+			"romanian": "in valoare de",
+			"english": "worth"
+		},
+		{
+			"romanian": "necesar",
+			"english": "necessary"
+		},
+		{
+			"romanian": "pozitiv",
+			"english": "positive"
+		},
+		{
+			"romanian": "creator",
+			"english": "creative"
+		},
+		{
+			"romanian": "bucuros",
+			"english": "glad"
+		},
+		{
+			"romanian": "datorat",
+			"english": "due"
+		},
+		{
+			"romanian": "efectiv",
+			"english": "effective"
+		},
+		{
+			"romanian": "mijloc",
+			"english": "middle"
+		},
+		{
+			"romanian": "regulat",
+			"english": "regular"
+		},
+		{
+			"romanian": "independent",
+			"english": "independent"
+		},
+		{
+			"romanian": "original",
+			"english": "original"
+		},
+		{
+			"romanian": "frumoasa",
+			"english": "beautiful"
+		},
+		{
+			"romanian": "activ",
+			"english": "active"
+		},
+		{
+			"romanian": "negativ",
+			"english": "negative"
+		},
+		{
+			"romanian": "Sigur",
+			"english": "safe"
+		},
+		{
+			"romanian": "vizual",
+			"english": "visual"
+		},
+		{
+			"romanian": "dincolo",
+			"english": "beyond"
+		},
+		{
+			"romanian": "Junior",
+			"english": "junior"
+		},
+		{
+			"romanian": "unic",
+			"english": "unique"
+		},
+		{
+			"romanian": "orice",
+			"english": "anything"
+		},
+		{
+			"romanian": "clasic",
+			"english": "classic"
+		},
+		{
+			"romanian": "final",
+			"english": "final"
+		},
+		{
+			"romanian": "privat",
+			"english": "private"
+		},
+		{
+			"romanian": "vestic",
+			"english": "western"
+		},
+		{
+			"romanian": "familiar",
+			"english": "familiar"
+		},
+		{
+			"romanian": "oficial",
+			"english": "official"
+		},
+		{
+			"romanian": "larg",
+			"english": "broad"
+		},
+		{
+			"romanian": "confortabil",
+			"english": "comfortable"
+		},
+		{
+			"romanian": "poate",
+			"english": "maybe"
+		},
+		{
+			"romanian": "bogat",
+			"english": "rich"
+		},
+		{
+			"romanian": "tineri",
+			"english": "young"
+		},
+		{
+			"romanian": "greu",
+			"english": "heavy"
+		},
+		{
+			"romanian": "buna",
+			"english": "hello"
+		},
+		{
+			"romanian": "valoros",
+			"english": "valuable"
+		},
+		{
+			"romanian": "conducere",
+			"english": "leading"
+		},
+		{
+			"romanian": "normal",
+			"english": "normal"
+		},
+		{
+			"romanian": "secret",
+			"english": "secret"
+		},
+		{
+			"romanian": "greu",
+			"english": "tough"
+		},
+		{
+			"romanian": "profund",
+			"english": "deep"
+		},
+		{
+			"romanian": "obiectiv",
+			"english": "objective"
+		},
+		{
+			"romanian": "chimic",
+			"english": "chemical"
+		},
+		{
+			"romanian": "extrem",
+			"english": "extreme"
+		},
+		{
+			"romanian": "formal",
+			"english": "formal"
+		},
+		{
+			"romanian": "opus",
+			"english": "opposite"
+		},
+		{
+			"romanian": "la distanta",
+			"english": "remote"
+		},
+		{
+			"romanian": "vast",
+			"english": "vast"
+		},
+		{
+			"romanian": "undeva",
+			"english": "somewhere"
+		},
+		{
+			"romanian": "oriunde",
+			"english": "anywhere"
+		},
+		{
+			"romanian": "întuneric",
+			"english": "dark"
+		},
+		{
+			"romanian": "intern",
+			"english": "internal"
+		},
+		{
+			"romanian": "sensibil",
+			"english": "sensitive"
+		},
+		{
+			"romanian": "constant",
+			"english": "constant"
+		},
+		{
+			"romanian": "brut",
+			"english": "raw"
+		},
+		{
+			"romanian": "moale",
+			"english": "soft"
+		},
+		{
+			"romanian": "solid",
+			"english": "solid"
+		},
+		{
+			"romanian": "ciudat",
+			"english": "weird"
+		},
+		{
+			"romanian": "anual",
+			"english": "annual"
+		},
+		{
+			"romanian": "mort",
+			"english": "dead"
+		},
+		{
+			"romanian": "pentru totdeauna",
+			"english": "forever"
+		},
+		{
+			"romanian": "nimeni",
+			"english": "nobody"
+		},
+		{
+			"romanian": "rundă",
+			"english": "round"
+		},
+		{
+			"romanian": "întrucât",
+			"english": "whereas"
+		},
+		{
+			"romanian": "echivalent",
+			"english": "equivalent"
+		},
+		{
+			"romanian": "spiritual",
+			"english": "spiritual"
+		},
+		{
+			"romanian": "adult",
+			"english": "adult"
+		},
+		{
+			"romanian": "nebun",
+			"english": "crazy"
+		},
+		{
+			"romanian": "anterior",
+			"english": "prior"
+		},
+		{
+			"romanian": "stare brută",
+			"english": "rough"
+		},
+		{
+			"romanian": "trist",
+			"english": "sad"
+		},
+		{
+			"romanian": "bolnav",
+			"english": "sick"
+		},
+		{
+			"romanian": "extern",
+			"english": "external"
+		},
+		{
+			"romanian": "ilegal",
+			"english": "illegal"
+		},
+		{
+			"romanian": "mobil",
+			"english": "mobile"
+		},
+		{
+			"romanian": "urat",
+			"english": "nasty"
+		},
+		{
+			"romanian": "comun",
+			"english": "ordinary"
+		},
+		{
+			"romanian": "regal",
+			"english": "royal"
+		},
+		{
+			"romanian": "senior",
+			"english": "senior"
+		},
+		{
+			"romanian": "superior",
+			"english": "upper"
+		},
+		{
+			"romanian": "dependent",
+			"english": "dependent"
+		},
+		{
+			"romanian": "amuzant",
+			"english": "funny"
+		},
+		{
+			"romanian": "dulce",
+			"english": "sweet"
+		},
+		{
+			"romanian": "la etaj",
+			"english": "upstairs"
+		},
+		{
+			"romanian": "ca de obicei",
+			"english": "usual"
+		},
+		{
+			"romanian": "in strainatate",
+			"english": "abroad"
+		},
+		{
+			"romanian": "mare",
+			"english": "grand"
+		},
+		{
+			"romanian": "masculin",
+			"english": "male"
+		},
+		{
+			"romanian": "cineva",
+			"english": "anybody"
+		},
+		{
+			"romanian": "Sclipitor",
+			"english": "brilliant"
+		},
+		{
+			"romanian": "dragă",
+			"english": "dear"
+		},
+		{
+			"romanian": "beat",
+			"english": "drunk"
+		},
+		{
+			"romanian": "Femeie",
+			"english": "female"
+		},
+		{
+			"romanian": "inevitabil",
+			"english": "inevitable"
+		},
+		{
+			"romanian": "curat",
+			"english": "neat"
+		},
+		{
+			"romanian": "reprezentant",
+			"english": "representative"
+		},
+		{
+			"romanian": "prost",
+			"english": "silly"
+		},
+		{
+			"romanian": "prost",
+			"english": "stupid"
+		},
+		{
+			"romanian": "temporar",
+			"english": "temporary"
+		},
+		{
+			"romanian": "Mâine",
+			"english": "tomorrow"
+		},
+		{
+			"romanian": "ieri",
+			"english": "yesterday"
+		}
+	];
+
+/***/ },
+/* 530 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -88117,16 +123244,16 @@
 	 *
 	 *   firebase = require('firebase');
 	 */
-	var firebase = __webpack_require__(519);
-	__webpack_require__(520);
-	__webpack_require__(521);
-	__webpack_require__(522);
-	__webpack_require__(523);
+	var firebase = __webpack_require__(531);
+	__webpack_require__(532);
+	__webpack_require__(533);
+	__webpack_require__(534);
+	__webpack_require__(535);
 	module.exports = firebase;
 
 
 /***/ },
-/* 519 */
+/* 531 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {var firebase = (function(){
@@ -88166,10 +123293,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 520 */
+/* 532 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(519);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(531);
 	(function(){
 	/*! @license Firebase v3.6.4
 	    Build: 3.6.4-rc.2
@@ -88412,10 +123539,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 521 */
+/* 533 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(519);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(531);
 	(function(){
 	/*! @license Firebase v3.6.4
 	    Build: 3.6.4-rc.2
@@ -88683,10 +123810,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 522 */
+/* 534 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(519);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(531);
 	(function(){
 	/*! @license Firebase v3.6.4
 	    Build: 3.6.4-rc.2
@@ -88741,10 +123868,10 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 523 */
+/* 535 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(519);
+	/* WEBPACK VAR INJECTION */(function(global) {var firebase = __webpack_require__(531);
 	(function(){
 	/*! @license Firebase v3.6.4
 	    Build: 3.6.4-rc.2
@@ -88787,7 +123914,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 524 */
+/* 536 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(Buffer) {//  Chance.js 1.0.4
@@ -93737,10 +128864,10 @@
 	    }
 	})();
 
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(525).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(537).Buffer))
 
 /***/ },
-/* 525 */
+/* 537 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*!
@@ -93753,9 +128880,9 @@
 
 	'use strict'
 
-	var base64 = __webpack_require__(526)
-	var ieee754 = __webpack_require__(527)
-	var isArray = __webpack_require__(528)
+	var base64 = __webpack_require__(538)
+	var ieee754 = __webpack_require__(539)
+	var isArray = __webpack_require__(540)
 
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -95536,7 +130663,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 526 */
+/* 538 */
 /***/ function(module, exports) {
 
 	'use strict'
@@ -95656,7 +130783,7 @@
 
 
 /***/ },
-/* 527 */
+/* 539 */
 /***/ function(module, exports) {
 
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -95746,7 +130873,7 @@
 
 
 /***/ },
-/* 528 */
+/* 540 */
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -95757,7 +130884,7 @@
 
 
 /***/ },
-/* 529 */
+/* 541 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!***************************************************

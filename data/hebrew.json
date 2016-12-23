@@ -1,0 +1,2185 @@
+[{
+	"hebrew": "אֲנָשִׁים",
+	"english": "people"
+}, {
+	"hebrew": "הִיסטוֹרִיָה",
+	"english": "history"
+}, {
+	"hebrew": "דֶרֶך",
+	"english": "way"
+}, {
+	"hebrew": "אומנות",
+	"english": "art"
+}, {
+	"hebrew": "עוֹלָם",
+	"english": "world"
+}, {
+	"hebrew": "מֵידָע",
+	"english": "information"
+}, {
+	"hebrew": "מַפָּה",
+	"english": "map"
+}, {
+	"hebrew": "שתיים",
+	"english": "two"
+}, {
+	"hebrew": "מִשׁפָּחָה",
+	"english": "family"
+}, {
+	"hebrew": "מֶמְשָׁלָה",
+	"english": "government"
+}, {
+	"hebrew": "בְּרִיאוּת",
+	"english": "health"
+}, {
+	"hebrew": "מערכת",
+	"english": "system"
+}, {
+	"hebrew": "מַחשֵׁב",
+	"english": "computer"
+}, {
+	"hebrew": "בָּשָׂר",
+	"english": "meat"
+}, {
+	"hebrew": "שָׁנָה",
+	"english": "year"
+}, {
+	"hebrew": "תודה",
+	"english": "thanks"
+}, {
+	"hebrew": "מוּסִיקָה",
+	"english": "music"
+}, {
+	"hebrew": "אדם",
+	"english": "person"
+}, {
+	"hebrew": "קריאה",
+	"english": "reading"
+}, {
+	"hebrew": "שִׁיטָה",
+	"english": "method"
+}, {
+	"hebrew": "נתונים",
+	"english": "data"
+}, {
+	"hebrew": "מזון",
+	"english": "food"
+}, {
+	"hebrew": "הֲבָנָה",
+	"english": "understanding"
+}, {
+	"hebrew": "תֵאוֹרִיָה",
+	"english": "theory"
+}, {
+	"hebrew": "חוֹק",
+	"english": "law"
+}, {
+	"hebrew": "ציפור",
+	"english": "bird"
+}, {
+	"hebrew": "סִפְרוּת",
+	"english": "literature"
+}, {
+	"hebrew": "בְּעָיָה",
+	"english": "problem"
+}, {
+	"hebrew": "תוֹכנָה",
+	"english": "software"
+}, {
+	"hebrew": "לִשְׁלוֹט",
+	"english": "control"
+}, {
+	"hebrew": "יֶדַע",
+	"english": "knowledge"
+}, {
+	"hebrew": "כּוֹחַ",
+	"english": "power"
+}, {
+	"hebrew": "יְכוֹלֶת",
+	"english": "ability"
+}, {
+	"hebrew": "כלכלה",
+	"english": "economics"
+}, {
+	"hebrew": "אהבה",
+	"english": "love"
+}, {
+	"hebrew": "אינטרנט",
+	"english": "internet"
+}, {
+	"hebrew": "טֵלֶוִיזִיָה",
+	"english": "television"
+}, {
+	"hebrew": "מַדָע",
+	"english": "science"
+}, {
+	"hebrew": "סִפְרִיָה",
+	"english": "library"
+}, {
+	"hebrew": "טֶבַע",
+	"english": "nature"
+}, {
+	"hebrew": "עוּבדָה",
+	"english": "fact"
+}, {
+	"hebrew": "מוצר",
+	"english": "product"
+}, {
+	"hebrew": "רַעְיוֹן",
+	"english": "idea"
+}, {
+	"hebrew": "טֶמפֶּרָטוּרָה",
+	"english": "temperature"
+}, {
+	"hebrew": "הַשׁקָעָה",
+	"english": "investment"
+}, {
+	"hebrew": "אֵזוֹר",
+	"english": "area"
+}, {
+	"hebrew": "חֶברָה",
+	"english": "society"
+}, {
+	"hebrew": "פעילות",
+	"english": "activity"
+}, {
+	"hebrew": "כַּתָבָה",
+	"english": "story"
+}, {
+	"hebrew": "תַעֲשִׂיָה",
+	"english": "industry"
+}, {
+	"hebrew": "כְּלֵי תִקְשׁוֹרֶת",
+	"english": "media"
+}, {
+	"hebrew": "דָבָר",
+	"english": "thing"
+}, {
+	"hebrew": "תנור",
+	"english": "oven"
+}, {
+	"hebrew": "הקהילה",
+	"english": "community"
+}, {
+	"hebrew": "הַגדָרָה",
+	"english": "definition"
+}, {
+	"hebrew": "בְּטִיחוּת",
+	"english": "safety"
+}, {
+	"hebrew": "איכות",
+	"english": "quality"
+}, {
+	"hebrew": "התפתחות",
+	"english": "development"
+}, {
+	"hebrew": "שפה",
+	"english": "language"
+}, {
+	"hebrew": "הַנהָלָה",
+	"english": "management"
+}, {
+	"hebrew": "שחקן",
+	"english": "player"
+}, {
+	"hebrew": "מגוון",
+	"english": "variety"
+}, {
+	"hebrew": "וִידֵאוֹ",
+	"english": "video"
+}, {
+	"hebrew": "שָׁבוּעַ",
+	"english": "week"
+}, {
+	"hebrew": "בִּטָחוֹן",
+	"english": "security"
+}, {
+	"hebrew": "מדינה",
+	"english": "country"
+}, {
+	"hebrew": "בְּחִינָה",
+	"english": "exam"
+}, {
+	"hebrew": "סרט",
+	"english": "movie"
+}, {
+	"hebrew": "אִרגוּן",
+	"english": "organization"
+}, {
+	"hebrew": "צִיוּד",
+	"english": "equipment"
+}, {
+	"hebrew": "פיזיקה",
+	"english": "physics"
+}, {
+	"hebrew": "אָנָלִיזָה",
+	"english": "analysis"
+}, {
+	"hebrew": "מְדִינִיוּת",
+	"english": "policy"
+}, {
+	"hebrew": "סִדרָה",
+	"english": "series"
+}, {
+	"hebrew": "מַחֲשָׁבָה",
+	"english": "thought"
+}, {
+	"hebrew": "בָּסִיס",
+	"english": "basis"
+}, {
+	"hebrew": "הֶחָבֵר",
+	"english": "boyfriend"
+}, {
+	"hebrew": "כיוון",
+	"english": "direction"
+}, {
+	"hebrew": "אִסטרָטֶגִיָה",
+	"english": "strategy"
+}, {
+	"hebrew": "טֶכנוֹלוֹגִיָה",
+	"english": "technology"
+}, {
+	"hebrew": "צָבָא",
+	"english": "army"
+}, {
+	"hebrew": "מַצלֵמָה",
+	"english": "camera"
+}, {
+	"hebrew": "חוֹפֶשׁ",
+	"english": "freedom"
+}, {
+	"hebrew": "עיתון",
+	"english": "paper"
+}, {
+	"hebrew": "סביבה",
+	"english": "environment"
+}, {
+	"hebrew": "יֶלֶד",
+	"english": "child"
+}, {
+	"hebrew": "למשל",
+	"english": "instance"
+}, {
+	"hebrew": "חוֹדֶשׁ",
+	"english": "month"
+}, {
+	"hebrew": "אֶמֶת",
+	"english": "truth"
+}, {
+	"hebrew": "שיווק",
+	"english": "marketing"
+}, {
+	"hebrew": "אוּנִיבֶרְסִיטָה",
+	"english": "university"
+}, {
+	"hebrew": "כְּתִיבָה",
+	"english": "writing"
+}, {
+	"hebrew": "מאמר",
+	"english": "article"
+}, {
+	"hebrew": "מַחלָקָה",
+	"english": "department"
+}, {
+	"hebrew": "הֶבדֵל",
+	"english": "difference"
+}, {
+	"hebrew": "יעד",
+	"english": "goal"
+}, {
+	"hebrew": "חֲדָשׁוֹת",
+	"english": "news"
+}, {
+	"hebrew": "קהל",
+	"english": "audience"
+}, {
+	"hebrew": "דיג",
+	"english": "fishing"
+}, {
+	"hebrew": "צְמִיחָה",
+	"english": "growth"
+}, {
+	"hebrew": "הַכנָסָה",
+	"english": "income"
+}, {
+	"hebrew": "נישואים",
+	"english": "marriage"
+}, {
+	"hebrew": "מִשׁתַמֵשׁ",
+	"english": "user"
+}, {
+	"hebrew": "קוֹמבִּינַצִיָה",
+	"english": "combination"
+}, {
+	"hebrew": "כישלון",
+	"english": "failure"
+}, {
+	"hebrew": "מַשְׁמָעוּת",
+	"english": "meaning"
+}, {
+	"hebrew": "תרופה",
+	"english": "medicine"
+}, {
+	"hebrew": "פִילוֹסוֹפִיָה",
+	"english": "philosophy"
+}, {
+	"hebrew": "מוֹרֶה",
+	"english": "teacher"
+}, {
+	"hebrew": "תִקשׁוֹרֶת",
+	"english": "communication"
+}, {
+	"hebrew": "לַיְלָה",
+	"english": "night"
+}, {
+	"hebrew": "כִּימִיָה",
+	"english": "chemistry"
+}, {
+	"hebrew": "מַחֲלָה",
+	"english": "disease"
+}, {
+	"hebrew": "דִיסק",
+	"english": "disk"
+}, {
+	"hebrew": "אֵנֶרְגִיָה",
+	"english": "energy"
+}, {
+	"hebrew": "אוּמָה",
+	"english": "nation"
+}, {
+	"hebrew": "כְּבִישׁ",
+	"english": "road"
+}, {
+	"hebrew": "תַפְקִיד",
+	"english": "role"
+}, {
+	"hebrew": "מרק",
+	"english": "soup"
+}, {
+	"hebrew": "פִּרסוּם",
+	"english": "advertising"
+}, {
+	"hebrew": "מקום",
+	"english": "location"
+}, {
+	"hebrew": "הַצלָחָה",
+	"english": "success"
+}, {
+	"hebrew": "בנוסף",
+	"english": "addition"
+}, {
+	"hebrew": "דִירָה",
+	"english": "apartment"
+}, {
+	"hebrew": "הַשׂכָּלָה",
+	"english": "education"
+}, {
+	"hebrew": "מתמטיקה",
+	"english": "math"
+}, {
+	"hebrew": "רֶגַע",
+	"english": "moment"
+}, {
+	"hebrew": "צִיוּר",
+	"english": "painting"
+}, {
+	"hebrew": "פּוֹלִיטִיקָה",
+	"english": "politics"
+}, {
+	"hebrew": "תשומת הלב",
+	"english": "attention"
+}, {
+	"hebrew": "הַחְלָטָה",
+	"english": "decision"
+}, {
+	"hebrew": "מִקרֶה",
+	"english": "event"
+}, {
+	"hebrew": "נכס",
+	"english": "property"
+}, {
+	"hebrew": "קניות",
+	"english": "shopping"
+}, {
+	"hebrew": "תלמיד",
+	"english": "student"
+}, {
+	"hebrew": "עץ",
+	"english": "wood"
+}, {
+	"hebrew": "תַחֲרוּת",
+	"english": "competition"
+}, {
+	"hebrew": "הפצה",
+	"english": "distribution"
+}, {
+	"hebrew": "בידור",
+	"english": "entertainment"
+}, {
+	"hebrew": "מִשׂרָד",
+	"english": "office"
+}, {
+	"hebrew": "אוּכְלוֹסִיָה",
+	"english": "population"
+}, {
+	"hebrew": "נָשִׂיא",
+	"english": "president"
+}, {
+	"hebrew": "יחידה",
+	"english": "unit"
+}, {
+	"hebrew": "קטגוריה",
+	"english": "category"
+}, {
+	"hebrew": "סִיגַרִיָה",
+	"english": "cigarette"
+}, {
+	"hebrew": "הקשר",
+	"english": "context"
+}, {
+	"hebrew": "מבוא",
+	"english": "introduction"
+}, {
+	"hebrew": "הִזדַמְנוּת",
+	"english": "opportunity"
+}, {
+	"hebrew": "ביצועים",
+	"english": "performance"
+}, {
+	"hebrew": "נהג",
+	"english": "driver"
+}, {
+	"hebrew": "טִיסָה",
+	"english": "flight"
+}, {
+	"hebrew": "אורך",
+	"english": "length"
+}, {
+	"hebrew": "מגזין",
+	"english": "magazine"
+}, {
+	"hebrew": "עיתון",
+	"english": "newspaper"
+}, {
+	"hebrew": "מערכת יחסים",
+	"english": "relationship"
+}, {
+	"hebrew": "הוֹרָאָה",
+	"english": "teaching"
+}, {
+	"hebrew": "תָא",
+	"english": "cell"
+}, {
+	"hebrew": "סוֹחֵר",
+	"english": "dealer"
+}, {
+	"hebrew": "מִמצָא",
+	"english": "finding"
+}, {
+	"hebrew": "אֲגַם",
+	"english": "lake"
+}, {
+	"hebrew": "חבר",
+	"english": "member"
+}, {
+	"hebrew": "הוֹדָעָה",
+	"english": "message"
+}, {
+	"hebrew": "טלפון",
+	"english": "phone"
+}, {
+	"hebrew": "סְצֵינָה",
+	"english": "scene"
+}, {
+	"hebrew": "מראה חיצוני",
+	"english": "appearance"
+}, {
+	"hebrew": "אִרגוּן",
+	"english": "association"
+}, {
+	"hebrew": "מוּשָׂג",
+	"english": "concept"
+}, {
+	"hebrew": "צרכן",
+	"english": "customer"
+}, {
+	"hebrew": "מוות",
+	"english": "death"
+}, {
+	"hebrew": "דִיוּן",
+	"english": "discussion"
+}, {
+	"hebrew": "דיור",
+	"english": "housing"
+}, {
+	"hebrew": "אִינפלַצִיָה",
+	"english": "inflation"
+}, {
+	"hebrew": "ביטוח",
+	"english": "insurance"
+}, {
+	"hebrew": "מַצַב רוּחַ",
+	"english": "mood"
+}, {
+	"hebrew": "אִשָׁה",
+	"english": "woman"
+}, {
+	"hebrew": "עֵצָה",
+	"english": "advice"
+}, {
+	"hebrew": "דָם",
+	"english": "blood"
+}, {
+	"hebrew": "מַאֲמָץ",
+	"english": "effort"
+}, {
+	"hebrew": "ביטוי",
+	"english": "expression"
+}, {
+	"hebrew": "חֲשִׁיבוּת",
+	"english": "importance"
+}, {
+	"hebrew": "דעה",
+	"english": "opinion"
+}, {
+	"hebrew": "תַשְׁלוּם",
+	"english": "payment"
+}, {
+	"hebrew": "מְצִיאוּת",
+	"english": "reality"
+}, {
+	"hebrew": "אַחֲרָיוּת",
+	"english": "responsibility"
+}, {
+	"hebrew": "מַצָב",
+	"english": "situation"
+}, {
+	"hebrew": "מְיוּמָנוּת",
+	"english": "skill"
+}, {
+	"hebrew": "הַצהָרָה",
+	"english": "statement"
+}, {
+	"hebrew": "עוֹשֶׁר",
+	"english": "wealth"
+}, {
+	"hebrew": "יישום",
+	"english": "application"
+}, {
+	"hebrew": "עִיר",
+	"english": "city"
+}, {
+	"hebrew": "מָחוֹז",
+	"english": "county"
+}, {
+	"hebrew": "עוֹמֶק",
+	"english": "depth"
+}, {
+	"hebrew": "נכס",
+	"english": "estate"
+}, {
+	"hebrew": "קרן",
+	"english": "foundation"
+}, {
+	"hebrew": "סַבתָא",
+	"english": "grandmother"
+}, {
+	"hebrew": "לֵב",
+	"english": "heart"
+}, {
+	"hebrew": "פֶּרספֶּקטִיבָה",
+	"english": "perspective"
+}, {
+	"hebrew": "תמונה",
+	"english": "photo"
+}, {
+	"hebrew": "מַתכּוֹן",
+	"english": "recipe"
+}, {
+	"hebrew": "סטוּדִיוֹ",
+	"english": "studio"
+}, {
+	"hebrew": "נוֹשֵׂא",
+	"english": "topic"
+}, {
+	"hebrew": "אוסף",
+	"english": "collection"
+}, {
+	"hebrew": "דִכָּאוֹן",
+	"english": "depression"
+}, {
+	"hebrew": "דִמיוֹן",
+	"english": "imagination"
+}, {
+	"hebrew": "תשוקה",
+	"english": "passion"
+}, {
+	"hebrew": "אֲחוּזִים",
+	"english": "percentage"
+}, {
+	"hebrew": "מַשׁאָב",
+	"english": "resource"
+}, {
+	"hebrew": "הגדרה",
+	"english": "setting"
+}, {
+	"hebrew": "מוֹדָעָה",
+	"english": "ad"
+}, {
+	"hebrew": "סוֹכְנוּת",
+	"english": "agency"
+}, {
+	"hebrew": "מִכלָלָה",
+	"english": "college"
+}, {
+	"hebrew": "חיבור",
+	"english": "connection"
+}, {
+	"hebrew": "ביקורת",
+	"english": "criticism"
+}, {
+	"hebrew": "חוֹב",
+	"english": "debt"
+}, {
+	"hebrew": "תיאור",
+	"english": "description"
+}, {
+	"hebrew": "זיכרון",
+	"english": "memory"
+}, {
+	"hebrew": "סבלנות",
+	"english": "patience"
+}, {
+	"hebrew": "מזכיר",
+	"english": "secretary"
+}, {
+	"hebrew": "פִּתָרוֹן",
+	"english": "solution"
+}, {
+	"hebrew": "מִנהָל",
+	"english": "administration"
+}, {
+	"hebrew": "אספקט",
+	"english": "aspect"
+}, {
+	"hebrew": "יַחַס",
+	"english": "attitude"
+}, {
+	"hebrew": "מְנַהֵל",
+	"english": "director"
+}, {
+	"hebrew": "אִישִׁיוּת",
+	"english": "personality"
+}, {
+	"hebrew": "פְּסִיכוֹלוֹגִיָה",
+	"english": "psychology"
+}, {
+	"hebrew": "המלצה",
+	"english": "recommendation"
+}, {
+	"hebrew": "תְגוּבָה",
+	"english": "response"
+}, {
+	"hebrew": "בְּחִירָה",
+	"english": "selection"
+}, {
+	"hebrew": "אִחסוּן",
+	"english": "storage"
+}, {
+	"hebrew": "גִרְסָה",
+	"english": "version"
+}, {
+	"hebrew": "כּוֹהֶל",
+	"english": "alcohol"
+}, {
+	"hebrew": "טַעֲנָה",
+	"english": "argument"
+}, {
+	"hebrew": "תְלוּנָה",
+	"english": "complaint"
+}, {
+	"hebrew": "חוֹזֶה",
+	"english": "contract"
+}, {
+	"hebrew": "דָגֵשׁ",
+	"english": "emphasis"
+}, {
+	"hebrew": "כביש מהיר",
+	"english": "highway"
+}, {
+	"hebrew": "הֶפסֵד",
+	"english": "loss"
+}, {
+	"hebrew": "חֲבֵרוּת",
+	"english": "membership"
+}, {
+	"hebrew": "רְשׁוּת",
+	"english": "possession"
+}, {
+	"hebrew": "הכנה",
+	"english": "preparation"
+}, {
+	"hebrew": "סטֵייק",
+	"english": "steak"
+}, {
+	"hebrew": "הִתאַחֲדוּת",
+	"english": "union"
+}, {
+	"hebrew": "הֶסכֵּם",
+	"english": "agreement"
+}, {
+	"hebrew": "מחלת הסרטן",
+	"english": "cancer"
+}, {
+	"hebrew": "מַטְבֵּעַ",
+	"english": "currency"
+}, {
+	"hebrew": "תעסוקה",
+	"english": "employment"
+}, {
+	"hebrew": "הַנדָסָה",
+	"english": "engineering"
+}, {
+	"hebrew": "כְּנִיסָה",
+	"english": "entry"
+}, {
+	"hebrew": "אינטראקציה",
+	"english": "interaction"
+}, {
+	"hebrew": "תַעֲרוֹבֶת",
+	"english": "mixture"
+}, {
+	"hebrew": "הַעֲדָפָה",
+	"english": "preference"
+}, {
+	"hebrew": "אזור",
+	"english": "region"
+}, {
+	"hebrew": "רפובליקה",
+	"english": "republic"
+}, {
+	"hebrew": "מָסוֹרֶת",
+	"english": "tradition"
+}, {
+	"hebrew": "וִירוּס",
+	"english": "virus"
+}, {
+	"hebrew": "שַׂחְקָן",
+	"english": "actor"
+}, {
+	"hebrew": "כיתה",
+	"english": "classroom"
+}, {
+	"hebrew": "מְסִירָה",
+	"english": "delivery"
+}, {
+	"hebrew": "התקן",
+	"english": "device"
+}, {
+	"hebrew": "קושי",
+	"english": "difficulty"
+}, {
+	"hebrew": "דרמה",
+	"english": "drama"
+}, {
+	"hebrew": "בְּחִירָה",
+	"english": "election"
+}, {
+	"hebrew": "מנוע",
+	"english": "engine"
+}, {
+	"hebrew": "כדורגל",
+	"english": "football"
+}, {
+	"hebrew": "הַדְרָכָה",
+	"english": "guidance"
+}, {
+	"hebrew": "מלון",
+	"english": "hotel"
+}, {
+	"hebrew": "בעלים",
+	"english": "owner"
+}, {
+	"hebrew": "עדיפות",
+	"english": "priority"
+}, {
+	"hebrew": "הֲגָנָה",
+	"english": "protection"
+}, {
+	"hebrew": "הַצָעָה",
+	"english": "suggestion"
+}, {
+	"hebrew": "מתח",
+	"english": "tension"
+}, {
+	"hebrew": "וָרִיאַצִיָה",
+	"english": "variation"
+}, {
+	"hebrew": "חֲרָדָה",
+	"english": "anxiety"
+}, {
+	"hebrew": "אַטמוֹספֵרָה",
+	"english": "atmosphere"
+}, {
+	"hebrew": "מוּדָעוּת",
+	"english": "awareness"
+}, {
+	"hebrew": "מֶרחָץ",
+	"english": "bath"
+}, {
+	"hebrew": "לֶחֶם",
+	"english": "bread"
+}, {
+	"hebrew": "מוּעֲמָד",
+	"english": "candidate"
+}, {
+	"hebrew": "אַקלִים",
+	"english": "climate"
+}, {
+	"hebrew": "השוואה",
+	"english": "comparison"
+}, {
+	"hebrew": "בִּלבּוּל",
+	"english": "confusion"
+}, {
+	"hebrew": "בְּנִיָה",
+	"english": "construction"
+}, {
+	"hebrew": "מַעֲלִית",
+	"english": "elevator"
+}, {
+	"hebrew": "רֶגֶשׁ",
+	"english": "emotion"
+}, {
+	"hebrew": "עוֹבֵד",
+	"english": "employee"
+}, {
+	"hebrew": "מעסיק",
+	"english": "employer"
+}, {
+	"hebrew": "אוֹרֵחַ",
+	"english": "guest"
+}, {
+	"hebrew": "גוֹבַה",
+	"english": "height"
+}, {
+	"hebrew": "מַנהִיגוּת",
+	"english": "leadership"
+}, {
+	"hebrew": "קֶנִיוֹן",
+	"english": "mall"
+}, {
+	"hebrew": "מנהל",
+	"english": "manager"
+}, {
+	"hebrew": "מבצע",
+	"english": "operation"
+}, {
+	"hebrew": "הקלטה",
+	"english": "recording"
+}, {
+	"hebrew": "לִטעוֹם",
+	"english": "sample"
+}, {
+	"hebrew": "הוֹבָלָה",
+	"english": "transportation"
+}, {
+	"hebrew": "צדקה",
+	"english": "charity"
+}, {
+	"hebrew": "בת דודה",
+	"english": "cousin"
+}, {
+	"hebrew": "אסון",
+	"english": "disaster"
+}, {
+	"hebrew": "עוֹרֵך",
+	"english": "editor"
+}, {
+	"hebrew": "יְעִילוּת",
+	"english": "efficiency"
+}, {
+	"hebrew": "התרגשות",
+	"english": "excitement"
+}, {
+	"hebrew": "במידה",
+	"english": "extent"
+}, {
+	"hebrew": "מָשׁוֹב",
+	"english": "feedback"
+}, {
+	"hebrew": "גִיטָרָה",
+	"english": "guitar"
+}, {
+	"hebrew": "שיעורי בית",
+	"english": "homework"
+}, {
+	"hebrew": "מַנהִיג",
+	"english": "leader"
+}, {
+	"hebrew": "אִמָא",
+	"english": "mom"
+}, {
+	"hebrew": "תוֹצָאָה",
+	"english": "outcome"
+}, {
+	"hebrew": "רְשׁוּת",
+	"english": "permission"
+}, {
+	"hebrew": "הַצָגָה",
+	"english": "presentation"
+}, {
+	"hebrew": "קידום",
+	"english": "promotion"
+}, {
+	"hebrew": "הִשׁתַקְפוּת",
+	"english": "reflection"
+}, {
+	"hebrew": "מְקָרֵר",
+	"english": "refrigerator"
+}, {
+	"hebrew": "רזולוציה",
+	"english": "resolution"
+}, {
+	"hebrew": "הַכנָסָה",
+	"english": "revenue"
+}, {
+	"hebrew": "מוֹשָׁב",
+	"english": "session"
+}, {
+	"hebrew": "זמר",
+	"english": "singer"
+}, {
+	"hebrew": "טֶנִיס",
+	"english": "tennis"
+}, {
+	"hebrew": "סַל",
+	"english": "basket"
+}, {
+	"hebrew": "מַעֲנָק",
+	"english": "bonus"
+}, {
+	"hebrew": "קבינט",
+	"english": "cabinet"
+}, {
+	"hebrew": "יַלדוּת",
+	"english": "childhood"
+}, {
+	"hebrew": "כְּנֵסִיָה",
+	"english": "church"
+}, {
+	"hebrew": "בגדים",
+	"english": "clothes"
+}, {
+	"hebrew": "קָפֶה",
+	"english": "coffee"
+}, {
+	"hebrew": "אֲרוּחַת עֶרֶב",
+	"english": "dinner"
+}, {
+	"hebrew": "צִיוּר",
+	"english": "drawing"
+}, {
+	"hebrew": "שיער",
+	"english": "hair"
+}, {
+	"hebrew": "שמיעה",
+	"english": "hearing"
+}, {
+	"hebrew": "יוזמה",
+	"english": "initiative"
+}, {
+	"hebrew": "פְּסַק דִין",
+	"english": "judgment"
+}, {
+	"hebrew": "מַעבָּדָה",
+	"english": "lab"
+}, {
+	"hebrew": "מדידה",
+	"english": "measurement"
+}, {
+	"hebrew": "מצב",
+	"english": "mode"
+}, {
+	"hebrew": "בּוֹץ",
+	"english": "mud"
+}, {
+	"hebrew": "כָּתוֹם",
+	"english": "orange"
+}, {
+	"hebrew": "שירה",
+	"english": "poetry"
+}, {
+	"hebrew": "מִשׁטָרָה",
+	"english": "police"
+}, {
+	"hebrew": "אפשרות",
+	"english": "possibility"
+}, {
+	"hebrew": "תהליך",
+	"english": "procedure"
+}, {
+	"hebrew": "מַלכָּה",
+	"english": "queen"
+}, {
+	"hebrew": "יַחַס",
+	"english": "ratio"
+}, {
+	"hebrew": "יַחַס",
+	"english": "relation"
+}, {
+	"hebrew": "מִסעָדָה",
+	"english": "restaurant"
+}, {
+	"hebrew": "שביעות רצון",
+	"english": "satisfaction"
+}, {
+	"hebrew": "מִגזָר",
+	"english": "sector"
+}, {
+	"hebrew": "חֲתִימָה",
+	"english": "signature"
+}, {
+	"hebrew": "מַשְׁמָעוּת",
+	"english": "significance"
+}, {
+	"hebrew": "שִׁיר",
+	"english": "song"
+}, {
+	"hebrew": "שן",
+	"english": "tooth"
+}, {
+	"hebrew": "העיר",
+	"english": "town"
+}, {
+	"hebrew": "רכב",
+	"english": "vehicle"
+}, {
+	"hebrew": "כֶּרֶך",
+	"english": "volume"
+}, {
+	"hebrew": "אשה",
+	"english": "wife"
+}, {
+	"hebrew": "תְאוּנָה",
+	"english": "accident"
+}, {
+	"hebrew": "נמל תעופה",
+	"english": "airport"
+}, {
+	"hebrew": "קביעת פגישה",
+	"english": "appointment"
+}, {
+	"hebrew": "הַגָעָה",
+	"english": "arrival"
+}, {
+	"hebrew": "הנחה",
+	"english": "assumption"
+}, {
+	"hebrew": "בייסבול",
+	"english": "baseball"
+}, {
+	"hebrew": "פֶּרֶק",
+	"english": "chapter"
+}, {
+	"hebrew": "וַעֲדָה",
+	"english": "committee"
+}, {
+	"hebrew": "שִׂיחָה",
+	"english": "conversation"
+}, {
+	"hebrew": "מאגר מידע",
+	"english": "database"
+}, {
+	"hebrew": "הִתלַהֲבוּת",
+	"english": "enthusiasm"
+}, {
+	"hebrew": "שְׁגִיאָה",
+	"english": "error"
+}, {
+	"hebrew": "הֶסבֵּר",
+	"english": "explanation"
+}, {
+	"hebrew": "חַקלאַי",
+	"english": "farmer"
+}, {
+	"hebrew": "שַׁעַר",
+	"english": "gate"
+}, {
+	"hebrew": "ילדה",
+	"english": "girl"
+}, {
+	"hebrew": "אולם",
+	"english": "hall"
+}, {
+	"hebrew": "הִיסטוֹרִיוֹן",
+	"english": "historian"
+}, {
+	"hebrew": "בית חולים",
+	"english": "hospital"
+}, {
+	"hebrew": "פציעה",
+	"english": "injury"
+}, {
+	"hebrew": "הוראה",
+	"english": "instruction"
+}, {
+	"hebrew": "תחזוקה",
+	"english": "maintenance"
+}, {
+	"hebrew": "יַצרָן",
+	"english": "manufacturer"
+}, {
+	"hebrew": "ארוחה",
+	"english": "meal"
+}, {
+	"hebrew": "תפיסה",
+	"english": "perception"
+}, {
+	"hebrew": "פַּאִי",
+	"english": "pie"
+}, {
+	"hebrew": "שִׁיר",
+	"english": "poem"
+}, {
+	"hebrew": "נוכחות",
+	"english": "presence"
+}, {
+	"hebrew": "הצעה",
+	"english": "proposal"
+}, {
+	"hebrew": "קבלה",
+	"english": "reception"
+}, {
+	"hebrew": "תַחֲלִיף",
+	"english": "replacement"
+}, {
+	"hebrew": "מַהְפֵּכָה",
+	"english": "revolution"
+}, {
+	"hebrew": "נהר",
+	"english": "river"
+}, {
+	"hebrew": "בֵּן",
+	"english": "son"
+}, {
+	"hebrew": "נְאוּם",
+	"english": "speech"
+}, {
+	"hebrew": "תֵה",
+	"english": "tea"
+}, {
+	"hebrew": "כְּפָר",
+	"english": "village"
+}, {
+	"hebrew": "אַזהָרָה",
+	"english": "warning"
+}, {
+	"hebrew": "זוֹכֵה",
+	"english": "winner"
+}, {
+	"hebrew": "עוֹבֵד",
+	"english": "worker"
+}, {
+	"hebrew": "סוֹפֵר",
+	"english": "writer"
+}, {
+	"hebrew": "סִיוּעַ",
+	"english": "assistance"
+}, {
+	"hebrew": "נְשִׁימָה",
+	"english": "breath"
+}, {
+	"hebrew": "קוֹנֶה",
+	"english": "buyer"
+}, {
+	"hebrew": "חזה",
+	"english": "chest"
+}, {
+	"hebrew": "שׁוֹקוֹלַד",
+	"english": "chocolate"
+}, {
+	"hebrew": "סיכום",
+	"english": "conclusion"
+}, {
+	"hebrew": "תְרוּמָה",
+	"english": "contribution"
+}, {
+	"hebrew": "עוגייה",
+	"english": "cookie"
+}, {
+	"hebrew": "אומץ",
+	"english": "courage"
+}, {
+	"hebrew": "אַבָּא",
+	"english": "dad"
+}, {
+	"hebrew": "שׁוּלְחָן כְּתִיבָה",
+	"english": "desk"
+}, {
+	"hebrew": "מְגֵרָה",
+	"english": "drawer"
+}, {
+	"hebrew": "מוֹסָד",
+	"english": "establishment"
+}, {
+	"hebrew": "בְּדִיקָה",
+	"english": "examination"
+}, {
+	"hebrew": "אַשׁפָּה",
+	"english": "garbage"
+}, {
+	"hebrew": "מַכּוֹלֶת",
+	"english": "grocery"
+}, {
+	"hebrew": "דבש",
+	"english": "honey"
+}, {
+	"hebrew": "רוֹשֶׁם",
+	"english": "impression"
+}, {
+	"hebrew": "הַשׁבָּחָה",
+	"english": "improvement"
+}, {
+	"hebrew": "עצמאות",
+	"english": "independence"
+}, {
+	"hebrew": "חֶרֶק",
+	"english": "insect"
+}, {
+	"hebrew": "בְּדִיקָה",
+	"english": "inspection"
+}, {
+	"hebrew": "מְפַקֵחַ",
+	"english": "inspector"
+}, {
+	"hebrew": "מלך",
+	"english": "king"
+}, {
+	"hebrew": "סוּלָם",
+	"english": "ladder"
+}, {
+	"hebrew": "תַפרִיט",
+	"english": "menu"
+}, {
+	"hebrew": "עוֹנֶשׁ",
+	"english": "penalty"
+}, {
+	"hebrew": "פְּסַנְתֵר",
+	"english": "piano"
+}, {
+	"hebrew": "תפוח אדמה",
+	"english": "potato"
+}, {
+	"hebrew": "מִקצוֹעַ",
+	"english": "profession"
+}, {
+	"hebrew": "פּרוֹפֶסוֹר",
+	"english": "professor"
+}, {
+	"hebrew": "כַּמוּת",
+	"english": "quantity"
+}, {
+	"hebrew": "תְגוּבָה",
+	"english": "reaction"
+}, {
+	"hebrew": "דְרִישָׁה",
+	"english": "requirement"
+}, {
+	"hebrew": "סלט",
+	"english": "salad"
+}, {
+	"hebrew": "אָחוֹת",
+	"english": "sister"
+}, {
+	"hebrew": "סוּפֶּרמַרקֶט",
+	"english": "supermarket"
+}, {
+	"hebrew": "לָשׁוֹן",
+	"english": "tongue"
+}, {
+	"hebrew": "חוּלשָׁה",
+	"english": "weakness"
+}, {
+	"hebrew": "חֲתוּנָה",
+	"english": "wedding"
+}, {
+	"hebrew": "פָּרָשָׁה",
+	"english": "affair"
+}, {
+	"hebrew": "שְׁאַפתָנוּת",
+	"english": "ambition"
+}, {
+	"hebrew": "מְנַתֵחַ",
+	"english": "analyst"
+}, {
+	"hebrew": "תפוח עץ",
+	"english": "apple"
+}, {
+	"hebrew": "מְשִׁימָה",
+	"english": "assignment"
+}, {
+	"hebrew": "עוֹזֵר",
+	"english": "assistant"
+}, {
+	"hebrew": "חדר אמבטיה",
+	"english": "bathroom"
+}, {
+	"hebrew": "שינה",
+	"english": "bedroom"
+}, {
+	"hebrew": "בִּירָה",
+	"english": "beer"
+}, {
+	"hebrew": "יום הולדת",
+	"english": "birthday"
+}, {
+	"hebrew": "חֲגִיגָה",
+	"english": "celebration"
+}, {
+	"hebrew": "אַלִיפוּת",
+	"english": "championship"
+}, {
+	"hebrew": "לֶחִי",
+	"english": "cheek"
+}, {
+	"hebrew": "לָקוּחַ",
+	"english": "client"
+}, {
+	"hebrew": "תוֹצָאָה",
+	"english": "consequence"
+}, {
+	"hebrew": "יְצִיאָה",
+	"english": "departure"
+}, {
+	"hebrew": "יהלום",
+	"english": "diamond"
+}, {
+	"hebrew": "עפר",
+	"english": "dirt"
+}, {
+	"hebrew": "אֹזֶן",
+	"english": "ear"
+}, {
+	"hebrew": "הון עתק",
+	"english": "fortune"
+}, {
+	"hebrew": "חֲבֵרוּת",
+	"english": "friendship"
+}, {
+	"hebrew": "הַלוָיָה",
+	"english": "funeral"
+}, {
+	"hebrew": "גֵן",
+	"english": "gene"
+}, {
+	"hebrew": "חֲבֵרָה",
+	"english": "girlfriend"
+}, {
+	"hebrew": "כּוֹבַע",
+	"english": "hat"
+}, {
+	"hebrew": "סִימָן",
+	"english": "indication"
+}, {
+	"hebrew": "מַטָרָה",
+	"english": "intention"
+}, {
+	"hebrew": "גברת",
+	"english": "lady"
+}, {
+	"hebrew": "חצות",
+	"english": "midnight"
+}, {
+	"hebrew": "מַשָׂא וּמַתָן",
+	"english": "negotiation"
+}, {
+	"hebrew": "חוֹבָה",
+	"english": "obligation"
+}, {
+	"hebrew": "נוֹסֵעַ",
+	"english": "passenger"
+}, {
+	"hebrew": "פִּיצָה",
+	"english": "pizza"
+}, {
+	"hebrew": "פּלַטפוֹרמָה",
+	"english": "platform"
+}, {
+	"hebrew": "מְשׁוֹרֵר",
+	"english": "poet"
+}, {
+	"hebrew": "זיהום",
+	"english": "pollution"
+}, {
+	"hebrew": "הַכָּרָה",
+	"english": "recognition"
+}, {
+	"hebrew": "מוֹנֵיטִין",
+	"english": "reputation"
+}, {
+	"hebrew": "חוּלצָה",
+	"english": "shirt"
+}, {
+	"hebrew": "אֲדוֹנִי",
+	"english": "sir"
+}, {
+	"hebrew": "רַמקוֹל",
+	"english": "speaker"
+}, {
+	"hebrew": "זָר",
+	"english": "stranger"
+}, {
+	"hebrew": "כִּירוּרגִיָה",
+	"english": "surgery"
+}, {
+	"hebrew": "אַהֲדָה",
+	"english": "sympathy"
+}, {
+	"hebrew": "מַעֲשִׂיָה",
+	"english": "tale"
+}, {
+	"hebrew": "גרון",
+	"english": "throat"
+}, {
+	"hebrew": "מְאַמֵן",
+	"english": "trainer"
+}, {
+	"hebrew": "דוֹד",
+	"english": "uncle"
+}, {
+	"hebrew": "נוֹעַר",
+	"english": "youth"
+}, {
+	"hebrew": "כֶּסֶף",
+	"english": "money"
+}, {
+	"hebrew": "בזמן",
+	"english": "while"
+}, {
+	"hebrew": "עֵסֶק",
+	"english": "business"
+}, {
+	"hebrew": "חַיִים",
+	"english": "life"
+}, {
+	"hebrew": "יְוֹם",
+	"english": "day"
+}, {
+	"hebrew": "בית",
+	"english": "home"
+}, {
+	"hebrew": "כַּלְכָּלָה",
+	"english": "economy"
+}, {
+	"hebrew": "הַדְרָכָה",
+	"english": "training"
+}, {
+	"hebrew": "סוג",
+	"english": "kind"
+}, {
+	"hebrew": "עתיד",
+	"english": "future"
+}, {
+	"hebrew": "פעולה",
+	"english": "action"
+}, {
+	"hebrew": "רַע",
+	"english": "bad"
+}, {
+	"hebrew": "שום דבר",
+	"english": "nothing"
+}, {
+	"hebrew": "פרק זמן",
+	"english": "period"
+}, {
+	"hebrew": "נושא",
+	"english": "subject"
+}, {
+	"hebrew": "עוף",
+	"english": "chicken"
+}, {
+	"hebrew": "חוֹמֶר",
+	"english": "material"
+}, {
+	"hebrew": "אוטו",
+	"english": "car"
+}, {
+	"hebrew": "חֲצִי",
+	"english": "half"
+}, {
+	"hebrew": "בְּתוֹך",
+	"english": "inside"
+}, {
+	"hebrew": "בחוץ",
+	"english": "outside"
+}, {
+	"hebrew": "תֶקֶן",
+	"english": "standard"
+}, {
+	"hebrew": "פריט",
+	"english": "item"
+}, {
+	"hebrew": "בינוני",
+	"english": "medium"
+}, {
+	"hebrew": "בְּחִירָה",
+	"english": "choice"
+}, {
+	"hebrew": "בוקר",
+	"english": "morning"
+}, {
+	"hebrew": "צָפוֹן",
+	"english": "north"
+}, {
+	"hebrew": "כיכר",
+	"english": "square"
+}, {
+	"hebrew": "עיר בירה",
+	"english": "capital"
+}, {
+	"hebrew": "עצמי",
+	"english": "self"
+}, {
+	"hebrew": "בְּעִיטָה",
+	"english": "shot"
+}, {
+	"hebrew": "חַי",
+	"english": "living"
+}, {
+	"hebrew": "פלסטי",
+	"english": "plastic"
+}, {
+	"hebrew": "מַרגִישׁ",
+	"english": "feeling"
+}, {
+	"hebrew": "חיסכון",
+	"english": "savings"
+}, {
+	"hebrew": "בעל חיים",
+	"english": "animal"
+}, {
+	"hebrew": "מַקסִימוּם",
+	"english": "maximum"
+}, {
+	"hebrew": "רוֹמָן",
+	"english": "novel"
+}, {
+	"hebrew": "שפע",
+	"english": "plenty"
+}, {
+	"hebrew": "רקע",
+	"english": "background"
+}, {
+	"hebrew": "אָדוֹם",
+	"english": "red"
+}, {
+	"hebrew": "כוח",
+	"english": "strength"
+}, {
+	"hebrew": "ירקות",
+	"english": "vegetable"
+}, {
+	"hebrew": "אִידֵאָלִי",
+	"english": "ideal"
+}, {
+	"hebrew": "מִטְבָּח",
+	"english": "kitchen"
+}, {
+	"hebrew": "עִקָרוֹן",
+	"english": "principle"
+}, {
+	"hebrew": "קרוב משפחה",
+	"english": "relative"
+}, {
+	"hebrew": "מְכִירָה",
+	"english": "sale"
+}, {
+	"hebrew": "רְחוֹב",
+	"english": "street"
+}, {
+	"hebrew": "מִינִימוּם",
+	"english": "minimum"
+}, {
+	"hebrew": "נָתִיב",
+	"english": "path"
+}, {
+	"hebrew": "יָם",
+	"english": "sea"
+}, {
+	"hebrew": "דָרוֹם",
+	"english": "south"
+}, {
+	"hebrew": "סטָטוּס",
+	"english": "status"
+}, {
+	"hebrew": "אֵמוּן",
+	"english": "confidence"
+}, {
+	"hebrew": "בַּת",
+	"english": "daughter"
+}, {
+	"hebrew": "תוֹאַר",
+	"english": "degree"
+}, {
+	"hebrew": "חוֹבָה",
+	"english": "duty"
+}, {
+	"hebrew": "שָׁעָה",
+	"english": "hour"
+}, {
+	"hebrew": "חומר",
+	"english": "substance"
+}, {
+	"hebrew": "אחרי הצהריים",
+	"english": "afternoon"
+}, {
+	"hebrew": "הִתחַשְׁבוּת",
+	"english": "consideration"
+}, {
+	"hebrew": "זהב",
+	"english": "gold"
+}, {
+	"hebrew": "משימה",
+	"english": "mission"
+}, {
+	"hebrew": "דלת",
+	"english": "door"
+}, {
+	"hebrew": "מזרח",
+	"english": "east"
+}, {
+	"hebrew": "דֶרֶך",
+	"english": "manner"
+}, {
+	"hebrew": "פְּגִישָׁה",
+	"english": "meeting"
+}, {
+	"hebrew": "חֲנָיָה",
+	"english": "parking"
+}, {
+	"hebrew": "שגרה",
+	"english": "routine"
+}, {
+	"hebrew": "שחייה",
+	"english": "swimming"
+}, {
+	"hebrew": "חֶברַת תְעוּפָה",
+	"english": "airline"
+}, {
+	"hebrew": "מְעַצֵב",
+	"english": "designer"
+}, {
+	"hebrew": "חרום",
+	"english": "emergency"
+}, {
+	"hebrew": "עֶרֶב",
+	"english": "evening"
+}, {
+	"hebrew": "סיומת",
+	"english": "extension"
+}, {
+	"hebrew": "חֲרָדָה",
+	"english": "horror"
+}, {
+	"hebrew": "הַר",
+	"english": "mountain"
+}, {
+	"hebrew": "חולה",
+	"english": "patient"
+}, {
+	"hebrew": "הֲקָלָה",
+	"english": "relief"
+}, {
+	"hebrew": "תיירות",
+	"english": "tourist"
+}, {
+	"hebrew": "מַעֲרָב",
+	"english": "west"
+}, {
+	"hebrew": "בַּצַד",
+	"english": "aside"
+}, {
+	"hebrew": "אָח",
+	"english": "brother"
+}, {
+	"hebrew": "מוּמחֶה",
+	"english": "expert"
+}, {
+	"hebrew": "אלוהים",
+	"english": "god"
+}, {
+	"hebrew": "יָלִיד",
+	"english": "native"
+}, {
+	"hebrew": "פְּתִיחָה",
+	"english": "opening"
+}, {
+	"hebrew": "יֶלֶד",
+	"english": "boy"
+}, {
+	"hebrew": "מוּמחֶה",
+	"english": "specialist"
+}, {
+	"hebrew": "טעם מר",
+	"english": "bitter"
+}, {
+	"hebrew": "גֵיהִנוֹם",
+	"english": "hell"
+}, {
+	"hebrew": "תַקרִית",
+	"english": "incident"
+}, {
+	"hebrew": "תוֹשָׁב",
+	"english": "resident"
+}, {
+	"hebrew": "א",
+	"english": "a"
+}, {
+	"hebrew": "אתה",
+	"english": "you"
+}, {
+	"hebrew": "זה",
+	"english": "it"
+}, {
+	"hebrew": "פחית",
+	"english": "can"
+}, {
+	"hebrew": "רָצוֹן",
+	"english": "will"
+}, {
+	"hebrew": "אם",
+	"english": "if"
+}, {
+	"hebrew": "אחד",
+	"english": "one"
+}, {
+	"hebrew": "רב",
+	"english": "many"
+}, {
+	"hebrew": "רוב",
+	"english": "most"
+}, {
+	"hebrew": "אַחֵר",
+	"english": "other"
+}, {
+	"hebrew": "טוֹב",
+	"english": "good"
+}, {
+	"hebrew": "גדול",
+	"english": "great"
+}, {
+	"hebrew": "מְעַטִים",
+	"english": "few"
+}, {
+	"hebrew": "אולי",
+	"english": "might"
+}, {
+	"hebrew": "עוֹד",
+	"english": "still"
+}, {
+	"hebrew": "פּוּמְבֵּי",
+	"english": "public"
+}, {
+	"hebrew": "בן אנוש",
+	"english": "human"
+}, {
+	"hebrew": "מְקוֹמִי",
+	"english": "local"
+}, {
+	"hebrew": "כללי",
+	"english": "general"
+}, {
+	"hebrew": "היא",
+	"english": "she"
+}, {
+	"hebrew": "ספֵּצִיפִי",
+	"english": "specific"
+}, {
+	"hebrew": "ארוך",
+	"english": "long"
+}, {
+	"hebrew": "גָבוֹהַ",
+	"english": "high"
+}, {
+	"hebrew": "היום בלילה",
+	"english": "tonight"
+}, {
+	"hebrew": "משותף",
+	"english": "common"
+}, {
+	"hebrew": "פָּשׁוּט",
+	"english": "simple"
+}, {
+	"hebrew": "עבר",
+	"english": "past"
+}, {
+	"hebrew": "גָדוֹל",
+	"english": "big"
+}, {
+	"hebrew": "אפשרי",
+	"english": "possible"
+}, {
+	"hebrew": "מיוחד",
+	"english": "particular"
+}, {
+	"hebrew": "היום",
+	"english": "today"
+}, {
+	"hebrew": "אישי",
+	"english": "personal"
+}, {
+	"hebrew": "נוֹכְחִי",
+	"english": "current"
+}, {
+	"hebrew": "לאומי",
+	"english": "national"
+}, {
+	"hebrew": "טִבעִי",
+	"english": "natural"
+}, {
+	"hebrew": "גוּפָנִי",
+	"english": "physical"
+}, {
+	"hebrew": "שְׁנִיָה",
+	"english": "second"
+}, {
+	"hebrew": "אִישִׁי",
+	"english": "individual"
+}, {
+	"hebrew": "רָאשִׁי",
+	"english": "main"
+}, {
+	"hebrew": "פוטנציאל",
+	"english": "potential"
+}, {
+	"hebrew": "מקצועי",
+	"english": "professional"
+}, {
+	"hebrew": "בינלאומי",
+	"english": "international"
+}, {
+	"hebrew": "חֲלוּפָה",
+	"english": "alternative"
+}, {
+	"hebrew": "הבא",
+	"english": "following"
+}, {
+	"hebrew": "מיוחד",
+	"english": "special"
+}, {
+	"hebrew": "עובד",
+	"english": "working"
+}, {
+	"hebrew": "כֹּל",
+	"english": "whole"
+}, {
+	"hebrew": "קַר",
+	"english": "cold"
+}, {
+	"hebrew": "מִסְחָרִי",
+	"english": "commercial"
+}, {
+	"hebrew": "נָמוּך",
+	"english": "low"
+}, {
+	"hebrew": "יְסוֹדִי",
+	"english": "primary"
+}, {
+	"hebrew": "שִׁוּוּי",
+	"english": "worth"
+}, {
+	"hebrew": "נחוץ",
+	"english": "necessary"
+}, {
+	"hebrew": "חִיוּבִי",
+	"english": "positive"
+}, {
+	"hebrew": "יְצִירָתִי",
+	"english": "creative"
+}, {
+	"hebrew": "שַׂמֵחַ",
+	"english": "glad"
+}, {
+	"hebrew": "בשל",
+	"english": "due"
+}, {
+	"hebrew": "יָעִיל",
+	"english": "effective"
+}, {
+	"hebrew": "אֶמצַע",
+	"english": "middle"
+}, {
+	"hebrew": "רגיל",
+	"english": "regular"
+}, {
+	"hebrew": "עצמאי",
+	"english": "independent"
+}, {
+	"hebrew": "מְקוֹרִי",
+	"english": "original"
+}, {
+	"hebrew": "יפה",
+	"english": "beautiful"
+}, {
+	"hebrew": "פָּעִיל",
+	"english": "active"
+}, {
+	"hebrew": "שלילי",
+	"english": "negative"
+}, {
+	"hebrew": "בטוח",
+	"english": "safe"
+}, {
+	"hebrew": "חָזוּתִי",
+	"english": "visual"
+}, {
+	"hebrew": "מעבר",
+	"english": "beyond"
+}, {
+	"hebrew": "זוּטָר",
+	"english": "junior"
+}, {
+	"hebrew": "ייחודי",
+	"english": "unique"
+}, {
+	"hebrew": "כל דבר",
+	"english": "anything"
+}, {
+	"hebrew": "קלַאסִי",
+	"english": "classic"
+}, {
+	"hebrew": "סופי",
+	"english": "final"
+}, {
+	"hebrew": "פְּרָטִי",
+	"english": "private"
+}, {
+	"hebrew": "מערבי",
+	"english": "western"
+}, {
+	"hebrew": "מוּכָּר",
+	"english": "familiar"
+}, {
+	"hebrew": "רשמי",
+	"english": "official"
+}, {
+	"hebrew": "רָחָב",
+	"english": "broad"
+}, {
+	"hebrew": "נוֹחַ",
+	"english": "comfortable"
+}, {
+	"hebrew": "אולי",
+	"english": "maybe"
+}, {
+	"hebrew": "עָשִׁיר",
+	"english": "rich"
+}, {
+	"hebrew": "צָעִיר",
+	"english": "young"
+}, {
+	"hebrew": "כָּבֵד",
+	"english": "heavy"
+}, {
+	"hebrew": "שלום",
+	"english": "hello"
+}, {
+	"hebrew": "בעל ערך",
+	"english": "valuable"
+}, {
+	"hebrew": "מוֹבִיל",
+	"english": "leading"
+}, {
+	"hebrew": "נוֹרמָלִי",
+	"english": "normal"
+}, {
+	"hebrew": "סוֹד",
+	"english": "secret"
+}, {
+	"hebrew": "קָשֶׁה",
+	"english": "tough"
+}, {
+	"hebrew": "עָמוֹק",
+	"english": "deep"
+}, {
+	"hebrew": "מַטָרָה",
+	"english": "objective"
+}, {
+	"hebrew": "כִּימִי",
+	"english": "chemical"
+}, {
+	"hebrew": "קיצוני",
+	"english": "extreme"
+}, {
+	"hebrew": "רִשְׁמִי",
+	"english": "formal"
+}, {
+	"hebrew": "מול",
+	"english": "opposite"
+}, {
+	"hebrew": "מְרוּחָק",
+	"english": "remote"
+}, {
+	"hebrew": "עָצוּם",
+	"english": "vast"
+}, {
+	"hebrew": "אי שם",
+	"english": "somewhere"
+}, {
+	"hebrew": "בְּכָל מָקוֹם",
+	"english": "anywhere"
+}, {
+	"hebrew": "אפל",
+	"english": "dark"
+}, {
+	"hebrew": "פְּנִימִי",
+	"english": "internal"
+}, {
+	"hebrew": "רָגִישׁ",
+	"english": "sensitive"
+}, {
+	"hebrew": "קָבוּעַ",
+	"english": "constant"
+}, {
+	"hebrew": "גלם",
+	"english": "raw"
+}, {
+	"hebrew": "רַך",
+	"english": "soft"
+}, {
+	"hebrew": "מוצק",
+	"english": "solid"
+}, {
+	"hebrew": "מְשׁוּנֶה",
+	"english": "weird"
+}, {
+	"hebrew": "שנתי",
+	"english": "annual"
+}, {
+	"hebrew": "מֵת",
+	"english": "dead"
+}, {
+	"hebrew": "לָנֶצַח",
+	"english": "forever"
+}, {
+	"hebrew": "אף אחד",
+	"english": "nobody"
+}, {
+	"hebrew": "עָגוֹל",
+	"english": "round"
+}, {
+	"hebrew": "ואילו",
+	"english": "whereas"
+}, {
+	"hebrew": "שווה ערך",
+	"english": "equivalent"
+}, {
+	"hebrew": "רוחני",
+	"english": "spiritual"
+}, {
+	"hebrew": "מְבוּגָר",
+	"english": "adult"
+}, {
+	"hebrew": "מְטוּרָף",
+	"english": "crazy"
+}, {
+	"hebrew": "קוֹדֵם",
+	"english": "prior"
+}, {
+	"hebrew": "מְחוּספָּס",
+	"english": "rough"
+}, {
+	"hebrew": "עָצוּב",
+	"english": "sad"
+}, {
+	"hebrew": "חוֹלֶה",
+	"english": "sick"
+}, {
+	"hebrew": "חיצוני",
+	"english": "external"
+}, {
+	"hebrew": "בִּלתִי חוּקִי",
+	"english": "illegal"
+}, {
+	"hebrew": "נייד",
+	"english": "mobile"
+}, {
+	"hebrew": "מַגְעִיל",
+	"english": "nasty"
+}, {
+	"hebrew": "רגיל",
+	"english": "ordinary"
+}, {
+	"hebrew": "מלכותי",
+	"english": "royal"
+}, {
+	"hebrew": "בָּכִיר",
+	"english": "senior"
+}, {
+	"hebrew": "עֶלִיוֹן",
+	"english": "upper"
+}, {
+	"hebrew": "תלוי",
+	"english": "dependent"
+}, {
+	"hebrew": "מצחיק",
+	"english": "funny"
+}, {
+	"hebrew": "מתוק",
+	"english": "sweet"
+}, {
+	"hebrew": "לְמַעלָה",
+	"english": "upstairs"
+}, {
+	"hebrew": "רָגִיל",
+	"english": "usual"
+}, {
+	"hebrew": "מחוץ לארץ",
+	"english": "abroad"
+}, {
+	"hebrew": "גָדוֹל",
+	"english": "grand"
+}, {
+	"hebrew": "זָכָר",
+	"english": "male"
+}, {
+	"hebrew": "מִישֶׁהוּ",
+	"english": "anybody"
+}, {
+	"hebrew": "מַברִיק",
+	"english": "brilliant"
+}, {
+	"hebrew": "יָקָר",
+	"english": "dear"
+}, {
+	"hebrew": "שיכור",
+	"english": "drunk"
+}, {
+	"hebrew": "נְקֵבָה",
+	"english": "female"
+}, {
+	"hebrew": "בִּלתִי נִמנַע",
+	"english": "inevitable"
+}, {
+	"hebrew": "נקי",
+	"english": "neat"
+}, {
+	"hebrew": "נציג",
+	"english": "representative"
+}, {
+	"hebrew": "טִפּשִׁי",
+	"english": "silly"
+}, {
+	"hebrew": "מְטוּפָּשׁ",
+	"english": "stupid"
+}, {
+	"hebrew": "זמני",
+	"english": "temporary"
+}, {
+	"hebrew": "מָחָר",
+	"english": "tomorrow"
+}, {
+	"hebrew": "אתמול",
+	"english": "yesterday"
+}]

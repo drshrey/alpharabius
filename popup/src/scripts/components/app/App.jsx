@@ -124,7 +124,18 @@ class App extends Component {
                               <option value="French">french</option>
                               <option value="Spanish">spanish</option>
                               <option value="German">german</option>
-                              <option value="Portuguese">portuguese</option>
+                              <option value="Arabic">arabic</option>
+                              <option value="Catalan">catalan</option>
+                              <option value="Chinese">chinese</option>
+                              <option value="Danish">danish</option>
+                              <option value="Dutch">dutch</option>
+                              <option value="Hebrew">hebrew</option>
+                              <option value="Italian">italian</option>
+                              <option value="Japanese">japanese</option>
+                              <option value="Kannada">kannada</option>
+                              <option value="Korean">korean</option>
+                              <option value="Latin">latin</option>
+                              <option value="Romanian">romanian</option>
                       </select>
                 </span>
           </div>
