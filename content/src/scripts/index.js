@@ -22,6 +22,11 @@ if(document.baseURI.startsWith('http://www.nytimes.com')){
   if(content != null){
     content.parentNode.insertBefore(anchor, content);
   }
+} else if(document.baseURI.startsWith('http://www.cnn.com/')) {
+  let content = document.getElementsByClassName('l-footer')[0];
+  if(content != null){
+    content.parentNode.insertBefore(anchor, content);
+  }  
 } else {
   anchor.style.visibility = 'hidden';
   anchor.style.opacity = '0';

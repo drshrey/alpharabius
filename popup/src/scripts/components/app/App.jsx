@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 var logo = require("../../../Logo.png");
-var icon = require("../../../128.png");
+var icon16 = require("../../../alpha-icon-16.png")
+var icon48 = require("../../../alpha-icon-48.png")
+var icon128 = require("../../../alpha-icon-128.png")
+
 var background = require("../../../bgd.png");
 
 
